@@ -58,6 +58,11 @@ def main():
                     help="path to team_ratings_2025.csv (CFBD rush/pass rate + success "
                          "rate, offense/defense) -- adds a second, independent opponent "
                          "adjustment alongside the PFF-grade one. No effect if omitted.")
+    ap.add_argument("--team-grades", default=None,
+                    help="path to team_pff_grades_2025.csv (PFF's own team-level "
+                         "grades) -- a matchup adjustment (this team's own relevant "
+                         "unit vs the opponent's complementary one, see config."
+                         "MATCHUP_UNITS). No effect if omitted.")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -88,6 +93,11 @@ def main():
     sr_index = P.build_success_rate_index(team_ratings) if team_ratings else {}
     if args.team_ratings:
         print(f"  --team-ratings: {len(team_ratings)} teams loaded")
+
+    team_grades = DL.load_team_grades(args.team_grades) if args.team_grades else {}
+    grade_index = P.build_matchup_grade_index(team_grades) if team_grades else {}
+    if args.team_grades:
+        print(f"  --team-grades: {len(team_grades)} teams loaded")
 
     # Precompute league means + defensive index once. In prior-year mode, use
     # 2024-wide means so shrinkage targets are internally consistent with the
@@ -145,6 +155,8 @@ def main():
         for mkey, mdef in C.MARKETS.items():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
+            if grade_index:
+                extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
                                            def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj)

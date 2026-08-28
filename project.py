@@ -203,6 +203,45 @@ def success_rate_adj(sr_index, opp_tkey, side, stat):
     return 1.0 + strength * tu[col]
 
 
+def build_matchup_grade_index(team_grades):
+    """
+    Z-score each of the grade columns config.MATCHUP_UNITS references,
+    across the league -- for matchup_grade_adj's differential (this
+    team's own unit grade vs the opponent's complementary one).
+    """
+    cols = sorted({c for pair in C.MATCHUP_UNITS.values() for c in pair})
+    vals = {c: [t[c] for t in team_grades.values() if t.get(c) is not None] for c in cols}
+    stat = {c: (stats.mean(vals[c]), stats.pstdev(vals[c]) or 1.0) for c in cols if vals[c]}
+    out = {}
+    for tkey, t in team_grades.items():
+        out[tkey] = {}
+        for c in cols:
+            if c in stat and t.get(c) is not None:
+                m, sd = stat[c]
+                out[tkey][c] = (t[c] - m) / sd
+    return out
+
+
+def matchup_grade_adj(grade_index, own_tkey, opp_tkey, market_key):
+    """
+    Multiplier centered on 1.0 from the z-scored DIFFERENTIAL between this
+    team's own relevant unit grade and the opponent's complementary one
+    (config.MATCHUP_UNITS) -- e.g. for a rush market, this team's run-
+    blocking z minus the opponent's run-defense z. Positive diff (this
+    team's unit graded better than the matchup opponent's) -> >1.
+    """
+    pair = C.MATCHUP_UNITS.get(market_key)
+    if not pair:
+        return 1.0
+    off_col, def_col = pair
+    own, opp = grade_index.get(own_tkey), grade_index.get(opp_tkey)
+    off_z = own.get(off_col) if own else None
+    def_z = opp.get(def_col) if opp else None
+    if off_z is None or def_z is None:
+        return 1.0
+    return 1.0 + C.MATCHUP_ADJ_STRENGTH * (off_z - def_z)
+
+
 def opponent_adj(def_index, opp_tkey, def_unit):
     """
     Multiplier centered on 1.0. Strong defense (high z) -> <1 (suppresses);

@@ -129,6 +129,29 @@ SUCCESS_RATE_STRENGTH_BY_STAT = dict(
     rush_yds=0.15,                     # roughly flat -- default is fine
 )
 
+# Team-level PFF grade matchup adjustment (team_pff_grades_2025.csv) --
+# replaces the old individual-player-aggregated PFF opponent grade
+# (OPP_ADJ_STRENGTH, disabled above): this is PFF's own team-level grade,
+# not our aggregation of it, and it's a MATCHUP (this team's own relevant
+# unit vs the opponent's complementary one), not a single-sided opponent
+# read. rush markets: offense run-BLOCKING vs defense run-DEFENSE.
+#
+# Tested applying the same matchup idea to pass (block vs pass-rush) and
+# receiving (recv vs coverage) markets too -- rush-only outperformed:
+# adding it to the other four markets measurably hurt them (e.g.
+# receptions 58.7%->56.8%) while barely moving pass_yds, so it's rush-only
+# here. A strength sweep on rush found a real tradeoff too: hit rate
+# creeps up with strength (50.9%->52.3% from 0.15->0.50) but bias grows
+# much faster (+5.7->+17.3 proj-actual) -- 0.15 is the better trade, not
+# the best hit rate in isolation. Not yet backtested against a by-week
+# version of this data (season-aggregate only, same lookahead caveat as
+# team_ratings).
+MATCHUP_UNITS = dict(
+    player_rush_yds=("grade_rblk", "grade_rdef"),
+    player_rush_attempts=("grade_rblk", "grade_rdef"),
+)
+MATCHUP_ADJ_STRENGTH = 0.15
+
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)
 

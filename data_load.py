@@ -232,6 +232,47 @@ def league_avg_implied(lines_by_week, week):
     return stats.mean(vals) if vals else None
 
 
+_TEAM_GRADE_ALIASES = {
+    "miamifl": "miami", "mississippi": "olemiss", "usf": "southflorida",
+    "connecticut": "uconn", "miamioh": "miamiohio",
+    "northcarolinastate": "ncstate", "louisianamonroe": "ulm",
+    "samhoustonstate": "samhouston", "massachusetts": "umass",
+}
+
+
+def load_team_grades(path):
+    """
+    team_pff_grades_2025.csv -- PFF's own TEAM-level grades (not
+    aggregated from individual players the way build_def_index is),
+    one row per team: record/pf/pa plus grade_{over,off,pass,pblk,recv,
+    run,rblk,def,rdef,tack,prsh,cov,spec}. Season-long aggregate, same
+    lookahead caveat as everything else team-level in this repo.
+
+    Keyed by tkey. 9 of 136 team names needed an alias (Miami (FL) ->
+    Miami, Mississippi -> Ole Miss, etc, verified against pff_team_map.csv's
+    existing canonical names) -- _TEAM_GRADE_ALIASES, checked by norm()
+    equality only (no fuzzy substring matching -- see build_pff_team_map.py
+    on why that's unsafe for team names).
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    grade_cols = ["grade_over", "grade_off", "grade_pass", "grade_pblk", "grade_recv",
+                 "grade_run", "grade_rblk", "grade_def", "grade_rdef", "grade_tack",
+                 "grade_prsh", "grade_cov", "grade_spec"]
+    for r in csv.DictReader(open(path)):
+        team = r.get("team", "")
+        if not team:
+            continue
+        n = norm(team)
+        n = _TEAM_GRADE_ALIASES.get(n, n)
+        rec = {c: _to_float(r.get(c)) for c in grade_cols}
+        rec["pf"] = _to_float(r.get("pf"))
+        rec["pa"] = _to_float(r.get("pa"))
+        out[n] = rec
+    return out
+
+
 def load_team_ratings(path):
     """
     team_ratings_2025.csv (CFBD-style team advanced stats, "Team" column
