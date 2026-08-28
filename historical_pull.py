@@ -182,10 +182,16 @@ def main():
     print(f"Projected MAX credits (if none cached): "
           f"{n_games} x {n_snaps} x {len(MARKETS)} x {HIST_COST_PER} = {projected:,}")
 
-    # count what's already cached (won't re-spend)
-    cached = sum(1 for (_, h, a, _) in games for lbl in SNAPSHOTS
-                 if False)  # placeholder; real check needs event ids (post-discovery)
-    print(f"Checkpoint dir: {CKPT_DIR}")
+    # Count snapshot files already on disk. This can't be matched to *this*
+    # scope's games without hitting the (cheap) events endpoint to discover
+    # event ids first, and dry-run spends zero credits by design -- so it's
+    # a general "how much is already checkpointed" figure, not a precise
+    # count of what this run would skip.
+    cached = 0
+    if os.path.isdir(CKPT_DIR):
+        cached = sum(1 for fn in os.listdir(CKPT_DIR)
+                     if any(fn.endswith(f"_{lbl}.json") for lbl in SNAPSHOTS))
+    print(f"Checkpoint dir: {CKPT_DIR} ({cached} snapshot file(s) already on disk)")
 
     if projected > CREDIT_CEILING:
         print(f"\n*** PROJECTED {projected:,} EXCEEDS CEILING {CREDIT_CEILING:,} ***")

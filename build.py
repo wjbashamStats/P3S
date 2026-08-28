@@ -38,12 +38,15 @@ def resolve_opponent(player_tkey, events, odds2c):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--week", type=int, required=True)
+    ap.add_argument("--season", type=int, default=C.SEASON,
+                    help="season the projections/backtest are for (default: config.SEASON)")
     ap.add_argument("--prop-cap", type=int, default=None,
                     help="max games to pull props for (credit control)")
     ap.add_argument("--no-odds", action="store_true",
                     help="build projections without calling the Odds API")
     args = ap.parse_args()
 
+    C.SEASON = args.season
     os.makedirs(C.OUTPUT_DIR, exist_ok=True)
 
     print("Loading data ...")

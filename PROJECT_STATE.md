@@ -42,30 +42,35 @@ Both are views on ONE per-player-per-market projection table.
 
 ## Repo layout (what exists and is TESTED)
 
-```
-impact_backend/
-  config.py            model constants, market defs, API keys via env var
-  data_load.py         loads PFF crosswalk + stats, normalizes names
-  project.py           projection engine (rate × volume × opponent)
-  odds.py              live Odds API puller (spreads/totals + props)
-  build.py             orchestrator -> prop_edges.csv + impact.json  [TESTED offline, --no-odds]
-  historical_pull.py   2025 historical props puller  [TESTED via dry-run]
-  team_map.csv         Odds<->CFBD name crosswalk (3 entries so far)
-  2025_schedule.csv    CFBD 2025 schedule (download_1_.csv)
-  diagnose_names.py    one-off: compare schedule vs API team names
-  check_coverage.py    one-off: confirm event coverage per game
-  hist_raw/            (created at runtime) raw historical odds JSON, one file per game-snapshot
+Everything is flat at the repo root — there is no `impact_backend/` or
+`clean_data/` subfolder (earlier drafts of this doc described a nested
+layout that never matched what actually got committed; corrected 2026-08-28).
 
-clean_data/
-  clean_pff_stats.py       reusable dedup/cleaner for PFF exports
-  EDA_report.md            full findings
-  *_weekly_clean.csv       passing/rushing/receiving/defense game logs (deduped)
-  *_season_clean.csv       season totals for all + blocking
+```
+config.py               model constants, market defs, API keys via env var (.env, gitignored)
+data_load.py            loads PFF crosswalk + stats, normalizes names
+project.py              projection engine (rate × volume × opponent)
+odds.py                 live Odds API puller (spreads/totals + props)
+build.py                orchestrator -> prop_edges.csv + impact.json  [TESTED --no-odds, real data]
+build_player_tables.py  adapter: per-market *_clean.csv -> player_season_totals.csv /
+                         player_game_logs.csv (gitignored, generated -- rerun after clean-file changes)
+historical_pull.py      2025 historical props puller  [TESTED via dry-run]
+team_map.csv            cfbd_name,odds_name overrides (3 entries so far)
+2025_schedule.csv       CFBD 2025 schedule (download_1_.csv)
+diagnose_names.py       one-off: compare schedule vs API team names
+check_coverage.py       one-off: confirm event coverage per game
+hist_raw/               (created at runtime) raw historical odds JSON, one file per game-snapshot
+output/                 (created at runtime) prop_edges.csv + impact.json
+
+clean_pff_stats.py       reusable dedup/cleaner for PFF exports
+EDA_report.md            full findings
+*_weekly_clean.csv       passing/rushing/receiving/defense game logs (deduped)
+*_season_clean.csv       season totals for all + blocking
 
 (PFF crosswalk from earlier phase)
-  master_crosswalk.csv     2,547 player-position rows, enriched (off_/def_ prefixed grades+snaps)
-  master_players.csv       one row per player, same enriched schema
-  unique_teams.csv         137 distinct PFF team strings (for team_map building)
+master_crosswalk.csv     2,547 player-position rows, enriched (off_/def_ prefixed grades+snaps)
+master_players.csv       one row per player, same enriched schema
+unique_teams.csv         137 distinct PFF team strings (for team_map building)
 ```
 
 ## PFF grade parsing (DONE — 12 positions, all clean)
@@ -131,7 +136,31 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 6. **Full-season pull** (~48k more credits) once week-1 validates coverage+model.
 7. **Player Impact HTML page** — reads impact.json, searchable by team/pos/week.
 
-## Housekeeping to do early in Claude Code
-- Move API keys out of config.py / script headers into a .env (gitignored).
-  **Rotate both keys** (CFBD + Odds) — they've been exposed in a chat thread.
-- The env-var reads already exist (Sys.getenv / os.environ.get); just populate .env.
+## Housekeeping — DONE (2026-08-28)
+- Moved API keys out of config.py / historical_pull.py into a gitignored
+  `.env` (`.env.example` documents the two vars); no more hardcoded fallback
+  values in source. **Still rotate both keys** (CFBD + Odds) if you haven't —
+  they were committed in plaintext in this repo's initial commit on GitHub,
+  which is more exposed than the original chat-thread leak.
+- Reconciled the repo-layout docs to the actual flat layout (see above).
+- `config.SEASON` was `2026` (stale/wrong); fixed to `2025` to match the
+  data in this repo, and `build.py` now takes `--season` to override it
+  per-run instead of requiring a code edit.
+- Built `build_player_tables.py`, the adapter from the per-market
+  `*_season_clean.csv` / `*_weekly_clean.csv` files to the generic
+  `player_season_totals.csv` / `player_game_logs.csv` `data_load.py`
+  expects, merging on `player_id` per quirk #5. `build.py --no-odds` now
+  runs end-to-end against real 2025 data (3,040 projection rows, week 1).
+- Fixed `data_load.load_team_map()`: it expected `team_map.csv` columns
+  `pff_team,cfbd_team,odds_team`, but the file (and historical_pull.py's own
+  loader) actually uses `cfbd_name,odds_name` — this was a hard crash on
+  any `build.py` run. Now reads the real schema; PFF team strings still
+  translate to themselves (identity norm) since there's no PFF-specific
+  column in the file yet — a genuine PFF/CFBD name mismatch (beyond what
+  team_map.csv already overrides for Odds<->CFBD) isn't handled. Worth
+  revisiting if projection rows silently disappear for a team once live
+  odds are wired in.
+- Fixed `historical_pull.py`'s dry-run "cached" count, which was dead code
+  (`if False`, always 0). It now reports snapshot files already on disk in
+  `hist_raw/` (not scoped to the current run's games — dry-run still makes
+  zero API calls, so it can't resolve event ids to check precisely).

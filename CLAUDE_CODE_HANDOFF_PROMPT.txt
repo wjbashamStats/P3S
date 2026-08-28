@@ -2,10 +2,12 @@ HANDOFF PROMPT — paste this as your first message to Claude Code
 ================================================================
 
 I'm continuing a college-football betting analytics project. Read
-`impact_backend/PROJECT_STATE.md` first — it has the full context, every
-modeling decision, known data quirks, and the ordered next steps. Then read the
-existing modules in `impact_backend/` (config.py, data_load.py, project.py,
-odds.py, build.py, historical_pull.py) and the cleaned data in `clean_data/`.
+`PROJECT_STATE.md` first — it has the full context, every modeling decision,
+known data quirks, and the ordered next steps. Everything is flat at the repo
+root (no impact_backend/ or clean_data/ subfolders). Then read the existing
+modules (config.py, data_load.py, project.py, odds.py, build.py,
+build_player_tables.py, historical_pull.py) and the cleaned data
+(*_season_clean.csv / *_weekly_clean.csv).
 
 Quick orientation:
 - Two connected systems: (1) player prop projection models (pass/rush/rec
@@ -17,7 +19,7 @@ Quick orientation:
   change it. Opponent adjustment uses PFF defensive grades (COV scales pass,
   RDEF scales rush).
 - I've just pulled 2025 historical closing-line props for week 1 via
-  `historical_pull.py`. The raw JSON is in `impact_backend/hist_raw/` (one file
+  `historical_pull.py`. The raw JSON is in `hist_raw/` (one file
   per game, named {event_id}_closing.json).
 
 What I want to do next, in this order:
@@ -27,7 +29,7 @@ What I want to do next, in this order:
    wrapper: {timestamp, previous_timestamp, next_timestamp, data:{...event...}})
    into a tidy props table — one row per (game, player, market) with the
    consensus closing line and over/under prices across books.
-3. JOIN those props to actual 2025 results from `clean_data/*_weekly_clean.csv`
+3. JOIN those props to actual 2025 results from `*_weekly_clean.csv`
    (match on player + week) so every prop line gets its realized outcome.
 4. Build the BACKTEST: model projection vs closing line vs actual. Report hit
    rate on flagged edges, closing-line value, and calibration per market.
