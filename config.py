@@ -84,7 +84,22 @@ OPP_ADJ_STRENGTH = 0.15
 # of 1.0) if no game-lines data is loaded, so this is fully opt-in.
 PACE_CLIP = 0.3              # cap the pace multiplier at 1 +/- this
 SPREAD_SCALE = 21.0          # spread (points) at which the script effect maxes out
-SCRIPT_ADJ_STRENGTH = 0.15   # how much a maxed-out script effect shifts rush/pass volume
+# Rush and pass need independent strengths, not one shared +/- knob: a
+# week 1-15 sweep showed rush bias converges to ~0 around 0.75-0.85, while
+# the SAME strength pushed the OTHER direction on pass/reception markets
+# (their bias got worse, not better, as strength increased) -- so a single
+# shared constant can't optimize both at once.
+#
+# IMPORTANT, from the same sweep: bias-to-actual and hit-rate-vs-the-book-
+# line are NOT the same thing. rush_yds bias went from -0.4 to +1.1 (fully
+# calibrated) across this whole range while its flagged-edge hit rate sat
+# flat at ~50.2% throughout -- the book already prices in game script, so
+# an unbiased model converges toward what the book already knew, not
+# toward beating it. These values are chosen for accurate CALIBRATION
+# (useful for the Impact page's raw projections), not because they were
+# shown to improve betting hit rate -- they didn't, on this data.
+RUSH_SCRIPT_STRENGTH = 0.80
+PASS_SCRIPT_STRENGTH = 0.05
 
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)

@@ -204,7 +204,7 @@ def game_context_adj(team_implied, league_avg_implied, team_spread, side):
         script = 1.0
     else:
         z = max(-1.0, min(1.0, -team_spread / C.SPREAD_SCALE))  # favored -> positive z
-        script = (1 + C.SCRIPT_ADJ_STRENGTH * z) if side == "rush" else (1 - C.SCRIPT_ADJ_STRENGTH * z)
+        script = (1 + C.RUSH_SCRIPT_STRENGTH * z) if side == "rush" else (1 - C.PASS_SCRIPT_STRENGTH * z)
 
     return pace * script
 
