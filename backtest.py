@@ -63,8 +63,10 @@ def build_projections(week, use_prior_year=False):
 
     if use_prior_year:
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
+        mode = ("blended with weeks < %d" % week if week > C.PRIOR_ONLY_UNTIL_WEEK
+                else "pure 2024 (no current-season games exist yet to blend)")
         print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
-              f"{n_with_prior}/{len(totals)} of this year's roster matched to one")
+              f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
     pff_by_key = {}
     for p in pff:
@@ -72,7 +74,15 @@ def build_projections(week, use_prior_year=False):
 
     out = {}
     for (pkey, tkey), tot in totals.items():
-        source = prior.get(tot.get("player_id")) if use_prior_year else None
+        source = None
+        if use_prior_year:
+            prior_rec = prior.get(tot.get("player_id"))
+            if week > C.PRIOR_ONLY_UNTIL_WEEK:
+                current_games = [g for g in logs.get((pkey, tkey), [])
+                                 if g.get("week") is not None and g["week"] < week]
+                source = P.blend_prior_and_current(prior_rec, current_games)
+            else:
+                source = prior_rec
         if source is None:
             source = tot
         rates = P.compute_player_rates(source)

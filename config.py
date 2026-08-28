@@ -12,6 +12,12 @@ SEASON = 2025  # backtest season; override per-run with build.py --season
 # Weeks 1-3 lean on prior-year rates only (no current-season signal yet);
 # week 4+ can blend in current-season game logs as they accumulate.
 PRIOR_ONLY_UNTIL_WEEK = 3
+# Blend weight for week 4+: current-season-to-date rate gets
+# games_so_far / (games_so_far + this) of the weight, prior-year gets the
+# rest -- same shrinkage-toward mechanism as SHRINKAGE_GAMES, applied to
+# blending two real data sources instead of regressing toward a position
+# mean. Kept as its own knob since the two are conceptually different.
+CURRENT_SEASON_BLEND_GAMES = 4
 
 # ---------------- API KEYS ----------------
 # Set via .env (gitignored) -- see .env.example. No hardcoded fallback: fail

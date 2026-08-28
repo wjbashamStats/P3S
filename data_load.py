@@ -126,6 +126,8 @@ def load_game_logs():
         pkey = norm(r.get("player", ""))
         tkey = norm(r.get("team", ""))
         rec = {k: _to_float(v) for k, v in r.items()
-               if k not in ("player", "team", "week", "opponent", "date")}
+               if k not in ("player", "team", "player_id", "position", "opponent", "date")}
+        rec["player_id"] = r.get("player_id")  # keep as string, not a stat
+        rec["position"] = r.get("position")
         out[(pkey, tkey)].append(rec)
     return out

@@ -64,9 +64,10 @@ def main():
     print(f"  PFF players: {len(pff)} | season-total players: {len(totals)}")
     if args.use_prior_year:
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
+        mode = ("blended with weeks < %d" % args.week if args.week > C.PRIOR_ONLY_UNTIL_WEEK
+                else "pure 2024 (no current-season games exist yet to blend)")
         print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
-              f"{n_with_prior}/{len(totals)} of this year's roster matched to one "
-              f"(the rest fall back to current-season totals)")
+              f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
     # Precompute league means + defensive index once. In prior-year mode, use
     # 2024-wide means so shrinkage targets are internally consistent with the
@@ -91,11 +92,26 @@ def main():
         if opp_tkey is None and not args.no_odds:
             continue  # not playing this slate
         # source: real 2024 rates when available and requested, else this
-        # year's own totals (today's default, or the fallback for a player
-        # with no 2024 record). Roster/team identity always comes from tot
+        # year's own totals. Roster/team identity always comes from tot
         # (current, 2025) regardless -- only the volume/efficiency numbers
         # swap, so a transfer's history follows the player, not the school.
-        source = prior.get(tot.get("player_id")) if args.use_prior_year else None
+        source = None
+        if args.use_prior_year:
+            prior_rec = prior.get(tot.get("player_id"))
+            if args.week > C.PRIOR_ONLY_UNTIL_WEEK:
+                # week 4+: blend with this season's own games-to-date (weeks
+                # < args.week only, so no lookahead) -- legitimate even for a
+                # player with no 2024 record (prior_rec=None blends to pure
+                # current-to-date, still no lookahead).
+                current_games = [g for g in logs.get((pkey, tkey), [])
+                                 if g.get("week") is not None and g["week"] < args.week]
+                source = P.blend_prior_and_current(prior_rec, current_games)
+            else:
+                # weeks 1-3: no current-season signal exists yet to blend in,
+                # so real 2024 is the only non-lookahead option; a player with
+                # no 2024 record (true freshman) has no legitimate signal at
+                # all here and falls back to this year's full totals.
+                source = prior_rec
         if source is None:
             source = tot
         rates = P.compute_player_rates(source)

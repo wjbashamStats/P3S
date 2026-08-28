@@ -40,6 +40,51 @@ def compute_player_rates(tot):
     }
 
 
+STAT_COLS = ("pass_att", "pass_yds", "rush_att", "rush_yds",
+            "targets", "receptions", "rec_yds")
+
+
+def blend_prior_and_current(prior_tot, current_games_list):
+    """
+    Week 4+ design (config.PRIOR_ONLY_UNTIL_WEEK): blend real prior-year
+    (2024) totals with this season's own games played so far, weighted by
+    how many current-season games have accumulated -- more current-season
+    games means more weight on current-season signal (config.
+    CURRENT_SEASON_BLEND_GAMES controls how fast).
+
+    Returns a totals-shaped dict (games + the raw stat-total columns) so
+    compute_player_rates/shrink/project_player_market consume it exactly
+    like any other totals record -- the stat columns hold TOTALS scaled to
+    an "effective games" count (prior_games + current_games), not real
+    per-game counts, so that dividing by that games figure recovers the
+    correctly-blended per-game rate elsewhere in the pipeline.
+    """
+    current_games_list = current_games_list or []
+    n_cur = len(current_games_list)
+    w = n_cur / (n_cur + C.CURRENT_SEASON_BLEND_GAMES) if n_cur else 0.0
+
+    prior_games = (prior_tot or {}).get("games") or 0
+    effective_games = max(prior_games + n_cur, 1)
+
+    out = {"games": effective_games}
+    for col in STAT_COLS:
+        cur_total = sum((g.get(col) or 0) for g in current_games_list)
+        cur_per_game = (cur_total / n_cur) if n_cur else None
+        prior_val = (prior_tot or {}).get(col)
+        prior_per_game = (prior_val / prior_games) if (prior_val is not None and prior_games) else None
+
+        if cur_per_game is None and prior_per_game is None:
+            continue
+        elif cur_per_game is None:
+            blended_per_game = prior_per_game
+        elif prior_per_game is None:
+            blended_per_game = cur_per_game
+        else:
+            blended_per_game = w * cur_per_game + (1 - w) * prior_per_game
+        out[col] = blended_per_game * effective_games
+    return out
+
+
 def position_means(all_totals):
     """League-wide mean of each efficiency rate, for shrinkage targets."""
     buckets = {"ypa": [], "ypc": [], "ypt": [], "catch_rate": []}
