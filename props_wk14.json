@@ -1,0 +1,7641 @@
+{
+ "week": 14,
+ "season": 2025,
+ "games": [
+  {
+   "game_id": "7058d3392573bc5d3b2802b1c3cb8c34",
+   "home_team": "UMass Minutemen",
+   "away_team": "Bowling Green Falcons",
+   "commence_time": "2025-11-25T21:30:00Z",
+   "players": [
+    {
+     "name": "Austyn Dendy",
+     "team": "Bowling Green",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 117.5,
+       "projection": 103.8,
+       "edge_pct": -11.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jacob Harris",
+     "team": "Bowling Green",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 13.5,
+       "edge_pct": -37.2,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jyrin Johnson",
+     "team": "Bowling Green",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 46.5,
+       "projection": 40.0,
+       "edge_pct": -14.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "RJ Garcia II",
+     "team": "Bowling Green",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 20.5,
+       "projection": 28.1,
+       "edge_pct": 37.1,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Brandon Hood",
+     "team": "UMass",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 27.5,
+       "projection": 10.0,
+       "edge_pct": -63.6,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Donnie Gray",
+     "team": "UMass",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 20.5,
+       "projection": 14.2,
+       "edge_pct": -30.7,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jacquon Gibson",
+     "team": "UMass",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 34.6,
+       "edge_pct": -24.0,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.5,
+       "edge_pct": -22.2,
+       "over_price": -140.0,
+       "under_price": 108.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "36f13df92e5c272f20ed7d541c8cf2d4",
+   "home_team": "Eastern Michigan Eagles",
+   "away_team": "Western Michigan Broncos",
+   "commence_time": "2025-11-26T00:30:00Z",
+   "players": [
+    {
+     "name": "Dontae McMillan",
+     "team": "Eastern Michigan",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 15.5,
+       "projection": 14.2,
+       "edge_pct": -8.4,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 68.5,
+       "projection": 72.2,
+       "edge_pct": 5.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Nick Devereaux",
+     "team": "Eastern Michigan",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 32.9,
+       "edge_pct": -27.7,
+       "over_price": -115.0,
+       "under_price": -112.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.3,
+       "edge_pct": -34.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Noah Kim",
+     "team": "Eastern Michigan",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 201.5,
+       "projection": 182.6,
+       "edge_pct": -9.4,
+       "over_price": -116.5,
+       "under_price": -111.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Broc Lowry",
+     "team": "Western Michigan",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 127.5,
+       "projection": 101.3,
+       "edge_pct": -20.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 86.5,
+       "projection": 60.1,
+       "edge_pct": -30.5,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jalen Buckley",
+     "team": "Western Michigan",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 85.5,
+       "projection": 62.3,
+       "edge_pct": -27.1,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "643198f60ea064a8030db080f2540513",
+   "home_team": "Memphis Tigers",
+   "away_team": "Navy Midshipmen",
+   "commence_time": "2025-11-28T00:30:00Z",
+   "players": [
+    {
+     "name": "Brendon Lewis",
+     "team": "Memphis",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 256.5,
+       "projection": 304.4,
+       "edge_pct": 18.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 44.5,
+       "projection": 111.5,
+       "edge_pct": 150.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Cortez Braham Jr.",
+     "team": "Memphis",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 76.5,
+       "projection": 83.8,
+       "edge_pct": 9.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 6.3,
+       "edge_pct": 14.5,
+       "over_price": -120.0,
+       "under_price": -108.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Frank Peasant",
+     "team": "Memphis",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 22.0,
+       "projection": 35.9,
+       "edge_pct": 63.2,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Greg Desrosiers Jr.",
+     "team": "Memphis",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 30.2,
+       "edge_pct": 28.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.6,
+       "edge_pct": 44.0,
+       "over_price": -184.0,
+       "under_price": 140.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 47.5,
+       "projection": 78.0,
+       "edge_pct": 64.2,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jamari Hawkins",
+     "team": "Memphis",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 45.8,
+       "edge_pct": 2.9,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.8,
+       "edge_pct": 12.0,
+       "over_price": -146.0,
+       "under_price": 112.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Sutton Smith",
+     "team": "Memphis",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 32.5,
+       "projection": 69.7,
+       "edge_pct": 114.5,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Alex Tecza",
+     "team": "Navy",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 46.5,
+       "projection": 41.3,
+       "edge_pct": -11.2,
+       "over_price": -6.5,
+       "under_price": -123.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Blake Horvath",
+     "team": "Navy",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 123.5,
+       "projection": 177.6,
+       "edge_pct": 43.8,
+       "over_price": -115.0,
+       "under_price": -116.5,
+       "n_books": "3"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 122.5,
+       "projection": 73.1,
+       "edge_pct": -40.3,
+       "over_price": -115.0,
+       "under_price": -115.5,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Eli Heidenreich",
+     "team": "Navy",
+     "position": "FB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 52.5,
+       "projection": 72.9,
+       "edge_pct": 38.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 30.5,
+       "projection": 25.3,
+       "edge_pct": -17.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "f959699d770536ccda4fc4df72a954ea",
+   "home_team": "Mississippi State Bulldogs",
+   "away_team": "Ole Miss Rebels",
+   "commence_time": "2025-11-28T16:58:00Z",
+   "players": [
+    {
+     "name": "Anthony Evans III",
+     "team": "Mississippi State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 58.5,
+       "projection": 50.7,
+       "edge_pct": -13.3,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 4.3,
+       "edge_pct": -21.8,
+       "over_price": 108.0,
+       "under_price": -140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Brenen Thompson",
+     "team": "Mississippi State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 62.5,
+       "projection": 59.4,
+       "edge_pct": -5.0,
+       "over_price": -113.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.6,
+       "edge_pct": 2.9,
+       "over_price": -122.0,
+       "under_price": -106.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Fluff Bothwell",
+     "team": "Mississippi State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 59.5,
+       "projection": 63.1,
+       "edge_pct": 6.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Seydou Traore",
+     "team": "Mississippi State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 28.5,
+       "projection": 28.7,
+       "edge_pct": 0.7,
+       "over_price": -116.0,
+       "under_price": -112.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.7,
+       "edge_pct": 8.0,
+       "over_price": -145.5,
+       "under_price": 111.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Cayden Lee",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 56.4,
+       "edge_pct": 39.3,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.5,
+       "edge_pct": 40.0,
+       "over_price": -119.0,
+       "under_price": -110.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Dae'Quan Wright",
+     "team": "Ole Miss",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 46.6,
+       "edge_pct": 24.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.0,
+       "edge_pct": 20.0,
+       "over_price": -138.0,
+       "under_price": 106.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "De'Zhaun Stribling",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 60.9,
+       "edge_pct": 54.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.3,
+       "edge_pct": 22.9,
+       "over_price": 122.0,
+       "under_price": -160.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Deuce Alexander",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.0,
+       "projection": 50.3,
+       "edge_pct": 67.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.7,
+       "edge_pct": 48.0,
+       "over_price": 105.5,
+       "under_price": -136.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Harrison Wallace III",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 53.5,
+       "projection": 68.5,
+       "edge_pct": 28.0,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 4.6,
+       "edge_pct": 2.2,
+       "over_price": 126.0,
+       "under_price": -165.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Kewan Lacy",
+     "team": "Ole Miss",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 14.2,
+       "edge_pct": 35.2,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 22.5,
+       "projection": 31.7,
+       "edge_pct": 40.9,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 122.5,
+       "projection": 163.3,
+       "edge_pct": 33.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Trinidad Chambliss",
+     "team": "Ole Miss",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 266.5,
+       "projection": 266.8,
+       "edge_pct": 0.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 12.5,
+       "projection": 18.9,
+       "edge_pct": 51.2,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 49.5,
+       "projection": 92.8,
+       "edge_pct": 87.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "0f1ce102c69b3c21a363d3997879f16a",
+   "home_team": "Kansas Jayhawks",
+   "away_team": "Utah Utes",
+   "commence_time": "2025-11-28T17:00:00Z",
+   "players": [
+    {
+     "name": "Boden Groen",
+     "team": "Kansas",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 29.2,
+       "edge_pct": -12.8,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.5,
+       "edge_pct": -28.6,
+       "over_price": 108.0,
+       "under_price": -140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Cam Pickett",
+     "team": "Kansas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 35.5,
+       "projection": 35.0,
+       "edge_pct": -1.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.1,
+       "edge_pct": -11.4,
+       "over_price": -128.0,
+       "under_price": -102.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Daniel Hishaw Jr.",
+     "team": "Kansas",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 59.5,
+       "projection": 37.3,
+       "edge_pct": -37.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Emmanuel Henderson Jr.",
+     "team": "Kansas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 36.2,
+       "edge_pct": -14.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.4,
+       "edge_pct": -31.4,
+       "over_price": 112.0,
+       "under_price": -146.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jalon Daniels",
+     "team": "Kansas",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 194.5,
+       "projection": 92.8,
+       "edge_pct": -52.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 33.5,
+       "projection": 32.3,
+       "edge_pct": -3.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Leshon Williams",
+     "team": "Kansas",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 24.5,
+       "projection": 26.0,
+       "edge_pct": 6.1,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Dallen Bentley",
+     "team": "Utah",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 41.5,
+       "projection": 41.8,
+       "edge_pct": 0.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.3,
+       "edge_pct": -5.7,
+       "over_price": -146.0,
+       "under_price": 112.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Devon Dampier",
+     "team": "Utah",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 181.5,
+       "projection": 263.7,
+       "edge_pct": 45.3,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 64.5,
+       "projection": 139.5,
+       "edge_pct": 116.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "JJ Buchanan",
+     "team": "Utah",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 41.0,
+       "projection": 41.8,
+       "edge_pct": 2.0,
+       "over_price": -112.5,
+       "under_price": -114.0,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.2,
+       "edge_pct": -8.6,
+       "over_price": 108.0,
+       "under_price": -140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Larry Simmons",
+     "team": "Utah",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 28.7,
+       "edge_pct": -5.9,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Wayshawn Parker",
+     "team": "Utah",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 98.0,
+       "projection": 129.9,
+       "edge_pct": 32.6,
+       "over_price": -112.0,
+       "under_price": -117.0,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "76916d758d1a2bc57d840d9d1c63aaa3",
+   "home_team": "Nebraska Cornhuskers",
+   "away_team": "Iowa Hawkeyes",
+   "commence_time": "2025-11-28T17:00:00Z",
+   "players": [
+    {
+     "name": "DJ Vonnahme",
+     "team": "Iowa",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 20.5,
+       "projection": 33.3,
+       "edge_pct": 62.4,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.0,
+       "edge_pct": 20.0,
+       "over_price": -102.0,
+       "under_price": -128.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jacob Gill",
+     "team": "Iowa",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 34.0,
+       "edge_pct": 44.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.9,
+       "edge_pct": 16.0,
+       "over_price": 108.0,
+       "under_price": -140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jaziun Patterson",
+     "team": "Iowa",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 26.5,
+       "projection": 78.7,
+       "edge_pct": 197.0,
+       "over_price": -114.5,
+       "under_price": -112.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Kaden Wetjen",
+     "team": "Iowa",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 16.0,
+       "edge_pct": 52.4,
+       "over_price": -106.0,
+       "under_price": -122.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Kamari Moulton",
+     "team": "Iowa",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 15.5,
+       "projection": 30.3,
+       "edge_pct": 95.5,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 89.5,
+       "projection": 152.4,
+       "edge_pct": 70.3,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Mark Gronowski",
+     "team": "Iowa",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 126.5,
+       "projection": 233.2,
+       "edge_pct": 84.3,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 10.5,
+       "projection": 20.7,
+       "edge_pct": 97.1,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 42.5,
+       "projection": 105.7,
+       "edge_pct": 148.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Reece Vander Zee",
+     "team": "Iowa",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 17.5,
+       "projection": 28.4,
+       "edge_pct": 62.3,
+       "over_price": 110.0,
+       "under_price": -143.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Dane Key",
+     "team": "Nebraska",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 28.5,
+       "edge_pct": 7.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.2,
+       "edge_pct": -12.0,
+       "over_price": -102.0,
+       "under_price": -128.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Emmett Johnson",
+     "team": "Nebraska",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.0,
+       "projection": 19.8,
+       "edge_pct": -17.5,
+       "over_price": -110.5,
+       "under_price": -116.5,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.3,
+       "edge_pct": -34.3,
+       "over_price": -128.0,
+       "under_price": -102.0,
+       "n_books": "1"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 20.5,
+       "projection": 10.7,
+       "edge_pct": -47.8,
+       "over_price": -125.0,
+       "under_price": -105.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 96.5,
+       "projection": 57.7,
+       "edge_pct": -40.2,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Jacory Barney Jr.",
+     "team": "Nebraska",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.5,
+       "projection": 26.4,
+       "edge_pct": 7.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.5,
+       "edge_pct": 0.0,
+       "over_price": -138.0,
+       "under_price": 106.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Luke Lindenmeyer",
+     "team": "Nebraska",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 13.8,
+       "edge_pct": 31.4,
+       "over_price": -116.0,
+       "under_price": -111.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Nyziah Hunter",
+     "team": "Nebraska",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 34.0,
+       "edge_pct": 1.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.4,
+       "edge_pct": -4.0,
+       "over_price": -184.0,
+       "under_price": 140.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "3d51dc9f725e59fd6750915622f55394",
+   "home_team": "Buffalo Bulls",
+   "away_team": "Ohio Bobcats",
+   "commence_time": "2025-11-28T17:00:00Z",
+   "players": [
+    {
+     "name": "Jasaiah Gathings",
+     "team": "Buffalo",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 27.4,
+       "edge_pct": -10.2,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Nik McMillan",
+     "team": "Buffalo",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 96.5,
+       "projection": 48.0,
+       "edge_pct": -50.3,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Ta'Quan Roberson",
+     "team": "Buffalo",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 204.5,
+       "projection": 120.8,
+       "edge_pct": -40.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Victor Snow",
+     "team": "Buffalo",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 58.5,
+       "projection": 45.5,
+       "edge_pct": -22.2,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Chase Hendricks",
+     "team": "Ohio",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 69.5,
+       "projection": 62.1,
+       "edge_pct": -10.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Parker Navarro",
+     "team": "Ohio",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 168.5,
+       "projection": 162.0,
+       "edge_pct": -3.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 63.5,
+       "projection": 88.8,
+       "edge_pct": 39.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Rodney Harris II",
+     "team": "Ohio",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 28.9,
+       "edge_pct": 9.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Sieh Bangura",
+     "team": "Ohio",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 94.5,
+       "projection": 92.3,
+       "edge_pct": -2.3,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "5b4e38825c71d19c51ebcd39665d9694",
+   "home_team": "Northern Illinois Huskies",
+   "away_team": "Kent State Golden Flashes",
+   "commence_time": "2025-11-28T17:01:00Z",
+   "players": [
+    {
+     "name": "Dashawn Martin",
+     "team": "Kent State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 26.1,
+       "edge_pct": -42.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.0,
+       "edge_pct": -42.9,
+       "over_price": 120.0,
+       "under_price": -156.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Dru DeShields",
+     "team": "Kent State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 188.5,
+       "projection": 150.8,
+       "edge_pct": -20.0,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Gavin Garcia",
+     "team": "Kent State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 47.5,
+       "projection": 33.8,
+       "edge_pct": -28.8,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Wayne Harris",
+     "team": "Kent State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 32.5,
+       "projection": 22.6,
+       "edge_pct": -30.5,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.1,
+       "edge_pct": -40.0,
+       "over_price": 110.0,
+       "under_price": -144.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chavon Wright",
+     "team": "Northern Illinois",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 76.5,
+       "projection": 90.5,
+       "edge_pct": 18.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "DeAree Rogers",
+     "team": "Northern Illinois",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.5,
+       "projection": 46.2,
+       "edge_pct": 81.2,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 4.0,
+       "edge_pct": 60.0,
+       "over_price": -128.0,
+       "under_price": -102.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Telly Johnson Jr.",
+     "team": "Northern Illinois",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 41.5,
+       "projection": 88.7,
+       "edge_pct": 113.7,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "4ed54dc6116ec6373f9a1cf015ca6070",
+   "home_team": "North Texas Mean Green",
+   "away_team": "Temple Owls",
+   "commence_time": "2025-11-28T20:30:00Z",
+   "players": [
+    {
+     "name": "Caleb Hawkins",
+     "team": "North Texas",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 136.5,
+       "projection": 96.6,
+       "edge_pct": -29.2,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Cameron Dorner",
+     "team": "North Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 54.5,
+       "projection": 49.8,
+       "edge_pct": -8.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Drew Mestemaker",
+     "team": "North Texas",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 300.5,
+       "projection": 219.9,
+       "edge_pct": -26.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Wyatt Young",
+     "team": "North Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 100.5,
+       "projection": 70.9,
+       "edge_pct": -29.5,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Colin Chase",
+     "team": "Temple",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 36.5,
+       "projection": 28.7,
+       "edge_pct": -21.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Evan Simon",
+     "team": "Temple",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 184.5,
+       "projection": 109.1,
+       "edge_pct": -40.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "JoJo Bermudez",
+     "team": "Temple",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 32.4,
+       "edge_pct": -3.3,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "ee12d0d5e2a05a709506af59bd525728",
+   "home_team": "Georgia Tech Yellow Jackets",
+   "away_team": "Georgia Bulldogs",
+   "commence_time": "2025-11-28T20:30:00Z",
+   "players": [
+    {
+     "name": "Chauncey Bowens",
+     "team": "Georgia",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 31.5,
+       "projection": 18.6,
+       "edge_pct": -41.0,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Dillon Bell",
+     "team": "Georgia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 28.5,
+       "edge_pct": 32.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Gunner Stockton",
+     "team": "Georgia",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 235.5,
+       "projection": 201.2,
+       "edge_pct": -14.6,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 29.5,
+       "projection": 13.1,
+       "edge_pct": -55.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Nate Frazier",
+     "team": "Georgia",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 65.5,
+       "projection": 28.5,
+       "edge_pct": -56.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Noah Thomas",
+     "team": "Georgia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 34.6,
+       "edge_pct": -7.7,
+       "over_price": -113.0,
+       "under_price": -116.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.3,
+       "edge_pct": -34.3,
+       "over_price": 142.0,
+       "under_price": -188.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Oscar Delp",
+     "team": "Georgia",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 22.5,
+       "projection": 24.2,
+       "edge_pct": 7.6,
+       "over_price": -116.0,
+       "under_price": -111.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.8,
+       "edge_pct": -28.0,
+       "over_price": 130.0,
+       "under_price": -170.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Zachariah Branch",
+     "team": "Georgia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 65.5,
+       "projection": 57.5,
+       "edge_pct": -12.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 6.5,
+       "projection": 5.4,
+       "edge_pct": -16.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Eric Rivers",
+     "team": "Georgia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 57.9,
+       "edge_pct": 43.0,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.9,
+       "edge_pct": 11.4,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Haynes King",
+     "team": "Georgia Tech",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 225.5,
+       "projection": 227.0,
+       "edge_pct": 0.7,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 15.5,
+       "projection": 15.0,
+       "edge_pct": -3.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 68.5,
+       "projection": 81.8,
+       "edge_pct": 19.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Isiah Canion",
+     "team": "Georgia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 28.7,
+       "edge_pct": -5.9,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.0,
+       "edge_pct": -20.0,
+       "over_price": -111.5,
+       "under_price": -117.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Malachi Hosley",
+     "team": "Georgia Tech",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 31.5,
+       "projection": 50.3,
+       "edge_pct": 59.7,
+       "over_price": -116.5,
+       "under_price": -112.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Malik Rutherford",
+     "team": "Georgia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 45.2,
+       "edge_pct": 31.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.9,
+       "edge_pct": 11.4,
+       "over_price": -137.5,
+       "under_price": 105.0,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "5522e41053ad21182dcb8e88569c3239",
+   "home_team": "New Mexico Lobos",
+   "away_team": "San Diego State Aztecs",
+   "commence_time": "2025-11-28T20:31:00Z",
+   "players": [
+    {
+     "name": "Lucky Sutton",
+     "team": "San Diego State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 98.5,
+       "projection": 77.0,
+       "edge_pct": -21.8,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "baf849e79f0978d22d19b6c5e9df6622",
+   "home_team": "Utah State Aggies",
+   "away_team": "Boise State Broncos",
+   "commence_time": "2025-11-28T21:00:00Z",
+   "players": [
+    {
+     "name": "Chris Marshall",
+     "team": "Boise State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 39.5,
+       "edge_pct": -13.2,
+       "over_price": -106.0,
+       "under_price": -122.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.5,
+       "edge_pct": -28.6,
+       "over_price": 108.0,
+       "under_price": -140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Dylan Riley",
+     "team": "Boise State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 75.5,
+       "projection": 75.1,
+       "edge_pct": -0.5,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Latrell Caples",
+     "team": "Boise State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 45.2,
+       "edge_pct": 6.4,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.8,
+       "edge_pct": -15.6,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Matt Lauter",
+     "team": "Boise State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 27.5,
+       "projection": 33.1,
+       "edge_pct": 20.4,
+       "over_price": -114.0,
+       "under_price": -113.5,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.1,
+       "edge_pct": 24.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Sire Gaines",
+     "team": "Boise State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 74.5,
+       "projection": 72.4,
+       "edge_pct": -2.8,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Brady Boyd",
+     "team": "Utah State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 57.5,
+       "projection": 33.0,
+       "edge_pct": -42.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.0,
+       "projection": 2.3,
+       "edge_pct": -42.5,
+       "over_price": -24.5,
+       "under_price": -12.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Bryson Barnes",
+     "team": "Utah State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 222.5,
+       "projection": 40.6,
+       "edge_pct": -81.8,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 14.5,
+       "projection": 9.5,
+       "edge_pct": -34.5,
+       "over_price": -160.0,
+       "under_price": 120.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 54.5,
+       "projection": 60.6,
+       "edge_pct": 11.2,
+       "over_price": -115.0,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Miles Davis",
+     "team": "Utah State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 43.5,
+       "projection": 42.1,
+       "edge_pct": -3.2,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "031eaf298fe62f9cc1ee593ebf867ad2",
+   "home_team": "Texas Longhorns",
+   "away_team": "Texas A&M Aggies",
+   "commence_time": "2025-11-29T00:30:00Z",
+   "players": [
+    {
+     "name": "Arch Manning",
+     "team": "Texas",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 242.5,
+       "projection": 75.7,
+       "edge_pct": -68.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 6.5,
+       "projection": 16.7,
+       "edge_pct": 156.9,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "CJ Baxter",
+     "team": "Texas",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 22.5,
+       "projection": 21.4,
+       "edge_pct": -4.9,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "DeAndre Moore Jr.",
+     "team": "Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 33.9,
+       "edge_pct": -23.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.5,
+       "edge_pct": -28.6,
+       "over_price": 105.5,
+       "under_price": -136.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Emmett Mosley V",
+     "team": "Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 42.3,
+       "edge_pct": -7.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.2,
+       "edge_pct": -8.6,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Jack Endries",
+     "team": "Texas",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 23.8,
+       "edge_pct": 10.7,
+       "over_price": -115.0,
+       "under_price": -113.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.3,
+       "edge_pct": -8.0,
+       "over_price": -110.0,
+       "under_price": -120.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Parker Livingstone",
+     "team": "Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 22.9,
+       "edge_pct": -13.6,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Quintrevion Wisner",
+     "team": "Texas",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 11.5,
+       "projection": 15.2,
+       "edge_pct": 32.2,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 14.5,
+       "projection": 10.4,
+       "edge_pct": -28.3,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 63.5,
+       "projection": 44.4,
+       "edge_pct": -30.1,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Ryan Wingo",
+     "team": "Texas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 63.5,
+       "projection": 45.4,
+       "edge_pct": -28.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.0,
+       "edge_pct": -33.3,
+       "over_price": -1.0,
+       "under_price": -129.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Ashton Bethel-Roman",
+     "team": "Texas A&M",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 28.0,
+       "projection": 32.3,
+       "edge_pct": 15.4,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "KC Concepcion",
+     "team": "Texas A&M",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 65.5,
+       "projection": 69.5,
+       "edge_pct": 6.1,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 5.1,
+       "edge_pct": 13.3,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Marcel Reed",
+     "team": "Texas A&M",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 233.5,
+       "projection": 228.9,
+       "edge_pct": -2.0,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 8.5,
+       "projection": 7.0,
+       "edge_pct": -17.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 25.5,
+       "projection": 37.6,
+       "edge_pct": 47.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Mario Craver",
+     "team": "Texas A&M",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 58.5,
+       "projection": 66.9,
+       "edge_pct": 14.4,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.2,
+       "edge_pct": 20.0,
+       "over_price": -148.0,
+       "under_price": 114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Rueben Owens II",
+     "team": "Texas A&M",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 12.5,
+       "projection": 7.1,
+       "edge_pct": -43.2,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 51.5,
+       "projection": 36.4,
+       "edge_pct": -29.3,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "0f077fbc1706837ce351b4841cf850c9",
+   "home_team": "Purdue Boilermakers",
+   "away_team": "Indiana Hoosiers",
+   "commence_time": "2025-11-29T00:30:00Z",
+   "players": [
+    {
+     "name": "Charlie Becker",
+     "team": "Indiana",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 56.1,
+       "edge_pct": 38.5,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "E.J. Williams Jr.",
+     "team": "Indiana",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 42.0,
+       "edge_pct": 21.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.3,
+       "edge_pct": -5.7,
+       "over_price": 115.0,
+       "under_price": -150.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Elijah Sarratt",
+     "team": "Indiana",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 73.0,
+       "projection": 94.7,
+       "edge_pct": 29.7,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 6.7,
+       "edge_pct": 48.9,
+       "over_price": -143.0,
+       "under_price": 110.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Fernando Mendoza",
+     "team": "Indiana",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 256.5,
+       "projection": 462.6,
+       "edge_pct": 80.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 20.5,
+       "projection": 111.7,
+       "edge_pct": 444.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Kaelon Black",
+     "team": "Indiana",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 9.5,
+       "projection": 37.0,
+       "edge_pct": 289.5,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 57.5,
+       "projection": 219.2,
+       "edge_pct": 281.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Omar Cooper Jr.",
+     "team": "Indiana",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 74.0,
+       "projection": 83.4,
+       "edge_pct": 12.7,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 5.9,
+       "edge_pct": 7.3,
+       "over_price": -106.5,
+       "under_price": -122.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Roman Hemby",
+     "team": "Indiana",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 13.5,
+       "projection": 56.0,
+       "edge_pct": 314.8,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 72.5,
+       "projection": 282.1,
+       "edge_pct": 289.1,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Antonio Harris",
+     "team": "Purdue",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 37.5,
+       "projection": 1.2,
+       "edge_pct": -96.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Michael Jackson III",
+     "team": "Purdue",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 24.0,
+       "edge_pct": -39.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 2.4,
+       "edge_pct": -46.7,
+       "over_price": -124.0,
+       "under_price": -106.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Nitro Tuggle",
+     "team": "Purdue",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 20.3,
+       "edge_pct": -47.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 1.5,
+       "edge_pct": -57.1,
+       "over_price": 123.5,
+       "under_price": -162.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Ryan Browne",
+     "team": "Purdue",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 143.5,
+       "projection": 62.6,
+       "edge_pct": -56.4,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "eef629c46747c4f201a425717b019fde",
+   "home_team": "Arizona State Sun Devils",
+   "away_team": "Arizona Wildcats",
+   "commence_time": "2025-11-29T02:00:00Z",
+   "players": [
+    {
+     "name": "Ismail Mahdi",
+     "team": "Arizona",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 44.5,
+       "projection": 52.1,
+       "edge_pct": 17.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Kedrick Reescano",
+     "team": "Arizona",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 39.5,
+       "projection": 31.4,
+       "edge_pct": -20.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Kris Hutson",
+     "team": "Arizona",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 76.5,
+       "projection": 49.2,
+       "edge_pct": -35.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Noah Fifita",
+     "team": "Arizona",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 220.5,
+       "projection": 71.9,
+       "edge_pct": -67.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Tre Spivey",
+     "team": "Arizona",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 19.5,
+       "projection": 18.1,
+       "edge_pct": -7.2,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chamon Metayer",
+     "team": "Arizona State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 25.2,
+       "edge_pct": -4.9,
+       "over_price": -115.0,
+       "under_price": -113.5,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jeff Sims",
+     "team": "Arizona State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 169.5,
+       "projection": 26.0,
+       "edge_pct": -84.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 61.5,
+       "projection": 41.0,
+       "edge_pct": -33.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jordyn Tyson",
+     "team": "Arizona State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 62.5,
+       "projection": 64.7,
+       "edge_pct": 3.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Raleek Brown",
+     "team": "Arizona State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 80.0,
+       "projection": 65.9,
+       "edge_pct": -17.6,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "a17c0bb6637ad2192754d6d1059f7e92",
+   "home_team": "Michigan Wolverines",
+   "away_team": "Ohio State Buckeyes",
+   "commence_time": "2025-11-29T16:59:00Z",
+   "players": [
+    {
+     "name": "Andrew Marsh",
+     "team": "Michigan",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 52.5,
+       "projection": 31.3,
+       "edge_pct": -40.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 2.2,
+       "edge_pct": -51.1,
+       "over_price": -132.0,
+       "under_price": 102.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Bryce Underwood",
+     "team": "Michigan",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 150.5,
+       "projection": -2.2,
+       "edge_pct": -101.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 16.5,
+       "projection": 10.6,
+       "edge_pct": -35.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Donaven McCulley",
+     "team": "Michigan",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 32.5,
+       "projection": 17.1,
+       "edge_pct": -47.4,
+       "over_price": -115.0,
+       "under_price": -112.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.2,
+       "edge_pct": -52.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jordan Marshall",
+     "team": "Michigan",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 19.5,
+       "projection": 4.0,
+       "edge_pct": -79.5,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 83.5,
+       "projection": 20.7,
+       "edge_pct": -75.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Marlin Klein",
+     "team": "Michigan",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 10.0,
+       "edge_pct": -4.8,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Bo Jackson",
+     "team": "Ohio State",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 17.5,
+       "projection": 18.7,
+       "edge_pct": 6.9,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 78.5,
+       "projection": 108.4,
+       "edge_pct": 38.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Brandon Inniss",
+     "team": "Ohio State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 19.5,
+       "projection": 21.9,
+       "edge_pct": 12.3,
+       "over_price": -110.5,
+       "under_price": -116.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Carnell Tate",
+     "team": "Ohio State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 64.5,
+       "projection": 73.4,
+       "edge_pct": 13.8,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.0,
+       "projection": 4.5,
+       "edge_pct": 12.5,
+       "over_price": -36.5,
+       "under_price": -3.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Jeremiah Smith",
+     "team": "Ohio State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 79.5,
+       "projection": 88.4,
+       "edge_pct": 11.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 6.5,
+       "projection": 6.6,
+       "edge_pct": 1.5,
+       "over_price": 114.5,
+       "under_price": -149.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Julian Sayin",
+     "team": "Ohio State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 235.5,
+       "projection": 227.0,
+       "edge_pct": -3.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Max Klare",
+     "team": "Ohio State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 44.5,
+       "edge_pct": 18.7,
+       "over_price": -114.5,
+       "under_price": -112.0,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.9,
+       "edge_pct": 11.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "c739b05669e6035797b50a66f2c23ce0",
+   "home_team": "South Carolina Gamecocks",
+   "away_team": "Clemson Tigers",
+   "commence_time": "2025-11-29T17:00:00Z",
+   "players": [
+    {
+     "name": "Adam Randall",
+     "team": "Clemson",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 13.5,
+       "projection": 5.0,
+       "edge_pct": -63.0,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 55.5,
+       "projection": 24.8,
+       "edge_pct": -55.3,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Antonio Williams",
+     "team": "Clemson",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 63.5,
+       "projection": 55.5,
+       "edge_pct": -12.6,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Cade Klubnik",
+     "team": "Clemson",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 235.5,
+       "projection": 273.3,
+       "edge_pct": 16.1,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "T.J. Moore",
+     "team": "Clemson",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 51.5,
+       "projection": 49.5,
+       "edge_pct": -3.9,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "LaNorris Sellers",
+     "team": "South Carolina",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 219.5,
+       "projection": 187.5,
+       "edge_pct": -14.6,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 28.5,
+       "projection": 56.3,
+       "edge_pct": 97.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Nyck Harbor",
+     "team": "South Carolina",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 48.5,
+       "projection": 40.6,
+       "edge_pct": -16.3,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Rahsul Faison",
+     "team": "South Carolina",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 28.5,
+       "projection": 53.4,
+       "edge_pct": 87.4,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Vandrevius Jacobs",
+     "team": "South Carolina",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 35.5,
+       "edge_pct": 16.4,
+       "over_price": -113.5,
+       "under_price": -115.0,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "8f08d4462c8cbc09b866893ca21ae406",
+   "home_team": "Pittsburgh Panthers",
+   "away_team": "Miami Hurricanes",
+   "commence_time": "2025-11-29T17:00:00Z",
+   "players": [
+    {
+     "name": "Carson Beck",
+     "team": "Miami",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 270.5,
+       "projection": 256.1,
+       "edge_pct": -5.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Girard Pringle Jr.",
+     "team": "Miami",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 39.5,
+       "projection": 43.8,
+       "edge_pct": 10.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Malachi Toney",
+     "team": "Miami",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 80.5,
+       "projection": 72.6,
+       "edge_pct": -9.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 6.5,
+       "projection": 6.1,
+       "edge_pct": -6.2,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Cataurus Hicks",
+     "team": "Pittsburgh",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 20.6,
+       "edge_pct": -12.3,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Ja'Kyrian Turner",
+     "team": "Pittsburgh",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 46.5,
+       "projection": 21.0,
+       "edge_pct": -54.8,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Kenny Johnson",
+     "team": "Pittsburgh",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 50.5,
+       "projection": 40.6,
+       "edge_pct": -19.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.0,
+       "edge_pct": -14.3,
+       "over_price": -146.0,
+       "under_price": 112.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Mason Heintschel",
+     "team": "Pittsburgh",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 243.5,
+       "projection": 111.7,
+       "edge_pct": -54.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 12.5,
+       "projection": 12.1,
+       "edge_pct": -3.2,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Raphael Williams Jr.",
+     "team": "Pittsburgh",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 34.3,
+       "edge_pct": -8.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.6,
+       "edge_pct": -25.7,
+       "over_price": 136.0,
+       "under_price": -178.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "f64071bbf06bf34a684c347ad45f82a9",
+   "home_team": "Louisville Cardinals",
+   "away_team": "Kentucky Wildcats",
+   "commence_time": "2025-11-29T17:00:00Z",
+   "players": [
+    {
+     "name": "Cutter Boley",
+     "team": "Kentucky",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 207.5,
+       "projection": 211.9,
+       "edge_pct": 2.1,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Seth McGowan",
+     "team": "Kentucky",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 65.5,
+       "projection": 86.0,
+       "edge_pct": 31.3,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Willie Rodriguez",
+     "team": "Kentucky",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 27.9,
+       "edge_pct": 18.7,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "98355c397c652869253cd333094fd6a8",
+   "home_team": "Kansas State Wildcats",
+   "away_team": "Colorado Buffaloes",
+   "commence_time": "2025-11-29T17:01:00Z",
+   "players": [
+    {
+     "name": "Joseph Williams",
+     "team": "Colorado",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 32.2,
+       "edge_pct": -24.2,
+       "over_price": -114.0,
+       "under_price": -112.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Omarion Miller",
+     "team": "Colorado",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 56.0,
+       "projection": 36.9,
+       "edge_pct": -34.1,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Sincere Brown",
+     "team": "Colorado",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 32.5,
+       "projection": 20.7,
+       "edge_pct": -36.3,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Avery Johnson",
+     "team": "Kansas State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 208.5,
+       "projection": 255.7,
+       "edge_pct": 22.6,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 59.0,
+       "projection": 105.3,
+       "edge_pct": 78.5,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Garrett Oakley",
+     "team": "Kansas State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 42.1,
+       "edge_pct": 6.6,
+       "over_price": 107.0,
+       "under_price": -139.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jaron Tibbs",
+     "team": "Kansas State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 58.5,
+       "projection": 53.4,
+       "edge_pct": -8.7,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Joe Jackson",
+     "team": "Kansas State",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 14.5,
+       "projection": 13.2,
+       "edge_pct": -9.0,
+       "over_price": -112.5,
+       "under_price": -116.5,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 98.5,
+       "projection": 133.1,
+       "edge_pct": 35.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "9328f7960f57736e8da4b90cb2bdd826",
+   "home_team": "West Virginia Mountaineers",
+   "away_team": "Texas Tech Red Raiders",
+   "commence_time": "2025-11-29T17:01:00Z",
+   "players": [
+    {
+     "name": "Behren Morton",
+     "team": "Texas Tech",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 242.5,
+       "projection": 346.9,
+       "edge_pct": 43.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Caleb Douglas",
+     "team": "Texas Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 67.5,
+       "projection": 80.1,
+       "edge_pct": 18.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Cameron Dickey",
+     "team": "Texas Tech",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 77.5,
+       "projection": 144.8,
+       "edge_pct": 86.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Coy Eakin",
+     "team": "Texas Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 65.6,
+       "edge_pct": 70.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "J'Koby Williams",
+     "team": "Texas Tech",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 62.5,
+       "projection": 98.8,
+       "edge_pct": 58.1,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Reggie Virgil",
+     "team": "Texas Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 50.5,
+       "projection": 70.5,
+       "edge_pct": 39.6,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Cam Vaughn",
+     "team": "West Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 46.8,
+       "edge_pct": 53.4,
+       "over_price": -116.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Cyncir Bowers",
+     "team": "West Virginia",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 30.5,
+       "projection": 29.5,
+       "edge_pct": -3.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Scotty Fox Jr.",
+     "team": "West Virginia",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 150.5,
+       "projection": 126.7,
+       "edge_pct": -15.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 23.5,
+       "projection": 33.2,
+       "edge_pct": 41.3,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "09d90f3370c02dea5e1eac347ffe476f",
+   "home_team": "Baylor Bears",
+   "away_team": "Houston Cougars",
+   "commence_time": "2025-11-29T17:01:00Z",
+   "players": [
+    {
+     "name": "Ashtyn Hawkins",
+     "team": "Baylor",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 53.4,
+       "edge_pct": 20.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Bryson Washington",
+     "team": "Baylor",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 53.5,
+       "projection": 94.9,
+       "edge_pct": 77.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Caden Knighten",
+     "team": "Baylor",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 52.5,
+       "projection": 51.5,
+       "edge_pct": -1.9,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Josh Cameron",
+     "team": "Baylor",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 70.5,
+       "projection": 71.8,
+       "edge_pct": 1.8,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Kole Wilson",
+     "team": "Baylor",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 51.9,
+       "edge_pct": 22.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Michael Trigg",
+     "team": "Baylor",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 51.5,
+       "projection": 59.3,
+       "edge_pct": 15.1,
+       "over_price": -115.0,
+       "under_price": -120.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Sawyer Robertson",
+     "team": "Baylor",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 271.5,
+       "projection": 243.9,
+       "edge_pct": -10.2,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Amare Thomas",
+     "team": "Houston",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 67.5,
+       "projection": 74.8,
+       "edge_pct": 10.8,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Conner Weigman",
+     "team": "Houston",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 202.5,
+       "projection": 231.3,
+       "edge_pct": 14.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 56.5,
+       "projection": 57.3,
+       "edge_pct": 1.4,
+       "over_price": -115.0,
+       "under_price": -114.5,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Dean Connors",
+     "team": "Houston",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 60.5,
+       "projection": 86.3,
+       "edge_pct": 42.6,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Tanner Koziol",
+     "team": "Houston",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 48.5,
+       "projection": 66.0,
+       "edge_pct": 36.1,
+       "over_price": -115.0,
+       "under_price": -113.5,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "6f1fb568ca7f6fa5adc55fb37e6cbf3b",
+   "home_team": "Oklahoma State Cowboys",
+   "away_team": "Iowa State Cyclones",
+   "commence_time": "2025-11-29T17:02:00Z",
+   "players": [
+    {
+     "name": "Benjamin Brahmer",
+     "team": "Iowa State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 44.3,
+       "edge_pct": 32.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Brett Eskildsen",
+     "team": "Iowa State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 43.2,
+       "edge_pct": 6.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Carson Hansen",
+     "team": "Iowa State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 99.5,
+       "projection": 132.6,
+       "edge_pct": 33.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Chase Sowell",
+     "team": "Iowa State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 46.5,
+       "projection": 59.9,
+       "edge_pct": 28.8,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Rocco Becht",
+     "team": "Iowa State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 224.5,
+       "projection": 401.0,
+       "edge_pct": 78.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 5.5,
+       "projection": 10.8,
+       "edge_pct": 96.4,
+       "over_price": -160.0,
+       "under_price": 120.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 10.5,
+       "projection": 42.0,
+       "edge_pct": 300.0,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Gavin Freeman",
+     "team": "Oklahoma State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 32.8,
+       "edge_pct": -19.0,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Terrill Davis",
+     "team": "Oklahoma State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 35.5,
+       "projection": 32.1,
+       "edge_pct": -9.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Zane Flores",
+     "team": "Oklahoma State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 169.5,
+       "projection": 183.8,
+       "edge_pct": 8.4,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "8e9db25305896f6a8ee5bf0e94c260f5",
+   "home_team": "BYU Cougars",
+   "away_team": "UCF Knights",
+   "commence_time": "2025-11-29T18:00:00Z",
+   "players": [
+    {
+     "name": "Bear Bachmeier",
+     "team": "BYU",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 180.5,
+       "projection": 216.4,
+       "edge_pct": 19.9,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 11.5,
+       "projection": 26.8,
+       "edge_pct": 133.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 52.5,
+       "projection": 134.0,
+       "edge_pct": 155.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Carsen Ryan",
+     "team": "BYU",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 31.8,
+       "edge_pct": -5.1,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "LJ Martin",
+     "team": "BYU",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 17.4,
+       "edge_pct": -19.1,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 21.5,
+       "projection": 40.1,
+       "edge_pct": 86.5,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 105.5,
+       "projection": 228.7,
+       "edge_pct": 116.8,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Parker Kingston",
+     "team": "BYU",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 62.5,
+       "projection": 55.1,
+       "edge_pct": -11.8,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Duane Thomas Jr.",
+     "team": "UCF",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 23.6,
+       "edge_pct": -29.6,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Dylan Wade",
+     "team": "UCF",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 30.0,
+       "edge_pct": -20.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Jaden Nixon",
+     "team": "UCF",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 26.5,
+       "projection": 9.0,
+       "edge_pct": -66.0,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Myles Montgomery",
+     "team": "UCF",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 54.5,
+       "projection": 9.8,
+       "edge_pct": -82.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Tayven Jackson",
+     "team": "UCF",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 177.5,
+       "projection": 96.6,
+       "edge_pct": -45.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "73c36d76de852e49c6d45b557ce30928",
+   "home_team": "Rutgers Scarlet Knights",
+   "away_team": "Penn State Nittany Lions",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Devonte Ross",
+     "team": "Penn State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 67.8,
+       "edge_pct": 122.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Kaytron Allen",
+     "team": "Penn State",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 21.5,
+       "projection": 53.0,
+       "edge_pct": 146.5,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 123.5,
+       "projection": 302.2,
+       "edge_pct": 144.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Nicholas Singleton",
+     "team": "Penn State",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 22.5,
+       "projection": 28.8,
+       "edge_pct": 28.0,
+       "over_price": -115.0,
+       "under_price": -117.0,
+       "n_books": "3"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 58.5,
+       "projection": 176.2,
+       "edge_pct": 201.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Trebor Pena",
+     "team": "Penn State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 67.5,
+       "edge_pct": 48.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Antwan Raymond",
+     "team": "Rutgers",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 17.5,
+       "projection": 8.1,
+       "edge_pct": -53.7,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 77.5,
+       "projection": 40.1,
+       "edge_pct": -48.3,
+       "over_price": -117.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Athan Kaliakmanis",
+     "team": "Rutgers",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 228.5,
+       "projection": 170.4,
+       "edge_pct": -25.4,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "DT Sheffield",
+     "team": "Rutgers",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 35.5,
+       "projection": 43.4,
+       "edge_pct": 22.3,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Ian Strong",
+     "team": "Rutgers",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 67.5,
+       "projection": 54.9,
+       "edge_pct": -18.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "KJ Duff",
+     "team": "Rutgers",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 63.5,
+       "projection": 53.4,
+       "edge_pct": -15.9,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "c90e85208735f83419bdd9fafea09515",
+   "home_team": "Arkansas Razorbacks",
+   "away_team": "Missouri Tigers",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Mike Washington Jr.",
+     "team": "Arkansas",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 80.5,
+       "projection": 72.9,
+       "edge_pct": -9.4,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "O'Mega Blake",
+     "team": "Arkansas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 43.5,
+       "projection": 72.5,
+       "edge_pct": 66.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 5.0,
+       "edge_pct": 11.1,
+       "over_price": 112.0,
+       "under_price": -146.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Taylen Green",
+     "team": "Arkansas",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 195.5,
+       "projection": 326.0,
+       "edge_pct": 66.8,
+       "over_price": -113.0,
+       "under_price": -116.5,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 51.5,
+       "projection": 67.0,
+       "edge_pct": 30.1,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Ahmad Hardy",
+     "team": "Missouri",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 120.5,
+       "projection": 122.3,
+       "edge_pct": 1.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Beau Pribula",
+     "team": "Missouri",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 187.5,
+       "projection": 103.1,
+       "edge_pct": -45.0,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Kevin Coleman Jr.",
+     "team": "Missouri",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 59.5,
+       "projection": 56.3,
+       "edge_pct": -5.4,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 4.8,
+       "edge_pct": 6.7,
+       "over_price": -138.0,
+       "under_price": 106.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "0deeb2c4386d575a59e7437fe01d1f6f",
+   "home_team": "Washington Huskies",
+   "away_team": "Oregon Ducks",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Dante Moore",
+     "team": "Oregon",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 216.5,
+       "projection": 168.8,
+       "edge_pct": -22.0,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 9.5,
+       "projection": 23.7,
+       "edge_pct": 149.5,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Dierre Hill Jr.",
+     "team": "Oregon",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 27.5,
+       "projection": 48.8,
+       "edge_pct": 77.5,
+       "over_price": -113.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jamari Johnson",
+     "team": "Oregon",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 25.6,
+       "edge_pct": -3.4,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jeremiah McClellan",
+     "team": "Oregon",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 35.5,
+       "projection": 23.9,
+       "edge_pct": -32.7,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.8,
+       "edge_pct": -28.0,
+       "over_price": -148.0,
+       "under_price": 114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jordon Davison",
+     "team": "Oregon",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 46.5,
+       "projection": 59.5,
+       "edge_pct": 28.0,
+       "over_price": -113.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Kenyon Sadiq",
+     "team": "Oregon",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 56.0,
+       "projection": 41.8,
+       "edge_pct": -25.4,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.2,
+       "edge_pct": -28.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Malik Benson",
+     "team": "Oregon",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.0,
+       "projection": 37.0,
+       "edge_pct": -5.1,
+       "over_price": -113.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.5,
+       "edge_pct": 0.0,
+       "over_price": -122.0,
+       "under_price": -106.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Noah Whittington",
+     "team": "Oregon",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 76.5,
+       "projection": 88.1,
+       "edge_pct": 15.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Decker DeGraaf",
+     "team": "Washington",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.0,
+       "projection": 20.5,
+       "edge_pct": -18.0,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Demond Williams Jr.",
+     "team": "Washington",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 209.5,
+       "projection": 83.4,
+       "edge_pct": -60.2,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 43.5,
+       "projection": 28.6,
+       "edge_pct": -34.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Denzel Boston",
+     "team": "Washington",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 54.0,
+       "projection": 56.4,
+       "edge_pct": 4.4,
+       "over_price": -114.5,
+       "under_price": -113.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 4.2,
+       "edge_pct": -6.7,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Dezmen Roebuck",
+     "team": "Washington",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 36.7,
+       "edge_pct": -7.1,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.8,
+       "edge_pct": -20.0,
+       "over_price": 106.0,
+       "under_price": -138.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jonah Coleman",
+     "team": "Washington",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 18.5,
+       "projection": 20.2,
+       "edge_pct": 9.2,
+       "over_price": -112.5,
+       "under_price": -116.5,
+       "n_books": "2"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 40.5,
+       "projection": 40.2,
+       "edge_pct": -0.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Omari Evans",
+     "team": "Washington",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.5,
+       "projection": 19.8,
+       "edge_pct": -22.4,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "bf37e86fb31ad838e265fe2d48f4ebee",
+   "home_team": "Duke Blue Devils",
+   "away_team": "Wake Forest Demon Deacons",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Anderson Castle",
+     "team": "Duke",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 35.5,
+       "projection": 40.1,
+       "edge_pct": 13.0,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Cooper Barkate",
+     "team": "Duke",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 62.5,
+       "projection": 64.6,
+       "edge_pct": 3.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Darian Mensah",
+     "team": "Duke",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 265.5,
+       "projection": 108.5,
+       "edge_pct": -59.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Nate Sheppard",
+     "team": "Duke",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 70.5,
+       "projection": 78.2,
+       "edge_pct": 10.9,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Que'Sean Brown",
+     "team": "Duke",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 43.1,
+       "edge_pct": -5.3,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chris Barnes",
+     "team": "Wake Forest",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 40.6,
+       "edge_pct": 0.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Demond Claiborne",
+     "team": "Wake Forest",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 16.5,
+       "projection": 14.9,
+       "edge_pct": -9.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 73.5,
+       "projection": 74.6,
+       "edge_pct": 1.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Robby Ashford",
+     "team": "Wake Forest",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 218.5,
+       "projection": 197.0,
+       "edge_pct": -9.8,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 11.5,
+       "projection": 7.6,
+       "edge_pct": -33.9,
+       "over_price": 105.0,
+       "under_price": -135.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 53.5,
+       "projection": 41.2,
+       "edge_pct": -23.0,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "8ff0041fc39ed3aaabd78295aaa44ccc",
+   "home_team": "Tennessee Volunteers",
+   "away_team": "Vanderbilt Commodores",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Braylon Staley",
+     "team": "Tennessee",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 62.5,
+       "projection": 70.9,
+       "edge_pct": 13.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 5.6,
+       "edge_pct": 1.8,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chris Brazzell II",
+     "team": "Tennessee",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 74.5,
+       "projection": 86.8,
+       "edge_pct": 16.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 5.7,
+       "edge_pct": 26.7,
+       "over_price": -168.0,
+       "under_price": 128.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "DeSean Bishop",
+     "team": "Tennessee",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 6.5,
+       "projection": 11.1,
+       "edge_pct": 70.8,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 84.5,
+       "projection": 81.3,
+       "edge_pct": -3.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Joey Aguilar",
+     "team": "Tennessee",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 301.5,
+       "projection": 412.8,
+       "edge_pct": 36.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 8.5,
+       "projection": 25.8,
+       "edge_pct": 203.5,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Mike Matthews",
+     "team": "Tennessee",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 54.5,
+       "projection": 62.6,
+       "edge_pct": 14.9,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.1,
+       "edge_pct": 17.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Diego Pavia",
+     "team": "Vanderbilt",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 278.5,
+       "projection": 306.9,
+       "edge_pct": 10.2,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 55.5,
+       "projection": 82.4,
+       "edge_pct": 48.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Eli Stowers",
+     "team": "Vanderbilt",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 59.5,
+       "projection": 74.2,
+       "edge_pct": 24.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 6.0,
+       "edge_pct": 33.3,
+       "over_price": -184.0,
+       "under_price": 140.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Junior Sherrill",
+     "team": "Vanderbilt",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 51.5,
+       "projection": 58.4,
+       "edge_pct": 13.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.4,
+       "edge_pct": 25.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Sedrick Alexander",
+     "team": "Vanderbilt",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 11.5,
+       "projection": 20.4,
+       "edge_pct": 77.4,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.8,
+       "edge_pct": 20.0,
+       "over_price": -168.0,
+       "under_price": 128.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 32.5,
+       "projection": 53.6,
+       "edge_pct": 64.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Tre Richardson",
+     "team": "Vanderbilt",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 53.5,
+       "projection": 67.1,
+       "edge_pct": 25.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "fca43c84b575e6d2a974da994e1ca32f",
+   "home_team": "Oklahoma Sooners",
+   "away_team": "LSU Tigers",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Barion Brown",
+     "team": "LSU",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 31.5,
+       "projection": 26.0,
+       "edge_pct": -17.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.0,
+       "projection": 2.4,
+       "edge_pct": -40.0,
+       "over_price": -17.5,
+       "under_price": -22.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Harlem Berry",
+     "team": "LSU",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 42.5,
+       "projection": 5.0,
+       "edge_pct": -88.2,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Michael Van Buren Jr.",
+     "team": "LSU",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 164.0,
+       "projection": 53.3,
+       "edge_pct": -67.5,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Trey'Dez Green",
+     "team": "LSU",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 27.5,
+       "projection": 16.4,
+       "edge_pct": -40.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 1.4,
+       "edge_pct": -60.0,
+       "over_price": 133.5,
+       "under_price": -177.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Zavion Thomas",
+     "team": "LSU",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 20.6,
+       "edge_pct": -40.3,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Deion Burks",
+     "team": "Oklahoma",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 27.5,
+       "projection": 32.7,
+       "edge_pct": 18.9,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.4,
+       "edge_pct": -2.9,
+       "over_price": 135.5,
+       "under_price": -179.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Isaiah Sategna III",
+     "team": "Oklahoma",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 57.5,
+       "projection": 45.2,
+       "edge_pct": -21.4,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.2,
+       "edge_pct": -28.9,
+       "over_price": 102.0,
+       "under_price": -132.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jaren Kanak",
+     "team": "Oklahoma",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 22.5,
+       "projection": 26.9,
+       "edge_pct": 19.6,
+       "over_price": -115.0,
+       "under_price": -112.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.1,
+       "edge_pct": -16.0,
+       "over_price": 123.5,
+       "under_price": -162.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "John Mateer",
+     "team": "Oklahoma",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 187.5,
+       "projection": 159.0,
+       "edge_pct": -15.2,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 11.5,
+       "projection": 3.6,
+       "edge_pct": -68.7,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 44.5,
+       "projection": 18.2,
+       "edge_pct": -59.1,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Xavier Robinson",
+     "team": "Oklahoma",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 13.5,
+       "projection": 2.7,
+       "edge_pct": -80.0,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 55.5,
+       "projection": 13.5,
+       "edge_pct": -75.7,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "01a5a9e3a1d3ecea3295256c33dfef3e",
+   "home_team": "Minnesota Golden Gophers",
+   "away_team": "Wisconsin Badgers",
+   "commence_time": "2025-11-29T20:30:00Z",
+   "players": [
+    {
+     "name": "Darius Taylor",
+     "team": "Minnesota",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 16.5,
+       "projection": 9.2,
+       "edge_pct": -44.2,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "48712c446fe47c5fa3e18038bdd703e8",
+   "home_team": "Florida Gators",
+   "away_team": "Florida State Seminoles",
+   "commence_time": "2025-11-29T21:30:00Z",
+   "players": [
+    {
+     "name": "DJ Lagway",
+     "team": "Florida",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 198.5,
+       "projection": 165.8,
+       "edge_pct": -16.5,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 8.5,
+       "projection": 3.8,
+       "edge_pct": -55.3,
+       "over_price": -150.0,
+       "under_price": 115.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Hayden Hansen",
+     "team": "Florida",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 20.5,
+       "projection": 22.9,
+       "edge_pct": 11.7,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "J. Michael Sturdivant",
+     "team": "Florida",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 31.5,
+       "projection": 34.7,
+       "edge_pct": 10.2,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jadan Baugh",
+     "team": "Florida",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 18.5,
+       "projection": 17.8,
+       "edge_pct": -3.8,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 18.5,
+       "projection": 13.0,
+       "edge_pct": -29.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 94.5,
+       "projection": 60.1,
+       "edge_pct": -36.4,
+       "over_price": -123.5,
+       "under_price": -110.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Vernell Brown III",
+     "team": "Florida",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 55.9,
+       "edge_pct": 41.5,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Duce Robinson",
+     "team": "Florida State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 85.5,
+       "projection": 71.6,
+       "edge_pct": -16.3,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Gavin Sawchuk",
+     "team": "Florida State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 34.5,
+       "projection": 32.5,
+       "edge_pct": -5.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    },
+    {
+     "name": "Ousmane Kromah",
+     "team": "Florida State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 30.5,
+       "projection": 30.5,
+       "edge_pct": 0.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Randy Pittman Jr.",
+     "team": "Florida State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 18.5,
+       "projection": 28.6,
+       "edge_pct": 54.6,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Tommy Castellanos",
+     "team": "Florida State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 216.5,
+       "projection": 232.8,
+       "edge_pct": 7.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 43.5,
+       "projection": 43.4,
+       "edge_pct": -0.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "db441b5da7cf49c5de57f49bff11d8ec",
+   "home_team": "Washington State Cougars",
+   "away_team": "Oregon State Beavers",
+   "commence_time": "2025-11-29T23:30:00Z",
+   "players": [
+    {
+     "name": "Anthony Hankerson",
+     "team": "Oregon State",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 21.5,
+       "projection": 7.4,
+       "edge_pct": -65.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "79975b63437cb1b2a9d06d3b63150977",
+   "home_team": "Michigan State Spartans",
+   "away_team": "Maryland Terrapins",
+   "commence_time": "2025-11-30T00:00:00Z",
+   "players": [
+    {
+     "name": "DeJuan Williams",
+     "team": "Maryland",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.5,
+       "projection": 23.9,
+       "edge_pct": -2.4,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "3"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 44.5,
+       "projection": 24.5,
+       "edge_pct": -44.9,
+       "over_price": -114.0,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Dorian Fleming",
+     "team": "Maryland",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 33.9,
+       "edge_pct": 11.1,
+       "over_price": -114.5,
+       "under_price": -112.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Jalil Farooq",
+     "team": "Maryland",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 35.0,
+       "edge_pct": -11.4,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Malik Washington",
+     "team": "Maryland",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 237.0,
+       "projection": 257.6,
+       "edge_pct": 8.7,
+       "over_price": -113.5,
+       "under_price": -115.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Octavian Smith Jr.",
+     "team": "Maryland",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 38.5,
+       "edge_pct": 0.0,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Shaleak Knotts",
+     "team": "Maryland",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 43.5,
+       "projection": 38.3,
+       "edge_pct": -12.0,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Alessio Milivojevic",
+     "team": "Michigan State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 229.5,
+       "projection": 82.4,
+       "edge_pct": -64.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chrishon McCray",
+     "team": "Michigan State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 42.3,
+       "edge_pct": 38.7,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jack Velling",
+     "team": "Michigan State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 29.1,
+       "edge_pct": 9.8,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Nick Marsh",
+     "team": "Michigan State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 51.5,
+       "projection": 54.6,
+       "edge_pct": 6.0,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Omari Kelly",
+     "team": "Michigan State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 56.1,
+       "edge_pct": 45.7,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "62c8f91b581d1bcca5fb6496ec65aae7",
+   "home_team": "Virginia Cavaliers",
+   "away_team": "Virginia Tech Hokies",
+   "commence_time": "2025-11-30T00:01:00Z",
+   "players": [
+    {
+     "name": "Cam Ross",
+     "team": "Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 56.6,
+       "edge_pct": 27.2,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 5.0,
+       "edge_pct": 42.9,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Chandler Morris",
+     "team": "Virginia",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 253.5,
+       "projection": 396.3,
+       "edge_pct": 56.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "J'Mari Taylor",
+     "team": "Virginia",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 91.5,
+       "projection": 146.4,
+       "edge_pct": 60.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jahmal Edrine",
+     "team": "Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 41.5,
+       "projection": 52.4,
+       "edge_pct": 26.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.0,
+       "projection": 4.1,
+       "edge_pct": 2.5,
+       "over_price": 169.0,
+       "under_price": -230.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Trell Harris",
+     "team": "Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 64.5,
+       "projection": 78.3,
+       "edge_pct": 21.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 5.5,
+       "edge_pct": 22.2,
+       "over_price": 102.0,
+       "under_price": -132.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Ayden Greene",
+     "team": "Virginia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 37.9,
+       "edge_pct": -10.8,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.5,
+       "edge_pct": -28.6,
+       "over_price": 128.0,
+       "under_price": -167.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Cameron Seldon",
+     "team": "Virginia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 17.0,
+       "projection": 12.7,
+       "edge_pct": -25.3,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "2"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.6,
+       "edge_pct": 6.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Kyron Drones",
+     "team": "Virginia Tech",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 153.5,
+       "projection": 176.4,
+       "edge_pct": 14.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 14.5,
+       "projection": 11.8,
+       "edge_pct": -18.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 54.5,
+       "projection": 63.1,
+       "edge_pct": 15.8,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Marcellous Hawkins",
+     "team": "Virginia Tech",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 55.5,
+       "projection": 63.3,
+       "edge_pct": 14.1,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Takye Heath",
+     "team": "Virginia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 18.4,
+       "edge_pct": -21.7,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.8,
+       "edge_pct": -28.0,
+       "over_price": 101.0,
+       "under_price": -131.0,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "181afdc9ce2683ff7c1debad66022351",
+   "home_team": "Auburn Tigers",
+   "away_team": "Alabama Crimson Tide",
+   "commence_time": "2025-11-30T00:30:00Z",
+   "players": [
+    {
+     "name": "Daniel Hill",
+     "team": "Alabama",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 12.5,
+       "projection": 4.5,
+       "edge_pct": -64.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 39.5,
+       "projection": 15.8,
+       "edge_pct": -60.0,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Germie Bernard",
+     "team": "Alabama",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 65.5,
+       "projection": 67.3,
+       "edge_pct": 2.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 4.8,
+       "edge_pct": -12.7,
+       "over_price": 122.0,
+       "under_price": -160.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Isaiah Horton",
+     "team": "Alabama",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 28.5,
+       "projection": 43.8,
+       "edge_pct": 53.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.6,
+       "edge_pct": 2.9,
+       "over_price": 116.0,
+       "under_price": -152.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jam Miller",
+     "team": "Alabama",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 29.5,
+       "projection": 41.0,
+       "edge_pct": 39.0,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Lotzeir Brooks",
+     "team": "Alabama",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 36.8,
+       "edge_pct": 6.7,
+       "over_price": -113.0,
+       "under_price": -113.0,
+       "n_books": "1"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.8,
+       "edge_pct": -20.0,
+       "over_price": 130.0,
+       "under_price": -170.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Ty Simpson",
+     "team": "Alabama",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 274.5,
+       "projection": 232.4,
+       "edge_pct": -15.3,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 5.5,
+       "projection": 3.3,
+       "edge_pct": -40.0,
+       "over_price": -125.0,
+       "under_price": -105.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Ashton Daniels",
+     "team": "Auburn",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 158.5,
+       "projection": 100.5,
+       "edge_pct": -36.6,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 46.5,
+       "projection": 29.3,
+       "edge_pct": -37.0,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Cam Coleman",
+     "team": "Auburn",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 52.5,
+       "projection": 42.8,
+       "edge_pct": -18.5,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.2,
+       "edge_pct": -28.9,
+       "over_price": 110.0,
+       "under_price": -144.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Eric Singleton Jr.",
+     "team": "Auburn",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 36.5,
+       "projection": 37.8,
+       "edge_pct": 3.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.5,
+       "edge_pct": -22.2,
+       "over_price": 154.0,
+       "under_price": -205.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jeremiah Cobb",
+     "team": "Auburn",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 16.5,
+       "projection": 5.3,
+       "edge_pct": -67.9,
+       "over_price": -105.0,
+       "under_price": -125.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 70.5,
+       "projection": 27.6,
+       "edge_pct": -60.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Malcolm Simmons",
+     "team": "Auburn",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.5,
+       "projection": 25.5,
+       "edge_pct": 4.1,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "48a0d56354caf6da69d210132615c809",
+   "home_team": "NC State Wolfpack",
+   "away_team": "North Carolina Tar Heels",
+   "commence_time": "2025-11-30T00:30:00Z",
+   "players": [
+    {
+     "name": "CJ Bailey",
+     "team": "NC State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 246.5,
+       "projection": 214.1,
+       "edge_pct": -13.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Hollywood Smothers",
+     "team": "NC State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 81.5,
+       "projection": 105.5,
+       "edge_pct": 29.4,
+       "over_price": -114.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jayden Scott",
+     "team": "NC State",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 29.5,
+       "projection": 45.2,
+       "edge_pct": 53.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Justin Joly",
+     "team": "NC State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 47.1,
+       "edge_pct": 5.8,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.0,
+       "edge_pct": 14.3,
+       "over_price": -148.0,
+       "under_price": 114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Noah Rogers",
+     "team": "NC State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 34.6,
+       "edge_pct": 13.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.7,
+       "edge_pct": 8.0,
+       "over_price": 106.0,
+       "under_price": -138.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Terrell Anderson",
+     "team": "NC State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 47.5,
+       "projection": 41.1,
+       "edge_pct": -13.5,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.7,
+       "edge_pct": -22.9,
+       "over_price": 109.0,
+       "under_price": -142.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Wesley Grimes",
+     "team": "NC State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 29.8,
+       "edge_pct": 26.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.1,
+       "edge_pct": -40.0,
+       "over_price": 162.0,
+       "under_price": -215.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Gio Lopez",
+     "team": "North Carolina",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 206.5,
+       "projection": 184.0,
+       "edge_pct": -10.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jordan Shipp",
+     "team": "North Carolina",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 61.5,
+       "projection": 40.8,
+       "edge_pct": -33.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 5.5,
+       "projection": 3.6,
+       "edge_pct": -34.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Kobe Paysour",
+     "team": "North Carolina",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 46.5,
+       "projection": 33.7,
+       "edge_pct": -27.5,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.6,
+       "edge_pct": -25.7,
+       "over_price": -105.5,
+       "under_price": -123.5,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "7f71f4ba886e8f1f4855dad0152ca08e",
+   "home_team": "USC Trojans",
+   "away_team": "UCLA Bruins",
+   "commence_time": "2025-11-30T00:30:00Z",
+   "players": [
+    {
+     "name": "Jalen Berger",
+     "team": "UCLA",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 22.5,
+       "projection": 5.3,
+       "edge_pct": -76.4,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Kwazi Gilmer",
+     "team": "UCLA",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 39.5,
+       "projection": 31.8,
+       "edge_pct": -19.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Mikey Matthews",
+     "team": "UCLA",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 23.2,
+       "edge_pct": -23.9,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Ja'Kobi Lane",
+     "team": "USC",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 65.5,
+       "projection": 80.8,
+       "edge_pct": 23.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "4"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 5.8,
+       "edge_pct": 28.9,
+       "over_price": -132.0,
+       "under_price": 102.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Jayden Maiava",
+     "team": "USC",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 280.5,
+       "projection": 447.6,
+       "edge_pct": 59.6,
+       "over_price": -113.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "King Miller",
+     "team": "USC",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 17.5,
+       "projection": 32.8,
+       "edge_pct": 87.4,
+       "over_price": -120.0,
+       "under_price": -110.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 112.5,
+       "projection": 215.9,
+       "edge_pct": 91.9,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Lake McRee",
+     "team": "USC",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 47.8,
+       "edge_pct": 56.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Makai Lemon",
+     "team": "USC",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 101.5,
+       "projection": 121.2,
+       "edge_pct": 19.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 7.5,
+       "projection": 8.7,
+       "edge_pct": 16.0,
+       "over_price": -111.5,
+       "under_price": -117.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Tanook Hines",
+     "team": "USC",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 43.8,
+       "edge_pct": 30.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "ed1f7d744112bf4d7184c2a3bbb2648c",
+   "home_team": "Illinois Fighting Illini",
+   "away_team": "Northwestern Wildcats",
+   "commence_time": "2025-11-30T00:30:00Z",
+   "players": [
+    {
+     "name": "Aidan Laughery",
+     "team": "Illinois",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 6.5,
+       "projection": 14.1,
+       "edge_pct": 116.9,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 29.5,
+       "projection": 79.5,
+       "edge_pct": 169.5,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Ca'Lil Valentine",
+     "team": "Illinois",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 7.5,
+       "projection": 16.0,
+       "edge_pct": 113.3,
+       "over_price": 105.0,
+       "under_price": -135.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 36.5,
+       "projection": 73.5,
+       "edge_pct": 101.4,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Collin Dixon",
+     "team": "Illinois",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 32.5,
+       "projection": 37.1,
+       "edge_pct": 14.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Hank Beatty",
+     "team": "Illinois",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 54.5,
+       "projection": 57.3,
+       "edge_pct": 5.1,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Hudson Clement",
+     "team": "Illinois",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 40.3,
+       "edge_pct": 16.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Kaden Feagin",
+     "team": "Illinois",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 12.4,
+       "edge_pct": 18.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 8.5,
+       "projection": 20.8,
+       "edge_pct": 144.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 28.5,
+       "projection": 98.9,
+       "edge_pct": 247.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Luke Altmyer",
+     "team": "Illinois",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 228.5,
+       "projection": 271.8,
+       "edge_pct": 18.9,
+       "over_price": -107.0,
+       "under_price": -127.0,
+       "n_books": "5"
+      },
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 9.5,
+       "projection": 10.0,
+       "edge_pct": 5.3,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 25.5,
+       "projection": 66.5,
+       "edge_pct": 160.8,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1"
+      }
+     }
+    },
+    {
+     "name": "Caleb Komolafe",
+     "team": "NWESTERN",
+     "position": "HB",
+     "markets": {
+      "player_rush_attempts": {
+       "stat": "rush_att",
+       "book_line": 17.5,
+       "projection": 13.0,
+       "edge_pct": -25.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "1"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 78.5,
+       "projection": 63.6,
+       "edge_pct": -19.0,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Griffin Wilde",
+     "team": "NWESTERN",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 60.5,
+       "projection": 65.5,
+       "edge_pct": 8.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Hayden Eligon II",
+     "team": "NWESTERN",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 28.4,
+       "edge_pct": -15.2,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Preston Stone",
+     "team": "NWESTERN",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 173.5,
+       "projection": 153.8,
+       "edge_pct": -11.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "53c3b0253fe365f12e298b8b31b8f24a",
+   "home_team": "California Golden Bears",
+   "away_team": "SMU Mustangs",
+   "commence_time": "2025-11-30T01:02:00Z",
+   "players": [
+    {
+     "name": "Jacob De Jesus",
+     "team": "California",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 92.0,
+       "projection": 54.8,
+       "edge_pct": -40.4,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Jaron-Keawe Sagapolutele",
+     "team": "California",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 260.0,
+       "projection": 229.8,
+       "edge_pct": -11.6,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Kendrick Raphael",
+     "team": "California",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 64.5,
+       "projection": 19.3,
+       "edge_pct": -70.1,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Trond Grizzell",
+     "team": "California",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 53.5,
+       "projection": 42.5,
+       "edge_pct": -20.6,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Jordan Hudson",
+     "team": "SMU",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 76.5,
+       "projection": 70.3,
+       "edge_pct": -8.1,
+       "over_price": -113.5,
+       "under_price": -112.0,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Kevin Jennings",
+     "team": "SMU",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 276.0,
+       "projection": 227.7,
+       "edge_pct": -17.5,
+       "over_price": -110.5,
+       "under_price": -116.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "Romello Brinson",
+     "team": "SMU",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 45.5,
+       "projection": 51.8,
+       "edge_pct": 13.8,
+       "over_price": -113.5,
+       "under_price": -113.5,
+       "n_books": "2"
+      }
+     }
+    },
+    {
+     "name": "T.J. Harden",
+     "team": "SMU",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 74.0,
+       "projection": 188.5,
+       "edge_pct": 154.7,
+       "over_price": -112.5,
+       "under_price": -114.0,
+       "n_books": "2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "game_id": "4e2c6842ce33619ecb4c77938e3093bc",
+   "home_team": "Stanford Cardinal",
+   "away_team": "Notre Dame Fighting Irish",
+   "commence_time": "2025-11-30T03:30:00Z",
+   "players": [
+    {
+     "name": "CJ Carr",
+     "team": "Notre Dame",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 223.5,
+       "projection": 304.5,
+       "edge_pct": 36.2,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Eli Raridon",
+     "team": "Notre Dame",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 46.0,
+       "edge_pct": 19.5,
+       "over_price": -114.5,
+       "under_price": -113.5,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "Jadarian Price",
+     "team": "Notre Dame",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 56.5,
+       "projection": 138.8,
+       "edge_pct": 145.7,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jeremiyah Love",
+     "team": "Notre Dame",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 20.5,
+       "projection": 29.1,
+       "edge_pct": 42.0,
+       "over_price": -113.5,
+       "under_price": -114.5,
+       "n_books": "4"
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 145.5,
+       "projection": 255.4,
+       "edge_pct": 75.5,
+       "over_price": -115.0,
+       "under_price": -113.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Jordan Faison",
+     "team": "Notre Dame",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 38.5,
+       "projection": 56.4,
+       "edge_pct": 46.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Malachi Fields",
+     "team": "Notre Dame",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 47.5,
+       "projection": 72.1,
+       "edge_pct": 51.8,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Will Pauling",
+     "team": "Notre Dame",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 49.5,
+       "edge_pct": 47.8,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "4"
+      }
+     }
+    },
+    {
+     "name": "C.J. Williams",
+     "team": "Stanford",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 53.5,
+       "projection": 34.8,
+       "edge_pct": -35.0,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Caden High",
+     "team": "Stanford",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 28.5,
+       "projection": 22.5,
+       "edge_pct": -21.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    },
+    {
+     "name": "Elijah Brown",
+     "team": "Stanford",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 147.5,
+       "projection": 49.3,
+       "edge_pct": -66.6,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Micah Ford",
+     "team": "Stanford",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 48.5,
+       "projection": 4.9,
+       "edge_pct": -89.9,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "5"
+      }
+     }
+    },
+    {
+     "name": "Sam Roush",
+     "team": "Stanford",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 33.5,
+       "projection": 28.2,
+       "edge_pct": -15.8,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "3"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
