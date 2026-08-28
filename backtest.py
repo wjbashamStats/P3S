@@ -32,6 +32,7 @@ CAVEATS (read before trusting the numbers this prints):
     snapshot too. This script reports hit rate and calibration only.
 
 Run:  python3 backtest.py --props hist_props_closing_wk1.csv --week 1 --use-prior-year
+  or: python3 backtest.py --props hist_props_closing_wk1-5.csv --week-start 1 --week-end 5 --use-prior-year
 """
 import argparse, csv, statistics as stats
 from collections import defaultdict
@@ -113,30 +114,18 @@ def load_props(path):
     return list(csv.DictReader(open(path)))
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--props", required=True, help="flattened closing-line props CSV")
-    ap.add_argument("--week", type=int, required=True)
-    ap.add_argument("--use-prior-year", action="store_true",
-                    help="project off real 2024 rates (player_prior_totals.csv) instead "
-                         "of this year's own totals -- removes the lookahead bias noted "
-                         "in this file's docstring. Requires player_prior_totals.csv "
-                         "(built by build_player_tables.py from 2024_*_season_clean.csv).")
-    args = ap.parse_args()
-
-    print(f"Building week-{args.week} projections "
-          f"({'2024 prior-year' if args.use_prior_year else 'in-season (has lookahead bias)'}) ...")
-    projections = build_projections(args.week, use_prior_year=args.use_prior_year)
+def join_week(week, all_props, use_prior_year):
+    """Build projections, load actuals, and join to this week's props. Returns rows."""
+    print(f"\n--- week {week} "
+          f"({'2024 prior-year' if use_prior_year else 'in-season (has lookahead bias)'}) ---")
+    projections = build_projections(week, use_prior_year=use_prior_year)
     print(f"  {len(projections)} (player, market) projections")
 
-    print("Loading actuals ...")
-    actuals = load_actuals(args.week)
-    print(f"  {len(actuals)} players with a week-{args.week} game log")
+    actuals = load_actuals(week)
+    print(f"  {len(actuals)} players with a week-{week} game log")
 
-    print(f"Loading props from {args.props} ...")
-    props = load_props(args.props)
-    props = [r for r in props if str(r.get("week")) == str(args.week)]
-    print(f"  {len(props)} prop rows for week {args.week}")
+    props = [r for r in all_props if str(r.get("week")) == str(week)]
+    print(f"  {len(props)} prop rows for week {week}")
 
     rows = []
     unmatched_proj, unmatched_actual = 0, 0
@@ -180,17 +169,55 @@ def main():
                 hit = (actual_side == lean)
 
         rows.append(dict(
-            player=r["player"], week=args.week, market=market, stat=mdef["stat"],
+            player=r["player"], week=week, market=market, stat=mdef["stat"],
             projection=proj["projection"], book_line=book_line, actual=actual_val,
             edge=edge, lean=lean, flagged=flagged, hit=hit, n_books=r.get("n_books"),
         ))
 
-    print(f"\nJoined {len(rows)} rows "
+    print(f"  joined {len(rows)} rows "
           f"(unmatched: {unmatched_proj} no model projection, {unmatched_actual} no actual result)")
+    return rows
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--props", required=True, help="flattened closing-line props CSV")
+    ap.add_argument("--week", type=int, help="a single week")
+    ap.add_argument("--week-start", type=int, help="first week of a range (with --week-end)")
+    ap.add_argument("--week-end", type=int, help="last week of a range (with --week-start)")
+    ap.add_argument("--use-prior-year", action="store_true",
+                    help="project off real 2024 rates (player_prior_totals.csv) instead "
+                         "of this year's own totals -- removes the lookahead bias noted "
+                         "in this file's docstring. Requires player_prior_totals.csv "
+                         "(built by build_player_tables.py from 2024_*_season_clean.csv).")
+    args = ap.parse_args()
+
+    if args.week is not None:
+        weeks = [args.week]
+    elif args.week_start is not None and args.week_end is not None:
+        weeks = list(range(args.week_start, args.week_end + 1))
+    else:
+        ap.error("pass --week, or --week-start/--week-end together")
+
+    print(f"Loading props from {args.props} ...")
+    all_props = load_props(args.props)
+
+    rows = []
+    for week in weeks:
+        rows.extend(join_week(week, all_props, args.use_prior_year))
+
+    print(f"\nTotal joined across weeks {weeks[0]}-{weeks[-1]}: {len(rows)} rows")
 
     suffix = "_prior" if args.use_prior_year else "_inseason"
-    out_name = f"backtest_week{args.week}{suffix}.csv"
+    wk_label = weeks[0] if len(weeks) == 1 else f"{weeks[0]}-{weeks[-1]}"
+    out_name = f"backtest_week{wk_label}{suffix}.csv"
     _write_joined(rows, out_name)
+
+    if len(weeks) > 1:
+        for week in weeks:
+            print(f"\n########## WEEK {week} ##########")
+            _report([r for r in rows if r["week"] == week])
+        print("\n########## ALL WEEKS COMBINED ##########")
     _report(rows)
 
 
