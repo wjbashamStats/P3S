@@ -86,14 +86,31 @@ def blend_prior_and_current(prior_tot, current_games_list):
 
 
 def position_means(all_totals):
-    """League-wide mean of each efficiency rate, for shrinkage targets."""
-    buckets = {"ypa": [], "ypc": [], "ypt": [], "catch_rate": []}
-    for tot in all_totals.values():
-        r = compute_player_rates(tot)
-        for k, v in r.items():
-            if v is not None:
-                buckets[k].append(v)
-    return {k: (stats.mean(v) if v else 0.0) for k, v in buckets.items()}
+    """
+    League-wide VOLUME-WEIGHTED mean of each efficiency rate, for shrinkage
+    targets: sum(yards) / sum(units), not mean(yards/units) per player.
+
+    Weighted on purpose -- an unweighted average-of-ratios lets a backup
+    with 3 garbage-time targets skew the target exactly as much as a
+    100-target starter, and small samples run noisy. Measured effect on
+    the 2024 prior-year pool: unweighted understated ypt (yds/target) by
+    ~0.99 and ypc (yds/carry) by ~0.27, which was the direct cause of the
+    model's systematic under-projection on reception_yds/rush_yds in the
+    week 1-15 backtest -- shrinking a well-sampled player's real
+    efficiency toward an artificially low target pulls it down regardless
+    of how good the player actually is.
+    """
+    pairs = {"ypa": ("pass_yds", "pass_att"), "ypc": ("rush_yds", "rush_att"),
+             "ypt": ("rec_yds", "targets")}
+    out = {}
+    for key, (num_col, den_col) in pairs.items():
+        num = sum((tot.get(num_col) or 0) for tot in all_totals.values() if tot.get(den_col))
+        den = sum((tot.get(den_col) or 0) for tot in all_totals.values() if tot.get(den_col))
+        out[key] = (num / den) if den else 0.0
+    num = sum((tot.get("receptions") or 0) for tot in all_totals.values() if tot.get("targets"))
+    den = sum((tot.get("targets") or 0) for tot in all_totals.values() if tot.get("targets"))
+    out["catch_rate"] = (num / den) if den else 0.0
+    return out
 
 
 def shrink(player_rate, pos_mean, games):
@@ -156,6 +173,42 @@ def opponent_adj(def_index, opp_tkey, def_unit):
     return 1.0 - C.OPP_ADJ_STRENGTH * z
 
 
+# ---------- game context (this week's spread/total) ----------
+
+def game_context_adj(team_implied, league_avg_implied, team_spread, side):
+    """
+    Volume multiplier from this week's specific matchup, on top of the
+    player's own season-average rate -- two independent effects:
+
+      pace   : team_implied / league_avg_implied. A team implied for more
+               points than a typical team that week is expected to run
+               more offensive plays -- scales ALL volume (pass and rush
+               alike) up or down. Clipped to +/- config.PACE_CLIP so one
+               extreme projected blowout can't swing volume unrealistically.
+      script : normalized spread. A big favorite tends to lean run-heavy
+               (clock control, protecting a lead); a big underdog tends to
+               lean pass-heavy (playing from behind). Only applied to the
+               market's own side -- rush markets get the rush script,
+               pass/receiving markets get the pass script.
+
+    Returns 1.0 (no-op) if either input is missing, so this is silent and
+    harmless when no game-lines data is loaded for a player's game.
+    """
+    if team_implied is None or not league_avg_implied:
+        pace = 1.0
+    else:
+        pace = team_implied / league_avg_implied
+        pace = max(1 - C.PACE_CLIP, min(1 + C.PACE_CLIP, pace))
+
+    if team_spread is None or side not in ("pass", "rush"):
+        script = 1.0
+    else:
+        z = max(-1.0, min(1.0, -team_spread / C.SPREAD_SCALE))  # favored -> positive z
+        script = (1 + C.SCRIPT_ADJ_STRENGTH * z) if side == "rush" else (1 - C.SCRIPT_ADJ_STRENGTH * z)
+
+    return pace * script
+
+
 # ---------- variance from game logs ----------
 
 def stat_variance(logs, stat_col):
@@ -171,9 +224,11 @@ def stat_variance(logs, stat_col):
 # ---------- the projection ----------
 
 def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
-                          def_index, opp_tkey):
+                          def_index, opp_tkey, vol_adj=1.0):
     """
     Produce one projection row for a player + market.
+    vol_adj: optional extra volume multiplier from this week's specific
+    game context (see game_context_adj) -- defaults to 1.0 (no effect).
     Returns dict with mean projection, variance, and the components (for the
     impact page to show its work), or None if the player lacks the volume.
     """
@@ -186,7 +241,7 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     if total_vol is None or (min_vol and total_vol < min_vol):
         return None
 
-    per_game_vol = total_vol / games
+    per_game_vol = (total_vol / games) * vol_adj
     adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"])
 
     eff_key = mdef["eff"]

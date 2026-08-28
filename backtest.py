@@ -46,13 +46,16 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def build_projections(week, use_prior_year=False):
+def build_projections(week, use_prior_year=False, lines_by_week=None):
     """Re-run the same projection logic build.py uses, keyed by (norm(player), market).
 
     use_prior_year=True sources volume/efficiency from player_prior_totals.csv
     (real 2024 rates, matched by player_id) instead of this year's own totals
     -- the fix for the lookahead bias described in this module's docstring.
     Falls back to current-season totals for any player_id with no 2024 record.
+
+    lines_by_week: optional dict from DL.load_game_lines(), nudging volume by
+    this week's implied team total / spread (see project.game_context_adj).
     """
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
@@ -61,6 +64,13 @@ def build_projections(week, use_prior_year=False):
     prior = DL.load_prior_totals() if use_prior_year else {}
     pos_means = P.position_means(prior if (use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
+
+    lines_by_week = lines_by_week or {}
+    week_avg_implied = DL.league_avg_implied(lines_by_week, str(week)) if lines_by_week else None
+    if lines_by_week:
+        n_lines = len(lines_by_week.get(str(week), []))
+        print(f"  --game-lines: {n_lines} games loaded for week {week}"
+              + (f" | league avg implied total: {week_avg_implied:.1f}" if week_avg_implied else " | none for this week"))
 
     if use_prior_year:
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
@@ -91,9 +101,14 @@ def build_projections(week, use_prior_year=False):
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
         grades = pff_by_key.get((pkey, tkey), {})
         player_name = grades.get("name") or pkey
+
+        team_implied, team_spread = (DL.find_team_game_line(tkey, str(week), lines_by_week)
+                                     if lines_by_week else (None, None))
+
         for mkey, mdef in C.MARKETS.items():
+            vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
-                                           mkey, mdef, def_index, opp_tkey=None)
+                                           mkey, mdef, def_index, opp_tkey=None, vol_adj=vol_adj)
             if proj is None:
                 continue
             out[(norm(player_name), mkey)] = dict(player=player_name, **proj)
@@ -114,11 +129,11 @@ def load_props(path):
     return list(csv.DictReader(open(path)))
 
 
-def join_week(week, all_props, use_prior_year):
+def join_week(week, all_props, use_prior_year, lines_by_week=None):
     """Build projections, load actuals, and join to this week's props. Returns rows."""
     print(f"\n--- week {week} "
           f"({'2024 prior-year' if use_prior_year else 'in-season (has lookahead bias)'}) ---")
-    projections = build_projections(week, use_prior_year=use_prior_year)
+    projections = build_projections(week, use_prior_year=use_prior_year, lines_by_week=lines_by_week)
     print(f"  {len(projections)} (player, market) projections")
 
     actuals = load_actuals(week)
@@ -190,6 +205,10 @@ def main():
                          "of this year's own totals -- removes the lookahead bias noted "
                          "in this file's docstring. Requires player_prior_totals.csv "
                          "(built by build_player_tables.py from 2024_*_season_clean.csv).")
+    ap.add_argument("--game-lines", default=None,
+                    help="path to a hist_lines_closing_wkN.csv (from historical_pull.R "
+                         "--game-lines) -- nudges volume by each week's implied team "
+                         "total (pace) and spread (rush/pass script). No effect if omitted.")
     args = ap.parse_args()
 
     if args.week is not None:
@@ -201,10 +220,11 @@ def main():
 
     print(f"Loading props from {args.props} ...")
     all_props = load_props(args.props)
+    lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
 
     rows = []
     for week in weeks:
-        rows.extend(join_week(week, all_props, args.use_prior_year))
+        rows.extend(join_week(week, all_props, args.use_prior_year, lines_by_week))
 
     print(f"\nTotal joined across weeks {weeks[0]}-{weeks[-1]}: {len(rows)} rows")
 

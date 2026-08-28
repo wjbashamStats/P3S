@@ -50,6 +50,10 @@ def main():
                          "lookahead bias of projecting week 1 from a total that "
                          "includes week 1. Falls back to current-season totals for "
                          "any player_id with no prior-year record (true freshmen, etc).")
+    ap.add_argument("--game-lines", default=None,
+                    help="path to a hist_lines_closing_wkN.csv (from historical_pull.R "
+                         "--game-lines) -- nudges volume by this week's implied team "
+                         "total (pace) and spread (rush/pass script). No effect if omitted.")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -68,6 +72,13 @@ def main():
                 else "pure 2024 (no current-season games exist yet to blend)")
         print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
+
+    lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
+    week_avg_implied = DL.league_avg_implied(lines_by_week, str(args.week)) if lines_by_week else None
+    if args.game_lines:
+        n_lines = len(lines_by_week.get(str(args.week), []))
+        print(f"  --game-lines: {n_lines} games loaded for week {args.week}"
+              + (f" | league avg implied total: {week_avg_implied:.1f}" if week_avg_implied else " | none for this week"))
 
     # Precompute league means + defensive index once. In prior-year mode, use
     # 2024-wide means so shrinkage targets are internally consistent with the
@@ -119,10 +130,14 @@ def main():
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
         grades = pff_by_key.get((pkey, tkey), {})
 
+        team_implied, team_spread = (DL.find_team_game_line(tkey, str(args.week), lines_by_week)
+                                     if lines_by_week else (None, None))
+
         for mkey, mdef in C.MARKETS.items():
+            vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
-                                           def_index, opp_tkey)
+                                           def_index, opp_tkey, vol_adj=vol_adj)
             if proj is None:
                 continue
             rows.append(dict(

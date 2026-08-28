@@ -131,3 +131,68 @@ def load_game_logs():
         rec["position"] = r.get("position")
         out[(pkey, tkey)].append(rec)
     return out
+
+
+def load_game_lines(path):
+    """
+    hist_lines_closing_wkN.csv (from historical_pull.R --game-lines) --
+    one row per game: game_id, week, home_team, away_team, home_spread,
+    total. home_spread is the HOME team's own signed spread (negative =
+    home favored, per the Odds API convention).
+
+    Returns {week: [rows]}, each row carrying the raw Odds API team name
+    strings (WITH mascot, e.g. "Kansas State Wildcats" -- these do NOT
+    equal our norm()'d crosswalk team keys, which drop the mascot; use
+    find_team_game_line() below to match, not a dict lookup) plus the
+    derived home_implied/away_implied team totals.
+    """
+    from collections import defaultdict
+    out = defaultdict(list)
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        week = r.get("week")
+        home_spread = _to_float(r.get("home_spread"))
+        total = _to_float(r.get("total"))
+        if week is None or home_spread is None or total is None:
+            continue
+        out[week].append(dict(
+            home_team=r.get("home_team", ""), away_team=r.get("away_team", ""),
+            home_spread=home_spread, total=total,
+            home_implied=total / 2 - home_spread / 2,
+            away_implied=total / 2 + home_spread / 2,
+        ))
+    return out
+
+
+def find_team_game_line(tkey, week, lines_by_week):
+    """
+    Substring-match tkey (our normalized, no-mascot team key) against a
+    week's game lines (Odds API names, WITH mascot) -- same approach
+    historical_pull.R's team matcher uses, since Odds names routinely
+    aren't exact matches for ours (see load_team_map's docstring on the
+    same issue). Returns (implied_total, own_spread) for whichever side
+    tkey matched, or (None, None) if the team isn't in this week's lines
+    (bye week, or a mismatch worth adding to team_map.csv).
+    """
+    if not tkey:
+        return None, None
+    for g in lines_by_week.get(week, []):
+        h, a = norm(g["home_team"]), norm(g["away_team"])
+        if tkey in h or h in tkey:
+            return g["home_implied"], g["home_spread"]
+        if tkey in a or a in tkey:
+            return g["away_implied"], -g["home_spread"]
+    return None, None
+
+
+def league_avg_implied(lines_by_week, week):
+    """Mean implied team total across the whole week's slate -- the pace
+    multiplier's denominator (a team's own implied total relative to a
+    typical team's, that week)."""
+    import statistics as stats
+    vals = []
+    for g in lines_by_week.get(week, []):
+        vals.append(g["home_implied"])
+        vals.append(g["away_implied"])
+    return stats.mean(vals) if vals else None

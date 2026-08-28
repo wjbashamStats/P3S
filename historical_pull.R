@@ -19,9 +19,20 @@
 #   Rscript historical_pull.R --week 1 --dry-run     # spends nothing, sanity check
 #   Rscript historical_pull.R --week 1               # the real pull
 #
+# --game-lines pulls spreads+totals instead of player props (a separate,
+# much cheaper pull -- 2 markets instead of 6) -- for the game-context
+# volume adjustment (implied team total / spread -> expected pace and
+# rush/pass split). Writes hist_lines_closing_wkN.csv, one row per game:
+# game_id, week, home_team, away_team, home_spread, total. Checkpoints to
+# a separate hist_raw_lines/ dir so it can't collide with a player-prop
+# pull's cache.
+#   Rscript historical_pull.R --week-start 1 --week-end 15 --game-lines --dry-run
+#   Rscript historical_pull.R --week-start 1 --week-end 15 --game-lines
+#
 # COST MODEL (matches historical_pull.py, same non-negotiable math):
 #   historical event-odds = 10 credits x regions x markets x event x snapshot.
-#   Closing-only (1 snapshot), 6 markets, 1 region => 60 credits/game.
+#   Closing-only (1 snapshot), 1 region => 60 credits/game for the 6-market
+#   player-prop pull, 20 credits/game for the 2-market --game-lines pull.
 
 suppressMessages({
   library(httr)
@@ -52,7 +63,7 @@ BASE <- "https://api.the-odds-api.com/v4"
 
 SCRIPT_DIR  <- dirname(sub("--file=", "", grep("--file=", commandArgs(trailingOnly = FALSE), value = TRUE)))
 if (length(SCRIPT_DIR) == 0 || !nzchar(SCRIPT_DIR)) SCRIPT_DIR <- "."
-CKPT_DIR    <- file.path(SCRIPT_DIR, "hist_raw")
+# CKPT_DIR is set after arg parsing below (depends on --game-lines).
 SNAPSHOTS   <- c("closing")            # closing-only, per PROJECT_STATE.md decision
 SNAPSHOT_OFFSET_HOURS <- c(opening = 36, closing = 1)
 
@@ -67,7 +78,7 @@ parse_args <- function(argv) {
             season = 2025, week = NA, week_start = NA, week_end = NA,
             season_type = "regular",
             max_games = NA, include_one_fbs = FALSE, dry_run = FALSE,
-            out = NA)
+            game_lines = FALSE, out = NA)
   i <- 1
   while (i <= length(argv)) {
     k <- argv[i]
@@ -82,6 +93,7 @@ parse_args <- function(argv) {
     else if (k == "--max-games") a$max_games <- as.integer(val())
     else if (k == "--include-one-fbs") a$include_one_fbs <- TRUE
     else if (k == "--dry-run") a$dry_run <- TRUE
+    else if (k == "--game-lines") a$game_lines <- TRUE
     else if (k == "--out") a$out <- val()
     else stop(paste("unknown arg:", k))
     i <- i + 1
@@ -93,11 +105,21 @@ parse_args <- function(argv) {
   if (is.na(a$out)) {
     wk <- if (!is.na(a$week_start)) paste0(a$week_start, "-", a$week_end)
           else if (is.na(a$week)) "all" else a$week
-    a$out <- file.path(SCRIPT_DIR, paste0("hist_props_closing_wk", wk, ".csv"))
+    prefix <- if (a$game_lines) "hist_lines_closing_wk" else "hist_props_closing_wk"
+    a$out <- file.path(SCRIPT_DIR, paste0(prefix, wk, ".csv"))
   }
   a
 }
 args <- parse_args(commandArgs(trailingOnly = TRUE))
+
+# --game-lines pulls spreads+totals (2 markets) instead of the 6 player-prop
+# markets, and checkpoints separately so the two pulls' caches can't collide.
+if (args$game_lines) {
+  MARKETS <- c("spreads", "totals")
+  CKPT_DIR <- file.path(SCRIPT_DIR, "hist_raw_lines")
+} else {
+  CKPT_DIR <- file.path(SCRIPT_DIR, "hist_raw")
+}
 
 # ----------------- SCHEDULE -----------------
 load_schedule <- function(path, season, season_type, fbs_only = TRUE, both_fbs = TRUE) {
@@ -246,6 +268,52 @@ consensus <- function(long_df) {
   out
 }
 
+# For spreads/totals, oc$name is a TEAM NAME (spreads) or "Over"/"Under"
+# (totals) -- flatten_snapshot's generic "side" column already captures
+# this correctly, it's just consensus-collapsed differently: by
+# (game_id, market, side) instead of (game_id, player, market), since
+# there's no player here.
+consensus_lines <- function(long_df) {
+  if (is.null(long_df) || nrow(long_df) == 0) return(long_df)
+  key <- interaction(long_df$game_id, long_df$market, long_df$side, drop = TRUE)
+  out <- do.call(rbind, lapply(split(long_df, key), function(g) {
+    data.frame(
+      game_id = g$game_id[1], week = g$week[1],
+      home_team = g$home_team[1], away_team = g$away_team[1],
+      market = g$market[1], side = g$side[1],
+      point = median(g$line, na.rm = TRUE),
+      n_books = length(unique(g$book)),
+      stringsAsFactors = FALSE
+    )
+  }))
+  rownames(out) <- NULL
+  out
+}
+
+# Pivot the long (game, market, side) consensus into one row per game:
+# game_id, week, home_team, away_team, home_spread, total. home_spread is
+# whichever spreads row's side matches home_team (normalized) -- the
+# Odds API quotes a spreads outcome's point directly as that named team's
+# own line, so no sign-flipping needed here.
+widen_lines <- function(cons) {
+  if (is.null(cons) || nrow(cons) == 0) return(cons)
+  by_game <- split(cons, cons$game_id)
+  rows <- lapply(by_game, function(g) {
+    home_row  <- g[g$market == "spreads" & norm_name(g$side) == norm_name(g$home_team[1]), ]
+    total_row <- g[g$market == "totals" & g$side == "Over", ]
+    data.frame(
+      game_id = g$game_id[1], week = g$week[1],
+      home_team = g$home_team[1], away_team = g$away_team[1],
+      home_spread = if (nrow(home_row)) home_row$point[1] else NA,
+      total = if (nrow(total_row)) total_row$point[1] else NA,
+      stringsAsFactors = FALSE
+    )
+  })
+  out <- do.call(rbind, rows)
+  rownames(out) <- NULL
+  out
+}
+
 # ----------------- MAIN -----------------
 games <- load_schedule(args$schedule, args$season, args$season_type,
                        fbs_only = TRUE, both_fbs = !args$include_one_fbs)
@@ -330,10 +398,16 @@ cat(sprintf("\nComplete. Pulled %d new (event,snapshot) odds file(s) into %s\n",
 
 if (length(flat_rows) > 0) {
   long_df <- do.call(rbind, flat_rows)
-  cons <- consensus(long_df)
-  write.csv(cons, args$out, row.names = FALSE)
-  cat(sprintf("Wrote %s: %d rows (one per game/player/market)\n", args$out, nrow(cons)))
-  cat("Upload that CSV back -- no need to upload hist_raw/ itself.\n")
+  if (args$game_lines) {
+    cons <- widen_lines(consensus_lines(long_df))
+    write.csv(cons, args$out, row.names = FALSE)
+    cat(sprintf("Wrote %s: %d rows (one per game)\n", args$out, nrow(cons)))
+  } else {
+    cons <- consensus(long_df)
+    write.csv(cons, args$out, row.names = FALSE)
+    cat(sprintf("Wrote %s: %d rows (one per game/player/market)\n", args$out, nrow(cons)))
+  }
+  cat("Upload that CSV back -- no need to upload hist_raw*/ itself.\n")
 } else {
   cat("No props flattened (no events matched, or all games were already empty).\n")
 }

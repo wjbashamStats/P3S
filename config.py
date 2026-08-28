@@ -76,6 +76,16 @@ SHRINKAGE_GAMES = 6      # a player with this many prior games is ~half-regresse
 # 0.15 means an elite (worst) pass defense scales pass projections by ~±15% at 1 SD.
 OPP_ADJ_STRENGTH = 0.15
 
+# ---------------- GAME CONTEXT (this week's spread/total) ----------------
+# Season-average rates don't know this week's specific matchup is expected
+# to be a shootout or a blowout -- these two knobs let a game's implied
+# team total / spread (from --game-lines historical pull, or build.py's
+# live odds once wired) nudge expected volume. Both are no-ops (multiplier
+# of 1.0) if no game-lines data is loaded, so this is fully opt-in.
+PACE_CLIP = 0.3              # cap the pace multiplier at 1 +/- this
+SPREAD_SCALE = 21.0          # spread (points) at which the script effect maxes out
+SCRIPT_ADJ_STRENGTH = 0.15   # how much a maxed-out script effect shifts rush/pass volume
+
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)
 
