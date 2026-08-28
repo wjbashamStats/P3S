@@ -114,18 +114,32 @@ FBS_CONF = {"SEC", "Big Ten", "Big 12", "ACC", "American Athletic",
             "Pac-12", "FBS Independents"}
 
 
-def load_schedule(sched_csv, season=2025, fbs_only=True, both_fbs=True):
+def load_schedule(sched_csv, season=2025, fbs_only=True, both_fbs=True,
+                  season_type="regular"):
     """
     Read the CFBD schedule CSV, return list of (commence_dt, home, away, week).
     fbs_only + both_fbs filter out FCS/lower-div games that carry no props,
     so we don't burn 120 credits/game checking games that return nothing.
+
+    CFBD numbers postseason (bowl/CFP) weeks starting back at 1, distinct
+    from the regular season's own Week 1 -- so `--week 1` without a
+    SeasonType filter pulls both, more than doubling scope/cost.
+    season_type: "regular" (default), "postseason", or "all".
     """
     import csv
     games = []
+    seen_ids = set()
     with open(sched_csv, encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
             r = {k.strip().strip('"'): v for k, v in r.items()}
+            gid = r.get("Id")
+            if gid is not None:
+                if gid in seen_ids:
+                    continue  # the schedule export has dup rows per game (one per outlet)
+                seen_ids.add(gid)
             if str(r.get("Season")) != str(season):
+                continue
+            if season_type != "all" and r.get("SeasonType") != season_type:
                 continue
             if fbs_only:
                 h_fbs = r.get("HomeConference") in FBS_CONF
@@ -163,10 +177,16 @@ def main():
     ap.add_argument("--week", type=int, default=None, help="restrict to one week")
     ap.add_argument("--include-one-fbs", action="store_true",
                     help="include games where only ONE team is FBS (more games, more credits)")
+    ap.add_argument("--season-type", default="regular",
+                    choices=["regular", "postseason", "all"],
+                    help="CFBD SeasonType filter (default: regular). Postseason "
+                         "weeks are numbered separately from the regular season's, "
+                         "so --week without this pulls both.")
     args = ap.parse_args()
 
     games = load_schedule(args.schedule, args.season,
-                          fbs_only=True, both_fbs=not args.include_one_fbs)
+                          fbs_only=True, both_fbs=not args.include_one_fbs,
+                          season_type=args.season_type)
     if args.week is not None:
         games = [g for g in games if str(g[3]) == str(args.week)]
     games.sort(key=lambda g: g[0])
