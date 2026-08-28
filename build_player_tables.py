@@ -22,6 +22,18 @@ variance estimate for those players; the fix documented in
 PROJECT_STATE.md (season file is source of truth for the mean) is
 enough for now.
 
+Also builds player_prior_totals.csv from the 2024 season files (2024_
+passing/rushing/receiving_season_clean.csv), if present -- the real
+prior-year data that removes the lookahead bias 2025-derived "prior"
+totals had (see PROJECT_STATE.md). Keyed by player_id ONLY (no team),
+because a transferred player's 2024 team isn't their 2025 team --
+build.py resolves current team/roster from the 2025 side and looks up
+2024 rates by player_id, so a transfer's history follows the player,
+not the old school. player_id is a reliable cross-season key: spot
+checked at ~99.5-100% stable for the same person year over year (the
+handful of exceptions are genuine same-name-different-player
+collisions, quirk #5).
+
 Run:  python3 build_player_tables.py
 Regenerate any time the *_clean.csv files change; outputs are gitignored.
 """
@@ -37,6 +49,14 @@ SEASON_SOURCES = [
                                      "touchdowns": "rush_td"}),
     ("receiving_season_clean.csv", {"targets": "targets", "receptions": "receptions",
                                      "yards": "rec_yds", "touchdowns": "rec_td"}),
+]
+PRIOR_SEASON_SOURCES = [
+    ("2024_passing_season_clean.csv",   {"attempts": "pass_att", "yards": "pass_yds",
+                                          "touchdowns": "pass_td"}),
+    ("2024_rushing_season_clean.csv",   {"attempts": "rush_att", "yards": "rush_yds",
+                                          "touchdowns": "rush_td"}),
+    ("2024_receiving_season_clean.csv", {"targets": "targets", "receptions": "receptions",
+                                          "yards": "rec_yds", "touchdowns": "rec_td"}),
 ]
 WEEKLY_SOURCES = [
     ("passing_weekly_clean.csv",   {"attempts": "pass_att", "yards": "pass_yds",
@@ -73,10 +93,10 @@ def _identity(row, out):
     out.setdefault("position", row.get("position", ""))
 
 
-def build_season_totals():
+def build_season_totals(sources=SEASON_SOURCES):
     merged = {}
     games_seen = {}
-    for fname, colmap in SEASON_SOURCES:
+    for fname, colmap in sources:
         for r in _read(fname):
             pid = r.get("player_id")
             if not pid:
@@ -132,6 +152,12 @@ def main():
     _write(build_season_totals(), SEASON_COLS, "player_season_totals.csv")
     print("Building player_game_logs.csv ...")
     _write(build_game_logs(), WEEKLY_COLS, "player_game_logs.csv")
+
+    if any(os.path.exists(os.path.join(BASE_DIR, f)) for f, _ in PRIOR_SEASON_SOURCES):
+        print("Building player_prior_totals.csv (2024, keyed by player_id only) ...")
+        _write(build_season_totals(PRIOR_SEASON_SOURCES), SEASON_COLS, "player_prior_totals.csv")
+    else:
+        print("No 2024_*_season_clean.csv files found -- skipping player_prior_totals.csv")
 
 
 if __name__ == "__main__":

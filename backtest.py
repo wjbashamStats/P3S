@@ -14,18 +14,24 @@ Matches on normalized player name + week; market keys map to the stat column
 the market resolves to (see config.MARKETS).
 
 CAVEATS (read before trusting the numbers this prints):
-  - No true prior-year data exists in this repo yet (only 2025). The model
-    projections used here are built from player_season_totals.csv, which is
-    derived from the FULL 2025 season -- including week 1 itself. That's
-    lookahead bias: the "prior-year rate" input for week 1 already contains
-    week 1's own result. These numbers are a calibration/sanity check on the
-    heuristic's shape, not evidence of real predictive edge. A legitimate
-    week-1 backtest needs real 2024 prior-year stats.
+  - Without --use-prior-year, projections are built from
+    player_season_totals.csv, derived from the FULL 2025 season --
+    including week 1 itself. That's lookahead bias: the "prior-year rate"
+    input for week 1 already contains week 1's own result. Those numbers
+    are a calibration/sanity check on the heuristic's shape, not evidence
+    of real predictive edge.
+  - --use-prior-year sources rates from player_prior_totals.csv (real 2024
+    data, matched by player_id so transfers carry their history to their
+    new team) instead, removing that bias -- this is the legitimate
+    backtest. It falls back to current-season totals for any player with
+    no 2024 record (true freshmen, JUCO transfers, etc.) -- watch the
+    printed match-rate; a low one means the result still leans on biased
+    fallback data for a chunk of the roster.
   - Only the closing snapshot was pulled (PROJECT_STATE.md's scope decision),
     so closing-line value (CLV) isn't computable -- that needs an opening
     snapshot too. This script reports hit rate and calibration only.
 
-Run:  python3 backtest.py --props hist_props_closing_wk1.csv --week 1
+Run:  python3 backtest.py --props hist_props_closing_wk1.csv --week 1 --use-prior-year
 """
 import argparse, csv, statistics as stats
 from collections import defaultdict
@@ -39,14 +45,26 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def build_projections(week):
-    """Re-run the same projection logic build.py uses, keyed by (norm(player), market)."""
+def build_projections(week, use_prior_year=False):
+    """Re-run the same projection logic build.py uses, keyed by (norm(player), market).
+
+    use_prior_year=True sources volume/efficiency from player_prior_totals.csv
+    (real 2024 rates, matched by player_id) instead of this year's own totals
+    -- the fix for the lookahead bias described in this module's docstring.
+    Falls back to current-season totals for any player_id with no 2024 record.
+    """
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
-    pos_means = P.position_means(totals)
+    prior = DL.load_prior_totals() if use_prior_year else {}
+    pos_means = P.position_means(prior if (use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
+
+    if use_prior_year:
+        n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
+        print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
+              f"{n_with_prior}/{len(totals)} of this year's roster matched to one")
 
     pff_by_key = {}
     for p in pff:
@@ -54,13 +72,16 @@ def build_projections(week):
 
     out = {}
     for (pkey, tkey), tot in totals.items():
-        rates = P.compute_player_rates(tot)
-        rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), tot.get("games"))
+        source = prior.get(tot.get("player_id")) if use_prior_year else None
+        if source is None:
+            source = tot
+        rates = P.compute_player_rates(source)
+        rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), source.get("games"))
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
         grades = pff_by_key.get((pkey, tkey), {})
         player_name = grades.get("name") or pkey
         for mkey, mdef in C.MARKETS.items():
-            proj = P.project_player_market(tot, logs.get((pkey, tkey)), rates_shrunk,
+            proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=None)
             if proj is None:
                 continue
@@ -86,10 +107,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--props", required=True, help="flattened closing-line props CSV")
     ap.add_argument("--week", type=int, required=True)
+    ap.add_argument("--use-prior-year", action="store_true",
+                    help="project off real 2024 rates (player_prior_totals.csv) instead "
+                         "of this year's own totals -- removes the lookahead bias noted "
+                         "in this file's docstring. Requires player_prior_totals.csv "
+                         "(built by build_player_tables.py from 2024_*_season_clean.csv).")
     args = ap.parse_args()
 
-    print(f"Building week-{args.week} projections ...")
-    projections = build_projections(args.week)
+    print(f"Building week-{args.week} projections "
+          f"({'2024 prior-year' if args.use_prior_year else 'in-season (has lookahead bias)'}) ...")
+    projections = build_projections(args.week, use_prior_year=args.use_prior_year)
     print(f"  {len(projections)} (player, market) projections")
 
     print("Loading actuals ...")
@@ -151,19 +178,21 @@ def main():
     print(f"\nJoined {len(rows)} rows "
           f"(unmatched: {unmatched_proj} no model projection, {unmatched_actual} no actual result)")
 
-    _write_joined(rows)
+    suffix = "_prior" if args.use_prior_year else "_inseason"
+    out_name = f"backtest_week{args.week}{suffix}.csv"
+    _write_joined(rows, out_name)
     _report(rows)
 
 
-def _write_joined(rows):
+def _write_joined(rows, out_name):
     cols = ["player", "week", "market", "stat", "projection", "book_line",
             "actual", "edge", "lean", "flagged", "hit", "n_books"]
-    with open("backtest_week1.csv", "w", newline="") as f:
+    with open(out_name, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         for r in rows:
             w.writerow(r)
-    print("Wrote backtest_week1.csv")
+    print(f"Wrote {out_name}")
 
 
 def _report(rows):

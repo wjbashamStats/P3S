@@ -80,9 +80,34 @@ def load_season_totals():
         pkey = norm(r.get("player", ""))
         tkey = norm(r.get("team", ""))
         rec = {k: _to_float(v) for k, v in r.items()
-               if k not in ("player", "team")}
+               if k not in ("player", "team", "player_id", "position")}
+        rec["player_id"] = r.get("player_id")  # keep as string -- it's a join key, not a stat
+        rec["position"] = r.get("position")
         rec["games"] = rec.get("games") or 1
         out[(pkey, tkey)] = rec
+    return out
+
+
+def load_prior_totals():
+    """
+    player_prior_totals.csv -- real prior-year (2024) rates, keyed by
+    player_id ONLY (not (pkey, tkey)): a transferred player's 2024 team
+    isn't their current one, so team can't be part of this join key.
+    Callers match a current-roster player to their prior-year record via
+    player_id, and keep the CURRENT team/roster from the 2025 side.
+    Returns {} if the file doesn't exist (no 2024 data provided).
+    """
+    out = {}
+    if not os.path.exists(C.PRIOR_SEASON_TOTALS):
+        return out
+    for r in csv.DictReader(open(C.PRIOR_SEASON_TOTALS)):
+        pid = r.get("player_id")
+        if not pid:
+            continue
+        rec = {k: _to_float(v) for k, v in r.items()
+               if k not in ("player", "team", "player_id", "position")}
+        rec["games"] = rec.get("games") or 1
+        out[pid] = rec
     return out
 
 

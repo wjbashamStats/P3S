@@ -44,6 +44,12 @@ def main():
                     help="max games to pull props for (credit control)")
     ap.add_argument("--no-odds", action="store_true",
                     help="build projections without calling the Odds API")
+    ap.add_argument("--use-prior-year", action="store_true",
+                    help="project off real prior-year (player_prior_totals.csv) rates "
+                         "instead of the current season's own totals -- avoids the "
+                         "lookahead bias of projecting week 1 from a total that "
+                         "includes week 1. Falls back to current-season totals for "
+                         "any player_id with no prior-year record (true freshmen, etc).")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -54,10 +60,18 @@ def main():
     pff = DL.load_pff(pff2c)
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
+    prior = DL.load_prior_totals() if args.use_prior_year else {}
     print(f"  PFF players: {len(pff)} | season-total players: {len(totals)}")
+    if args.use_prior_year:
+        n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
+        print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
+              f"{n_with_prior}/{len(totals)} of this year's roster matched to one "
+              f"(the rest fall back to current-season totals)")
 
-    # Precompute league means + defensive index once.
-    pos_means = P.position_means(totals)
+    # Precompute league means + defensive index once. In prior-year mode, use
+    # 2024-wide means so shrinkage targets are internally consistent with the
+    # 2024 rates being shrunk toward them.
+    pos_means = P.position_means(prior if (args.use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
     print(f"  Defensive team index built for {len(def_index)} teams")
 
@@ -76,13 +90,21 @@ def main():
         opp_tkey, game_id = resolve_opponent(tkey, events, odds2c)
         if opp_tkey is None and not args.no_odds:
             continue  # not playing this slate
-        rates = P.compute_player_rates(tot)
-        rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), tot.get("games"))
+        # source: real 2024 rates when available and requested, else this
+        # year's own totals (today's default, or the fallback for a player
+        # with no 2024 record). Roster/team identity always comes from tot
+        # (current, 2025) regardless -- only the volume/efficiency numbers
+        # swap, so a transfer's history follows the player, not the school.
+        source = prior.get(tot.get("player_id")) if args.use_prior_year else None
+        if source is None:
+            source = tot
+        rates = P.compute_player_rates(source)
+        rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), source.get("games"))
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
         grades = pff_by_key.get((pkey, tkey), {})
 
         for mkey, mdef in C.MARKETS.items():
-            proj = P.project_player_market(tot, logs.get((pkey, tkey)),
+            proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
                                            def_index, opp_tkey)
             if proj is None:

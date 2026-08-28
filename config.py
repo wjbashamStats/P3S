@@ -37,6 +37,11 @@ TEAM_MAP      = os.path.join(BASE_DIR, "team_map.csv")   # pff_team -> cfbd_team
 SEASON_TOTALS = os.path.join(BASE_DIR, "player_season_totals.csv")  # one row per player
 GAME_LOGS     = os.path.join(BASE_DIR, "player_game_logs.csv")      # one row per player-game
 
+# Real prior-year (2024) rates, keyed by player_id only (no team -- see
+# build_player_tables.py on why: a transfer's 2024 team isn't their 2025
+# team). Only exists if the 2024_*_season_clean.csv inputs were provided.
+PRIOR_SEASON_TOTALS = os.path.join(BASE_DIR, "player_prior_totals.csv")
+
 # ---------------- MARKET DEFINITIONS ----------------
 # Each Odds API prop market maps to: the stat we project, the volume + efficiency
 # columns it decomposes into, and which defensive grade adjusts it.
