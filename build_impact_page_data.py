@@ -57,9 +57,16 @@ def build():
         raw_by_key[(norm(r.get("player", "")), norm(r.get("team", "")))] = \
             (r.get("player", ""), r.get("team", ""))
 
-    pff_by_key = {}
+    # Keyed by name only (not (pkey, tkey)): master_crosswalk.csv's "team"
+    # column tracks each player's CURRENT team, which for a transferred
+    # player is already their 2026 destination, not the team their 2025
+    # stats were earned on -- requiring a team match here silently dropped
+    # PFF grades for every portal player (~460 of the ~1700 skill players
+    # with meaningful 2025 volume; see build_props_page_data.py's history
+    # of the same class of bug on the props side).
+    pff_by_pkey = {}
     for p in pff:
-        pff_by_key.setdefault((p["pkey"], p["tkey"]), p)
+        pff_by_pkey.setdefault(p["pkey"], p)
 
     # Team volume pools (this season) for usage-share -- every player
     # counts toward the pool, not just the ones that clear MIN_VOLUME.
@@ -75,7 +82,7 @@ def build():
         if not meets_volume_floor(tot):
             continue
 
-        grades = pff_by_key.get((pkey, tkey), {})
+        grades = pff_by_pkey.get(pkey, {})
         player_id = tot.get("player_id")
         prior_tot = prior.get(player_id) if player_id else None
 
@@ -102,12 +109,17 @@ def build():
             game_log_out.append({k: v for k, v in row.items() if v is not None})
 
         raw_name, raw_team = raw_by_key.get((pkey, tkey), ("", ""))
-        team_c = pff2c.get(norm(raw_team), raw_team)
+        stats_team = pff2c.get(norm(raw_team), raw_team)
+        # Display team: prefer the crosswalk's (current/2026) team when we
+        # have one, since that's where this player actually is now; fall
+        # back to the 2025 team their stats below were earned on.
+        display_team = grades.get("team_cfbd") or stats_team
 
         players.append(dict(
             name=grades.get("name") or raw_name or pkey,
             player_id=player_id,
-            team=team_c,
+            team=display_team,
+            stats_team=stats_team if stats_team != display_team else None,
             position=tot.get("position") or grades.get("position") or "",
             height=grades.get("height") or "",
             weight=grades.get("weight") or "",
