@@ -1,0 +1,480 @@
+"game_id","week","home_team","away_team","commence_time","market","player","book_line","over_price","under_price","n_books"
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_pass_attempts","Ben Gulbranson",31.5,-115,-115,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_pass_attempts","Brendan Sorsby",30.5,-125,-105,1
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_pass_attempts","Byrum Brown",29.5,-120,-110,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_pass_attempts","Dylan Raiola",31.5,-105,-125,1
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_pass_attempts","Maddux Madsen",29.5,100,-130,1
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_pass_attempts","Micah Alejado",39.5,-115,-115,1
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_pass_yds","Aidan Chiles",233.5,-115.5,-114,4
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_pass_yds","Arch Manning",230.5,-115,-114,3
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_pass_yds","Athan Kaliakmanis",227.5,-115,-115,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_pass_yds","Avery Johnson",208.5,-114,-114,3
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_pass_yds","Ben Finley",211.5,-114,-114,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_pass_yds","Ben Gulbranson",205.5,-114,-114,3
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_pass_yds","Billy Edwards Jr.",210.5,-115,-114.5,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_pass_yds","Blake Shapen",255.5,-114,-114,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_pass_yds","Braylon Braxton",205.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_pass_yds","Brendan Sorsby",215.5,-114.5,-114,4
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_pass_yds","Bryce Underwood",204.5,-114,-114,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_pass_yds","Byrum Brown",228.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_pass_yds","Cade Klubnik",270.5,-114,-114,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_pass_yds","Carson Beck",239.5,-114,-114,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_pass_yds","CJ Bailey",261.5,-114.5,-114,4
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_pass_yds","CJ Carr",192.5,-114,-114,3
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_pass_yds","Demond Williams Jr.",268.5,-114,-114,1
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_pass_yds","Dequan Finn",155.5,-114.5,-114.5,2
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_pass_yds","Devon Dampier",207.5,-114.5,-114,4
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_pass_yds","Dexter Williams II",176,-114.5,-114.5,2
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_pass_yds","Drake Lindsey",209.5,-114,-114,3
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_pass_yds","Drew Allar",240.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_pass_yds","Dylan Raiola",244.5,-114.5,-114,4
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_pass_yds","E.J. Warner",180.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_pass_yds","Garrett Nussmeier",284.5,-115,-114,3
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_pass_yds","Gio Lopez",218.5,-114.5,-115,4
+"663302976d25e5e68e83f286db1418f6","1","Georgia Bulldogs","Marshall Thundering Herd","2025-08-30T19:30:00Z","player_pass_yds","Gunner Stockton",254.5,-114,-114,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_pass_yds","Haynes King",229.5,-114.5,-114,4
+"6805d37180d92fd870ab5fac57eebee5","1","Sam Houston State Bearkats","UNLV Rebels","2025-08-30T01:30:00Z","player_pass_yds","Hunter Watson",199.5,-114.5,-114.5,2
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_pass_yds","Hunter Watson",170,-114,-114,2
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_pass_yds","Jackson Arnold",235.5,-114.5,-115,4
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_pass_yds","Jalon Daniels",201.5,-115,-114,4
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_pass_yds","Joey Aguilar",215.5,-114.5,-115,4
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_pass_yds","Josh Hoover",284.5,-114.5,-114,4
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_pass_yds","Julian Sayin",220.5,-114,-114,3
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_pass_yds","Kaden Anderson",203.5,-114,-114,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_pass_yds","Kaidon Salter",209.5,-116.5,-114,4
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_pass_yds","Katin Houser",236.5,-114,-114,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_pass_yds","Kyron Drones",191.5,-114,-114,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_pass_yds","LaNorris Sellers",222.5,-114,-114,3
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_pass_yds","Maalik Murphy",221.5,-114,-114,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_pass_yds","Maddux Madsen",232.5,-115,-114,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_pass_yds","Malik Washington",249.5,-114,-114,3
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_pass_yds","Marcel Reed",246.5,-115,-114,3
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_pass_yds","Maverick McIvor",294,-114,-114,2
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_pass_yds","Micah Alejado",222.5,-114,-114,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_pass_yds","Micah Alejado",278.5,-114,-114,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_pass_yds","Nico Iamaleava",220.5,-114.5,-114,4
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_pass_yds","Noah Fifita",271.5,-114,-114,2
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_pass_yds","Owen McCown",225.5,-114,-115,3
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_pass_yds","Parker Navarro",149.5,-116,-111,1
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_pass_yds","Preston Stone",174.5,-114.5,-114,4
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_pass_yds","Robby Ashford",204.5,-114,-114,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_pass_yds","Rocco Becht",229.5,-115,-114,3
+"a21e71cf77c563760aa9ca01826c2583","1","Purdue Boilermakers","Ball State Cardinals","2025-08-30T16:00:00Z","player_pass_yds","Ryan Browne",220.5,-114.5,-114,4
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_pass_yds","Sawyer Robertson",247.5,-114.5,-114,4
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_pass_yds","Steve Angeli",242.5,-114.5,-114,4
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_pass_yds","Tommy Castellanos",166.5,-114,-114,3
+"c3d1a98456d7bcfc2273efc4c64a6cd6","1","Kentucky Wildcats","Toledo Rockets","2025-08-30T16:45:00Z","player_pass_yds","Tucker Gleason",205.5,-114,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_pass_yds","Ty Simpson",246.5,-114,-114,3
+"559c446a5e9976d63eb7f67a3e189be4","1","San Jose State Spartans","Central Michigan Chippewas","2025-08-30T02:30:00Z","player_pass_yds","Walker Eget",310.5,-114.5,-114.5,2
+"c3d1a98456d7bcfc2273efc4c64a6cd6","1","Kentucky Wildcats","Toledo Rockets","2025-08-30T16:45:00Z","player_pass_yds","Zach Calzada",203.5,-114.5,-114,4
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Aaron Anderson",62.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Adam Randall",17.5,-112,-115,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Anthony Smith",55.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Antonio Williams",57.5,-114,-114,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Ashtyn Hawkins",38.5,-112,-115,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_reception_yds","Ayden Greene",33.5,-112,-115,3
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","Aziah Johnson",40.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Barion Brown",41.5,-114,-114,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Benjamin Brahmer",23,-113,-113,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Brandon Inniss",27.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Bryant Wesco Jr.",58.5,-112,-115,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Bryson Donelson",10,-113,-113,2
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Bryson Washington",20,-113,-113,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_reception_yds","C.J. Williams",41.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Caden Durham",17.5,-115,-112,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_reception_yds","Caden High",35.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Caleb Goodie",31.5,-115,-112,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Cam Coleman",70.5,-114.5,-114,4
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Cam Pickett",39.5,-114,-114,3
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_reception_yds","Carlos Hernandez",46,-113.5,-113.5,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Carnell Tate",46.5,-115,-112,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Carson Hansen",10.5,-112,-112,1
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_reception_yds","Chase Hendricks",41.5,-116,-111,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Chase Sowell",60.5,-115,-112,3
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","Chris Brazzell II",40.5,-114.5,-114,4
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_reception_yds","Chris Durr Jr.",30.5,-112,-115,1
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Chris Hilton Jr.",43,-113,-113,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","CJ Daniels",42.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Cyrus Allen",40.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Dane Key",54.5,-114.5,-114,4
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Darius Taylor",23.5,-114,-113,3
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","Darrell Gill jr.",49.5,-115,-112,3
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_reception_yds","David Amador II",50.5,-112,-116,2
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_reception_yds","Davon Booth",13.5,-112,-112,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","DeAndre Moore Jr.",38.5,-115,-114,3
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_reception_yds","Decker DeGraaf",18.5,-115,-112,1
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_reception_yds","Denzel Boston",75.5,-112,-115,1
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","DeSean Bishop",8.5,-112,-112,1
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","DeShawn Hanika",17.5,-114,-114,3
+"663302976d25e5e68e83f286db1418f6","1","Georgia Bulldogs","Marshall Thundering Herd","2025-08-30T19:30:00Z","player_reception_yds","Dillon Bell",38.5,-112,-115,3
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","DJ Rogers",23.5,-112,-115,3
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_reception_yds","Donaven McCulley",40.5,-114,-114,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_reception_yds","Donavon Greene",37.5,-115,-112,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_reception_yds","Dorian Fleming",42.5,-112,-113.5,2
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_reception_yds","Drew Wagner",19.5,-118,-110,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Duce Robinson",38.5,-112,-114,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Dylan Edwards",19,-113,-113,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Elija Lofton",33.5,-114,-114,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Emmanuel Henderson Jr.",51.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Emmett Johnson",27.5,-114.5,-114,4
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","Eric McAlister",72.5,-114.5,-114,4
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_reception_yds","Eric Rivers",55.5,-112,-112,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Eric Singleton Jr.",37.5,-114,-113,3
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_reception_yds","Frank Covey IV",22.5,-112,-115,1
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_reception_yds","Fredrick Moore",19.5,-113.5,-112,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Gabe Burkle",11.5,-113,-113,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Garrett Oakley",20.5,-112,-115,3
+"a21e71cf77c563760aa9ca01826c2583","1","Purdue Boilermakers","Ball State Cardinals","2025-08-30T16:00:00Z","player_reception_yds","George Burhenn",20.5,-112,-115,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Germie Bernard",53.5,-114,-114,3
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_reception_yds","Griffin Wilde",46.5,-112,-115,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Hollywood Smothers",21.5,-115,-112,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Horatio Fields",22.5,-115,-112,1
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_reception_yds","Ian Strong",65.5,-115,-112,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Isaiah Horton",40.5,-115,-112,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Jack Endries",35.5,-114,-114,3
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_reception_yds","Jack Velling",31.5,-116.5,-115,2
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_reception_yds","Jackson Harris",50.5,-112,-112,1
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_reception_yds","Jacob De Jesus",39.5,-112,-113.5,2
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Jacory Barney Jr.",48.5,-114,-114,3
+"6805d37180d92fd870ab5fac57eebee5","1","Sam Houston State Bearkats","UNLV Rebels","2025-08-30T01:30:00Z","player_reception_yds","Jaden Bradley",52.5,-118.5,-108.5,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Jaden Greathouse",33.5,-114,-114,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_reception_yds","Jaivian Thomas",7.5,-115,NA,1
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_reception_yds","Jake Newell",28.5,-112,-115,1
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_reception_yds","Jalil Farooq",56.5,-114,-111.5,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_reception_yds","Jamal Haynes",13,-113,-113,2
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Jameson Geers",22.5,-113.5,-112,2
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Jaquaize Pettaway",35.5,-112,-115,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_reception_yds","Jared Brown",28.5,-118.5,-107.5,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Jaron Tibbs",31.5,-114,-114,3
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Javon Tracy",48.5,-107,-119.5,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Jayce Brown",58.5,-112,-115,3
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_reception_yds","Jaylen Sargent",38.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Jeff Caldwell",40.5,-114,-114,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Jeremiah Smith",75.5,-112,-115,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Jeremiyah Love",15.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Joe Royer",34.5,-117,-112,4
+"03799e82b32ca4fb9dd248a037685d38","1","Akron Zips","Wyoming Cowboys","2025-08-28T23:00:00Z","player_reception_yds","John Michael Gyllenborg",50.5,-114.5,-114,4
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","Johntay Cook",54.5,-109,-117,2
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_reception_yds","Jonah Coleman",14.5,-103,-125,1
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Jordan Brown",24.5,-113.5,-112,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","Jordan Dwyer",49.5,-114,-114,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Jordan Faison",30.5,-112,-115,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_reception_yds","Jordan Mosley",37.5,-113.5,-112,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","Joseph Manjack IV",40.5,-114,-114,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_reception_yds","Joseph Williams",44.5,-120,-108,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Josh Cameron",50.5,-114.5,-114,4
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Josh Cuevas",17.5,-112,-112,1
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Joshisa Trader",41.5,-114,-114,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Josiah Freeman",44.5,-114,-114,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Justin Joly",51.5,-118,-112,4
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_reception_yds","K.D. Hutchinson",60.5,-113,-113,2
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_reception_yds","Kaleb Webb",27.5,-112,-115,1
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_reception_yds","KC Concepcion",58.5,-114,-114,2
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_reception_yds","Keshaun Singleton",56.5,-114,-114,3
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_reception_yds","Keyan Burnett",15.5,-113,-113,2
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_reception_yds","KJ Duff",40.5,-112,-115,1
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_reception_yds","Kobe Paysour",43.5,-114,-114,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Kole Wilson",32.5,-113,-113,2
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_reception_yds","Kwazi Gilmer",47.5,-114,-114,3
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_reception_yds","Kyron Hudson",39.5,-115,-112,3
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_reception_yds","Lance Mason",21,-113.5,-113.5,2
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_reception_yds","Latrell Caples",44.5,-114,-112,3
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Logan Loya",37,-113,-113,2
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Luke Lindenmeyer",12.5,-114,-114,1
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_reception_yds","Luke Wysong",41.5,-113,-113,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_reception_yds","Malachi Fields",36.5,-112,-115,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Malcolm Simmons",35,-113,-113,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_reception_yds","Malik Rutherford",45.5,-115.5,-112,4
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_reception_yds","Mario Craver",39.5,-114.5,-113,2
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_reception_yds","Marlin Klein",23.5,-115,-112,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_reception_yds","Matt Lauter",46.5,-112,-112,3
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_reception_yds","Matthew Henry",64,-113,-113,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Max Klare",36.5,-112,-114,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_reception_yds","Mazeo Bennett Jr.",31.5,-114,-114,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_reception_yds","Michael Trigg",34.5,-115,-112,4
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_reception_yds","Mikey Matthews",29.5,-107.5,-118.5,2
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","Miles Kitselman",25.5,-117,-112,4
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_reception_yds","Mudia Reuben",25.5,-114,-114,3
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_reception_yds","Nicholas Singleton",24.5,-114,-114,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_reception_yds","Nick Cenacle",67.5,-114,-114,3
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_reception_yds","Nick Marsh",63.5,-114.5,-114,4
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Nik McMillan",30.5,-118,-110,1
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Noah Rogers",50.5,-115,-112,3
+"663302976d25e5e68e83f286db1418f6","1","Georgia Bulldogs","Marshall Thundering Herd","2025-08-30T19:30:00Z","player_reception_yds","Noah Thomas",42.5,-112,-115,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_reception_yds","Nolan Ray",10.5,-112,-115,1
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_reception_yds","Nyck Harbor",41.5,-114,-114,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_reception_yds","Nyziah Hunter",37.5,-105,-125,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_reception_yds","Octavian Smith Jr.",40.5,-114,-111.5,2
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_reception_yds","Omari Hayes",45.5,-113.5,-112,2
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_reception_yds","Omari Kelly",39.5,-112,-115,1
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_reception_yds","Omarion Miller",48,-7,-122,2
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_reception_yds","Pofele Ashlock",65,3,-133,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_reception_yds","Pofele Ashlock",64.5,-114,-114,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Quintrevion Wisner",19.5,-112,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Randy Pittman Jr.",16.5,-112,-112,1
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_reception_yds","Rashid Williams",44.5,-114,-114,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Richard Young",8.5,-112,-112,1
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_reception_yds","Richie Anderson",15,-112,-113.5,2
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Roydell Williams",7.5,-112,-112,1
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_reception_yds","Ryan Davis",52.5,-112,-112,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Ryan Williams",69.5,-115,-112,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_reception_yds","Ryan Wingo",54.5,-114,-114,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_reception_yds","Sam Roush",35.5,-114,-114,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_reception_yds","Seydou Traore",36.5,-114,-114,3
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_reception_yds","Shazz Preston",37.5,-114,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_reception_yds","Squirrel White",21.5,-112,-115,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","T.J. Moore",50.5,-114,-112,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_reception_yds","Titus Mokiao-Atimalala",39.5,-112,-112,1
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_reception_yds","Trebor Pena",49.5,-115,-112,3
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_reception_yds","Trech Kekahuna",34.5,-118.5,-108.5,2
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_reception_yds","Trent Walker",73.5,-113.5,-112,2
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_reception_yds","Trey'Dez Green",22.5,-113,-113,2
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_reception_yds","Trond Grizzell",36.5,-113.5,-112,2
+"6805d37180d92fd870ab5fac57eebee5","1","Sam Houston State Bearkats","UNLV Rebels","2025-08-30T01:30:00Z","player_reception_yds","Troy Omeire",30,-108.5,-118.5,2
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_reception_yds","Victor Snow",38.5,-113.5,-112,2
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_reception_yds","Vinny Anthony II",47.5,-113.5,-113.5,2
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Wesley Grimes",38.5,-115,-112,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_reception_yds","Xavier Townsend",38.5,-114,-114,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_reception_yds","Yannick Smith",54.5,-112,-115,1
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_reception_yds","Yasin Willis",12.5,-112,-112,1
+"663302976d25e5e68e83f286db1418f6","1","Georgia Bulldogs","Marshall Thundering Herd","2025-08-30T19:30:00Z","player_reception_yds","Zachariah Branch",51.5,-112,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Aaron Anderson",5,-11.5,-25,2
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_receptions","Anthony Smith",3.5,-128,-102,1
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Antonio Williams",5.5,-103,-125,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Ashtyn Hawkins",3.5,102,-132,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_receptions","Ayden Greene",3.5,130,-170,3
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_receptions","Aziah Johnson",2.5,-124,-105,2
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Barion Brown",3.5,110,-145,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Benjamin Brahmer",1.5,-156,120,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Brandon Inniss",1.5,-192,146,3
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_receptions","Brandon Tullis",0.5,-158,120,2
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Bryant Wesco Jr.",3.5,-196,150,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Bryson Donelson",1.5,-156,120,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Bryson Washington",2.5,-108,-120,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_receptions","C.J. Williams",3.5,-119,-111,2
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Caden Durham",2.5,108,-140,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_receptions","Caden High",3.5,126,-165,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Caleb Goodie",2.5,-120,-108,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Cam Coleman",5.5,126,-164,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Cam Pickett",3.5,-102,-128,1
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_receptions","Carlos Hernandez",3.5,-165,125,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Carnell Tate",3.5,-145,111,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Carson Hansen",1.5,-114,-114,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Chase Sowell",4.5,-114,-114,1
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Chris Hilton Jr.",2.5,-156,120,3
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_receptions","CJ Campbell Jr.",1.5,125,-165,1
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","CJ Daniels",3.5,100,-130,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","CJ Donaldson",1.5,192.5,-261.5,2
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Cyrus Allen",3.5,123.5,-162.5,2
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Damari Alston",1.5,-104,-125,2
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Dane Key",3.5,-160,124,3
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_receptions","Darius Taylor",3.5,-115,-115,1
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_receptions","Darrell Gill jr.",4.5,130,-169.5,2
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_receptions","Darrion Dupree",1.5,155,-210,1
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_receptions","David Amador II",4.5,-119,-110,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","DeAndre Moore Jr.",3.5,106,-137,3
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_receptions","Decker DeGraaf",1.5,-177.5,135,2
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_receptions","Demond Claiborne",2.5,140,-185,1
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_receptions","Denzel Boston",5.5,111,-145,2
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","DeShawn Hanika",1.5,-110,-118,1
+"a21e71cf77c563760aa9ca01826c2583","1","Purdue Boilermakers","Ball State Cardinals","2025-08-30T16:00:00Z","player_receptions","Devin Mockobee",1.5,-108,-120,1
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_receptions","Donavon Greene",3.5,141,-185,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_receptions","Dorian Fleming",3.5,-113.5,-115,2
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Duce Robinson",2.5,-115,-115,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Dylan Edwards",2.5,154,-205,1
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Elija Lofton",2.5,-115,-114,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Emmanuel Henderson Jr.",3.5,106,-138,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Emmett Johnson",4.5,125,-165,1
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_receptions","Eric McAlister",4.5,-105,-124,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Eric Rivers",4.5,116,-152,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Eric Singleton Jr.",3,-13.5,-29,2
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_receptions","Frank Covey IV",2.5,-104,-125,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Gabe Burkle",1.5,112,-146,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Garrett Oakley",2.5,130,-170,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Germie Bernard",3.5,-164.5,126,2
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_receptions","Griffin Wilde",3.5,-177.5,135,2
+"c3d1a98456d7bcfc2273efc4c64a6cd6","1","Kentucky Wildcats","Toledo Rockets","2025-08-30T16:45:00Z","player_receptions","Hardley Gilmore IV",2.5,-124,-105,2
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_receptions","Ian Strong",4.5,-115,-115,1
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Isaiah Horton",3.5,-6.5,-122.5,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Jack Endries",3.5,110,-145,3
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_receptions","Jack Velling",2.5,-156,120,1
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_receptions","Jacob De Jesus",3.5,-135,105,2
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Jacory Barney Jr.",4.5,100,-130,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Jaden Greathouse",2.5,-102,-127,3
+"6af1e17d7174b1cba28f644a02600e3b","1","Virginia Cavaliers","Coastal Carolina Chanticleers","2025-08-30T22:00:00Z","player_receptions","Jahmal Edrine",3.5,-150,115,1
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_receptions","Jaivian Thomas",1.5,135.5,-179.5,2
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_receptions","Jalil Farooq",4.5,121,-159.5,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Jamal Haynes",2.5,-103,-125,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","James Peoples",1.5,156.5,-209,2
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_receptions","Jameson Geers",1.5,-200,150,1
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_receptions","Jaquaize Pettaway",2.5,-165,126,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Jaron Tibbs",2.5,-114,-114,1
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_receptions","Javon Tracy",3.5,-115,-115,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Jayce Brown",3.5,-128,-102,1
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_receptions","Jayden Ballard",3.5,110,-145,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Jeremiah Smith",5.5,116,-152,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Jeremiyah Love",1.5,-120,-108,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Joe Royer",4,9.5,-50,2
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_receptions","Johntay Cook",4.5,107,-139,3
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_receptions","Jonah Coleman",2.5,172,-231.5,2
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Jordan Brown",2.5,-1.5,-130.5,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_receptions","Jordan Dwyer",3.5,-137.5,106,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Jordan Faison",2.5,102,-132,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_receptions","Jordan Mosley",2.5,-130,100,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_receptions","Joseph Manjack IV",3.5,-120,-108,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Joseph Williams",3.5,-118,-110,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Josh Cameron",3.5,-167,128,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Joshisa Trader",3.5,115,-150,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Josiah Freeman",3.5,-138,106,1
+"c3d1a98456d7bcfc2273efc4c64a6cd6","1","Kentucky Wildcats","Toledo Rockets","2025-08-30T16:45:00Z","player_receptions","Junior Vandeross III",5.5,100,-130,2
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_receptions","Justin Joly",3.5,-120,-108,1
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_receptions","Kaleb Webb",2.5,125.5,-164.5,2
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_receptions","Kaytron Allen",0.5,-158,120,2
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_receptions","Keshaun Singleton",4.5,109,-142.5,2
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_receptions","KJ Duff",3.5,135,-180,1
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_receptions","Kobe Paysour",3.5,-4,-125,2
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Kole Wilson",2.5,108.5,-140.5,2
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_receptions","Kwazi Gilmer",3.5,-119,-109,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_receptions","Latrell Caples",4.5,152,-202.5,2
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_receptions","Logan Loya",3.5,110,-145,1
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_receptions","Malachi Fields",2.5,-130,100,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Malcolm Simmons",2.5,-118,-110,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Malik Rutherford",4.5,-129,-0.5,2
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_receptions","Mario Craver",3.5,135.5,-179.5,2
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_receptions","Matt Lauter",3.5,-128,-102,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Max Klare",3.5,110,-144,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Micah Welch",0.5,-227,170,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_receptions","Michael Trigg",2.5,-141,108,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_receptions","Mikey Matthews",2.5,-169,129,3
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_receptions","Miles Kitselman",2.5,115,-149.5,2
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_receptions","Mudia Reuben",2.5,-135,105,1
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_receptions","Nicholas Singleton",2.5,135.5,-179.5,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_receptions","Nick Cenacle",5.5,-122.5,-106.5,2
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_receptions","Nick Marsh",4.5,-110,-120,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_receptions","Noah Rogers",4.5,130,-170,1
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_receptions","Nolan Ray",1.5,-130,100,2
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_receptions","Nyck Harbor",3.5,130,-170,3
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_receptions","Nyziah Hunter",3.5,105,-135,1
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_receptions","Octavian Smith Jr.",3.5,-109,-120,2
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_receptions","Omari Kelly",3.5,104.5,-135,2
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_receptions","Omarion Miller",4.5,129,-169.5,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_receptions","Pofele Ashlock",5.5,-146,111,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Quintrevion Wisner",2.5,104,-135,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Randy Pittman Jr.",2.5,136,-178,1
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_receptions","Rashid Williams",3.5,125.5,-164.5,2
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_receptions","Richie Anderson",1.5,-152,116,1
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_receptions","Ryan Davis",3.5,-135,105,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Ryan Williams",4.5,112,-145.5,2
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_receptions","Ryan Wingo",3.5,-105,-125,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_receptions","Sam Roush",3.5,-114,-114,1
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_receptions","Seydou Traore",3.5,-127.5,-1.5,2
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_receptions","Squirrel White",2.5,114,-148.5,2
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","T.J. Moore",3.5,-106,-122,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_receptions","Titus Mokiao-Atimalala",3.5,6.5,-139,2
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_receptions","Trech Kekahuna",3.5,135,-180,1
+"6af1e17d7174b1cba28f644a02600e3b","1","Virginia Cavaliers","Coastal Carolina Chanticleers","2025-08-30T22:00:00Z","player_receptions","Trell Harris",3.5,-165,125,1
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_receptions","Trey'Dez Green",2.5,-109,-119,3
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_receptions","Vinny Anthony II",3.5,105,-135,1
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_receptions","Wesley Grimes",3.5,130,-170,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_receptions","Xavier Townsend",3.5,-120,-108,1
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_rush_yds","Abu Sama III",40.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_rush_yds","Adam Randall",70.5,-115,-112,3
+"cc964607d7c521019e0c91768bb2c024","1","Michigan State Spartans","Western Michigan Broncos","2025-08-29T23:00:00Z","player_rush_yds","Aidan Chiles",21.5,-119,-110,4
+"6805d37180d92fd870ab5fac57eebee5","1","Sam Houston State Bearkats","UNLV Rebels","2025-08-30T01:30:00Z","player_rush_yds","Alton McCaskill",42,-113.5,-113.5,2
+"5d864fb9feccc540dfedf3f1141bc4cb","1","Oregon State Beavers","California Golden Bears","2025-08-31T02:30:00Z","player_rush_yds","Anthony Hankerson",92.5,-114,-114,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","Arch Manning",27.5,-112,-115,3
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_rush_yds","Avery Johnson",59.5,-114,-114,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_rush_yds","Ben Gulbranson",11.5,-7.5,-122.5,2
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_rush_yds","Billy Edwards Jr.",20.5,-115,-113.5,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_rush_yds","Braylon Braxton",32.5,-112,-115,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_rush_yds","Brendan Sorsby",23.5,-114.5,-114,4
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_rush_yds","Bryce Underwood",20.5,-114,-114,3
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_rush_yds","Bryson Donelson",65.5,-114,-114,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_rush_yds","Bryson Washington",86.5,-114.5,-114,4
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_rush_yds","Byrum Brown",48.5,-115,-112,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_rush_yds","Cade Klubnik",32.5,-114,-114,3
+"9315c835a22a931d29e34ef0f15c9429","1","Clemson Tigers","LSU Tigers","2025-08-30T23:30:00Z","player_rush_yds","Caden Durham",62.5,-114,-114,3
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_rush_yds","Cam Porter",44.5,-114.5,-114,4
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_rush_yds","Carson Hansen",58.5,-112,-115,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_rush_yds","Cartevious Norton",45.5,-115,-112,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_rush_yds","CJ Bailey",28.5,-114.5,-114,4
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","CJ Baxter",34,-114,-114,3
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_rush_yds","CJ Campbell Jr.",52.5,-112,-115,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","CJ Donaldson",43.5,-114,-114,3
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_rush_yds","Coleman Bennett",38.5,-113.5,-113.5,2
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_rush_yds","Damari Alston",51.5,-114.5,-114,4
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_rush_yds","Daniel Hishaw Jr.",81.5,-114.5,-114,4
+"5287f56aa50eff29efc0d8c19c41ec01","1","Minnesota Golden Gophers","Buffalo Bulls","2025-08-29T00:00:00Z","player_rush_yds","Darius Taylor",94.5,-112,-114,3
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_rush_yds","Davion Gause",64.5,-114,-112,3
+"0ee5bcc393d7591e62d85d0090796cdc","1","Southern Mississippi Golden Eagles","Mississippi State Bulldogs","2025-08-30T16:00:00Z","player_rush_yds","Davon Booth",75.5,-113.5,-113.5,2
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_rush_yds","Demond Claiborne",100,-113.5,-113.5,2
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_rush_yds","Demond Williams Jr.",46.5,-112,-115,1
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_rush_yds","DeSean Bishop",68.5,-114.5,-114,4
+"a21e71cf77c563760aa9ca01826c2583","1","Purdue Boilermakers","Ball State Cardinals","2025-08-30T16:00:00Z","player_rush_yds","Devin Mockobee",81.5,-114.5,-114,4
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_rush_yds","Devon Dampier",65.5,-117,-112,4
+"5258088fbe3a7c3b887cc597a1f0d59d","1","Wisconsin Badgers","Miami (OH) RedHawks","2025-08-29T01:00:00Z","player_rush_yds","Dilin Jones",73,-121,-6,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_rush_yds","Dylan Edwards",74.5,-114,-114,3
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_rush_yds","Elijah Green",38.5,-112,-112,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_rush_yds","Emmett Johnson",74.5,-113.5,-115,4
+"559c446a5e9976d63eb7f67a3e189be4","1","San Jose State Spartans","Central Michigan Chippewas","2025-08-30T02:30:00Z","player_rush_yds","Floyd Chalk IV",57.5,-113.5,-113.5,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_rush_yds","Gio Lopez",38.5,-115,-112,4
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_rush_yds","Haynes King",45.5,-117.5,-112,4
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_rush_yds","Hollywood Smothers",87.5,-114.5,-114,4
+"6805d37180d92fd870ab5fac57eebee5","1","Sam Houston State Bearkats","UNLV Rebels","2025-08-30T01:30:00Z","player_rush_yds","Hunter Watson",48.5,-113.5,-113.5,2
+"69b92f6edcf58ce33ac39d43bc1f21a5","1","Western Kentucky Hilltoppers","Sam Houston State Bearkats","2025-08-23T23:00:00Z","player_rush_yds","Hunter Watson",32.5,-112,-112,1
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_rush_yds","Ismail Mahdi",54.5,-114,-114,3
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_rush_yds","Jackson Arnold",30.5,-112,-114,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_rush_yds","Jadarian Price",42.5,-114,-114,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_rush_yds","Jaivian Thomas",43.5,-113.5,-115,4
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_rush_yds","Jalon Daniels",40.5,-114.5,-114,4
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_rush_yds","Jamal Haynes",73.5,-120.5,-110,4
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","James Peoples",56.5,-114,-114,3
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_rush_yds","Jeremiyah Love",82.5,-114,-112,3
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_rush_yds","Joey Aguilar",23.5,-112,-115,1
+"d52b301586f5ce0e1e8b6f3dad18af47","1","Washington Huskies","Colorado State Rams","2025-08-31T03:00:00Z","player_rush_yds","Jonah Coleman",87.5,-112,-115,1
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_rush_yds","Jordan Marshall",73.5,-114,-114,3
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","Julian Sayin",6,-118.5,-107.5,2
+"f146d157f41678d4d8d9ffc7bade8af6","1","Michigan Wolverines","New Mexico Lobos","2025-08-30T23:30:00Z","player_rush_yds","Justice Haynes",89.5,-114,-114,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_rush_yds","Kaidon Salter",35.5,-113.5,-112,4
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_rush_yds","Katin Houser",18.5,-115,-112,3
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_rush_yds","Kaytron Allen",82.5,-114,-114,3
+"b9668bd42d810933d0a2d1de428fc5fd","1","Arizona Wildcats","Hawaii Rainbow Warriors","2025-08-31T02:30:00Z","player_rush_yds","Kedrick Reescano",49,-112,-113.5,2
+"9418aabb5edf415f4296c694fa210c3b","1","North Carolina Tar Heels","TCU Horned Frogs","2025-09-02T00:00:00Z","player_rush_yds","Kevorian Barnes",45.5,-112,-115,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_rush_yds","Kyron Drones",27.5,-114,-114,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_rush_yds","Landon Sims",27.5,-112,-115,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_rush_yds","LaNorris Sellers",54.5,-115,-112,3
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_rush_yds","Le'Veon Moss",65.5,-114,-114,2
+"bc9ca531af3bbd6fcb8271267655450e","1","Kansas Jayhawks","Fresno State Bulldogs","2025-08-23T22:30:00Z","player_rush_yds","Leshon Williams",49.5,-113,-113,2
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_rush_yds","London Montgomery",49.5,-112,-114,3
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_rush_yds","Maddux Madsen",15.5,-114,-114,3
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_rush_yds","Malik Washington",19.5,-112,-115,1
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_rush_yds","Marcel Reed",51.5,-114.5,-114.5,2
+"8c138af84cb5ff1e6c4e11b591ff041f","1","Miami Hurricanes","Notre Dame Fighting Irish","2025-08-31T23:30:00Z","player_rush_yds","Mark Fletcher Jr.",50.5,-114,-114,3
+"6e308b5e56e38cfe79a4f6b4783e1bfc","1","NC State Wolfpack","East Carolina Pirates","2025-08-28T23:00:00Z","player_rush_yds","Marlon Gunn Jr.",32.5,-114,-112,3
+"108112065d320b9bc531736b51f1053f","1","Tulane Green Wave","Northwestern Wildcats","2025-08-30T16:00:00Z","player_rush_yds","Maurice Turner",51.5,-113,-113,2
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_rush_yds","Micah Alejado",23.5,-112,-115,3
+"f88be3eb99624912fed9f8dfc9c3b017","1","Hawaii Rainbow Warriors","Stanford Cardinal","2025-08-23T23:30:00Z","player_rush_yds","Micah Ford",55.5,-114,-114,3
+"09043eb30bb7d92001afc88201788f05","1","Colorado Buffaloes","Georgia Tech Yellow Jackets","2025-08-30T00:00:00Z","player_rush_yds","Micah Welch",41.5,-114,-114,1
+"663302976d25e5e68e83f286db1418f6","1","Georgia Bulldogs","Marshall Thundering Herd","2025-08-30T19:30:00Z","player_rush_yds","Nate Frazier",69.5,-115,-112,3
+"e2a51da70ed1084d9bce9f024d0a69a0","1","Penn State Nittany Lions","Nevada Wolf Pack","2025-08-30T19:30:00Z","player_rush_yds","Nicholas Singleton",80.5,-114,-114,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_rush_yds","Nico Iamaleava",16.5,-113,-114,4
+"f412c431e3f6d5b0645351971479df7b","1","Maryland Terrapins","Florida Atlantic Owls","2025-08-30T16:00:00Z","player_rush_yds","Nolan Ray",74,-113,-113,2
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_rush_yds","Oscar Adaway III",34,-113,-113,2
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_rush_yds","Parker Navarro",43.5,-114,-114,1
+"243c8fc42fd9e0d035d2f904384185e4","1","Ohio State Buckeyes","Texas Longhorns","2025-08-30T16:00:00Z","player_rush_yds","Quintrevion Wisner",48.5,-114,-114,3
+"1803d7f4d655fb3f6d5f39fcfd893b96","1","South Carolina Gamecocks","Virginia Tech Hokies","2025-08-31T19:00:00Z","player_rush_yds","Rahsul Faison",55.5,-114,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_rush_yds","Richard Young",59.5,-114,-114,3
+"6b720706eed963bd287b802d86a85024","1","Wake Forest Demon Deacons","Kennesaw State Owls","2025-08-29T23:00:00Z","player_rush_yds","Robby Ashford",60,-113.5,-113.5,2
+"99aa25f6c7299ea1a9b444ef813a9770","1","Texas A&M Aggies","UTSA Roadrunners","2025-08-31T01:00:00Z","player_rush_yds","Robert Henry Jr.",38.5,-114,-114,2
+"20740de7481ec1f20c2efbc30852f6c6","1","Kansas State Wildcats","Iowa State Cyclones","2025-08-23T16:00:00Z","player_rush_yds","Rocco Becht",17.5,-114,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_rush_yds","Roydell Williams",27.5,-114,-114,3
+"a21e71cf77c563760aa9ca01826c2583","1","Purdue Boilermakers","Ball State Cardinals","2025-08-30T16:00:00Z","player_rush_yds","Ryan Browne",34.5,-103,-125,1
+"091114ab96129401a22aa7b2ba683ec1","1","Baylor Bears","Auburn Tigers","2025-08-30T00:00:00Z","player_rush_yds","Sawyer Robertson",20.5,-115,-112,3
+"0340d587efabc6bbf7114392cb51dfd5","1","Rutgers Scarlet Knights","Ohio Bobcats","2025-08-28T22:00:00Z","player_rush_yds","Sieh Bangura",53.5,-115,-112,1
+"ba3ec216f7117a8f9acbef2fe092c87b","1","South Florida Bulls","Boise State Broncos","2025-08-28T21:30:00Z","player_rush_yds","Sire Gaines",84.5,-115,-112,3
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_rush_yds","Star Thomas",39.5,-114,-114,1
+"f2cf826d5734af1bedd0fb1510a7605c","1","Cincinnati Bearcats","Nebraska Cornhuskers","2025-08-29T01:00:00Z","player_rush_yds","Tawee Walker",43.5,-116,-112,4
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_rush_yds","Tommy Castellanos",26.5,-114,-114,3
+"5c32c6337881a5345e232f266665e6dd","1","Florida State Seminoles","Alabama Crimson Tide","2025-08-30T19:28:00Z","player_rush_yds","Ty Simpson",24.5,-112,-112,3
+"57de482f01e31e5f31e1010a072d8369","1","UCLA Bruins","Utah Utes","2025-08-31T03:00:00Z","player_rush_yds","Wayshawn Parker",60.5,-116,-112,4
+"eb08e0869675a469f223fefa2b7c1aac","1","Tennessee Volunteers","Syracuse Orange","2025-08-30T15:58:00Z","player_rush_yds","Yasin Willis",35.5,-113.5,-115,4
