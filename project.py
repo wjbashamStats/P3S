@@ -85,6 +85,78 @@ def blend_prior_and_current(prior_tot, current_games_list):
     return out
 
 
+# Volume columns a team's roster genuinely competes for -- rush carries
+# among running backs, targets among receivers. Pass attempts aren't
+# included: a team doesn't really have a "shared pool" of pass attempts
+# the way it has one pool of carries or targets (QB competitions are a
+# real thing, but not a volume-split problem the way a backfield or WR
+# room is).
+SHARE_VOL_COLS = ("rush_att", "targets")
+
+
+def build_team_volume_totals(records, vol_cols=SHARE_VOL_COLS):
+    """
+    Sum vol_cols across all players sharing the same team, from any
+    totals-shaped record set -- e.g. the `prior` dict grouped by each
+    player's OWN prior-year team (not their current one), or the current
+    `totals` dict grouped by tkey. `records` is an iterable of
+    (team_key, record) pairs so the caller controls which "team" a record
+    counts toward (this matters for a transfer: their history counts
+    toward the OLD team's total, not the new one).
+
+    "games" per team is the max games among its players (a team plays a
+    fixed schedule; the most-used player's game count is the best proxy
+    available from season-level data alone).
+    Returns {team_key: {vol_col: total, "games": n}}.
+    """
+    from collections import defaultdict
+    sums = defaultdict(lambda: defaultdict(float))
+    games = defaultdict(list)
+    for team_key, rec in records:
+        if not team_key or not rec:
+            continue
+        for c in vol_cols:
+            v = rec.get(c)
+            if v:
+                sums[team_key][c] += v
+        g = rec.get("games")
+        if g:
+            games[team_key].append(g)
+    out = {}
+    for team_key, cols in sums.items():
+        out[team_key] = dict(cols)
+        out[team_key]["games"] = max(games[team_key]) if games[team_key] else 1
+    return out
+
+
+def team_share_volume(player_total, source_team_total, target_team_totals, vol_col):
+    """
+    A player's projected per-game volume as their historical SHARE of a
+    team's total pool, rather than their own raw total/games -- ties
+    volume to a team-level total (more stable than any one player's raw
+    count) and, for a transfer, correctly re-bases their earned share
+    onto their NEW team's pool instead of assuming their old raw count
+    carries over unchanged into a different offense.
+
+    player_total   : this player's own season total for vol_col.
+    source_team_total: the TEAM TOTAL for vol_col on the team the player
+                       actually earned player_total on (their prior team,
+                       which for a transfer differs from their current one).
+    target_team_totals: build_team_volume_totals()'s record for the team
+                       being projected FOR (their current team).
+    Returns None (caller falls back to raw total/games) if any input is
+    missing or zero -- e.g. a true freshman with no prior team total.
+    """
+    if not player_total or not source_team_total or not target_team_totals:
+        return None
+    team_vol = target_team_totals.get(vol_col)
+    team_games = target_team_totals.get("games")
+    if not team_vol or not team_games:
+        return None
+    share = player_total / source_team_total
+    return (team_vol / team_games) * share
+
+
 def position_means(all_totals):
     """
     League-wide VOLUME-WEIGHTED mean of each efficiency rate, for shrinkage
@@ -343,7 +415,8 @@ def stat_variance(logs, stat_col):
 # ---------- the projection ----------
 
 def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
-                          def_index, opp_tkey, vol_adj=1.0, extra_adj=1.0):
+                          def_index, opp_tkey, vol_adj=1.0, extra_adj=1.0,
+                          per_game_vol_override=None):
     """
     Produce one projection row for a player + market.
     vol_adj: optional extra volume multiplier from this week's specific
@@ -351,6 +424,9 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     extra_adj: optional extra opponent multiplier from a second, independent
     opponent signal (see success_rate_adj) -- combines with the PFF-grade
     opponent_adj() below rather than replacing it. Defaults to 1.0.
+    per_game_vol_override: if given (see team_share_volume), replaces the
+    tot[vol_col]/games calculation entirely -- e.g. a team-share-based
+    volume estimate instead of the player's own raw rate.
     Returns dict with mean projection, variance, and the components (for the
     impact page to show its work), or None if the player lacks the volume.
     """
@@ -363,7 +439,8 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     if total_vol is None or (min_vol and total_vol < min_vol):
         return None
 
-    per_game_vol = (total_vol / games) * vol_adj
+    base_vol = per_game_vol_override if per_game_vol_override is not None else (total_vol / games)
+    per_game_vol = base_vol * vol_adj
     adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"]) * extra_adj
 
     eff_key = mdef["eff"]

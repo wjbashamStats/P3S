@@ -41,6 +41,14 @@ def load_team_map():
     return pff2c, odds2c
 
 
+def resolve_tkey(raw_team, pff2c):
+    """Same PFF-team-string -> canonical tkey translation load_pff() uses inline,
+    factored out for callers that need it for a record OTHER than a PFF
+    crosswalk row (e.g. a prior-year totals record's own "team" field)."""
+    team_c = pff2c.get(norm(raw_team), raw_team)
+    return norm(team_c)
+
+
 def load_pff(pff2c):
     """
     Load master_crosswalk.csv (the enriched file we built).
@@ -120,6 +128,7 @@ def load_prior_totals(season=None):
         rec = {k: _to_float(v) for k, v in r.items()
                if k not in ("player", "team", "player_id", "position")}
         rec["games"] = rec.get("games") or 1
+        rec["team"] = r.get("team")  # raw PFF-style string, kept for team-share volume (project.team_share_volume)
         out[pid] = rec
     return out
 

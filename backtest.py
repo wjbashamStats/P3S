@@ -99,6 +99,13 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
+    # Team volume pools (rush_att/targets), for share-based volume in pure
+    # prior-year weeks (see project.team_share_volume / build.py's identical
+    # wiring for the full rationale).
+    team_totals_prior = P.build_team_volume_totals(
+        ((DL.resolve_tkey(rec.get("team"), pff2c), rec) for rec in prior.values()),
+    ) if prior else {}
+
     pff_by_key = {}
     for p in pff:
         pff_by_key.setdefault((p["pkey"], p["tkey"]), p)
@@ -106,6 +113,7 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     out = {}
     for (pkey, tkey), tot in totals.items():
         source = None
+        prior_rec = None
         if use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
             if week > C.PRIOR_ONLY_UNTIL_WEEK:
@@ -127,6 +135,9 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         opp_tkey = (DL.find_opponent_tkey(tkey, str(week), lines_by_week, canonical_tkeys)
                    if lines_by_week else None)
 
+        share_source_team = (DL.resolve_tkey(prior_rec.get("team"), pff2c)
+                             if (week <= C.PRIOR_ONLY_UNTIL_WEEK and prior_rec) else None)
+
         for mkey, mdef in C.MARKETS.items():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
@@ -134,9 +145,16 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                 extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
             if tarp_index:
                 extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
+            vol_col = mdef["volume"]
+            per_game_vol_override = None
+            if share_source_team and vol_col in P.SHARE_VOL_COLS:
+                per_game_vol_override = P.team_share_volume(
+                    source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
+                    team_totals_prior.get(tkey, {}), vol_col)
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=opp_tkey,
-                                           vol_adj=vol_adj, extra_adj=extra_adj)
+                                           vol_adj=vol_adj, extra_adj=extra_adj,
+                                           per_game_vol_override=per_game_vol_override)
             if proj is None:
                 continue
             out[(norm(player_name), mkey)] = dict(player=player_name, **proj)

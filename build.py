@@ -88,6 +88,14 @@ def main():
         print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
+    # Team volume pools (rush_att/targets), for share-based volume in pure
+    # prior-year weeks (see project.team_share_volume). Grouped by each
+    # player's own prior-year team, NOT their current one -- a transfer's
+    # history counts toward the team they actually earned it on.
+    team_totals_prior = P.build_team_volume_totals(
+        ((DL.resolve_tkey(rec.get("team"), pff2c), rec) for rec in prior.values()),
+    ) if prior else {}
+
     lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
     week_avg_implied = DL.league_avg_implied(lines_by_week, str(args.week)) if lines_by_week else None
     if args.game_lines:
@@ -137,6 +145,7 @@ def main():
         # (current, 2025) regardless -- only the volume/efficiency numbers
         # swap, so a transfer's history follows the player, not the school.
         source = None
+        prior_rec = None
         if args.use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
             if args.week > C.PRIOR_ONLY_UNTIL_WEEK:
@@ -163,6 +172,15 @@ def main():
         team_implied, team_spread = (DL.find_team_game_line(tkey, str(args.week), lines_by_week)
                                      if lines_by_week else (None, None))
 
+        # Share-based volume only applies in pure prior-year weeks (1-3):
+        # once real current-season games exist (week 4+), the player's own
+        # observed volume is already better ground truth than an inferred
+        # share. Source team = where prior_rec actually earned that volume
+        # (their old team, for a transfer) -- their share re-bases onto the
+        # CURRENT team's (tkey's) pool via team_totals_prior.
+        share_source_team = (DL.resolve_tkey(prior_rec.get("team"), pff2c)
+                             if (args.week <= C.PRIOR_ONLY_UNTIL_WEEK and prior_rec) else None)
+
         for mkey, mdef in C.MARKETS.items():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
@@ -170,9 +188,16 @@ def main():
                 extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
             if tarp_index:
                 extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
+            vol_col = mdef["volume"]
+            per_game_vol_override = None
+            if share_source_team and vol_col in P.SHARE_VOL_COLS:
+                per_game_vol_override = P.team_share_volume(
+                    source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
+                    team_totals_prior.get(tkey, {}), vol_col)
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
-                                           def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj)
+                                           def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj,
+                                           per_game_vol_override=per_game_vol_override)
             if proj is None:
                 continue
             rows.append(dict(
