@@ -1,0 +1,46 @@
+HANDOFF PROMPT — paste this as your first message to Claude Code
+================================================================
+
+I'm continuing a college-football betting analytics project. Read
+`impact_backend/PROJECT_STATE.md` first — it has the full context, every
+modeling decision, known data quirks, and the ordered next steps. Then read the
+existing modules in `impact_backend/` (config.py, data_load.py, project.py,
+odds.py, build.py, historical_pull.py) and the cleaned data in `clean_data/`.
+
+Quick orientation:
+- Two connected systems: (1) player prop projection models (pass/rush/rec
+  yards & attempts) that overlay on Odds API lines to find edges, and (2) a
+  searchable "Player Impact" HTML page. Both read one per-player-per-market
+  projection table. Backend is built and tested; UI comes later.
+- The projection model is deliberately heuristic (rate × volume × opponent
+  adjustment), NOT a fitted regression — this is an owner decision, don't
+  change it. Opponent adjustment uses PFF defensive grades (COV scales pass,
+  RDEF scales rush).
+- I've just pulled 2025 historical closing-line props for week 1 via
+  `historical_pull.py`. The raw JSON is in `impact_backend/hist_raw/` (one file
+  per game, named {event_id}_closing.json).
+
+What I want to do next, in this order:
+1. Confirm you understand the codebase — give me a 5-line summary of the
+   pipeline and flag anything in PROJECT_STATE.md that looks off.
+2. Build a FLATTENER: parse `hist_raw/*.json` (note the historical snapshot
+   wrapper: {timestamp, previous_timestamp, next_timestamp, data:{...event...}})
+   into a tidy props table — one row per (game, player, market) with the
+   consensus closing line and over/under prices across books.
+3. JOIN those props to actual 2025 results from `clean_data/*_weekly_clean.csv`
+   (match on player + week) so every prop line gets its realized outcome.
+4. Build the BACKTEST: model projection vs closing line vs actual. Report hit
+   rate on flagged edges, closing-line value, and calibration per market.
+
+Important constraints:
+- Odds API historical calls cost 10 credits each (markets × regions × events ×
+  snapshots). I have ~100k credits, resetting on the 1st. Do NOT make live
+  historical calls while building the flattener/backtest — work off the JSON
+  already in hist_raw/. Only I run the paid pulls, and only after a --dry-run.
+- Watch the known data quirks in PROJECT_STATE.md, especially: receiving weekly
+  is truncated at week 14 (73 WRs affected), and player_id is the join key.
+- First housekeeping task: help me move the API keys into a gitignored .env and
+  remind me to rotate them (they were exposed in a chat thread).
+
+Start with step 1 (the summary + sanity check), then wait for my go before
+building.

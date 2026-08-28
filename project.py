@@ -1,0 +1,167 @@
+"""
+project.py — the projection engine.
+
+For each player + market, project the stat as:
+
+    projection = expected_volume  x  efficiency_rate  x  opponent_adjustment
+
+- expected_volume  : prior-year per-game rate (attempts / targets / carries)
+- efficiency_rate  : prior-year yds-per-unit, shrunk toward the position mean
+                     so small samples don't produce extreme numbers
+- opponent_adj     : scales the projection by the opponent defensive unit's
+                     strength (COV for pass markets, RDEF for rush), using the
+                     PFF grades from the crosswalk
+
+Game logs (if present) add a variance estimate per projection so a boom/bust
+player is flagged differently from a steady one at the same mean.
+
+This module is deliberately transparent and tunable — no black-box fit. Every
+constant lives in config.py.
+"""
+import statistics as stats
+import config as C
+
+
+# ---------- efficiency helpers ----------
+
+def _rate(numer, denom):
+    if not numer or not denom or denom == 0:
+        return None
+    return numer / denom
+
+
+def compute_player_rates(tot):
+    """Derive per-unit efficiency rates from a season-totals dict."""
+    return {
+        "ypa":        _rate(tot.get("pass_yds"), tot.get("pass_att")),   # yds/attempt
+        "ypc":        _rate(tot.get("rush_yds"), tot.get("rush_att")),   # yds/carry
+        "ypt":        _rate(tot.get("rec_yds"),  tot.get("targets")),    # yds/target
+        "catch_rate": _rate(tot.get("receptions"), tot.get("targets")),  # rec/target
+    }
+
+
+def position_means(all_totals):
+    """League-wide mean of each efficiency rate, for shrinkage targets."""
+    buckets = {"ypa": [], "ypc": [], "ypt": [], "catch_rate": []}
+    for tot in all_totals.values():
+        r = compute_player_rates(tot)
+        for k, v in r.items():
+            if v is not None:
+                buckets[k].append(v)
+    return {k: (stats.mean(v) if v else 0.0) for k, v in buckets.items()}
+
+
+def shrink(player_rate, pos_mean, games):
+    """
+    Regress a player's rate toward the position mean based on sample size.
+    weight = games / (games + SHRINKAGE_GAMES).
+    """
+    if player_rate is None:
+        return pos_mean
+    g = games or 0
+    w = g / (g + C.SHRINKAGE_GAMES)
+    return w * player_rate + (1 - w) * pos_mean
+
+
+# ---------- opponent adjustment ----------
+
+def build_def_index(pff_players):
+    """
+    Aggregate each team's defensive grade by unit into a z-scored index.
+    Returns {tkey: {"def_grade_cov": z, "def_grade_rdef": z, ...}}.
+    Higher z = STRONGER defense (suppresses the stat), so the adjustment
+    multiplies projections DOWN against strong D and UP against weak D.
+    """
+    from collections import defaultdict
+    unit_cols = ["def_grade_cov", "def_grade_rdef", "def_grade_prush", "def_grade_def"]
+    team_vals = defaultdict(lambda: defaultdict(list))
+    for p in pff_players:
+        if p.get("side") != "Defense":
+            continue
+        for col in unit_cols:
+            v = p.get(col, "")
+            try:
+                team_vals[p["tkey"]][col].append(float(v))
+            except (ValueError, TypeError):
+                pass
+    # team-level mean grade per unit
+    team_unit = {t: {c: (stats.mean(vs) if vs else None) for c, vs in units.items()}
+                 for t, units in team_vals.items()}
+    # z-score each unit across teams
+    for col in unit_cols:
+        vals = [tu[col] for tu in team_unit.values() if tu.get(col) is not None]
+        if len(vals) < 2:
+            continue
+        m, sd = stats.mean(vals), (stats.pstdev(vals) or 1.0)
+        for tu in team_unit.values():
+            if tu.get(col) is not None:
+                tu[col] = (tu[col] - m) / sd
+    return team_unit
+
+
+def opponent_adj(def_index, opp_tkey, def_unit):
+    """
+    Multiplier centered on 1.0. Strong defense (high z) -> <1 (suppresses);
+    weak defense (low z) -> >1 (inflates).
+    """
+    tu = def_index.get(opp_tkey)
+    if not tu or tu.get(def_unit) is None:
+        return 1.0
+    z = tu[def_unit]
+    return 1.0 - C.OPP_ADJ_STRENGTH * z
+
+
+# ---------- variance from game logs ----------
+
+def stat_variance(logs, stat_col):
+    """Std dev of a stat across a player's prior-year games (None if <3 games)."""
+    if not logs:
+        return None
+    vals = [g.get(stat_col) for g in logs if g.get(stat_col) is not None]
+    if len(vals) < 3:
+        return None
+    return stats.pstdev(vals)
+
+
+# ---------- the projection ----------
+
+def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
+                          def_index, opp_tkey):
+    """
+    Produce one projection row for a player + market.
+    Returns dict with mean projection, variance, and the components (for the
+    impact page to show its work), or None if the player lacks the volume.
+    """
+    games = tot.get("games") or 1
+    vol_col = mdef["volume"]
+    total_vol = tot.get(vol_col)
+
+    # volume floor: skip players without enough prior sample for this side
+    min_vol = C.MIN_PRIOR_VOLUME.get(vol_col)
+    if total_vol is None or (min_vol and total_vol < min_vol):
+        return None
+
+    per_game_vol = total_vol / games
+    adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"])
+
+    eff_key = mdef["eff"]
+    if eff_key is None:
+        # pure-volume market (attempts): project volume itself
+        proj = per_game_vol * adj
+        components = dict(volume=round(per_game_vol, 2), efficiency=None,
+                          opp_adj=round(adj, 3))
+    else:
+        eff = rates_shrunk.get(eff_key)
+        if eff is None:
+            return None
+        proj = per_game_vol * eff * adj
+        components = dict(volume=round(per_game_vol, 2),
+                          efficiency=round(eff, 3), opp_adj=round(adj, 3))
+
+    var = stat_variance(logs, mdef["stat"])
+    return dict(
+        market=market_key, stat=mdef["stat"],
+        projection=round(proj, 1),
+        proj_sd=(round(var, 1) if var is not None else None),
+        components=components,
+    )

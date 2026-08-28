@@ -1,0 +1,100 @@
+"""
+data_load.py — load PFF grades, prior-year stats, and the team crosswalk;
+normalize names so everything joins.
+
+The three naming systems (PFF display, CFBD, Odds API) are reconciled here via
+team_map.csv so no downstream module has to think about it.
+"""
+import csv, os
+import config as C
+
+
+def norm(s):
+    """Normalize a name/team for fuzzy joins."""
+    return "".join(ch for ch in (s or "").lower() if ch.isalnum())
+
+
+def load_team_map():
+    """
+    team_map.csv: columns pff_team, cfbd_team, odds_team.
+    Returns dicts to translate any system -> canonical (cfbd) team.
+    If the file is absent, returns identity maps (normalized).
+    """
+    pff2c, odds2c = {}, {}
+    if os.path.exists(C.TEAM_MAP):
+        for r in csv.DictReader(open(C.TEAM_MAP)):
+            c = r["cfbd_team"].strip()
+            pff2c[norm(r["pff_team"])] = c
+            odds2c[norm(r.get("odds_team", c))] = c
+    return pff2c, odds2c
+
+
+def load_pff(pff2c):
+    """
+    Load master_crosswalk.csv (the enriched file we built).
+    Returns list of player dicts keyed for joining, team normalized to CFBD.
+    """
+    players = []
+    if not os.path.exists(C.PFF_CROSSWALK):
+        print(f"  [warn] PFF crosswalk not found at {C.PFF_CROSSWALK}")
+        return players
+    for r in csv.DictReader(open(C.PFF_CROSSWALK)):
+        team_c = pff2c.get(norm(r["team"]), r["team"])
+        players.append({
+            **r,
+            "team_cfbd": team_c,
+            "pkey": norm(r["name"]),
+            "tkey": norm(team_c),
+        })
+    return players
+
+
+def _to_float(x):
+    try:
+        return float(str(x).replace(",", ""))
+    except (ValueError, TypeError):
+        return None
+
+
+def load_season_totals():
+    """
+    player_season_totals.csv — one row per player, prior year.
+    Expected (flexible) columns; missing ones are tolerated:
+      player, team, games,
+      pass_att, pass_yds, pass_td,
+      rush_att, rush_yds, rush_td,
+      targets, receptions, rec_yds, rec_td
+    Returns dict keyed by (pkey, tkey) -> stat dict.
+    """
+    out = {}
+    if not os.path.exists(C.SEASON_TOTALS):
+        print(f"  [warn] season totals not found at {C.SEASON_TOTALS}")
+        return out
+    for r in csv.DictReader(open(C.SEASON_TOTALS)):
+        pkey = norm(r.get("player", ""))
+        tkey = norm(r.get("team", ""))
+        rec = {k: _to_float(v) for k, v in r.items()
+               if k not in ("player", "team")}
+        rec["games"] = rec.get("games") or 1
+        out[(pkey, tkey)] = rec
+    return out
+
+
+def load_game_logs():
+    """
+    player_game_logs.csv — one row per player-game, prior year.
+    Used for per-stat variance (floor/ceiling), not just means.
+    Returns dict (pkey, tkey) -> list of per-game stat dicts.
+    """
+    from collections import defaultdict
+    out = defaultdict(list)
+    if not os.path.exists(C.GAME_LOGS):
+        print(f"  [warn] game logs not found at {C.GAME_LOGS}")
+        return out
+    for r in csv.DictReader(open(C.GAME_LOGS)):
+        pkey = norm(r.get("player", ""))
+        tkey = norm(r.get("team", ""))
+        rec = {k: _to_float(v) for k, v in r.items()
+               if k not in ("player", "team", "week", "opponent", "date")}
+        out[(pkey, tkey)].append(rec)
+    return out
