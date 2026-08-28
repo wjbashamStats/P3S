@@ -14,9 +14,10 @@ SEASON = 2026
 PRIOR_ONLY_UNTIL_WEEK = 3
 
 # ---------------- API KEYS ----------------
-ODDS_API_KEY = os.environ.get("ODDS_API_KEY", "0d3e64aacda40042d78ce34c80417125")
-CFBD_API_KEY = os.environ.get("CFBD_API_KEY",
-                              "Qxp0ObiPl4OXqqhG3Htf1lje5AfzU5UEWTFgw9qrrWzNmdBs5pJ1I2Iay98dCR3a")
+# Set via .env (gitignored) -- see .env.example. No hardcoded fallback: fail
+# loudly rather than silently run with a missing/stale key.
+ODDS_API_KEY = os.environ.get("ODDS_API_KEY")
+CFBD_API_KEY = os.environ.get("CFBD_API_KEY")
 
 ODDS_SPORT  = "americanfootball_ncaaf"
 ODDS_REGION = "us"

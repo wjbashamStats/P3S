@@ -32,7 +32,8 @@ import os, json, time, argparse, datetime as dt
 import urllib.request, urllib.parse, urllib.error
 
 # ----------------- CONFIG -----------------
-API_KEY   = os.environ.get("ODDS_API_KEY", "0d3e64aacda40042d78ce34c80417125")
+# Set via .env (gitignored) -- see .env.example. No hardcoded fallback.
+API_KEY   = os.environ.get("ODDS_API_KEY")
 SPORT     = "americanfootball_ncaaf"
 REGION    = "us"
 MARKETS   = ["player_pass_yds", "player_pass_attempts",
