@@ -64,7 +64,8 @@ FBS_CONF <- c("SEC", "Big Ten", "Big 12", "ACC", "American Athletic",
 parse_args <- function(argv) {
   a <- list(schedule = file.path(SCRIPT_DIR, "2025_schedule.csv"),
             team_map = file.path(SCRIPT_DIR, "team_map.csv"),
-            season = 2025, week = NA, season_type = "regular",
+            season = 2025, week = NA, week_start = NA, week_end = NA,
+            season_type = "regular",
             max_games = NA, include_one_fbs = FALSE, dry_run = FALSE,
             out = NA)
   i <- 1
@@ -75,6 +76,8 @@ parse_args <- function(argv) {
     else if (k == "--team-map") a$team_map <- val()
     else if (k == "--season") a$season <- as.integer(val())
     else if (k == "--week") a$week <- as.integer(val())
+    else if (k == "--week-start") a$week_start <- as.integer(val())
+    else if (k == "--week-end") a$week_end <- as.integer(val())
     else if (k == "--season-type") a$season_type <- val()
     else if (k == "--max-games") a$max_games <- as.integer(val())
     else if (k == "--include-one-fbs") a$include_one_fbs <- TRUE
@@ -83,8 +86,13 @@ parse_args <- function(argv) {
     else stop(paste("unknown arg:", k))
     i <- i + 1
   }
+  if (xor(is.na(a$week_start), is.na(a$week_end)))
+    stop("--week-start and --week-end must be given together")
+  if (!is.na(a$week) && !is.na(a$week_start))
+    stop("use --week for a single week OR --week-start/--week-end for a range, not both")
   if (is.na(a$out)) {
-    wk <- if (is.na(a$week)) "all" else a$week
+    wk <- if (!is.na(a$week_start)) paste0(a$week_start, "-", a$week_end)
+          else if (is.na(a$week)) "all" else a$week
     a$out <- file.path(SCRIPT_DIR, paste0("hist_props_closing_wk", wk, ".csv"))
   }
   a
@@ -241,7 +249,12 @@ consensus <- function(long_df) {
 # ----------------- MAIN -----------------
 games <- load_schedule(args$schedule, args$season, args$season_type,
                        fbs_only = TRUE, both_fbs = !args$include_one_fbs)
-if (!is.na(args$week)) games <- games[games$Week == as.character(args$week), ]
+if (!is.na(args$week)) {
+  games <- games[games$Week == as.character(args$week), ]
+} else if (!is.na(args$week_start)) {
+  wk_num <- suppressWarnings(as.integer(games$Week))
+  games <- games[!is.na(wk_num) & wk_num >= args$week_start & wk_num <= args$week_end, ]
+}
 if (!is.na(args$max_games)) games <- head(games, args$max_games)
 
 n_games <- nrow(games)
