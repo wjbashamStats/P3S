@@ -17,12 +17,13 @@ def norm(s):
 def load_team_map():
     """
     team_map.csv: columns cfbd_name, odds_name (same file historical_pull.py
-    reads for schedule<->odds event matching). There's no separate pff_team
-    column yet, so PFF crosswalk team strings translate to themselves
-    (identity norm) -- close enough to CFBD names for most teams, but a
-    genuine PFF/CFBD mismatch isn't covered by this file yet.
+    reads for schedule<->odds event matching).
+    pff_team_map.csv: columns pff_team, cfbd_team (build_pff_team_map.py) --
+    PFF crosswalk team strings are heavily abbreviated ("S JOSE ST", "GA
+    TECH") and don't reliably normalize to a CFBD-style name, so this is a
+    hand-verified explicit table, not a fuzzy match at load time.
     Returns dicts to translate any system -> canonical (cfbd) team.
-    If the file is absent, returns identity maps (normalized).
+    If a file is absent, its dict is empty (identity fallback elsewhere).
     """
     pff2c, odds2c = {}, {}
     if os.path.exists(C.TEAM_MAP):
@@ -32,6 +33,11 @@ def load_team_map():
                 continue
             o = r.get("odds_name", r.get("odds_team", c)).strip()
             odds2c[norm(o)] = c
+    if os.path.exists(C.PFF_TEAM_MAP):
+        for r in csv.DictReader(open(C.PFF_TEAM_MAP)):
+            c = r.get("cfbd_team", "").strip()
+            if c:
+                pff2c[norm(r.get("pff_team", ""))] = c
     return pff2c, odds2c
 
 
