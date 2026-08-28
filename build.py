@@ -63,6 +63,11 @@ def main():
                          "grades) -- a matchup adjustment (this team's own relevant "
                          "unit vs the opponent's complementary one, see config."
                          "MATCHUP_UNITS). No effect if omitted.")
+    ap.add_argument("--tarp", action="store_true",
+                    help="apply the 2026 coaching/returning-production adjustment "
+                         "(team_ratings' OffAdj/DefAdj -- see project.tarp_adj). "
+                         "Requires --team-ratings. ONLY meaningful for --season 2026 "
+                         "(UNVALIDATED -- no 2026 games exist yet to tune against).")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -73,13 +78,14 @@ def main():
     pff = DL.load_pff(pff2c)
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
-    prior = DL.load_prior_totals() if args.use_prior_year else {}
+    prior = DL.load_prior_totals(season=args.season) if args.use_prior_year else {}
     print(f"  PFF players: {len(pff)} | season-total players: {len(totals)}")
     if args.use_prior_year:
+        prior_year_label = args.season - 1
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
         mode = ("blended with weeks < %d" % args.week if args.week > C.PRIOR_ONLY_UNTIL_WEEK
-                else "pure 2024 (no current-season games exist yet to blend)")
-        print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
+                else f"pure {prior_year_label} (no current-season games exist yet to blend)")
+        print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
     lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
@@ -93,6 +99,11 @@ def main():
     sr_index = P.build_success_rate_index(team_ratings) if team_ratings else {}
     if args.team_ratings:
         print(f"  --team-ratings: {len(team_ratings)} teams loaded")
+
+    tarp_index = P.build_tarp_index(team_ratings) if (args.tarp and team_ratings) else {}
+    if args.tarp:
+        print(f"  --tarp: {'ACTIVE' if tarp_index else 'no effect (needs --team-ratings)'}"
+              f"{' -- UNVALIDATED, see config.TARP_ADJ_STRENGTH' if tarp_index else ''}")
 
     team_grades = DL.load_team_grades(args.team_grades) if args.team_grades else {}
     grade_index = P.build_matchup_grade_index(team_grades) if team_grades else {}
@@ -157,6 +168,8 @@ def main():
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             if grade_index:
                 extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
+            if tarp_index:
+                extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
                                            def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj)

@@ -50,6 +50,18 @@ GAME_LOGS     = os.path.join(BASE_DIR, "player_game_logs.csv")      # one row pe
 # team). Only exists if the 2024_*_season_clean.csv inputs were provided.
 PRIOR_SEASON_TOTALS = os.path.join(BASE_DIR, "player_prior_totals.csv")
 
+# Which file is "prior year" depends on which season is being projected --
+# for 2025 (the backtest season) that's the real 2024 data above; for 2026
+# (live) it's 2025's OWN season totals (SEASON_TOTALS) -- this season's
+# finished totals become next season's prior-year input, same file, no
+# separate build step needed since player_season_totals.csv already has
+# the exact schema load_prior_totals() expects. load_prior_totals(season=)
+# falls back to PRIOR_SEASON_TOTALS for any season not listed here.
+PRIOR_TOTALS_BY_SEASON = {
+    2025: PRIOR_SEASON_TOTALS,
+    2026: SEASON_TOTALS,
+}
+
 # ---------------- MARKET DEFINITIONS ----------------
 # Each Odds API prop market maps to: the stat we project, the volume + efficiency
 # columns it decomposes into, and which defensive grade adjusts it.
@@ -151,6 +163,20 @@ MATCHUP_UNITS = dict(
     player_rush_attempts=("grade_rblk", "grade_rdef"),
 )
 MATCHUP_ADJ_STRENGTH = 0.15
+
+# 2026-forward team-strength adjustment (team_ratings_2025.csv's OffAdj/
+# DefAdj/rank_TARP columns -- this team's 2025 performance already
+# adjusted for 2026 coaching changes + returning production, computed by
+# the data source, not by us). Differential like matchup_grade_adj: this
+# team's own OffAdj z-score vs the opponent's DefAdj z-score. ONLY
+# meaningful for --season 2026 -- there's no analogous 2025-forward-from-
+# 2024 file, so applying this to the 2025 backtest would be nonsensical
+# (using a 2026 adjustment to "adjust" games that already happened).
+# UNVALIDATED: 2026 has no played games yet to backtest against; this
+# strength is a placeholder, not a tuned value like the others in this
+# file. Revisit once real 2026 week-1 results exist, the same way every
+# other constant here got tuned against 2025.
+TARP_ADJ_STRENGTH = 0.15
 
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)

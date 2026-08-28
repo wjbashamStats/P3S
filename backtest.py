@@ -46,13 +46,15 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratings=None, team_grades=None):
+def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratings=None,
+                      team_grades=None, season=2025, use_tarp=False):
     """Re-run the same projection logic build.py uses, keyed by (norm(player), market).
 
-    use_prior_year=True sources volume/efficiency from player_prior_totals.csv
-    (real 2024 rates, matched by player_id) instead of this year's own totals
-    -- the fix for the lookahead bias described in this module's docstring.
-    Falls back to current-season totals for any player_id with no 2024 record.
+    use_prior_year=True sources volume/efficiency from the prior-year file for
+    `season` (config.PRIOR_TOTALS_BY_SEASON -- real 2024 data for 2025, 2025's
+    own totals for 2026) instead of this year's own totals -- the fix for the
+    lookahead bias described in this module's docstring. Falls back to
+    current-season totals for any player_id with no prior-year record.
 
     lines_by_week: optional dict from DL.load_game_lines(), nudging volume by
     this week's implied team total / spread (see project.game_context_adj).
@@ -70,12 +72,13 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     pff = DL.load_pff(pff2c)
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
-    prior = DL.load_prior_totals() if use_prior_year else {}
+    prior = DL.load_prior_totals(season=season) if use_prior_year else {}
     pos_means = P.position_means(prior if (use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
     sr_index = P.build_success_rate_index(team_ratings) if team_ratings else {}
     grade_index = P.build_matchup_grade_index(team_grades) if team_grades else {}
-    canonical_tkeys = set(def_index) | set(sr_index) | set(grade_index)
+    tarp_index = P.build_tarp_index(team_ratings) if (use_tarp and team_ratings) else {}
+    canonical_tkeys = set(def_index) | set(sr_index) | set(grade_index) | set(tarp_index)
 
     lines_by_week = lines_by_week or {}
     week_avg_implied = DL.league_avg_implied(lines_by_week, str(week)) if lines_by_week else None
@@ -89,10 +92,11 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         print(f"  --team-grades: {len(team_grades)} teams loaded")
 
     if use_prior_year:
+        prior_year_label = season - 1
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
         mode = ("blended with weeks < %d" % week if week > C.PRIOR_ONLY_UNTIL_WEEK
-                else "pure 2024 (no current-season games exist yet to blend)")
-        print(f"  --use-prior-year: {len(prior)} players with a 2024 record | "
+                else f"pure {prior_year_label} (no current-season games exist yet to blend)")
+        print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
     pff_by_key = {}
@@ -128,6 +132,8 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             if grade_index:
                 extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
+            if tarp_index:
+                extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=opp_tkey,
                                            vol_adj=vol_adj, extra_adj=extra_adj)
@@ -151,12 +157,14 @@ def load_props(path):
     return list(csv.DictReader(open(path)))
 
 
-def join_week(week, all_props, use_prior_year, lines_by_week=None, team_ratings=None, team_grades=None):
+def join_week(week, all_props, use_prior_year, lines_by_week=None, team_ratings=None,
+              team_grades=None, season=2025, use_tarp=False):
     """Build projections, load actuals, and join to this week's props. Returns rows."""
     print(f"\n--- week {week} "
           f"({'2024 prior-year' if use_prior_year else 'in-season (has lookahead bias)'}) ---")
     projections = build_projections(week, use_prior_year=use_prior_year, lines_by_week=lines_by_week,
-                                    team_ratings=team_ratings, team_grades=team_grades)
+                                    team_ratings=team_ratings, team_grades=team_grades,
+                                    season=season, use_tarp=use_tarp)
     print(f"  {len(projections)} (player, market) projections")
 
     actuals = load_actuals(week)
@@ -245,6 +253,14 @@ def main():
                     help="path to team_pff_grades_2025.csv (PFF's own team-level "
                          "grades) -- a matchup adjustment (config.MATCHUP_UNITS). "
                          "Needs --game-lines too to resolve opponents. No effect if omitted.")
+    ap.add_argument("--season", type=int, default=2025,
+                    help="which season's prior-year file to use (config.PRIOR_TOTALS_BY_SEASON) "
+                         "-- 2025 (default) uses real 2024 data, 2026 reuses 2025's own totals.")
+    ap.add_argument("--tarp", action="store_true",
+                    help="apply the 2026 coaching/returning-production adjustment "
+                         "(team_ratings' OffAdj/DefAdj -- see project.tarp_adj). "
+                         "Requires --team-ratings. ONLY meaningful for --season 2026 "
+                         "(UNVALIDATED -- no 2026 games exist yet to tune against).")
     args = ap.parse_args()
 
     if args.week is not None:
@@ -262,7 +278,8 @@ def main():
 
     rows = []
     for week in weeks:
-        rows.extend(join_week(week, all_props, args.use_prior_year, lines_by_week, team_ratings, team_grades))
+        rows.extend(join_week(week, all_props, args.use_prior_year, lines_by_week, team_ratings,
+                              team_grades, season=args.season, use_tarp=args.tarp))
 
     print(f"\nTotal joined across weeks {weeks[0]}-{weeks[-1]}: {len(rows)} rows")
 

@@ -94,19 +94,26 @@ def load_season_totals():
     return out
 
 
-def load_prior_totals():
+def load_prior_totals(season=None):
     """
-    player_prior_totals.csv -- real prior-year (2024) rates, keyed by
-    player_id ONLY (not (pkey, tkey)): a transferred player's 2024 team
-    isn't their current one, so team can't be part of this join key.
-    Callers match a current-roster player to their prior-year record via
-    player_id, and keep the CURRENT team/roster from the 2025 side.
-    Returns {} if the file doesn't exist (no 2024 data provided).
+    Real prior-year rates, keyed by player_id ONLY (not (pkey, tkey)): a
+    transferred player's prior-year team isn't their current one, so team
+    can't be part of this join key. Callers match a current-roster player
+    to their prior-year record via player_id, and keep the CURRENT team/
+    roster from the current season's side.
+
+    Which file counts as "prior year" depends on season (config.
+    PRIOR_TOTALS_BY_SEASON) -- 2025's backtest uses real 2024 data;
+    2026's live projections reuse 2025's own season totals (this year's
+    finished numbers become next year's prior-year input). Falls back to
+    config.PRIOR_SEASON_TOTALS (the 2024 file) for any season not listed.
+    Returns {} if the resolved file doesn't exist.
     """
+    path = C.PRIOR_TOTALS_BY_SEASON.get(season, C.PRIOR_SEASON_TOTALS)
     out = {}
-    if not os.path.exists(C.PRIOR_SEASON_TOTALS):
+    if not os.path.exists(path):
         return out
-    for r in csv.DictReader(open(C.PRIOR_SEASON_TOTALS)):
+    for r in csv.DictReader(open(path)):
         pid = r.get("player_id")
         if not pid:
             continue
@@ -276,7 +283,12 @@ def load_team_grades(path):
 def load_team_ratings(path):
     """
     team_ratings_2025.csv (CFBD-style team advanced stats, "Team" column
-    plus "Offense/Defense RushingPlays/PassingPlays Rate/SuccessRate").
+    plus "Offense/Defense RushingPlays/PassingPlays Rate/SuccessRate", and
+    OffAdj/DefAdj/RPOffense/RPDefense/rank_TARP -- despite the filename,
+    these last five describe continuity INTO 2026 (2026 coaching +
+    returning production already applied), not into 2025: confirmed
+    OffAdj is a monotonic function of RPOffense, roughly -6..+6. See
+    project.tarp_adj -- ONLY meaningful for --season 2026 runs.
     Season-long aggregate -- same lookahead caveat as the existing PFF-
     grade opponent adjustment (both are full-2025-season snapshots used
     regardless of week; a truly no-lookahead version would need weekly
@@ -300,6 +312,8 @@ def load_team_ratings(path):
             ("off_rush_sr", "Offense RushingPlays SuccessRate"), ("off_pass_sr", "Offense PassingPlays SuccessRate"),
             ("def_rush_rate", "Defense RushingPlays Rate"), ("def_pass_rate", "Defense PassingPlays Rate"),
             ("def_rush_sr", "Defense RushingPlays SuccessRate"), ("def_pass_sr", "Defense PassingPlays SuccessRate"),
+            ("off_adj", "OffAdj"), ("def_adj", "DefAdj"),
+            ("rp_offense", "RPOffense"), ("rp_defense", "RPDefense"), ("rank_tarp", "rank_TARP"),
         ]:
             rec[dst] = _to_float(r.get(col))
         out[norm(team)] = rec

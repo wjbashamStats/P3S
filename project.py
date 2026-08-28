@@ -242,6 +242,44 @@ def matchup_grade_adj(grade_index, own_tkey, opp_tkey, market_key):
     return 1.0 + C.MATCHUP_ADJ_STRENGTH * (off_z - def_z)
 
 
+def build_tarp_index(team_ratings):
+    """
+    Z-score each team's off_adj / def_adj (team_ratings_2025.csv's OffAdj/
+    DefAdj -- 2026 coaching + returning-production-adjusted strength)
+    across the league. ONLY meaningful for --season 2026 (see
+    load_team_ratings / tarp_adj).
+    """
+    cols = ["off_adj", "def_adj"]
+    vals = {c: [t[c] for t in team_ratings.values() if t.get(c) is not None] for c in cols}
+    stat = {c: (stats.mean(vals[c]), stats.pstdev(vals[c]) or 1.0) for c in cols if vals[c]}
+    out = {}
+    for tkey, t in team_ratings.items():
+        out[tkey] = {}
+        for c in cols:
+            if c in stat and t.get(c) is not None:
+                m, sd = stat[c]
+                out[tkey][c] = (t[c] - m) / sd
+    return out
+
+
+def tarp_adj(tarp_index, own_tkey, opp_tkey):
+    """
+    Multiplier centered on 1.0 from the z-scored DIFFERENTIAL between this
+    team's own off_adj and the opponent's def_adj -- a team whose offense
+    returns strong (positive OffAdj) against a defense that doesn't
+    (negative DefAdj) gets a boost. Applies uniformly across all markets
+    (OffAdj/DefAdj aren't split by rush/pass, unlike matchup_grade_adj).
+
+    UNVALIDATED (config.TARP_ADJ_STRENGTH) -- see that constant's comment.
+    """
+    own, opp = tarp_index.get(own_tkey), tarp_index.get(opp_tkey)
+    off_z = own.get("off_adj") if own else None
+    def_z = opp.get("def_adj") if opp else None
+    if off_z is None or def_z is None:
+        return 1.0
+    return 1.0 + C.TARP_ADJ_STRENGTH * (off_z - def_z)
+
+
 def opponent_adj(def_index, opp_tkey, def_unit):
     """
     Multiplier centered on 1.0. Strong defense (high z) -> <1 (suppresses);
