@@ -54,6 +54,10 @@ def main():
                     help="path to a hist_lines_closing_wkN.csv (from historical_pull.R "
                          "--game-lines) -- nudges volume by this week's implied team "
                          "total (pace) and spread (rush/pass script). No effect if omitted.")
+    ap.add_argument("--team-ratings", default=None,
+                    help="path to team_ratings_2025.csv (CFBD rush/pass rate + success "
+                         "rate, offense/defense) -- adds a second, independent opponent "
+                         "adjustment alongside the PFF-grade one. No effect if omitted.")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -79,6 +83,11 @@ def main():
         n_lines = len(lines_by_week.get(str(args.week), []))
         print(f"  --game-lines: {n_lines} games loaded for week {args.week}"
               + (f" | league avg implied total: {week_avg_implied:.1f}" if week_avg_implied else " | none for this week"))
+
+    team_ratings = DL.load_team_ratings(args.team_ratings) if args.team_ratings else {}
+    sr_index = P.build_success_rate_index(team_ratings) if team_ratings else {}
+    if args.team_ratings:
+        print(f"  --team-ratings: {len(team_ratings)} teams loaded")
 
     # Precompute league means + defensive index once. In prior-year mode, use
     # 2024-wide means so shrinkage targets are internally consistent with the
@@ -135,9 +144,10 @@ def main():
 
         for mkey, mdef in C.MARKETS.items():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
+            extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
-                                           def_index, opp_tkey, vol_adj=vol_adj)
+                                           def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj)
             if proj is None:
                 continue
             rows.append(dict(

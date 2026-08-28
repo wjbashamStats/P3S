@@ -161,6 +161,48 @@ def build_def_index(pff_players):
     return team_unit
 
 
+def build_success_rate_index(team_ratings):
+    """
+    Z-score each team's DEFENSE allowed success rate, rush and pass
+    separately, across the league -- an independent (different data
+    source/methodology) complement to build_def_index's PFF-grade z-score.
+    Higher z = allows MORE successful plays = weaker defense (opposite
+    sign convention from build_def_index's grade z, handled in
+    success_rate_adj).
+    """
+    cols = ["def_rush_sr", "def_pass_sr"]
+    vals = {c: [t[c] for t in team_ratings.values() if t.get(c) is not None] for c in cols}
+    stat = {c: (stats.mean(vals[c]), stats.pstdev(vals[c]) or 1.0) for c in cols if vals[c]}
+    out = {}
+    for tkey, t in team_ratings.items():
+        out[tkey] = {}
+        for c in cols:
+            if c in stat and t.get(c) is not None:
+                m, sd = stat[c]
+                out[tkey][c] = (t[c] - m) / sd
+    return out
+
+
+def success_rate_adj(sr_index, opp_tkey, side, stat):
+    """
+    Multiplier centered on 1.0, from the CFBD success-rate index (NOT the
+    PFF-grade one -- see opponent_adj). High z (defense allows more
+    successful plays than average) -> >1 (inflates); low z -> <1.
+
+    Strength is keyed by stat (config.SUCCESS_RATE_STRENGTH_BY_STAT), not
+    just side: pass_yds and the receiving markets are both side="pass"
+    but respond in OPPOSITE directions to this knob (see config.py).
+    """
+    if side not in ("pass", "rush"):
+        return 1.0
+    tu = sr_index.get(opp_tkey)
+    col = "def_rush_sr" if side == "rush" else "def_pass_sr"
+    if not tu or tu.get(col) is None:
+        return 1.0
+    strength = C.SUCCESS_RATE_STRENGTH_BY_STAT.get(stat, C.SUCCESS_RATE_ADJ_STRENGTH)
+    return 1.0 + strength * tu[col]
+
+
 def opponent_adj(def_index, opp_tkey, def_unit):
     """
     Multiplier centered on 1.0. Strong defense (high z) -> <1 (suppresses);
@@ -224,11 +266,14 @@ def stat_variance(logs, stat_col):
 # ---------- the projection ----------
 
 def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
-                          def_index, opp_tkey, vol_adj=1.0):
+                          def_index, opp_tkey, vol_adj=1.0, extra_adj=1.0):
     """
     Produce one projection row for a player + market.
     vol_adj: optional extra volume multiplier from this week's specific
     game context (see game_context_adj) -- defaults to 1.0 (no effect).
+    extra_adj: optional extra opponent multiplier from a second, independent
+    opponent signal (see success_rate_adj) -- combines with the PFF-grade
+    opponent_adj() below rather than replacing it. Defaults to 1.0.
     Returns dict with mean projection, variance, and the components (for the
     impact page to show its work), or None if the player lacks the volume.
     """
@@ -242,7 +287,7 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
         return None
 
     per_game_vol = (total_vol / games) * vol_adj
-    adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"])
+    adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"]) * extra_adj
 
     eff_key = mdef["eff"]
     if eff_key is None:

@@ -74,9 +74,14 @@ MARKETS = {
 # position average when their prior-year sample is small. Higher = more shrinkage.
 SHRINKAGE_GAMES = 6      # a player with this many prior games is ~half-regressed
 
-# Opponent adjustment strength: how much a 1-SD defensive grade moves a projection.
-# 0.15 means an elite (worst) pass defense scales pass projections by ~±15% at 1 SD.
-OPP_ADJ_STRENGTH = 0.15
+# Opponent adjustment strength: how much a 1-SD defensive PFF grade moves a
+# projection (0.15 means an elite pass defense scales pass projections by
+# ~+-15% at 1 SD). Disabled (0.0): a week 1-15 backtest was the first time
+# this was ever actually active (opp_tkey was always None in every prior
+# backtest run), and once active it measurably HURT hit rate -- receptions
+# dropped 57.0%->54.7% with it on. See SUCCESS_RATE_ADJ_STRENGTH below,
+# a CFBD-derived opponent signal that helped every market instead.
+OPP_ADJ_STRENGTH = 0.0
 
 # ---------------- GAME CONTEXT (this week's spread/total) ----------------
 # Season-average rates don't know this week's specific matchup is expected
@@ -102,6 +107,27 @@ SPREAD_SCALE = 21.0          # spread (points) at which the script effect maxes 
 # shown to improve betting hit rate -- they didn't, on this data.
 RUSH_SCRIPT_STRENGTH = 0.80
 PASS_SCRIPT_STRENGTH = 0.05
+
+# CFBD-derived opponent adjustment, independent of the PFF-grade one
+# above -- different data source (play-level EPA/success rate vs PFF's
+# subjective grading), same role: how good is this opponent at stopping
+# this side of the ball. Multiplies into the same adj slot as
+# OPP_ADJ_STRENGTH rather than replacing it.
+#
+# A week 1-15 sweep found pass_yds and the receiving markets (reception_
+# yds, receptions) respond in OPPOSITE directions to this knob, even
+# though both are "side=pass" (targets are fed by the passing game) --
+# pass_yds hit rate rose 51.6%->54.7% as strength went 0.10->0.50, while
+# receptions fell 58.7%->56.3% over the same range. So it's keyed by
+# stat, not just side; a stat missing from this dict falls back to
+# SUCCESS_RATE_ADJ_STRENGTH.
+SUCCESS_RATE_ADJ_STRENGTH = 0.15  # fallback for any stat not listed below
+SUCCESS_RATE_STRENGTH_BY_STAT = dict(
+    pass_yds=0.35, pass_att=0.35,      # rose with strength in the sweep
+    rec_yds=0.10, receptions=0.10,     # fell with strength -- keep it low
+    rush_att=0.10,                     # fell with strength -- keep it low
+    rush_yds=0.15,                     # roughly flat -- default is fine
+)
 
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)

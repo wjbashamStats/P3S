@@ -192,6 +192,34 @@ def find_team_game_line(tkey, week, lines_by_week):
     return None, None
 
 
+def find_opponent_tkey(tkey, week, lines_by_week, canonical_tkeys):
+    """
+    Like find_team_game_line, but resolves the OPPONENT to one of
+    canonical_tkeys (e.g. def_index.keys()) instead of returning implied
+    total/spread -- def_index and the success-rate index are keyed by our
+    own canonical (CFBD-style) tkeys, not the raw Odds API name string.
+
+    Picks the LONGEST matching canonical key, not the first: a short key
+    (e.g. "iowa") is routinely also a substring of an unrelated longer
+    opponent's raw name ("Iowa State Cyclones"), the same trap that
+    corrupted an earlier pass of pff_team_map.csv. Longest-match isn't a
+    perfect guarantee, but it resolves exactly that failure mode.
+    """
+    if not tkey:
+        return None
+    for g in lines_by_week.get(week, []):
+        h, a = norm(g["home_team"]), norm(g["away_team"])
+        if tkey in h or h in tkey:
+            opp_raw = a
+        elif tkey in a or a in tkey:
+            opp_raw = h
+        else:
+            continue
+        candidates = [ck for ck in canonical_tkeys if ck and (ck in opp_raw or opp_raw in ck)]
+        return max(candidates, key=len) if candidates else None
+    return None
+
+
 def league_avg_implied(lines_by_week, week):
     """Mean implied team total across the whole week's slate -- the pace
     multiplier's denominator (a team's own implied total relative to a
@@ -202,3 +230,36 @@ def league_avg_implied(lines_by_week, week):
         vals.append(g["home_implied"])
         vals.append(g["away_implied"])
     return stats.mean(vals) if vals else None
+
+
+def load_team_ratings(path):
+    """
+    team_ratings_2025.csv (CFBD-style team advanced stats, "Team" column
+    plus "Offense/Defense RushingPlays/PassingPlays Rate/SuccessRate").
+    Season-long aggregate -- same lookahead caveat as the existing PFF-
+    grade opponent adjustment (both are full-2025-season snapshots used
+    regardless of week; a truly no-lookahead version would need weekly
+    CFBD advanced stats, which isn't available here yet).
+
+    Keyed by tkey (norm of the CFBD-style name) -- this file's own "Team"
+    column is already CFBD-style, and load_pff()'s p["tkey"] is too now
+    that pff_team_map.csv fills in pff2c, so both sides land in the same
+    key space without any translation needed here.
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        team = r.get("Team", "")
+        if not team:
+            continue
+        rec = {}
+        for dst, col in [
+            ("off_rush_rate", "Offense RushingPlays Rate"), ("off_pass_rate", "Offense PassingPlays Rate"),
+            ("off_rush_sr", "Offense RushingPlays SuccessRate"), ("off_pass_sr", "Offense PassingPlays SuccessRate"),
+            ("def_rush_rate", "Defense RushingPlays Rate"), ("def_pass_rate", "Defense PassingPlays Rate"),
+            ("def_rush_sr", "Defense RushingPlays SuccessRate"), ("def_pass_sr", "Defense PassingPlays SuccessRate"),
+        ]:
+            rec[dst] = _to_float(r.get(col))
+        out[norm(team)] = rec
+    return out
