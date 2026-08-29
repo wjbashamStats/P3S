@@ -113,11 +113,16 @@ def parse_player_cell(cell_html):
         return None
     slug, pid, label = m.groups()
     label = html.unescape(label.strip())
-    # "LastName, FirstName YR" (YR e.g. SR, JR, SO, FR, SR/TR) -> split
-    m2 = re.match(r"^(.*?),\s*(\S+(?:\s+\S+)*?)\s+([A-Z]{2}(?:/[A-Z]{2})?)$", label)
+    # "LastName, FirstName [RS] YR" (YR e.g. SR, JR, SO, FR, SR/TR; RS =
+    # redshirt, a separate token BEFORE the class year, not part of the
+    # name -- e.g. "Hall, Benjamin RS JR/TR"). Missing this the first time
+    # around left "RS" stuck in the middle of ~two-thirds of all names.
+    m2 = re.match(r"^(.*?),\s*(\S+(?:\s+\S+)*?)\s+(RS\s+)?([A-Z]{2}(?:/[A-Z]{2})?)$", label)
     if m2:
-        last, first, yr = m2.groups()
+        last, first, rs, yr = m2.groups()
         name = f"{first} {last}"
+        if rs:
+            yr = "RS-" + yr
     else:
         name, yr = label, ""
     return dict(name=name, class_year=yr, ourlads_id=pid)
