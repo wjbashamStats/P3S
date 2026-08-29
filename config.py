@@ -233,11 +233,32 @@ DEPTH_RANK_MULT_DEFAULT = 0.45  # 5th string or below
 # building the DFS page. Found via that page's optimizer, which (unlike a
 # human skimming a props table) will greedily load up on exactly this kind
 # of outlier. Floor keeps the total from going negative (physically
-# meaningless for a yards/attempts multiplier); ceiling is a sanity bound,
-# not a tuned constant. Applied by scaling `adj` alone (project_
-# player_market), not vol_adj, so the "volume" component the impact page
-# displays keeps its own transparent, unmodified meaning.
-TOTAL_ADJ_CLAMP = (0.5, 2.2)
+# meaningless for a yards/attempts multiplier); ceiling is a sanity bound.
+# Applied by scaling `adj` alone (project_player_market), not vol_adj, so
+# the "volume" component the impact page displays keeps its own
+# transparent, unmodified meaning.
+#
+# Tightened from (0.5, 2.2) to (0.75, 1.35) after a real user-reported case
+# (UNC @ TCU, an 8.5-pt-underdog matchup with a bad PFF run-block grade AND
+# a bad CFBD rush-success grade -- three correlated "this team's rushing
+# offense is bad" signals stacking) landed AT the old floor and projected
+# two backs for a combined ~31 rush yards against a combined ~83 book
+# line. A week 1-15 2025 backtest bucketed by this same pre-clamp
+# multiplier confirmed it's systematic, not one bad game: the <=0.55
+# bucket (n=1246) was biased -17.3 yds on average (mean actual 36.7 vs
+# mean projected 19.4, a real ~47% miss), while the >1.2 bucket (n=1820)
+# over-projected by +26.9 -- these two roughly canceled in the OLD
+# clamp's overall rush_yds bias (+1.8), which is why that number looked
+# fine despite this real problem. A clamp sweep on the same backtest
+# showed MAE improving monotonically as the clamp tightens (rush_yds MAE
+# 39.0 -> 32.6 at this setting, continuing to ~27 at (0.85, 1.15)) with
+# hit rate flat-to-better throughout, but overall BIAS starts drifting
+# negative again past this point (rush_yds +1.8 -> -5.3 here, -7.4 at
+# (0.85, 1.15), pass_yds -6.4 -> -12.1 at (0.85, 1.15) vs -6.2 here) --
+# (0.75, 1.35) is the point where the bucket asymmetry that caused the
+# original complaint is mostly gone (low bucket -17.3 -> -7.7, high
+# +26.9 -> +6.3) without yet trading it for a new systematic undershoot.
+TOTAL_ADJ_CLAMP = (0.75, 1.35)
 
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)
