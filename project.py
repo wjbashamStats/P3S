@@ -359,6 +359,23 @@ def tarp_adj(tarp_index, own_tkey, opp_tkey):
     return 1.0 + C.TARP_ADJ_STRENGTH * (off_z - def_z)
 
 
+def depth_rank_adj(depth_rec):
+    """
+    Flat volume multiplier from a scraped ourlads.com depth-chart rank
+    (see data_load.load_depth_chart) -- 1.0 (no-op) if depth_rec is None,
+    i.e. no --depth-chart file was supplied, or this player didn't match
+    one by name. Caller is responsible for only passing a real depth_rec
+    during pure-prior-year weeks (week <= config.PRIOR_ONLY_UNTIL_WEEK) --
+    once real current-season games exist, the player's own rate already
+    reflects their role.
+
+    UNVALIDATED (config.DEPTH_RANK_MULT) -- see that constant's comment.
+    """
+    if not depth_rec:
+        return 1.0
+    return C.DEPTH_RANK_MULT.get(depth_rec["depth_rank"], C.DEPTH_RANK_MULT_DEFAULT)
+
+
 def opponent_adj(def_index, opp_tkey, def_unit):
     """
     Multiplier centered on 1.0. Strong defense (high z) -> <1 (suppresses);

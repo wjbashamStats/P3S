@@ -104,7 +104,7 @@ def percentile_rank(value, values):
     return (below + 0.5 * equal) / n
 
 
-def build(week, props_path, lines_path, ratings_path, grades_path, season=2025):
+def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
     # The season TABLE always compares the two most recent COMPLETE seasons
@@ -144,7 +144,8 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025):
     print(f"Joining week-{week} props + projections for the 'this week' section ...")
     week_props = {}
     try:
-        games = BPD.build_week(week, props_path, lines_path, ratings_path, grades_path, season=season)
+        games = BPD.build_week(week, props_path, lines_path, ratings_path, grades_path, season=season,
+                               depth_chart_path=depth_chart_path)
         for g in games:
             for pl in g["players"]:
                 week_props[norm(pl["name"])] = dict(
@@ -310,11 +311,16 @@ def main():
     ap.add_argument("--game-lines", default="hist_lines_closing_wk1-15.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
     ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--depth-chart", default=None,
+                    help="path to depth_charts.csv (pull_depth_charts.py) -- nudges "
+                         "volume by ourlads.com depth-chart rank for pure-prior-year "
+                         "weeks only (UNVALIDATED, see config.DEPTH_RANK_MULT). "
+                         "No effect if omitted.")
     ap.add_argument("--out", default="impact_players.json")
     args = ap.parse_args()
 
     players = build(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
-                    season=args.season)
+                    season=args.season, depth_chart_path=args.depth_chart)
     payload = dict(season=args.season, season_table_year=2025, week=args.week,
                    generated_players=len(players), players=players)
     with open(args.out, "w") as f:

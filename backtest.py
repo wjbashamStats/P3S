@@ -47,7 +47,7 @@ def norm(s):
 
 
 def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratings=None,
-                      team_grades=None, season=2025, use_tarp=False):
+                      team_grades=None, season=2025, use_tarp=False, depth_chart=None):
     """Re-run the same projection logic build.py uses, keyed by (norm(player), market).
 
     use_prior_year=True sources volume/efficiency from the prior-year file for
@@ -67,6 +67,9 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     independent opponent adjustment (see project.success_rate_adj).
     team_grades: optional dict from DL.load_team_grades(), a matchup
     adjustment using PFF's own team-level grades (see project.matchup_grade_adj).
+    depth_chart: optional dict from DL.load_depth_chart() -- nudges volume
+    by ourlads.com depth-chart rank, ONLY for pure-prior-year weeks
+    (week <= config.PRIOR_ONLY_UNTIL_WEEK). See project.depth_rank_adj.
     """
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
@@ -90,6 +93,9 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         print(f"  --team-ratings: {len(team_ratings)} teams loaded")
     if team_grades:
         print(f"  --team-grades: {len(team_grades)} teams loaded")
+    if depth_chart:
+        print(f"  --depth-chart: {len(depth_chart)} skill-position players loaded "
+              f"(active weeks <= {C.PRIOR_ONLY_UNTIL_WEEK} only)")
 
     if use_prior_year:
         prior_year_label = season - 1
@@ -148,8 +154,13 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         share_source_team = (DL.resolve_tkey(prior_rec.get("team"), pff2c)
                              if (week <= C.PRIOR_ONLY_UNTIL_WEEK and prior_rec) else None)
 
+        depth_rec = (depth_chart.get(norm(player_name))
+                    if (depth_chart and week <= C.PRIOR_ONLY_UNTIL_WEEK) else None)
+        depth_component = P.depth_rank_adj(depth_rec)
+
         for mkey, mdef in C.MARKETS.items():
-            vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
+            pace_script = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
+            vol_adj = pace_script * depth_component
             sr_component = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             mg_component = P.matchup_grade_adj(grade_index, canon_tkey, opp_tkey, mkey) if grade_index else 1.0
             tarp_component = P.tarp_adj(tarp_index, canon_tkey, opp_tkey) if tarp_index else 1.0
@@ -188,7 +199,9 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
             expected_td = round(proj["components"]["volume"] * td_rate, 3) if td_rate is not None else None
             breakdown = dict(
                 volume_source=vol_source,
-                pace_script_adj=round(vol_adj, 3),
+                pace_script_adj=round(pace_script, 3),
+                depth_rank_adj=round(depth_component, 3) if depth_rec else None,
+                depth_rank=depth_rec["depth_rank"] if depth_rec else None,
                 team_implied=round(team_implied, 1) if team_implied is not None else None,
                 league_avg_implied=round(week_avg_implied, 1) if week_avg_implied is not None else None,
                 team_spread=team_spread,
@@ -221,13 +234,13 @@ def load_props(path):
 
 
 def join_week(week, all_props, use_prior_year, lines_by_week=None, team_ratings=None,
-              team_grades=None, season=2025, use_tarp=False):
+              team_grades=None, season=2025, use_tarp=False, depth_chart=None):
     """Build projections, load actuals, and join to this week's props. Returns rows."""
     print(f"\n--- week {week} "
           f"({'2024 prior-year' if use_prior_year else 'in-season (has lookahead bias)'}) ---")
     projections = build_projections(week, use_prior_year=use_prior_year, lines_by_week=lines_by_week,
                                     team_ratings=team_ratings, team_grades=team_grades,
-                                    season=season, use_tarp=use_tarp)
+                                    season=season, use_tarp=use_tarp, depth_chart=depth_chart)
     print(f"  {len(projections)} (player, market) projections")
 
     actuals = load_actuals(week)
@@ -324,6 +337,12 @@ def main():
                          "(team_ratings' OffAdj/DefAdj -- see project.tarp_adj). "
                          "Requires --team-ratings. ONLY meaningful for --season 2026 "
                          "(UNVALIDATED -- no 2026 games exist yet to tune against).")
+    ap.add_argument("--depth-chart", default=None,
+                    help="path to depth_charts.csv (pull_depth_charts.py, scraped from "
+                         "ourlads.com) -- nudges volume by depth-chart rank for pure-"
+                         "prior-year weeks only (week <= config.PRIOR_ONLY_UNTIL_WEEK). "
+                         "See project.depth_rank_adj / config.DEPTH_RANK_MULT "
+                         "(UNVALIDATED). No effect if omitted.")
     args = ap.parse_args()
 
     if args.week is not None:
@@ -338,11 +357,13 @@ def main():
     team_ratings = DL.load_team_ratings(args.team_ratings) if args.team_ratings else {}
     team_grades = DL.load_team_grades(args.team_grades) if args.team_grades else {}
     lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
+    depth_chart = DL.load_depth_chart(args.depth_chart) if args.depth_chart else {}
 
     rows = []
     for week in weeks:
         rows.extend(join_week(week, all_props, args.use_prior_year, lines_by_week, team_ratings,
-                              team_grades, season=args.season, use_tarp=args.tarp))
+                              team_grades, season=args.season, use_tarp=args.tarp,
+                              depth_chart=depth_chart))
 
     print(f"\nTotal joined across weeks {weeks[0]}-{weeks[-1]}: {len(rows)} rows")
 

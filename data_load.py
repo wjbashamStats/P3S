@@ -327,3 +327,61 @@ def load_team_ratings(path):
             rec[dst] = _to_float(r.get(col))
         out[norm(team)] = rec
     return out
+
+
+# ourlads.com offense position labels -> this project's own skill-position
+# codes (player_season_totals.csv's "position" column: QB, HB, WR, TE, FB).
+# Everything not listed (OL: LT/LG/C/RG/RT/QG/QT/SG, ST) is excluded --
+# depth rank has no meaningful volume-projection effect for those.
+_DEPTH_POS_MAP = {
+    "QB": "QB",
+    "RB": "HB", "RB-A": "HB", "RB-B": "HB",
+    "FB": "FB",
+    "WR": "WR", "WR-X": "WR", "WR-Z": "WR", "WR-SL": "WR",
+    "WR-H": "WR", "WR-F": "WR", "WR-Y": "WR",
+    "SB": "WR", "SB-A": "WR", "SB-Z": "WR",
+    "TE": "TE", "TE-Y": "TE", "TE-H": "TE",
+}
+
+
+def load_depth_chart(path):
+    """
+    depth_charts.csv (pull_depth_charts.py, scraped from ourlads.com) --
+    current-season offense starter/role data. Used ONLY to nudge pure-
+    prior-year (week <= config.PRIOR_ONLY_UNTIL_WEEK) volume projections
+    for a player whose role a stale prior-year rate can't see (a backup
+    who won a starting job, a starter who lost one). See
+    project.depth_rank_adj / config.DEPTH_RANK_MULT.
+
+    Keyed by norm(player_name) ONLY, not by team: ourlads' team names
+    ("North Carolina Tar Heels") don't cleanly resolve to this project's
+    canonical CFBD-style team keys the way team_map.csv/pff_team_map.csv
+    do (those are hand-verified exception tables built for ~140 specific
+    names, not a general mascot-suffix stripper) -- a name-only join
+    follows the same pattern already used elsewhere in this codebase
+    (e.g. load_pff's pkey). A same-name collision across two teams is
+    possible but rare for skill-position players.
+
+    If a player appears on multiple qualifying rows, the LOWEST
+    depth_rank (highest on the chart) wins.
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        if r.get("side") != "offense":
+            continue
+        bucket = _DEPTH_POS_MAP.get((r.get("position") or "").strip())
+        if not bucket:
+            continue
+        try:
+            rank = int(r.get("depth_rank"))
+        except (TypeError, ValueError):
+            continue
+        key = norm(r.get("name", ""))
+        if not key:
+            continue
+        prev = out.get(key)
+        if prev is None or rank < prev["depth_rank"]:
+            out[key] = dict(position=bucket, depth_rank=rank)
+    return out

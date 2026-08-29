@@ -68,6 +68,12 @@ def main():
                          "(team_ratings' OffAdj/DefAdj -- see project.tarp_adj). "
                          "Requires --team-ratings. ONLY meaningful for --season 2026 "
                          "(UNVALIDATED -- no 2026 games exist yet to tune against).")
+    ap.add_argument("--depth-chart", default=None,
+                    help="path to depth_charts.csv (pull_depth_charts.py, scraped from "
+                         "ourlads.com) -- nudges volume by depth-chart rank for pure-"
+                         "prior-year weeks only (week <= config.PRIOR_ONLY_UNTIL_WEEK). "
+                         "See project.depth_rank_adj / config.DEPTH_RANK_MULT "
+                         "(UNVALIDATED). No effect if omitted.")
     args = ap.parse_args()
 
     C.SEASON = args.season
@@ -117,6 +123,11 @@ def main():
     grade_index = P.build_matchup_grade_index(team_grades) if team_grades else {}
     if args.team_grades:
         print(f"  --team-grades: {len(team_grades)} teams loaded")
+
+    depth_chart = DL.load_depth_chart(args.depth_chart) if args.depth_chart else {}
+    if args.depth_chart:
+        print(f"  --depth-chart: {len(depth_chart)} skill-position players loaded "
+              f"(active weeks <= {C.PRIOR_ONLY_UNTIL_WEEK} only)")
 
     # Precompute league means + defensive index once. In prior-year mode, use
     # 2024-wide means so shrinkage targets are internally consistent with the
@@ -190,8 +201,12 @@ def main():
         share_source_team = (DL.resolve_tkey(prior_rec.get("team"), pff2c)
                              if (args.week <= C.PRIOR_ONLY_UNTIL_WEEK and prior_rec) else None)
 
+        depth_rec = (depth_chart.get(DL.norm(_orig_name(grades, tot, pkey)))
+                    if (depth_chart and args.week <= C.PRIOR_ONLY_UNTIL_WEEK) else None)
+        depth_component = P.depth_rank_adj(depth_rec)
+
         for mkey, mdef in C.MARKETS.items():
-            vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
+            vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"]) * depth_component
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             if grade_index:
                 extra_adj *= P.matchup_grade_adj(grade_index, canon_tkey, opp_tkey, mkey)

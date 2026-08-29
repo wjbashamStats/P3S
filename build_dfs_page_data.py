@@ -60,15 +60,17 @@ def dk_points(pass_yds, pass_td, rush_yds, rush_td, rec_yds, rec_td, receptions)
         + (receptions or 0) * DK_SCORING["reception"], 2)
 
 
-def build(week, lines_path, ratings_path, grades_path, season=2025):
+def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
     pff2c, _ = DL.load_team_map()
     lines_by_week = DL.load_game_lines(lines_path)
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
+    depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
 
     print(f"Building week-{week} DK projections (season {season}) ...")
     projections = BT.build_projections(week, use_prior_year=True, lines_by_week=lines_by_week,
-                                       team_ratings=team_ratings, team_grades=team_grades, season=season)
+                                       team_ratings=team_ratings, team_grades=team_grades, season=season,
+                                       depth_chart=depth_chart)
 
     # Team/position context, same source + fixes as the Impact page
     # (player_season_totals.csv has far wider coverage than the PFF
@@ -178,10 +180,16 @@ def main():
     ap.add_argument("--game-lines", default="hist_lines_closing_wk1-15.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
     ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--depth-chart", default=None,
+                    help="path to depth_charts.csv (pull_depth_charts.py) -- nudges "
+                         "volume by ourlads.com depth-chart rank for pure-prior-year "
+                         "weeks only (UNVALIDATED, see config.DEPTH_RANK_MULT). "
+                         "No effect if omitted.")
     ap.add_argument("--out", default="dfs_wk14.json")
     args = ap.parse_args()
 
-    players = build(args.week, args.game_lines, args.team_ratings, args.team_grades, season=args.season)
+    players = build(args.week, args.game_lines, args.team_ratings, args.team_grades, season=args.season,
+                    depth_chart_path=args.depth_chart)
     payload = dict(season=args.season, week=args.week, scoring=DK_SCORING, players=players)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)

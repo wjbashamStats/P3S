@@ -202,6 +202,26 @@ MATCHUP_ADJ_STRENGTH = 0.15
 # other constant here got tuned against 2025.
 TARP_ADJ_STRENGTH = 0.15
 
+# Flat volume multiplier by ourlads.com depth-chart rank (1 = starter),
+# applied ONLY for weeks <= PRIOR_ONLY_UNTIL_WEEK and only when a
+# --depth-chart file is supplied (opt-in, off by default -- see
+# data_load.load_depth_chart / project.depth_rank_adj). Meant to close
+# part of the week-1-3 under-projection gap for a player whose ROLE
+# changed since the prior-year rates the model otherwise leans on (e.g. a
+# backup who won a starting job) -- a pure historical-rate model has no
+# way to see that on its own.
+# UNVALIDATED, same caveat as TARP_ADJ_STRENGTH above: no historical
+# (preseason) depth-chart snapshot exists to backtest against -- ourlads
+# only publishes the CURRENT chart, so there's no way to replay "what did
+# the week-1-2025 depth chart say" the way every other constant here got
+# tuned against real games. Flat rather than conditioned on whether a
+# player's prior-year volume already looks like a starter's (the more
+# accurate version) because there's no labeled data yet to justify that
+# extra complexity. Treat as a reasonable first-pass guess, not a tuned
+# value -- revisit once a real depth-chart snapshot history exists.
+DEPTH_RANK_MULT = {1: 1.15, 2: 1.0, 3: 0.75, 4: 0.55}
+DEPTH_RANK_MULT_DEFAULT = 0.45  # 5th string or below
+
 # Ceiling on the TOTAL "this week is different" multiplier applied to a
 # player's own raw per-game rate -- vol_adj (pace x game-script) times adj
 # (PFF-grade opponent_adj x success_rate_adj x matchup_grade_adj x
