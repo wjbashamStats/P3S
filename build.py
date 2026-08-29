@@ -137,7 +137,16 @@ def main():
     # ---------------- build the master projection table ----------------
     rows = []
     for (pkey, tkey), tot in totals.items():
-        opp_tkey, game_id = resolve_opponent(tkey, events, odds2c)
+        # tkey is season_totals' own raw team key (e.g. "ntexas" from "N
+        # TEXAS") -- resolve_opponent/find_team_game_line/grade_index/
+        # tarp_index all key off the CANONICAL CFBD-style name ("North
+        # Texas" -> "northtexas"). Any team whose raw abbreviation isn't
+        # already identical to its canonical form after norm() silently
+        # failed every one of those lookups (opponent, game context, PFF
+        # matchup grade, TARP) -- for the odds-event exact-match path here
+        # that meant the player got dropped from the slate entirely.
+        canon_tkey = DL.resolve_tkey(tkey, pff2c)
+        opp_tkey, game_id = resolve_opponent(canon_tkey, events, odds2c)
         if opp_tkey is None and not args.no_odds:
             continue  # not playing this slate
         # source: real 2024 rates when available and requested, else this
@@ -167,9 +176,9 @@ def main():
         rates = P.compute_player_rates(source)
         rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), source.get("games"))
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
-        grades = pff_by_key.get((pkey, tkey), {})
+        grades = pff_by_key.get((pkey, canon_tkey), {}) or pff_by_key.get((pkey, tkey), {})
 
-        team_implied, team_spread = (DL.find_team_game_line(tkey, str(args.week), lines_by_week)
+        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(args.week), lines_by_week)
                                      if lines_by_week else (None, None))
 
         # Share-based volume only applies in pure prior-year weeks (1-3):
@@ -185,15 +194,15 @@ def main():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
             extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
             if grade_index:
-                extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
+                extra_adj *= P.matchup_grade_adj(grade_index, canon_tkey, opp_tkey, mkey)
             if tarp_index:
-                extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
+                extra_adj *= P.tarp_adj(tarp_index, canon_tkey, opp_tkey)
             vol_col = mdef["volume"]
             per_game_vol_override = None
             if share_source_team and vol_col in P.SHARE_VOL_COLS:
                 per_game_vol_override = P.team_share_volume(
                     source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
-                    team_totals_prior.get(tkey, {}), vol_col)
+                    team_totals_prior.get(canon_tkey, {}), vol_col)
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
                                            def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj,

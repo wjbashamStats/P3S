@@ -114,11 +114,13 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     for (pkey, tkey), tot in totals.items():
         source = None
         prior_rec = None
+        n_cur_games = None
         if use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
             if week > C.PRIOR_ONLY_UNTIL_WEEK:
                 current_games = [g for g in logs.get((pkey, tkey), [])
                                  if g.get("week") is not None and g["week"] < week]
+                n_cur_games = len(current_games)
                 source = P.blend_prior_and_current(prior_rec, current_games)
             else:
                 source = prior_rec
@@ -127,12 +129,20 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         rates = P.compute_player_rates(source)
         rates_shrunk = {k: P.shrink(rates.get(k), pos_means.get(k, 0.0), source.get("games"))
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
-        grades = pff_by_key.get((pkey, tkey), {})
+        # tkey is season_totals' own raw team key (e.g. "ntexas" from "N
+        # TEXAS") -- find_team_game_line/find_opponent_tkey/grade_index/
+        # tarp_index all key off the CANONICAL CFBD-style name ("North
+        # Texas" -> "northtexas"). Resolve once so a team whose raw
+        # abbreviation isn't already identical to its canonical form after
+        # norm() still gets game context, an opponent, and PFF matchup
+        # grade/TARP adjustments instead of silently falling back to inert.
+        canon_tkey = DL.resolve_tkey(tkey, pff2c)
+        grades = pff_by_key.get((pkey, canon_tkey), {}) or pff_by_key.get((pkey, tkey), {})
         player_name = grades.get("name") or pkey
 
-        team_implied, team_spread = (DL.find_team_game_line(tkey, str(week), lines_by_week)
+        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(week), lines_by_week)
                                      if lines_by_week else (None, None))
-        opp_tkey = (DL.find_opponent_tkey(tkey, str(week), lines_by_week, canonical_tkeys)
+        opp_tkey = (DL.find_opponent_tkey(canon_tkey, str(week), lines_by_week, canonical_tkeys)
                    if lines_by_week else None)
 
         share_source_team = (DL.resolve_tkey(prior_rec.get("team"), pff2c)
@@ -140,24 +150,44 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
 
         for mkey, mdef in C.MARKETS.items():
             vol_adj = P.game_context_adj(team_implied, week_avg_implied, team_spread, mdef["side"])
-            extra_adj = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
-            if grade_index:
-                extra_adj *= P.matchup_grade_adj(grade_index, tkey, opp_tkey, mkey)
-            if tarp_index:
-                extra_adj *= P.tarp_adj(tarp_index, tkey, opp_tkey)
+            sr_component = P.success_rate_adj(sr_index, opp_tkey, mdef["side"], mdef["stat"]) if sr_index else 1.0
+            mg_component = P.matchup_grade_adj(grade_index, canon_tkey, opp_tkey, mkey) if grade_index else 1.0
+            tarp_component = P.tarp_adj(tarp_index, canon_tkey, opp_tkey) if tarp_index else 1.0
+            extra_adj = sr_component * mg_component * tarp_component
             vol_col = mdef["volume"]
             per_game_vol_override = None
+            vol_source = None
             if share_source_team and vol_col in P.SHARE_VOL_COLS:
                 per_game_vol_override = P.team_share_volume(
                     source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
-                    team_totals_prior.get(tkey, {}), vol_col)
+                    team_totals_prior.get(canon_tkey, {}), vol_col)
+                vol_source = f"team-share of {share_source_team}'s 2024 {vol_col} pool, applied to {canon_tkey}'s 2025 pool"
+            elif not use_prior_year:
+                vol_source = f"{tot.get('games')} 2025 games (in-season)"
+            elif week <= C.PRIOR_ONLY_UNTIL_WEEK:
+                vol_source = f"{prior_rec.get('games') if prior_rec else 0} 2024 games (pure prior-year, week <= {C.PRIOR_ONLY_UNTIL_WEEK})"
+            else:
+                vol_source = f"blended: {n_cur_games} 2025 games + {prior_rec.get('games') if prior_rec else 0} 2024 games"
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=opp_tkey,
                                            vol_adj=vol_adj, extra_adj=extra_adj,
                                            per_game_vol_override=per_game_vol_override)
             if proj is None:
                 continue
-            out[(norm(player_name), mkey)] = dict(player=player_name, **proj)
+            breakdown = dict(
+                volume_source=vol_source,
+                pace_script_adj=round(vol_adj, 3),
+                team_implied=round(team_implied, 1) if team_implied is not None else None,
+                league_avg_implied=round(week_avg_implied, 1) if week_avg_implied is not None else None,
+                team_spread=team_spread,
+                opponent=opp_tkey,
+                pff_def_grade_adj=round(P.opponent_adj(def_index, opp_tkey, mdef["def_unit"]), 3),
+                pff_def_grade_adj_active=C.OPP_ADJ_STRENGTH != 0,
+                success_rate_adj=round(sr_component, 3) if sr_index else None,
+                matchup_grade_adj=round(mg_component, 3) if grade_index else None,
+                tarp_adj=round(tarp_component, 3) if tarp_index else None,
+            )
+            out[(norm(player_name), mkey)] = dict(player=player_name, breakdown=breakdown, **proj)
     return out
 
 

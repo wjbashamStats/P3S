@@ -100,6 +100,8 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path):
             over_price=(float(r["over_price"]) if r.get("over_price") not in (None, "", "NA") else None),
             under_price=(float(r["under_price"]) if r.get("under_price") not in (None, "", "NA") else None),
             n_books=r.get("n_books"),
+            components=proj.get("components"),
+            breakdown=proj.get("breakdown"),
         )
 
     out_games = []
