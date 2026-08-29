@@ -31,6 +31,45 @@ def pull_events():
                  home=e["home_team"], away=e["away_team"]) for e in data]
 
 
+def pull_game_lines():
+    """
+    Live spreads + totals for the WHOLE upcoming slate in one call (the
+    general /sports/{sport}/odds endpoint returns every event's odds at
+    once) -- unlike pull_props, this is NOT per-event, so it's cheap
+    regardless of how many games are on the slate.
+    Returns one row per event with a spreads market present, in the same
+    shape historical_pull.R's --game-lines writes to hist_lines_closing_
+    wkN.csv (see data_load.load_game_lines): home_team, away_team,
+    home_spread (home team's own signed spread), total.
+    """
+    data = _get(f"/sports/{C.ODDS_SPORT}/odds",
+               dict(regions=C.ODDS_REGION, markets="spreads,totals", oddsFormat=C.ODDS_FORMAT))
+    if not data:
+        return []
+    import statistics as st
+    rows = []
+    for ev in data:
+        home, away = ev["home_team"], ev["away_team"]
+        home_spreads, totals = [], []
+        for bk in ev.get("bookmakers", []):
+            for m in bk.get("markets", []):
+                if m["key"] == "spreads":
+                    for oc in m.get("outcomes", []):
+                        if oc.get("name") == home and oc.get("point") is not None:
+                            home_spreads.append(oc["point"])
+                elif m["key"] == "totals":
+                    for oc in m.get("outcomes", []):
+                        if oc.get("name") == "Over" and oc.get("point") is not None:
+                            totals.append(oc["point"])
+        if not home_spreads or not totals:
+            continue
+        rows.append(dict(
+            game_id=ev["id"], home_team=home, away_team=away,
+            home_spread=st.median(home_spreads), total=st.median(totals),
+        ))
+    return rows
+
+
 def pull_props(events, markets, cap=None):
     """One call per event. Returns flat list of prop quotes."""
     rows = []
