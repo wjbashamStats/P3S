@@ -4550,7 +4550,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.773,
        "matchup_grade_adj": 0.869,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0935,
+       "expected_td": 0.626
       }
      },
      "player_rush_yds": {
@@ -4577,7 +4579,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.66,
        "matchup_grade_adj": 0.869,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0935,
+       "expected_td": 0.626
       }
      }
     }
@@ -4872,7 +4876,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.66,
        "matchup_grade_adj": 0.869,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0348,
+       "expected_td": 0.575
       }
      }
     }
@@ -5501,7 +5507,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.152,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0592,
+       "expected_td": 1.499
       }
      },
      "player_rush_attempts": {
@@ -5528,7 +5536,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.773,
        "matchup_grade_adj": 0.869,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0473,
+       "expected_td": 0.23
       }
      }
     }
@@ -6143,7 +6153,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0685,
+       "expected_td": 0.486
       }
      },
      "player_receptions": {
@@ -6170,7 +6182,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0685,
+       "expected_td": 0.486
       }
      }
     }
@@ -6440,7 +6454,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      },
      "player_receptions": {
@@ -6467,7 +6483,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -6741,7 +6759,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0393,
+       "expected_td": 0.166
       }
      },
      "player_receptions": {
@@ -6768,7 +6788,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0393,
+       "expected_td": 0.166
       }
      }
     }
@@ -9245,7 +9267,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.052,
        "matchup_grade_adj": 0.848,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0312,
+       "expected_td": 0.306
       }
      }
     }
@@ -9466,7 +9490,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.052,
        "matchup_grade_adj": 0.848,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0853,
+       "expected_td": 0.597
       }
      }
     }
@@ -10158,15 +10184,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 220.5,
-      "projection": 71.9,
-      "edge_pct": -67.4,
+      "projection": 121.4,
+      "edge_pct": -44.9,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "6",
       "components": {
        "volume": 29.54,
        "efficiency": 7.521,
-       "opp_adj": 0.323
+       "opp_adj": 0.546
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -10179,7 +10205,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.323,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.064,
+       "expected_td": 1.891
       }
      }
     }
@@ -11553,7 +11581,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.807,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0436,
+       "expected_td": 0.328
       }
      }
     }
@@ -12254,7 +12284,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.807,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1703,
+       "expected_td": 0.388
       }
      }
     }
@@ -12897,7 +12929,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.088,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0515,
+       "expected_td": 1.371
       }
      }
     }
@@ -13119,15 +13153,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 169.5,
-      "projection": 26.0,
-      "edge_pct": -84.7,
+      "projection": 44.0,
+      "edge_pct": -74.0,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 12.07,
        "efficiency": 6.671,
-       "opp_adj": 0.323
+       "opp_adj": 0.546
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 3.0 2024 games",
@@ -13140,7 +13174,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.323,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0442,
+       "expected_td": 0.534
       }
      },
      "player_rush_yds": {
@@ -13167,7 +13203,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.052,
        "matchup_grade_adj": 0.743,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0319,
+       "expected_td": 0.239
       }
      }
     }
@@ -13687,7 +13725,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.807,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0919,
+       "expected_td": 0.37
       }
      }
     }
@@ -14659,7 +14699,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.807,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0861,
+       "expected_td": 0.864
       }
      }
     }
@@ -15089,7 +15131,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.936,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1204,
+       "expected_td": 0.45
       }
      }
     }
@@ -16029,7 +16073,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.078,
        "matchup_grade_adj": 0.791,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0514,
+       "expected_td": 0.752
       }
      }
     }
@@ -16295,7 +16341,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.986,
        "matchup_grade_adj": 1.242,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0648,
+       "expected_td": 0.626
       }
      }
     }
@@ -16736,7 +16784,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.317,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0535,
+       "expected_td": 1.645
       }
      },
      "player_rush_yds": {
@@ -16763,7 +16813,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.078,
        "matchup_grade_adj": 0.791,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0706,
+       "expected_td": 0.728
       }
      }
     }
@@ -17739,7 +17791,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0435,
+       "expected_td": 0.18
       }
      },
      "player_receptions": {
@@ -17766,7 +17820,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0435,
+       "expected_td": 0.18
       }
      }
     }
@@ -18388,7 +18444,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0223,
+       "expected_td": 0.078
       }
      },
      "player_receptions": {
@@ -18415,7 +18473,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0223,
+       "expected_td": 0.078
       }
      }
     }
@@ -18885,7 +18945,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.091,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0691,
+       "expected_td": 0.493
       }
      },
      "player_receptions": {
@@ -18912,7 +18974,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.091,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0691,
+       "expected_td": 0.493
       }
      }
     }
@@ -22796,7 +22860,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.116,
        "matchup_grade_adj": 0.86,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0489,
+       "expected_td": 0.918
       }
      }
     }
@@ -23236,15 +23302,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 16.5,
-      "projection": 5.3,
-      "edge_pct": -67.9,
+      "projection": 5.9,
+      "edge_pct": -64.2,
       "over_price": -105.0,
       "under_price": -125.0,
       "n_books": "1",
       "components": {
        "volume": 6.92,
        "efficiency": null,
-       "opp_adj": 0.764
+       "opp_adj": 0.846
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 11.0 2024 games",
@@ -23257,21 +23323,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.902,
        "matchup_grade_adj": 0.847,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0228,
+       "expected_td": 0.158
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 70.5,
-      "projection": 27.6,
-      "edge_pct": -60.9,
+      "projection": 32.3,
+      "edge_pct": -54.2,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 6.92,
        "efficiency": 5.517,
-       "opp_adj": 0.722
+       "opp_adj": 0.846
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 11.0 2024 games",
@@ -23284,7 +23352,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.853,
        "matchup_grade_adj": 0.847,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0228,
+       "expected_td": 0.158
       }
      }
     }
@@ -24241,21 +24311,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.728,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.031,
+       "expected_td": 0.642
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 46.5,
-      "projection": 29.3,
-      "edge_pct": -37.0,
+      "projection": 34.3,
+      "edge_pct": -26.2,
       "over_price": -113.5,
       "under_price": -113.5,
       "n_books": "2",
       "components": {
        "volume": 6.72,
        "efficiency": 6.032,
-       "opp_adj": 0.722
+       "opp_adj": 0.846
       },
       "breakdown": {
        "volume_source": "blended: 3 2025 games + 11.0 2024 games",
@@ -24268,7 +24340,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.853,
        "matchup_grade_adj": 0.847,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0388,
+       "expected_td": 0.261
       }
      }
     }
@@ -26387,21 +26461,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.965,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0284,
+       "expected_td": 0.071
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 21.5,
-      "projection": 40.1,
-      "edge_pct": 86.5,
+      "projection": 36.7,
+      "edge_pct": 70.7,
       "over_price": 100.0,
       "under_price": -130.0,
       "n_books": "1",
       "components": {
        "volume": 34.8,
        "efficiency": null,
-       "opp_adj": 1.151
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -26414,21 +26490,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.066,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0408,
+       "expected_td": 1.421
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 105.5,
-      "projection": 228.7,
-      "edge_pct": 116.8,
+      "projection": 202.1,
+      "edge_pct": 91.6,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "2",
       "components": {
        "volume": 34.8,
        "efficiency": 5.505,
-       "opp_adj": 1.194
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -26441,7 +26519,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.066,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0408,
+       "expected_td": 1.421
       }
      }
     }
@@ -26897,21 +26977,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.877,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0435,
+       "expected_td": 1.417
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 11.5,
-      "projection": 26.8,
-      "edge_pct": 133.0,
+      "projection": 24.6,
+      "edge_pct": 113.9,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 23.32,
        "efficiency": null,
-       "opp_adj": 1.151
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -26924,21 +27006,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.066,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0894,
+       "expected_td": 2.086
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 52.5,
-      "projection": 134.0,
-      "edge_pct": 155.2,
+      "projection": 118.4,
+      "edge_pct": 125.5,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "2",
       "components": {
        "volume": 23.32,
        "efficiency": 4.815,
-       "opp_adj": 1.194
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -26951,7 +27035,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.066,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0894,
+       "expected_td": 2.086
       }
      }
     }
@@ -27265,7 +27351,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.965,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0725,
+       "expected_td": 0.267
       }
      }
     }
@@ -28242,7 +28330,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.965,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0542,
+       "expected_td": 0.346
       }
      }
     }
@@ -30495,7 +30585,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.116,
        "matchup_grade_adj": 0.86,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0104,
+       "expected_td": 0.116
       }
      }
     }
@@ -31399,7 +31491,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.786,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0456,
+       "expected_td": 1.33
       }
      },
      "player_rush_attempts": {
@@ -31426,7 +31520,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.862,
        "matchup_grade_adj": 1.209,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0157,
+       "expected_td": 0.056
       }
      }
     }
@@ -31684,7 +31780,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.735,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0688,
+       "expected_td": 3.043
       }
      }
     }
@@ -32068,7 +32166,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.069,
+       "expected_td": 0.547
       }
      }
     }
@@ -32454,7 +32554,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0147,
+       "expected_td": 0.103
       }
      }
     }
@@ -32674,7 +32776,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0606,
+       "expected_td": 0.193
       }
      }
     }
@@ -33120,7 +33224,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0946,
+       "expected_td": 0.848
       }
      }
     }
@@ -33484,7 +33590,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0701,
+       "expected_td": 0.489
       }
      }
     }
@@ -33858,7 +33966,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.069,
        "matchup_grade_adj": 1.093,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0678,
+       "expected_td": 0.776
       }
      }
     }
@@ -34642,7 +34752,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.069,
        "matchup_grade_adj": 1.093,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0515,
+       "expected_td": 0.638
       }
      }
     }
@@ -35341,7 +35453,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0508,
+       "expected_td": 0.232
       }
      },
      "player_receptions": {
@@ -35368,7 +35482,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0508,
+       "expected_td": 0.232
       }
      }
     }
@@ -36374,7 +36490,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0504,
+       "expected_td": 0.321
       }
      },
      "player_receptions": {
@@ -36401,7 +36519,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.991,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0504,
+       "expected_td": 0.321
       }
      }
     }
@@ -38380,15 +38500,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 117.5,
-      "projection": 268.8,
-      "edge_pct": 128.8,
+      "projection": 228.4,
+      "edge_pct": 94.4,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 37.41,
        "efficiency": 4.828,
-       "opp_adj": 1.488
+       "opp_adj": 1.264
       },
       "breakdown": {
        "volume_source": "blended: 4 2025 games + 0 2024 games",
@@ -38401,7 +38521,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.216,
        "matchup_grade_adj": 1.224,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0349,
+       "expected_td": 1.305
       }
      }
     }
@@ -39898,7 +40020,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.17,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.037,
+       "expected_td": 0.199
       }
      }
     }
@@ -41328,7 +41452,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.973,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0443,
+       "expected_td": 0.803
       }
      }
     }
@@ -41924,7 +42050,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.992,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0332,
+       "expected_td": 0.161
       }
      }
     }
@@ -43445,7 +43573,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.094,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0312,
+       "expected_td": 0.947
       }
      }
     }
@@ -44319,7 +44449,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.968,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0569,
+       "expected_td": 0.419
       }
      }
     }
@@ -44581,7 +44713,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.963,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0679,
+       "expected_td": 0.431
       }
      }
     }
@@ -44819,7 +44953,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0328,
+       "expected_td": 0.252
       }
      }
     }
@@ -45643,7 +45779,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0158,
+       "expected_td": 0.071
       }
      }
     }
@@ -52461,7 +52599,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.939,
        "matchup_grade_adj": 0.781,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0595,
+       "expected_td": 0.407
       }
      },
      "player_rush_yds": {
@@ -52488,7 +52628,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.908,
        "matchup_grade_adj": 0.781,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0595,
+       "expected_td": 0.407
       }
      }
     }
@@ -53114,7 +53256,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.292,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0568,
+       "expected_td": 1.567
       }
      }
     }
@@ -53843,7 +53987,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.083,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.084,
+       "expected_td": 0.482
       }
      }
     }
@@ -54573,7 +54719,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.083,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0664,
+       "expected_td": 0.314
       }
      }
     }
@@ -59634,7 +59782,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0965,
+       "expected_td": 0.394
       }
      },
      "player_receptions": {
@@ -59661,7 +59811,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0965,
+       "expected_td": 0.394
       }
      }
     }
@@ -59877,7 +60029,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.936,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.078,
+       "expected_td": 0.295
       }
      }
     }
@@ -60541,7 +60695,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.936,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0571,
+       "expected_td": 0.132
       }
      }
     }
@@ -65497,7 +65653,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.879,
        "matchup_grade_adj": 1.121,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0906,
+       "expected_td": 0.729
       }
      }
     }
@@ -65945,7 +66103,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.879,
        "matchup_grade_adj": 1.121,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0522,
+       "expected_td": 0.737
       }
      }
     }
@@ -70149,15 +70309,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 15.5,
-      "projection": 6.7,
-      "edge_pct": -56.8,
+      "projection": 7.1,
+      "edge_pct": -54.2,
       "over_price": -105.0,
       "under_price": -125.0,
       "n_books": "1",
       "components": {
        "volume": 6.56,
        "efficiency": null,
-       "opp_adj": 1.019
+       "opp_adj": 1.082
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 2.0 2024 games",
@@ -70170,21 +70330,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.095,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0141,
+       "expected_td": 0.092
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 68.5,
-      "projection": 32.7,
-      "edge_pct": -52.3,
+      "projection": 36.1,
+      "edge_pct": -47.3,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 6.56,
        "efficiency": 5.082,
-       "opp_adj": 0.98
+       "opp_adj": 1.082
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 2.0 2024 games",
@@ -70197,7 +70359,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.895,
        "matchup_grade_adj": 1.095,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0141,
+       "expected_td": 0.092
       }
      }
     }
@@ -70677,7 +70841,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.844,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0464,
+       "expected_td": 0.932
       }
      }
     }
@@ -71773,7 +71939,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.956,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1045,
+       "expected_td": 0.306
       }
      },
      "player_receptions": {
@@ -71800,7 +71968,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.956,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1045,
+       "expected_td": 0.306
       }
      }
     }
@@ -72780,7 +72950,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.939,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.056,
+       "expected_td": 0.183
       }
      },
      "player_rush_attempts": {
@@ -72807,7 +72979,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.862,
        "matchup_grade_adj": 1.209,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0376,
+       "expected_td": 0.47
       }
      },
      "player_rush_yds": {
@@ -72834,7 +73008,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.794,
        "matchup_grade_adj": 1.209,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0376,
+       "expected_td": 0.47
       }
      }
     }
@@ -74400,7 +74576,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0392,
+       "expected_td": 0.213
       }
      },
      "player_receptions": {
@@ -74427,7 +74605,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0392,
+       "expected_td": 0.213
       }
      }
     }
@@ -74735,7 +74915,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.939,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0443,
+       "expected_td": 0.213
       }
      }
     }
@@ -75301,7 +75483,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.939,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -77462,7 +77646,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.17,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -80808,7 +80994,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.025,
        "matchup_grade_adj": 0.997,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -81047,7 +81235,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0339,
+       "expected_td": 0.111
       }
      },
      "player_rush_attempts": {
@@ -81074,7 +81264,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.863,
        "matchup_grade_adj": 0.968,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0279,
+       "expected_td": 0.348
       }
      },
      "player_rush_yds": {
@@ -81101,7 +81293,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.794,
        "matchup_grade_adj": 0.968,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0279,
+       "expected_td": 0.348
       }
      }
     }
@@ -81833,7 +82027,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.217,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0607,
+       "expected_td": 1.369
       }
      },
      "player_rush_yds": {
@@ -81860,7 +82056,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.025,
        "matchup_grade_adj": 0.997,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0567,
+       "expected_td": 0.508
       }
      }
     }
@@ -82280,7 +82478,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0742,
+       "expected_td": 0.477
       }
      }
     }
@@ -86316,15 +86516,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 31.5,
-      "projection": 18.6,
-      "edge_pct": -41.0,
+      "projection": 19.8,
+      "edge_pct": -37.1,
       "over_price": -113.5,
       "under_price": -113.5,
       "n_books": "2",
       "components": {
        "volume": 4.95,
        "efficiency": 5.041,
-       "opp_adj": 0.747
+       "opp_adj": 0.793
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 4.0 2024 games",
@@ -86337,7 +86537,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.8,
        "matchup_grade_adj": 0.933,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0545,
+       "expected_td": 0.27
       }
      }
     }
@@ -87241,15 +87443,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 65.5,
-      "projection": 28.5,
-      "edge_pct": -56.5,
+      "projection": 30.3,
+      "edge_pct": -53.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 7.3,
        "efficiency": 5.232,
-       "opp_adj": 0.747
+       "opp_adj": 0.793
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 11.0 2024 games",
@@ -87262,7 +87464,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.8,
        "matchup_grade_adj": 0.933,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0455,
+       "expected_td": 0.332
       }
      }
     }
@@ -87556,21 +87760,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.122,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0577,
+       "expected_td": 1.321
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 29.5,
-      "projection": 13.1,
-      "edge_pct": -55.6,
+      "projection": 13.9,
+      "edge_pct": -52.9,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 3.6,
        "efficiency": 4.861,
-       "opp_adj": 0.747
+       "opp_adj": 0.793
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 3.0 2024 games",
@@ -87583,7 +87789,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.8,
        "matchup_grade_adj": 0.933,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0934,
+       "expected_td": 0.336
       }
      }
     }
@@ -88173,7 +88381,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0745,
+       "expected_td": 0.187
       }
      },
      "player_receptions": {
@@ -88200,7 +88410,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0745,
+       "expected_td": 0.187
       }
      }
     }
@@ -88559,7 +88771,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0458,
+       "expected_td": 0.171
       }
      }
     }
@@ -88825,7 +89039,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0907,
+       "expected_td": 0.231
       }
      },
      "player_receptions": {
@@ -88852,7 +89068,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0907,
+       "expected_td": 0.231
       }
      }
     }
@@ -89304,7 +89522,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1364,
+       "expected_td": 0.481
       }
      },
      "player_receptions": {
@@ -89331,7 +89551,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1364,
+       "expected_td": 0.481
       }
      }
     }
@@ -89539,7 +89761,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0341,
+       "expected_td": 0.232
       }
      },
      "player_receptions": {
@@ -89566,7 +89790,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.035,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0341,
+       "expected_td": 0.232
       }
      }
     }
@@ -95068,15 +95294,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 31.5,
-      "projection": 10.9,
-      "edge_pct": -65.4,
+      "projection": 25.2,
+      "edge_pct": -20.0,
       "over_price": -116.5,
       "under_price": -112.5,
       "n_books": "4",
       "components": {
        "volume": 2.31,
        "efficiency": 6.753,
-       "opp_adj": 0.699
+       "opp_adj": 1.614
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -95089,7 +95315,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.795,
        "matchup_grade_adj": 0.88,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0854,
+       "expected_td": 0.197
       }
      }
     }
@@ -95376,21 +95604,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.974,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0418,
+       "expected_td": 1.015
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 15.5,
-      "projection": 3.5,
-      "edge_pct": -77.4,
+      "projection": 7.5,
+      "edge_pct": -51.6,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 4.63,
        "efficiency": null,
-       "opp_adj": 0.759
+       "opp_adj": 1.614
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 10.0 2024 games",
@@ -95403,21 +95633,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.863,
        "matchup_grade_adj": 0.88,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0926,
+       "expected_td": 0.429
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 68.5,
-      "projection": 17.7,
-      "edge_pct": -74.2,
+      "projection": 40.9,
+      "edge_pct": -40.3,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 4.63,
        "efficiency": 5.472,
-       "opp_adj": 0.699
+       "opp_adj": 1.614
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 10.0 2024 games",
@@ -95430,7 +95662,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.795,
        "matchup_grade_adj": 0.88,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0926,
+       "expected_td": 0.429
       }
      }
     }
@@ -96358,7 +96592,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0579,
+       "expected_td": 0.289
       }
      },
      "player_receptions": {
@@ -96385,7 +96621,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0579,
+       "expected_td": 0.289
       }
      }
     }
@@ -96622,7 +96860,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0642,
+       "expected_td": 0.267
       }
      },
      "player_receptions": {
@@ -96649,7 +96889,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0642,
+       "expected_td": 0.267
       }
      }
     }
@@ -99541,7 +99783,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.107,
        "matchup_grade_adj": 1.124,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0313,
+       "expected_td": 0.45
       }
      }
     }
@@ -100161,7 +100405,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.162,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0604,
+       "expected_td": 1.574
       }
      },
      "player_rush_yds": {
@@ -100188,7 +100434,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.107,
        "matchup_grade_adj": 1.124,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0651,
+       "expected_td": 0.579
       }
      }
     }
@@ -100715,7 +100963,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0661,
+       "expected_td": 0.549
       }
      }
     }
@@ -100923,7 +101173,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1084,
+       "expected_td": 0.834
       }
      }
     }
@@ -102237,7 +102489,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0538,
+       "expected_td": 0.485
       }
      },
      "player_rush_yds": {
@@ -102264,7 +102518,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0538,
+       "expected_td": 0.485
       }
      }
     }
@@ -102515,7 +102771,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0263,
+       "expected_td": 0.268
       }
      },
      "player_rush_yds": {
@@ -102542,7 +102800,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0263,
+       "expected_td": 0.268
       }
      }
     }
@@ -102836,7 +103096,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1064,
+       "expected_td": 0.13
       }
      },
      "player_rush_attempts": {
@@ -102863,7 +103125,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0504,
+       "expected_td": 0.67
       }
      },
      "player_rush_yds": {
@@ -102890,7 +103154,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0504,
+       "expected_td": 0.67
       }
      }
     }
@@ -103425,7 +103691,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.215,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0657,
+       "expected_td": 1.823
       }
      },
      "player_rush_attempts": {
@@ -103452,7 +103720,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0667,
+       "expected_td": 0.425
       }
      },
      "player_rush_yds": {
@@ -103479,7 +103749,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.451,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0667,
+       "expected_td": 0.425
       }
      }
     }
@@ -104261,7 +104533,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0915,
+       "expected_td": 0.326
       }
      }
     }
@@ -104553,7 +104827,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0392,
+       "expected_td": 0.217
       }
      }
     }
@@ -104827,7 +105103,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0566,
+       "expected_td": 0.266
       }
      }
     }
@@ -105644,15 +105922,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 9.5,
-      "projection": 37.0,
-      "edge_pct": 289.5,
+      "projection": 19.0,
+      "edge_pct": 100.0,
       "over_price": -105.0,
       "under_price": -125.0,
       "n_books": "1",
       "components": {
        "volume": 20.18,
        "efficiency": null,
-       "opp_adj": 1.835
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -105665,21 +105943,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.128,
        "matchup_grade_adj": 1.627,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0438,
+       "expected_td": 0.884
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 57.5,
-      "projection": 219.2,
-      "edge_pct": 281.2,
+      "projection": 106.2,
+      "edge_pct": 84.7,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 20.18,
        "efficiency": 5.601,
-       "opp_adj": 1.939
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -105692,7 +105972,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.192,
        "matchup_grade_adj": 1.627,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0438,
+       "expected_td": 0.884
       }
      }
     }
@@ -106273,15 +106555,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 13.5,
-      "projection": 56.0,
-      "edge_pct": 314.8,
+      "projection": 28.7,
+      "edge_pct": 112.6,
       "over_price": -120.0,
       "under_price": -110.0,
       "n_books": "1",
       "components": {
        "volume": 30.52,
        "efficiency": null,
-       "opp_adj": 1.835
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -106294,21 +106576,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.128,
        "matchup_grade_adj": 1.627,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0358,
+       "expected_td": 1.092
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 72.5,
-      "projection": 282.1,
-      "edge_pct": 289.1,
+      "projection": 136.7,
+      "edge_pct": 88.6,
       "over_price": -113.5,
       "under_price": -114.5,
       "n_books": "4",
       "components": {
        "volume": 30.52,
        "efficiency": 4.765,
-       "opp_adj": 1.939
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -106321,7 +106605,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.192,
        "matchup_grade_adj": 1.627,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0358,
+       "expected_td": 1.092
       }
      }
     }
@@ -106841,21 +107127,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.56,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0847,
+       "expected_td": 2.949
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 20.5,
-      "projection": 111.7,
-      "edge_pct": 444.9,
+      "projection": 54.2,
+      "edge_pct": 164.4,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 11.69,
        "efficiency": 4.93,
-       "opp_adj": 1.939
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 11.0 2024 games",
@@ -106868,7 +107156,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.192,
        "matchup_grade_adj": 1.627,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0765,
+       "expected_td": 0.894
       }
      }
     }
@@ -107646,7 +107936,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0909,
+       "expected_td": 0.309
       }
      }
     }
@@ -107874,7 +108166,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1071,
+       "expected_td": 0.411
       }
      },
      "player_receptions": {
@@ -107901,7 +108195,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1071,
+       "expected_td": 0.411
       }
      }
     }
@@ -108091,7 +108387,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1419,
+       "expected_td": 1.185
       }
      },
      "player_receptions": {
@@ -108118,7 +108416,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1419,
+       "expected_td": 1.185
       }
      }
     }
@@ -108606,7 +108906,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.033,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0577,
+       "expected_td": 0.413
       }
      }
     }
@@ -108886,7 +109188,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1434,
+       "expected_td": 1.001
       }
      },
      "player_receptions": {
@@ -108913,7 +109217,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.16,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1434,
+       "expected_td": 1.001
       }
      }
     }
@@ -109307,15 +109613,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 26.5,
-      "projection": 78.7,
-      "edge_pct": 197.0,
+      "projection": 72.4,
+      "edge_pct": 173.2,
       "over_price": -114.5,
       "under_price": -112.0,
       "n_books": "2",
       "components": {
        "volume": 11.75,
        "efficiency": 4.997,
-       "opp_adj": 1.341
+       "opp_adj": 1.233
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 9.0 2024 games",
@@ -109328,7 +109634,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.995,
        "matchup_grade_adj": 1.348,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0113,
+       "expected_td": 0.132
       }
      }
     }
@@ -109551,15 +109859,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 15.5,
-      "projection": 30.3,
-      "edge_pct": 95.5,
+      "projection": 27.8,
+      "edge_pct": 79.4,
       "over_price": -120.0,
       "under_price": -110.0,
       "n_books": "1",
       "components": {
        "volume": 22.53,
        "efficiency": null,
-       "opp_adj": 1.343
+       "opp_adj": 1.233
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 11.0 2024 games",
@@ -109572,21 +109880,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.996,
        "matchup_grade_adj": 1.348,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0166,
+       "expected_td": 0.374
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 89.5,
-      "projection": 152.4,
-      "edge_pct": 70.3,
+      "projection": 140.1,
+      "edge_pct": 56.5,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "6",
       "components": {
        "volume": 22.53,
        "efficiency": 5.045,
-       "opp_adj": 1.341
+       "opp_adj": 1.233
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 11.0 2024 games",
@@ -109599,7 +109909,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.995,
        "matchup_grade_adj": 1.348,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0166,
+       "expected_td": 0.374
       }
      }
     }
@@ -110459,21 +110771,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.552,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0311,
+       "expected_td": 0.716
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 10.5,
-      "projection": 20.7,
-      "edge_pct": 97.1,
+      "projection": 19.0,
+      "edge_pct": 81.0,
       "over_price": 100.0,
       "under_price": -130.0,
       "n_books": "1",
       "components": {
        "volume": 15.41,
        "efficiency": null,
-       "opp_adj": 1.343
+       "opp_adj": 1.233
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -110486,21 +110800,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.996,
        "matchup_grade_adj": 1.348,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1368,
+       "expected_td": 2.109
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 42.5,
-      "projection": 105.7,
-      "edge_pct": 148.7,
+      "projection": 97.2,
+      "edge_pct": 128.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "6",
       "components": {
        "volume": 15.41,
        "efficiency": 5.116,
-       "opp_adj": 1.341
+       "opp_adj": 1.233
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -110513,7 +110829,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.995,
        "matchup_grade_adj": 1.348,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1368,
+       "expected_td": 2.109
       }
      }
     }
@@ -110769,7 +111087,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.037,
+       "expected_td": 0.141
       }
      },
      "player_receptions": {
@@ -110796,7 +111116,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.037,
+       "expected_td": 0.141
       }
      }
     }
@@ -111322,7 +111644,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0325,
+       "expected_td": 0.125
       }
      },
      "player_receptions": {
@@ -111349,7 +111673,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0325,
+       "expected_td": 0.125
       }
      }
     }
@@ -111691,7 +112017,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0332,
+       "expected_td": 0.075
       }
      }
     }
@@ -111905,7 +112233,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0943,
+       "expected_td": 0.281
       }
      }
     }
@@ -112876,7 +113206,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.936,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0129,
+       "expected_td": 0.271
       }
      }
     }
@@ -118675,7 +119007,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.245,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0412,
+       "expected_td": 0.246
       }
      }
     }
@@ -119432,7 +119766,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.245,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0717,
+       "expected_td": 0.291
       }
      }
     }
@@ -120467,15 +120803,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 194.5,
-      "projection": 92.8,
-      "edge_pct": -52.3,
+      "projection": 103.6,
+      "edge_pct": -46.7,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 26.13,
        "efficiency": 7.884,
-       "opp_adj": 0.45
+       "opp_adj": 0.503
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -120488,7 +120824,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.45,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0651,
+       "expected_td": 1.701
       }
      },
      "player_rush_yds": {
@@ -120515,7 +120853,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.245,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0395,
+       "expected_td": 0.194
       }
      }
     }
@@ -120733,7 +121073,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0847,
+       "expected_td": 0.331
       }
      },
      "player_receptions": {
@@ -120760,7 +121102,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0847,
+       "expected_td": 0.331
       }
      }
     }
@@ -121592,7 +121936,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0449,
+       "expected_td": 0.243
       }
      },
      "player_receptions": {
@@ -121619,7 +121965,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0449,
+       "expected_td": 0.243
       }
      }
     }
@@ -121901,7 +122249,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0754,
+       "expected_td": 0.332
       }
      },
      "player_receptions": {
@@ -121928,7 +122278,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0754,
+       "expected_td": 0.332
       }
      }
     }
@@ -122710,7 +123062,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.992,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0455,
+       "expected_td": 0.25
       }
      }
     }
@@ -123395,21 +123749,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.998,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0373,
+       "expected_td": 0.088
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 98.5,
-      "projection": 156.7,
-      "edge_pct": 59.1,
+      "projection": 130.9,
+      "edge_pct": 32.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
        "volume": 23.41,
        "efficiency": 5.297,
-       "opp_adj": 1.263
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 9.0 2024 games",
@@ -123422,7 +123778,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.073,
        "matchup_grade_adj": 1.177,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0346,
+       "expected_td": 0.811
       }
      }
     }
@@ -123963,21 +124321,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.994,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0574,
+       "expected_td": 2.077
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 59.0,
-      "projection": 124.0,
-      "edge_pct": 110.2,
+      "projection": 103.5,
+      "edge_pct": 75.4,
       "over_price": -114.0,
       "under_price": -114.5,
       "n_books": "4",
       "components": {
        "volume": 18.12,
        "efficiency": 5.416,
-       "opp_adj": 1.263
+       "opp_adj": 1.055
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -123990,7 +124350,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.073,
        "matchup_grade_adj": 1.177,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0767,
+       "expected_td": 1.39
       }
      }
     }
@@ -124382,7 +124744,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.998,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1068,
+       "expected_td": 0.644
       }
      }
     }
@@ -125030,7 +125394,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.998,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0421,
+       "expected_td": 0.3
       }
      }
     }
@@ -127868,7 +128234,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.137,
        "matchup_grade_adj": 0.992,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0165,
+       "expected_td": 0.112
       }
      }
     }
@@ -128498,7 +128866,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.094,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0721,
+       "expected_td": 1.258
       }
      }
     }
@@ -129506,7 +129876,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0159,
+       "expected_td": 0.052
       }
      },
      "player_receptions": {
@@ -129533,7 +129905,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0159,
+       "expected_td": 0.052
       }
      }
     }
@@ -129820,7 +130194,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.038,
        "matchup_grade_adj": 0.93,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0604,
+       "expected_td": 1.134
       }
      }
     }
@@ -130335,7 +130711,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.025,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0246,
+       "expected_td": 0.081
       }
      }
     }
@@ -132144,15 +132522,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 42.5,
-      "projection": 5.0,
-      "edge_pct": -88.2,
+      "projection": 19.3,
+      "edge_pct": -54.6,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 3.22,
        "efficiency": 4.877,
-       "opp_adj": 0.322
+       "opp_adj": 1.23
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -132165,7 +132543,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.538,
        "matchup_grade_adj": 0.598,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.023,
+       "expected_td": 0.074
       }
      }
     }
@@ -133235,7 +133615,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.848,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1184,
+       "expected_td": 0.316
       }
      },
      "player_receptions": {
@@ -133262,7 +133644,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.848,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1184,
+       "expected_td": 0.316
       }
      }
     }
@@ -133696,7 +134080,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.848,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.023,
+       "expected_td": 0.1
       }
      },
      "player_receptions": {
@@ -133723,7 +134109,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.848,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.023,
+       "expected_td": 0.1
       }
      }
     }
@@ -135543,7 +135931,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.848,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0576,
+       "expected_td": 0.176
       }
      }
     }
@@ -144882,7 +145272,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.098,
+       "expected_td": 0.625
       }
      }
     }
@@ -147433,7 +147825,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0178,
+       "expected_td": 0.059
       }
      },
      "player_rush_yds": {
@@ -147460,7 +147854,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.163,
        "matchup_grade_adj": 0.76,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0249,
+       "expected_td": 0.164
       }
      }
     }
@@ -148174,7 +148570,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.194,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0339,
+       "expected_td": 1.122
       }
      }
     }
@@ -148578,7 +148976,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0581,
+       "expected_td": 0.294
       }
      }
     }
@@ -149246,7 +149646,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0267,
+       "expected_td": 0.118
       }
      }
     }
@@ -149936,7 +150338,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0086,
+       "expected_td": 0.043
       }
      }
     }
@@ -150202,7 +150606,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0751,
+       "expected_td": 0.313
       }
      }
     }
@@ -150634,7 +151040,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.986,
        "matchup_grade_adj": 1.242,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1667,
+       "expected_td": 0.983
       }
      }
     }
@@ -150881,7 +151289,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0747,
+       "expected_td": 0.296
       }
      },
      "player_receptions": {
@@ -150908,7 +151318,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0747,
+       "expected_td": 0.296
       }
      },
      "player_rush_yds": {
@@ -150935,7 +151347,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.986,
        "matchup_grade_adj": 1.242,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.075,
+       "expected_td": 0.84
       }
      }
     }
@@ -151294,7 +151708,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.244,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0445,
+       "expected_td": 1.434
       }
      },
      "player_rush_yds": {
@@ -151321,7 +151737,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.986,
        "matchup_grade_adj": 1.242,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0743,
+       "expected_td": 1.043
       }
      }
     }
@@ -152035,7 +152453,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0789,
+       "expected_td": 0.644
       }
      },
      "player_receptions": {
@@ -152062,7 +152482,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0789,
+       "expected_td": 0.644
       }
      }
     }
@@ -153271,15 +153693,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 39.5,
-      "projection": 130.1,
-      "edge_pct": 229.4,
+      "projection": 96.4,
+      "edge_pct": 144.1,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 14.41,
        "efficiency": 5.475,
-       "opp_adj": 1.65
+       "opp_adj": 1.222
       },
       "breakdown": {
        "volume_source": "blended: 6 2025 games + 0 2024 games",
@@ -153292,7 +153714,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.139,
        "matchup_grade_adj": 1.448,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0833,
+       "expected_td": 1.201
       }
      }
     }
@@ -154031,7 +154455,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.271,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0668,
+       "expected_td": 2.219
       }
      }
     }
@@ -154297,15 +154723,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 265.5,
-      "projection": 108.5,
-      "edge_pct": -59.1,
+      "projection": 130.0,
+      "edge_pct": -51.0,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 34.17,
        "efficiency": 8.156,
-       "opp_adj": 0.389
+       "opp_adj": 0.467
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -154318,7 +154744,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.389,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0683,
+       "expected_td": 2.334
       }
      }
     }
@@ -155195,7 +155623,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.797,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0586,
+       "expected_td": 0.245
       }
      }
     }
@@ -155501,7 +155931,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.826,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0723,
+       "expected_td": 0.584
       }
      }
     }
@@ -156284,7 +156716,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.077,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0667,
+       "expected_td": 0.579
       }
      },
      "player_receptions": {
@@ -156311,7 +156745,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.077,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0667,
+       "expected_td": 0.579
       }
      }
     }
@@ -156755,7 +157191,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.892,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0624,
+       "expected_td": 0.216
       }
      }
     }
@@ -159503,15 +159941,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 19.5,
-      "projection": 4.0,
-      "edge_pct": -79.5,
+      "projection": 5.7,
+      "edge_pct": -70.8,
       "over_price": -130.0,
       "under_price": 100.0,
       "n_books": "1",
       "components": {
        "volume": 4.62,
        "efficiency": null,
-       "opp_adj": 0.86
+       "opp_adj": 1.23
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 2.0 2024 games",
@@ -159524,21 +159962,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.895,
        "matchup_grade_adj": 0.961,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0629,
+       "expected_td": 0.291
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 83.5,
-      "projection": 20.7,
-      "edge_pct": -75.2,
+      "projection": 31.4,
+      "edge_pct": -62.4,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 4.62,
        "efficiency": 5.525,
-       "opp_adj": 0.81
+       "opp_adj": 1.23
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 2.0 2024 games",
@@ -159551,7 +159991,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 0.961,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0629,
+       "expected_td": 0.291
       }
      }
     }
@@ -159822,15 +160264,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 150.5,
-      "projection": -2.2,
-      "edge_pct": -101.5,
+      "projection": 96.2,
+      "edge_pct": -36.1,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 17.96,
        "efficiency": 7.697,
-       "opp_adj": -0.016
+       "opp_adj": 0.696
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -159843,21 +160285,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": -0.016,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0327,
+       "expected_td": 0.588
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 16.5,
-      "projection": 10.6,
-      "edge_pct": -35.8,
+      "projection": 16.1,
+      "edge_pct": -2.4,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 2.18,
        "efficiency": 6.017,
-       "opp_adj": 0.81
+       "opp_adj": 1.23
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -159870,7 +160314,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.843,
        "matchup_grade_adj": 0.961,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0847,
+       "expected_td": 0.185
       }
      }
     }
@@ -160116,7 +160562,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.71,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.027,
+       "expected_td": 0.055
       }
      }
     }
@@ -160476,7 +160924,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.71,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0566,
+       "expected_td": 0.239
       }
      },
      "player_receptions": {
@@ -160503,7 +160953,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.71,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0566,
+       "expected_td": 0.239
       }
      }
     }
@@ -160955,7 +161407,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.71,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0645,
+       "expected_td": 0.192
       }
      },
      "player_receptions": {
@@ -160982,7 +161436,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.71,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0645,
+       "expected_td": 0.192
       }
      }
     }
@@ -161236,7 +161692,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0769,
+       "expected_td": 0.422
       }
      },
      "player_receptions": {
@@ -161263,7 +161721,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0769,
+       "expected_td": 0.422
       }
      }
     }
@@ -162549,7 +163009,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.116,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0438,
+       "expected_td": 0.509
       }
      }
     }
@@ -162799,7 +163261,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.033,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0395,
+       "expected_td": 0.159
       }
      }
     }
@@ -162993,7 +163457,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.033,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0982,
+       "expected_td": 0.492
       }
      }
     }
@@ -163281,7 +163747,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.033,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0258,
+       "expected_td": 0.167
       }
      }
     }
@@ -165637,7 +166105,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.08,
        "matchup_grade_adj": 0.964,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0316,
+       "expected_td": 0.278
       }
      }
     }
@@ -168752,7 +169222,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 0.721,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.07,
+       "expected_td": 0.633
       }
      }
     }
@@ -169833,7 +170305,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0874,
+       "expected_td": 0.393
       }
      },
      "player_receptions": {
@@ -169860,7 +170334,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0874,
+       "expected_td": 0.393
       }
      }
     }
@@ -170070,7 +170546,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0465,
+       "expected_td": 0.294
       }
      },
      "player_receptions": {
@@ -170097,7 +170575,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0465,
+       "expected_td": 0.294
       }
      }
     }
@@ -170573,7 +171053,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0796,
+       "expected_td": 0.495
       }
      },
      "player_receptions": {
@@ -170600,7 +171082,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.858,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0796,
+       "expected_td": 0.495
       }
      }
     }
@@ -171030,7 +171514,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.898,
        "matchup_grade_adj": 1.138,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0657,
+       "expected_td": 1.301
       }
      }
     }
@@ -172227,7 +172713,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0611,
+       "expected_td": 0.312
       }
      },
      "player_receptions": {
@@ -172254,7 +172742,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0611,
+       "expected_td": 0.312
       }
      }
     }
@@ -172675,7 +173165,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0263,
+       "expected_td": 0.183
       }
      },
      "player_receptions": {
@@ -172702,7 +173194,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0263,
+       "expected_td": 0.183
       }
      }
     }
@@ -175289,7 +175783,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 0.977,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0426,
+       "expected_td": 0.367
       }
      }
     }
@@ -175586,7 +176082,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.875,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0586,
+       "expected_td": 1.858
       }
      }
     }
@@ -176283,7 +176781,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.089,
+       "expected_td": 0.534
       }
      },
      "player_receptions": {
@@ -176310,7 +176810,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.089,
+       "expected_td": 0.534
       }
      }
     }
@@ -177150,7 +177652,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.992,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0952,
+       "expected_td": 0.5
       }
      }
     }
@@ -177420,7 +177924,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0292,
+       "expected_td": 0.102
       }
      },
      "player_receptions": {
@@ -177447,7 +177953,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0292,
+       "expected_td": 0.102
       }
      }
     }
@@ -177693,7 +178201,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.0,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0513,
+       "expected_td": 0.667
       }
      },
      "player_rush_yds": {
@@ -177720,7 +178230,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.0,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0513,
+       "expected_td": 0.667
       }
      }
     }
@@ -178269,7 +178781,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.025,
        "matchup_grade_adj": 0.997,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0678,
+       "expected_td": 0.478
       }
      }
     }
@@ -179230,7 +179744,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.0,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0473,
+       "expected_td": 1.057
       }
      }
     }
@@ -180112,7 +180628,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.0,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0723,
+       "expected_td": 0.546
       }
      }
     }
@@ -180377,7 +180895,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.0,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0459,
+       "expected_td": 0.143
       }
      }
     }
@@ -180810,7 +181330,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.097,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0793,
+       "expected_td": 0.453
       }
      },
      "player_rush_yds": {
@@ -180837,7 +181359,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.864,
        "matchup_grade_adj": 0.896,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0524,
+       "expected_td": 0.259
       }
      }
     }
@@ -181118,7 +181642,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.864,
        "matchup_grade_adj": 0.896,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0653,
+       "expected_td": 0.605
       }
      }
     }
@@ -181804,7 +182330,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.341,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0757,
+       "expected_td": 1.034
       }
      },
      "player_rush_yds": {
@@ -181831,7 +182359,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.864,
        "matchup_grade_adj": 0.896,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0831,
+       "expected_td": 1.288
       }
      }
     }
@@ -182415,7 +182945,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0526,
+       "expected_td": 0.158
       }
      },
      "player_receptions": {
@@ -182442,7 +182974,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0526,
+       "expected_td": 0.158
       }
      },
      "player_rush_attempts": {
@@ -182469,7 +183003,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.987,
        "matchup_grade_adj": 1.18,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0443,
+       "expected_td": 0.408
       }
      },
      "player_rush_yds": {
@@ -182496,7 +183032,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.98,
        "matchup_grade_adj": 1.18,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0443,
+       "expected_td": 0.408
       }
      }
     }
@@ -183916,7 +184454,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0571,
+       "expected_td": 0.101
       }
      }
     }
@@ -184302,7 +184842,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0685,
+       "expected_td": 0.268
       }
      },
      "player_receptions": {
@@ -184329,7 +184871,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0685,
+       "expected_td": 0.268
       }
      }
     }
@@ -184535,7 +185079,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0526,
+       "expected_td": 0.189
       }
      },
      "player_receptions": {
@@ -184562,7 +185108,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0526,
+       "expected_td": 0.189
       }
      }
     }
@@ -184836,7 +185384,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.024,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0426,
+       "expected_td": 0.19
       }
      }
     }
@@ -185064,7 +185614,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0813,
+       "expected_td": 0.315
       }
      },
      "player_receptions": {
@@ -185091,7 +185643,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.93,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0813,
+       "expected_td": 0.315
       }
      }
     }
@@ -193915,7 +194469,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.02,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.074,
+       "expected_td": 0.296
       }
      },
      "player_receptions": {
@@ -193942,7 +194498,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.02,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.074,
+       "expected_td": 0.296
       }
      }
     }
@@ -194248,7 +194806,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.02,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0157,
+       "expected_td": 0.055
       }
      },
      "player_receptions": {
@@ -194275,7 +194835,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.02,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0157,
+       "expected_td": 0.055
       }
      }
     }
@@ -195674,7 +196236,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.862,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0343,
+       "expected_td": 0.536
       }
      }
     }
@@ -196160,7 +196724,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1064,
+       "expected_td": 0.562
       }
      }
     }
@@ -196849,7 +197415,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.147,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0182,
+       "expected_td": 0.326
       }
      }
     }
@@ -197285,7 +197853,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.12,
        "matchup_grade_adj": 1.147,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0391,
+       "expected_td": 0.574
       }
      }
     }
@@ -198043,7 +198613,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0492,
+       "expected_td": 0.266
       }
      },
      "player_receptions": {
@@ -198070,7 +198642,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0492,
+       "expected_td": 0.266
       }
      }
     }
@@ -199301,15 +199875,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 56.5,
-      "projection": 138.8,
-      "edge_pct": 145.7,
+      "projection": 122.6,
+      "edge_pct": 117.0,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 21.54,
        "efficiency": 6.055,
-       "opp_adj": 1.064
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 13.0 2024 games",
@@ -199322,7 +199896,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.024,
        "matchup_grade_adj": 1.039,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.088,
+       "expected_td": 1.896
       }
      }
     }
@@ -199585,21 +200161,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.043,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0869,
+       "expected_td": 0.298
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 145.5,
-      "projection": 255.4,
-      "edge_pct": 75.5,
+      "projection": 225.7,
+      "edge_pct": 55.1,
       "over_price": -115.0,
       "under_price": -113.0,
       "n_books": "5",
       "components": {
        "volume": 35.63,
        "efficiency": 6.737,
-       "opp_adj": 1.064
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 13.0 2024 games",
@@ -199612,7 +200190,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.024,
        "matchup_grade_adj": 1.039,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.096,
+       "expected_td": 3.42
       }
      }
     }
@@ -199866,7 +200446,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.15,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0809,
+       "expected_td": 2.47
       }
      }
     }
@@ -200258,7 +200840,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.043,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0138,
+       "expected_td": 0.059
       }
      }
     }
@@ -200462,7 +201046,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.043,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0478,
+       "expected_td": 0.28
       }
      }
     }
@@ -200744,7 +201330,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.043,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0763,
+       "expected_td": 0.549
       }
      }
     }
@@ -201074,7 +201662,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.043,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1043,
+       "expected_td": 0.635
       }
      }
     }
@@ -201553,7 +202143,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.876,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0633,
+       "expected_td": 1.107
       }
      }
     }
@@ -201807,7 +202399,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.888,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0437,
+       "expected_td": 1.034
       }
      },
      "player_rush_yds": {
@@ -201834,7 +202428,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.876,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0703,
+       "expected_td": 0.999
       }
      }
     }
@@ -202679,7 +203275,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.945,
        "matchup_grade_adj": 1.079,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0391,
+       "expected_td": 0.716
       }
      },
      "player_rush_yds": {
@@ -202706,7 +203304,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.918,
        "matchup_grade_adj": 1.079,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0391,
+       "expected_td": 0.716
       }
      }
     }
@@ -203604,7 +204204,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.225,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0892,
+       "expected_td": 1.891
       }
      }
     }
@@ -204423,7 +205025,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0452,
+       "expected_td": 0.225
       }
      },
      "player_receptions": {
@@ -204450,7 +205054,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0452,
+       "expected_td": 0.225
       }
      }
     }
@@ -204786,7 +205392,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0565,
+       "expected_td": 0.169
       }
      }
     }
@@ -205062,7 +205670,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1316,
+       "expected_td": 0.704
       }
      },
      "player_receptions": {
@@ -205089,7 +205699,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1316,
+       "expected_td": 0.704
       }
      }
     }
@@ -205577,7 +206189,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1243,
+       "expected_td": 0.991
       }
      },
      "player_receptions": {
@@ -205604,7 +206218,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.064,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1243,
+       "expected_td": 0.991
       }
      }
     }
@@ -207040,15 +207656,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 13.5,
-      "projection": 2.7,
-      "edge_pct": -80.0,
+      "projection": 4.2,
+      "edge_pct": -68.9,
       "over_price": -120.0,
       "under_price": -110.0,
       "n_books": "1",
       "components": {
        "volume": 2.77,
        "efficiency": null,
-       "opp_adj": 0.964
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 6.0 2024 games",
@@ -207061,21 +207677,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.943,
        "matchup_grade_adj": 1.023,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0656,
+       "expected_td": 0.182
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 55.5,
-      "projection": 13.5,
-      "edge_pct": -75.7,
+      "projection": 22.1,
+      "edge_pct": -60.2,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 2.77,
        "efficiency": 5.221,
-       "opp_adj": 0.935
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 6.0 2024 games",
@@ -207088,7 +207706,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.914,
        "matchup_grade_adj": 1.023,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0656,
+       "expected_td": 0.182
       }
      }
     }
@@ -207385,21 +208005,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.936,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0449,
+       "expected_td": 1.016
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 11.5,
-      "projection": 3.6,
-      "edge_pct": -68.7,
+      "projection": 5.7,
+      "edge_pct": -50.4,
       "over_price": -130.0,
       "under_price": 100.0,
       "n_books": "1",
       "components": {
        "volume": 3.75,
        "efficiency": null,
-       "opp_adj": 0.964
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 12.0 2024 games",
@@ -207412,21 +208034,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.943,
        "matchup_grade_adj": 1.023,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0747,
+       "expected_td": 0.28
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 44.5,
-      "projection": 18.2,
-      "edge_pct": -59.1,
+      "projection": 29.8,
+      "edge_pct": -33.0,
       "over_price": -115.0,
       "under_price": -113.0,
       "n_books": "5",
       "components": {
        "volume": 3.75,
        "efficiency": 5.185,
-       "opp_adj": 0.935
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 12.0 2024 games",
@@ -207439,7 +208063,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.914,
        "matchup_grade_adj": 1.023,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0747,
+       "expected_td": 0.28
       }
      }
     }
@@ -207697,7 +208323,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.939,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0276,
+       "expected_td": 0.104
       }
      }
     }
@@ -207931,7 +208559,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      },
      "player_receptions": {
@@ -207958,7 +208588,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -208354,7 +208986,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0421,
+       "expected_td": 0.212
       }
      },
      "player_receptions": {
@@ -208381,7 +209015,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0421,
+       "expected_td": 0.212
       }
      }
     }
@@ -208631,7 +209267,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0615,
+       "expected_td": 0.306
       }
      },
      "player_receptions": {
@@ -208658,7 +209296,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0615,
+       "expected_td": 0.306
       }
      }
     }
@@ -209210,7 +209850,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1552,
+       "expected_td": 0.399
       }
      }
     }
@@ -209476,7 +210118,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0761,
+       "expected_td": 0.537
       }
      },
      "player_receptions": {
@@ -209503,7 +210147,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0761,
+       "expected_td": 0.537
       }
      }
     }
@@ -209724,15 +210370,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 136.5,
-      "projection": 351.8,
-      "edge_pct": 157.7,
+      "projection": 212.5,
+      "edge_pct": 55.7,
       "over_price": -113.5,
       "under_price": -113.5,
       "n_books": "4",
       "components": {
        "volume": 38.9,
        "efficiency": 5.751,
-       "opp_adj": 1.573
+       "opp_adj": 0.95
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 0 2024 games",
@@ -209745,7 +210391,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.209,
        "matchup_grade_adj": 1.301,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1131,
+       "expected_td": 4.399
       }
      }
     }
@@ -210585,7 +211233,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.071,
+       "expected_td": 2.143
       }
      }
     }
@@ -211117,7 +211767,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.112,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.05,
+       "expected_td": 0.215
       }
      }
     }
@@ -212177,7 +212829,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.968,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0476,
+       "expected_td": 0.142
       }
      }
     }
@@ -212598,7 +213252,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.982,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -212806,7 +213462,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1296,
+       "expected_td": 0.88
       }
      }
     }
@@ -214359,7 +215017,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      },
      "player_rush_attempts": {
@@ -214386,7 +215046,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.099,
        "matchup_grade_adj": 1.063,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0768,
+       "expected_td": 2.086
       }
      },
      "player_rush_yds": {
@@ -214413,7 +215075,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.148,
        "matchup_grade_adj": 1.063,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0768,
+       "expected_td": 2.086
       }
      }
     }
@@ -215316,7 +215980,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.92,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0468,
+       "expected_td": 1.627
       }
      },
      "player_rush_attempts": {
@@ -215343,7 +216009,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.099,
        "matchup_grade_adj": 1.063,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0556,
+       "expected_td": 0.898
       }
      },
      "player_rush_yds": {
@@ -215370,7 +216038,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.148,
        "matchup_grade_adj": 1.063,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0556,
+       "expected_td": 0.898
       }
      }
     }
@@ -215826,7 +216496,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0915,
+       "expected_td": 0.426
       }
      },
      "player_receptions": {
@@ -215853,7 +216525,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0915,
+       "expected_td": 0.426
       }
      }
     }
@@ -216339,7 +217013,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0644,
+       "expected_td": 0.426
       }
      },
      "player_receptions": {
@@ -216366,7 +217042,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0644,
+       "expected_td": 0.426
       }
      }
     }
@@ -216589,7 +217267,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0238,
+       "expected_td": 0.142
       }
      },
      "player_receptions": {
@@ -216616,7 +217296,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0238,
+       "expected_td": 0.142
       }
      }
     }
@@ -216894,7 +217576,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0342,
+       "expected_td": 0.256
       }
      },
      "player_receptions": {
@@ -216921,7 +217605,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.977,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0342,
+       "expected_td": 0.256
       }
      }
     }
@@ -217789,7 +218475,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.865,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0755,
+       "expected_td": 0.523
       }
      }
     }
@@ -218414,7 +219102,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.865,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1646,
+       "expected_td": 1.698
       }
      }
     }
@@ -218864,7 +219554,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.865,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0602,
+       "expected_td": 0.848
       }
      }
     }
@@ -219285,7 +219977,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.943,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0784,
+       "expected_td": 1.711
       }
      },
      "player_rush_yds": {
@@ -219312,7 +220006,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.865,
        "matchup_grade_adj": 1.112,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -219763,7 +220459,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.048,
+       "expected_td": 0.125
       }
      }
     }
@@ -219997,7 +220695,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1569,
+       "expected_td": 0.637
       }
      },
      "player_receptions": {
@@ -220024,7 +220724,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1569,
+       "expected_td": 0.637
       }
      }
     }
@@ -221053,7 +221755,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0556,
+       "expected_td": 0.149
       }
      },
      "player_receptions": {
@@ -221080,7 +221784,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0556,
+       "expected_td": 0.149
       }
      }
     }
@@ -221356,7 +222062,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0629,
+       "expected_td": 0.248
       }
      },
      "player_receptions": {
@@ -221383,7 +222091,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.984,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0629,
+       "expected_td": 0.248
       }
      }
     }
@@ -221625,15 +222335,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 21.5,
-      "projection": 7.4,
-      "edge_pct": -65.6,
+      "projection": 10.3,
+      "edge_pct": -52.1,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 6.71,
        "efficiency": null,
-       "opp_adj": 1.102
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -221646,7 +222356,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.102,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0455,
+       "expected_td": 0.305
       }
      }
     }
@@ -223745,7 +224457,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.995,
        "matchup_grade_adj": 1.001,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0472,
+       "expected_td": 1.232
       }
      }
     }
@@ -224027,15 +224741,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 21.5,
-      "projection": 53.0,
-      "edge_pct": 146.5,
+      "projection": 35.2,
+      "edge_pct": 63.7,
       "over_price": -105.0,
       "under_price": -125.0,
       "n_books": "1",
       "components": {
        "volume": 31.89,
        "efficiency": null,
-       "opp_adj": 1.662
+       "opp_adj": 1.104
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 13.0 2024 games",
@@ -224048,21 +224762,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.128,
        "matchup_grade_adj": 1.473,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0673,
+       "expected_td": 2.146
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 123.5,
-      "projection": 302.2,
-      "edge_pct": 144.7,
+      "projection": 189.9,
+      "edge_pct": 53.8,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "4",
       "components": {
        "volume": 31.89,
        "efficiency": 5.394,
-       "opp_adj": 1.757
+       "opp_adj": 1.104
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 13.0 2024 games",
@@ -224075,7 +224791,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.192,
        "matchup_grade_adj": 1.473,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0673,
+       "expected_td": 2.146
       }
      }
     }
@@ -224338,21 +225056,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.148,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0593,
+       "expected_td": 0.196
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 58.5,
-      "projection": 176.2,
-      "edge_pct": 201.2,
+      "projection": 110.7,
+      "edge_pct": 89.2,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "4",
       "components": {
        "volume": 21.31,
        "efficiency": 4.708,
-       "opp_adj": 1.757
+       "opp_adj": 1.104
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -224365,7 +225085,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.192,
        "matchup_grade_adj": 1.473,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0852,
+       "expected_td": 1.816
       }
      }
     }
@@ -224832,7 +225554,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.552,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.048,
+       "expected_td": 1.625
       }
      },
      "player_rush_attempts": {
@@ -224859,7 +225583,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.996,
        "matchup_grade_adj": 1.001,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1131,
+       "expected_td": 1.23
       }
      },
      "player_rush_yds": {
@@ -224886,7 +225612,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.995,
        "matchup_grade_adj": 1.001,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1131,
+       "expected_td": 1.23
       }
      }
     }
@@ -225326,7 +226054,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1111,
+       "expected_td": 0.493
       }
      }
     }
@@ -226028,7 +226758,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0943,
+       "expected_td": 0.375
       }
      }
     }
@@ -226262,7 +226994,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0293,
+       "expected_td": 0.165
       }
      }
     }
@@ -226496,7 +227230,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.148,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1171,
+       "expected_td": 0.726
       }
      }
     }
@@ -226880,7 +227616,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.148,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.038,
+       "expected_td": 0.279
       }
      }
     }
@@ -227305,15 +228043,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 46.5,
-      "projection": 21.0,
-      "edge_pct": -54.8,
+      "projection": 29.8,
+      "edge_pct": -35.9,
       "over_price": -114.5,
       "under_price": -114.5,
       "n_books": "4",
       "components": {
        "volume": 6.87,
        "efficiency": 5.323,
-       "opp_adj": 0.576
+       "opp_adj": 0.816
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 0 2024 games",
@@ -227326,7 +228064,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.759,
        "matchup_grade_adj": 0.759,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0625,
+       "expected_td": 0.429
       }
      }
     }
@@ -228007,15 +228747,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 243.5,
-      "projection": 111.7,
-      "edge_pct": -54.1,
+      "projection": 115.8,
+      "edge_pct": -52.4,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 25.34,
        "efficiency": 7.566,
-       "opp_adj": 0.583
+       "opp_adj": 0.604
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 0 2024 games",
@@ -228028,21 +228768,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.583,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0571,
+       "expected_td": 1.448
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 12.5,
-      "projection": 12.1,
-      "edge_pct": -3.2,
+      "projection": 17.2,
+      "edge_pct": 37.6,
       "over_price": -113.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 3.83,
        "efficiency": 5.507,
-       "opp_adj": 0.576
+       "opp_adj": 0.816
       },
       "breakdown": {
        "volume_source": "blended: 8 2025 games + 0 2024 games",
@@ -228055,7 +228797,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.759,
        "matchup_grade_adj": 0.759,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.04,
+       "expected_td": 0.153
       }
      }
     }
@@ -229128,7 +229872,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.881,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0813,
+       "expected_td": 0.22
       }
      }
     }
@@ -229609,7 +230355,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.881,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0861,
+       "expected_td": 0.423
       }
      },
      "player_receptions": {
@@ -229636,7 +230384,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.881,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0861,
+       "expected_td": 0.423
       }
      }
     }
@@ -230004,15 +230754,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 37.5,
-      "projection": 1.2,
-      "edge_pct": -96.8,
+      "projection": 10.4,
+      "edge_pct": -72.3,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 0.58,
        "efficiency": 5.041,
-       "opp_adj": 0.41
+       "opp_adj": 3.571
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 1.0 2024 games",
@@ -230025,7 +230775,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.657,
        "matchup_grade_adj": 0.625,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0345,
+       "expected_td": 0.02
       }
      }
     }
@@ -230896,15 +231648,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 143.5,
-      "projection": 62.6,
-      "edge_pct": -56.4,
+      "projection": 74.8,
+      "edge_pct": -47.9,
       "over_price": -112.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 16.27,
        "efficiency": 6.76,
-       "opp_adj": 0.57
+       "opp_adj": 0.68
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 8.0 2024 games",
@@ -230917,7 +231669,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.57,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0331,
+       "expected_td": 0.539
       }
      }
     }
@@ -232743,7 +233497,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.877,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0135,
+       "expected_td": 0.049
       }
      },
      "player_receptions": {
@@ -232770,7 +233526,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.877,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0135,
+       "expected_td": 0.049
       }
      }
     }
@@ -234373,15 +235131,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 17.5,
-      "projection": 8.1,
-      "edge_pct": -53.7,
+      "projection": 8.4,
+      "edge_pct": -52.0,
       "over_price": -120.0,
       "under_price": -110.0,
       "n_books": "1",
       "components": {
        "volume": 6.22,
        "efficiency": null,
-       "opp_adj": 1.296
+       "opp_adj": 1.347
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -234394,21 +235152,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.237,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0566,
+       "expected_td": 0.352
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 77.5,
-      "projection": 40.1,
-      "edge_pct": -48.3,
+      "projection": 40.7,
+      "edge_pct": -47.5,
       "over_price": -117.5,
       "under_price": -114.0,
       "n_books": "4",
       "components": {
        "volume": 6.22,
        "efficiency": 4.858,
-       "opp_adj": 1.326
+       "opp_adj": 1.347
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -234421,7 +235181,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.072,
        "matchup_grade_adj": 1.237,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0566,
+       "expected_td": 0.352
       }
      }
     }
@@ -235413,7 +236175,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.87,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0483,
+       "expected_td": 1.242
       }
      }
     }
@@ -236568,7 +237332,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.963,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.074,
+       "expected_td": 0.42
       }
      }
     }
@@ -236770,7 +237536,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.963,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0662,
+       "expected_td": 0.347
       }
      }
     }
@@ -237595,15 +238363,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 64.5,
-      "projection": 11.4,
-      "edge_pct": -82.3,
+      "projection": 30.8,
+      "edge_pct": -52.2,
       "over_price": -113.5,
       "under_price": -113.5,
       "n_books": "2",
       "components": {
        "volume": 5.22,
        "efficiency": 4.446,
-       "opp_adj": 0.491
+       "opp_adj": 1.327
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 11.0 2024 games",
@@ -237616,7 +238384,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.83,
        "matchup_grade_adj": 0.592,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0582,
+       "expected_td": 0.304
       }
      }
     }
@@ -237889,15 +238659,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 74.0,
-      "projection": 188.5,
-      "edge_pct": 154.7,
+      "projection": 130.7,
+      "edge_pct": 76.6,
       "over_price": -112.5,
       "under_price": -114.0,
       "n_books": "2",
       "components": {
        "volume": 25.1,
        "efficiency": 4.658,
-       "opp_adj": 1.612
+       "opp_adj": 1.118
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -237910,7 +238680,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.139,
        "matchup_grade_adj": 1.415,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0348,
+       "expected_td": 0.875
       }
      }
     }
@@ -238167,7 +238939,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.688,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0615,
+       "expected_td": 2.528
       }
      }
     }
@@ -238793,7 +239567,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.062,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0541,
+       "expected_td": 0.208
       }
      }
     }
@@ -239463,7 +240239,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.911,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0744,
+       "expected_td": 0.633
       }
      }
     }
@@ -239663,7 +240441,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.911,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0397,
+       "expected_td": 0.252
       }
      }
     }
@@ -243033,7 +243813,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.949,
        "matchup_grade_adj": 0.864,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0405,
+       "expected_td": 0.514
       }
      }
     }
@@ -249195,7 +249977,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.954,
        "matchup_grade_adj": 0.676,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0362,
+       "expected_td": 0.389
       }
      }
     }
@@ -249452,7 +250236,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.623,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0489,
+       "expected_td": 1.071
       }
      },
      "player_rush_yds": {
@@ -249479,7 +250265,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.954,
        "matchup_grade_adj": 0.676,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0496,
+       "expected_td": 0.518
       }
      }
     }
@@ -251228,7 +252016,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.877,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0615,
+       "expected_td": 0.196
       }
      },
      "player_receptions": {
@@ -251255,7 +252045,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.877,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0615,
+       "expected_td": 0.196
       }
      }
     }
@@ -251485,7 +252277,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.892,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1132,
+       "expected_td": 0.401
       }
      }
     }
@@ -252363,15 +253157,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 164.0,
-      "projection": 53.3,
-      "edge_pct": -67.5,
+      "projection": 79.3,
+      "edge_pct": -51.6,
       "over_price": -113.5,
       "under_price": -113.5,
       "n_books": "2",
       "components": {
        "volume": 16.15,
        "efficiency": 7.049,
-       "opp_adj": 0.468
+       "opp_adj": 0.696
       },
       "breakdown": {
        "volume_source": "blended: 5 2025 games + 10.0 2024 games",
@@ -252384,7 +253178,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.468,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0415,
+       "expected_td": 0.67
       }
      }
     }
@@ -253077,7 +253873,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0746,
+       "expected_td": 0.125
       }
      },
      "player_receptions": {
@@ -253104,7 +253902,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0746,
+       "expected_td": 0.125
       }
      }
     }
@@ -254136,15 +254936,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 27.5,
-      "projection": 10.0,
-      "edge_pct": -63.6,
+      "projection": 18.5,
+      "edge_pct": -32.7,
       "over_price": -113.0,
       "under_price": -113.0,
       "n_books": "1",
       "components": {
        "volume": 2.7,
        "efficiency": 4.479,
-       "opp_adj": 0.822
+       "opp_adj": 1.531
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -254157,7 +254957,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.908,
        "matchup_grade_adj": 0.906,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.022,
+       "expected_td": 0.059
       }
      }
     }
@@ -256827,15 +257629,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 48.5,
-      "projection": 4.9,
-      "edge_pct": -89.9,
+      "projection": 31.0,
+      "edge_pct": -36.1,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 1.9,
        "efficiency": 4.556,
-       "opp_adj": 0.562
+       "opp_adj": 3.571
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 9.0 2024 games",
@@ -256848,7 +257650,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.899,
        "matchup_grade_adj": 0.625,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0226,
+       "expected_td": 0.043
       }
      }
     }
@@ -257813,7 +258617,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.878,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0295,
+       "expected_td": 0.14
       }
      }
     }
@@ -258226,7 +259032,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.878,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0678,
+       "expected_td": 0.327
       }
      }
     }
@@ -258432,7 +259240,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.878,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0204,
+       "expected_td": 0.067
       }
      }
     }
@@ -265164,7 +265974,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.605,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0726,
+       "expected_td": 1.871
       }
      }
     }
@@ -265950,7 +266762,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.887,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0714,
+       "expected_td": 0.333
       }
      }
     }
@@ -266232,7 +267046,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.887,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0816,
+       "expected_td": 0.333
       }
      }
     }
@@ -266859,7 +267675,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      },
      "player_rush_yds": {
@@ -266886,7 +267704,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 0.903,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0765,
+       "expected_td": 1.253
       }
      }
     }
@@ -267869,7 +268689,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.168,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0645,
+       "expected_td": 2.702
       }
      },
      "player_rush_yds": {
@@ -267896,7 +268718,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.924,
        "matchup_grade_adj": 0.903,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0548,
+       "expected_td": 0.354
       }
      }
     }
@@ -268614,7 +269438,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0645,
+       "expected_td": 0.517
       }
      },
      "player_receptions": {
@@ -268641,7 +269467,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0645,
+       "expected_td": 0.517
       }
      }
     }
@@ -268867,7 +269695,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0928,
+       "expected_td": 0.742
       }
      },
      "player_receptions": {
@@ -268894,7 +269724,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0928,
+       "expected_td": 0.742
       }
      }
     }
@@ -269100,7 +269932,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0742,
+       "expected_td": 0.407
       }
      },
      "player_receptions": {
@@ -269127,7 +269961,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0742,
+       "expected_td": 0.407
       }
      }
     }
@@ -269384,7 +270220,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.794,
        "matchup_grade_adj": 0.968,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -269826,7 +270664,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.055,
        "matchup_grade_adj": 0.977,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0473,
+       "expected_td": 0.825
       }
      }
     }
@@ -270433,7 +271273,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.052,
        "matchup_grade_adj": 0.743,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0213,
+       "expected_td": 0.229
       }
      }
     }
@@ -270709,15 +271551,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 242.5,
-      "projection": 75.7,
-      "edge_pct": -68.8,
+      "projection": 104.7,
+      "edge_pct": -56.8,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 25.68,
        "efficiency": 8.116,
-       "opp_adj": 0.363
+       "opp_adj": 0.502
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 8.0 2024 games",
@@ -270730,7 +271572,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.363,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0711,
+       "expected_td": 1.825
       }
      },
      "player_rush_yds": {
@@ -270757,7 +271601,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.794,
        "matchup_grade_adj": 0.968,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1241,
+       "expected_td": 0.538
       }
      }
     }
@@ -271065,7 +271911,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0503,
+       "expected_td": 0.19
       }
      },
      "player_receptions": {
@@ -271092,7 +271940,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0503,
+       "expected_td": 0.19
       }
      }
     }
@@ -271484,7 +272334,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.081,
+       "expected_td": 0.42
       }
      },
      "player_receptions": {
@@ -271511,7 +272363,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.081,
+       "expected_td": 0.42
       }
      }
     }
@@ -271713,7 +272567,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0827,
+       "expected_td": 0.512
       }
      },
      "player_receptions": {
@@ -271740,7 +272596,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0827,
+       "expected_td": 0.512
       }
      }
     }
@@ -271980,7 +272838,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0714,
+       "expected_td": 0.439
       }
      },
      "player_receptions": {
@@ -272007,7 +272867,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.818,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0714,
+       "expected_td": 0.439
       }
      }
     }
@@ -273096,7 +273958,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.912,
        "matchup_grade_adj": 0.83,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.045,
+       "expected_td": 0.425
       }
      },
      "player_rush_yds": {
@@ -273123,7 +273987,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.867,
        "matchup_grade_adj": 0.83,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.045,
+       "expected_td": 0.425
       }
      }
     }
@@ -273427,7 +274293,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.976,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0767,
+       "expected_td": 2.145
       }
      },
      "player_rush_attempts": {
@@ -273454,7 +274322,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.912,
        "matchup_grade_adj": 0.83,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0718,
+       "expected_td": 0.666
       }
      },
      "player_rush_yds": {
@@ -273481,7 +274351,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.867,
        "matchup_grade_adj": 0.83,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0718,
+       "expected_td": 0.666
       }
      }
     }
@@ -274493,7 +275365,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1367,
+       "expected_td": 0.457
       }
      }
     }
@@ -274721,7 +275595,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.101,
+       "expected_td": 0.487
       }
      },
      "player_receptions": {
@@ -274748,7 +275624,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.101,
+       "expected_td": 0.487
       }
      }
     }
@@ -274989,7 +275867,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0938,
+       "expected_td": 0.792
       }
      },
      "player_receptions": {
@@ -275016,7 +275896,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0938,
+       "expected_td": 0.792
       }
      }
     }
@@ -275264,7 +276146,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0655,
+       "expected_td": 0.411
       }
      },
      "player_receptions": {
@@ -275291,7 +276175,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.993,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0655,
+       "expected_td": 0.411
       }
      }
     }
@@ -278360,7 +279246,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.857,
        "matchup_grade_adj": 1.081,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0747,
+       "expected_td": 2.097
       }
      }
     }
@@ -278663,7 +279551,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.857,
        "matchup_grade_adj": 1.081,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0442,
+       "expected_td": 0.858
       }
      }
     }
@@ -278939,7 +279829,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.157,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0662,
+       "expected_td": 2.47
       }
      }
     }
@@ -280120,7 +281012,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.045,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0656,
+       "expected_td": 0.576
       }
      }
     }
@@ -280316,7 +281210,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.045,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0756,
+       "expected_td": 0.529
       }
      }
     }
@@ -280748,7 +281644,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.881,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0657,
+       "expected_td": 0.331
       }
      },
      "player_receptions": {
@@ -280775,7 +281673,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.881,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0657,
+       "expected_td": 0.331
       }
      }
     }
@@ -281040,7 +281940,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.922,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0397,
+       "expected_td": 0.123
       }
      }
     }
@@ -281444,7 +282346,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.045,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0888,
+       "expected_td": 0.741
       }
      }
     }
@@ -292751,15 +293655,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 26.5,
-      "projection": 9.0,
-      "edge_pct": -66.0,
+      "projection": 26.1,
+      "edge_pct": -1.5,
       "over_price": -113.0,
       "under_price": -113.0,
       "n_books": "1",
       "components": {
        "volume": 1.75,
        "efficiency": 6.939,
-       "opp_adj": 0.742
+       "opp_adj": 2.143
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -292772,7 +293676,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.873,
        "matchup_grade_adj": 0.851,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0976,
+       "expected_td": 0.171
       }
      }
     }
@@ -293009,15 +293915,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 54.5,
-      "projection": 9.8,
-      "edge_pct": -82.0,
+      "projection": 28.4,
+      "edge_pct": -47.9,
       "over_price": -115.0,
       "under_price": -113.0,
       "n_books": "3",
       "components": {
        "volume": 2.62,
        "efficiency": 5.057,
-       "opp_adj": 0.742
+       "opp_adj": 2.143
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 10.0 2024 games",
@@ -293030,7 +293936,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.873,
        "matchup_grade_adj": 0.851,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.033,
+       "expected_td": 0.087
       }
      }
     }
@@ -294198,7 +295106,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.961,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0693,
+       "expected_td": 0.243
       }
      }
     }
@@ -294642,7 +295552,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.961,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.007,
+       "expected_td": 0.024
       }
      }
     }
@@ -296289,15 +297201,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 22.5,
-      "projection": 5.3,
-      "edge_pct": -76.4,
+      "projection": 13.8,
+      "edge_pct": -38.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 0.95,
        "efficiency": 4.229,
-       "opp_adj": 1.327
+       "opp_adj": 3.437
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 8.0 2024 games",
@@ -296310,7 +297222,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.184,
        "matchup_grade_adj": 1.12,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0204,
+       "expected_td": 0.019
       }
      }
     }
@@ -297955,7 +298869,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.024,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.038,
+       "expected_td": 0.127
       }
      }
     }
@@ -305566,7 +306482,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.018,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
       }
      }
     }
@@ -309589,15 +310507,15 @@
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 17.5,
-      "projection": 32.8,
-      "edge_pct": 87.4,
+      "projection": 25.1,
+      "edge_pct": 43.4,
       "over_price": -120.0,
       "under_price": -110.0,
       "n_books": "1",
       "components": {
        "volume": 26.68,
        "efficiency": null,
-       "opp_adj": 1.23
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 0 2024 games",
@@ -309610,21 +310528,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.239,
        "matchup_grade_adj": 0.993,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0439,
+       "expected_td": 1.17
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 112.5,
-      "projection": 215.9,
-      "edge_pct": 91.9,
+      "projection": 150.4,
+      "edge_pct": 33.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 26.68,
        "efficiency": 5.998,
-       "opp_adj": 1.349
+       "opp_adj": 0.94
       },
       "breakdown": {
        "volume_source": "blended: 10 2025 games + 0 2024 games",
@@ -309637,7 +310557,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.359,
        "matchup_grade_adj": 0.993,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0439,
+       "expected_td": 1.17
       }
      }
     }
@@ -310115,7 +311037,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.499,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0592,
+       "expected_td": 2.114
       }
      }
     }
@@ -310373,7 +311297,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.051,
+       "expected_td": 0.247
       }
      }
     }
@@ -310569,7 +311495,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0802,
+       "expected_td": 0.617
       }
      },
      "player_receptions": {
@@ -310596,7 +311524,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0802,
+       "expected_td": 0.617
       }
      }
     }
@@ -310944,7 +311874,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0875,
+       "expected_td": 0.913
       }
      },
      "player_receptions": {
@@ -310971,7 +311903,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0875,
+       "expected_td": 0.913
       }
      }
     }
@@ -311247,7 +312181,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0571,
+       "expected_td": 0.225
       }
      }
     }
@@ -311521,7 +312457,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0994,
+       "expected_td": 0.38
       }
      },
      "player_receptions": {
@@ -311548,7 +312486,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.964,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0994,
+       "expected_td": 0.38
       }
      }
     }
@@ -316280,7 +317220,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.979,
        "matchup_grade_adj": 1.062,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0446,
+       "expected_td": 0.89
       }
      }
     }
@@ -316748,7 +317690,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0561,
+       "expected_td": 2.082
       }
      },
      "player_rush_yds": {
@@ -316775,7 +317719,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.979,
        "matchup_grade_adj": 1.062,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0821,
+       "expected_td": 1.733
       }
      }
     }
@@ -317033,7 +317979,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0794,
+       "expected_td": 0.422
       }
      },
      "player_receptions": {
@@ -317060,7 +318008,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0794,
+       "expected_td": 0.422
       }
      }
     }
@@ -317989,7 +318939,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.004,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1066,
+       "expected_td": 0.392
       }
      }
     }
@@ -319045,7 +319997,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.926,
        "matchup_grade_adj": 1.038,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0551,
+       "expected_td": 0.453
       }
      }
     }
@@ -319484,15 +320438,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 222.5,
-      "projection": 40.6,
-      "edge_pct": -81.8,
+      "projection": 93.9,
+      "edge_pct": -57.8,
       "over_price": -114.5,
       "under_price": -114.0,
       "n_books": "4",
       "components": {
        "volume": 24.76,
        "efficiency": 7.821,
-       "opp_adj": 0.21
+       "opp_adj": 0.485
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -319505,7 +320459,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.21,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0636,
+       "expected_td": 1.574
       }
      },
      "player_rush_attempts": {
@@ -319532,7 +320488,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.95,
        "matchup_grade_adj": 1.038,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0659,
+       "expected_td": 0.661
       }
      },
      "player_rush_yds": {
@@ -319559,7 +320517,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.926,
        "matchup_grade_adj": 1.038,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0659,
+       "expected_td": 0.661
       }
      }
     }
@@ -320580,7 +321540,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.774,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0916,
+       "expected_td": 0.481
       }
      },
      "player_receptions": {
@@ -320607,7 +321569,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.774,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0916,
+       "expected_td": 0.481
       }
      }
     }
@@ -321911,7 +322875,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1688,
+       "expected_td": 0.361
       }
      },
      "player_receptions": {
@@ -321938,7 +322904,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1688,
+       "expected_td": 0.361
       }
      },
      "player_rush_yds": {
@@ -321965,7 +322933,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 0.956,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0713,
+       "expected_td": 0.749
       }
      }
     }
@@ -322415,7 +323385,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.054,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0783,
+       "expected_td": 2.636
       }
      },
      "player_rush_yds": {
@@ -322442,7 +323414,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.158,
        "matchup_grade_adj": 0.956,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0551,
+       "expected_td": 0.749
       }
      }
     }
@@ -322834,7 +323808,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0539,
+       "expected_td": 0.444
       }
      },
      "player_receptions": {
@@ -322861,7 +323837,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0539,
+       "expected_td": 0.444
       }
      }
     }
@@ -323549,7 +324527,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1043,
+       "expected_td": 0.666
       }
      },
      "player_receptions": {
@@ -323576,7 +324556,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.015,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1043,
+       "expected_td": 0.666
       }
      }
     }
@@ -324482,7 +325464,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.066,
        "matchup_grade_adj": 1.059,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0695,
+       "expected_td": 1.81
       }
      }
     }
@@ -325622,7 +326606,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.727,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0459,
+       "expected_td": 0.892
       }
      }
     }
@@ -325884,7 +326870,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.41,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0492,
+       "expected_td": 1.868
       }
      }
     }
@@ -326568,7 +327556,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0359,
+       "expected_td": 0.247
       }
      },
      "player_receptions": {
@@ -326595,7 +327585,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0359,
+       "expected_td": 0.247
       }
      }
     }
@@ -326831,7 +327823,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0549,
+       "expected_td": 0.169
       }
      },
      "player_receptions": {
@@ -326858,7 +327852,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.027,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0549,
+       "expected_td": 0.169
       }
      }
     }
@@ -327084,7 +328080,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.018,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0035,
+       "expected_td": 0.019
       }
      },
      "player_receptions": {
@@ -327111,7 +328109,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.018,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0035,
+       "expected_td": 0.019
       }
      }
     }
@@ -327425,7 +328425,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0233,
+       "expected_td": 0.138
       }
      },
      "player_receptions": {
@@ -327452,7 +328454,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.117,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0233,
+       "expected_td": 0.138
       }
      }
     }
@@ -328728,15 +329732,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 55.5,
-      "projection": 23.6,
-      "edge_pct": -57.5,
+      "projection": 31.7,
+      "edge_pct": -42.9,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 6.49,
        "efficiency": 5.851,
-       "opp_adj": 0.62
+       "opp_adj": 0.833
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 0 2024 games",
@@ -328749,7 +329753,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.916,
        "matchup_grade_adj": 0.677,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0084,
+       "expected_td": 0.055
       }
      }
     }
@@ -329635,21 +330641,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.591,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.051,
+       "expected_td": 1.199
       }
      },
      "player_rush_attempts": {
       "stat": "rush_att",
       "book_line": 14.5,
-      "projection": 4.5,
-      "edge_pct": -69.0,
+      "projection": 5.9,
+      "edge_pct": -59.3,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "1",
       "components": {
        "volume": 7.07,
        "efficiency": null,
-       "opp_adj": 0.639
+       "opp_adj": 0.833
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -329662,21 +330670,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.944,
        "matchup_grade_adj": 0.677,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.066,
+       "expected_td": 0.467
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 54.5,
-      "projection": 23.5,
-      "edge_pct": -56.9,
+      "projection": 31.6,
+      "edge_pct": -42.0,
       "over_price": -115.0,
       "under_price": -113.0,
       "n_books": "5",
       "components": {
        "volume": 7.07,
        "efficiency": 5.362,
-       "opp_adj": 0.62
+       "opp_adj": 0.833
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 9.0 2024 games",
@@ -329689,7 +330699,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.916,
        "matchup_grade_adj": 0.677,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.066,
+       "expected_td": 0.467
       }
      }
     }
@@ -330508,7 +331520,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0509,
+       "expected_td": 0.215
       }
      },
      "player_receptions": {
@@ -330535,7 +331549,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0509,
+       "expected_td": 0.215
       }
      }
     }
@@ -331157,7 +332173,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.826,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.043,
+       "expected_td": 0.262
       }
      }
     }
@@ -331399,7 +332417,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0891,
+       "expected_td": 0.22
       }
      },
      "player_receptions": {
@@ -331426,7 +332446,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.883,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0891,
+       "expected_td": 0.22
       }
      }
     }
@@ -331721,7 +332743,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.002,
        "matchup_grade_adj": 0.827,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0564,
+       "expected_td": 0.841
       }
      },
      "player_rush_yds": {
@@ -331748,7 +332772,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.002,
        "matchup_grade_adj": 0.827,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0564,
+       "expected_td": 0.841
       }
      }
     }
@@ -332597,7 +333623,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.07,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0424,
+       "expected_td": 0.898
       }
      }
     }
@@ -332860,7 +333888,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.39,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0304,
+       "expected_td": 0.574
       }
      },
      "player_rush_attempts": {
@@ -332887,7 +333917,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.002,
        "matchup_grade_adj": 0.827,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0611,
+       "expected_td": 0.462
       }
      },
      "player_rush_yds": {
@@ -332914,7 +333946,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.002,
        "matchup_grade_adj": 0.827,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0611,
+       "expected_td": 0.462
       }
      }
     }
@@ -334648,7 +335682,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.05,
+       "expected_td": 0.125
       }
      },
      "player_rush_yds": {
@@ -334675,7 +335711,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.902,
        "matchup_grade_adj": 0.992,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.088,
+       "expected_td": 0.784
       }
      }
     }
@@ -334908,15 +335946,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 209.5,
-      "projection": 83.4,
-      "edge_pct": -60.2,
+      "projection": 93.5,
+      "edge_pct": -55.4,
       "over_price": -114.5,
       "under_price": -113.5,
       "n_books": "4",
       "components": {
        "volume": 19.03,
        "efficiency": 8.621,
-       "opp_adj": 0.508
+       "opp_adj": 0.57
       },
       "breakdown": {
        "volume_source": "blended: 11 2025 games + 12.0 2024 games",
@@ -334929,7 +335967,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.508,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0625,
+       "expected_td": 1.189
       }
      },
      "player_rush_yds": {
@@ -334956,7 +335996,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.902,
        "matchup_grade_adj": 0.992,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0514,
+       "expected_td": 0.267
       }
      }
     }
@@ -335157,15 +336199,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 147.5,
-      "projection": 49.3,
-      "edge_pct": -66.6,
+      "projection": 58.6,
+      "edge_pct": -60.3,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 12.66,
        "efficiency": 6.808,
-       "opp_adj": 0.573
+       "opp_adj": 0.68
       },
       "breakdown": {
        "volume_source": "blended: 5 2025 games + 3.0 2024 games",
@@ -335178,7 +336220,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.573,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0366,
+       "expected_td": 0.463
       }
      }
     }
@@ -335430,7 +336474,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0714,
+       "expected_td": 0.188
       }
      }
     }
@@ -336029,7 +337075,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0994,
+       "expected_td": 0.742
       }
      },
      "player_receptions": {
@@ -336056,7 +337104,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0994,
+       "expected_td": 0.742
       }
      }
     }
@@ -336288,7 +337338,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1132,
+       "expected_td": 0.526
       }
      },
      "player_receptions": {
@@ -336315,7 +337367,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1132,
+       "expected_td": 0.526
       }
      }
     }
@@ -336575,7 +337629,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.86,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0804,
+       "expected_td": 0.154
       }
      }
     }
@@ -339693,15 +340749,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 30.5,
-      "projection": 1.4,
-      "edge_pct": -95.4,
+      "projection": 14.7,
+      "edge_pct": -51.8,
       "over_price": -115.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 0.9,
        "efficiency": 4.571,
-       "opp_adj": 0.336
+       "opp_adj": 3.571
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 0 2024 games",
@@ -339714,7 +340770,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.617,
        "matchup_grade_adj": 0.544,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0345,
+       "expected_td": 0.031
       }
      }
     }
@@ -340620,15 +341678,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 150.5,
-      "projection": 27.1,
-      "edge_pct": -82.0,
+      "projection": 63.3,
+      "edge_pct": -57.9,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 12.0,
        "efficiency": 7.755,
-       "opp_adj": 0.291
+       "opp_adj": 0.68
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 0 2024 games",
@@ -340641,21 +341699,23 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.291,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0476,
+       "expected_td": 0.571
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 23.5,
-      "projection": 1.6,
-      "edge_pct": -93.2,
+      "projection": 16.6,
+      "edge_pct": -29.4,
       "over_price": -113.5,
       "under_price": -114.5,
       "n_books": "4",
       "components": {
        "volume": 1.1,
        "efficiency": 4.21,
-       "opp_adj": 0.336
+       "opp_adj": 3.571
       },
       "breakdown": {
        "volume_source": "blended: 9 2025 games + 0 2024 games",
@@ -340668,7 +341728,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 0.617,
        "matchup_grade_adj": 0.544,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0423,
+       "expected_td": 0.046
       }
      }
     }
@@ -345334,7 +346396,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.09,
        "matchup_grade_adj": 1.226,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0455,
+       "expected_td": 0.958
       }
      }
     }
@@ -345970,7 +347034,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.246,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0318,
+       "expected_td": 0.517
       }
      },
      "player_rush_yds": {
@@ -345997,7 +347063,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.09,
        "matchup_grade_adj": 1.226,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.0806,
+       "expected_td": 1.379
       }
      }
     }
@@ -349624,7 +350692,9 @@
        "pff_def_grade_adj_active": false,
        "success_rate_adj": 1.17,
        "matchup_grade_adj": 1.0,
-       "tarp_adj": null
+       "tarp_adj": null,
+       "td_rate": 0.1786,
+       "expected_td": 0.391
       }
      }
     }

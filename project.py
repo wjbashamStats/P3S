@@ -41,7 +41,14 @@ def compute_player_rates(tot):
 
 
 STAT_COLS = ("pass_att", "pass_yds", "rush_att", "rush_yds",
-            "targets", "receptions", "rec_yds")
+            "targets", "receptions", "rec_yds",
+            "pass_td", "rush_td", "rec_td")
+
+# Which TD column shares a market's volume column -- e.g. pass_td happens on
+# pass attempts, so its rate is pass_td / pass_att. Used for DK-style
+# fantasy-point projections (see build_dfs_page_data.py), not the betting
+# projections themselves.
+TD_COL_BY_VOL = {"pass_att": "pass_td", "rush_att": "rush_td", "targets": "rec_td"}
 
 
 def blend_prior_and_current(prior_tot, current_games_list):
@@ -442,6 +449,17 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     base_vol = per_game_vol_override if per_game_vol_override is not None else (total_vol / games)
     per_game_vol = base_vol * vol_adj
     adj = opponent_adj(def_index, opp_tkey, mdef["def_unit"]) * extra_adj
+    # Clamp the TOTAL context multiplier (vol_adj x adj), not adj alone --
+    # vol_adj can independently reach ~2.3x on its own, so bounding adj by
+    # itself doesn't stop the product from still running away. Scale adj
+    # only, so per_game_vol (the "volume" component shown in the impact
+    # page's breakdown) keeps its own untouched meaning.
+    lo, hi = C.TOTAL_ADJ_CLAMP
+    total_mult = vol_adj * adj
+    if total_mult > hi and total_mult > 0:
+        adj *= hi / total_mult
+    elif total_mult < lo:
+        adj *= (lo / total_mult) if total_mult != 0 else 1.0
 
     eff_key = mdef["eff"]
     if eff_key is None:

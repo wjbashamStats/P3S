@@ -8,7 +8,11 @@ projects and the defensive unit that adjusts it.
 import os
 
 # ---------------- SEASON / WEEK ----------------
-SEASON = 2025  # backtest season; override per-run with build.py --season
+# The 2025 season is done and validated (see backtest.py) -- 2026 is now the
+# live season this points at by default. build.py --week N with no --season
+# flag runs live against 2026; pass --season 2025 explicitly to re-run the
+# historical backtest.
+SEASON = 2026  # live season; override per-run with build.py --season
 # Weeks 1-3 lean on prior-year rates only (no current-season signal yet);
 # week 4+ can blend in current-season game logs as they accumulate.
 PRIOR_ONLY_UNTIL_WEEK = 3
@@ -177,6 +181,23 @@ MATCHUP_ADJ_STRENGTH = 0.15
 # file. Revisit once real 2026 week-1 results exist, the same way every
 # other constant here got tuned against 2025.
 TARP_ADJ_STRENGTH = 0.15
+
+# Ceiling on the TOTAL "this week is different" multiplier applied to a
+# player's own raw per-game rate -- vol_adj (pace x game-script) times adj
+# (PFF-grade opponent_adj x success_rate_adj x matchup_grade_adj x
+# tarp_adj). Each of those five signals was tuned/validated independently;
+# nothing capped their PRODUCT, so an extreme case stacking several (a game
+# already a huge mismatch by spread AND against a team that also grades
+# badly in two other independent sources) could compound past 4x or even
+# go negative -- e.g. a 351-rush-yard single-game projection surfaced
+# building the DFS page. Found via that page's optimizer, which (unlike a
+# human skimming a props table) will greedily load up on exactly this kind
+# of outlier. Floor keeps the total from going negative (physically
+# meaningless for a yards/attempts multiplier); ceiling is a sanity bound,
+# not a tuned constant. Applied by scaling `adj` alone (project_
+# player_market), not vol_adj, so the "volume" component the impact page
+# displays keeps its own transparent, unmodified meaning.
+TOTAL_ADJ_CLAMP = (0.5, 2.2)
 
 # Minimum prior-year volume to project a player at all (filters noise).
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)

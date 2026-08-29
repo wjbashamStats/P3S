@@ -174,6 +174,18 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                                            per_game_vol_override=per_game_vol_override)
             if proj is None:
                 continue
+            # Expected TDs for DK-style fantasy scoring: this market's own TD
+            # rate (TDs per unit of the SAME volume column, e.g. pass_td per
+            # pass_att) applied to the market's own post-adjustment volume --
+            # same volume the yardage/attempts projection already used, so a
+            # game-script bump that raises attempts raises expected TDs too.
+            td_col = P.TD_COL_BY_VOL.get(vol_col)
+            td_rate = None
+            if td_col is not None:
+                td_total, vol_total = source.get(td_col), source.get(vol_col)
+                if td_total is not None and vol_total:
+                    td_rate = td_total / vol_total
+            expected_td = round(proj["components"]["volume"] * td_rate, 3) if td_rate is not None else None
             breakdown = dict(
                 volume_source=vol_source,
                 pace_script_adj=round(vol_adj, 3),
@@ -186,8 +198,11 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                 success_rate_adj=round(sr_component, 3) if sr_index else None,
                 matchup_grade_adj=round(mg_component, 3) if grade_index else None,
                 tarp_adj=round(tarp_component, 3) if tarp_index else None,
+                td_rate=round(td_rate, 4) if td_rate is not None else None,
+                expected_td=expected_td,
             )
-            out[(norm(player_name), mkey)] = dict(player=player_name, breakdown=breakdown, **proj)
+            out[(norm(player_name), mkey)] = dict(player=player_name, breakdown=breakdown,
+                                                   expected_td=expected_td, **proj)
     return out
 
 
