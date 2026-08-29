@@ -7,6 +7,26 @@ projects and the defensive unit that adjusts it.
 """
 import os
 
+
+def _load_dotenv(path):
+    """Minimal .env loader (no python-dotenv dependency) -- populates
+    os.environ from KEY=VALUE lines so a plain `python3 script.py` picks up
+    .env without the caller having to `source .env` first. Only fills in
+    keys not already set, so a real exported shell var still wins."""
+    if not os.path.exists(path):
+        return
+    for line in open(path):
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        key, val = key.strip(), val.strip().strip("'\"")
+        if key and key not in os.environ:
+            os.environ[key] = val
+
+
+_load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+
 # ---------------- SEASON / WEEK ----------------
 # The 2025 season is done and validated (see backtest.py) -- 2026 is now the
 # live season this points at by default. build.py --week N with no --season
