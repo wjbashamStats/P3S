@@ -104,9 +104,15 @@ def percentile_rank(value, values):
     return (below + 0.5 * equal) / n
 
 
-def build(week, props_path, lines_path, ratings_path, grades_path):
+def build(week, props_path, lines_path, ratings_path, grades_path, season=2025):
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
+    # The season TABLE always compares the two most recent COMPLETE seasons
+    # (2025 vs. real 2024), regardless of which season/week the "this week"
+    # props section below targets -- there's no played-game data for a
+    # season until it's actually underway, so a 2026 week-1 run still shows
+    # 2025-vs-2024 here (the only meaningful season-long comparison that
+    # exists yet), while `season` only steers the live props/projection join.
     totals = DL.load_season_totals()      # 2025 season-to-date, keyed (pkey, tkey)
     prior = DL.load_prior_totals(season=2025)  # real 2024, keyed player_id
     logs = DL.load_game_logs()            # 2025 per-game, keyed (pkey, tkey)
@@ -138,7 +144,7 @@ def build(week, props_path, lines_path, ratings_path, grades_path):
     print(f"Joining week-{week} props + projections for the 'this week' section ...")
     week_props = {}
     try:
-        games = BPD.build_week(week, props_path, lines_path, ratings_path, grades_path)
+        games = BPD.build_week(week, props_path, lines_path, ratings_path, grades_path, season=season)
         for g in games:
             for pl in g["players"]:
                 week_props[norm(pl["name"])] = dict(
@@ -297,6 +303,9 @@ def build(week, props_path, lines_path, ratings_path, grades_path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--week", type=int, default=14)
+    ap.add_argument("--season", type=int, default=2025,
+                    help="season the 'this week' props/projection section targets "
+                         "(the season TABLE always shows 2025 vs. real 2024 -- see build())")
     ap.add_argument("--props", default="hist_props_closing_wk1-15.csv")
     ap.add_argument("--game-lines", default="hist_lines_closing_wk1-15.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
@@ -304,8 +313,10 @@ def main():
     ap.add_argument("--out", default="impact_players.json")
     args = ap.parse_args()
 
-    players = build(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades)
-    payload = dict(season=2025, week=args.week, generated_players=len(players), players=players)
+    players = build(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
+                    season=args.season)
+    payload = dict(season=args.season, season_table_year=2025, week=args.week,
+                   generated_players=len(players), players=players)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)
     print(f"Wrote {args.out}: {len(players)} player cards")

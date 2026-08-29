@@ -21,16 +21,16 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def build_week(week, props_path, lines_path, ratings_path, grades_path):
+def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2025):
     pff2c, odds2c = DL.load_team_map()
     pff = DL.load_pff(pff2c)
     lines_by_week = DL.load_game_lines(lines_path)
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
 
-    print(f"Building week-{week} projections ...")
+    print(f"Building week-{week} projections (season {season}) ...")
     projections = BT.build_projections(week, use_prior_year=True, lines_by_week=lines_by_week,
-                                       team_ratings=team_ratings, team_grades=team_grades)
+                                       team_ratings=team_ratings, team_grades=team_grades, season=season)
     print(f"  {len(projections)} (player, market) projections")
 
     # Team/position lookup: player_season_totals.csv has far wider roster
@@ -122,6 +122,7 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--week", type=int, required=True)
+    ap.add_argument("--season", type=int, default=2025)
     ap.add_argument("--props", default="hist_props_closing_wk1-15.csv")
     ap.add_argument("--game-lines", default="hist_lines_closing_wk1-15.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
@@ -129,8 +130,9 @@ def main():
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
-    games = build_week(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades)
-    payload = dict(week=args.week, season=2025, games=games)
+    games = build_week(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
+                       season=args.season)
+    payload = dict(week=args.week, season=args.season, games=games)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)
     n_players = sum(len(g["players"]) for g in games)
