@@ -4006,6 +4006,58 @@
    }
   },
   {
+   "team": "Northwestern",
+   "tkey": "northwestern",
+   "conference": "Big Ten",
+   "mascot": "Wildcats",
+   "record": "6 - 6",
+   "games": 12,
+   "ppg": 22.5,
+   "papg": 20.9,
+   "off": {
+    "rush_att": 34.0,
+    "rush_yds": 179.1,
+    "rush_td": 1.25,
+    "ypc": 5.27,
+    "pass_att": 28.8,
+    "pass_yds": 181.8,
+    "pass_td": 1.17,
+    "ypa": 6.32,
+    "targets": 26.8,
+    "receptions": 17.0,
+    "rec_yds": 181.8,
+    "catch_rate": 0.634
+   },
+   "grades": {
+    "grade_over": 83.2,
+    "grade_off": 80.1,
+    "grade_pass": 63.5,
+    "grade_pblk": 81.0,
+    "grade_recv": 69.5,
+    "grade_run": 86.0,
+    "grade_rblk": 73.0,
+    "grade_def": 76.7,
+    "grade_rdef": 72.8,
+    "grade_tack": 61.0,
+    "grade_prsh": 76.9,
+    "grade_cov": 67.8,
+    "grade_spec": 68.5
+   },
+   "advanced": {
+    "off_rush_rate": 0.528,
+    "off_pass_rate": 0.454,
+    "off_rush_sr": 0.454,
+    "off_pass_sr": 0.419,
+    "def_rush_rate": 0.511,
+    "def_pass_rate": 0.468,
+    "def_rush_sr": 0.473,
+    "def_pass_sr": 0.431,
+    "off_adj": 1.5,
+    "def_adj": 1.5,
+    "rank_tarp": 42.0
+   }
+  },
+  {
    "team": "Notre Dame",
    "tkey": "notredame",
    "conference": "FBS Independents",
@@ -4056,32 +4108,6 @@
     "def_adj": 5.0,
     "rank_tarp": 32.0
    }
-  },
-  {
-   "team": "Nwestern",
-   "tkey": "nwestern",
-   "conference": null,
-   "mascot": null,
-   "record": null,
-   "games": 12,
-   "ppg": null,
-   "papg": null,
-   "off": {
-    "rush_att": 34.0,
-    "rush_yds": 179.1,
-    "rush_td": 1.25,
-    "ypc": 5.27,
-    "pass_att": 28.8,
-    "pass_yds": 181.8,
-    "pass_td": 1.17,
-    "ypa": 6.32,
-    "targets": 26.8,
-    "receptions": 17.0,
-    "rec_yds": 181.8,
-    "catch_rate": 0.634
-   },
-   "grades": null,
-   "advanced": null
   },
   {
    "team": "Ohio",
