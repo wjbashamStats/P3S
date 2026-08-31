@@ -77978,15 +77978,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 77.5,
-      "projection": 71.7,
-      "edge_pct": -7.5,
+      "projection": 44.0,
+      "edge_pct": -43.2,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
        "volume": 14.04,
        "efficiency": 5.434,
-       "opp_adj": 0.94
+       "opp_adj": 0.577
       },
       "breakdown": {
        "volume_source": "team-share of floridastate's 2024 rush_att pool, applied to floridastate's 2025 pool",
@@ -79309,15 +79309,15 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 79.5,
-      "projection": 122.4,
-      "edge_pct": 54.0,
+      "projection": 109.1,
+      "edge_pct": 37.2,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
        "volume": 11.24,
        "efficiency": 10.207,
-       "opp_adj": 1.066
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "team-share of floridastate's 2024 targets pool, applied to floridastate's 2025 pool",
@@ -79340,15 +79340,15 @@
      "player_receptions": {
       "stat": "receptions",
       "book_line": 5.5,
-      "projection": 7.4,
-      "edge_pct": 34.5,
+      "projection": 6.6,
+      "edge_pct": 20.0,
       "over_price": -2.0,
       "under_price": -128.5,
       "n_books": "2",
       "components": {
        "volume": 11.24,
        "efficiency": 0.616,
-       "opp_adj": 1.066
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "team-share of floridastate's 2024 targets pool, applied to floridastate's 2025 pool",
@@ -79711,21 +79711,21 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 54.5,
-      "projection": 54.7,
-      "edge_pct": 0.4,
+      "projection": 56.1,
+      "edge_pct": 2.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
-       "volume": 4.63,
+       "volume": 5.33,
        "efficiency": 11.08,
-       "opp_adj": 1.066
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "team-share of floridastate's 2024 targets pool, applied to floridastate's 2025 pool",
        "pace_script_adj": 1.235,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 42.5,
        "league_avg_implied": 26.8,
        "team_spread": -31.5,
@@ -79736,27 +79736,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0667,
-       "expected_td": 0.309
+       "expected_td": 0.355
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 3.5,
-      "projection": 3.1,
-      "edge_pct": -11.4,
+      "projection": 3.2,
+      "edge_pct": -8.6,
       "over_price": -5.0,
       "under_price": -126.5,
       "n_books": "2",
       "components": {
-       "volume": 4.63,
+       "volume": 5.33,
        "efficiency": 0.623,
-       "opp_adj": 1.066
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "team-share of floridastate's 2024 targets pool, applied to floridastate's 2025 pool",
        "pace_script_adj": 1.235,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 42.5,
        "league_avg_implied": 26.8,
        "team_spread": -31.5,
@@ -79767,7 +79767,7 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0667,
-       "expected_td": 0.309
+       "expected_td": 0.355
       }
      }
     }
@@ -93553,21 +93553,21 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 13.5,
-      "projection": 17.8,
-      "edge_pct": 31.9,
+      "projection": 20.5,
+      "edge_pct": 51.9,
       "over_price": -116.0,
       "under_price": -111.0,
       "n_books": "1",
       "components": {
-       "volume": 2.38,
+       "volume": 2.73,
        "efficiency": 7.19,
        "opp_adj": 1.043
       },
       "breakdown": {
        "volume_source": "team-share of hawaii's 2024 targets pool, applied to hawaii's 2025 pool",
        "pace_script_adj": 0.838,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 22.2,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -93578,27 +93578,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0882,
-       "expected_td": 0.21
+       "expected_td": 0.241
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 2.5,
-      "projection": 1.8,
-      "edge_pct": -28.0,
+      "projection": 2.0,
+      "edge_pct": -20.0,
       "over_price": 118.0,
       "under_price": -154.0,
       "n_books": "1",
       "components": {
-       "volume": 2.38,
+       "volume": 2.73,
        "efficiency": 0.713,
        "opp_adj": 1.043
       },
       "breakdown": {
        "volume_source": "team-share of hawaii's 2024 targets pool, applied to hawaii's 2025 pool",
        "pace_script_adj": 0.838,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 22.2,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -93609,27 +93609,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0882,
-       "expected_td": 0.21
+       "expected_td": 0.241
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 33.5,
-      "projection": 18.2,
-      "edge_pct": -45.7,
+      "projection": 23.5,
+      "edge_pct": -29.9,
       "over_price": -113.5,
       "under_price": -115.0,
       "n_books": "4",
       "components": {
-       "volume": 4.46,
+       "volume": 5.13,
        "efficiency": 4.947,
-       "opp_adj": 0.823
+       "opp_adj": 0.926
       },
       "breakdown": {
        "volume_source": "team-share of hawaii's 2024 rush_att pool, applied to hawaii's 2025 pool",
        "pace_script_adj": 0.704,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 22.2,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -93640,7 +93640,7 @@
        "matchup_grade_adj": 0.804,
        "tarp_adj": null,
        "td_rate": 0.0526,
-       "expected_td": 0.235
+       "expected_td": 0.27
       }
      }
     }
@@ -94462,21 +94462,21 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 263.5,
-      "projection": 271.5,
-      "edge_pct": 3.0,
+      "projection": 312.3,
+      "edge_pct": 18.5,
       "over_price": -118.0,
       "under_price": -114.0,
       "n_books": "4",
       "components": {
-       "volume": 32.2,
+       "volume": 37.03,
        "efficiency": 7.335,
        "opp_adj": 1.15
       },
       "breakdown": {
        "volume_source": "10.0 2024 games (pure prior-year, week <= 3)",
        "pace_script_adj": 0.838,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 22.2,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -94487,7 +94487,7 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0547,
-       "expected_td": 1.761
+       "expected_td": 2.025
       }
      }
     }
@@ -95670,21 +95670,21 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 35.5,
-      "projection": 18.1,
-      "edge_pct": -49.0,
+      "projection": 20.8,
+      "edge_pct": -41.4,
       "over_price": -115.5,
       "under_price": -114.0,
       "n_books": "4",
       "components": {
-       "volume": 2.52,
+       "volume": 2.89,
        "efficiency": 6.899,
        "opp_adj": 1.043
       },
       "breakdown": {
        "volume_source": "team-share of hawaii's 2024 targets pool, applied to hawaii's 2025 pool",
        "pace_script_adj": 0.838,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 22.2,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -109959,21 +109959,21 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 139.5,
-      "projection": 78.6,
-      "edge_pct": -43.7,
+      "projection": 90.4,
+      "edge_pct": -35.2,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
-       "volume": 10.74,
+       "volume": 12.35,
        "efficiency": 7.321,
        "opp_adj": 1.0
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
        "pace_script_adj": 0.758,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 20.0,
        "league_avg_implied": 26.8,
        "team_spread": 6.5,
@@ -109984,27 +109984,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0471,
-       "expected_td": 0.505
+       "expected_td": 0.581
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 86.5,
-      "projection": 42.2,
-      "edge_pct": -51.2,
+      "projection": 56.4,
+      "edge_pct": -34.8,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
-       "volume": 6.74,
+       "volume": 7.75,
        "efficiency": 6.263,
-       "opp_adj": 1.0
+       "opp_adj": 1.161
       },
       "breakdown": {
        "volume_source": "team-share of jacksonvillestate's 2024 rush_att pool, applied to jacksonvillestate's 2025 pool",
        "pace_script_adj": 0.562,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 20.0,
        "league_avg_implied": 26.8,
        "team_spread": 6.5,
@@ -110015,7 +110015,7 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0417,
-       "expected_td": 0.281
+       "expected_td": 0.323
       }
      }
     }
@@ -111142,21 +111142,21 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 56.5,
-      "projection": 30.5,
-      "edge_pct": -46.0,
+      "projection": 35.1,
+      "edge_pct": -37.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
-       "volume": 2.59,
+       "volume": 2.98,
        "efficiency": 11.792,
        "opp_adj": 1.0
       },
       "breakdown": {
        "volume_source": "team-share of jacksonvillestate's 2024 targets pool, applied to jacksonvillestate's 2025 pool",
        "pace_script_adj": 0.758,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 20.0,
        "league_avg_implied": 26.8,
        "team_spread": 6.5,
@@ -111167,7 +111167,7 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1463,
-       "expected_td": 0.379
+       "expected_td": 0.436
       }
      }
     }
@@ -168285,21 +168285,21 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 69.5,
-      "projection": 24.1,
-      "edge_pct": -65.3,
+      "projection": 29.4,
+      "edge_pct": -57.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 5.45,
+       "volume": 6.27,
        "efficiency": 5.416,
-       "opp_adj": 0.818
+       "opp_adj": 0.868
       },
       "breakdown": {
        "volume_source": "team-share of ncstate's 2024 rush_att pool, applied to ncstate's 2025 pool",
        "pace_script_adj": 0.751,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 23.8,
        "league_avg_implied": 26.8,
        "team_spread": 4.0,
@@ -168310,7 +168310,7 @@
        "matchup_grade_adj": 0.893,
        "tarp_adj": null,
        "td_rate": 0.046,
-       "expected_td": 0.251
+       "expected_td": 0.288
       }
      }
     }
@@ -168586,15 +168586,15 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 229.5,
-      "projection": 143.8,
-      "edge_pct": -37.3,
+      "projection": 177.3,
+      "edge_pct": -22.7,
       "over_price": -114.5,
       "under_price": -114.0,
       "n_books": "4",
       "components": {
        "volume": 32.16,
        "efficiency": 7.566,
-       "opp_adj": 0.591
+       "opp_adj": 0.729
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
@@ -168617,15 +168617,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 10.5,
-      "projection": 20.0,
-      "edge_pct": 90.5,
+      "projection": 21.3,
+      "edge_pct": 102.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
        "volume": 5.26,
        "efficiency": 4.661,
-       "opp_adj": 0.818
+       "opp_adj": 0.868
       },
       "breakdown": {
        "volume_source": "team-share of ncstate's 2024 rush_att pool, applied to ncstate's 2025 pool",
@@ -184875,21 +184875,21 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 46.5,
-      "projection": 12.7,
-      "edge_pct": -72.7,
+      "projection": 19.0,
+      "edge_pct": -59.1,
       "over_price": -114.0,
       "under_price": -115.0,
       "n_books": "5",
       "components": {
        "volume": 2.84,
        "efficiency": 4.28,
-       "opp_adj": 1.043
+       "opp_adj": 1.564
       },
       "breakdown": {
        "volume_source": "team-share of northcarolina's 2024 rush_att pool, applied to northcarolina's 2025 pool",
        "pace_script_adj": 0.48,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.0,
+       "depth_rank": 2,
        "team_implied": 19.0,
        "league_avg_implied": 26.8,
        "team_spread": 8.5,
@@ -185302,15 +185302,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 36.5,
-      "projection": 18.8,
-      "edge_pct": -48.5,
+      "projection": 28.2,
+      "edge_pct": -22.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 3.86,
        "efficiency": 5.365,
-       "opp_adj": 0.907
+       "opp_adj": 1.36
       },
       "breakdown": {
        "volume_source": "team-share of northcarolina's 2024 rush_att pool, applied to northcarolina's 2025 pool",
@@ -245475,15 +245475,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 84.5,
-      "projection": 76.2,
-      "edge_pct": -9.8,
+      "projection": 75.4,
+      "edge_pct": -10.8,
       "over_price": -114.0,
       "under_price": -116.0,
       "n_books": "3",
       "components": {
        "volume": 15.48,
        "efficiency": 4.685,
-       "opp_adj": 1.051
+       "opp_adj": 1.04
       },
       "breakdown": {
        "volume_source": "team-share of stanford's 2024 rush_att pool, applied to stanford's 2025 pool",
@@ -250372,15 +250372,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 77.5,
-      "projection": 67.9,
-      "edge_pct": -12.4,
+      "projection": 59.1,
+      "edge_pct": -23.7,
       "over_price": -115.0,
       "under_price": -114.0,
       "n_books": "5",
       "components": {
        "volume": 12.63,
        "efficiency": 5.413,
-       "opp_adj": 0.993
+       "opp_adj": 0.864
       },
       "breakdown": {
        "volume_source": "team-share of tcu's 2024 rush_att pool, applied to tcu's 2025 pool",
@@ -252440,21 +252440,21 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 52.5,
-      "projection": 57.8,
-      "edge_pct": 10.1,
+      "projection": 66.4,
+      "edge_pct": 26.5,
       "over_price": -115.0,
       "under_price": -114.5,
       "n_books": "3",
       "components": {
-       "volume": 7.12,
+       "volume": 8.19,
        "efficiency": 8.409,
        "opp_adj": 0.964
       },
       "breakdown": {
        "volume_source": "team-share of tcu's 2024 targets pool, applied to tcu's 2025 pool",
        "pace_script_adj": 1.006,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 27.5,
        "league_avg_implied": 26.8,
        "team_spread": -8.5,
@@ -252465,27 +252465,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0824,
-       "expected_td": 0.586
+       "expected_td": 0.674
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 4.5,
-      "projection": 4.5,
-      "edge_pct": 0.0,
+      "projection": 5.2,
+      "edge_pct": 15.6,
       "over_price": -130.5,
       "under_price": -116.0,
       "n_books": "2",
       "components": {
-       "volume": 7.12,
+       "volume": 8.19,
        "efficiency": 0.655,
        "opp_adj": 0.964
       },
       "breakdown": {
        "volume_source": "team-share of tcu's 2024 targets pool, applied to tcu's 2025 pool",
        "pace_script_adj": 1.006,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 27.5,
        "league_avg_implied": 26.8,
        "team_spread": -8.5,
@@ -252496,7 +252496,7 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0824,
-       "expected_td": 0.586
+       "expected_td": 0.674
       }
      }
     }
@@ -293562,15 +293562,15 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 15.5,
-      "projection": 30.1,
-      "edge_pct": 94.2,
+      "projection": 28.8,
+      "edge_pct": 85.8,
       "over_price": -116.0,
       "under_price": -111.0,
       "n_books": "1",
       "components": {
        "volume": 4.61,
        "efficiency": 5.95,
-       "opp_adj": 1.097
+       "opp_adj": 1.05
       },
       "breakdown": {
        "volume_source": "team-share of unlv's 2024 targets pool, applied to unlv's 2025 pool",
@@ -293593,15 +293593,15 @@
      "player_receptions": {
       "stat": "receptions",
       "book_line": 2.5,
-      "projection": 3.9,
-      "edge_pct": 56.0,
+      "projection": 3.7,
+      "edge_pct": 48.0,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
        "volume": 4.61,
        "efficiency": 0.763,
-       "opp_adj": 1.097
+       "opp_adj": 1.05
       },
       "breakdown": {
        "volume_source": "team-share of unlv's 2024 targets pool, applied to unlv's 2025 pool",
@@ -293926,8 +293926,8 @@
       "breakdown": {
        "volume_source": "team-share of unlv's 2024 rush_att pool, applied to unlv's 2025 pool",
        "pace_script_adj": 1.301,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.0,
+       "depth_rank": 2,
        "team_implied": 30.2,
        "league_avg_implied": 26.8,
        "team_spread": -4.0,
@@ -295255,15 +295255,15 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 38.0,
-      "projection": 23.1,
-      "edge_pct": -39.2,
+      "projection": 22.1,
+      "edge_pct": -41.8,
       "over_price": -112.5,
       "under_price": -115.0,
       "n_books": "2",
       "components": {
        "volume": 2.89,
        "efficiency": 7.263,
-       "opp_adj": 1.097
+       "opp_adj": 1.05
       },
       "breakdown": {
        "volume_source": "team-share of unlv's 2024 targets pool, applied to unlv's 2025 pool",
@@ -295286,15 +295286,15 @@
      "player_receptions": {
       "stat": "receptions",
       "book_line": 3.5,
-      "projection": 2.1,
-      "edge_pct": -40.0,
+      "projection": 2.0,
+      "edge_pct": -42.9,
       "over_price": 115.0,
       "under_price": -149.0,
       "n_books": "1",
       "components": {
        "volume": 2.89,
        "efficiency": 0.668,
-       "opp_adj": 1.097
+       "opp_adj": 1.05
       },
       "breakdown": {
        "volume_source": "team-share of unlv's 2024 targets pool, applied to unlv's 2025 pool",
@@ -296971,21 +296971,21 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 70.5,
-      "projection": 123.3,
-      "edge_pct": 74.9,
+      "projection": 89.9,
+      "edge_pct": 27.5,
       "over_price": -114.0,
       "under_price": -118.0,
       "n_books": "3",
       "components": {
        "volume": 25.55,
        "efficiency": 6.101,
-       "opp_adj": 0.791
+       "opp_adj": 0.577
       },
       "breakdown": {
        "volume_source": "team-share of usc's 2024 rush_att pool, applied to usc's 2025 pool",
        "pace_script_adj": 2.34,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.0,
+       "depth_rank": 2,
        "team_implied": 50.0,
        "league_avg_implied": 26.8,
        "team_spread": -38.5,
@@ -297233,15 +297233,15 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 58.5,
-      "projection": 90.5,
-      "edge_pct": 54.7,
+      "projection": 57.4,
+      "edge_pct": -1.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
        "volume": 19.73,
        "efficiency": 5.799,
-       "opp_adj": 0.791
+       "opp_adj": 0.502
       },
       "breakdown": {
        "volume_source": "team-share of usc's 2024 rush_att pool, applied to usc's 2025 pool",
@@ -297489,21 +297489,21 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 284.5,
-      "projection": 385.8,
-      "edge_pct": 35.6,
+      "projection": 360.5,
+      "edge_pct": 26.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "3",
       "components": {
-       "volume": 38.7,
+       "volume": 44.5,
        "efficiency": 8.522,
-       "opp_adj": 1.17
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
        "pace_script_adj": 1.235,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 50.0,
        "league_avg_implied": 26.8,
        "team_spread": -38.5,
@@ -297514,27 +297514,27 @@
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0612,
-       "expected_td": 2.367
+       "expected_td": 2.722
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 15.5,
-      "projection": 35.3,
-      "edge_pct": 127.7,
+      "projection": 25.7,
+      "edge_pct": 65.8,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 8.97,
+       "volume": 10.32,
        "efficiency": 4.974,
-       "opp_adj": 0.791
+       "opp_adj": 0.502
       },
       "breakdown": {
        "volume_source": "team-share of usc's 2024 rush_att pool, applied to usc's 2025 pool",
        "pace_script_adj": 2.34,
-       "depth_rank_adj": null,
-       "depth_rank": null,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
        "team_implied": 50.0,
        "league_avg_implied": 26.8,
        "team_spread": -38.5,
@@ -297545,7 +297545,7 @@
        "matchup_grade_adj": 0.776,
        "tarp_adj": null,
        "td_rate": 0.1304,
-       "expected_td": 1.17
+       "expected_td": 1.346
       }
      }
     }

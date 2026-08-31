@@ -29,14 +29,25 @@ import config as C
 import odds as O
 
 
-def write_lines_csv(path, rows, week):
+def write_lines_csv(path, rows, week, events_by_id):
+    """
+    events_by_id: game_id -> event dict (from O.pull_events(), has
+    commence_time) -- pull_game_lines() itself doesn't carry a date, and
+    the Odds API's /odds endpoint returns the WHOLE upcoming slate, not
+    just this week, so without a date a lines file silently mixes weeks
+    (a team can appear more than once, e.g. its week-1 AND week-2 games).
+    Stamping commence_time here lets anything reading this file filter to
+    an actual week by date instead of trusting the --week label alone.
+    """
     with open(path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["game_id", "week", "home_team", "away_team",
-                                          "home_spread", "total"])
+                                          "home_spread", "total", "commence_time"])
         w.writeheader()
         for r in rows:
+            ev = events_by_id.get(r["game_id"], {})
             w.writerow(dict(game_id=r["game_id"], week=week, home_team=r["home_team"],
-                            away_team=r["away_team"], home_spread=r["home_spread"], total=r["total"]))
+                            away_team=r["away_team"], home_spread=r["home_spread"], total=r["total"],
+                            commence_time=ev.get("commence_time", "")))
 
 
 def write_props_csv(path, consensus_rows, events_by_id, week):
@@ -92,10 +103,12 @@ def main():
               "'credits remaining' after each call.")
         return
 
+    events_by_id = {ev["game_id"]: ev for ev in events}
+
     print("\nPulling game lines (spreads + totals, one call for the whole slate) ...")
     lines = O.pull_game_lines()
     print(f"  {len(lines)} games with a spread + total")
-    write_lines_csv(out_lines, lines, args.week)
+    write_lines_csv(out_lines, lines, args.week, events_by_id)
     print(f"  wrote {out_lines}")
 
     print(f"\nPulling player props ({len(C.MARKETS)} markets/event"
@@ -104,7 +117,6 @@ def main():
     print(f"  {len(prop_rows)} raw quotes")
     consensus = O.consensus_props(prop_rows)
     print(f"  {len(consensus)} (game, market, player) consensus rows")
-    events_by_id = {ev["game_id"]: ev for ev in events}
     write_props_csv(out_props, consensus, events_by_id, args.week)
     print(f"  wrote {out_props}")
 
