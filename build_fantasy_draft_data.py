@@ -25,11 +25,16 @@ in Yahoo's list is dropped, per this being a P4-only build):
                   ranking -- see _pct())
   - volume rate : off_rush_rate for RB, off_pass_rate for QB/WR/TE
   - success rate: off_rush_sr for RB, off_pass_sr for QB/WR/TE
-Equal-weighted average of the three percentiles. This is a transparent,
-un-fitted comparison -- same philosophy as the rest of this project --
-not a competing fantasy-points projection (Yahoo's own Proj Pts column
-is left untouched); it's an ENVIRONMENT overlay meant to catch cases
-where Yahoo's rank and the underlying situation disagree.
+Weighted 40% volume / 40% success / 20% pace (see SITUATION_WEIGHTS) --
+volume and success rate are what actually say "this role touches the
+ball a lot, successfully"; pace is real but secondary, so an elite-
+volume, elite-success offense at merely average pace still scores near
+the top instead of getting diluted by an equal-thirds average. This is
+a transparent, un-fitted comparison (same philosophy as the rest of this
+project, just not equal weights) -- not a competing fantasy-points
+projection (Yahoo's own Proj Pts column is left untouched); it's an
+ENVIRONMENT overlay meant to catch cases where Yahoo's rank and the
+underlying situation disagree.
 
 UNVALIDATED: no backtest exists for this scoring (no historical Yahoo
 draft-rank file to check it against), same caveat as several of this
@@ -225,12 +230,32 @@ def build(yahoo_path, team_averages_path, team_ratings_path, depth_chart_path):
     rush_sr_pct, pass_sr_pct = pct_rank(rush_sr), pct_rank(pass_sr)
     pace_pct = pct_rank(tempo, invert=True)
 
+    # Volume rate and success rate are the two signals that directly say
+    # "this player's role touches the ball a lot, successfully" -- pace
+    # is real (more plays overall) but secondary, so it's weighted lower
+    # rather than averaged in equally. An equal-thirds average let an
+    # elite-volume, elite-success offense at merely average pace get
+    # pulled down by pace as much as by anything else, which buried
+    # exactly the "high volume passing, successful offense" case this
+    # score exists to surface. Weights are a documented judgment call,
+    # not fitted -- there's no backtest for this score at all (see
+    # module docstring), so "equal thirds" was never more justified than
+    # any other split; this one just matches the football logic better.
+    SITUATION_WEIGHTS = dict(volume=0.40, success=0.40, pace=0.20)
+
+    def _weighted(pace, volume, success):
+        parts = [(pace, SITUATION_WEIGHTS["pace"]), (volume, SITUATION_WEIGHTS["volume"]),
+                 (success, SITUATION_WEIGHTS["success"])]
+        parts = [(v, w) for v, w in parts if v is not None]
+        if not parts:
+            return None
+        wsum = sum(w for _, w in parts)
+        return round(sum(v * w for v, w in parts) / wsum, 1)
+
     rb_situation, pass_situation = {}, {}
     for t in p4_team_names:
-        parts_rb = [v for v in (pace_pct.get(t), rush_rate_pct.get(t), rush_sr_pct.get(t)) if v is not None]
-        parts_pass = [v for v in (pace_pct.get(t), pass_rate_pct.get(t), pass_sr_pct.get(t)) if v is not None]
-        rb_situation[t] = round(sum(parts_rb) / len(parts_rb), 1) if parts_rb else None
-        pass_situation[t] = round(sum(parts_pass) / len(parts_pass), 1) if parts_pass else None
+        rb_situation[t] = _weighted(pace_pct.get(t), rush_rate_pct.get(t), rush_sr_pct.get(t))
+        pass_situation[t] = _weighted(pace_pct.get(t), pass_rate_pct.get(t), pass_sr_pct.get(t))
 
     depth_by_team = load_depth_by_team(depth_chart_path)
 
