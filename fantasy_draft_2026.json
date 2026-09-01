@@ -3138,13 +3138,13 @@
    "rec": 17.7,
    "rec_yds": 152.0,
    "rec_td": 0.9,
-   "depth_rank": 1,
+   "depth_rank": 3,
    "situation_score": 73.9,
    "pace_pct": 6.1,
    "volume_pct": 90.9,
    "success_pct": 90.9,
    "xrank_pct_in_pos": 15.3,
-   "flag": "undervalued"
+   "flag": null
   },
   {
    "name": "J. Overton Jr.",

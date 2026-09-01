@@ -193,6 +193,44 @@ def match_depth(depth_by_team, team_display, position, last_raw, first_initial):
     return min(candidates) if candidates else None
 
 
+def load_overrides(path="depth_chart_overrides.csv"):
+    """List form (not the dict DL.load_depth_chart_overrides() returns)
+    since matching here needs the same team+last-name+first-initial
+    lookup match_depth() already does against the raw scrape -- see that
+    function and DL.load_depth_chart_overrides()'s docstring for why this
+    file exists (ourlads is a preseason-only snapshot)."""
+    import os
+    out = []
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        bucket = DL._DEPTH_POS_MAP.get((r.get("position") or "").strip(), (r.get("position") or "").strip())
+        try:
+            rank = int(r.get("depth_rank"))
+        except (TypeError, ValueError):
+            continue
+        out.append(dict(team=r.get("team", ""), position=bucket, name=r.get("name", ""), depth_rank=rank))
+    return out
+
+
+def match_override(overrides, team_display, position, last, first_initial):
+    search_name = DEPTH_TEAM_ALIASES.get(team_display, team_display)
+    yahoo_pos = "HB" if position == "RB" else position
+    last = _true_last(last.split())
+    for o in overrides:
+        if o["position"] != yahoo_pos:
+            continue
+        n, td = DL.norm(o["team"]), DL.norm(search_name)
+        if not (td in n or n in td):
+            continue
+        parts = o["name"].split()
+        if not parts:
+            continue
+        if _true_last(parts).lower() == last.lower() and parts[0][0].lower() == first_initial.lower():
+            return o["depth_rank"]
+    return None
+
+
 def pct_rank(values_by_team, invert=False):
     """Rank teams by value -> percentile 0-100 (100 = best). invert=True
     means a LOWER raw value is better (e.g. Tempo: fewer seconds/play)."""
@@ -258,6 +296,7 @@ def build(yahoo_path, team_averages_path, team_ratings_path, depth_chart_path):
         pass_situation[t] = _weighted(pace_pct.get(t), pass_rate_pct.get(t), pass_sr_pct.get(t))
 
     depth_by_team = load_depth_by_team(depth_chart_path)
+    overrides = load_overrides()
 
     out_players = []
     for p in players:
@@ -270,6 +309,9 @@ def build(yahoo_path, team_averages_path, team_ratings_path, depth_chart_path):
         first_initial = name_parts[0].strip() if name_parts else ""
         last = name_parts[1].strip() if len(name_parts) > 1 else p["name"]
         depth_rank = match_depth(depth_by_team, team_display, p["position"], last, first_initial)
+        override_rank = match_override(overrides, team_display, p["position"], last, first_initial)
+        if override_rank is not None:
+            depth_rank = override_rank
 
         situation = rb_situation.get(team_display) if p["position"] == "RB" else pass_situation.get(team_display)
 
