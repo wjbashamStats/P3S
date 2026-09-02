@@ -35,6 +35,31 @@ lot of production, or gained a good portion back, in a way the prior
 season's box scores don't reflect). Total reasons cite whichever side's
 pass/rush rate + success rate is driving the total, plus tempo.
 
+"How we got here" detail, added for the matchup-preview modal:
+  - five_factors: rank_Offense_*/rank_defense_* (Success Rate, Explosive-
+    ness, Havoc, Finishing Drives i.e. PointsPerOpportunity, plus
+    rank_TARP as a 5th axis) for both sides of both teams -- these feed
+    two radar comparisons per game (each team's offense vs the
+    opponent's defense), same "1 = best" rank convention as every other
+    rank_ column in team_ratings.csv.
+  - power_table: TAN/SP/NetRP/2022 ATS%/2022 Over%/pace, each with a
+    rank. NetRP has no native rank column in the source file, so one is
+    computed here the same way (sort all 136 teams descending, rank
+    1..136) -- see rank_by_value().
+  - qb: each team's depth-chart-confirmed starter (depth_rank==1),
+    joined to their PFF grade (master_crosswalk.csv) and real 2025
+    season stats (player_season_totals.csv) by name -- same name-only
+    join pattern used throughout this project (data_load.load_pff's
+    pkey), since PFF's team strings don't reliably match a QB's CURRENT
+    team for a transfer. None if the depth chart has no confirmed QB1
+    for a team, or the name doesn't resolve to a PFF/season-totals row
+    (true freshman with no 2025 college record).
+
+No team logos: the artifact sandbox's CSP blocks hotlinked external
+images (ESPN's logo CDN included), and this environment has no internet
+access to download and embed them as data URIs -- so the page uses text
+badges instead, not real logos.
+
 DATA CAVEAT, now fixed but worth remembering: hist_lines_live_*.csv used
 to carry no per-row date, so a team could appear twice (its week-1 AND
 week-2 game) with no way to tell which was which -- pull_live_week.py was
@@ -58,6 +83,14 @@ def norm(s):
 # "Miami Ohio") -- found while building this; every other FBS team's
 # Team+Mascot concatenation matched the Odds API string exactly.
 ODDS_NAME_ALIASES = {"miamiohredhawks": "miamiohioredhawks"}
+
+FIVE_FACTOR_RANK_COLS = [
+    ("success_rate", "Success Rate", "rank_Offense_successRate", "rank_defense_successRate"),
+    ("explosiveness", "Explosiveness", "rank_Offense_explosiveness", "rank_defense_explosiveness"),
+    ("havoc", "Havoc", "rank_Offense_havoc_total", "rank_defense_havoc_total"),
+    ("finishing_drives", "Finishing Drives", "rank_Offense_pointsPerOpportunity", "rank_defense_pointsPerOpportunity"),
+    ("tarp", "TARP", "rank_TARP", "rank_TARP"),  # TARP isn't split off/def -- same team-wide rank both sides
+]
 
 
 def load_ratings_raw(path):
@@ -101,6 +134,80 @@ def _f(x, default=0.0):
         return float(x)
     except (TypeError, ValueError):
         return default
+
+
+def rank_by_value(ratings_raw, field, reverse=True):
+    """Compute a 1..N rank across all rows on a field with no native
+    rank_ column in the source file (NetRP) -- same 'sort descending,
+    rank 1..N' convention the file's own rank_SP/rank_TAN presumably used."""
+    items = sorted(ratings_raw.items(), key=lambda kv: _f(kv[1].get(field)), reverse=reverse)
+    return {k: i + 1 for i, (k, _) in enumerate(items)}
+
+
+def five_factors(rh, ra):
+    home_off, home_def, away_off, away_def = {}, {}, {}, {}
+    for key, label, off_col, def_col in FIVE_FACTOR_RANK_COLS:
+        home_off[key] = _f(rh.get(off_col), None)
+        home_def[key] = _f(rh.get(def_col), None)
+        away_off[key] = _f(ra.get(off_col), None)
+        away_def[key] = _f(ra.get(def_col), None)
+    return dict(home_off=home_off, home_def=home_def, away_off=away_off, away_def=away_def)
+
+
+def power_table_entry(r, net_rp_rank):
+    return dict(
+        tan=_f(r.get("TAN")), tan_rank=_f(r.get("rank_TAN"), None),
+        sp=_f(r.get("SP")), sp_rank=_f(r.get("rank_SP"), None),
+        net_rp=_f(r.get("NetRP")), net_rp_rank=net_rp_rank,
+        ats_pct=_f(r.get("X2022_ATS_Percent"), None), ats_rank=_f(r.get("Rank_2022_ATS_Percent"), None),
+        over_pct=_f(r.get("X2022_OU_Percent"), None), over_rank=_f(r.get("Rank_2022_OU_Percent"), None),
+        seconds_per_play=_f(r.get("Tempo")), tempo_rank=_f(r.get("rank_Tempo"), None),
+    )
+
+
+def load_qb_lookup(depth_chart_path, pff2c_path_unused=None):
+    """team display name -> QB1's name (from ourlads depth chart, side
+    offense, position QB, depth_rank 1). Returns {} entries as None when
+    a team has no confirmed starter in the scrape."""
+    out = {}
+    for r in csv.DictReader(open(depth_chart_path)):
+        if r.get("side") != "offense" or r.get("position") != "QB":
+            continue
+        try:
+            rank = int(r.get("depth_rank"))
+        except (TypeError, ValueError):
+            continue
+        if rank != 1:
+            continue
+        out[r["team"]] = r.get("name", "")
+    return out
+
+
+def build_qb_data(qb_by_depth_team, team_display, pff_by_pkey, season_by_pkey):
+    # depth chart's own team string carries a mascot ("Ohio State Buckeyes");
+    # match it back to team_display the same substring way used elsewhere.
+    qb_name = None
+    for depth_team, name in qb_by_depth_team.items():
+        n, td = norm(depth_team), norm(team_display)
+        if td in n or n in td:
+            qb_name = name
+            break
+    if not qb_name:
+        return None
+    pkey = norm(qb_name)
+    pff = pff_by_pkey.get(pkey)
+    season = season_by_pkey.get(pkey)
+    return dict(
+        name=qb_name,
+        pff_off_grade=_f(pff.get("off_grade_off"), None) if pff else None,
+        pff_pass_grade=_f(pff.get("off_grade_pass"), None) if pff else None,
+        pass_att=_f(season.get("pass_att"), None) if season else None,
+        pass_yds=_f(season.get("pass_yds"), None) if season else None,
+        pass_td=_f(season.get("pass_td"), None) if season else None,
+        rush_att=_f(season.get("rush_att"), None) if season else None,
+        rush_yds=_f(season.get("rush_yds"), None) if season else None,
+        games=_f(season.get("games"), None) if season else None,
+    )
 
 
 def spread_reason(home_team, away_team, book_spread, pred_spread, spread_diff,
@@ -147,9 +254,21 @@ def total_reason(home_team, away_team, book_total, pred_total, total_diff,
     return " ".join(parts)
 
 
-def build(lines_path, ratings_path, team_averages_path, date_start, date_end):
+def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
+          pff_crosswalk_path, season_totals_path, team_map_path, date_start, date_end):
     ratings_raw = load_ratings_raw(ratings_path)
     team_avg = {t["team"]: t for t in json.load(open(team_averages_path))["teams"]}
+    net_rp_rank = rank_by_value(ratings_raw, "NetRP")
+
+    qb_by_depth_team = load_qb_lookup(depth_chart_path)
+    pff2c, _ = DL.load_team_map()
+    pff_rows = DL.load_pff(pff2c)
+    pff_by_pkey = {}
+    for p in pff_rows:
+        pff_by_pkey.setdefault(p["pkey"], p)
+    season_by_pkey = {}
+    for r in csv.DictReader(open(season_totals_path)):
+        season_by_pkey[norm(r.get("player", ""))] = r
 
     out = []
     for r in csv.DictReader(open(lines_path)):
@@ -179,6 +298,12 @@ def build(lines_path, ratings_path, team_averages_path, date_start, date_end):
             home_adj = (_f(rh.get("OffAdj")), _f(rh.get("DefAdj")), _f(rh.get("rank_TARP")))
             away_adj = (_f(ra.get("OffAdj")), _f(ra.get("DefAdj")), _f(ra.get("rank_TARP")))
             home_avg, away_avg = match_team_avg(team_avg, home_team), match_team_avg(team_avg, away_team)
+            # NetRP rank was keyed off ratings_raw's own norm(Team+Mascot) --
+            # rebuild the SAME key from rh/ra's own fields, not by
+            # re-concatenating the raw Odds API string (which already has
+            # the mascot in it, so re-appending it again never matches).
+            home_key = norm(rh.get("Team", "") + rh.get("Mascot", ""))
+            away_key = norm(ra.get("Team", "") + ra.get("Mascot", ""))
             row.update(
                 pred_spread=round(pred_spread, 1), pred_total=round(pred_total, 1),
                 spread_diff=spread_diff, total_diff=total_diff,
@@ -190,6 +315,12 @@ def build(lines_path, ratings_path, team_averages_path, date_start, date_end):
                                             sp_h, sp_a, hfa, home_adj, away_adj),
                 total_reason=total_reason(home_team, away_team, book_total, pred_total, total_diff,
                                           home_avg, away_avg),
+                home_display=rh.get("Team", home_team), away_display=ra.get("Team", away_team),
+                five_factors=five_factors(rh, ra),
+                home_power=power_table_entry(rh, net_rp_rank.get(home_key)),
+                away_power=power_table_entry(ra, net_rp_rank.get(away_key)),
+                home_qb=build_qb_data(qb_by_depth_team, home_team, pff_by_pkey, season_by_pkey),
+                away_qb=build_qb_data(qb_by_depth_team, away_team, pff_by_pkey, season_by_pkey),
             )
         out.append(row)
 
@@ -202,6 +333,10 @@ def main():
     ap.add_argument("--game-lines", default="hist_lines_live_2026wk1.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
     ap.add_argument("--team-averages", default="team_averages_2025.json")
+    ap.add_argument("--depth-chart", default="depth_charts.csv")
+    ap.add_argument("--pff-crosswalk", default="master_crosswalk.csv")
+    ap.add_argument("--season-totals", default="player_season_totals.csv")
+    ap.add_argument("--team-map", default="team_map.csv")
     ap.add_argument("--date-start", default="2026-09-02", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--date-end", default="2026-09-07", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--week", type=int, default=1)
@@ -209,14 +344,16 @@ def main():
     ap.add_argument("--out", default="diversions_2026wk1.json")
     args = ap.parse_args()
 
-    games = build(args.game_lines, args.team_ratings, args.team_averages, args.date_start, args.date_end)
+    games = build(args.game_lines, args.team_ratings, args.team_averages, args.depth_chart,
+                  args.pff_crosswalk, args.season_totals, args.team_map, args.date_start, args.date_end)
     n_full = sum(1 for g in games if g["pred_spread"] is not None)
+    n_qb = sum(1 for g in games if g.get("home_qb") or g.get("away_qb"))
     payload = dict(week=args.week, season=args.season, date_start=args.date_start,
                    date_end=args.date_end, games=games)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)
     print(f"Wrote {args.out}: {len(games)} games in [{args.date_start}, {args.date_end}], "
-          f"{n_full} with both teams rated")
+          f"{n_full} with both teams rated, {n_qb} with at least one QB matched")
 
 
 if __name__ == "__main__":

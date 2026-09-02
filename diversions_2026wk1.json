@@ -29,7 +29,89 @@
    "home_rank_tarp": 9.0,
    "away_off_adj": -3.0,
    "away_def_adj": -1.0,
-   "away_rank_tarp": 105.0
+   "away_rank_tarp": 105.0,
+   "home_display": "Ohio State",
+   "away_display": "Ball State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 1.0,
+     "explosiveness": 127.0,
+     "havoc": 5.0,
+     "finishing_drives": 2.0,
+     "tarp": 9.0
+    },
+    "home_def": {
+     "success_rate": 10.0,
+     "explosiveness": 1.0,
+     "havoc": 38.0,
+     "finishing_drives": 6.0,
+     "tarp": 9.0
+    },
+    "away_off": {
+     "success_rate": 136.0,
+     "explosiveness": 30.0,
+     "havoc": 135.0,
+     "finishing_drives": 132.0,
+     "tarp": 105.0
+    },
+    "away_def": {
+     "success_rate": 113.0,
+     "explosiveness": 76.0,
+     "havoc": 105.5,
+     "finishing_drives": 59.0,
+     "tarp": 105.0
+    }
+   },
+   "home_power": {
+    "tan": 97.3,
+    "tan_rank": 1.0,
+    "sp": 31.8,
+    "sp_rank": 1.0,
+    "net_rp": 10.5,
+    "net_rp_rank": 9,
+    "ats_pct": 0.909,
+    "ats_rank": 2.0,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 27.0132062,
+    "tempo_rank": 11.0
+   },
+   "away_power": {
+    "tan": 32.7,
+    "tan_rank": 132.0,
+    "sp": -25.2,
+    "sp_rank": 131.0,
+    "net_rp": -4.0,
+    "net_rp_rank": 114,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 16.1679813,
+    "tempo_rank": 132.0
+   },
+   "home_qb": {
+    "name": "Julian Sayin",
+    "pff_off_grade": 92.9,
+    "pff_pass_grade": 92.5,
+    "pass_att": 328.0,
+    "pass_yds": 3065.0,
+    "pass_td": 30.0,
+    "rush_att": 33.0,
+    "rush_yds": 44.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Keldric Luster",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 3.0,
+    "pass_yds": 14.0,
+    "pass_td": 0.0,
+    "rush_att": 3.0,
+    "rush_yds": 14.0,
+    "games": 2.0
+   }
   },
   {
    "game_id": "994c7280c9e8dcb041c260eb2c767d4d",
@@ -56,7 +138,89 @@
    "home_rank_tarp": 15.0,
    "away_off_adj": 3.0,
    "away_def_adj": 4.0,
-   "away_rank_tarp": 22.0
+   "away_rank_tarp": 22.0,
+   "home_display": "South Carolina",
+   "away_display": "Kent State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 116.0,
+     "explosiveness": 28.0,
+     "havoc": 130.0,
+     "finishing_drives": 134.0,
+     "tarp": 15.0
+    },
+    "home_def": {
+     "success_rate": 75.0,
+     "explosiveness": 23.0,
+     "havoc": 62.5,
+     "finishing_drives": 27.0,
+     "tarp": 15.0
+    },
+    "away_off": {
+     "success_rate": 132.0,
+     "explosiveness": 17.0,
+     "havoc": 118.5,
+     "finishing_drives": 97.0,
+     "tarp": 22.0
+    },
+    "away_def": {
+     "success_rate": 109.0,
+     "explosiveness": 67.0,
+     "havoc": 109.5,
+     "finishing_drives": 123.0,
+     "tarp": 22.0
+    }
+   },
+   "home_power": {
+    "tan": 78.8,
+    "tan_rank": 24.0,
+    "sp": 12.1,
+    "sp_rank": 20.0,
+    "net_rp": 9.5,
+    "net_rp_rank": 15,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 21.5294924,
+    "tempo_rank": 53.0
+   },
+   "away_power": {
+    "tan": 48.6,
+    "tan_rank": 127.0,
+    "sp": -20.1,
+    "sp_rank": 128.0,
+    "net_rp": 7.0,
+    "net_rp_rank": 25,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 17.6610224,
+    "tempo_rank": 45.0
+   },
+   "home_qb": {
+    "name": "LaNorris Sellers",
+    "pff_off_grade": 73.4,
+    "pff_pass_grade": 66.9,
+    "pass_att": 296.0,
+    "pass_yds": 2433.0,
+    "pass_td": 13.0,
+    "rush_att": 111.0,
+    "rush_yds": 593.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Dru DeShields",
+    "pff_off_grade": 60.6,
+    "pff_pass_grade": 62.0,
+    "pass_att": 244.0,
+    "pass_yds": 2030.0,
+    "pass_td": 18.0,
+    "rush_att": 45.0,
+    "rush_yds": 148.0,
+    "games": 11.0
+   }
   },
   {
    "game_id": "1bb9e45b6e7ed1200104ed018eff9093",
@@ -83,7 +247,89 @@
    "home_rank_tarp": 36.0,
    "away_off_adj": 6.0,
    "away_def_adj": 5.0,
-   "away_rank_tarp": 1.0
+   "away_rank_tarp": 1.0,
+   "home_display": "California",
+   "away_display": "UCLA",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 106.0,
+     "explosiveness": 60.0,
+     "havoc": 100.0,
+     "finishing_drives": 68.0,
+     "tarp": 36.0
+    },
+    "home_def": {
+     "success_rate": 62.5,
+     "explosiveness": 34.0,
+     "havoc": 60.0,
+     "finishing_drives": 60.0,
+     "tarp": 36.0
+    },
+    "away_off": {
+     "success_rate": 85.0,
+     "explosiveness": 115.0,
+     "havoc": 79.5,
+     "finishing_drives": 125.0,
+     "tarp": 1.0
+    },
+    "away_def": {
+     "success_rate": 135.0,
+     "explosiveness": 15.0,
+     "havoc": 130.5,
+     "finishing_drives": 133.0,
+     "tarp": 1.0
+    }
+   },
+   "home_power": {
+    "tan": 64.6,
+    "tan_rank": 56.0,
+    "sp": 3.7,
+    "sp_rank": 84.0,
+    "net_rp": 4.0,
+    "net_rp_rank": 38,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.455,
+    "over_rank": 85.0,
+    "seconds_per_play": 23.6746323,
+    "tempo_rank": 41.0
+   },
+   "away_power": {
+    "tan": 72.3,
+    "tan_rank": 46.0,
+    "sp": 5.1,
+    "sp_rank": 102.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 6,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 18.72992,
+    "tempo_rank": 70.0
+   },
+   "home_qb": {
+    "name": "Jaron-Keawe Sagapolutele",
+    "pff_off_grade": 78.3,
+    "pff_pass_grade": 79.4,
+    "pass_att": 456.0,
+    "pass_yds": 3118.0,
+    "pass_td": 17.0,
+    "rush_att": 33.0,
+    "rush_yds": 88.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Nico Iamaleava",
+    "pff_off_grade": 72.0,
+    "pff_pass_grade": 64.1,
+    "pass_att": 329.0,
+    "pass_yds": 1941.0,
+    "pass_td": 13.0,
+    "rush_att": 84.0,
+    "rush_yds": 664.0,
+    "games": 11.0
+   }
   },
   {
    "game_id": "e599d006aed0025ea9182d6763be6fd7",
@@ -110,7 +356,89 @@
    "home_rank_tarp": 22.0,
    "away_off_adj": -5.5,
    "away_def_adj": -3.0,
-   "away_rank_tarp": 131.0
+   "away_rank_tarp": 131.0,
+   "home_display": "Indiana",
+   "away_display": "North Texas",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 2.0,
+     "explosiveness": 99.0,
+     "havoc": 10.0,
+     "finishing_drives": 3.0,
+     "tarp": 22.0
+    },
+    "home_def": {
+     "success_rate": 5.0,
+     "explosiveness": 110.0,
+     "havoc": 1.0,
+     "finishing_drives": 1.0,
+     "tarp": 22.0
+    },
+    "away_off": {
+     "success_rate": 3.0,
+     "explosiveness": 33.0,
+     "havoc": 6.5,
+     "finishing_drives": 1.0,
+     "tarp": 131.0
+    },
+    "away_def": {
+     "success_rate": 74.0,
+     "explosiveness": 57.0,
+     "havoc": 100.5,
+     "finishing_drives": 95.0,
+     "tarp": 131.0
+    }
+   },
+   "home_power": {
+    "tan": 95.4,
+    "tan_rank": 5.0,
+    "sp": 24.5,
+    "sp_rank": 2.0,
+    "net_rp": 7.0,
+    "net_rp_rank": 22,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 31.6892979,
+    "tempo_rank": 27.0
+   },
+   "away_power": {
+    "tan": 60.1,
+    "tan_rank": 108.0,
+    "sp": -11.8,
+    "sp_rank": 64.0,
+    "net_rp": -8.5,
+    "net_rp_rank": 131,
+    "ats_pct": 0.833,
+    "ats_rank": 3.5,
+    "over_pct": 0.75,
+    "over_rank": 3.0,
+    "seconds_per_play": 36.4873223,
+    "tempo_rank": 9.0
+   },
+   "home_qb": {
+    "name": "Josh Hoover",
+    "pff_off_grade": 76.8,
+    "pff_pass_grade": 78.9,
+    "pass_att": 413.0,
+    "pass_yds": 3445.0,
+    "pass_td": 28.0,
+    "rush_att": 45.0,
+    "rush_yds": 115.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Tayven Jackson",
+    "pff_off_grade": 59.4,
+    "pff_pass_grade": 55.1,
+    "pass_att": 317.0,
+    "pass_yds": 2161.0,
+    "pass_td": 10.0,
+    "rush_att": 42.0,
+    "rush_yds": 171.0,
+    "games": 11.0
+   }
   },
   {
    "game_id": "2da3627714934ad966d548980bb69658",
@@ -137,7 +465,89 @@
    "home_rank_tarp": 53.0,
    "away_off_adj": 6.0,
    "away_def_adj": 4.0,
-   "away_rank_tarp": 13.0
+   "away_rank_tarp": 13.0,
+   "home_display": "Tulsa",
+   "away_display": "Oklahoma State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 93.0,
+     "explosiveness": 56.0,
+     "havoc": 104.0,
+     "finishing_drives": 106.0,
+     "tarp": 53.0
+    },
+    "home_def": {
+     "success_rate": 84.0,
+     "explosiveness": 46.0,
+     "havoc": 123.0,
+     "finishing_drives": 78.0,
+     "tarp": 53.0
+    },
+    "away_off": {
+     "success_rate": 133.0,
+     "explosiveness": 113.0,
+     "havoc": 127.0,
+     "finishing_drives": 126.0,
+     "tarp": 13.0
+    },
+    "away_def": {
+     "success_rate": 108.0,
+     "explosiveness": 122.0,
+     "havoc": 82.5,
+     "finishing_drives": 98.0,
+     "tarp": 13.0
+    }
+   },
+   "home_power": {
+    "tan": 52.8,
+    "tan_rank": 95.0,
+    "sp": -7.6,
+    "sp_rank": 107.0,
+    "net_rp": 2.0,
+    "net_rp_rank": 55,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 27.7234863,
+    "tempo_rank": 21.0
+   },
+   "away_power": {
+    "tan": 67.6,
+    "tan_rank": 38.0,
+    "sp": 7.1,
+    "sp_rank": 122.5,
+    "net_rp": 10.0,
+    "net_rp_rank": 14,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 18.0930847,
+    "tempo_rank": 97.0
+   },
+   "home_qb": {
+    "name": "Baylor Hayes",
+    "pff_off_grade": 59.2,
+    "pff_pass_grade": 57.3,
+    "pass_att": 319.0,
+    "pass_yds": 2161.0,
+    "pass_td": 12.0,
+    "rush_att": 72.0,
+    "rush_yds": 344.0,
+    "games": 10.0
+   },
+   "away_qb": {
+    "name": "Drew Mestemaker",
+    "pff_off_grade": 88.3,
+    "pff_pass_grade": 86.1,
+    "pass_att": 384.0,
+    "pass_yds": 3837.0,
+    "pass_td": 29.0,
+    "rush_att": 37.0,
+    "rush_yds": 139.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "85b9f3dfd3a9deeaaa046572f9b4fbeb",
@@ -164,7 +574,89 @@
    "home_rank_tarp": 133.0,
    "away_off_adj": 1.5,
    "away_def_adj": 2.0,
-   "away_rank_tarp": 39.0
+   "away_rank_tarp": 39.0,
+   "home_display": "South Florida",
+   "away_display": "Florida International",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 18.0,
+     "explosiveness": 32.0,
+     "havoc": 38.0,
+     "finishing_drives": 8.5,
+     "tarp": 133.0
+    },
+    "home_def": {
+     "success_rate": 31.0,
+     "explosiveness": 112.0,
+     "havoc": 53.0,
+     "finishing_drives": 31.0,
+     "tarp": 133.0
+    },
+    "away_off": {
+     "success_rate": 80.0,
+     "explosiveness": 34.0,
+     "havoc": 79.5,
+     "finishing_drives": 32.0,
+     "tarp": 39.0
+    },
+    "away_def": {
+     "success_rate": 66.0,
+     "explosiveness": 81.0,
+     "havoc": 44.0,
+     "finishing_drives": 40.0,
+     "tarp": 39.0
+    }
+   },
+   "home_power": {
+    "tan": 61.8,
+    "tan_rank": 79.0,
+    "sp": -2.8,
+    "sp_rank": 61.0,
+    "net_rp": -9.0,
+    "net_rp_rank": 133,
+    "ats_pct": 0.727,
+    "ats_rank": 11.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 36.7474387,
+    "tempo_rank": 57.0
+   },
+   "away_power": {
+    "tan": 53.1,
+    "tan_rank": 117.0,
+    "sp": -13.7,
+    "sp_rank": 93.0,
+    "net_rp": 3.5,
+    "net_rp_rank": 40,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.546,
+    "over_rank": 48.0,
+    "seconds_per_play": 26.6569832,
+    "tempo_rank": 75.0
+   },
+   "home_qb": {
+    "name": "Michael Van Buren Jr.",
+    "pff_off_grade": 68.8,
+    "pff_pass_grade": 67.8,
+    "pass_att": 126.0,
+    "pass_yds": 745.0,
+    "pass_td": 5.0,
+    "rush_att": 32.0,
+    "rush_yds": 163.0,
+    "games": 6.0
+   },
+   "away_qb": {
+    "name": "JJ Kohl",
+    "pff_off_grade": 67.5,
+    "pff_pass_grade": 66.0,
+    "pass_att": 217.0,
+    "pass_yds": 1465.0,
+    "pass_td": 12.0,
+    "rush_att": 23.0,
+    "rush_yds": 88.0,
+    "games": 8.0
+   }
   },
   {
    "game_id": "185883640e8f90f283915ddadb0230a3",
@@ -191,7 +683,89 @@
    "home_rank_tarp": 42.0,
    "away_off_adj": 1.0,
    "away_def_adj": -1.0,
-   "away_rank_tarp": 66.0
+   "away_rank_tarp": 66.0,
+   "home_display": "West Virginia",
+   "away_display": "Coastal Carolina",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 119.0,
+     "explosiveness": 84.0,
+     "havoc": 84.0,
+     "finishing_drives": 89.0,
+     "tarp": 42.0
+    },
+    "home_def": {
+     "success_rate": 47.0,
+     "explosiveness": 128.0,
+     "havoc": 28.0,
+     "finishing_drives": 93.0,
+     "tarp": 42.0
+    },
+    "away_off": {
+     "success_rate": 123.0,
+     "explosiveness": 53.0,
+     "havoc": 117.0,
+     "finishing_drives": 62.0,
+     "tarp": 66.0
+    },
+    "away_def": {
+     "success_rate": 124.0,
+     "explosiveness": 78.0,
+     "havoc": 86.5,
+     "finishing_drives": 67.0,
+     "tarp": 66.0
+    }
+   },
+   "home_power": {
+    "tan": 55.9,
+    "tan_rank": 66.0,
+    "sp": 0.8,
+    "sp_rank": 92.0,
+    "net_rp": 3.0,
+    "net_rp_rank": 45,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 24.5092489,
+    "tempo_rank": 32.0
+   },
+   "away_power": {
+    "tan": 48.8,
+    "tan_rank": 118.0,
+    "sp": -13.8,
+    "sp_rank": 114.0,
+    "net_rp": 0.0,
+    "net_rp_rank": 69,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.636,
+    "over_rank": 21.0,
+    "seconds_per_play": 22.2332774,
+    "tempo_rank": 87.0
+   },
+   "home_qb": {
+    "name": "Michael Hawkins Jr.",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 27.0,
+    "pass_yds": 167.0,
+    "pass_td": 3.0,
+    "rush_att": 12.0,
+    "rush_yds": 86.0,
+    "games": 2.0
+   },
+   "away_qb": {
+    "name": "Deuce Bailey",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 48.0,
+    "pass_yds": 335.0,
+    "pass_td": 2.0,
+    "rush_att": 30.0,
+    "rush_yds": 101.0,
+    "games": 3.0
+   }
   },
   {
    "game_id": "b10ebab18213ecdc575885bfa874b98d",
@@ -218,7 +792,89 @@
    "home_rank_tarp": 90.0,
    "away_off_adj": -6.0,
    "away_def_adj": -2.0,
-   "away_rank_tarp": 130.0
+   "away_rank_tarp": 130.0,
+   "home_display": "Alabama",
+   "away_display": "East Carolina",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 34.0,
+     "explosiveness": 54.0,
+     "havoc": 18.0,
+     "finishing_drives": 30.0,
+     "tarp": 90.0
+    },
+    "home_def": {
+     "success_rate": 17.0,
+     "explosiveness": 62.0,
+     "havoc": 18.0,
+     "finishing_drives": 22.0,
+     "tarp": 90.0
+    },
+    "away_off": {
+     "success_rate": 23.0,
+     "explosiveness": 120.0,
+     "havoc": 16.5,
+     "finishing_drives": 38.0,
+     "tarp": 130.0
+    },
+    "away_def": {
+     "success_rate": 18.0,
+     "explosiveness": 88.0,
+     "havoc": 14.0,
+     "finishing_drives": 25.0,
+     "tarp": 130.0
+    }
+   },
+   "home_power": {
+    "tan": 77.9,
+    "tan_rank": 11.0,
+    "sp": 18.2,
+    "sp_rank": 21.0,
+    "net_rp": -2.0,
+    "net_rp_rank": 90,
+    "ats_pct": 0.727,
+    "ats_rank": 11.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 23.5712535,
+    "tempo_rank": 103.0
+   },
+   "away_power": {
+    "tan": 55.9,
+    "tan_rank": 75.0,
+    "sp": -2.0,
+    "sp_rank": 76.0,
+    "net_rp": -8.0,
+    "net_rp_rank": 130,
+    "ats_pct": 0.636,
+    "ats_rank": 34.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 32.5778626,
+    "tempo_rank": 65.0
+   },
+   "home_qb": {
+    "name": "Keelon Russell",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 15.0,
+    "pass_yds": 143.0,
+    "pass_td": 2.0,
+    "rush_att": 3.0,
+    "rush_yds": 17.0,
+    "games": 2.0
+   },
+   "away_qb": {
+    "name": "Mitch Griffis",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 36.0,
+    "pass_yds": 357.0,
+    "pass_td": 2.0,
+    "rush_att": 19.0,
+    "rush_yds": 31.0,
+    "games": 6.0
+   }
   },
   {
    "game_id": "a570687d47661da4982cfd885cdb4a44",
@@ -245,7 +901,89 @@
    "home_rank_tarp": 32.0,
    "away_off_adj": 4.0,
    "away_def_adj": 1.5,
-   "away_rank_tarp": 29.0
+   "away_rank_tarp": 29.0,
+   "home_display": "Florida State",
+   "away_display": "SMU",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 24.0,
+     "explosiveness": 18.0,
+     "havoc": 58.5,
+     "finishing_drives": 51.0,
+     "tarp": 32.0
+    },
+    "home_def": {
+     "success_rate": 54.0,
+     "explosiveness": 33.0,
+     "havoc": 72.0,
+     "finishing_drives": 107.0,
+     "tarp": 32.0
+    },
+    "away_off": {
+     "success_rate": 63.0,
+     "explosiveness": 8.0,
+     "havoc": 102.5,
+     "finishing_drives": 54.0,
+     "tarp": 29.0
+    },
+    "away_def": {
+     "success_rate": 43.0,
+     "explosiveness": 51.0,
+     "havoc": 10.0,
+     "finishing_drives": 9.5,
+     "tarp": 29.0
+    }
+   },
+   "home_power": {
+    "tan": 77.7,
+    "tan_rank": 35.0,
+    "sp": 8.8,
+    "sp_rank": 22.0,
+    "net_rp": 5.0,
+    "net_rp_rank": 33,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 32.2156334,
+    "tempo_rank": 123.0
+   },
+   "away_power": {
+    "tan": 77.4,
+    "tan_rank": 28.0,
+    "sp": 10.9,
+    "sp_rank": 25.0,
+    "net_rp": 5.5,
+    "net_rp_rank": 29,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 29.8722775,
+    "tempo_rank": 50.0
+   },
+   "home_qb": {
+    "name": "Ashton Daniels",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 122.0,
+    "pass_yds": 797.0,
+    "pass_td": 3.0,
+    "rush_att": 54.0,
+    "rush_yds": 334.0,
+    "games": 4.0
+   },
+   "away_qb": {
+    "name": "Kevin Jennings",
+    "pff_off_grade": 78.6,
+    "pff_pass_grade": 77.9,
+    "pass_att": 424.0,
+    "pass_yds": 3370.0,
+    "pass_td": 26.0,
+    "rush_att": 53.0,
+    "rush_yds": 233.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "8154373235ce2adf76b37ecd334601fc",
@@ -272,7 +1010,89 @@
    "home_rank_tarp": 97.0,
    "away_off_adj": -4.5,
    "away_def_adj": -0.5,
-   "away_rank_tarp": 119.0
+   "away_rank_tarp": 119.0,
+   "home_display": "Duke",
+   "away_display": "Tulane",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 38.0,
+     "explosiveness": 19.0,
+     "havoc": 71.5,
+     "finishing_drives": 28.0,
+     "tarp": 97.0
+    },
+    "home_def": {
+     "success_rate": 99.0,
+     "explosiveness": 121.0,
+     "havoc": 28.0,
+     "finishing_drives": 131.0,
+     "tarp": 97.0
+    },
+    "away_off": {
+     "success_rate": 40.0,
+     "explosiveness": 91.0,
+     "havoc": 20.5,
+     "finishing_drives": 52.0,
+     "tarp": 119.0
+    },
+    "away_def": {
+     "success_rate": 96.0,
+     "explosiveness": 32.0,
+     "havoc": 57.0,
+     "finishing_drives": 63.0,
+     "tarp": 119.0
+    }
+   },
+   "home_power": {
+    "tan": 59.7,
+    "tan_rank": 44.0,
+    "sp": 5.7,
+    "sp_rank": 66.0,
+    "net_rp": -3.0,
+    "net_rp_rank": 97,
+    "ats_pct": 0.455,
+    "ats_rank": 78.5,
+    "over_pct": 0.75,
+    "over_rank": 3.0,
+    "seconds_per_play": 28.1773661,
+    "tempo_rank": 106.0
+   },
+   "away_power": {
+    "tan": 56.8,
+    "tan_rank": 86.0,
+    "sp": -5.5,
+    "sp_rank": 73.0,
+    "net_rp": -5.0,
+    "net_rp_rank": 119,
+    "ats_pct": 0.455,
+    "ats_rank": 78.5,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 26.7900325,
+    "tempo_rank": 10.0
+   },
+   "home_qb": {
+    "name": "Walker Eget",
+    "pff_off_grade": 67.5,
+    "pff_pass_grade": 66.7,
+    "pass_att": 397.0,
+    "pass_yds": 3046.0,
+    "pass_td": 17.0,
+    "rush_att": 32.0,
+    "rush_yds": 136.0,
+    "games": 11.0
+   },
+   "away_qb": {
+    "name": "Zeon Chriss-Gremillion",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 21.0,
+    "pass_yds": 108.0,
+    "pass_td": 1.0,
+    "rush_att": 11.0,
+    "rush_yds": 92.0,
+    "games": 5.0
+   }
   },
   {
    "game_id": "261e6183f68405cd431bbdbd0c31eefa",
@@ -299,7 +1119,89 @@
    "home_rank_tarp": 101.0,
    "away_off_adj": 6.0,
    "away_def_adj": -2.5,
-   "away_rank_tarp": 39.0
+   "away_rank_tarp": 39.0,
+   "home_display": "Iowa",
+   "away_display": "Northern Illinois",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 49.0,
+     "explosiveness": 135.0,
+     "havoc": 8.0,
+     "finishing_drives": 27.0,
+     "tarp": 101.0
+    },
+    "home_def": {
+     "success_rate": 41.0,
+     "explosiveness": 2.0,
+     "havoc": 44.0,
+     "finishing_drives": 33.0,
+     "tarp": 101.0
+    },
+    "away_off": {
+     "success_rate": 131.0,
+     "explosiveness": 67.0,
+     "havoc": 34.5,
+     "finishing_drives": 122.0,
+     "tarp": 39.0
+    },
+    "away_def": {
+     "success_rate": 111.0,
+     "explosiveness": 24.0,
+     "havoc": 132.0,
+     "finishing_drives": 50.5,
+     "tarp": 39.0
+    }
+   },
+   "home_power": {
+    "tan": 71.8,
+    "tan_rank": 22.0,
+    "sp": 13.6,
+    "sp_rank": 35.0,
+    "net_rp": -3.5,
+    "net_rp_rank": 101,
+    "ats_pct": 0.727,
+    "ats_rank": 11.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 20.1987717,
+    "tempo_rank": 92.0
+   },
+   "away_power": {
+    "tan": 46.6,
+    "tan_rank": 124.0,
+    "sp": -18.2,
+    "sp_rank": 126.0,
+    "net_rp": 3.5,
+    "net_rp_rank": 41,
+    "ats_pct": 0.25,
+    "ats_rank": 131.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 17.8352602,
+    "tempo_rank": 116.0
+   },
+   "home_qb": {
+    "name": "Jeremy Hecklinski",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 2.0,
+    "pass_yds": 8.0,
+    "pass_td": 0.0,
+    "rush_att": 2.0,
+    "rush_yds": 4.0,
+    "games": 2.0
+   },
+   "away_qb": {
+    "name": "Taron Dickens",
+    "pff_off_grade": 90.7,
+    "pff_pass_grade": 91.2,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "63efb66a308ba1892fb100b7341a76d8",
@@ -326,7 +1228,89 @@
    "home_rank_tarp": 101.0,
    "away_off_adj": -2.0,
    "away_def_adj": -3.5,
-   "away_rank_tarp": 122.0
+   "away_rank_tarp": 122.0,
+   "home_display": "Nevada",
+   "away_display": "Western Kentucky",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 120.0,
+     "explosiveness": 93.0,
+     "havoc": 107.5,
+     "finishing_drives": 133.0,
+     "tarp": 101.0
+    },
+    "home_def": {
+     "success_rate": 86.0,
+     "explosiveness": 37.0,
+     "havoc": 96.5,
+     "finishing_drives": 108.0,
+     "tarp": 101.0
+    },
+    "away_off": {
+     "success_rate": 47.0,
+     "explosiveness": 111.0,
+     "havoc": 53.5,
+     "finishing_drives": 34.0,
+     "tarp": 122.0
+    },
+    "away_def": {
+     "success_rate": 19.0,
+     "explosiveness": 113.0,
+     "havoc": 75.0,
+     "finishing_drives": 11.0,
+     "tarp": 122.0
+    }
+   },
+   "home_power": {
+    "tan": 43.4,
+    "tan_rank": 111.0,
+    "sp": -12.2,
+    "sp_rank": 115.0,
+    "net_rp": -3.5,
+    "net_rp_rank": 104,
+    "ats_pct": 0.455,
+    "ats_rank": 78.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 17.1771408,
+    "tempo_rank": 83.0
+   },
+   "away_power": {
+    "tan": 59.1,
+    "tan_rank": 84.0,
+    "sp": -5.3,
+    "sp_rank": 70.5,
+    "net_rp": -5.5,
+    "net_rp_rank": 123,
+    "ats_pct": 0.75,
+    "ats_rank": 7.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 28.9951982,
+    "tempo_rank": 13.0
+   },
+   "home_qb": {
+    "name": "Carter Jones",
+    "pff_off_grade": 49.8,
+    "pff_pass_grade": 48.5,
+    "pass_att": 173.0,
+    "pass_yds": 1029.0,
+    "pass_td": 6.0,
+    "rush_att": 26.0,
+    "rush_yds": 101.0,
+    "games": 10.0
+   },
+   "away_qb": {
+    "name": "Rodney Tisdale Jr.",
+    "pff_off_grade": 64.1,
+    "pff_pass_grade": 63.2,
+    "pass_att": 195.0,
+    "pass_yds": 1371.0,
+    "pass_td": 9.0,
+    "rush_att": 36.0,
+    "rush_yds": 159.0,
+    "games": 8.0
+   }
   },
   {
    "game_id": "b460f3aa4235ec2485f25182755304d6",
@@ -353,7 +1337,89 @@
    "home_rank_tarp": 32.0,
    "away_off_adj": 6.0,
    "away_def_adj": 5.0,
-   "away_rank_tarp": 1.0
+   "away_rank_tarp": 1.0,
+   "home_display": "Notre Dame",
+   "away_display": "Wisconsin",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 30.0,
+     "explosiveness": 1.0,
+     "havoc": 41.5,
+     "finishing_drives": 6.0,
+     "tarp": 32.0
+    },
+    "home_def": {
+     "success_rate": 15.0,
+     "explosiveness": 64.0,
+     "havoc": 22.0,
+     "finishing_drives": 7.0,
+     "tarp": 32.0
+    },
+    "away_off": {
+     "success_rate": 124.0,
+     "explosiveness": 102.0,
+     "havoc": 120.5,
+     "finishing_drives": 135.0,
+     "tarp": 1.0
+    },
+    "away_def": {
+     "success_rate": 115.0,
+     "explosiveness": 11.0,
+     "havoc": 120.0,
+     "finishing_drives": 26.0,
+     "tarp": 1.0
+    }
+   },
+   "home_power": {
+    "tan": 89.7,
+    "tan_rank": 3.0,
+    "sp": 25.8,
+    "sp_rank": 4.0,
+    "net_rp": 5.0,
+    "net_rp_rank": 32,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 31.4523089,
+    "tempo_rank": 82.0
+   },
+   "away_power": {
+    "tan": 55.4,
+    "tan_rank": 61.0,
+    "sp": 1.8,
+    "sp_rank": 80.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 4,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.167,
+    "over_rank": 135.0,
+    "seconds_per_play": 14.2264852,
+    "tempo_rank": 77.0
+   },
+   "home_qb": {
+    "name": "CJ Carr",
+    "pff_off_grade": 85.1,
+    "pff_pass_grade": 83.5,
+    "pass_att": 299.0,
+    "pass_yds": 2741.0,
+    "pass_td": 24.0,
+    "rush_att": 41.0,
+    "rush_yds": 124.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Colton Joseph",
+    "pff_off_grade": 78.9,
+    "pff_pass_grade": 71.4,
+    "pass_att": 291.0,
+    "pass_yds": 2629.0,
+    "pass_td": 21.0,
+    "rush_att": 145.0,
+    "rush_yds": 1097.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "1697069330d0343bdf7930ac0b0c3863",
@@ -380,7 +1446,89 @@
    "home_rank_tarp": 47.0,
    "away_off_adj": -2.0,
    "away_def_adj": -0.5,
-   "away_rank_tarp": 94.0
+   "away_rank_tarp": 94.0,
+   "home_display": "Illinois",
+   "away_display": "UAB",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 25.0,
+     "explosiveness": 104.0,
+     "havoc": 67.5,
+     "finishing_drives": 29.0,
+     "tarp": 47.0
+    },
+    "home_def": {
+     "success_rate": 116.0,
+     "explosiveness": 25.0,
+     "havoc": 75.0,
+     "finishing_drives": 121.0,
+     "tarp": 47.0
+    },
+    "away_off": {
+     "success_rate": 59.0,
+     "explosiveness": 38.0,
+     "havoc": 67.5,
+     "finishing_drives": 81.0,
+     "tarp": 94.0
+    },
+    "away_def": {
+     "success_rate": 133.0,
+     "explosiveness": 86.0,
+     "havoc": 130.5,
+     "finishing_drives": 135.0,
+     "tarp": 94.0
+    }
+   },
+   "home_power": {
+    "tan": 72.3,
+    "tan_rank": 33.0,
+    "sp": 9.3,
+    "sp_rank": 32.0,
+    "net_rp": 2.5,
+    "net_rp_rank": 48,
+    "ats_pct": 0.636,
+    "ats_rank": 34.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 23.3079043,
+    "tempo_rank": 81.0
+   },
+   "away_power": {
+    "tan": 43.1,
+    "tan_rank": 123.0,
+    "sp": -18.1,
+    "sp_rank": 119.5,
+    "net_rp": -2.5,
+    "net_rp_rank": 96,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 25.2984453,
+    "tempo_rank": 49.0
+   },
+   "home_qb": {
+    "name": "Katin Houser",
+    "pff_off_grade": 84.0,
+    "pff_pass_grade": 82.3,
+    "pass_att": 407.0,
+    "pass_yds": 3323.0,
+    "pass_td": 19.0,
+    "rush_att": 72.0,
+    "rush_yds": 262.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Ryder Burton",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 98.0,
+    "pass_yds": 708.0,
+    "pass_td": 7.0,
+    "rush_att": 23.0,
+    "rush_yds": 77.0,
+    "games": 9.0
+   }
   },
   {
    "game_id": "05c2e060c97c538faeee8237a0bd60f0",
@@ -407,7 +1555,89 @@
    "home_rank_tarp": 105.0,
    "away_off_adj": -5.0,
    "away_def_adj": -3.5,
-   "away_rank_tarp": 131.0
+   "away_rank_tarp": 131.0,
+   "home_display": "Michigan State",
+   "away_display": "Toledo",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 74.0,
+     "explosiveness": 97.0,
+     "havoc": 115.5,
+     "finishing_drives": 64.0,
+     "tarp": 105.0
+    },
+    "home_def": {
+     "success_rate": 112.0,
+     "explosiveness": 27.0,
+     "havoc": 111.0,
+     "finishing_drives": 94.0,
+     "tarp": 105.0
+    },
+    "away_off": {
+     "success_rate": 43.0,
+     "explosiveness": 76.0,
+     "havoc": 12.5,
+     "finishing_drives": 58.0,
+     "tarp": 131.0
+    },
+    "away_def": {
+     "success_rate": 4.0,
+     "explosiveness": 14.0,
+     "havoc": 7.0,
+     "finishing_drives": 3.0,
+     "tarp": 131.0
+    }
+   },
+   "home_power": {
+    "tan": 57.8,
+    "tan_rank": 67.0,
+    "sp": 0.4,
+    "sp_rank": 71.0,
+    "net_rp": -4.0,
+    "net_rp_rank": 106,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 21.7838694,
+    "tempo_rank": 112.0
+   },
+   "away_power": {
+    "tan": 55.7,
+    "tan_rank": 107.0,
+    "sp": -11.5,
+    "sp_rank": 79.0,
+    "net_rp": -8.5,
+    "net_rp_rank": 132,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 28.4630054,
+    "tempo_rank": 115.0
+   },
+   "home_qb": {
+    "name": "Alessio Milivojevic",
+    "pff_off_grade": 71.3,
+    "pff_pass_grade": 68.8,
+    "pass_att": 172.0,
+    "pass_yds": 1267.0,
+    "pass_td": 10.0,
+    "rush_att": 19.0,
+    "rush_yds": 48.0,
+    "games": 9.0
+   },
+   "away_qb": {
+    "name": "John Alan Richter",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 25.0,
+    "pass_yds": 153.0,
+    "pass_td": 3.0,
+    "rush_att": 3.0,
+    "rush_yds": 16.0,
+    "games": 3.0
+   }
   },
   {
    "game_id": "247137e181f9ff51165c0283d6d56987",
@@ -434,7 +1664,89 @@
    "home_rank_tarp": 9.0,
    "away_off_adj": 2.5,
    "away_def_adj": 3.0,
-   "away_rank_tarp": 29.0
+   "away_rank_tarp": 29.0,
+   "home_display": "Florida",
+   "away_display": "Florida Atlantic",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 65.0,
+     "explosiveness": 131.0,
+     "havoc": 65.0,
+     "finishing_drives": 45.0,
+     "tarp": 9.0
+    },
+    "home_def": {
+     "success_rate": 90.0,
+     "explosiveness": 65.0,
+     "havoc": 93.5,
+     "finishing_drives": 53.5,
+     "tarp": 9.0
+    },
+    "away_off": {
+     "success_rate": 97.0,
+     "explosiveness": 7.0,
+     "havoc": 112.5,
+     "finishing_drives": 92.0,
+     "tarp": 29.0
+    },
+    "away_def": {
+     "success_rate": 101.0,
+     "explosiveness": 99.0,
+     "havoc": 107.5,
+     "finishing_drives": 132.0,
+     "tarp": 29.0
+    }
+   },
+   "home_power": {
+    "tan": 82.3,
+    "tan_rank": 19.0,
+    "sp": 14.9,
+    "sp_rank": 13.0,
+    "net_rp": 10.5,
+    "net_rp_rank": 12,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 22.2150059,
+    "tempo_rank": 105.0
+   },
+   "away_power": {
+    "tan": 57.1,
+    "tan_rank": 93.0,
+    "sp": -7.1,
+    "sp_rank": 100.5,
+    "net_rp": 5.5,
+    "net_rp_rank": 31,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 31.264129,
+    "tempo_rank": 66.0
+   },
+   "home_qb": {
+    "name": "Aaron Philo",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 28.0,
+    "pass_yds": 373.0,
+    "pass_td": 1.0,
+    "rush_att": 4.0,
+    "rush_yds": 17.0,
+    "games": 3.0
+   },
+   "away_qb": {
+    "name": "Caden Veltkamp",
+    "pff_off_grade": 73.2,
+    "pff_pass_grade": 73.6,
+    "pass_att": 512.0,
+    "pass_yds": 3629.0,
+    "pass_td": 23.0,
+    "rush_att": 65.0,
+    "rush_yds": 190.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "ac175733be9ad7061abab75fe080d18a",
@@ -461,7 +1773,89 @@
    "home_rank_tarp": 1.0,
    "away_off_adj": -0.5,
    "away_def_adj": -0.5,
-   "away_rank_tarp": 78.0
+   "away_rank_tarp": 78.0,
+   "home_display": "Oregon",
+   "away_display": "Boise State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 6.0,
+     "explosiveness": 37.0,
+     "havoc": 3.5,
+     "finishing_drives": 25.0,
+     "tarp": 1.0
+    },
+    "home_def": {
+     "success_rate": 14.0,
+     "explosiveness": 13.0,
+     "havoc": 24.5,
+     "finishing_drives": 77.0,
+     "tarp": 1.0
+    },
+    "away_off": {
+     "success_rate": 81.0,
+     "explosiveness": 40.0,
+     "havoc": 53.5,
+     "finishing_drives": 67.0,
+     "tarp": 78.0
+    },
+    "away_def": {
+     "success_rate": 8.0,
+     "explosiveness": 133.0,
+     "havoc": 53.0,
+     "finishing_drives": 112.0,
+     "tarp": 78.0
+    }
+   },
+   "home_power": {
+    "tan": 93.5,
+    "tan_rank": 2.0,
+    "sp": 28.3,
+    "sp_rank": 3.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 1,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 29.7067814,
+    "tempo_rank": 37.0
+   },
+   "away_power": {
+    "tan": 61.6,
+    "tan_rank": 39.0,
+    "sp": 6.8,
+    "sp_rank": 55.0,
+    "net_rp": -1.0,
+    "net_rp_rank": 80,
+    "ats_pct": 0.636,
+    "ats_rank": 34.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 27.1882907,
+    "tempo_rank": 86.0
+   },
+   "home_qb": {
+    "name": "Dante Moore",
+    "pff_off_grade": 90.2,
+    "pff_pass_grade": 90.2,
+    "pass_att": 339.0,
+    "pass_yds": 3031.0,
+    "pass_td": 28.0,
+    "rush_att": 52.0,
+    "rush_yds": 279.0,
+    "games": 13.0
+   },
+   "away_qb": {
+    "name": "Maddux Madsen",
+    "pff_off_grade": 68.4,
+    "pff_pass_grade": 66.0,
+    "pass_att": 255.0,
+    "pass_yds": 1992.0,
+    "pass_td": 15.0,
+    "rush_att": 41.0,
+    "rush_yds": 175.0,
+    "games": 9.0
+   }
   },
   {
    "game_id": "9e750af965ce9f276f4280686d4dba35",
@@ -488,7 +1882,89 @@
    "home_rank_tarp": 53.0,
    "away_off_adj": -5.0,
    "away_def_adj": 0.0,
-   "away_rank_tarp": 119.0
+   "away_rank_tarp": 119.0,
+   "home_display": "Cincinnati",
+   "away_display": "Boston College",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 15.0,
+     "explosiveness": 35.0,
+     "havoc": 14.5,
+     "finishing_drives": 13.0,
+     "tarp": 53.0
+    },
+    "home_def": {
+     "success_rate": 95.0,
+     "explosiveness": 22.0,
+     "havoc": 123.0,
+     "finishing_drives": 81.0,
+     "tarp": 53.0
+    },
+    "away_off": {
+     "success_rate": 62.0,
+     "explosiveness": 86.0,
+     "havoc": 93.0,
+     "finishing_drives": 100.0,
+     "tarp": 119.0
+    },
+    "away_def": {
+     "success_rate": 88.5,
+     "explosiveness": 123.0,
+     "havoc": 127.5,
+     "finishing_drives": 84.0,
+     "tarp": 119.0
+    }
+   },
+   "home_power": {
+    "tan": 67.6,
+    "tan_rank": 50.0,
+    "sp": 4.5,
+    "sp_rank": 45.0,
+    "net_rp": 2.0,
+    "net_rp_rank": 53,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 28.6486658,
+    "tempo_rank": 120.0
+   },
+   "away_power": {
+    "tan": 50.0,
+    "tan_rank": 72.0,
+    "sp": -1.5,
+    "sp_rank": 100.5,
+    "net_rp": -5.0,
+    "net_rp_rank": 121,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.636,
+    "over_rank": 21.0,
+    "seconds_per_play": 25.4719935,
+    "tempo_rank": 90.0
+   },
+   "home_qb": {
+    "name": "JC French IV",
+    "pff_off_grade": 65.4,
+    "pff_pass_grade": 63.1,
+    "pass_att": 366.0,
+    "pass_yds": 2753.0,
+    "pass_td": 19.0,
+    "rush_att": 104.0,
+    "rush_yds": 406.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Mason McKenzie",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "4f0e1900bdc8d12bf0cc91ae291c104e",
@@ -515,7 +1991,79 @@
    "home_rank_tarp": 36.0,
    "away_off_adj": -1.0,
    "away_def_adj": 1.0,
-   "away_rank_tarp": 66.0
+   "away_rank_tarp": 66.0,
+   "home_display": "Ole Miss",
+   "away_display": "Louisville",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 16.0,
+     "explosiveness": 36.0,
+     "havoc": 45.0,
+     "finishing_drives": 11.0,
+     "tarp": 36.0
+    },
+    "home_def": {
+     "success_rate": 33.0,
+     "explosiveness": 79.0,
+     "havoc": 60.0,
+     "finishing_drives": 16.0,
+     "tarp": 36.0
+    },
+    "away_off": {
+     "success_rate": 44.0,
+     "explosiveness": 95.0,
+     "havoc": 95.5,
+     "finishing_drives": 84.0,
+     "tarp": 66.0
+    },
+    "away_def": {
+     "success_rate": 13.0,
+     "explosiveness": 41.0,
+     "havoc": 46.5,
+     "finishing_drives": 44.0,
+     "tarp": 66.0
+    }
+   },
+   "home_power": {
+    "tan": 81.0,
+    "tan_rank": 16.0,
+    "sp": 15.9,
+    "sp_rank": 15.0,
+    "net_rp": 4.0,
+    "net_rp_rank": 36,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 36.1429779,
+    "tempo_rank": 7.0
+   },
+   "away_power": {
+    "tan": 71.1,
+    "tan_rank": 27.0,
+    "sp": 11.0,
+    "sp_rank": 36.0,
+    "net_rp": 0.0,
+    "net_rp_rank": 66,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 24.8120645,
+    "tempo_rank": 68.0
+   },
+   "home_qb": null,
+   "away_qb": {
+    "name": "Lincoln Kienholz",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 14.0,
+    "pass_yds": 139.0,
+    "pass_td": 1.0,
+    "rush_att": 15.0,
+    "rush_yds": 59.0,
+    "games": 7.0
+   }
   },
   {
    "game_id": "ad4b1c809d35ea03f513ccb45746e998",
@@ -542,7 +2090,89 @@
    "home_rank_tarp": 135.0,
    "away_off_adj": 0.5,
    "away_def_adj": 0.0,
-   "away_rank_tarp": 63.0
+   "away_rank_tarp": 63.0,
+   "home_display": "James Madison",
+   "away_display": "Liberty",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 29.0,
+     "explosiveness": 45.0,
+     "havoc": 20.5,
+     "finishing_drives": 46.0,
+     "tarp": 135.0
+    },
+    "home_def": {
+     "success_rate": 1.0,
+     "explosiveness": 126.0,
+     "havoc": 14.0,
+     "finishing_drives": 36.0,
+     "tarp": 135.0
+    },
+    "away_off": {
+     "success_rate": 55.0,
+     "explosiveness": 94.0,
+     "havoc": 79.5,
+     "finishing_drives": 74.0,
+     "tarp": 63.0
+    },
+    "away_def": {
+     "success_rate": 69.0,
+     "explosiveness": 102.0,
+     "havoc": 115.5,
+     "finishing_drives": 58.0,
+     "tarp": 63.0
+    }
+   },
+   "home_power": {
+    "tan": 59.5,
+    "tan_rank": 76.0,
+    "sp": -2.1,
+    "sp_rank": 67.0,
+    "net_rp": -10.0,
+    "net_rp_rank": 135,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 28.9809876,
+    "tempo_rank": 107.0
+   },
+   "away_power": {
+    "tan": 51.1,
+    "tan_rank": 91.0,
+    "sp": -6.4,
+    "sp_rank": 97.0,
+    "net_rp": 0.5,
+    "net_rp_rank": 65,
+    "ats_pct": 0.25,
+    "ats_rank": 131.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 25.7200261,
+    "tempo_rank": 99.0
+   },
+   "home_qb": {
+    "name": "Camden Coleman",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   },
+   "away_qb": {
+    "name": "Jaylen Henderson",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 18.0,
+    "pass_yds": 50.0,
+    "pass_td": 0.0,
+    "rush_att": 25.0,
+    "rush_yds": 169.0,
+    "games": 5.0
+   }
   },
   {
    "game_id": "4289d82f1cd4747962ff68c9098c6dcc",
@@ -569,7 +2199,89 @@
    "home_rank_tarp": 26.0,
    "away_off_adj": -2.0,
    "away_def_adj": 1.0,
-   "away_rank_tarp": 78.0
+   "away_rank_tarp": 78.0,
+   "home_display": "Houston",
+   "away_display": "Oregon State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 89.0,
+     "explosiveness": 73.0,
+     "havoc": 47.0,
+     "finishing_drives": 103.0,
+     "tarp": 26.0
+    },
+    "home_def": {
+     "success_rate": 59.0,
+     "explosiveness": 5.0,
+     "havoc": 62.5,
+     "finishing_drives": 76.0,
+     "tarp": 26.0
+    },
+    "away_off": {
+     "success_rate": 71.0,
+     "explosiveness": 134.0,
+     "havoc": 90.0,
+     "finishing_drives": 128.0,
+     "tarp": 78.0
+    },
+    "away_def": {
+     "success_rate": 38.0,
+     "explosiveness": 130.0,
+     "havoc": 38.0,
+     "finishing_drives": 45.0,
+     "tarp": 78.0
+    }
+   },
+   "home_power": {
+    "tan": 72.3,
+    "tan_rank": 36.0,
+    "sp": 8.2,
+    "sp_rank": 33.0,
+    "net_rp": 6.5,
+    "net_rp_rank": 26,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 25.2803728,
+    "tempo_rank": 113.0
+   },
+   "away_power": {
+    "tan": 50.6,
+    "tan_rank": 90.0,
+    "sp": -6.3,
+    "sp_rank": 118.0,
+    "net_rp": -1.0,
+    "net_rp_rank": 82,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 22.3253349,
+    "tempo_rank": 122.0
+   },
+   "home_qb": {
+    "name": "Conner Weigman",
+    "pff_off_grade": 74.4,
+    "pff_pass_grade": 63.5,
+    "pass_att": 319.0,
+    "pass_yds": 2475.0,
+    "pass_td": 21.0,
+    "rush_att": 147.0,
+    "rush_yds": 746.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Braden Atkinson",
+    "pff_off_grade": 90.8,
+    "pff_pass_grade": 90.7,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "171952045c3039d592807265d36b60d0",
@@ -596,7 +2308,89 @@
    "home_rank_tarp": 122.0,
    "away_off_adj": -5.5,
    "away_def_adj": -3.5,
-   "away_rank_tarp": 133.0
+   "away_rank_tarp": 133.0,
+   "home_display": "Eastern Michigan",
+   "away_display": "San Jose State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 68.0,
+     "explosiveness": 71.0,
+     "havoc": 31.0,
+     "finishing_drives": 50.0,
+     "tarp": 122.0
+    },
+    "home_def": {
+     "success_rate": 105.5,
+     "explosiveness": 100.0,
+     "havoc": 134.5,
+     "finishing_drives": 90.0,
+     "tarp": 122.0
+    },
+    "away_off": {
+     "success_rate": 57.0,
+     "explosiveness": 64.0,
+     "havoc": 69.5,
+     "finishing_drives": 130.0,
+     "tarp": 133.0
+    },
+    "away_def": {
+     "success_rate": 80.0,
+     "explosiveness": 89.0,
+     "havoc": 129.0,
+     "finishing_drives": 104.0,
+     "tarp": 133.0
+    }
+   },
+   "home_power": {
+    "tan": 40.2,
+    "tan_rank": 120.0,
+    "sp": -15.0,
+    "sp_rank": 119.5,
+    "net_rp": -5.5,
+    "net_rp_rank": 124,
+    "ats_pct": 0.636,
+    "ats_rank": 34.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 25.5168387,
+    "tempo_rank": 134.0
+   },
+   "away_power": {
+    "tan": 43.9,
+    "tan_rank": 121.0,
+    "sp": -15.5,
+    "sp_rank": 113.0,
+    "net_rp": -9.0,
+    "net_rp_rank": 134,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 26.1824586,
+    "tempo_rank": 3.0
+   },
+   "home_qb": {
+    "name": "Noah Kim",
+    "pff_off_grade": 67.6,
+    "pff_pass_grade": 69.4,
+    "pass_att": 403.0,
+    "pass_yds": 2822.0,
+    "pass_td": 18.0,
+    "rush_att": 72.0,
+    "rush_yds": 263.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Luke Weaver",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 102.0,
+    "pass_yds": 600.0,
+    "pass_td": 5.0,
+    "rush_att": 21.0,
+    "rush_yds": 113.0,
+    "games": 4.0
+   }
   },
   {
    "game_id": "7356f9bad07c48fc6b78f52e38c85c11",
@@ -623,7 +2417,89 @@
    "home_rank_tarp": 17.0,
    "away_off_adj": -1.0,
    "away_def_adj": -1.0,
-   "away_rank_tarp": 90.0
+   "away_rank_tarp": 90.0,
+   "home_display": "Oklahoma",
+   "away_display": "UTEP",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 84.0,
+     "explosiveness": 72.0,
+     "havoc": 95.5,
+     "finishing_drives": 65.0,
+     "tarp": 17.0
+    },
+    "home_def": {
+     "success_rate": 2.0,
+     "explosiveness": 105.0,
+     "havoc": 2.5,
+     "finishing_drives": 5.0,
+     "tarp": 17.0
+    },
+    "away_off": {
+     "success_rate": 135.0,
+     "explosiveness": 4.0,
+     "havoc": 124.0,
+     "finishing_drives": 96.0,
+     "tarp": 90.0
+    },
+    "away_def": {
+     "success_rate": 40.0,
+     "explosiveness": 50.0,
+     "havoc": 69.0,
+     "finishing_drives": 86.0,
+     "tarp": 90.0
+    }
+   },
+   "home_power": {
+    "tan": 85.5,
+    "tan_rank": 12.0,
+    "sp": 17.2,
+    "sp_rank": 10.0,
+    "net_rp": 8.0,
+    "net_rp_rank": 18,
+    "ats_pct": 0.546,
+    "ats_rank": 54.0,
+    "over_pct": 0.167,
+    "over_rank": 135.0,
+    "seconds_per_play": 24.3852664,
+    "tempo_rank": 33.0
+   },
+   "away_power": {
+    "tan": 40.1,
+    "tan_rank": 128.0,
+    "sp": -20.5,
+    "sp_rank": 127.0,
+    "net_rp": -2.0,
+    "net_rp_rank": 93,
+    "ats_pct": 0.25,
+    "ats_rank": 131.0,
+    "over_pct": 0.667,
+    "over_rank": 13.0,
+    "seconds_per_play": 22.8054516,
+    "tempo_rank": 109.0
+   },
+   "home_qb": {
+    "name": "John Mateer",
+    "pff_off_grade": 64.0,
+    "pff_pass_grade": 61.7,
+    "pass_att": 402.0,
+    "pass_yds": 2884.0,
+    "pass_td": 14.0,
+    "rush_att": 134.0,
+    "rush_yds": 565.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "EJ Colson",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "ab601e833e1494159df16e0331dd02d4",
@@ -650,7 +2526,79 @@
    "home_rank_tarp": 84.0,
    "away_off_adj": -2.0,
    "away_def_adj": -0.5,
-   "away_rank_tarp": 94.0
+   "away_rank_tarp": 94.0,
+   "home_display": "Pittsburgh",
+   "away_display": "Miami Ohio",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 104.0,
+     "explosiveness": 9.0,
+     "havoc": 118.5,
+     "finishing_drives": 66.0,
+     "tarp": 84.0
+    },
+    "home_def": {
+     "success_rate": 16.0,
+     "explosiveness": 108.0,
+     "havoc": 19.5,
+     "finishing_drives": 116.0,
+     "tarp": 84.0
+    },
+    "away_off": {
+     "success_rate": 88.0,
+     "explosiveness": 87.0,
+     "havoc": 31.0,
+     "finishing_drives": 75.0,
+     "tarp": 94.0
+    },
+    "away_def": {
+     "success_rate": 52.0,
+     "explosiveness": 38.0,
+     "havoc": 11.5,
+     "finishing_drives": 73.0,
+     "tarp": 94.0
+    }
+   },
+   "home_power": {
+    "tan": 70.0,
+    "tan_rank": 41.0,
+    "sp": 6.5,
+    "sp_rank": 37.0,
+    "net_rp": -1.5,
+    "net_rp_rank": 84,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.636,
+    "over_rank": 21.0,
+    "seconds_per_play": 26.3176967,
+    "tempo_rank": 29.0
+   },
+   "away_power": {
+    "tan": 50.2,
+    "tan_rank": 80.0,
+    "sp": -2.9,
+    "sp_rank": 78.0,
+    "net_rp": -2.5,
+    "net_rp_rank": 95,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 21.1620305,
+    "tempo_rank": 51.0
+   },
+   "home_qb": {
+    "name": "Mason Heintschel",
+    "pff_off_grade": 59.5,
+    "pff_pass_grade": 57.3,
+    "pass_att": 277.0,
+    "pass_yds": 2089.0,
+    "pass_td": 15.0,
+    "rush_att": 53.0,
+    "rush_yds": 301.0,
+    "games": 9.0
+   },
+   "away_qb": null
   },
   {
    "game_id": "0434161af1b45c8a61dac5ba00210af1",
@@ -677,7 +2625,89 @@
    "home_rank_tarp": 84.0,
    "away_off_adj": 2.5,
    "away_def_adj": -2.5,
-   "away_rank_tarp": 66.0
+   "away_rank_tarp": 66.0,
+   "home_display": "New Mexico",
+   "away_display": "Central Michigan",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 77.0,
+     "explosiveness": 51.0,
+     "havoc": 48.5,
+     "finishing_drives": 49.0,
+     "tarp": 84.0
+    },
+    "home_def": {
+     "success_rate": 48.0,
+     "explosiveness": 59.0,
+     "havoc": 38.0,
+     "finishing_drives": 23.0,
+     "tarp": 84.0
+    },
+    "away_off": {
+     "success_rate": 99.0,
+     "explosiveness": 90.0,
+     "havoc": 62.0,
+     "finishing_drives": 79.5,
+     "tarp": 66.0
+    },
+    "away_def": {
+     "success_rate": 50.0,
+     "explosiveness": 20.0,
+     "havoc": 53.0,
+     "finishing_drives": 21.0,
+     "tarp": 66.0
+    }
+   },
+   "home_power": {
+    "tan": 55.8,
+    "tan_rank": 68.0,
+    "sp": -0.5,
+    "sp_rank": 66.0,
+    "net_rp": -1.5,
+    "net_rp_rank": 85,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 23.3018397,
+    "tempo_rank": 98.0
+   },
+   "away_power": {
+    "tan": 49.8,
+    "tan_rank": 112.0,
+    "sp": -12.4,
+    "sp_rank": 91.0,
+    "net_rp": 0.0,
+    "net_rp_rank": 68,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 20.1335925,
+    "tempo_rank": 117.0
+   },
+   "home_qb": {
+    "name": "Luke Moga",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 5.0,
+    "pass_yds": 58.0,
+    "pass_td": 0.0,
+    "rush_att": 4.0,
+    "rush_yds": 47.0,
+    "games": 3.0
+   },
+   "away_qb": {
+    "name": "Angel Flores",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 29.0,
+    "pass_yds": 195.0,
+    "pass_td": 2.0,
+    "rush_att": 102.0,
+    "rush_yds": 523.0,
+    "games": 8.0
+   }
   },
   {
    "game_id": "0b8f9bbc0bf1b04a819f0113922998b0",
@@ -704,7 +2734,89 @@
    "home_rank_tarp": 1.0,
    "away_off_adj": -5.0,
    "away_def_adj": 2.0,
-   "away_rank_tarp": 97.0
+   "away_rank_tarp": 97.0,
+   "home_display": "Nebraska",
+   "away_display": "Ohio",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 21.0,
+     "explosiveness": 132.0,
+     "havoc": 28.5,
+     "finishing_drives": 56.0,
+     "tarp": 1.0
+    },
+    "home_def": {
+     "success_rate": 68.0,
+     "explosiveness": 83.0,
+     "havoc": 93.5,
+     "finishing_drives": 115.0,
+     "tarp": 1.0
+    },
+    "away_off": {
+     "success_rate": 46.0,
+     "explosiveness": 69.0,
+     "havoc": 24.5,
+     "finishing_drives": 83.0,
+     "tarp": 97.0
+    },
+    "away_def": {
+     "success_rate": 61.0,
+     "explosiveness": 87.0,
+     "havoc": 96.5,
+     "finishing_drives": 14.0,
+     "tarp": 97.0
+    }
+   },
+   "home_power": {
+    "tan": 73.7,
+    "tan_rank": 37.0,
+    "sp": 7.7,
+    "sp_rank": 30.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 5,
+    "ats_pct": 0.364,
+    "ats_rank": 111.0,
+    "over_pct": 0.75,
+    "over_rank": 3.0,
+    "seconds_per_play": 22.9095077,
+    "tempo_rank": 85.0
+   },
+   "away_power": {
+    "tan": 53.2,
+    "tan_rank": 116.0,
+    "sp": -13.6,
+    "sp_rank": 81.0,
+    "net_rp": -3.0,
+    "net_rp_rank": 98,
+    "ats_pct": 0.455,
+    "ats_rank": 78.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 26.5313871,
+    "tempo_rank": 28.0
+   },
+   "home_qb": {
+    "name": "Anthony Colandrea",
+    "pff_off_grade": 89.9,
+    "pff_pass_grade": 82.7,
+    "pass_att": 350.0,
+    "pass_yds": 3043.0,
+    "pass_td": 22.0,
+    "rush_att": 94.0,
+    "rush_yds": 682.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Nick Poulos",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 8.0,
+    "pass_yds": 19.0,
+    "pass_td": 0.0,
+    "rush_att": 10.0,
+    "rush_yds": 43.0,
+    "games": 4.0
+   }
   },
   {
    "game_id": "ddf45575d5d07af2872a07618f9f7867",
@@ -731,7 +2843,89 @@
    "home_rank_tarp": 71.0,
    "away_off_adj": 0.0,
    "away_def_adj": -3.0,
-   "away_rank_tarp": 97.0
+   "away_rank_tarp": 97.0,
+   "home_display": "Colorado State",
+   "away_display": "Wyoming",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 103.0,
+     "explosiveness": 89.0,
+     "havoc": 127.0,
+     "finishing_drives": 90.0,
+     "tarp": 71.0
+    },
+    "home_def": {
+     "success_rate": 120.0,
+     "explosiveness": 97.0,
+     "havoc": 115.5,
+     "finishing_drives": 101.0,
+     "tarp": 71.0
+    },
+    "away_off": {
+     "success_rate": 117.0,
+     "explosiveness": 114.0,
+     "havoc": 125.0,
+     "finishing_drives": 127.0,
+     "tarp": 97.0
+    },
+    "away_def": {
+     "success_rate": 26.0,
+     "explosiveness": 49.0,
+     "havoc": 118.5,
+     "finishing_drives": 12.0,
+     "tarp": 97.0
+    }
+   },
+   "home_power": {
+    "tan": 45.8,
+    "tan_rank": 98.0,
+    "sp": -8.3,
+    "sp_rank": 122.5,
+    "net_rp": -0.5,
+    "net_rp_rank": 76,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 21.3145478,
+    "tempo_rank": 88.0
+   },
+   "away_power": {
+    "tan": 46.0,
+    "tan_rank": 105.0,
+    "sp": -9.6,
+    "sp_rank": 105.0,
+    "net_rp": -3.0,
+    "net_rp_rank": 100,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.167,
+    "over_rank": 135.0,
+    "seconds_per_play": 20.9537607,
+    "tempo_rank": 16.0
+   },
+   "home_qb": {
+    "name": "Hauss Hejny",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 10.0,
+    "pass_yds": 96.0,
+    "pass_td": 1.0,
+    "rush_att": 4.0,
+    "rush_yds": 27.0,
+    "games": 1.0
+   },
+   "away_qb": {
+    "name": "Tyler Hughes",
+    "pff_off_grade": 83.9,
+    "pff_pass_grade": 76.6,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "932e0ced2b1a1ae5694574642bb186ae",
@@ -758,7 +2952,89 @@
    "home_rank_tarp": 9.0,
    "away_off_adj": 2.0,
    "away_def_adj": -0.5,
-   "away_rank_tarp": 57.0
+   "away_rank_tarp": 57.0,
+   "home_display": "Texas",
+   "away_display": "Texas State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 102.0,
+     "explosiveness": 20.0,
+     "havoc": 75.5,
+     "finishing_drives": 99.0,
+     "tarp": 9.0
+    },
+    "home_def": {
+     "success_rate": 45.0,
+     "explosiveness": 26.0,
+     "havoc": 24.5,
+     "finishing_drives": 83.0,
+     "tarp": 9.0
+    },
+    "away_off": {
+     "success_rate": 35.0,
+     "explosiveness": 22.0,
+     "havoc": 16.5,
+     "finishing_drives": 19.5,
+     "tarp": 57.0
+    },
+    "away_def": {
+     "success_rate": 87.0,
+     "explosiveness": 93.0,
+     "havoc": 90.5,
+     "finishing_drives": 106.0,
+     "tarp": 57.0
+    }
+   },
+   "home_power": {
+    "tan": 88.0,
+    "tan_rank": 6.0,
+    "sp": 23.7,
+    "sp_rank": 6.0,
+    "net_rp": 10.5,
+    "net_rp_rank": 10,
+    "ats_pct": 0.364,
+    "ats_rank": 111.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 25.5607976,
+    "tempo_rank": 17.0
+   },
+   "away_power": {
+    "tan": 64.0,
+    "tan_rank": 88.0,
+    "sp": -5.9,
+    "sp_rank": 72.0,
+    "net_rp": 1.5,
+    "net_rp_rank": 59,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 32.7740304,
+    "tempo_rank": 62.0
+   },
+   "home_qb": {
+    "name": "Arch Manning",
+    "pff_off_grade": 87.3,
+    "pff_pass_grade": 81.0,
+    "pass_att": 373.0,
+    "pass_yds": 2942.0,
+    "pass_td": 24.0,
+    "rush_att": 70.0,
+    "rush_yds": 364.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Brad Jackson",
+    "pff_off_grade": 79.2,
+    "pff_pass_grade": 73.1,
+    "pass_att": 332.0,
+    "pass_yds": 3035.0,
+    "pass_td": 18.0,
+    "rush_att": 143.0,
+    "rush_yds": 802.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "525909f6be5e505d076a97eb097528eb",
@@ -785,7 +3061,89 @@
    "home_rank_tarp": 22.0,
    "away_off_adj": -0.5,
    "away_def_adj": 2.0,
-   "away_rank_tarp": 57.0
+   "away_rank_tarp": 57.0,
+   "home_display": "Auburn",
+   "away_display": "Baylor",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 53.0,
+     "explosiveness": 118.0,
+     "havoc": 100.0,
+     "finishing_drives": 57.0,
+     "tarp": 22.0
+    },
+    "home_def": {
+     "success_rate": 22.0,
+     "explosiveness": 98.0,
+     "havoc": 51.0,
+     "finishing_drives": 42.0,
+     "tarp": 22.0
+    },
+    "away_off": {
+     "success_rate": 45.0,
+     "explosiveness": 44.0,
+     "havoc": 60.5,
+     "finishing_drives": 71.0,
+     "tarp": 57.0
+    },
+    "away_def": {
+     "success_rate": 100.0,
+     "explosiveness": 18.0,
+     "havoc": 127.5,
+     "finishing_drives": 124.0,
+     "tarp": 57.0
+    }
+   },
+   "home_power": {
+    "tan": 83.9,
+    "tan_rank": 26.0,
+    "sp": 11.2,
+    "sp_rank": 12.0,
+    "net_rp": 7.0,
+    "net_rp_rank": 23,
+    "ats_pct": 0.364,
+    "ats_rank": 111.0,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 25.4808997,
+    "tempo_rank": 119.0
+   },
+   "away_power": {
+    "tan": 67.6,
+    "tan_rank": 50.0,
+    "sp": 4.5,
+    "sp_rank": 45.0,
+    "net_rp": 1.5,
+    "net_rp_rank": 58,
+    "ats_pct": 0.167,
+    "ats_rank": 135.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 31.3315163,
+    "tempo_rank": 120.0
+   },
+   "home_qb": {
+    "name": "Byrum Brown",
+    "pff_off_grade": 91.5,
+    "pff_pass_grade": 85.7,
+    "pass_att": 342.0,
+    "pass_yds": 3131.0,
+    "pass_td": 28.0,
+    "rush_att": 159.0,
+    "rush_yds": 1107.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "DJ Lagway",
+    "pff_off_grade": 66.7,
+    "pff_pass_grade": 62.6,
+    "pass_att": 338.0,
+    "pass_yds": 2265.0,
+    "pass_td": 16.0,
+    "rush_att": 51.0,
+    "rush_yds": 244.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "36c2a063d7a55e85488fbe0e89015686",
@@ -812,7 +3170,89 @@
    "home_rank_tarp": 42.0,
    "away_off_adj": -2.0,
    "away_def_adj": -2.5,
-   "away_rank_tarp": 115.0
+   "away_rank_tarp": 115.0,
+   "home_display": "Washington",
+   "away_display": "Washington State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 8.0,
+     "explosiveness": 70.0,
+     "havoc": 38.0,
+     "finishing_drives": 19.5,
+     "tarp": 42.0
+    },
+    "home_def": {
+     "success_rate": 36.0,
+     "explosiveness": 47.0,
+     "havoc": 105.5,
+     "finishing_drives": 28.0,
+     "tarp": 42.0
+    },
+    "away_off": {
+     "success_rate": 90.0,
+     "explosiveness": 133.0,
+     "havoc": 69.5,
+     "finishing_drives": 41.0,
+     "tarp": 115.0
+    },
+    "away_def": {
+     "success_rate": 91.0,
+     "explosiveness": 3.0,
+     "havoc": 100.5,
+     "finishing_drives": 19.0,
+     "tarp": 115.0
+    }
+   },
+   "home_power": {
+    "tan": 77.4,
+    "tan_rank": 21.0,
+    "sp": 14.5,
+    "sp_rank": 24.0,
+    "net_rp": 3.0,
+    "net_rp_rank": 43,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 28.0345977,
+    "tempo_rank": 26.0
+   },
+   "away_power": {
+    "tan": 59.1,
+    "tan_rank": 84.0,
+    "sp": -5.3,
+    "sp_rank": 68.0,
+    "net_rp": -4.5,
+    "net_rp_rank": 116,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.25,
+    "over_rank": 132.0,
+    "seconds_per_play": 21.6280177,
+    "tempo_rank": 13.0
+   },
+   "home_qb": {
+    "name": "Demond Williams Jr.",
+    "pff_off_grade": 79.1,
+    "pff_pass_grade": 74.7,
+    "pass_att": 331.0,
+    "pass_yds": 2850.0,
+    "pass_td": 21.0,
+    "rush_att": 113.0,
+    "rush_yds": 737.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Caden Pinnick",
+    "pff_off_grade": 83.6,
+    "pff_pass_grade": 77.5,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "5f92cc707afed4249e1e935dbbeacb5e",
@@ -839,7 +3279,89 @@
    "home_rank_tarp": 101.0,
    "away_off_adj": 2.5,
    "away_def_adj": 0.5,
-   "away_rank_tarp": 42.0
+   "away_rank_tarp": 42.0,
+   "home_display": "Stanford",
+   "away_display": "Miami",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 125.0,
+     "explosiveness": 83.0,
+     "havoc": 105.0,
+     "finishing_drives": 123.0,
+     "tarp": 101.0
+    },
+    "home_def": {
+     "success_rate": 82.0,
+     "explosiveness": 103.0,
+     "havoc": 90.5,
+     "finishing_drives": 52.0,
+     "tarp": 101.0
+    },
+    "away_off": {
+     "success_rate": 12.0,
+     "explosiveness": 122.0,
+     "havoc": 9.0,
+     "finishing_drives": 15.0,
+     "tarp": 42.0
+    },
+    "away_def": {
+     "success_rate": 9.0,
+     "explosiveness": 92.0,
+     "havoc": 8.5,
+     "finishing_drives": 8.0,
+     "tarp": 42.0
+    }
+   },
+   "home_power": {
+    "tan": 50.2,
+    "tan_rank": 74.0,
+    "sp": -1.9,
+    "sp_rank": 109.0,
+    "net_rp": -3.5,
+    "net_rp_rank": 103,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 19.4346909,
+    "tempo_rank": 63.0
+   },
+   "away_power": {
+    "tan": 84.2,
+    "tan_rank": 8.0,
+    "sp": 21.0,
+    "sp_rank": 11.0,
+    "net_rp": 3.0,
+    "net_rp_rank": 42,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 26.6241242,
+    "tempo_rank": 127.0
+   },
+   "home_qb": {
+    "name": "Davis Warren",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   },
+   "away_qb": {
+    "name": "Darian Mensah",
+    "pff_off_grade": 84.1,
+    "pff_pass_grade": 85.0,
+    "pass_att": 426.0,
+    "pass_yds": 3430.0,
+    "pass_td": 28.0,
+    "rush_att": 29.0,
+    "rush_yds": 106.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "965fa47588c773e6753d409fc1020dec",
@@ -866,7 +3388,89 @@
    "home_rank_tarp": 36.0,
    "away_off_adj": 0.5,
    "away_def_adj": -2.5,
-   "away_rank_tarp": 90.0
+   "away_rank_tarp": 90.0,
+   "home_display": "Michigan",
+   "away_display": "Western Michigan",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 27.0,
+     "explosiveness": 126.0,
+     "havoc": 11.0,
+     "finishing_drives": 76.0,
+     "tarp": 36.0
+    },
+    "home_def": {
+     "success_rate": 64.0,
+     "explosiveness": 6.0,
+     "havoc": 46.5,
+     "finishing_drives": 69.5,
+     "tarp": 36.0
+    },
+    "away_off": {
+     "success_rate": 64.0,
+     "explosiveness": 136.0,
+     "havoc": 28.5,
+     "finishing_drives": 88.0,
+     "tarp": 90.0
+    },
+    "away_def": {
+     "success_rate": 32.0,
+     "explosiveness": 58.0,
+     "havoc": 41.0,
+     "finishing_drives": 39.0,
+     "tarp": 90.0
+    }
+   },
+   "home_power": {
+    "tan": 80.6,
+    "tan_rank": 14.0,
+    "sp": 16.1,
+    "sp_rank": 17.0,
+    "net_rp": 4.0,
+    "net_rp_rank": 37,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 25.4819919,
+    "tempo_rank": 43.0
+   },
+   "away_power": {
+    "tan": 52.2,
+    "tan_rank": 94.0,
+    "sp": -7.2,
+    "sp_rank": 80.0,
+    "net_rp": -2.0,
+    "net_rp_rank": 91,
+    "ats_pct": 0.727,
+    "ats_rank": 11.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 21.7358793,
+    "tempo_rank": 6.0
+   },
+   "home_qb": {
+    "name": "Bryce Underwood",
+    "pff_off_grade": 69.3,
+    "pff_pass_grade": 66.2,
+    "pass_att": 293.0,
+    "pass_yds": 2229.0,
+    "pass_td": 9.0,
+    "rush_att": 62.0,
+    "rush_yds": 393.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Broc Lowry",
+    "pff_off_grade": 88.6,
+    "pff_pass_grade": 75.5,
+    "pass_att": 233.0,
+    "pass_yds": 1584.0,
+    "pass_td": 7.0,
+    "rush_att": 173.0,
+    "rush_yds": 971.0,
+    "games": 12.0
+   }
   },
   {
    "game_id": "57c73afe255c44ef3e19b52dc9557ea8",
@@ -893,7 +3497,89 @@
    "home_rank_tarp": 125.0,
    "away_off_adj": 3.0,
    "away_def_adj": -2.0,
-   "away_rank_tarp": 61.0
+   "away_rank_tarp": 61.0,
+   "home_display": "Memphis",
+   "away_display": "Arkansas State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 36.0,
+     "explosiveness": 29.0,
+     "havoc": 41.5,
+     "finishing_drives": 16.0,
+     "tarp": 125.0
+    },
+    "home_def": {
+     "success_rate": 70.0,
+     "explosiveness": 85.0,
+     "havoc": 32.0,
+     "finishing_drives": 96.0,
+     "tarp": 125.0
+    },
+    "away_off": {
+     "success_rate": 67.0,
+     "explosiveness": 129.0,
+     "havoc": 110.5,
+     "finishing_drives": 112.0,
+     "tarp": 61.0
+    },
+    "away_def": {
+     "success_rate": 105.5,
+     "explosiveness": 74.0,
+     "havoc": 100.5,
+     "finishing_drives": 89.0,
+     "tarp": 61.0
+    }
+   },
+   "home_power": {
+    "tan": 56.2,
+    "tan_rank": 70.0,
+    "sp": -1.1,
+    "sp_rank": 75.0,
+    "net_rp": -6.0,
+    "net_rp_rank": 125,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 26.7339355,
+    "tempo_rank": 35.0
+   },
+   "away_power": {
+    "tan": 50.1,
+    "tan_rank": 100.0,
+    "sp": -8.5,
+    "sp_rank": 103.0,
+    "net_rp": 1.0,
+    "net_rp_rank": 61,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 25.8879463,
+    "tempo_rank": 67.0
+   },
+   "home_qb": {
+    "name": "Marcus Stokes",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   },
+   "away_qb": {
+    "name": "Trey Owens",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": null,
+    "rush_yds": null,
+    "games": null
+   }
   },
   {
    "game_id": "3b70c72dad6ee188202de37cf3218811",
@@ -920,7 +3606,89 @@
    "home_rank_tarp": 1.0,
    "away_off_adj": 1.0,
    "away_def_adj": -2.0,
-   "away_rank_tarp": 78.0
+   "away_rank_tarp": 78.0,
+   "home_display": "Penn State",
+   "away_display": "Marshall",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 22.0,
+     "explosiveness": 103.0,
+     "havoc": 41.5,
+     "finishing_drives": 24.0,
+     "tarp": 1.0
+    },
+    "home_def": {
+     "success_rate": 65.0,
+     "explosiveness": 30.0,
+     "havoc": 75.0,
+     "finishing_drives": 48.0,
+     "tarp": 1.0
+    },
+    "away_off": {
+     "success_rate": 50.0,
+     "explosiveness": 125.0,
+     "havoc": 34.5,
+     "finishing_drives": 59.0,
+     "tarp": 78.0
+    },
+    "away_def": {
+     "success_rate": 35.0,
+     "explosiveness": 129.0,
+     "havoc": 69.0,
+     "finishing_drives": 66.0,
+     "tarp": 78.0
+    }
+   },
+   "home_power": {
+    "tan": 87.1,
+    "tan_rank": 17.0,
+    "sp": 15.7,
+    "sp_rank": 8.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 3,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.667,
+    "over_rank": 13.0,
+    "seconds_per_play": 23.9759804,
+    "tempo_rank": 93.0
+   },
+   "away_power": {
+    "tan": 51.1,
+    "tan_rank": 91.0,
+    "sp": -6.4,
+    "sp_rank": 88.0,
+    "net_rp": -1.0,
+    "net_rp_rank": 81,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 27.093327,
+    "tempo_rank": 99.0
+   },
+   "home_qb": {
+    "name": "Rocco Becht",
+    "pff_off_grade": 80.0,
+    "pff_pass_grade": 79.3,
+    "pass_att": 340.0,
+    "pass_yds": 2584.0,
+    "pass_td": 16.0,
+    "rush_att": 74.0,
+    "rush_yds": 253.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Carlos Del Rio-Wilson",
+    "pff_off_grade": 74.1,
+    "pff_pass_grade": 69.3,
+    "pass_att": 257.0,
+    "pass_yds": 2052.0,
+    "pass_td": 17.0,
+    "rush_att": 155.0,
+    "rush_yds": 719.0,
+    "games": 11.0
+   }
   },
   {
    "game_id": "a77e0c42754f1a99ae4fbea861a78408",
@@ -947,7 +3715,89 @@
    "home_rank_tarp": 27.0,
    "away_off_adj": -3.0,
    "away_def_adj": -1.0,
-   "away_rank_tarp": 105.0
+   "away_rank_tarp": 105.0,
+   "home_display": "USC",
+   "away_display": "Fresno State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 7.0,
+     "explosiveness": 26.0,
+     "havoc": 38.0,
+     "finishing_drives": 8.5,
+     "tarp": 27.0
+    },
+    "home_def": {
+     "success_rate": 117.0,
+     "explosiveness": 17.0,
+     "havoc": 66.0,
+     "finishing_drives": 41.0,
+     "tarp": 27.0
+    },
+    "away_off": {
+     "success_rate": 101.0,
+     "explosiveness": 82.0,
+     "havoc": 75.5,
+     "finishing_drives": 105.0,
+     "tarp": 105.0
+    },
+    "away_def": {
+     "success_rate": 34.0,
+     "explosiveness": 35.0,
+     "havoc": 34.5,
+     "finishing_drives": 55.0,
+     "tarp": 105.0
+    }
+   },
+   "home_power": {
+    "tan": 80.7,
+    "tan_rank": 13.0,
+    "sp": 16.8,
+    "sp_rank": 16.0,
+    "net_rp": 6.0,
+    "net_rp_rank": 27,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 31.1386411,
+    "tempo_rank": 12.0
+   },
+   "away_power": {
+    "tan": 49.3,
+    "tan_rank": 77.0,
+    "sp": -2.3,
+    "sp_rank": 67.0,
+    "net_rp": -4.0,
+    "net_rp_rank": 109,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 22.0907351,
+    "tempo_rank": 58.0
+   },
+   "home_qb": {
+    "name": "Jayden Maiava",
+    "pff_off_grade": 86.2,
+    "pff_pass_grade": 81.0,
+    "pass_att": 376.0,
+    "pass_yds": 3431.0,
+    "pass_td": 23.0,
+    "rush_att": 46.0,
+    "rush_yds": 227.0,
+    "games": 12.0
+   },
+   "away_qb": {
+    "name": "Khristian Martin",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 17.0,
+    "pass_yds": 105.0,
+    "pass_td": 0.0,
+    "rush_att": 4.0,
+    "rush_yds": 14.0,
+    "games": 5.0
+   }
   },
   {
    "game_id": "1d6daad1c93bf7e5ae16be1db12e27d5",
@@ -974,7 +3824,89 @@
    "home_rank_tarp": 63.0,
    "away_off_adj": 6.0,
    "away_def_adj": 5.0,
-   "away_rank_tarp": 1.0
+   "away_rank_tarp": 1.0,
+   "home_display": "Georgia Tech",
+   "away_display": "Colorado",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 9.0,
+     "explosiveness": 112.0,
+     "havoc": 12.5,
+     "finishing_drives": 77.5,
+     "tarp": 63.0
+    },
+    "home_def": {
+     "success_rate": 88.5,
+     "explosiveness": 69.0,
+     "havoc": 107.5,
+     "finishing_drives": 56.0,
+     "tarp": 63.0
+    },
+    "away_off": {
+     "success_rate": 130.0,
+     "explosiveness": 10.0,
+     "havoc": 129.0,
+     "finishing_drives": 94.0,
+     "tarp": 1.0
+    },
+    "away_def": {
+     "success_rate": 78.0,
+     "explosiveness": 114.0,
+     "havoc": 80.5,
+     "finishing_drives": 99.0,
+     "tarp": 1.0
+    }
+   },
+   "home_power": {
+    "tan": 67.8,
+    "tan_rank": 43.0,
+    "sp": 6.0,
+    "sp_rank": 44.0,
+    "net_rp": 0.5,
+    "net_rp_rank": 63,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 30.4669076,
+    "tempo_rank": 95.0
+   },
+   "away_power": {
+    "tan": 68.5,
+    "tan_rank": 65.0,
+    "sp": 0.9,
+    "sp_rank": 94.0,
+    "net_rp": 11.0,
+    "net_rp_rank": 7,
+    "ats_pct": 0.364,
+    "ats_rank": 111.0,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 21.2126869,
+    "tempo_rank": 61.0
+   },
+   "home_qb": {
+    "name": "Alberto Mendoza",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 24.0,
+    "pass_yds": 286.0,
+    "pass_td": 5.0,
+    "rush_att": 13.0,
+    "rush_yds": 180.0,
+    "games": 7.0
+   },
+   "away_qb": {
+    "name": "Julian Lewis",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 96.0,
+    "pass_yds": 595.0,
+    "pass_td": 4.0,
+    "rush_att": 15.0,
+    "rush_yds": 52.0,
+    "games": 4.0
+   }
   },
   {
    "game_id": "073bba47dc105fcd66913e74f281ae96",
@@ -1001,7 +3933,89 @@
    "home_rank_tarp": 9.0,
    "away_off_adj": -2.0,
    "away_def_adj": 1.5,
-   "away_rank_tarp": 71.0
+   "away_rank_tarp": 71.0,
+   "home_display": "LSU",
+   "away_display": "Clemson",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 107.0,
+     "explosiveness": 105.0,
+     "havoc": 112.5,
+     "finishing_drives": 115.0,
+     "tarp": 9.0
+    },
+    "home_def": {
+     "success_rate": 24.0,
+     "explosiveness": 73.0,
+     "havoc": 26.0,
+     "finishing_drives": 15.0,
+     "tarp": 9.0
+    },
+    "away_off": {
+     "success_rate": 56.0,
+     "explosiveness": 77.0,
+     "havoc": 60.5,
+     "finishing_drives": 55.0,
+     "tarp": 71.0
+    },
+    "away_def": {
+     "success_rate": 23.0,
+     "explosiveness": 115.0,
+     "havoc": 8.5,
+     "finishing_drives": 9.5,
+     "tarp": 71.0
+    }
+   },
+   "home_power": {
+    "tan": 86.7,
+    "tan_rank": 10.0,
+    "sp": 20.2,
+    "sp_rank": 9.0,
+    "net_rp": 10.5,
+    "net_rp_rank": 11,
+    "ats_pct": 0.333,
+    "ats_rank": 121.0,
+    "over_pct": 0.25,
+    "over_rank": 132.0,
+    "seconds_per_play": 21.1060461,
+    "tempo_rank": 20.0
+   },
+   "away_power": {
+    "tan": 69.9,
+    "tan_rank": 23.0,
+    "sp": 12.8,
+    "sp_rank": 38.0,
+    "net_rp": -0.5,
+    "net_rp_rank": 72,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.3,
+    "over_rank": 130.0,
+    "seconds_per_play": 26.5520229,
+    "tempo_rank": 74.0
+   },
+   "home_qb": {
+    "name": "Sam Leavitt",
+    "pff_off_grade": 76.4,
+    "pff_pass_grade": 67.4,
+    "pass_att": 239.0,
+    "pass_yds": 1628.0,
+    "pass_td": 10.0,
+    "rush_att": 56.0,
+    "rush_yds": 398.0,
+    "games": 7.0
+   },
+   "away_qb": {
+    "name": "Christopher Vizzina",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 71.0,
+    "pass_yds": 406.0,
+    "pass_td": 4.0,
+    "rush_att": 20.0,
+    "rush_yds": 59.0,
+    "games": 5.0
+   }
   },
   {
    "game_id": "f089e3d943a34a9c4fe1808568b96529",
@@ -1028,7 +4042,89 @@
    "home_rank_tarp": 71.0,
    "away_off_adj": -3.0,
    "away_def_adj": 2.5,
-   "away_rank_tarp": 71.0
+   "away_rank_tarp": 71.0,
+   "home_display": "Wake Forest",
+   "away_display": "Akron",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 118.0,
+     "explosiveness": 2.0,
+     "havoc": 88.0,
+     "finishing_drives": 120.0,
+     "tarp": 71.0
+    },
+    "home_def": {
+     "success_rate": 12.0,
+     "explosiveness": 55.0,
+     "havoc": 22.0,
+     "finishing_drives": 30.0,
+     "tarp": 71.0
+    },
+    "away_off": {
+     "success_rate": 108.0,
+     "explosiveness": 106.0,
+     "havoc": 114.0,
+     "finishing_drives": 113.0,
+     "tarp": 71.0
+    },
+    "away_def": {
+     "success_rate": 51.0,
+     "explosiveness": 107.0,
+     "havoc": 34.5,
+     "finishing_drives": 71.0,
+     "tarp": 71.0
+    }
+   },
+   "home_power": {
+    "tan": 61.9,
+    "tan_rank": 58.0,
+    "sp": 3.6,
+    "sp_rank": 59.0,
+    "net_rp": -0.5,
+    "net_rp_rank": 74,
+    "ats_pct": 0.667,
+    "ats_rank": 23.0,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 26.0439085,
+    "tempo_rank": 15.0
+   },
+   "away_power": {
+    "tan": 42.2,
+    "tan_rank": 126.0,
+    "sp": -19.5,
+    "sp_rank": 111.0,
+    "net_rp": -0.5,
+    "net_rp_rank": 77,
+    "ats_pct": 0.5,
+    "ats_rank": 65.5,
+    "over_pct": 0.583,
+    "over_rank": 34.5,
+    "seconds_per_play": 23.2325857,
+    "tempo_rank": 111.0
+   },
+   "home_qb": {
+    "name": "Gio Lopez",
+    "pff_off_grade": 73.1,
+    "pff_pass_grade": 69.3,
+    "pass_att": 261.0,
+    "pass_yds": 1746.0,
+    "pass_td": 10.0,
+    "rush_att": 69.0,
+    "rush_yds": 247.0,
+    "games": 11.0
+   },
+   "away_qb": {
+    "name": "Reese Poffenbarger",
+    "pff_off_grade": null,
+    "pff_pass_grade": null,
+    "pass_att": 7.0,
+    "pass_yds": 36.0,
+    "pass_td": 0.0,
+    "rush_att": 6.0,
+    "rush_yds": 19.0,
+    "games": 2.0
+   }
   },
   {
    "game_id": "df569f05eeee15a5fdf95bd5ce086d6d",
@@ -1055,7 +4151,89 @@
    "home_rank_tarp": 97.0,
    "away_off_adj": -3.5,
    "away_def_adj": -1.5,
-   "away_rank_tarp": 119.0
+   "away_rank_tarp": 119.0,
+   "home_display": "Hawai'i",
+   "away_display": "UNLV",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 98.0,
+     "explosiveness": 23.0,
+     "havoc": 31.0,
+     "finishing_drives": 77.5,
+     "tarp": 97.0
+    },
+    "home_def": {
+     "success_rate": 55.0,
+     "explosiveness": 94.0,
+     "havoc": 55.5,
+     "finishing_drives": 38.0,
+     "tarp": 97.0
+    },
+    "away_off": {
+     "success_rate": 19.0,
+     "explosiveness": 14.0,
+     "havoc": 71.5,
+     "finishing_drives": 14.0,
+     "tarp": 119.0
+    },
+    "away_def": {
+     "success_rate": 103.0,
+     "explosiveness": 117.0,
+     "havoc": 58.0,
+     "finishing_drives": 72.0,
+     "tarp": 119.0
+    }
+   },
+   "home_power": {
+    "tan": 49.8,
+    "tan_rank": 83.0,
+    "sp": -3.9,
+    "sp_rank": 68.0,
+    "net_rp": -3.0,
+    "net_rp_rank": 99,
+    "ats_pct": 0.727,
+    "ats_rank": 11.0,
+    "over_pct": 0.364,
+    "over_rank": 115.5,
+    "seconds_per_play": 26.0012996,
+    "tempo_rank": 55.0
+   },
+   "away_power": {
+    "tan": 54.4,
+    "tan_rank": 59.0,
+    "sp": 2.8,
+    "sp_rank": 83.0,
+    "net_rp": -5.0,
+    "net_rp_rank": 120,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.5,
+    "over_rank": 67.0,
+    "seconds_per_play": 29.2154326,
+    "tempo_rank": 31.0
+   },
+   "home_qb": {
+    "name": "Micah Alejado",
+    "pff_off_grade": 76.6,
+    "pff_pass_grade": 78.6,
+    "pass_att": 384.0,
+    "pass_yds": 2821.0,
+    "pass_td": 21.0,
+    "rush_att": 61.0,
+    "rush_yds": 206.0,
+    "games": 10.0
+   },
+   "away_qb": {
+    "name": "Jackson Arnold",
+    "pff_off_grade": 66.2,
+    "pff_pass_grade": 57.2,
+    "pass_att": 215.0,
+    "pass_yds": 1309.0,
+    "pass_td": 6.0,
+    "rush_att": 88.0,
+    "rush_yds": 489.0,
+    "games": 10.0
+   }
   },
   {
    "game_id": "19db717a66097e6d3fb887ae8cf3aaae",
@@ -1082,7 +4260,89 @@
    "home_rank_tarp": 17.0,
    "away_off_adj": -3.0,
    "away_def_adj": -1.0,
-   "away_rank_tarp": 105.0
+   "away_rank_tarp": 105.0,
+   "home_display": "Texas A&M",
+   "away_display": "Missouri State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 31.0,
+     "explosiveness": 63.0,
+     "havoc": 6.5,
+     "finishing_drives": 26.0,
+     "tarp": 17.0
+    },
+    "home_def": {
+     "success_rate": 7.0,
+     "explosiveness": 135.0,
+     "havoc": 4.0,
+     "finishing_drives": 105.0,
+     "tarp": 17.0
+    },
+    "away_off": {
+     "success_rate": 110.0,
+     "explosiveness": 3.0,
+     "havoc": 136.0,
+     "finishing_drives": 79.5,
+     "tarp": 105.0
+    },
+    "away_def": {
+     "success_rate": 98.0,
+     "explosiveness": 101.0,
+     "havoc": 86.5,
+     "finishing_drives": 92.0,
+     "tarp": 105.0
+    }
+   },
+   "home_power": {
+    "tan": 88.5,
+    "tan_rank": 9.0,
+    "sp": 20.3,
+    "sp_rank": 5.0,
+    "net_rp": 8.0,
+    "net_rp_rank": 17,
+    "ats_pct": 0.417,
+    "ats_rank": 94.0,
+    "over_pct": 0.667,
+    "over_rank": 13.0,
+    "seconds_per_play": 28.6858576,
+    "tempo_rank": 4.0
+   },
+   "away_power": {
+    "tan": 41.1,
+    "tan_rank": 125.0,
+    "sp": -18.7,
+    "sp_rank": 132.0,
+    "net_rp": -4.0,
+    "net_rp_rank": 112,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 24.532981,
+    "tempo_rank": 71.0
+   },
+   "home_qb": {
+    "name": "Marcel Reed",
+    "pff_off_grade": 68.3,
+    "pff_pass_grade": 63.6,
+    "pass_att": 380.0,
+    "pass_yds": 3156.0,
+    "pass_td": 25.0,
+    "rush_att": 97.0,
+    "rush_yds": 575.0,
+    "games": 13.0
+   },
+   "away_qb": {
+    "name": "Skyler Locklear",
+    "pff_off_grade": 64.5,
+    "pff_pass_grade": 52.0,
+    "pass_att": 213.0,
+    "pass_yds": 1415.0,
+    "pass_td": 13.0,
+    "rush_att": 89.0,
+    "rush_yds": 490.0,
+    "games": 9.0
+   }
   },
   {
    "game_id": "2f02052c3228ed6d9dc2e8ff8cdf5cdd",
