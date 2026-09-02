@@ -344,7 +344,36 @@ _DEPTH_POS_MAP = {
 }
 
 
-def load_depth_chart(path):
+def load_depth_chart_overrides(path="depth_chart_overrides.csv"):
+    """
+    depth_chart_overrides.csv -- hand-verified corrections to the ourlads
+    scrape, keyed by norm(player_name). ourlads is pulled ONCE, before the
+    season starts, so it can't see what a team actually did once games are
+    played (e.g. a preseason RB1 who was actually used as the 3rd back in
+    the real opener) -- this file exists to layer in those corrections
+    without touching the raw scrape itself (pull_depth_charts.py's output
+    stays exactly what ourlads said, auditable on its own). Every row
+    needs a note + source; this is manually curated, not re-scraped.
+    Returns {} if the file doesn't exist (fully opt-in, same pattern as
+    every other optional file load in this module).
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        bucket = _DEPTH_POS_MAP.get((r.get("position") or "").strip(), (r.get("position") or "").strip())
+        try:
+            rank = int(r.get("depth_rank"))
+        except (TypeError, ValueError):
+            continue
+        key = norm(r.get("name", ""))
+        if not key:
+            continue
+        out[key] = dict(position=bucket, depth_rank=rank, team=r.get("team", ""))
+    return out
+
+
+def load_depth_chart(path, overrides_path="depth_chart_overrides.csv"):
     """
     depth_charts.csv (pull_depth_charts.py, scraped from ourlads.com) --
     current-season offense starter/role data. Used ONLY to nudge pure-
@@ -363,7 +392,10 @@ def load_depth_chart(path):
     possible but rare for skill-position players.
 
     If a player appears on multiple qualifying rows, the LOWEST
-    depth_rank (highest on the chart) wins.
+    depth_rank (highest on the chart) wins. load_depth_chart_overrides()
+    is applied last and always wins over the scrape -- see that
+    function's docstring on why the scrape alone goes stale once games
+    are actually played.
     """
     out = {}
     if not os.path.exists(path):
@@ -384,4 +416,6 @@ def load_depth_chart(path):
         prev = out.get(key)
         if prev is None or rank < prev["depth_rank"]:
             out[key] = dict(position=bucket, depth_rank=rank)
+    for key, rec in load_depth_chart_overrides(overrides_path).items():
+        out[key] = dict(position=rec["position"], depth_rank=rec["depth_rank"])
     return out
