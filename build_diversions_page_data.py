@@ -165,49 +165,86 @@ def power_table_entry(r, net_rp_rank):
     )
 
 
-def load_qb_lookup(depth_chart_path, pff2c_path_unused=None):
-    """team display name -> QB1's name (from ourlads depth chart, side
-    offense, position QB, depth_rank 1). Returns {} entries as None when
-    a team has no confirmed starter in the scrape."""
-    out = {}
+# Position groups shown per game, beyond the team-wide comparison.
+# bucket: this project's own _DEPTH_POS_MAP code (see data_load.py).
+# primary_stat: the season-totals column used to pick "the" starter when
+# ourlads lists more than one depth_rank==1 at a bucket (WR-X, WR-Z, and
+# WR-SL are each their own slot with their own #1) -- highest real 2025
+# production wins, not slot order.
+POSITION_GROUPS = [
+    dict(key="qb", label="QB", bucket="QB", primary_stat="pass_yds", pff_col="off_grade_pass"),
+    dict(key="rb", label="RB", bucket="HB", primary_stat="rush_yds", pff_col="off_grade_run"),
+    dict(key="wr", label="WR", bucket="WR", primary_stat="rec_yds", pff_col="off_grade_recv"),
+    dict(key="te", label="TE", bucket="TE", primary_stat="rec_yds", pff_col="off_grade_recv"),
+]
+
+
+def load_depth_rows_by_team(depth_chart_path):
+    """team display name (ourlads' own, WITH mascot) -> list of offense
+    rows -- raw, not aggregated, since a position bucket can have more
+    than one legitimate depth_rank==1 (separate WR-X/WR-Z/WR-SL slots)."""
+    from collections import defaultdict
+    out = defaultdict(list)
     for r in csv.DictReader(open(depth_chart_path)):
-        if r.get("side") != "offense" or r.get("position") != "QB":
+        if r.get("side") != "offense":
+            continue
+        bucket = DL._DEPTH_POS_MAP.get((r.get("position") or "").strip())
+        if not bucket:
             continue
         try:
             rank = int(r.get("depth_rank"))
         except (TypeError, ValueError):
             continue
-        if rank != 1:
-            continue
-        out[r["team"]] = r.get("name", "")
+        out[r["team"]].append(dict(bucket=bucket, depth_rank=rank, name=r.get("name", "")))
     return out
 
 
-def build_qb_data(qb_by_depth_team, team_display, pff_by_pkey, season_by_pkey):
-    # depth chart's own team string carries a mascot ("Ohio State Buckeyes");
-    # match it back to team_display the same substring way used elsewhere.
-    qb_name = None
-    for depth_team, name in qb_by_depth_team.items():
+def build_position_player(depth_rows_by_team, team_display, group, pff_by_pkey, season_by_pkey):
+    """Best depth_rank==1 candidate at group['bucket'] for this team, by
+    real 2025 production (see POSITION_GROUPS docstring), joined to PFF
+    grade + season stats by name."""
+    candidates = []
+    for depth_team, rows in depth_rows_by_team.items():
         n, td = norm(depth_team), norm(team_display)
-        if td in n or n in td:
-            qb_name = name
-            break
-    if not qb_name:
+        if not (td in n or n in td):
+            continue
+        for row in rows:
+            if row["bucket"] == group["bucket"] and row["depth_rank"] == 1:
+                candidates.append(row["name"])
+    if not candidates:
         return None
-    pkey = norm(qb_name)
+    def volume(name):
+        s = season_by_pkey.get(norm(name))
+        return _f(s.get(group["primary_stat"]), 0) if s else 0
+    name = max(candidates, key=volume)
+    pkey = norm(name)
     pff = pff_by_pkey.get(pkey)
     season = season_by_pkey.get(pkey)
     return dict(
-        name=qb_name,
+        name=name,
         pff_off_grade=_f(pff.get("off_grade_off"), None) if pff else None,
-        pff_pass_grade=_f(pff.get("off_grade_pass"), None) if pff else None,
+        pff_group_grade=_f(pff.get(group["pff_col"]), None) if pff else None,
         pass_att=_f(season.get("pass_att"), None) if season else None,
         pass_yds=_f(season.get("pass_yds"), None) if season else None,
         pass_td=_f(season.get("pass_td"), None) if season else None,
         rush_att=_f(season.get("rush_att"), None) if season else None,
         rush_yds=_f(season.get("rush_yds"), None) if season else None,
+        rush_td=_f(season.get("rush_td"), None) if season else None,
+        targets=_f(season.get("targets"), None) if season else None,
+        receptions=_f(season.get("receptions"), None) if season else None,
+        rec_yds=_f(season.get("rec_yds"), None) if season else None,
+        rec_td=_f(season.get("rec_td"), None) if season else None,
         games=_f(season.get("games"), None) if season else None,
+    ) if pff or season else dict(
+        name=name, pff_off_grade=None, pff_group_grade=None, pass_att=None, pass_yds=None,
+        pass_td=None, rush_att=None, rush_yds=None, rush_td=None, targets=None, receptions=None,
+        rec_yds=None, rec_td=None, games=None,
     )
+
+
+def match_team_grades(grades_by_team, team_display):
+    n = norm(team_display)
+    return grades_by_team.get(n)
 
 
 def spread_reason(home_team, away_team, book_spread, pred_spread, spread_diff,
@@ -255,12 +292,13 @@ def total_reason(home_team, away_team, book_total, pred_total, total_diff,
 
 
 def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
-          pff_crosswalk_path, season_totals_path, team_map_path, date_start, date_end):
+          pff_crosswalk_path, season_totals_path, team_grades_path, team_map_path, date_start, date_end):
     ratings_raw = load_ratings_raw(ratings_path)
     team_avg = {t["team"]: t for t in json.load(open(team_averages_path))["teams"]}
     net_rp_rank = rank_by_value(ratings_raw, "NetRP")
 
-    qb_by_depth_team = load_qb_lookup(depth_chart_path)
+    depth_rows_by_team = load_depth_rows_by_team(depth_chart_path)
+    grades_by_team = DL.load_team_grades(team_grades_path)
     pff2c, _ = DL.load_team_map()
     pff_rows = DL.load_pff(pff2c)
     pff_by_pkey = {}
@@ -319,8 +357,10 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                 five_factors=five_factors(rh, ra),
                 home_power=power_table_entry(rh, net_rp_rank.get(home_key)),
                 away_power=power_table_entry(ra, net_rp_rank.get(away_key)),
-                home_qb=build_qb_data(qb_by_depth_team, home_team, pff_by_pkey, season_by_pkey),
-                away_qb=build_qb_data(qb_by_depth_team, away_team, pff_by_pkey, season_by_pkey),
+                home_grades=match_team_grades(grades_by_team, rh.get("Team", home_team)),
+                away_grades=match_team_grades(grades_by_team, ra.get("Team", away_team)),
+                home_positions={g["key"]: build_position_player(depth_rows_by_team, home_team, g, pff_by_pkey, season_by_pkey) for g in POSITION_GROUPS},
+                away_positions={g["key"]: build_position_player(depth_rows_by_team, away_team, g, pff_by_pkey, season_by_pkey) for g in POSITION_GROUPS},
             )
         out.append(row)
 
@@ -336,6 +376,7 @@ def main():
     ap.add_argument("--depth-chart", default="depth_charts.csv")
     ap.add_argument("--pff-crosswalk", default="master_crosswalk.csv")
     ap.add_argument("--season-totals", default="player_season_totals.csv")
+    ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
     ap.add_argument("--team-map", default="team_map.csv")
     ap.add_argument("--date-start", default="2026-09-02", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--date-end", default="2026-09-07", help="inclusive, YYYY-MM-DD")
@@ -345,15 +386,16 @@ def main():
     args = ap.parse_args()
 
     games = build(args.game_lines, args.team_ratings, args.team_averages, args.depth_chart,
-                  args.pff_crosswalk, args.season_totals, args.team_map, args.date_start, args.date_end)
+                  args.pff_crosswalk, args.season_totals, args.team_grades, args.team_map,
+                  args.date_start, args.date_end)
     n_full = sum(1 for g in games if g["pred_spread"] is not None)
-    n_qb = sum(1 for g in games if g.get("home_qb") or g.get("away_qb"))
+    n_grades = sum(1 for g in games if g.get("home_grades") or g.get("away_grades"))
     payload = dict(week=args.week, season=args.season, date_start=args.date_start,
                    date_end=args.date_end, games=games)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)
     print(f"Wrote {args.out}: {len(games)} games in [{args.date_start}, {args.date_end}], "
-          f"{n_full} with both teams rated, {n_qb} with at least one QB matched")
+          f"{n_full} with both teams rated, {n_grades} with at least one team's PFF grades matched")
 
 
 if __name__ == "__main__":
