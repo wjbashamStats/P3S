@@ -73,6 +73,15 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     """
     pff2c, _ = DL.load_team_map()
     pff = DL.load_pff(pff2c)
+    # master_crosswalk.csv (loaded above as `pff`) carries each player's
+    # CURRENT team, not their prior-season one -- e.g. Byrum Brown shows
+    # AUBURN there even though player_season_totals.csv (this loop's `tot`,
+    # from last season) still has him at his old team. A transferred
+    # player's opponent/game-context/matchup-grade/TARP lookups below all
+    # need his real 2026 opponent, not a stale one computed against his old
+    # team's schedule -- this map lets canon_tkey prefer the crosswalk's
+    # current team whenever the player is in it.
+    current_tkey_by_pkey = {p["pkey"]: p["tkey"] for p in pff}
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=season) if use_prior_year else {}
@@ -142,11 +151,15 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         # abbreviation isn't already identical to its canonical form after
         # norm() still gets game context, an opponent, and PFF matchup
         # grade/TARP adjustments instead of silently falling back to inert.
-        canon_tkey = DL.resolve_tkey(tkey, pff2c)
+        # Prefer the crosswalk's CURRENT team (current_tkey_by_pkey, built
+        # above) over season_totals' stale one, so a transferred player's
+        # opponent/game-context/matchup-grade/TARP all resolve against the
+        # team he's actually playing for this year.
+        canon_tkey = current_tkey_by_pkey.get(pkey) or DL.resolve_tkey(tkey, pff2c)
         grades = pff_by_key.get((pkey, canon_tkey), {}) or pff_by_key.get((pkey, tkey), {})
         player_name = grades.get("name") or pkey
 
-        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(week), lines_by_week)
+        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(week), lines_by_week, canonical_tkeys)
                                      if lines_by_week else (None, None))
         opp_tkey = (DL.find_opponent_tkey(canon_tkey, str(week), lines_by_week, canonical_tkeys)
                    if lines_by_week else None)

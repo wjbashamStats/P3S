@@ -23390,63 +23390,63 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 252.5,
-      "projection": 272.0,
-      "edge_pct": 7.7,
+      "projection": 328.7,
+      "edge_pct": 30.2,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 38.81,
+       "volume": 39.74,
        "efficiency": 8.542,
-       "opp_adj": 0.82
+       "opp_adj": 0.968
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
-       "pace_script_adj": 1.184,
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.82,
+       "success_rate_adj": 1.162,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0819,
-       "expected_td": 3.177
+       "expected_td": 3.254
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 65.5,
-      "projection": 113.1,
-      "edge_pct": 72.7,
+      "projection": 102.2,
+      "edge_pct": 56.0,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 28.62,
+       "volume": 21.84,
        "efficiency": 6.326,
-       "opp_adj": 0.625
+       "opp_adj": 0.74
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 rush_att pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.879,
+       "volume_source": "team-share of southflorida's 2024 rush_att pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.587,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.12,
-       "matchup_grade_adj": 1.185,
+       "success_rate_adj": 1.107,
+       "matchup_grade_adj": 1.172,
        "tarp_adj": null,
        "td_rate": 0.0881,
-       "expected_td": 2.52
+       "expected_td": 1.923
       }
      }
     }
@@ -24149,32 +24149,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 32.5,
-      "projection": 41.2,
-      "edge_pct": 26.8,
+      "projection": 40.9,
+      "edge_pct": 25.8,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 4.31,
+       "volume": 4.2,
        "efficiency": 10.063,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0789,
-       "expected_td": 0.34
+       "expected_td": 0.332
       }
      },
      "player_receptions": {
@@ -24186,26 +24186,26 @@
       "under_price": 102.0,
       "n_books": "1",
       "components": {
-       "volume": 4.31,
+       "volume": 4.2,
        "efficiency": 0.637,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0789,
-       "expected_td": 0.34
+       "expected_td": 0.332
       }
      }
     }
@@ -24418,32 +24418,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 26.5,
-      "projection": 29.3,
-      "edge_pct": 10.6,
+      "projection": 29.1,
+      "edge_pct": 9.8,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 5.22,
+       "volume": 5.08,
        "efficiency": 5.911,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0217,
-       "expected_td": 0.113
+       "expected_td": 0.11
       }
      },
      "player_receptions": {
@@ -24455,26 +24455,26 @@
       "under_price": -140.0,
       "n_books": "1",
       "components": {
-       "volume": 5.22,
+       "volume": 5.08,
        "efficiency": 0.631,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0217,
-       "expected_td": 0.113
+       "expected_td": 0.11
       }
      }
     }
@@ -24879,63 +24879,63 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 50.5,
-      "projection": 44.6,
-      "edge_pct": -11.7,
+      "projection": 47.9,
+      "edge_pct": -5.1,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 4.54,
+       "volume": 4.42,
        "efficiency": 10.346,
-       "opp_adj": 0.949
+       "opp_adj": 1.046
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.0,
        "depth_rank": 2,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1522,
-       "expected_td": 0.691
+       "expected_td": 0.673
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 3.5,
-      "projection": 3.1,
-      "edge_pct": -11.4,
+      "projection": 3.3,
+      "edge_pct": -5.7,
       "over_price": 104.0,
       "under_price": -138.0,
       "n_books": "1",
       "components": {
-       "volume": 4.54,
+       "volume": 4.42,
        "efficiency": 0.716,
-       "opp_adj": 0.949
+       "opp_adj": 1.046
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.0,
        "depth_rank": 2,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1522,
-       "expected_td": 0.691
+       "expected_td": 0.673
       }
      }
     }
@@ -25148,63 +25148,63 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 65.5,
-      "projection": 83.0,
-      "edge_pct": 26.7,
+      "projection": 82.5,
+      "edge_pct": 26.0,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 7.94,
+       "volume": 7.74,
        "efficiency": 11.012,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1143,
-       "expected_td": 0.907
+       "expected_td": 0.885
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 3.5,
-      "projection": 5.3,
-      "edge_pct": 51.4,
+      "projection": 5.2,
+      "edge_pct": 48.6,
       "over_price": -166.0,
       "under_price": 124.0,
       "n_books": "1",
       "components": {
-       "volume": 7.94,
+       "volume": 7.74,
        "efficiency": 0.699,
-       "opp_adj": 0.949
+       "opp_adj": 0.968
       },
       "breakdown": {
-       "volume_source": "team-share of southflorida's 2024 targets pool, applied to southflorida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of southflorida's 2024 targets pool, applied to auburn's 2025 pool",
+       "pace_script_adj": 1.212,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 33.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -7.5,
+       "opponent": "baylor",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 1.046,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1143,
-       "expected_td": 0.907
+       "expected_td": 0.885
       }
      }
     }
@@ -30394,63 +30394,63 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 259.5,
-      "projection": 217.4,
-      "edge_pct": -16.2,
+      "projection": 250.8,
+      "edge_pct": -3.4,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 38.36,
+       "volume": 31.52,
        "efficiency": 6.906,
-       "opp_adj": 0.82
+       "opp_adj": 1.152
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
-       "pace_script_adj": 1.184,
+       "pace_script_adj": 0.973,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": 7.5,
+       "opponent": "auburn",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.82,
+       "success_rate_adj": 1.152,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0473,
-       "expected_td": 1.816
+       "expected_td": 1.492
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 12.5,
-      "projection": 28.0,
-      "edge_pct": 124.0,
+      "projection": 16.7,
+      "edge_pct": 33.6,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 9.18,
+       "volume": 3.58,
        "efficiency": 4.874,
-       "opp_adj": 0.625
+       "opp_adj": 0.955
       },
       "breakdown": {
-       "volume_source": "team-share of florida's 2024 rush_att pool, applied to florida's 2025 pool",
-       "pace_script_adj": 1.879,
+       "volume_source": "team-share of florida's 2024 rush_att pool, applied to baylor's 2025 pool",
+       "pace_script_adj": 0.683,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.0,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": 7.5,
+       "opponent": "auburn",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.12,
-       "matchup_grade_adj": 1.426,
+       "success_rate_adj": 0.66,
+       "matchup_grade_adj": 0.815,
        "tarp_adj": null,
        "td_rate": 0.0196,
-       "expected_td": 0.18
+       "expected_td": 0.07
       }
      }
     }
@@ -31581,63 +31581,63 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 49.5,
-      "projection": 56.4,
-      "edge_pct": 13.9,
+      "projection": 71.3,
+      "edge_pct": 44.0,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 8.32,
+       "volume": 9.4,
        "efficiency": 7.269,
-       "opp_adj": 0.933
+       "opp_adj": 1.044
       },
       "breakdown": {
-       "volume_source": "team-share of oklahomastate's 2024 targets pool, applied to oklahomastate's 2025 pool",
-       "pace_script_adj": 1.258,
+       "volume_source": "team-share of oklahomastate's 2024 targets pool, applied to baylor's 2025 pool",
+       "pace_script_adj": 0.973,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 36.2,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": -13.5,
-       "opponent": "tulsa",
+       "team_spread": 7.5,
+       "opponent": "auburn",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.053,
+       "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.058,
-       "expected_td": 0.482
+       "expected_td": 0.545
       }
      },
      "player_receptions": {
       "stat": "receptions",
       "book_line": 4.5,
-      "projection": 5.7,
-      "edge_pct": 26.7,
+      "projection": 7.2,
+      "edge_pct": 60.0,
       "over_price": 120.0,
       "under_price": -160.0,
       "n_books": "1",
       "components": {
-       "volume": 8.32,
+       "volume": 9.4,
        "efficiency": 0.735,
-       "opp_adj": 0.933
+       "opp_adj": 1.044
       },
       "breakdown": {
-       "volume_source": "team-share of oklahomastate's 2024 targets pool, applied to oklahomastate's 2025 pool",
-       "pace_script_adj": 1.258,
+       "volume_source": "team-share of oklahomastate's 2024 targets pool, applied to baylor's 2025 pool",
+       "pace_script_adj": 0.973,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 36.2,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": -13.5,
-       "opponent": "tulsa",
+       "team_spread": 7.5,
+       "opponent": "auburn",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.053,
+       "success_rate_adj": 1.044,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.058,
-       "expected_td": 0.482
+       "expected_td": 0.545
       }
      }
     }
@@ -40909,32 +40909,32 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 56.5,
-      "projection": 58.5,
-      "edge_pct": 3.5,
+      "projection": 43.2,
+      "edge_pct": -23.5,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 23.32,
+       "volume": 7.12,
        "efficiency": 4.998,
-       "opp_adj": 0.502
+       "opp_adj": 1.213
       },
       "breakdown": {
-       "volume_source": "team-share of washington's 2024 rush_att pool, applied to washington's 2025 pool",
-       "pace_script_adj": 2.34,
+       "volume_source": "team-share of washington's 2024 rush_att pool, applied to california's 2025 pool",
+       "pace_script_adj": 0.883,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 37.0,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": -23.5,
-       "opponent": "washingtonstate",
+       "team_spread": 2.0,
+       "opponent": "ucla",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.153,
-       "matchup_grade_adj": 1.178,
+       "success_rate_adj": 1.359,
+       "matchup_grade_adj": 0.893,
        "tarp_adj": null,
        "td_rate": 0.0481,
-       "expected_td": 1.121
+       "expected_td": 0.342
       }
      }
     }
@@ -42927,32 +42927,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 65.5,
-      "projection": 57.2,
-      "edge_pct": -12.7,
+      "projection": 153.7,
+      "edge_pct": 134.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 7.26,
+       "volume": 15.28,
        "efficiency": 8.802,
-       "opp_adj": 0.895
+       "opp_adj": 1.143
       },
       "breakdown": {
-       "volume_source": "team-share of ohio's 2024 targets pool, applied to ohio's 2025 pool",
-       "pace_script_adj": 0.735,
+       "volume_source": "team-share of ohio's 2024 targets pool, applied to california's 2025 pool",
+       "pace_script_adj": 0.961,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 11.2,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": 23.5,
-       "opponent": "nebraska",
+       "team_spread": 2.0,
+       "opponent": "ucla",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.895,
+       "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.068,
-       "expected_td": 0.493
+       "expected_td": 1.038
       }
      }
     }
@@ -43193,32 +43193,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 56.5,
-      "projection": 68.8,
-      "edge_pct": 21.8,
+      "projection": 92.6,
+      "edge_pct": 63.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 7.86,
+       "volume": 9.25,
        "efficiency": 8.757,
-       "opp_adj": 1.0
+       "opp_adj": 1.143
       },
       "breakdown": {
-       "volume_source": "team-share of rutgers's 2024 targets pool, applied to rutgers's 2025 pool",
-       "pace_script_adj": 1.0,
+       "volume_source": "team-share of rutgers's 2024 targets pool, applied to california's 2025 pool",
+       "pace_script_adj": 0.961,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": null,
+       "team_implied": 25.8,
        "league_avg_implied": 26.9,
-       "team_spread": null,
-       "opponent": null,
+       "team_spread": 2.0,
+       "opponent": "ucla",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.0,
+       "success_rate_adj": 1.143,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.061,
-       "expected_td": 0.479
+       "expected_td": 0.564
       }
      }
     }
@@ -57915,32 +57915,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 53.5,
-      "projection": 129.6,
-      "edge_pct": 142.2,
+      "projection": 78.2,
+      "edge_pct": 46.2,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 14.81,
+       "volume": 9.13,
        "efficiency": 8.172,
-       "opp_adj": 1.07
+       "opp_adj": 1.048
       },
       "breakdown": {
-       "volume_source": "team-share of sanjosestate's 2024 targets pool, applied to sanjosestate's 2025 pool",
-       "pace_script_adj": 0.991,
+       "volume_source": "team-share of sanjosestate's 2024 targets pool, applied to colorado's 2025 pool",
+       "pace_script_adj": 0.829,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 26.5,
+       "team_implied": 22.0,
        "league_avg_implied": 26.9,
-       "team_spread": 3.0,
-       "opponent": "easternmichigan",
+       "team_spread": 6.5,
+       "opponent": "georgiatech",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.07,
+       "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0641,
-       "expected_td": 0.949
+       "expected_td": 0.585
       }
      }
     }
@@ -58139,32 +58139,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 46.5,
-      "projection": 30.0,
-      "edge_pct": -35.5,
+      "projection": 37.2,
+      "edge_pct": -20.0,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 3.45,
+       "volume": 3.62,
        "efficiency": 9.801,
-       "opp_adj": 0.887
+       "opp_adj": 1.048
       },
       "breakdown": {
-       "volume_source": "team-share of texas's 2024 targets pool, applied to texas's 2025 pool",
-       "pace_script_adj": 0.735,
+       "volume_source": "team-share of texas's 2024 targets pool, applied to colorado's 2025 pool",
+       "pace_script_adj": 0.829,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 7.8,
+       "team_implied": 22.0,
        "league_avg_implied": 26.9,
-       "team_spread": 40.0,
-       "opponent": "indiana",
+       "team_spread": 6.5,
+       "opponent": "georgiatech",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.877,
+       "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0816,
-       "expected_td": 0.282
+       "expected_td": 0.296
       }
      }
     }
@@ -58593,32 +58593,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 28.5,
-      "projection": 63.8,
-      "edge_pct": 123.9,
+      "projection": 65.5,
+      "edge_pct": 129.8,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 6.25,
+       "volume": 6.12,
        "efficiency": 10.212,
-       "opp_adj": 1.0
+       "opp_adj": 1.048
       },
       "breakdown": {
-       "volume_source": "team-share of miamiohio's 2024 targets pool, applied to miamiohio's 2025 pool",
-       "pace_script_adj": 1.0,
+       "volume_source": "team-share of miamiohio's 2024 targets pool, applied to colorado's 2025 pool",
+       "pace_script_adj": 0.829,
        "depth_rank_adj": 1.0,
        "depth_rank": 2,
-       "team_implied": null,
+       "team_implied": 22.0,
        "league_avg_implied": 26.9,
-       "team_spread": null,
-       "opponent": null,
+       "team_spread": 6.5,
+       "opponent": "georgiatech",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.0,
+       "success_rate_adj": 1.048,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.08,
-       "expected_td": 0.5
+       "expected_td": 0.49
       }
      }
     }
@@ -92226,32 +92226,32 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 71.5,
-      "projection": 83.7,
-      "edge_pct": 17.1,
+      "projection": 79.9,
+      "edge_pct": 11.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 14.15,
+       "volume": 14.62,
        "efficiency": 6.145,
-       "opp_adj": 0.962
+       "opp_adj": 0.889
       },
       "breakdown": {
-       "volume_source": "team-share of michigan's 2024 rush_att pool, applied to michigan's 2025 pool",
-       "pace_script_adj": 1.22,
+       "volume_source": "team-share of michigan's 2024 rush_att pool, applied to georgiatech's 2025 pool",
+       "pace_script_adj": 1.32,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 29.5,
+       "team_implied": 28.5,
        "league_avg_implied": 26.9,
-       "team_spread": -3.0,
-       "opponent": "sanjosestate",
+       "team_spread": -6.5,
+       "opponent": "colorado",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.019,
-       "matchup_grade_adj": 1.03,
+       "success_rate_adj": 1.073,
+       "matchup_grade_adj": 1.132,
        "tarp_adj": null,
        "td_rate": 0.0826,
-       "expected_td": 1.169
+       "expected_td": 1.208
       }
      }
     }
@@ -98410,28 +98410,28 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 44.5,
-      "projection": 25.8,
-      "edge_pct": -42.0,
+      "projection": 27.0,
+      "edge_pct": -39.3,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 2.2,
+       "volume": 2.53,
        "efficiency": 11.764,
-       "opp_adj": 0.998
+       "opp_adj": 0.906
       },
       "breakdown": {
-       "volume_source": "team-share of georgiatech's 2024 targets pool, applied to georgiatech's 2025 pool",
-       "pace_script_adj": 1.042,
+       "volume_source": "team-share of georgiatech's 2024 targets pool, applied to houston's 2025 pool",
+       "pace_script_adj": 1.236,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 28.5,
+       "team_implied": 35.0,
        "league_avg_implied": 26.9,
-       "team_spread": -6.5,
-       "opponent": "colorado",
+       "team_spread": -20.5,
+       "opponent": "oregonstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.998,
+       "success_rate_adj": 0.906,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0,
@@ -128017,63 +128017,63 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 264.5,
-      "projection": 324.7,
-      "edge_pct": 22.8,
+      "projection": 188.9,
+      "edge_pct": -28.6,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 48.49,
+       "volume": 43.05,
        "efficiency": 7.045,
-       "opp_adj": 0.951
+       "opp_adj": 0.623
       },
       "breakdown": {
        "volume_source": "7.0 2024 games (pure prior-year, week <= 3)",
-       "pace_script_adj": 1.235,
+       "pace_script_adj": 1.096,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 48.0,
+       "team_implied": 30.2,
        "league_avg_implied": 26.9,
-       "team_spread": -43.5,
-       "opponent": null,
+       "team_spread": -10.0,
+       "opponent": "clemson",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.0,
+       "success_rate_adj": 0.623,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0418,
-       "expected_td": 2.029
+       "expected_td": 1.801
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 25.5,
-      "projection": 38.8,
-      "edge_pct": 52.2,
+      "projection": 24.4,
+      "edge_pct": -4.3,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 12.56,
+       "volume": 6.31,
        "efficiency": 6.159,
-       "opp_adj": 0.502
+       "opp_adj": 0.627
       },
       "breakdown": {
-       "volume_source": "team-share of arizonastate's 2024 rush_att pool, applied to arizonastate's 2025 pool",
-       "pace_script_adj": 2.34,
+       "volume_source": "team-share of arizonastate's 2024 rush_att pool, applied to lsu's 2025 pool",
+       "pace_script_adj": 1.551,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 48.0,
+       "team_implied": 30.2,
        "league_avg_implied": 26.9,
-       "team_spread": -43.5,
-       "opponent": null,
+       "team_spread": -10.0,
+       "opponent": "clemson",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.0,
-       "matchup_grade_adj": 1.0,
+       "success_rate_adj": 0.954,
+       "matchup_grade_adj": 0.657,
        "tarp_adj": null,
        "td_rate": 0.0893,
-       "expected_td": 1.121
+       "expected_td": 0.563
       }
      }
     }
@@ -129240,32 +129240,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 28.5,
-      "projection": 24.6,
-      "edge_pct": -13.7,
+      "projection": 24.3,
+      "edge_pct": -14.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 3.65,
+       "volume": 3.83,
        "efficiency": 7.108,
-       "opp_adj": 0.949
+       "opp_adj": 0.892
       },
       "breakdown": {
-       "volume_source": "team-share of florida's 2024 targets pool, applied to florida's 2025 pool",
-       "pace_script_adj": 1.184,
+       "volume_source": "team-share of florida's 2024 targets pool, applied to lsu's 2025 pool",
+       "pace_script_adj": 1.096,
        "depth_rank_adj": 1.0,
        "depth_rank": 2,
-       "team_implied": 33.0,
+       "team_implied": 30.2,
        "league_avg_implied": 26.9,
-       "team_spread": -14.0,
-       "opponent": "floridainternational",
+       "team_spread": -10.0,
+       "opponent": "clemson",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.949,
+       "success_rate_adj": 0.892,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0811,
-       "expected_td": 0.296
+       "expected_td": 0.311
       }
      }
     }
@@ -129506,32 +129506,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 42.5,
-      "projection": 83.2,
-      "edge_pct": 95.8,
+      "projection": 66.0,
+      "edge_pct": 55.3,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 7.0,
+       "volume": 6.54,
        "efficiency": 11.311,
-       "opp_adj": 1.051
+       "opp_adj": 0.892
       },
       "breakdown": {
-       "volume_source": "team-share of hawaii's 2024 targets pool, applied to hawaii's 2025 pool",
-       "pace_script_adj": 1.0,
+       "volume_source": "team-share of hawaii's 2024 targets pool, applied to lsu's 2025 pool",
+       "pace_script_adj": 1.096,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 26.8,
+       "team_implied": 30.2,
        "league_avg_implied": 26.9,
-       "team_spread": 3.0,
-       "opponent": "unlv",
+       "team_spread": -10.0,
+       "opponent": "clemson",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.051,
+       "success_rate_adj": 0.892,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.1644,
-       "expected_td": 1.151
+       "expected_td": 1.075
       }
      }
     }
@@ -129726,32 +129726,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 47.5,
-      "projection": 52.4,
-      "edge_pct": 10.3,
+      "projection": 75.4,
+      "edge_pct": 58.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 5.03,
+       "volume": 8.9,
        "efficiency": 9.493,
-       "opp_adj": 1.097
+       "opp_adj": 0.892
       },
       "breakdown": {
-       "volume_source": "team-share of kansasstate's 2024 targets pool, applied to kansasstate's 2025 pool",
-       "pace_script_adj": 0.772,
+       "volume_source": "team-share of kansasstate's 2024 targets pool, applied to lsu's 2025 pool",
+       "pace_script_adj": 1.096,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 20.2,
+       "team_implied": 30.2,
        "league_avg_implied": 26.9,
-       "team_spread": 11.5,
-       "opponent": "memphis",
+       "team_spread": -10.0,
+       "opponent": "clemson",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.097,
+       "success_rate_adj": 0.892,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0735,
-       "expected_td": 0.37
+       "expected_td": 0.654
       }
      }
     }
@@ -258834,32 +258834,32 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 77.5,
-      "projection": 120.1,
-      "edge_pct": 55.0,
+      "projection": 103.4,
+      "edge_pct": 33.4,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 36.08,
+       "volume": 31.05,
        "efficiency": 5.771,
        "opp_adj": 0.577
       },
       "breakdown": {
-       "volume_source": "team-share of arizonastate's 2024 rush_att pool, applied to arizonastate's 2025 pool",
+       "volume_source": "team-share of arizonastate's 2024 rush_att pool, applied to texas's 2025 pool",
        "pace_script_adj": 2.34,
        "depth_rank_adj": 1.0,
        "depth_rank": 2,
-       "team_implied": 48.0,
+       "team_implied": 44.5,
        "league_avg_implied": 26.9,
-       "team_spread": -43.5,
-       "opponent": null,
+       "team_spread": -29.5,
+       "opponent": "texasstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.0,
-       "matchup_grade_adj": 1.0,
+       "success_rate_adj": 1.032,
+       "matchup_grade_adj": 1.101,
        "tarp_adj": null,
        "td_rate": 0.0216,
-       "expected_td": 0.78
+       "expected_td": 0.671
       }
      }
     }
@@ -259135,63 +259135,63 @@
      "player_pass_yds": {
       "stat": "pass_yds",
       "book_line": 272.5,
-      "projection": 179.4,
-      "edge_pct": -34.2,
+      "projection": 323.0,
+      "edge_pct": 18.5,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 26.27,
+       "volume": 44.15,
        "efficiency": 7.697,
-       "opp_adj": 0.887
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "12.0 2024 games (pure prior-year, week <= 3)",
-       "pace_script_adj": 0.735,
+       "pace_script_adj": 1.235,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 7.8,
+       "team_implied": 44.5,
        "league_avg_implied": 26.9,
-       "team_spread": 40.0,
-       "opponent": "indiana",
+       "team_spread": -29.5,
+       "opponent": "texasstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.57,
+       "success_rate_adj": 1.157,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0643,
-       "expected_td": 1.69
+       "expected_td": 2.841
       }
      },
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 29.5,
-      "projection": 22.5,
-      "edge_pct": -23.7,
+      "projection": 40.6,
+      "edge_pct": 37.6,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 0.94,
+       "volume": 15.7,
        "efficiency": 5.151,
-       "opp_adj": 4.658
+       "opp_adj": 0.502
       },
       "breakdown": {
        "volume_source": "team-share of texas's 2024 rush_att pool, applied to texas's 2025 pool",
-       "pace_script_adj": 0.14,
+       "pace_script_adj": 2.34,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 7.8,
+       "team_implied": 44.5,
        "league_avg_implied": 26.9,
-       "team_spread": 40.0,
-       "opponent": "indiana",
+       "team_spread": -29.5,
+       "opponent": "texasstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.657,
-       "matchup_grade_adj": 0.906,
+       "success_rate_adj": 1.032,
+       "matchup_grade_adj": 1.101,
        "tarp_adj": null,
        "td_rate": 0.1143,
-       "expected_td": 0.107
+       "expected_td": 1.794
       }
      }
     }
@@ -259838,32 +259838,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 58.5,
-      "projection": 78.8,
-      "edge_pct": 34.7,
+      "projection": 83.5,
+      "edge_pct": 42.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 10.11,
+       "volume": 10.92,
        "efficiency": 8.046,
-       "opp_adj": 0.968
+       "opp_adj": 0.951
       },
       "breakdown": {
-       "volume_source": "team-share of auburn's 2024 targets pool, applied to auburn's 2025 pool",
-       "pace_script_adj": 1.212,
+       "volume_source": "team-share of auburn's 2024 targets pool, applied to texas's 2025 pool",
+       "pace_script_adj": 1.235,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 33.2,
+       "team_implied": 44.5,
        "league_avg_implied": 26.9,
-       "team_spread": -7.5,
-       "opponent": "baylor",
+       "team_spread": -29.5,
+       "opponent": "texasstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.046,
+       "success_rate_adj": 1.045,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0575,
-       "expected_td": 0.581
+       "expected_td": 0.628
       }
      }
     }
@@ -260252,32 +260252,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 52.5,
-      "projection": 46.3,
-      "edge_pct": -11.8,
+      "projection": 83.4,
+      "edge_pct": 58.9,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 6.13,
+       "volume": 10.3,
        "efficiency": 8.522,
-       "opp_adj": 0.887
+       "opp_adj": 0.951
       },
       "breakdown": {
        "volume_source": "team-share of texas's 2024 targets pool, applied to texas's 2025 pool",
-       "pace_script_adj": 0.735,
+       "pace_script_adj": 1.235,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 7.8,
+       "team_implied": 44.5,
        "league_avg_implied": 26.9,
-       "team_spread": 40.0,
-       "opponent": "indiana",
+       "team_spread": -29.5,
+       "opponent": "texasstate",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.877,
+       "success_rate_adj": 1.045,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0805,
-       "expected_td": 0.493
+       "expected_td": 0.829
       }
      }
     }
@@ -284030,32 +284030,32 @@
      "player_rush_yds": {
       "stat": "rush_yds",
       "book_line": 61.5,
-      "projection": 112.8,
-      "edge_pct": 83.4,
+      "projection": 77.3,
+      "edge_pct": 25.7,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 21.09,
+       "volume": 12.43,
        "efficiency": 5.871,
-       "opp_adj": 0.911
+       "opp_adj": 1.059
       },
       "breakdown": {
-       "volume_source": "team-share of jamesmadison's 2024 rush_att pool, applied to jamesmadison's 2025 pool",
-       "pace_script_adj": 1.288,
+       "volume_source": "team-share of jamesmadison's 2024 rush_att pool, applied to ucla's 2025 pool",
+       "pace_script_adj": 1.109,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 28.2,
+       "team_implied": 27.8,
        "league_avg_implied": 26.9,
-       "team_spread": -6.0,
-       "opponent": "liberty",
+       "team_spread": -2.0,
+       "opponent": "california",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 1.077,
-       "matchup_grade_adj": 1.237,
+       "success_rate_adj": 1.139,
+       "matchup_grade_adj": 1.161,
        "tarp_adj": null,
        "td_rate": 0.0432,
-       "expected_td": 0.912
+       "expected_td": 0.538
       }
      }
     }
@@ -285108,32 +285108,32 @@
      "player_reception_yds": {
       "stat": "rec_yds",
       "book_line": 34.5,
-      "projection": 47.6,
-      "edge_pct": 38.0,
+      "projection": 49.8,
+      "edge_pct": 44.3,
       "over_price": -114.0,
       "under_price": -114.0,
       "n_books": "1",
       "components": {
-       "volume": 4.76,
+       "volume": 5.2,
        "efficiency": 10.506,
-       "opp_adj": 0.953
+       "opp_adj": 0.911
       },
       "breakdown": {
-       "volume_source": "team-share of jamesmadison's 2024 targets pool, applied to jamesmadison's 2025 pool",
-       "pace_script_adj": 1.034,
+       "volume_source": "team-share of jamesmadison's 2024 targets pool, applied to ucla's 2025 pool",
+       "pace_script_adj": 1.025,
        "depth_rank_adj": 1.15,
        "depth_rank": 1,
-       "team_implied": 28.2,
+       "team_implied": 27.8,
        "league_avg_implied": 26.9,
-       "team_spread": -6.0,
-       "opponent": "liberty",
+       "team_spread": -2.0,
+       "opponent": "california",
        "pff_def_grade_adj": 1.0,
        "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.953,
+       "success_rate_adj": 0.911,
        "matchup_grade_adj": 1.0,
        "tarp_adj": null,
        "td_rate": 0.0962,
-       "expected_td": 0.458
+       "expected_td": 0.5
       }
      }
     }

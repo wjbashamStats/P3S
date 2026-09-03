@@ -100,8 +100,19 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # assignment -- confirmed correct via Drew Mestemaker showing OKLA
     # STATE, his 2026 transfer destination, not his old team). A player
     # missing from BOTH is treated as departed.
-    master_pkeys = {p["pkey"] for p in DL.load_pff(pff2c)}
-    current_roster = set(depth_chart) | master_pkeys
+    #
+    # current_team_by_pkey also drives each surviving player's displayed
+    # team/matchup below: player_season_totals.csv's own "team" column is
+    # last year's team, so a transfer (e.g. Byrum Brown, South Florida ->
+    # Auburn) was showing his old team, old opponent, and old game context
+    # -- master_crosswalk.csv is the source of truth for "team this year".
+    current_team_by_pkey = {p["pkey"]: p["team_cfbd"] for p in DL.load_pff(pff2c)}
+    current_roster = set(depth_chart) | set(current_team_by_pkey)
+
+    # Universe of "known real teams" for matchup_for_tkey's game-line
+    # matching below (see DL._resolve_raw_team's docstring) -- team_ratings
+    # and team_grades between them cover all 136 teams.
+    canonical_tkeys = set(team_ratings) | set(team_grades) | {norm(t) for t in current_team_by_pkey.values()}
 
     print(f"Building week-{week} DK projections (season {season}) ...")
     projections = BT.build_projections(week, use_prior_year=True, lines_by_week=lines_by_week,
@@ -120,16 +131,18 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # pool needs every playable team's opponent, not just the subset with
     # a book market. Kickoff time isn't in hist_lines_closing_*.csv, so
     # this omits it (props_wk*.json has it for the props/impact pages).
-    wk_lines = lines_by_week.get(str(week), [])
-
     def matchup_for_tkey(tkey):
-        for g in wk_lines:
-            h, a = DL.norm(g["home_team"]), DL.norm(g["away_team"])
-            if tkey in h or h in tkey:
-                return f"{g['away_team']} @ {g['home_team']}"
-            if tkey in a or a in tkey:
-                return f"{g['away_team']} @ {g['home_team']}"
-        return ""
+        # Delegates to data_load's longest-known-team resolution (see
+        # DL._resolve_raw_team's docstring) instead of a plain substring
+        # check -- a raw "tkey in h" match is unsafe once mascots are
+        # normalized out, since a short school name can sit inside a
+        # cousin school's full name in either direction (norm("Texas")
+        # inside norm("Texas A&M Aggies"), norm("Washington") inside
+        # norm("Washington State Cougars")) -- a Texas or Washington
+        # player was matching the wrong team's game whenever both were on
+        # the same week's slate.
+        g, _side = DL._best_team_side(tkey, str(week), lines_by_week, canonical_tkeys)
+        return f"{g['away_team']} @ {g['home_team']}" if g else ""
 
     matchup_cache = {}
 
@@ -193,8 +206,9 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
         if norm(raw_name) not in current_roster or norm(raw_name) in EXCLUDED_PLAYERS:
             continue
 
-        canon_tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
-        team_c = pff2c.get(norm(r.get("team", "")), r.get("team", ""))
+        current_team_c = current_team_by_pkey.get(norm(raw_name))
+        team_c = current_team_c or pff2c.get(norm(r.get("team", "")), r.get("team", ""))
+        canon_tkey = norm(team_c)
         if canon_tkey not in matchup_cache:
             matchup_cache[canon_tkey] = matchup_for_tkey(canon_tkey)
 

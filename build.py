@@ -82,6 +82,10 @@ def main():
     print("Loading data ...")
     pff2c, odds2c = DL.load_team_map()
     pff = DL.load_pff(pff2c)
+    # master_crosswalk.csv (`pff`) carries each player's CURRENT team, not
+    # their prior-season one -- lets canon_tkey below prefer it over
+    # season_totals' stale team for a transferred player.
+    current_tkey_by_pkey = {p["pkey"]: p["tkey"] for p in pff}
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=args.season) if args.use_prior_year else {}
@@ -135,6 +139,7 @@ def main():
     pos_means = P.position_means(prior if (args.use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
     print(f"  Defensive team index built for {len(def_index)} teams")
+    canonical_tkeys = set(def_index) | set(sr_index) | set(grade_index) | set(tarp_index)
 
     # Slate / opponents
     events = [] if args.no_odds else O.pull_events()
@@ -156,7 +161,10 @@ def main():
         # failed every one of those lookups (opponent, game context, PFF
         # matchup grade, TARP) -- for the odds-event exact-match path here
         # that meant the player got dropped from the slate entirely.
-        canon_tkey = DL.resolve_tkey(tkey, pff2c)
+        # Prefer the crosswalk's CURRENT team (current_tkey_by_pkey) over
+        # season_totals' stale one so a transferred player's opponent
+        # resolves against the team he's actually playing for this year.
+        canon_tkey = current_tkey_by_pkey.get(pkey) or DL.resolve_tkey(tkey, pff2c)
         opp_tkey, game_id = resolve_opponent(canon_tkey, events, odds2c)
         if opp_tkey is None and not args.no_odds:
             continue  # not playing this slate
@@ -189,7 +197,7 @@ def main():
                         for k in ("ypa", "ypc", "ypt", "catch_rate")}
         grades = pff_by_key.get((pkey, canon_tkey), {}) or pff_by_key.get((pkey, tkey), {})
 
-        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(args.week), lines_by_week)
+        team_implied, team_spread = (DL.find_team_game_line(canon_tkey, str(args.week), lines_by_week, canonical_tkeys)
                                      if lines_by_week else (None, None))
 
         # Share-based volume only applies in pure prior-year weeks (1-3):

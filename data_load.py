@@ -187,25 +187,74 @@ def load_game_lines(path):
     return out
 
 
-def find_team_game_line(tkey, week, lines_by_week):
+def _resolve_raw_team(raw_name, known_tkeys):
     """
-    Substring-match tkey (our normalized, no-mascot team key) against a
-    week's game lines (Odds API names, WITH mascot) -- same approach
-    historical_pull.R's team matcher uses, since Odds names routinely
-    aren't exact matches for ours (see load_team_map's docstring on the
-    same issue). Returns (implied_total, own_spread) for whichever side
-    tkey matched, or (None, None) if the team isn't in this week's lines
-    (bye week, or a mismatch worth adding to team_map.csv).
+    Given a normalized raw team name from a game line (WITH mascot, e.g.
+    "texasamaggies"), return the single canonical tkey it actually
+    represents: the LONGEST key in known_tkeys that's a PREFIX match with
+    it (either direction). Prefix, not "appears anywhere" substring --
+    the mascot always comes after the school name once norm() strips
+    spaces, so the school name is always a genuine prefix of the raw
+    string, but an unrelated team's mascot can coincidentally CONTAIN a
+    different short team's name mid-string (norm("Duquesne Dukes") ==
+    "duquesnedukes" contains "duke" starting at index 8 -- an anywhere
+    substring check misidentified Duquesne's game as Duke's). Longest, not
+    first or closest-length, because a shorter cousin school's key is
+    routinely ALSO a genuine prefix of a raw name that really belongs to a
+    longer/more specific team ("texas" prefixes "texasamaggies" too, but
+    "texasam" is the real, more specific answer) -- and closest-length
+    isn't safe either, since an unrelated cousin's mascot can coincidentally
+    be short enough to beat the real team's own mascot on length ("Texas
+    A&M Aggies" is shorter than "Texas Longhorns", so a length-heuristic
+    picked Texas A&M for a Texas player). Only the longest-known-team-name
+    prefix match is unambiguous.
+    """
+    candidates = [ck for ck in known_tkeys if ck and (raw_name.startswith(ck) or ck.startswith(raw_name))]
+    return max(candidates, key=len) if candidates else None
+
+
+def _best_team_side(tkey, week, lines_by_week, canonical_tkeys):
+    """
+    Find tkey's (our normalized, no-mascot team key) game this week among
+    Odds API game lines (WITH mascot) -- same approach historical_pull.R's
+    team matcher uses, since Odds names routinely aren't exact matches for
+    ours (see load_team_map's docstring on the same issue).
+
+    For each raw team name in the slate, resolves which SPECIFIC real team
+    it represents via _resolve_raw_team (longest known-team match, not a
+    plain substring/length heuristic -- see that function's docstring for
+    why cheaper heuristics misfire on cousin schools like Texas / Texas
+    A&M / Texas State / Texas Tech, or Washington / Washington State),
+    then checks that resolution against tkey. tkey itself is always added
+    to the known-team universe for this check, in case it's missing from
+    canonical_tkeys (e.g. an FCS opponent absent from team_ratings).
+
+    Returns (game_dict, side) for tkey's game, or (None, None) if tkey
+    isn't in this week's lines at all (bye week, or a mismatch worth
+    adding to team_map.csv).
     """
     if not tkey:
         return None, None
+    known = set(canonical_tkeys) | {tkey}
     for g in lines_by_week.get(week, []):
         h, a = norm(g["home_team"]), norm(g["away_team"])
-        if tkey in h or h in tkey:
-            return g["home_implied"], g["home_spread"]
-        if tkey in a or a in tkey:
-            return g["away_implied"], -g["home_spread"]
+        if _resolve_raw_team(h, known) == tkey:
+            return g, "home"
+        if _resolve_raw_team(a, known) == tkey:
+            return g, "away"
     return None, None
+
+
+def find_team_game_line(tkey, week, lines_by_week, canonical_tkeys):
+    """
+    Returns (implied_total, own_spread) for tkey's game this week, or
+    (None, None) if it isn't in this week's lines. See _best_team_side for
+    the matching rule.
+    """
+    g, side = _best_team_side(tkey, week, lines_by_week, canonical_tkeys)
+    if g is None:
+        return None, None
+    return (g["home_implied"], g["home_spread"]) if side == "home" else (g["away_implied"], -g["home_spread"])
 
 
 def find_opponent_tkey(tkey, week, lines_by_week, canonical_tkeys):
@@ -214,26 +263,15 @@ def find_opponent_tkey(tkey, week, lines_by_week, canonical_tkeys):
     canonical_tkeys (e.g. def_index.keys()) instead of returning implied
     total/spread -- def_index and the success-rate index are keyed by our
     own canonical (CFBD-style) tkeys, not the raw Odds API name string.
-
-    Picks the LONGEST matching canonical key, not the first: a short key
-    (e.g. "iowa") is routinely also a substring of an unrelated longer
-    opponent's raw name ("Iowa State Cyclones"), the same trap that
-    corrupted an earlier pass of pff_team_map.csv. Longest-match isn't a
-    perfect guarantee, but it resolves exactly that failure mode.
+    Uses the same longest-known-team resolution as _best_team_side (see
+    _resolve_raw_team's docstring) so the opponent side isn't vulnerable
+    to the same cousin-school ambiguity as tkey's own side.
     """
-    if not tkey:
+    g, side = _best_team_side(tkey, week, lines_by_week, canonical_tkeys)
+    if g is None:
         return None
-    for g in lines_by_week.get(week, []):
-        h, a = norm(g["home_team"]), norm(g["away_team"])
-        if tkey in h or h in tkey:
-            opp_raw = a
-        elif tkey in a or a in tkey:
-            opp_raw = h
-        else:
-            continue
-        candidates = [ck for ck in canonical_tkeys if ck and (ck in opp_raw or opp_raw in ck)]
-        return max(candidates, key=len) if candidates else None
-    return None
+    opp_raw = norm(g["away_team"]) if side == "home" else norm(g["home_team"])
+    return _resolve_raw_team(opp_raw, canonical_tkeys)
 
 
 def league_avg_implied(lines_by_week, week):
