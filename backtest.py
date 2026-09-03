@@ -88,6 +88,7 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=season) if use_prior_year else {}
     pos_means = P.position_means(prior if (use_prior_year and prior) else totals)
+    pos_td_means = P.position_td_rate_means(prior if (use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
     sr_index = P.build_success_rate_index(team_ratings) if team_ratings else {}
     grade_index = P.build_matchup_grade_index(team_grades) if team_grades else {}
@@ -122,6 +123,20 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     team_totals_prior = P.build_team_volume_totals(
         ((DL.resolve_tkey(rec.get("team"), pff2c), rec) for rec in prior.values()),
     ) if prior else {}
+
+    # Team volume pools (2025, all three vol cols including pass_att --
+    # unlike team_totals_prior, SHARE_VOL_COLS' default rush_att/targets-
+    # only scope doesn't apply here) for project.starter_share_volume's
+    # zero-sample-starter fallback below. Separate from team_totals_prior
+    # (2024) since a first-year starter has no prior-year share to rebase
+    # in the first place -- the best available reference for "how much
+    # volume does this team's offense generate" is its own most recent
+    # real season. Grouped by each contributing player's OWN 2025 team
+    # (not their 2026 one), same as team_totals_prior above.
+    team_totals_current = P.build_team_volume_totals(
+        ((DL.resolve_tkey(tk, pff2c), t) for (pk, tk), t in totals.items()),
+        vol_cols=("pass_att", "rush_att", "targets"),
+    )
 
     pff_by_key = {}
     for p in pff:
@@ -188,12 +203,30 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                     source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
                     team_totals_prior.get(canon_tkey, {}), vol_col)
                 vol_source = f"team-share of {share_source_team}'s 2024 {vol_col} pool, applied to {canon_tkey}'s 2025 pool"
-            elif not use_prior_year:
-                vol_source = f"{tot.get('games')} 2025 games (in-season)"
-            elif week <= C.PRIOR_ONLY_UNTIL_WEEK:
-                vol_source = f"{prior_rec.get('games') if prior_rec else 0} 2024 games (pure prior-year, week <= {C.PRIOR_ONLY_UNTIL_WEEK})"
-            else:
-                vol_source = f"blended: {n_cur_games} 2025 games + {prior_rec.get('games') if prior_rec else 0} 2024 games"
+            elif ((source.get(vol_col) is None or source.get(vol_col) < C.MIN_PRIOR_VOLUME.get(vol_col, 0))
+                  and depth_rec):
+                # No usable personal sample for this stat (a true first-
+                # year starter, or a transfer with nothing on record
+                # anywhere) -- team_share_volume can't rebase a share that
+                # doesn't exist, so fall back to a typical starter share of
+                # this player's own current team's pool instead. Confirmed
+                # need: Keelon Russell (Alabama's real 2026 QB1 per the
+                # depth chart) has only 15 career pass attempts, far under
+                # the 100-attempt floor, so he had zero passing projection
+                # and was invisible to every DFS/props/impact page.
+                starter_override = P.starter_share_volume(team_totals_current, canon_tkey, vol_col, depth_rec)
+                if starter_override is not None:
+                    per_game_vol_override = starter_override
+                    vol_source = (f"typical {depth_rec['position']}{depth_rec['depth_rank']} share of "
+                                  f"{canon_tkey}'s 2025 {vol_col} pool -- no usable personal sample "
+                                  f"(UNVALIDATED, see project.TYPICAL_STARTER_SHARE)")
+            if vol_source is None:
+                if not use_prior_year:
+                    vol_source = f"{tot.get('games')} 2025 games (in-season)"
+                elif week <= C.PRIOR_ONLY_UNTIL_WEEK:
+                    vol_source = f"{prior_rec.get('games') if prior_rec else 0} 2024 games (pure prior-year, week <= {C.PRIOR_ONLY_UNTIL_WEEK})"
+                else:
+                    vol_source = f"blended: {n_cur_games} 2025 games + {prior_rec.get('games') if prior_rec else 0} 2024 games"
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=opp_tkey,
                                            vol_adj=vol_adj, extra_adj=extra_adj,
@@ -211,6 +244,14 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                 td_total, vol_total = source.get(td_col), source.get(vol_col)
                 if td_total is not None and vol_total:
                     td_rate = td_total / vol_total
+                if per_game_vol_override is not None:
+                    # Volume already came from a team-level override because
+                    # this player's own count was too thin to trust -- the
+                    # raw td_total/vol_total ratio is exactly as thin (Keelon
+                    # Russell's 2-of-15 personal sample alone projected 5.3
+                    # expected passing TDs). Shrink toward the league mean
+                    # the same way rates_shrunk already does for ypa/ypc/ypt.
+                    td_rate = P.shrink(td_rate, pos_td_means.get(vol_col, 0.0), source.get("games"))
             expected_td = round(proj["components"]["volume"] * td_rate, 3) if td_rate is not None else None
             breakdown = dict(
                 volume_source=vol_source,

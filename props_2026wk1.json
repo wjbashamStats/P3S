@@ -40,8 +40,8 @@
         "success_rate_adj": 1.048,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0641,
-        "expected_td": 0.585
+        "td_rate": 0.0611,
+        "expected_td": 0.558
        }
       }
      }
@@ -78,8 +78,84 @@
         "success_rate_adj": 1.048,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0816,
-        "expected_td": 0.296
+        "td_rate": 0.0722,
+        "expected_td": 0.261
+       }
+      }
+     }
+    },
+    {
+     "name": "Dekalon Taylor",
+     "team": "Colorado",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 37.5,
+       "projection": 5.4,
+       "edge_pct": -85.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 0.69,
+        "efficiency": 4.765,
+        "opp_adj": 1.627
+       },
+       "breakdown": {
+        "volume_source": "team-share of colorado's 2024 rush_att pool, applied to colorado's 2025 pool",
+        "pace_script_adj": 0.615,
+        "depth_rank_adj": 0.75,
+        "depth_rank": 3,
+        "team_implied": 22.0,
+        "league_avg_implied": 26.9,
+        "team_spread": 6.5,
+        "opponent": "georgiatech",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.02,
+        "matchup_grade_adj": 1.003,
+        "tarp_adj": null,
+        "td_rate": 0.0296,
+        "expected_td": 0.02
+       }
+      }
+     }
+    },
+    {
+     "name": "Julian Lewis",
+     "team": "Colorado",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 213.5,
+       "projection": 186.7,
+       "edge_pct": -12.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 23.24,
+        "efficiency": 6.869,
+        "opp_adj": 1.169
+       },
+       "breakdown": {
+        "volume_source": "typical QB1 share of colorado's 2025 pass_att pool -- no usable personal sample (UNVALIDATED, see project.TYPICAL_STARTER_SHARE)",
+        "pace_script_adj": 0.829,
+        "depth_rank_adj": 1.15,
+        "depth_rank": 1,
+        "team_implied": 22.0,
+        "league_avg_implied": 26.9,
+        "team_spread": 6.5,
+        "opponent": "georgiatech",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.169,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0473,
+        "expected_td": 1.1
        }
       }
      }
@@ -116,8 +192,8 @@
         "success_rate_adj": 1.048,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.08,
-        "expected_td": 0.49
+        "td_rate": 0.0717,
+        "expected_td": 0.439
        }
       }
      }
@@ -154,8 +230,8 @@
         "success_rate_adj": 0.998,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0,
-        "expected_td": 0.0
+        "td_rate": 0.022,
+        "expected_td": 0.048
        }
       }
      }
@@ -192,8 +268,46 @@
         "success_rate_adj": 1.073,
         "matchup_grade_adj": 1.132,
         "tarp_adj": null,
-        "td_rate": 0.0826,
-        "expected_td": 1.208
+        "td_rate": 0.0672,
+        "expected_td": 0.983
+       }
+      }
+     }
+    },
+    {
+     "name": "Alberto Mendoza",
+     "team": "Indiana",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 204.5,
+       "projection": 279.9,
+       "edge_pct": 36.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 18.31,
+        "efficiency": 9.793,
+        "opp_adj": 1.56
+       },
+       "breakdown": {
+        "volume_source": "typical QB1 share of indiana's 2025 pass_att pool -- no usable personal sample (UNVALIDATED, see project.TYPICAL_STARTER_SHARE)",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": 1.15,
+        "depth_rank": 1,
+        "team_implied": 10.5,
+        "league_avg_implied": 26.9,
+        "team_spread": 35.5,
+        "opponent": "purdue",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.56,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1358,
+        "expected_td": 2.486
        }
       }
      }
@@ -269,8 +383,8 @@
         "success_rate_adj": 1.107,
         "matchup_grade_adj": 1.172,
         "tarp_adj": null,
-        "td_rate": 0.0881,
-        "expected_td": 1.923
+        "td_rate": 0.0751,
+        "expected_td": 1.641
        }
       }
      }
@@ -307,8 +421,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0789,
-        "expected_td": 0.332
+        "td_rate": 0.067,
+        "expected_td": 0.281
        }
       },
       "player_receptions": {
@@ -338,8 +452,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0789,
-        "expected_td": 0.332
+        "td_rate": 0.067,
+        "expected_td": 0.281
        }
       }
      }
@@ -376,8 +490,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0217,
-        "expected_td": 0.11
+        "td_rate": 0.0342,
+        "expected_td": 0.174
        }
       },
       "player_receptions": {
@@ -407,8 +521,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0217,
-        "expected_td": 0.11
+        "td_rate": 0.0342,
+        "expected_td": 0.174
        }
       }
      }
@@ -445,8 +559,8 @@
         "success_rate_adj": 1.107,
         "matchup_grade_adj": 1.172,
         "tarp_adj": null,
-        "td_rate": 0.0286,
-        "expected_td": 0.761
+        "td_rate": 0.0355,
+        "expected_td": 0.944
        }
       }
      }
@@ -483,8 +597,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1522,
-        "expected_td": 0.673
+        "td_rate": 0.1198,
+        "expected_td": 0.529
        }
       },
       "player_receptions": {
@@ -514,8 +628,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1522,
-        "expected_td": 0.673
+        "td_rate": 0.1198,
+        "expected_td": 0.529
        }
       }
      }
@@ -552,8 +666,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1143,
-        "expected_td": 0.885
+        "td_rate": 0.0945,
+        "expected_td": 0.732
        }
       },
       "player_receptions": {
@@ -583,8 +697,8 @@
         "success_rate_adj": 1.046,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1143,
-        "expected_td": 0.885
+        "td_rate": 0.0945,
+        "expected_td": 0.732
        }
       }
      }
@@ -621,8 +735,8 @@
         "success_rate_adj": 0.66,
         "matchup_grade_adj": 0.815,
         "tarp_adj": null,
-        "td_rate": 0.0096,
-        "expected_td": 0.057
+        "td_rate": 0.0228,
+        "expected_td": 0.135
        }
       }
      }
@@ -690,8 +804,8 @@
         "success_rate_adj": 0.66,
         "matchup_grade_adj": 0.815,
         "tarp_adj": null,
-        "td_rate": 0.0196,
-        "expected_td": 0.07
+        "td_rate": 0.0295,
+        "expected_td": 0.106
        }
       }
      }
@@ -728,8 +842,8 @@
         "success_rate_adj": 1.044,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.058,
-        "expected_td": 0.545
+        "td_rate": 0.057,
+        "expected_td": 0.536
        }
       },
       "player_receptions": {
@@ -759,8 +873,77 @@
         "success_rate_adj": 1.044,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.058,
-        "expected_td": 0.545
+        "td_rate": 0.057,
+        "expected_td": 0.536
+       }
+      }
+     }
+    },
+    {
+     "name": "Louis Brown IV",
+     "team": "Baylor",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 51.5,
+       "projection": 9.7,
+       "edge_pct": -81.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.31,
+        "efficiency": 7.118,
+        "opp_adj": 1.044
+       },
+       "breakdown": {
+        "volume_source": "team-share of baylor's 2024 targets pool, applied to baylor's 2025 pool",
+        "pace_script_adj": 0.973,
+        "depth_rank_adj": 1.15,
+        "depth_rank": 1,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.9,
+        "team_spread": 7.5,
+        "opponent": "auburn",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.044,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0616,
+        "expected_td": 0.081
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 0.8,
+       "edge_pct": -82.2,
+       "over_price": 102.0,
+       "under_price": -136.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.31,
+        "efficiency": 0.573,
+        "opp_adj": 1.044
+       },
+       "breakdown": {
+        "volume_source": "team-share of baylor's 2024 targets pool, applied to baylor's 2025 pool",
+        "pace_script_adj": 0.973,
+        "depth_rank_adj": 1.15,
+        "depth_rank": 1,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.9,
+        "team_spread": 7.5,
+        "opponent": "auburn",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.044,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0616,
+        "expected_td": 0.081
        }
       }
      }
@@ -836,8 +1019,8 @@
         "success_rate_adj": 1.032,
         "matchup_grade_adj": 1.101,
         "tarp_adj": null,
-        "td_rate": 0.1143,
-        "expected_td": 1.794
+        "td_rate": 0.0926,
+        "expected_td": 1.454
        }
       }
      }
@@ -874,8 +1057,8 @@
         "success_rate_adj": 1.045,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0575,
-        "expected_td": 0.628
+        "td_rate": 0.0566,
+        "expected_td": 0.619
        }
       }
      }
@@ -912,8 +1095,8 @@
         "success_rate_adj": 1.032,
         "matchup_grade_adj": 1.101,
         "tarp_adj": null,
-        "td_rate": 0.0216,
-        "expected_td": 0.671
+        "td_rate": 0.0308,
+        "expected_td": 0.958
        }
       }
      }
@@ -950,8 +1133,8 @@
         "success_rate_adj": 1.045,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0805,
-        "expected_td": 0.829
+        "td_rate": 0.072,
+        "expected_td": 0.741
        }
       }
      }
@@ -996,8 +1179,46 @@
         "success_rate_adj": 0.922,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1364,
-        "expected_td": 0.443
+        "td_rate": 0.0988,
+        "expected_td": 0.321
+       }
+      }
+     }
+    },
+    {
+     "name": "Christopher Vizzina",
+     "team": "Clemson",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 220.5,
+       "projection": 145.5,
+       "edge_pct": -34.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 26.05,
+        "efficiency": 6.59,
+        "opp_adj": 0.847
+       },
+       "breakdown": {
+        "volume_source": "typical QB1 share of clemson's 2025 pass_att pool -- no usable personal sample (UNVALIDATED, see project.TYPICAL_STARTER_SHARE)",
+        "pace_script_adj": 0.77,
+        "depth_rank_adj": 1.15,
+        "depth_rank": 1,
+        "team_implied": 20.2,
+        "league_avg_implied": 26.9,
+        "team_spread": 10.0,
+        "opponent": "lsu",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.726,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0535,
+        "expected_td": 1.393
        }
       }
      }
@@ -1034,8 +1255,8 @@
         "success_rate_adj": 0.887,
         "matchup_grade_adj": 0.879,
         "tarp_adj": null,
-        "td_rate": 0.0,
-        "expected_td": 0.0
+        "td_rate": 0.0164,
+        "expected_td": 0.041
        }
       }
      }
@@ -1072,8 +1293,8 @@
         "success_rate_adj": 0.892,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0811,
-        "expected_td": 0.311
+        "td_rate": 0.0699,
+        "expected_td": 0.268
        }
       }
      }
@@ -1110,8 +1331,8 @@
         "success_rate_adj": 0.892,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1644,
-        "expected_td": 1.075
+        "td_rate": 0.1258,
+        "expected_td": 0.823
        }
       }
      }
@@ -1148,8 +1369,8 @@
         "success_rate_adj": 0.892,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0735,
-        "expected_td": 0.654
+        "td_rate": 0.0666,
+        "expected_td": 0.593
        }
       }
      }
@@ -1217,8 +1438,8 @@
         "success_rate_adj": 0.954,
         "matchup_grade_adj": 0.657,
         "tarp_adj": null,
-        "td_rate": 0.0893,
-        "expected_td": 0.563
+        "td_rate": 0.0708,
+        "expected_td": 0.447
        }
       }
      }
@@ -1255,8 +1476,8 @@
         "success_rate_adj": 0.892,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.1087,
-        "expected_td": 0.525
+        "td_rate": 0.0886,
+        "expected_td": 0.428
        }
       }
      }
@@ -1293,8 +1514,8 @@
         "success_rate_adj": 0.899,
         "matchup_grade_adj": 0.675,
         "tarp_adj": null,
-        "td_rate": 0.026,
-        "expected_td": 0.029
+        "td_rate": 0.0367,
+        "expected_td": 0.042
        }
       }
      }
@@ -1339,8 +1560,8 @@
         "success_rate_adj": 1.359,
         "matchup_grade_adj": 0.893,
         "tarp_adj": null,
-        "td_rate": 0.0481,
-        "expected_td": 0.342
+        "td_rate": 0.0485,
+        "expected_td": 0.345
        }
       }
      }
@@ -1377,8 +1598,8 @@
         "success_rate_adj": 1.143,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.068,
-        "expected_td": 1.038
+        "td_rate": 0.0636,
+        "expected_td": 0.972
        }
       }
      }
@@ -1415,8 +1636,8 @@
         "success_rate_adj": 1.143,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.061,
-        "expected_td": 0.564
+        "td_rate": 0.0587,
+        "expected_td": 0.543
        }
       }
      }
@@ -1491,8 +1712,8 @@
         "success_rate_adj": 0.911,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0962,
-        "expected_td": 0.5
+        "td_rate": 0.0824,
+        "expected_td": 0.429
        }
       }
      }
@@ -1560,8 +1781,8 @@
         "success_rate_adj": 1.139,
         "matchup_grade_adj": 1.161,
         "tarp_adj": null,
-        "td_rate": 0.0476,
-        "expected_td": 0.425
+        "td_rate": 0.0482,
+        "expected_td": 0.43
        }
       }
      }
@@ -1598,8 +1819,8 @@
         "success_rate_adj": 1.139,
         "matchup_grade_adj": 1.161,
         "tarp_adj": null,
-        "td_rate": 0.0432,
-        "expected_td": 0.538
+        "td_rate": 0.0452,
+        "expected_td": 0.561
        }
       }
      }

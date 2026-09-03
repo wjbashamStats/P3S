@@ -108,6 +108,14 @@ def main():
         ((DL.resolve_tkey(rec.get("team"), pff2c), rec) for rec in prior.values()),
     ) if prior else {}
 
+    # Team volume pools (2025, all three vol cols) for project.
+    # starter_share_volume's zero-sample-starter fallback below -- see
+    # backtest.py's identical wiring for the full rationale.
+    team_totals_current = P.build_team_volume_totals(
+        ((DL.resolve_tkey(tk, pff2c), t) for (pk, tk), t in totals.items()),
+        vol_cols=("pass_att", "rush_att", "targets"),
+    )
+
     lines_by_week = DL.load_game_lines(args.game_lines) if args.game_lines else {}
     week_avg_implied = DL.league_avg_implied(lines_by_week, str(args.week)) if lines_by_week else None
     if args.game_lines:
@@ -228,6 +236,12 @@ def main():
                 per_game_vol_override = P.team_share_volume(
                     source.get(vol_col), team_totals_prior.get(share_source_team, {}).get(vol_col),
                     team_totals_prior.get(canon_tkey, {}), vol_col)
+            elif ((source.get(vol_col) is None or source.get(vol_col) < C.MIN_PRIOR_VOLUME.get(vol_col, 0))
+                  and depth_rec):
+                # No usable personal sample for this stat -- see backtest.py's
+                # identical wiring (Keelon Russell, Alabama's real 2026 QB1
+                # per the depth chart, has only 15 career pass attempts).
+                per_game_vol_override = P.starter_share_volume(team_totals_current, canon_tkey, vol_col, depth_rec)
             proj = P.project_player_market(source, logs.get((pkey, tkey)),
                                            rates_shrunk, mkey, mdef,
                                            def_index, opp_tkey, vol_adj=vol_adj, extra_adj=extra_adj,

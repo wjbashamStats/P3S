@@ -164,6 +164,72 @@ def team_share_volume(player_total, source_team_total, target_team_totals, vol_c
     return (team_vol / team_games) * share
 
 
+# Empirically-derived typical share of a team's TOTAL volume pool (every
+# player at every position, matching build_team_volume_totals' denominator)
+# the top-N depth-chart player at each skill position actually commands --
+# computed from player_season_totals.csv's real 2025 box scores: for each
+# team, the top-volume player AT THAT POSITION as a fraction of the team's
+# overall total for the same stat, averaged across all 136 teams with a
+# usable team total (>= 50). UNVALIDATED as a projection input, same
+# caveat as DEPTH_RANK_MULT -- it's a typical share across the whole
+# league, not a per-team fit, so it will run high for a run-heavy option
+# QB's team and low for a true committee backfield.
+#   key: (this project's depth-chart position code, MARKETS volume column,
+#         depth_rank) -> share.  n=136 each unless noted.
+#   QB1 pass_att : mean 0.81, median 0.87
+#   HB1 rush_att : mean 0.36, median 0.35
+#   HB2 rush_att : mean 0.20, median 0.20
+#   WR1 targets  : mean 0.23, median 0.23
+#   WR2 targets  : mean 0.16, median 0.16
+#   TE1 targets  : mean 0.11, median 0.10
+# Combinations without real backtest grounding (QB rush_att, HB/WR/TE
+# pass_att, TE2+ targets, anyone rank 3+) are deliberately omitted --
+# better to leave a market unprojected than fabricate a share nobody's
+# checked.
+TYPICAL_STARTER_SHARE = {
+    ("QB", "pass_att", 1): 0.81,
+    ("HB", "rush_att", 1): 0.36,
+    ("HB", "rush_att", 2): 0.20,
+    ("WR", "targets", 1): 0.23,
+    ("WR", "targets", 2): 0.16,
+    ("TE", "targets", 1): 0.11,
+}
+
+
+def starter_share_volume(team_totals, tkey, vol_col, depth_rec):
+    """
+    Per-game volume estimate for a depth-chart-confirmed starter with no
+    usable personal sample -- a true first-year starter (e.g. a 5-star
+    true/redshirt freshman finally handed the job), or a transfer with no
+    meaningful volume anywhere on record. team_share_volume() can't help
+    here since it needs the PLAYER'S OWN historical share to rebase, which
+    by definition doesn't exist yet; this instead assumes a typical share
+    (TYPICAL_STARTER_SHARE) of the player's CURRENT team's own volume pool.
+
+    team_totals: build_team_volume_totals()'s dict, grouped by each
+                 contributing player's OWN team (so it reflects each
+                 team's real earned volume, not a share already redirected
+                 elsewhere).
+    tkey: the STARTER's current team -- looked up directly in team_totals,
+          unlike team_share_volume's separate source/target split (there's
+          no "old team" here to rebase from).
+    depth_rec: this player's DL.load_depth_chart() record ({position,
+               depth_rank}), or None.
+    Returns None if depth_rec is missing, the (position, vol_col, rank)
+    combo has no defined share, or the team pool itself is unavailable.
+    """
+    if not depth_rec:
+        return None
+    share = TYPICAL_STARTER_SHARE.get((depth_rec.get("position"), vol_col, depth_rec.get("depth_rank")))
+    if share is None:
+        return None
+    pool = team_totals.get(tkey) or {}
+    team_vol, team_games = pool.get(vol_col), pool.get("games")
+    if not team_vol or not team_games:
+        return None
+    return (team_vol / team_games) * share
+
+
 def position_means(all_totals):
     """
     League-wide VOLUME-WEIGHTED mean of each efficiency rate, for shrinkage
@@ -189,6 +255,27 @@ def position_means(all_totals):
     num = sum((tot.get("receptions") or 0) for tot in all_totals.values() if tot.get("targets"))
     den = sum((tot.get("targets") or 0) for tot in all_totals.values() if tot.get("targets"))
     out["catch_rate"] = (num / den) if den else 0.0
+    return out
+
+
+def position_td_rate_means(all_totals):
+    """
+    Volume-weighted league mean TD rate per volume column (TD_COL_BY_VOL),
+    same rationale/weighting as position_means. Shrinkage target for a
+    player's own td_rate when their volume came from an override (see
+    starter_share_volume/team_share_volume) rather than their own count --
+    a raw td_total/vol_total ratio off a thin personal sample is exactly
+    the kind of small-sample noise those overrides exist to route around
+    for VOLUME, but td_rate is computed separately in backtest.py and was
+    still using the player's own raw (unshrunk) ratio -- caught via Keelon
+    Russell's fallback debut projecting 5.3 expected passing TDs off a
+    2-of-15 personal sample.
+    """
+    out = {}
+    for vol_col, td_col in TD_COL_BY_VOL.items():
+        num = sum((tot.get(td_col) or 0) for tot in all_totals.values() if tot.get(vol_col))
+        den = sum((tot.get(vol_col) or 0) for tot in all_totals.values() if tot.get(vol_col))
+        out[vol_col] = (num / den) if den else 0.0
     return out
 
 
@@ -459,9 +546,14 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     total_vol = tot.get(vol_col)
 
     # volume floor: skip players without enough prior sample for this side
-    min_vol = C.MIN_PRIOR_VOLUME.get(vol_col)
-    if total_vol is None or (min_vol and total_vol < min_vol):
-        return None
+    # -- skipped when a volume override was already supplied (team_share_
+    # volume or starter_share_volume), since the whole point of an override
+    # is replacing this player's own noisy count with a team-level estimate;
+    # the floor exists to guard against THAT noise, which no longer applies.
+    if per_game_vol_override is None:
+        min_vol = C.MIN_PRIOR_VOLUME.get(vol_col)
+        if total_vol is None or (min_vol and total_vol < min_vol):
+            return None
 
     base_vol = per_game_vol_override if per_game_vol_override is not None else (total_vol / games)
     per_game_vol = base_vol * vol_adj
