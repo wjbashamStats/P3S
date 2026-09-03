@@ -74,7 +74,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 24.0721003,
-    "tempo_rank": 11.0
+    "tempo_rank": 43.0
    },
    "away_power": {
     "tan": 32.7,
@@ -88,7 +88,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 30.7617896,
-    "tempo_rank": 132.0
+    "tempo_rank": 134.0
    },
    "home_grades": {
     "grade_over": 96.4,
@@ -593,7 +593,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 26.4294049,
-    "tempo_rank": 53.0
+    "tempo_rank": 108.0
    },
    "away_power": {
     "tan": 48.6,
@@ -607,7 +607,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 26.1993865,
-    "tempo_rank": 45.0
+    "tempo_rank": 131.0
    },
    "home_grades": {
     "grade_over": 76.0,
@@ -1117,7 +1117,7 @@
     "over_pct": 0.455,
     "over_rank": 85.0,
     "seconds_per_play": 26.0634615,
-    "tempo_rank": 41.0
+    "tempo_rank": 89.0
    },
    "away_power": {
     "tan": 72.3,
@@ -1131,7 +1131,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 27.2016129,
-    "tempo_rank": 70.0
+    "tempo_rank": 125.0
    },
    "home_grades": {
     "grade_over": 76.6,
@@ -1641,7 +1641,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 25.3386076,
-    "tempo_rank": 27.0
+    "tempo_rank": 11.0
    },
    "away_power": {
     "tan": 60.1,
@@ -1655,7 +1655,7 @@
     "over_pct": 0.75,
     "over_rank": 3.0,
     "seconds_per_play": 24.0057804,
-    "tempo_rank": 9.0
+    "tempo_rank": 2.0
    },
    "home_grades": {
     "grade_over": 96.8,
@@ -2160,7 +2160,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 24.9808126,
-    "tempo_rank": 21.0
+    "tempo_rank": 35.0
    },
    "away_power": {
     "tan": 67.6,
@@ -2174,7 +2174,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.2665848,
-    "tempo_rank": 97.0
+    "tempo_rank": 128.0
    },
    "home_grades": {
     "grade_over": 82.9,
@@ -2679,7 +2679,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 26.543257,
-    "tempo_rank": 57.0
+    "tempo_rank": 1.0
    },
    "away_power": {
     "tan": 53.1,
@@ -2693,7 +2693,7 @@
     "over_pct": 0.546,
     "over_rank": 48.0,
     "seconds_per_play": 27.3054546,
-    "tempo_rank": 75.0
+    "tempo_rank": 49.0
    },
    "home_grades": {
     "grade_over": 89.3,
@@ -3198,7 +3198,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 25.5125495,
-    "tempo_rank": 32.0
+    "tempo_rank": 80.0
    },
    "away_power": {
     "tan": 48.8,
@@ -3212,7 +3212,7 @@
     "over_pct": 0.636,
     "over_rank": 21.0,
     "seconds_per_play": 27.8609866,
-    "tempo_rank": 87.0
+    "tempo_rank": 98.0
    },
    "home_grades": {
     "grade_over": 66.3,
@@ -3717,7 +3717,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.5396189,
-    "tempo_rank": 103.0
+    "tempo_rank": 90.0
    },
    "away_power": {
     "tan": 55.9,
@@ -3731,7 +3731,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 27.0238379,
-    "tempo_rank": 65.0
+    "tempo_rank": 8.0
    },
    "home_grades": {
     "grade_over": 91.2,
@@ -4236,7 +4236,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 29.6424802,
-    "tempo_rank": 123.0
+    "tempo_rank": 9.0
    },
    "away_power": {
     "tan": 77.4,
@@ -4250,7 +4250,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 26.3651163,
-    "tempo_rank": 50.0
+    "tempo_rank": 19.0
    },
    "home_grades": {
     "grade_over": 87.9,
@@ -4755,7 +4755,7 @@
     "over_pct": 0.75,
     "over_rank": 3.0,
     "seconds_per_play": 28.7007078,
-    "tempo_rank": 106.0
+    "tempo_rank": 32.0
    },
    "away_power": {
     "tan": 56.8,
@@ -4769,7 +4769,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 24.0352823,
-    "tempo_rank": 10.0
+    "tempo_rank": 47.0
    },
    "home_grades": {
     "grade_over": 86.3,
@@ -5274,7 +5274,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.0184582,
-    "tempo_rank": 92.0
+    "tempo_rank": 118.0
    },
    "away_power": {
     "tan": 46.6,
@@ -5288,7 +5288,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 29.1890411,
-    "tempo_rank": 116.0
+    "tempo_rank": 129.0
    },
    "home_grades": {
     "grade_over": 92.7,
@@ -5788,7 +5788,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 27.5950119,
-    "tempo_rank": 83.0
+    "tempo_rank": 133.0
    },
    "away_power": {
     "tan": 59.1,
@@ -5802,7 +5802,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 24.3495935,
-    "tempo_rank": 13.0
+    "tempo_rank": 24.0
    },
    "home_grades": {
     "grade_over": 77.2,
@@ -6307,7 +6307,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 27.5944976,
-    "tempo_rank": 82.0
+    "tempo_rank": 12.0
    },
    "away_power": {
     "tan": 55.4,
@@ -6321,7 +6321,7 @@
     "over_pct": 0.167,
     "over_rank": 135.0,
     "seconds_per_play": 27.462141,
-    "tempo_rank": 77.0
+    "tempo_rank": 136.0
    },
    "home_grades": {
     "grade_over": 93.7,
@@ -6831,7 +6831,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 27.5776596,
-    "tempo_rank": 81.0
+    "tempo_rank": 91.0
    },
    "away_power": {
     "tan": 43.1,
@@ -6845,7 +6845,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 26.3483871,
-    "tempo_rank": 49.0
+    "tempo_rank": 71.0
    },
    "home_grades": {
     "grade_over": 89.4,
@@ -7350,7 +7350,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 28.8946667,
-    "tempo_rank": 112.0
+    "tempo_rank": 104.0
    },
    "away_power": {
     "tan": 55.7,
@@ -7364,7 +7364,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 29.1797432,
-    "tempo_rank": 115.0
+    "tempo_rank": 30.0
    },
    "home_grades": {
     "grade_over": 77.3,
@@ -7869,7 +7869,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.6948357,
-    "tempo_rank": 105.0
+    "tempo_rank": 99.0
    },
    "away_power": {
     "tan": 57.1,
@@ -7883,7 +7883,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 27.0732293,
-    "tempo_rank": 66.0
+    "tempo_rank": 14.0
    },
    "home_grades": {
     "grade_over": 83.8,
@@ -8398,7 +8398,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 25.9656863,
-    "tempo_rank": 37.0
+    "tempo_rank": 20.0
    },
    "away_power": {
     "tan": 61.6,
@@ -8412,7 +8412,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 27.7053254,
-    "tempo_rank": 86.0
+    "tempo_rank": 39.0
    },
    "home_grades": {
     "grade_over": 94.2,
@@ -8917,7 +8917,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 29.487069,
-    "tempo_rank": 120.0
+    "tempo_rank": 28.0
    },
    "away_power": {
     "tan": 50.0,
@@ -8931,7 +8931,7 @@
     "over_pct": 0.636,
     "over_rank": 21.0,
     "seconds_per_play": 27.9845475,
-    "tempo_rank": 90.0
+    "tempo_rank": 68.0
    },
    "home_grades": {
     "grade_over": 88.1,
@@ -9436,7 +9436,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 23.8113571,
-    "tempo_rank": 7.0
+    "tempo_rank": 3.0
    },
    "away_power": {
     "tan": 71.1,
@@ -9450,7 +9450,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 27.0952928,
-    "tempo_rank": 68.0
+    "tempo_rank": 75.0
    },
    "home_grades": {
     "grade_over": 91.2,
@@ -9781,7 +9781,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.7768396,
-    "tempo_rank": 107.0
+    "tempo_rank": 25.0
    },
    "away_power": {
     "tan": 51.1,
@@ -9795,7 +9795,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 28.4049479,
-    "tempo_rank": 99.0
+    "tempo_rank": 62.0
    },
    "home_grades": {
     "grade_over": 91.9,
@@ -10305,7 +10305,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 29.0493976,
-    "tempo_rank": 113.0
+    "tempo_rank": 72.0
    },
    "away_power": {
     "tan": 50.6,
@@ -10319,7 +10319,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 29.563871,
-    "tempo_rank": 122.0
+    "tempo_rank": 97.0
    },
    "home_grades": {
     "grade_over": 83.8,
@@ -10824,7 +10824,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 31.0075949,
-    "tempo_rank": 134.0
+    "tempo_rank": 64.0
    },
    "away_power": {
     "tan": 43.9,
@@ -10838,7 +10838,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 22.7327327,
-    "tempo_rank": 3.0
+    "tempo_rank": 56.0
    },
    "home_grades": {
     "grade_over": 70.8,
@@ -11343,7 +11343,7 @@
     "over_pct": 0.167,
     "over_rank": 135.0,
     "seconds_per_play": 25.7117318,
-    "tempo_rank": 33.0
+    "tempo_rank": 83.0
    },
    "away_power": {
     "tan": 40.1,
@@ -11357,7 +11357,7 @@
     "over_pct": 0.667,
     "over_rank": 13.0,
     "seconds_per_play": 28.8641619,
-    "tempo_rank": 109.0
+    "tempo_rank": 95.0
    },
    "home_grades": {
     "grade_over": 84.8,
@@ -11862,7 +11862,7 @@
     "over_pct": 0.636,
     "over_rank": 21.0,
     "seconds_per_play": 25.3574007,
-    "tempo_rank": 29.0
+    "tempo_rank": 54.0
    },
    "away_power": {
     "tan": 50.2,
@@ -11876,7 +11876,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 26.4017957,
-    "tempo_rank": 51.0
+    "tempo_rank": 113.0
    },
    "home_grades": {
     "grade_over": 80.7,
@@ -12207,7 +12207,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 28.2862797,
-    "tempo_rank": 98.0
+    "tempo_rank": 92.0
    },
    "away_power": {
     "tan": 49.8,
@@ -12221,7 +12221,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 29.2160279,
-    "tempo_rank": 117.0
+    "tempo_rank": 120.0
    },
    "home_grades": {
     "grade_over": 83.9,
@@ -12726,7 +12726,7 @@
     "over_pct": 0.75,
     "over_rank": 3.0,
     "seconds_per_play": 27.7020262,
-    "tempo_rank": 85.0
+    "tempo_rank": 94.0
    },
    "away_power": {
     "tan": 53.2,
@@ -12740,7 +12740,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 25.3454345,
-    "tempo_rank": 28.0
+    "tempo_rank": 52.0
    },
    "home_grades": {
     "grade_over": 86.5,
@@ -13245,7 +13245,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 27.9762443,
-    "tempo_rank": 88.0
+    "tempo_rank": 111.0
    },
    "away_power": {
     "tan": 46.0,
@@ -13259,7 +13259,7 @@
     "over_pct": 0.167,
     "over_rank": 135.0,
     "seconds_per_play": 24.4863103,
-    "tempo_rank": 16.0
+    "tempo_rank": 115.0
    },
    "home_grades": {
     "grade_over": 60.5,
@@ -13764,7 +13764,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 24.5088757,
-    "tempo_rank": 17.0
+    "tempo_rank": 63.0
    },
    "away_power": {
     "tan": 64.0,
@@ -13778,7 +13778,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 27.0078947,
-    "tempo_rank": 62.0
+    "tempo_rank": 7.0
    },
    "home_grades": {
     "grade_over": 90.9,
@@ -14293,7 +14293,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 29.4271949,
-    "tempo_rank": 119.0
+    "tempo_rank": 67.0
    },
    "away_power": {
     "tan": 67.6,
@@ -14307,7 +14307,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 29.487069,
-    "tempo_rank": 120.0
+    "tempo_rank": 13.0
    },
    "home_grades": {
     "grade_over": 79.3,
@@ -14812,7 +14812,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 25.2464146,
-    "tempo_rank": 26.0
+    "tempo_rank": 33.0
    },
    "away_power": {
     "tan": 59.1,
@@ -14826,7 +14826,7 @@
     "over_pct": 0.25,
     "over_rank": 132.0,
     "seconds_per_play": 24.3495935,
-    "tempo_rank": 13.0
+    "tempo_rank": 107.0
    },
    "home_grades": {
     "grade_over": 90.4,
@@ -15331,7 +15331,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 27.0155844,
-    "tempo_rank": 63.0
+    "tempo_rank": 122.0
    },
    "away_power": {
     "tan": 84.2,
@@ -15345,7 +15345,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 29.9696552,
-    "tempo_rank": 127.0
+    "tempo_rank": 50.0
    },
    "home_grades": {
     "grade_over": 69.4,
@@ -15855,7 +15855,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 26.1471653,
-    "tempo_rank": 43.0
+    "tempo_rank": 66.0
    },
    "away_power": {
     "tan": 52.2,
@@ -15869,7 +15869,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 23.4821883,
-    "tempo_rank": 6.0
+    "tempo_rank": 106.0
    },
    "home_grades": {
     "grade_over": 90.6,
@@ -16374,7 +16374,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 25.8382878,
-    "tempo_rank": 35.0
+    "tempo_rank": 48.0
    },
    "away_power": {
     "tan": 50.1,
@@ -16388,7 +16388,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 27.0817916,
-    "tempo_rank": 67.0
+    "tempo_rank": 60.0
    },
    "home_grades": {
     "grade_over": 86.7,
@@ -16893,7 +16893,7 @@
     "over_pct": 0.667,
     "over_rank": 13.0,
     "seconds_per_play": 28.0518617,
-    "tempo_rank": 93.0
+    "tempo_rank": 86.0
    },
    "away_power": {
     "tan": 51.1,
@@ -16907,7 +16907,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 28.4049479,
-    "tempo_rank": 99.0
+    "tempo_rank": 41.0
    },
    "home_grades": {
     "grade_over": 89.4,
@@ -17412,7 +17412,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 24.3066667,
-    "tempo_rank": 12.0
+    "tempo_rank": 15.0
    },
    "away_power": {
     "tan": 49.3,
@@ -17426,7 +17426,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 26.665874,
-    "tempo_rank": 58.0
+    "tempo_rank": 100.0
    },
    "home_grades": {
     "grade_over": 87.6,
@@ -17931,7 +17931,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 28.2039046,
-    "tempo_rank": 95.0
+    "tempo_rank": 16.0
    },
    "away_power": {
     "tan": 68.5,
@@ -17945,7 +17945,7 @@
     "over_pct": 0.417,
     "over_rank": 99.5,
     "seconds_per_play": 26.998913,
-    "tempo_rank": 61.0
+    "tempo_rank": 112.0
    },
    "home_grades": {
     "grade_over": 84.5,
@@ -18450,7 +18450,7 @@
     "over_pct": 0.25,
     "over_rank": 132.0,
     "seconds_per_play": 24.8545838,
-    "tempo_rank": 20.0
+    "tempo_rank": 114.0
    },
    "away_power": {
     "tan": 69.9,
@@ -18464,7 +18464,7 @@
     "over_pct": 0.3,
     "over_rank": 130.0,
     "seconds_per_play": 27.2924425,
-    "tempo_rank": 74.0
+    "tempo_rank": 51.0
    },
    "home_grades": {
     "grade_over": 80.2,
@@ -18969,7 +18969,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 24.3932161,
-    "tempo_rank": 15.0
+    "tempo_rank": 58.0
    },
    "away_power": {
     "tan": 42.2,
@@ -18983,7 +18983,7 @@
     "over_pct": 0.583,
     "over_rank": 34.5,
     "seconds_per_play": 28.8824121,
-    "tempo_rank": 111.0
+    "tempo_rank": 93.0
    },
    "home_grades": {
     "grade_over": 81.1,
@@ -19488,7 +19488,7 @@
     "over_pct": 0.364,
     "over_rank": 115.5,
     "seconds_per_play": 26.5379538,
-    "tempo_rank": 55.0
+    "tempo_rank": 59.0
    },
    "away_power": {
     "tan": 54.4,
@@ -19502,7 +19502,7 @@
     "over_pct": 0.5,
     "over_rank": 67.0,
     "seconds_per_play": 25.3979849,
-    "tempo_rank": 31.0
+    "tempo_rank": 23.0
    },
    "home_grades": {
     "grade_over": 75.8,
@@ -20012,7 +20012,7 @@
     "over_pct": 0.667,
     "over_rank": 13.0,
     "seconds_per_play": 22.8975501,
-    "tempo_rank": 4.0
+    "tempo_rank": 27.0
    },
    "away_power": {
     "tan": 41.1,
@@ -20026,7 +20026,7 @@
     "over_pct": 0.333,
     "over_rank": 123.5,
     "seconds_per_play": 27.2136536,
-    "tempo_rank": 71.0
+    "tempo_rank": 79.0
    },
    "home_grades": {
     "grade_over": 89.2,

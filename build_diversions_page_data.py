@@ -162,22 +162,25 @@ def five_factors(rh, ra):
 
 def power_table_entry(r, net_rp_rank):
     # Seconds/Play comes from team_ratings' SPP column, NOT its "Tempo"
-    # column -- team_ratings_2025.csv has both, and they're unrelated:
-    # sorting all 136 teams by "Tempo" doesn't match rank_Tempo at all
-    # (124/136 teams off by more than 5 spots either direction), while
-    # sorting by SPP matches rank_Tempo exactly (0 mismatches). Found by
-    # comparing this page's Power Ratings table against the reference
-    # tool's Five Factors panel, which showed 26.2s/play (rank #131) for
-    # a team this file's "Tempo" column had at 17.7 (rank_Tempo said
-    # 131, which only lines up with SPP's 26.2, confirming SPP is the
-    # real seconds-per-play field and "Tempo" is something else / stale).
+    # column -- team_ratings_2025.csv has both, and they're unrelated
+    # (see the SPP-vs-Tempo comment history in this file's git log).
+    # The RANK is rank_SPP, not rank_Tempo: team_ratings_2025.csv has
+    # BOTH a rank_SPP and a rank_Tempo column, and this project was
+    # reading the wrong one -- rank_Tempo mathematically happens to sort
+    # SPP ascending too, so it looked plausible, but it's not what this
+    # data's own upstream source (and the reference tool) actually
+    # displays. Confirmed directly: Kent State's rank_SPP is 131 and
+    # South Carolina's is 108 -- both matching the reference tool's
+    # numbers exactly (rank_Tempo had them at 45 and 53, which is what
+    # produced the "your tool disagrees with mine" discrepancy flagged
+    # earlier). Use rank_SPP everywhere pace rank is needed.
     return dict(
         tan=_f(r.get("TAN")), tan_rank=_f(r.get("rank_TAN"), None),
         sp=_f(r.get("SP")), sp_rank=_f(r.get("rank_SP"), None),
         net_rp=_f(r.get("NetRP")), net_rp_rank=net_rp_rank,
         ats_pct=_f(r.get("X2022_ATS_Percent"), None), ats_rank=_f(r.get("Rank_2022_ATS_Percent"), None),
         over_pct=_f(r.get("X2022_OU_Percent"), None), over_rank=_f(r.get("Rank_2022_OU_Percent"), None),
-        seconds_per_play=_f(r.get("SPP")), tempo_rank=_f(r.get("rank_Tempo"), None),
+        seconds_per_play=_f(r.get("SPP")), tempo_rank=_f(r.get("rank_SPP"), None),
     )
 
 
