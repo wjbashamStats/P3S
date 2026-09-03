@@ -80,8 +80,10 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     # player's opponent/game-context/matchup-grade/TARP lookups below all
     # need his real 2026 opponent, not a stale one computed against his old
     # team's schedule -- this map lets canon_tkey prefer the crosswalk's
-    # current team whenever the player is in it.
-    current_tkey_by_pkey = {p["pkey"]: p["tkey"] for p in pff}
+    # current team whenever the player is in it. Skill-position-only and
+    # pkey-only (see load_pff_skill_by_pkey) to avoid a same-name collision
+    # with an unrelated player at another position.
+    current_tkey_by_pkey = {pkey: p["tkey"] for pkey, p in DL.load_pff_skill_by_pkey(pff2c).items()}
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=season) if use_prior_year else {}

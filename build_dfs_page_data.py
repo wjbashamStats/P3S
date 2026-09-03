@@ -106,7 +106,11 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # last year's team, so a transfer (e.g. Byrum Brown, South Florida ->
     # Auburn) was showing his old team, old opponent, and old game context
     # -- master_crosswalk.csv is the source of truth for "team this year".
-    current_team_by_pkey = {p["pkey"]: p["team_cfbd"] for p in DL.load_pff(pff2c)}
+    # Skill-position-only (see load_pff_skill_by_pkey) to avoid a same-name
+    # collision with an unrelated player at another position -- found for
+    # real: a defensive back "Jordan Allen" at Houston was overriding a
+    # Georgia Tech WR of the same name.
+    current_team_by_pkey = {pkey: p["team_cfbd"] for pkey, p in DL.load_pff_skill_by_pkey(pff2c).items()}
     current_roster = set(depth_chart) | set(current_team_by_pkey)
 
     # Universe of "known real teams" for matchup_for_tkey's game-line

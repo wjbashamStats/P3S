@@ -84,8 +84,10 @@ def main():
     pff = DL.load_pff(pff2c)
     # master_crosswalk.csv (`pff`) carries each player's CURRENT team, not
     # their prior-season one -- lets canon_tkey below prefer it over
-    # season_totals' stale team for a transferred player.
-    current_tkey_by_pkey = {p["pkey"]: p["tkey"] for p in pff}
+    # season_totals' stale team for a transferred player. Skill-position-
+    # only (see load_pff_skill_by_pkey) to avoid a same-name collision with
+    # an unrelated player at another position.
+    current_tkey_by_pkey = {pkey: p["tkey"] for pkey, p in DL.load_pff_skill_by_pkey(pff2c).items()}
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=args.season) if args.use_prior_year else {}

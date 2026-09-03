@@ -3572,26 +3572,6 @@
    }
   },
   {
-   "name": "Anthony Smith",
-   "team": "Minnesota",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Eastern Illinois Panthers @ Minnesota Golden Gophers",
-   "opponent": null,
-   "team_implied": 47.0,
-   "team_spread": -42.5,
-   "proj_fp": 12.8,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 74.5,
-    "rec_td": 0.44,
-    "receptions": 5.4
-   }
-  },
-  {
    "name": "Rueben Owens II",
    "team": "Texas A&M",
    "position": "HB",
@@ -7089,6 +7069,26 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
+   }
+  },
+  {
+   "name": "Jason Patterson",
+   "team": "Kentucky",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Youngstown St Penguins @ Kentucky Wildcats",
+   "opponent": null,
+   "team_implied": 43.0,
+   "team_spread": -23.5,
+   "proj_fp": 5.59,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 27.8,
+    "rush_td": 0.15,
+    "rec_yds": 8.7,
+    "rec_td": 0.08,
+    "receptions": 1.2
    }
   },
   {

@@ -23,7 +23,6 @@ def norm(s):
 
 def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
     pff2c, odds2c = DL.load_team_map()
-    pff = DL.load_pff(pff2c)
     lines_by_week = DL.load_game_lines(lines_path)
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
@@ -35,28 +34,41 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2
                                        depth_chart=depth_chart)
     print(f"  {len(projections)} (player, market) projections")
 
-    # Team/position lookup: player_season_totals.csv has far wider roster
+    # Position lookup: player_season_totals.csv has far wider roster
     # coverage than master_crosswalk.csv (the PFF grades file), since it's
-    # built from every CFBD box score, not just graded PFF snaps. Prefer it;
-    # fall back to the PFF crosswalk for anyone missing from season totals.
+    # built from every CFBD box score, not just graded PFF snaps -- prefer
+    # it for position, falling back to the PFF crosswalk for anyone missing
+    # from season totals.
+    #
+    # TEAM is the opposite priority: season_totals' "team" column is last
+    # season's team, with no idea who's since transferred (DJ Lagway shows
+    # Florida there, but he's Baylor's QB for 2026 -- confirmed via
+    # master_crosswalk.csv, the same fix already applied to
+    # build_dfs_page_data.py and to canon_tkey resolution in backtest.py).
+    # master_crosswalk is current-team-accurate for the players it does
+    # cover, so it wins whenever a player is in both. Skill-position-only
+    # (see load_pff_skill_by_pkey) to avoid a same-name collision with an
+    # unrelated player at another position -- found for real: a defensive
+    # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
+    # the same name.
     totals_by_pkey = {}
     for r in csv.DictReader(open(C.SEASON_TOTALS)):
         totals_by_pkey.setdefault(norm(r.get("player", "")), r)
 
-    pff_by_pkey = {}
-    for p in pff:
-        pff_by_pkey.setdefault(p["pkey"], p)
+    pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
 
     def resolve_player_team_position(pkey):
         r = totals_by_pkey.get(pkey)
-        if r is not None:
-            tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
-            team_cfbd = pff2c.get(norm(r.get("team", "")), r.get("team", ""))
-            return tkey, team_cfbd, (r.get("position") or "")
         p = pff_by_pkey.get(pkey)
         if p is not None:
-            return p["tkey"], p["team_cfbd"], (p.get("position") or "")
-        return None, "", ""
+            tkey, team_cfbd = p["tkey"], p["team_cfbd"]
+        elif r is not None:
+            tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
+            team_cfbd = pff2c.get(norm(r.get("team", "")), r.get("team", ""))
+        else:
+            tkey, team_cfbd = None, ""
+        position = (r.get("position") if r is not None else None) or (p.get("position") if p is not None else None) or ""
+        return tkey, team_cfbd, position
 
     all_props = BT.load_props(props_path)
     props = [r for r in all_props if str(r.get("week")) == str(week)]

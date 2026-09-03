@@ -560,7 +560,7 @@
      "group": "grade",
      "v2025": 75.3,
      "v2024": null,
-     "pct": 0.367
+     "pct": 0.371
     },
     {
      "key": "off_grade_recv",
@@ -585,6 +585,155 @@
      "v2025": 55.1,
      "v2024": null,
      "pct": 0.344
+    }
+   ]
+  },
+  {
+   "name": "Josh Johnson",
+   "player_id": "186429",
+   "team": "Air Force",
+   "stats_team": null,
+   "conference": "Mountain West",
+   "position": "QB",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 5.0,
+    "pass_att": 28.0,
+    "pass_yds": 374.0,
+    "pass_td": 4.0,
+    "rush_att": 31.0,
+    "rush_yds": 95.0,
+    "rush_td": 1.0,
+    "targets": null,
+    "receptions": null,
+    "rec_yds": null,
+    "rec_td": null
+   },
+   "games_2025": 5.0,
+   "games_2024": 6.0,
+   "usage": {
+    "rush_share_pct": 4.9,
+    "target_share_pct": null
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "pass_yds": 112.0,
+     "rush_yds": 10.0,
+     "pass_att": 7.0,
+     "rush_att": 3.0
+    },
+    {
+     "week": 3,
+     "pass_yds": 112.0,
+     "rush_yds": 32.0,
+     "pass_att": 9.0,
+     "rush_att": 11.0
+    },
+    {
+     "week": 4,
+     "pass_yds": 0.0,
+     "rush_yds": 6.0,
+     "pass_att": 2.0,
+     "rush_att": 2.0
+    },
+    {
+     "week": 13,
+     "pass_yds": 46.0,
+     "rush_yds": 21.0,
+     "pass_att": 6.0,
+     "rush_att": 6.0
+    },
+    {
+     "week": 14,
+     "pass_yds": 104.0,
+     "rush_yds": 26.0,
+     "pass_att": 4.0,
+     "rush_att": 9.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 194,
+    "of": 255
+   },
+   "conf_rank": {
+    "rank": 14,
+    "of": 21
+   },
+   "metrics": [
+    {
+     "key": "pass_att",
+     "label": "Pass Att",
+     "group": "season",
+     "v2025": 28.0,
+     "v2024": 14.0,
+     "pct": 0.096
+    },
+    {
+     "key": "pass_yds",
+     "label": "Pass Yds",
+     "group": "season",
+     "v2025": 374.0,
+     "v2024": 126.0,
+     "pct": 0.238
+    },
+    {
+     "key": "pass_td",
+     "label": "Pass TD",
+     "group": "season",
+     "v2025": 4.0,
+     "v2024": 1.0,
+     "pct": 0.36
+    },
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 31.0,
+     "v2024": 15.0,
+     "pct": 0.419
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 95.0,
+     "v2024": 96.0,
+     "pct": 0.327
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 0.0,
+     "pct": 0.35
+    },
+    {
+     "key": "ypa",
+     "label": "Yards / Att",
+     "group": "rate",
+     "v2025": 13.36,
+     "v2024": 9.0,
+     "pct": 0.994
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 3.06,
+     "v2024": 6.4,
+     "pct": 0.197
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 4.9,
+     "v2024": null,
+     "pct": 0.26
     }
    ]
   },
@@ -2039,7 +2188,7 @@
      "group": "grade",
      "v2025": 80.4,
      "v2024": null,
-     "pct": 0.577
+     "pct": 0.579
     },
     {
      "key": "off_grade_recv",
@@ -2047,7 +2196,7 @@
      "group": "grade",
      "v2025": 52.6,
      "v2024": null,
-     "pct": 0.183
+     "pct": 0.182
     },
     {
      "key": "off_grade_pblk",
@@ -2055,7 +2204,7 @@
      "group": "grade",
      "v2025": 43.4,
      "v2024": null,
-     "pct": 0.334
+     "pct": 0.341
     },
     {
      "key": "off_grade_rblk",
@@ -4643,7 +4792,7 @@
      "group": "grade",
      "v2025": 60.6,
      "v2024": null,
-     "pct": 0.455
+     "pct": 0.417
     },
     {
      "key": "off_grade_run",
@@ -4651,7 +4800,7 @@
      "group": "grade",
      "v2025": 71.6,
      "v2024": null,
-     "pct": 0.157
+     "pct": 0.156
     },
     {
      "key": "off_grade_recv",
@@ -4659,7 +4808,7 @@
      "group": "grade",
      "v2025": 59.6,
      "v2024": null,
-     "pct": 0.533
+     "pct": 0.536
     },
     {
      "key": "off_grade_pblk",
@@ -4667,7 +4816,7 @@
      "group": "grade",
      "v2025": 34.3,
      "v2024": null,
-     "pct": 0.189
+     "pct": 0.195
     },
     {
      "key": "off_grade_rblk",
@@ -7205,7 +7354,7 @@
      "group": "grade",
      "v2025": 75.8,
      "v2024": null,
-     "pct": 0.407
+     "pct": 0.411
     },
     {
      "key": "off_grade_recv",
@@ -7213,7 +7362,7 @@
      "group": "grade",
      "v2025": 70.1,
      "v2024": null,
-     "pct": 0.827
+     "pct": 0.828
     },
     {
      "key": "off_grade_pblk",
@@ -7221,7 +7370,7 @@
      "group": "grade",
      "v2025": 37.4,
      "v2024": null,
-     "pct": 0.235
+     "pct": 0.242
     },
     {
      "key": "off_grade_rblk",
@@ -7229,7 +7378,7 @@
      "group": "grade",
      "v2025": 70.0,
      "v2024": null,
-     "pct": 0.924
+     "pct": 0.93
     }
    ]
   },
@@ -8741,7 +8890,7 @@
      "group": "grade",
      "v2025": 69.4,
      "v2024": null,
-     "pct": 0.202
+     "pct": 0.209
     },
     {
      "key": "off_grade_run",
@@ -8749,7 +8898,7 @@
      "group": "grade",
      "v2025": 73.5,
      "v2024": null,
-     "pct": 0.223
+     "pct": 0.228
     },
     {
      "key": "off_grade_recv",
@@ -8757,7 +8906,7 @@
      "group": "grade",
      "v2025": 54.0,
      "v2024": null,
-     "pct": 0.217
+     "pct": 0.215
     },
     {
      "key": "off_grade_pblk",
@@ -8765,7 +8914,7 @@
      "group": "grade",
      "v2025": 54.9,
      "v2024": null,
-     "pct": 0.54
+     "pct": 0.546
     },
     {
      "key": "off_grade_rblk",
@@ -9200,7 +9349,7 @@
      "group": "grade",
      "v2025": 83.0,
      "v2024": null,
-     "pct": 0.71
+     "pct": 0.712
     },
     {
      "key": "off_grade_recv",
@@ -9208,7 +9357,7 @@
      "group": "grade",
      "v2025": 50.9,
      "v2024": null,
-     "pct": 0.15
+     "pct": 0.149
     },
     {
      "key": "off_grade_pblk",
@@ -9458,7 +9607,7 @@
      "group": "grade",
      "v2025": 72.5,
      "v2024": null,
-     "pct": 0.197
+     "pct": 0.195
     },
     {
      "key": "off_grade_recv",
@@ -9466,7 +9615,7 @@
      "group": "grade",
      "v2025": 54.4,
      "v2024": null,
-     "pct": 0.223
+     "pct": 0.222
     },
     {
      "key": "off_grade_pblk",
@@ -9474,7 +9623,7 @@
      "group": "grade",
      "v2025": 33.0,
      "v2024": null,
-     "pct": 0.175
+     "pct": 0.182
     },
     {
      "key": "off_grade_rblk",
@@ -9482,7 +9631,7 @@
      "group": "grade",
      "v2025": 68.7,
      "v2024": null,
-     "pct": 0.904
+     "pct": 0.911
     }
    ]
   },
@@ -15682,7 +15831,7 @@
      "group": "grade",
      "v2025": 75.1,
      "v2024": null,
-     "pct": 0.343
+     "pct": 0.348
     },
     {
      "key": "off_grade_recv",
@@ -15690,7 +15839,7 @@
      "group": "grade",
      "v2025": 63.7,
      "v2024": null,
-     "pct": 0.643
+     "pct": 0.646
     },
     {
      "key": "off_grade_pblk",
@@ -15698,7 +15847,7 @@
      "group": "grade",
      "v2025": 48.3,
      "v2024": null,
-     "pct": 0.427
+     "pct": 0.434
     },
     {
      "key": "off_grade_rblk",
@@ -15706,7 +15855,7 @@
      "group": "grade",
      "v2025": 70.0,
      "v2024": null,
-     "pct": 0.924
+     "pct": 0.93
     }
    ]
   },
@@ -18467,7 +18616,7 @@
      "group": "grade",
      "v2025": 80.7,
      "v2024": null,
-     "pct": 0.603
+     "pct": 0.606
     },
     {
      "key": "off_grade_recv",
@@ -18475,7 +18624,7 @@
      "group": "grade",
      "v2025": 54.7,
      "v2024": null,
-     "pct": 0.237
+     "pct": 0.235
     },
     {
      "key": "off_grade_pblk",
@@ -18738,7 +18887,7 @@
      "group": "grade",
      "v2025": 60.0,
      "v2024": null,
-     "pct": 0.227
+     "pct": 0.208
     },
     {
      "key": "off_grade_run",
@@ -18754,7 +18903,7 @@
      "group": "grade",
      "v2025": 67.7,
      "v2024": null,
-     "pct": 0.763
+     "pct": 0.765
     },
     {
      "key": "off_grade_pblk",
@@ -18762,7 +18911,7 @@
      "group": "grade",
      "v2025": 66.6,
      "v2024": null,
-     "pct": 0.732
+     "pct": 0.738
     },
     {
      "key": "off_grade_rblk",
@@ -20250,7 +20399,7 @@
      "group": "grade",
      "v2025": 70.9,
      "v2024": null,
-     "pct": 0.12
+     "pct": 0.119
     },
     {
      "key": "off_grade_recv",
@@ -20266,7 +20415,7 @@
      "group": "grade",
      "v2025": 51.5,
      "v2024": null,
-     "pct": 0.477
+     "pct": 0.483
     },
     {
      "key": "off_grade_rblk",
@@ -20601,7 +20750,7 @@
      "group": "grade",
      "v2025": 72.1,
      "v2024": null,
-     "pct": 0.17
+     "pct": 0.169
     },
     {
      "key": "off_grade_recv",
@@ -20609,7 +20758,7 @@
      "group": "grade",
      "v2025": 55.7,
      "v2024": null,
-     "pct": 0.297
+     "pct": 0.301
     },
     {
      "key": "off_grade_pblk",
@@ -20625,7 +20774,7 @@
      "group": "grade",
      "v2025": 63.3,
      "v2024": null,
-     "pct": 0.791
+     "pct": 0.798
     }
    ]
   },
@@ -21915,7 +22064,7 @@
      "group": "grade",
      "v2025": 74.5,
      "v2024": null,
-     "pct": 0.29
+     "pct": 0.295
     },
     {
      "key": "off_grade_recv",
@@ -21923,7 +22072,7 @@
      "group": "grade",
      "v2025": 56.0,
      "v2024": null,
-     "pct": 0.327
+     "pct": 0.331
     },
     {
      "key": "off_grade_pblk",
@@ -21931,7 +22080,7 @@
      "group": "grade",
      "v2025": 44.6,
      "v2024": null,
-     "pct": 0.348
+     "pct": 0.354
     },
     {
      "key": "off_grade_rblk",
@@ -22380,7 +22529,7 @@
      "group": "grade",
      "v2025": 84.3,
      "v2024": null,
-     "pct": 0.757
+     "pct": 0.758
     },
     {
      "key": "off_grade_recv",
@@ -22388,7 +22537,7 @@
      "group": "grade",
      "v2025": 44.1,
      "v2024": null,
-     "pct": 0.077
+     "pct": 0.076
     },
     {
      "key": "off_grade_pblk",
@@ -22651,7 +22800,7 @@
      "group": "grade",
      "v2025": 73.4,
      "v2024": null,
-     "pct": 0.864
+     "pct": 0.875
     },
     {
      "key": "off_grade_run",
@@ -22659,7 +22808,7 @@
      "group": "grade",
      "v2025": 85.7,
      "v2024": null,
-     "pct": 0.797
+     "pct": 0.798
     },
     {
      "key": "off_grade_recv",
@@ -22667,7 +22816,7 @@
      "group": "grade",
      "v2025": 51.5,
      "v2024": null,
-     "pct": 0.157
+     "pct": 0.156
     },
     {
      "key": "off_grade_pblk",
@@ -23099,7 +23248,7 @@
      "group": "grade",
      "v2025": 75.2,
      "v2024": null,
-     "pct": 0.353
+     "pct": 0.358
     },
     {
      "key": "off_grade_recv",
@@ -25727,7 +25876,7 @@
      "group": "grade",
      "v2025": 87.9,
      "v2024": null,
-     "pct": 0.863
+     "pct": 0.864
     },
     {
      "key": "off_grade_recv",
@@ -25735,7 +25884,7 @@
      "group": "grade",
      "v2025": 72.4,
      "v2024": null,
-     "pct": 0.85
+     "pct": 0.851
     },
     {
      "key": "off_grade_pblk",
@@ -25743,7 +25892,7 @@
      "group": "grade",
      "v2025": 57.7,
      "v2024": null,
-     "pct": 0.593
+     "pct": 0.599
     },
     {
      "key": "off_grade_rblk",
@@ -28254,7 +28403,7 @@
      "group": "grade",
      "v2025": 66.7,
      "v2024": null,
-     "pct": 0.077
+     "pct": 0.076
     },
     {
      "key": "off_grade_recv",
@@ -28262,7 +28411,7 @@
      "group": "grade",
      "v2025": 74.5,
      "v2024": null,
-     "pct": 0.883
+     "pct": 0.884
     },
     {
      "key": "off_grade_pblk",
@@ -29627,7 +29776,7 @@
      "group": "grade",
      "v2025": 68.3,
      "v2024": null,
-     "pct": 0.179
+     "pct": 0.182
     },
     {
      "key": "off_grade_run",
@@ -29635,7 +29784,7 @@
      "group": "grade",
      "v2025": 74.9,
      "v2024": null,
-     "pct": 0.323
+     "pct": 0.328
     },
     {
      "key": "off_grade_recv",
@@ -29643,7 +29792,7 @@
      "group": "grade",
      "v2025": 50.6,
      "v2024": null,
-     "pct": 0.137
+     "pct": 0.136
     },
     {
      "key": "off_grade_pblk",
@@ -29900,7 +30049,7 @@
      "group": "grade",
      "v2025": 48.6,
      "v2024": null,
-     "pct": 0.117
+     "pct": 0.116
     },
     {
      "key": "off_grade_pblk",
@@ -29908,7 +30057,7 @@
      "group": "grade",
      "v2025": 40.8,
      "v2024": null,
-     "pct": 0.281
+     "pct": 0.288
     },
     {
      "key": "off_grade_rblk",
@@ -32849,7 +32998,7 @@
      "group": "grade",
      "v2025": 80.6,
      "v2024": null,
-     "pct": 0.593
+     "pct": 0.596
     },
     {
      "key": "off_grade_recv",
@@ -32857,7 +33006,7 @@
      "group": "grade",
      "v2025": 55.0,
      "v2024": null,
-     "pct": 0.247
+     "pct": 0.245
     },
     {
      "key": "off_grade_pblk",
@@ -33106,7 +33255,7 @@
      "group": "grade",
      "v2025": 68.9,
      "v2024": null,
-     "pct": 0.192
+     "pct": 0.199
     },
     {
      "key": "off_grade_run",
@@ -33114,7 +33263,7 @@
      "group": "grade",
      "v2025": 73.6,
      "v2024": null,
-     "pct": 0.23
+     "pct": 0.235
     },
     {
      "key": "off_grade_recv",
@@ -33122,7 +33271,7 @@
      "group": "grade",
      "v2025": 60.9,
      "v2024": null,
-     "pct": 0.577
+     "pct": 0.579
     },
     {
      "key": "off_grade_pblk",
@@ -33609,7 +33758,7 @@
      "group": "grade",
      "v2025": 56.1,
      "v2024": null,
-     "pct": 0.337
+     "pct": 0.341
     },
     {
      "key": "off_grade_pblk",
@@ -33617,7 +33766,7 @@
      "group": "grade",
      "v2025": 51.5,
      "v2024": null,
-     "pct": 0.477
+     "pct": 0.483
     },
     {
      "key": "off_grade_rblk",
@@ -35617,7 +35766,7 @@
      "group": "grade",
      "v2025": 86.9,
      "v2024": null,
-     "pct": 0.84
+     "pct": 0.841
     },
     {
      "key": "off_grade_recv",
@@ -35625,7 +35774,7 @@
      "group": "grade",
      "v2025": 58.3,
      "v2024": null,
-     "pct": 0.45
+     "pct": 0.454
     },
     {
      "key": "off_grade_pblk",
@@ -35633,7 +35782,7 @@
      "group": "grade",
      "v2025": 49.7,
      "v2024": null,
-     "pct": 0.454
+     "pct": 0.46
     },
     {
      "key": "off_grade_rblk",
@@ -39588,7 +39737,7 @@
      "group": "grade",
      "v2025": 59.3,
      "v2024": null,
-     "pct": 0.507
+     "pct": 0.51
     },
     {
      "key": "off_grade_pblk",
@@ -41058,7 +41207,7 @@
      "group": "grade",
      "v2025": 89.5,
      "v2024": null,
-     "pct": 0.92
+     "pct": 0.921
     },
     {
      "key": "off_grade_recv",
@@ -41066,7 +41215,7 @@
      "group": "grade",
      "v2025": 75.3,
      "v2024": null,
-     "pct": 0.9
+     "pct": 0.901
     },
     {
      "key": "off_grade_pblk",
@@ -41074,7 +41223,7 @@
      "group": "grade",
      "v2025": 51.9,
      "v2024": null,
-     "pct": 0.487
+     "pct": 0.493
     },
     {
      "key": "off_grade_rblk",
@@ -41326,7 +41475,7 @@
      "group": "grade",
      "v2025": 75.7,
      "v2024": null,
-     "pct": 0.387
+     "pct": 0.391
     },
     {
      "key": "off_grade_recv",
@@ -41334,7 +41483,7 @@
      "group": "grade",
      "v2025": 55.2,
      "v2024": null,
-     "pct": 0.263
+     "pct": 0.262
     },
     {
      "key": "off_grade_pblk",
@@ -44517,7 +44666,7 @@
      "group": "grade",
      "v2025": 75.8,
      "v2024": null,
-     "pct": 0.407
+     "pct": 0.411
     },
     {
      "key": "off_grade_recv",
@@ -44533,7 +44682,7 @@
      "group": "grade",
      "v2025": 56.1,
      "v2024": null,
-     "pct": 0.566
+     "pct": 0.573
     },
     {
      "key": "off_grade_rblk",
@@ -45179,7 +45328,7 @@
      "group": "grade",
      "v2025": 71.1,
      "v2024": null,
-     "pct": 0.133
+     "pct": 0.132
     },
     {
      "key": "off_grade_recv",
@@ -45187,7 +45336,7 @@
      "group": "grade",
      "v2025": 61.8,
      "v2024": null,
-     "pct": 0.61
+     "pct": 0.613
     },
     {
      "key": "off_grade_pblk",
@@ -45195,7 +45344,7 @@
      "group": "grade",
      "v2025": 37.3,
      "v2024": null,
-     "pct": 0.228
+     "pct": 0.235
     },
     {
      "key": "off_grade_rblk",
@@ -48979,7 +49128,7 @@
      "group": "grade",
      "v2025": 75.8,
      "v2024": null,
-     "pct": 0.407
+     "pct": 0.411
     },
     {
      "key": "off_grade_recv",
@@ -48987,7 +49136,7 @@
      "group": "grade",
      "v2025": 53.9,
      "v2024": null,
-     "pct": 0.21
+     "pct": 0.209
     },
     {
      "key": "off_grade_pblk",
@@ -49639,7 +49788,7 @@
      "group": "grade",
      "v2025": 75.5,
      "v2024": null,
-     "pct": 0.377
+     "pct": 0.381
     },
     {
      "key": "off_grade_recv",
@@ -49647,7 +49796,7 @@
      "group": "grade",
      "v2025": 65.8,
      "v2024": null,
-     "pct": 0.7
+     "pct": 0.702
     },
     {
      "key": "off_grade_pblk",
@@ -49655,7 +49804,7 @@
      "group": "grade",
      "v2025": 57.2,
      "v2024": null,
-     "pct": 0.586
+     "pct": 0.593
     },
     {
      "key": "off_grade_rblk",
@@ -50498,6 +50647,208 @@
      "v2025": 21.1,
      "v2024": null,
      "pct": 0.866
+    }
+   ]
+  },
+  {
+   "name": "Isaiah Johnson",
+   "player_id": "185903",
+   "team": "Cincinnati",
+   "stats_team": null,
+   "conference": "Big 12",
+   "position": "WR",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 12.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 3.0,
+    "rush_yds": 25.0,
+    "rush_td": 0.0,
+    "targets": 20.0,
+    "receptions": 12.0,
+    "rec_yds": 201.0,
+    "rec_td": 3.0
+   },
+   "games_2025": 12.0,
+   "games_2024": null,
+   "usage": {
+    "rush_share_pct": 0.8,
+    "target_share_pct": 6.3
+   },
+   "game_log": [
+    {
+     "week": 3,
+     "rec_yds": 50.0,
+     "receptions": 2.0,
+     "targets": 3.0
+    },
+    {
+     "week": 5,
+     "rec_yds": 33.0,
+     "receptions": 1.0,
+     "targets": 2.0
+    },
+    {
+     "week": 6,
+     "rec_yds": 26.0,
+     "receptions": 1.0,
+     "targets": 1.0
+    },
+    {
+     "week": 7,
+     "rec_yds": 14.0,
+     "receptions": 2.0,
+     "targets": 3.0
+    },
+    {
+     "week": 8,
+     "rec_yds": 14.0,
+     "receptions": 1.0,
+     "targets": 3.0
+    },
+    {
+     "week": 9,
+     "rush_yds": 24.0,
+     "rec_yds": 16.0,
+     "receptions": 2.0,
+     "rush_att": 2.0,
+     "targets": 2.0
+    },
+    {
+     "week": 10,
+     "rec_yds": 0.0,
+     "receptions": 0.0,
+     "targets": 1.0
+    },
+    {
+     "week": 12,
+     "rec_yds": 0.0,
+     "receptions": 0.0,
+     "targets": 1.0
+    },
+    {
+     "week": 13,
+     "rush_yds": 1.0,
+     "rec_yds": 43.0,
+     "receptions": 2.0,
+     "rush_att": 1.0,
+     "targets": 3.0
+    },
+    {
+     "week": 14,
+     "rec_yds": 5.0,
+     "receptions": 1.0,
+     "targets": 1.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 453,
+    "of": 709
+   },
+   "conf_rank": {
+    "rank": 52,
+    "of": 80
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 3.0,
+     "v2024": null,
+     "pct": 0.569
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 25.0,
+     "v2024": null,
+     "pct": 0.691
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": null,
+     "pct": 0.399
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 20.0,
+     "v2024": null,
+     "pct": 0.24
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 12.0,
+     "v2024": null,
+     "pct": 0.254
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 201.0,
+     "v2024": null,
+     "pct": 0.362
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 3.0,
+     "v2024": null,
+     "pct": 0.672
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 8.33,
+     "v2024": null,
+     "pct": 0.798
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 10.05,
+     "v2024": null,
+     "pct": 0.8
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 60.0,
+     "v2024": null,
+     "pct": 0.379
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 0.8,
+     "v2024": null,
+     "pct": 0.591
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 6.3,
+     "v2024": null,
+     "pct": 0.26
     }
    ]
   },
@@ -53865,7 +54216,7 @@
      "group": "grade",
      "v2025": 77.0,
      "v2024": null,
-     "pct": 0.463
+     "pct": 0.467
     },
     {
      "key": "off_grade_recv",
@@ -53873,7 +54224,7 @@
      "group": "grade",
      "v2025": 58.8,
      "v2024": null,
-     "pct": 0.48
+     "pct": 0.483
     },
     {
      "key": "off_grade_pblk",
@@ -56976,7 +57327,7 @@
      "group": "grade",
      "v2025": 61.2,
      "v2024": null,
-     "pct": 0.59
+     "pct": 0.593
     },
     {
      "key": "off_grade_pblk",
@@ -56984,7 +57335,7 @@
      "group": "grade",
      "v2025": 35.2,
      "v2024": null,
-     "pct": 0.209
+     "pct": 0.215
     },
     {
      "key": "off_grade_rblk",
@@ -61382,7 +61733,7 @@
      "group": "grade",
      "v2025": 81.1,
      "v2024": null,
-     "pct": 0.637
+     "pct": 0.639
     },
     {
      "key": "off_grade_recv",
@@ -61390,7 +61741,7 @@
      "group": "grade",
      "v2025": 55.7,
      "v2024": null,
-     "pct": 0.297
+     "pct": 0.301
     },
     {
      "key": "off_grade_pblk",
@@ -61398,7 +61749,7 @@
      "group": "grade",
      "v2025": 46.3,
      "v2024": null,
-     "pct": 0.391
+     "pct": 0.397
     },
     {
      "key": "off_grade_rblk",
@@ -61653,7 +62004,7 @@
      "group": "grade",
      "v2025": 72.0,
      "v2024": null,
-     "pct": 0.163
+     "pct": 0.162
     },
     {
      "key": "off_grade_recv",
@@ -61661,7 +62012,7 @@
      "group": "grade",
      "v2025": 63.3,
      "v2024": null,
-     "pct": 0.633
+     "pct": 0.636
     },
     {
      "key": "off_grade_pblk",
@@ -61669,7 +62020,7 @@
      "group": "grade",
      "v2025": 61.1,
      "v2024": null,
-     "pct": 0.632
+     "pct": 0.639
     },
     {
      "key": "off_grade_rblk",
@@ -64488,7 +64839,7 @@
      "group": "grade",
      "v2025": 75.3,
      "v2024": null,
-     "pct": 0.9
+     "pct": 0.901
     },
     {
      "key": "off_grade_pblk",
@@ -64496,7 +64847,7 @@
      "group": "grade",
      "v2025": 54.0,
      "v2024": null,
-     "pct": 0.52
+     "pct": 0.526
     },
     {
      "key": "off_grade_rblk",
@@ -64505,205 +64856,6 @@
      "v2025": 60.6,
      "v2024": null,
      "pct": 0.725
-    }
-   ]
-  },
-  {
-   "name": "Xavier Terrell",
-   "player_id": "169927",
-   "team": "Duke",
-   "stats_team": "Florida Atlantic",
-   "conference": "American Athletic",
-   "position": "HB",
-   "height": "6' 4\"",
-   "weight": "310",
-   "season_2025": {
-    "games": 5.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 54.0,
-    "rush_yds": 166.0,
-    "rush_td": 1.0,
-    "targets": 17.0,
-    "receptions": 13.0,
-    "rec_yds": 89.0,
-    "rec_td": 1.0
-   },
-   "games_2025": 5.0,
-   "games_2024": 4.0,
-   "usage": {
-    "rush_share_pct": 16.2,
-    "target_share_pct": 3.1
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "rush_yds": 28.0,
-     "rush_att": 9.0
-    },
-    {
-     "week": 2,
-     "rush_yds": 30.0,
-     "rec_yds": 32.0,
-     "receptions": 3.0,
-     "rush_att": 8.0,
-     "targets": 4.0
-    },
-    {
-     "week": 3,
-     "rush_yds": 17.0,
-     "rec_yds": 52.0,
-     "receptions": 7.0,
-     "rush_att": 6.0,
-     "targets": 8.0
-    },
-    {
-     "week": 5,
-     "rush_yds": 22.0,
-     "rec_yds": 6.0,
-     "receptions": 2.0,
-     "rush_att": 11.0,
-     "targets": 4.0
-    },
-    {
-     "week": 6,
-     "rush_yds": 69.0,
-     "rec_yds": -1.0,
-     "receptions": 1.0,
-     "rush_att": 20.0,
-     "targets": 1.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 360,
-    "of": 496
-   },
-   "conf_rank": {
-    "rank": 45,
-    "of": 54
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 54.0,
-     "v2024": 14.0,
-     "pct": 0.411
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 166.0,
-     "v2024": 261.0,
-     "pct": 0.274
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 3.0,
-     "pct": 0.273
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 17.0,
-     "v2024": 3.0,
-     "pct": 0.67
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 13.0,
-     "v2024": 1.0,
-     "pct": 0.651
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 89.0,
-     "v2024": -5.0,
-     "pct": 0.605
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 0.0,
-     "pct": 0.774
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 3.07,
-     "v2024": 18.64,
-     "pct": 0.054
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 5.24,
-     "v2024": -1.67,
-     "pct": 0.47
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 76.0,
-     "v2024": 33.0,
-     "pct": 0.38
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 16.2,
-     "v2024": null,
-     "pct": 0.514
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 3.1,
-     "v2024": null,
-     "pct": 0.456
-    },
-    {
-     "key": "off_grade_off",
-     "label": "PFF Overall",
-     "group": "grade",
-     "v2025": 69.9,
-     "v2024": null,
-     "pct": 0.222
-    },
-    {
-     "key": "off_grade_pblk",
-     "label": "PFF Pass Blk",
-     "group": "grade",
-     "v2025": 66.7,
-     "v2024": null,
-     "pct": 0.738
-    },
-    {
-     "key": "off_grade_rblk",
-     "label": "PFF Run Blk",
-     "group": "grade",
-     "v2025": 70.6,
-     "v2024": null,
-     "pct": 0.944
     }
    ]
   },
@@ -66647,7 +66799,7 @@
      "group": "grade",
      "v2025": 75.7,
      "v2024": null,
-     "pct": 0.387
+     "pct": 0.391
     },
     {
      "key": "off_grade_recv",
@@ -66655,7 +66807,7 @@
      "group": "grade",
      "v2025": 70.1,
      "v2024": null,
-     "pct": 0.827
+     "pct": 0.828
     },
     {
      "key": "off_grade_pblk",
@@ -66663,7 +66815,7 @@
      "group": "grade",
      "v2025": 62.6,
      "v2024": null,
-     "pct": 0.652
+     "pct": 0.659
     },
     {
      "key": "off_grade_rblk",
@@ -67469,6 +67621,218 @@
      "v2025": 38.6,
      "v2024": null,
      "pct": 0.057
+    }
+   ]
+  },
+  {
+   "name": "Anthony Smith",
+   "player_id": "122885",
+   "team": "East Carolina",
+   "stats_team": null,
+   "conference": "American Athletic",
+   "position": "WR",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 12.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 1.0,
+    "rush_yds": 45.0,
+    "rush_td": 1.0,
+    "targets": 94.0,
+    "receptions": 60.0,
+    "rec_yds": 897.0,
+    "rec_td": 5.0
+   },
+   "games_2025": 12.0,
+   "games_2024": 12.0,
+   "usage": {
+    "rush_share_pct": 0.2,
+    "target_share_pct": 23.4
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "rec_yds": 66.0,
+     "receptions": 6.0,
+     "targets": 8.0
+    },
+    {
+     "week": 2,
+     "rec_yds": 39.0,
+     "receptions": 6.0,
+     "targets": 8.0
+    },
+    {
+     "week": 3,
+     "rec_yds": 136.0,
+     "receptions": 11.0,
+     "targets": 15.0
+    },
+    {
+     "week": 4,
+     "rec_yds": 24.0,
+     "receptions": 2.0,
+     "targets": 9.0
+    },
+    {
+     "week": 5,
+     "rec_yds": 87.0,
+     "receptions": 3.0,
+     "targets": 4.0
+    },
+    {
+     "week": 7,
+     "rec_yds": 54.0,
+     "receptions": 2.0,
+     "targets": 7.0
+    },
+    {
+     "week": 8,
+     "rec_yds": 150.0,
+     "receptions": 4.0,
+     "targets": 6.0
+    },
+    {
+     "week": 10,
+     "rush_yds": 45.0,
+     "rec_yds": 58.0,
+     "receptions": 2.0,
+     "rush_att": 1.0,
+     "targets": 4.0
+    },
+    {
+     "week": 11,
+     "rec_yds": 69.0,
+     "receptions": 8.0,
+     "targets": 10.0
+    },
+    {
+     "week": 12,
+     "rec_yds": 62.0,
+     "receptions": 7.0,
+     "targets": 8.0
+    },
+    {
+     "week": 13,
+     "rec_yds": 143.0,
+     "receptions": 8.0,
+     "targets": 10.0
+    },
+    {
+     "week": 14,
+     "rec_yds": 9.0,
+     "receptions": 1.0,
+     "targets": 5.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 30,
+    "of": 709
+   },
+   "conf_rank": {
+    "rank": 4,
+    "of": 69
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": null,
+     "pct": 0.16
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 45.0,
+     "v2024": null,
+     "pct": 0.809
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": null,
+     "pct": 0.876
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 94.0,
+     "v2024": 76.0,
+     "pct": 0.957
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 60.0,
+     "v2024": 39.0,
+     "pct": 0.934
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 897.0,
+     "v2024": 773.0,
+     "pct": 0.958
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 5.0,
+     "v2024": 6.0,
+     "pct": 0.839
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 45.0,
+     "v2024": null,
+     "pct": 0.998
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 9.54,
+     "v2024": 10.17,
+     "pct": 0.743
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 64.0,
+     "v2024": 51.0,
+     "pct": 0.528
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 0.2,
+     "v2024": null,
+     "pct": 0.086
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 23.4,
+     "v2024": null,
+     "pct": 0.903
     }
    ]
   },
@@ -70322,6 +70686,160 @@
    ]
   },
   {
+   "name": "Terry Lockett Jr.",
+   "player_id": "129625",
+   "team": "Eastern Michigan",
+   "stats_team": null,
+   "conference": "Mid-American",
+   "position": "WR",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 5.0,
+    "pass_att": 1.0,
+    "pass_yds": 0.0,
+    "pass_td": 0.0,
+    "rush_att": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "targets": 37.0,
+    "receptions": 19.0,
+    "rec_yds": 263.0,
+    "rec_td": 1.0
+   },
+   "games_2025": 5.0,
+   "games_2024": 12.0,
+   "usage": {
+    "rush_share_pct": null,
+    "target_share_pct": 10.3
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "rec_yds": 62.0,
+     "receptions": 5.0,
+     "targets": 7.0
+    },
+    {
+     "week": 2,
+     "rec_yds": 78.0,
+     "receptions": 8.0,
+     "targets": 12.0
+    },
+    {
+     "week": 3,
+     "pass_yds": 0.0,
+     "rec_yds": 90.0,
+     "receptions": 3.0,
+     "pass_att": 1.0,
+     "targets": 8.0
+    },
+    {
+     "week": 4,
+     "rec_yds": 29.0,
+     "receptions": 2.0,
+     "targets": 4.0
+    },
+    {
+     "week": 5,
+     "rec_yds": 4.0,
+     "receptions": 1.0,
+     "targets": 6.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 377,
+    "of": 709
+   },
+   "conf_rank": {
+    "rank": 28,
+    "of": 61
+   },
+   "metrics": [
+    {
+     "key": "pass_att",
+     "label": "Pass Att",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 1.0,
+     "pct": 0.359
+    },
+    {
+     "key": "pass_yds",
+     "label": "Pass Yds",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": 22.0,
+     "pct": 0.212
+    },
+    {
+     "key": "pass_td",
+     "label": "Pass TD",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": 1.0,
+     "pct": 0.353
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 37.0,
+     "v2024": 79.0,
+     "pct": 0.494
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 19.0,
+     "v2024": 46.0,
+     "pct": 0.401
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 263.0,
+     "v2024": 669.0,
+     "pct": 0.469
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 5.0,
+     "pct": 0.357
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 7.11,
+     "v2024": 8.47,
+     "pct": 0.365
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 51.0,
+     "v2024": 58.0,
+     "pct": 0.184
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 10.3,
+     "v2024": null,
+     "pct": 0.469
+    }
+   ]
+  },
+  {
    "name": "Duke Clark",
    "player_id": "200128",
    "team": "Florida",
@@ -70701,7 +71219,7 @@
      "group": "grade",
      "v2025": 81.8,
      "v2024": null,
-     "pct": 0.663
+     "pct": 0.666
     },
     {
      "key": "off_grade_recv",
@@ -70709,7 +71227,7 @@
      "group": "grade",
      "v2025": 50.1,
      "v2024": null,
-     "pct": 0.13
+     "pct": 0.129
     },
     {
      "key": "off_grade_pblk",
@@ -70717,7 +71235,7 @@
      "group": "grade",
      "v2025": 52.3,
      "v2024": null,
-     "pct": 0.493
+     "pct": 0.5
     },
     {
      "key": "off_grade_rblk",
@@ -71133,7 +71651,7 @@
      "group": "grade",
      "v2025": 89.5,
      "v2024": null,
-     "pct": 0.92
+     "pct": 0.921
     },
     {
      "key": "off_grade_recv",
@@ -71141,7 +71659,7 @@
      "group": "grade",
      "v2025": 69.9,
      "v2024": null,
-     "pct": 0.813
+     "pct": 0.815
     },
     {
      "key": "off_grade_pblk",
@@ -71149,7 +71667,7 @@
      "group": "grade",
      "v2025": 65.8,
      "v2024": null,
-     "pct": 0.712
+     "pct": 0.719
     },
     {
      "key": "off_grade_rblk",
@@ -71157,7 +71675,7 @@
      "group": "grade",
      "v2025": 65.6,
      "v2024": null,
-     "pct": 0.864
+     "pct": 0.871
     }
    ]
   },
@@ -71582,7 +72100,7 @@
      "group": "grade",
      "v2025": 77.4,
      "v2024": null,
-     "pct": 0.477
+     "pct": 0.48
     },
     {
      "key": "off_grade_recv",
@@ -71590,7 +72108,7 @@
      "group": "grade",
      "v2025": 58.8,
      "v2024": null,
-     "pct": 0.48
+     "pct": 0.483
     },
     {
      "key": "off_grade_pblk",
@@ -73723,7 +74241,7 @@
      "group": "grade",
      "v2025": 74.6,
      "v2024": null,
-     "pct": 0.955
+     "pct": 0.958
     },
     {
      "key": "off_grade_run",
@@ -73731,7 +74249,7 @@
      "group": "grade",
      "v2025": 76.6,
      "v2024": null,
-     "pct": 0.443
+     "pct": 0.447
     },
     {
      "key": "off_grade_recv",
@@ -73739,7 +74257,7 @@
      "group": "grade",
      "v2025": 64.4,
      "v2024": null,
-     "pct": 0.66
+     "pct": 0.662
     },
     {
      "key": "off_grade_pblk",
@@ -73755,7 +74273,182 @@
      "group": "grade",
      "v2025": 64.2,
      "v2024": null,
-     "pct": 0.818
+     "pct": 0.825
+    }
+   ]
+  },
+  {
+   "name": "Xavier Terrell",
+   "player_id": "169927",
+   "team": "Florida Atlantic",
+   "stats_team": null,
+   "conference": "American Athletic",
+   "position": "HB",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 5.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 54.0,
+    "rush_yds": 166.0,
+    "rush_td": 1.0,
+    "targets": 17.0,
+    "receptions": 13.0,
+    "rec_yds": 89.0,
+    "rec_td": 1.0
+   },
+   "games_2025": 5.0,
+   "games_2024": 4.0,
+   "usage": {
+    "rush_share_pct": 16.2,
+    "target_share_pct": 3.1
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "rush_yds": 28.0,
+     "rush_att": 9.0
+    },
+    {
+     "week": 2,
+     "rush_yds": 30.0,
+     "rec_yds": 32.0,
+     "receptions": 3.0,
+     "rush_att": 8.0,
+     "targets": 4.0
+    },
+    {
+     "week": 3,
+     "rush_yds": 17.0,
+     "rec_yds": 52.0,
+     "receptions": 7.0,
+     "rush_att": 6.0,
+     "targets": 8.0
+    },
+    {
+     "week": 5,
+     "rush_yds": 22.0,
+     "rec_yds": 6.0,
+     "receptions": 2.0,
+     "rush_att": 11.0,
+     "targets": 4.0
+    },
+    {
+     "week": 6,
+     "rush_yds": 69.0,
+     "rec_yds": -1.0,
+     "receptions": 1.0,
+     "rush_att": 20.0,
+     "targets": 1.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 360,
+    "of": 496
+   },
+   "conf_rank": {
+    "rank": 45,
+    "of": 54
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 54.0,
+     "v2024": 14.0,
+     "pct": 0.411
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 166.0,
+     "v2024": 261.0,
+     "pct": 0.274
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 3.0,
+     "pct": 0.273
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 17.0,
+     "v2024": 3.0,
+     "pct": 0.67
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 13.0,
+     "v2024": 1.0,
+     "pct": 0.651
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 89.0,
+     "v2024": -5.0,
+     "pct": 0.605
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 0.0,
+     "pct": 0.774
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 3.07,
+     "v2024": 18.64,
+     "pct": 0.054
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 5.24,
+     "v2024": -1.67,
+     "pct": 0.47
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 76.0,
+     "v2024": 33.0,
+     "pct": 0.38
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 16.2,
+     "v2024": null,
+     "pct": 0.514
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 3.1,
+     "v2024": null,
+     "pct": 0.456
     }
    ]
   },
@@ -75908,7 +76601,7 @@
      "group": "grade",
      "v2025": 59.5,
      "v2024": null,
-     "pct": 0.523
+     "pct": 0.526
     },
     {
      "key": "off_grade_pblk",
@@ -75916,7 +76609,7 @@
      "group": "grade",
      "v2025": 30.0,
      "v2024": null,
-     "pct": 0.156
+     "pct": 0.162
     },
     {
      "key": "off_grade_rblk",
@@ -78435,7 +79128,7 @@
      "group": "grade",
      "v2025": 74.3,
      "v2024": null,
-     "pct": 0.27
+     "pct": 0.275
     },
     {
      "key": "off_grade_recv",
@@ -78459,7 +79152,7 @@
      "group": "grade",
      "v2025": 64.6,
      "v2024": null,
-     "pct": 0.858
+     "pct": 0.864
     }
    ]
   },
@@ -79127,7 +79820,7 @@
      "group": "grade",
      "v2025": 81.5,
      "v2024": null,
-     "pct": 0.653
+     "pct": 0.656
     },
     {
      "key": "off_grade_recv",
@@ -79135,7 +79828,7 @@
      "group": "grade",
      "v2025": 58.2,
      "v2024": null,
-     "pct": 0.443
+     "pct": 0.447
     },
     {
      "key": "off_grade_pblk",
@@ -81212,7 +81905,7 @@
      "group": "grade",
      "v2025": 72.2,
      "v2024": null,
-     "pct": 0.177
+     "pct": 0.175
     },
     {
      "key": "off_grade_recv",
@@ -81220,7 +81913,7 @@
      "group": "grade",
      "v2025": 54.6,
      "v2024": null,
-     "pct": 0.23
+     "pct": 0.228
     },
     {
      "key": "off_grade_pblk",
@@ -81228,7 +81921,7 @@
      "group": "grade",
      "v2025": 53.1,
      "v2024": null,
-     "pct": 0.5
+     "pct": 0.507
     },
     {
      "key": "off_grade_rblk",
@@ -81882,7 +82575,7 @@
      "group": "grade",
      "v2025": 86.3,
      "v2024": null,
-     "pct": 0.823
+     "pct": 0.825
     },
     {
      "key": "off_grade_recv",
@@ -81890,7 +82583,7 @@
      "group": "grade",
      "v2025": 78.1,
      "v2024": null,
-     "pct": 0.943
+     "pct": 0.944
     },
     {
      "key": "off_grade_pblk",
@@ -84240,7 +84933,7 @@
      "group": "grade",
      "v2025": 78.8,
      "v2024": null,
-     "pct": 0.523
+     "pct": 0.526
     },
     {
      "key": "off_grade_recv",
@@ -84248,7 +84941,7 @@
      "group": "grade",
      "v2025": 66.8,
      "v2024": null,
-     "pct": 0.737
+     "pct": 0.738
     },
     {
      "key": "off_grade_pblk",
@@ -84499,7 +85192,7 @@
      "group": "grade",
      "v2025": 74.5,
      "v2024": null,
-     "pct": 0.29
+     "pct": 0.295
     },
     {
      "key": "off_grade_recv",
@@ -84507,7 +85200,7 @@
      "group": "grade",
      "v2025": 56.7,
      "v2024": null,
-     "pct": 0.353
+     "pct": 0.358
     },
     {
      "key": "off_grade_pblk",
@@ -84515,7 +85208,7 @@
      "group": "grade",
      "v2025": 64.6,
      "v2024": null,
-     "pct": 0.689
+     "pct": 0.695
     },
     {
      "key": "off_grade_rblk",
@@ -85141,7 +85834,7 @@
      "group": "grade",
      "v2025": 60.8,
      "v2024": null,
-     "pct": 0.567
+     "pct": 0.57
     },
     {
      "key": "off_grade_pblk",
@@ -85149,7 +85842,7 @@
      "group": "grade",
      "v2025": 63.2,
      "v2024": null,
-     "pct": 0.662
+     "pct": 0.669
     },
     {
      "key": "off_grade_rblk",
@@ -92375,7 +93068,7 @@
      "group": "grade",
      "v2025": 83.5,
      "v2024": null,
-     "pct": 0.723
+     "pct": 0.725
     },
     {
      "key": "off_grade_recv",
@@ -92383,7 +93076,7 @@
      "group": "grade",
      "v2025": 57.8,
      "v2024": null,
-     "pct": 0.423
+     "pct": 0.427
     },
     {
      "key": "off_grade_pblk",
@@ -92391,7 +93084,7 @@
      "group": "grade",
      "v2025": 53.3,
      "v2024": null,
-     "pct": 0.507
+     "pct": 0.513
     },
     {
      "key": "off_grade_rblk",
@@ -92637,7 +93330,7 @@
      "group": "grade",
      "v2025": 86.2,
      "v2024": null,
-     "pct": 0.817
+     "pct": 0.818
     },
     {
      "key": "off_grade_recv",
@@ -92645,7 +93338,7 @@
      "group": "grade",
      "v2025": 64.0,
      "v2024": null,
-     "pct": 0.65
+     "pct": 0.652
     },
     {
      "key": "off_grade_pblk",
@@ -92653,7 +93346,7 @@
      "group": "grade",
      "v2025": 38.8,
      "v2024": null,
-     "pct": 0.248
+     "pct": 0.255
     },
     {
      "key": "off_grade_rblk",
@@ -93777,6 +94470,233 @@
    ]
   },
   {
+   "name": "Jordan Allen",
+   "player_id": "199699",
+   "team": "Georgia Tech",
+   "stats_team": null,
+   "conference": "ACC",
+   "position": "WR",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 9.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 6.0,
+    "rush_yds": 85.0,
+    "rush_td": 1.0,
+    "targets": 22.0,
+    "receptions": 20.0,
+    "rec_yds": 316.0,
+    "rec_td": 0.0
+   },
+   "games_2025": 9.0,
+   "games_2024": null,
+   "usage": {
+    "rush_share_pct": 1.4,
+    "target_share_pct": 6.7
+   },
+   "game_log": [
+    {
+     "week": 2,
+     "rec_yds": 78.0,
+     "receptions": 1.0,
+     "targets": 1.0
+    },
+    {
+     "week": 4,
+     "rush_yds": 4.0,
+     "rush_att": 1.0
+    },
+    {
+     "week": 8,
+     "rec_yds": 20.0,
+     "receptions": 2.0,
+     "targets": 2.0
+    },
+    {
+     "week": 9,
+     "rush_yds": 8.0,
+     "rec_yds": 67.0,
+     "receptions": 6.0,
+     "rush_att": 1.0,
+     "targets": 6.0
+    },
+    {
+     "week": 10,
+     "rec_yds": 114.0,
+     "receptions": 6.0,
+     "targets": 8.0
+    },
+    {
+     "week": 12,
+     "rush_yds": 65.0,
+     "rec_yds": 18.0,
+     "receptions": 2.0,
+     "rush_att": 3.0,
+     "targets": 2.0
+    },
+    {
+     "week": 13,
+     "rec_yds": 10.0,
+     "receptions": 2.0,
+     "targets": 2.0
+    },
+    {
+     "week": 14,
+     "rush_yds": 8.0,
+     "rec_yds": 9.0,
+     "receptions": 1.0,
+     "rush_att": 1.0,
+     "targets": 1.0
+    }
+   ],
+   "this_week": {
+    "matchup": "Colorado Buffaloes @ Georgia Tech Yellow Jackets",
+    "commence_time": "2026-09-04T00:00:00Z",
+    "markets": {
+     "player_reception_yds": {
+      "stat": "rec_yds",
+      "book_line": 44.5,
+      "projection": 25.8,
+      "edge_pct": -42.0,
+      "over_price": -114.0,
+      "under_price": -114.0,
+      "n_books": "1",
+      "components": {
+       "volume": 2.2,
+       "efficiency": 11.764,
+       "opp_adj": 0.998
+      },
+      "breakdown": {
+       "volume_source": "team-share of georgiatech's 2024 targets pool, applied to georgiatech's 2025 pool",
+       "pace_script_adj": 1.042,
+       "depth_rank_adj": 1.15,
+       "depth_rank": 1,
+       "team_implied": 28.5,
+       "league_avg_implied": 26.9,
+       "team_spread": -6.5,
+       "opponent": "colorado",
+       "pff_def_grade_adj": 1.0,
+       "pff_def_grade_adj_active": false,
+       "success_rate_adj": 0.998,
+       "matchup_grade_adj": 1.0,
+       "tarp_adj": null,
+       "td_rate": 0.0,
+       "expected_td": 0.0
+      }
+     }
+    }
+   },
+   "nat_rank": {
+    "rank": 335,
+    "of": 709
+   },
+   "conf_rank": {
+    "rank": 45,
+    "of": 94
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 6.0,
+     "v2024": null,
+     "pct": 0.781
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 85.0,
+     "v2024": null,
+     "pct": 0.927
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": null,
+     "pct": 0.876
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 22.0,
+     "v2024": null,
+     "pct": 0.274
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 20.0,
+     "v2024": null,
+     "pct": 0.425
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 316.0,
+     "v2024": null,
+     "pct": 0.528
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": null,
+     "pct": 0.123
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 14.17,
+     "v2024": null,
+     "pct": 0.927
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 14.36,
+     "v2024": null,
+     "pct": 0.984
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 91.0,
+     "v2024": null,
+     "pct": 0.994
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 1.4,
+     "v2024": null,
+     "pct": 0.771
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 6.7,
+     "v2024": null,
+     "pct": 0.291
+    }
+   ]
+  },
+  {
    "name": "Malik Rutherford",
    "player_id": "143929",
    "team": "Georgia Tech",
@@ -94361,7 +95281,7 @@
      "group": "grade",
      "v2025": 75.3,
      "v2024": null,
-     "pct": 0.367
+     "pct": 0.371
     },
     {
      "key": "off_grade_recv",
@@ -94369,7 +95289,7 @@
      "group": "grade",
      "v2025": 68.7,
      "v2024": null,
-     "pct": 0.77
+     "pct": 0.772
     },
     {
      "key": "off_grade_pblk",
@@ -94377,7 +95297,7 @@
      "group": "grade",
      "v2025": 49.6,
      "v2024": null,
-     "pct": 0.444
+     "pct": 0.45
     },
     {
      "key": "off_grade_rblk",
@@ -98321,265 +99241,6 @@
    ]
   },
   {
-   "name": "Jordan Allen",
-   "player_id": "199699",
-   "team": "Houston",
-   "stats_team": "Georgia Tech",
-   "conference": "ACC",
-   "position": "WR",
-   "height": "5' 11\"",
-   "weight": "200",
-   "season_2025": {
-    "games": 9.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 6.0,
-    "rush_yds": 85.0,
-    "rush_td": 1.0,
-    "targets": 22.0,
-    "receptions": 20.0,
-    "rec_yds": 316.0,
-    "rec_td": 0.0
-   },
-   "games_2025": 9.0,
-   "games_2024": null,
-   "usage": {
-    "rush_share_pct": 1.4,
-    "target_share_pct": 6.7
-   },
-   "game_log": [
-    {
-     "week": 2,
-     "rec_yds": 78.0,
-     "receptions": 1.0,
-     "targets": 1.0
-    },
-    {
-     "week": 4,
-     "rush_yds": 4.0,
-     "rush_att": 1.0
-    },
-    {
-     "week": 8,
-     "rec_yds": 20.0,
-     "receptions": 2.0,
-     "targets": 2.0
-    },
-    {
-     "week": 9,
-     "rush_yds": 8.0,
-     "rec_yds": 67.0,
-     "receptions": 6.0,
-     "rush_att": 1.0,
-     "targets": 6.0
-    },
-    {
-     "week": 10,
-     "rec_yds": 114.0,
-     "receptions": 6.0,
-     "targets": 8.0
-    },
-    {
-     "week": 12,
-     "rush_yds": 65.0,
-     "rec_yds": 18.0,
-     "receptions": 2.0,
-     "rush_att": 3.0,
-     "targets": 2.0
-    },
-    {
-     "week": 13,
-     "rec_yds": 10.0,
-     "receptions": 2.0,
-     "targets": 2.0
-    },
-    {
-     "week": 14,
-     "rush_yds": 8.0,
-     "rec_yds": 9.0,
-     "receptions": 1.0,
-     "rush_att": 1.0,
-     "targets": 1.0
-    }
-   ],
-   "this_week": {
-    "matchup": "Colorado Buffaloes @ Georgia Tech Yellow Jackets",
-    "commence_time": "2026-09-04T00:00:00Z",
-    "markets": {
-     "player_reception_yds": {
-      "stat": "rec_yds",
-      "book_line": 44.5,
-      "projection": 27.0,
-      "edge_pct": -39.3,
-      "over_price": -114.0,
-      "under_price": -114.0,
-      "n_books": "1",
-      "components": {
-       "volume": 2.53,
-       "efficiency": 11.764,
-       "opp_adj": 0.906
-      },
-      "breakdown": {
-       "volume_source": "team-share of georgiatech's 2024 targets pool, applied to houston's 2025 pool",
-       "pace_script_adj": 1.236,
-       "depth_rank_adj": 1.15,
-       "depth_rank": 1,
-       "team_implied": 35.0,
-       "league_avg_implied": 26.9,
-       "team_spread": -20.5,
-       "opponent": "oregonstate",
-       "pff_def_grade_adj": 1.0,
-       "pff_def_grade_adj_active": false,
-       "success_rate_adj": 0.906,
-       "matchup_grade_adj": 1.0,
-       "tarp_adj": null,
-       "td_rate": 0.0,
-       "expected_td": 0.0
-      }
-     }
-    }
-   },
-   "nat_rank": {
-    "rank": 335,
-    "of": 709
-   },
-   "conf_rank": {
-    "rank": 45,
-    "of": 94
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 6.0,
-     "v2024": null,
-     "pct": 0.781
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 85.0,
-     "v2024": null,
-     "pct": 0.927
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": null,
-     "pct": 0.876
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 22.0,
-     "v2024": null,
-     "pct": 0.274
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 20.0,
-     "v2024": null,
-     "pct": 0.425
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 316.0,
-     "v2024": null,
-     "pct": 0.528
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": null,
-     "pct": 0.123
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 14.17,
-     "v2024": null,
-     "pct": 0.927
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 14.36,
-     "v2024": null,
-     "pct": 0.984
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 91.0,
-     "v2024": null,
-     "pct": 0.994
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 1.4,
-     "v2024": null,
-     "pct": 0.771
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 6.7,
-     "v2024": null,
-     "pct": 0.291
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 76.3,
-     "v2024": null,
-     "pct": 0.875
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 80.4,
-     "v2024": null,
-     "pct": 0.875
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 63.8,
-     "v2024": null,
-     "pct": 0.375
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 72.3,
-     "v2024": null,
-     "pct": 0.625
-    }
-   ]
-  },
-  {
    "name": "Koby Young",
    "player_id": "190823",
    "team": "Houston",
@@ -99641,7 +100302,7 @@
      "group": "grade",
      "v2025": 69.6,
      "v2024": null,
-     "pct": 0.209
+     "pct": 0.215
     },
     {
      "key": "off_grade_run",
@@ -99649,7 +100310,7 @@
      "group": "grade",
      "v2025": 71.5,
      "v2024": null,
-     "pct": 0.15
+     "pct": 0.149
     },
     {
      "key": "off_grade_recv",
@@ -99657,7 +100318,7 @@
      "group": "grade",
      "v2025": 51.9,
      "v2024": null,
-     "pct": 0.167
+     "pct": 0.166
     },
     {
      "key": "off_grade_pblk",
@@ -99665,7 +100326,7 @@
      "group": "grade",
      "v2025": 49.6,
      "v2024": null,
-     "pct": 0.444
+     "pct": 0.45
     },
     {
      "key": "off_grade_rblk",
@@ -99911,7 +100572,7 @@
      "group": "grade",
      "v2025": 82.1,
      "v2024": null,
-     "pct": 0.677
+     "pct": 0.679
     },
     {
      "key": "off_grade_recv",
@@ -99919,7 +100580,7 @@
      "group": "grade",
      "v2025": 65.8,
      "v2024": null,
-     "pct": 0.7
+     "pct": 0.702
     },
     {
      "key": "off_grade_pblk",
@@ -99927,7 +100588,7 @@
      "group": "grade",
      "v2025": 34.2,
      "v2024": null,
-     "pct": 0.182
+     "pct": 0.189
     },
     {
      "key": "off_grade_rblk",
@@ -103268,7 +103929,7 @@
      "group": "grade",
      "v2025": 80.1,
      "v2024": null,
-     "pct": 0.563
+     "pct": 0.566
     },
     {
      "key": "off_grade_recv",
@@ -103276,7 +103937,7 @@
      "group": "grade",
      "v2025": 55.0,
      "v2024": null,
-     "pct": 0.247
+     "pct": 0.245
     },
     {
      "key": "off_grade_pblk",
@@ -103284,7 +103945,7 @@
      "group": "grade",
      "v2025": 36.5,
      "v2024": null,
-     "pct": 0.215
+     "pct": 0.222
     },
     {
      "key": "off_grade_rblk",
@@ -105929,7 +106590,7 @@
      "group": "grade",
      "v2025": 82.7,
      "v2024": null,
-     "pct": 0.703
+     "pct": 0.705
     },
     {
      "key": "off_grade_recv",
@@ -105937,7 +106598,7 @@
      "group": "grade",
      "v2025": 67.1,
      "v2024": null,
-     "pct": 0.75
+     "pct": 0.752
     },
     {
      "key": "off_grade_pblk",
@@ -105945,7 +106606,7 @@
      "group": "grade",
      "v2025": 40.8,
      "v2024": null,
-     "pct": 0.281
+     "pct": 0.288
     },
     {
      "key": "off_grade_rblk",
@@ -114136,192 +114797,6 @@
    ]
   },
   {
-   "name": "Terry Lockett Jr.",
-   "player_id": "129625",
-   "team": "James Madison",
-   "stats_team": "Eastern Michigan",
-   "conference": "Mid-American",
-   "position": "WR",
-   "height": "6' 2\"",
-   "weight": "281",
-   "season_2025": {
-    "games": 5.0,
-    "pass_att": 1.0,
-    "pass_yds": 0.0,
-    "pass_td": 0.0,
-    "rush_att": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "targets": 37.0,
-    "receptions": 19.0,
-    "rec_yds": 263.0,
-    "rec_td": 1.0
-   },
-   "games_2025": 5.0,
-   "games_2024": 12.0,
-   "usage": {
-    "rush_share_pct": null,
-    "target_share_pct": 10.3
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "rec_yds": 62.0,
-     "receptions": 5.0,
-     "targets": 7.0
-    },
-    {
-     "week": 2,
-     "rec_yds": 78.0,
-     "receptions": 8.0,
-     "targets": 12.0
-    },
-    {
-     "week": 3,
-     "pass_yds": 0.0,
-     "rec_yds": 90.0,
-     "receptions": 3.0,
-     "pass_att": 1.0,
-     "targets": 8.0
-    },
-    {
-     "week": 4,
-     "rec_yds": 29.0,
-     "receptions": 2.0,
-     "targets": 4.0
-    },
-    {
-     "week": 5,
-     "rec_yds": 4.0,
-     "receptions": 1.0,
-     "targets": 6.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 377,
-    "of": 709
-   },
-   "conf_rank": {
-    "rank": 28,
-    "of": 61
-   },
-   "metrics": [
-    {
-     "key": "pass_att",
-     "label": "Pass Att",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 1.0,
-     "pct": 0.359
-    },
-    {
-     "key": "pass_yds",
-     "label": "Pass Yds",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": 22.0,
-     "pct": 0.212
-    },
-    {
-     "key": "pass_td",
-     "label": "Pass TD",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": 1.0,
-     "pct": 0.353
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 37.0,
-     "v2024": 79.0,
-     "pct": 0.494
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 19.0,
-     "v2024": 46.0,
-     "pct": 0.401
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 263.0,
-     "v2024": 669.0,
-     "pct": 0.469
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 5.0,
-     "pct": 0.357
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 7.11,
-     "v2024": 8.47,
-     "pct": 0.365
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 51.0,
-     "v2024": 58.0,
-     "pct": 0.184
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 10.3,
-     "v2024": null,
-     "pct": 0.469
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 71.3,
-     "v2024": null,
-     "pct": 0.125
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 72.9,
-     "v2024": null,
-     "pct": 0.625
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 60.3,
-     "v2024": null,
-     "pct": 0.125
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 64.7,
-     "v2024": null,
-     "pct": 0.375
-    }
-   ]
-  },
-  {
    "name": "Za'Ron Collins",
    "player_id": "181612",
    "team": "James Madison",
@@ -115047,7 +115522,7 @@
      "group": "grade",
      "v2025": 75.0,
      "v2024": null,
-     "pct": 0.333
+     "pct": 0.338
     },
     {
      "key": "off_grade_recv",
@@ -115071,7 +115546,7 @@
      "group": "grade",
      "v2025": 62.4,
      "v2024": null,
-     "pct": 0.758
+     "pct": 0.765
     }
    ]
   },
@@ -115602,7 +116077,7 @@
      "group": "grade",
      "v2025": 73.9,
      "v2024": null,
-     "pct": 0.247
+     "pct": 0.252
     },
     {
      "key": "off_grade_recv",
@@ -115618,7 +116093,7 @@
      "group": "grade",
      "v2025": 29.9,
      "v2024": null,
-     "pct": 0.149
+     "pct": 0.156
     },
     {
      "key": "off_grade_rblk",
@@ -119061,7 +119536,7 @@
      "group": "grade",
      "v2025": 72.3,
      "v2024": null,
-     "pct": 0.187
+     "pct": 0.185
     },
     {
      "key": "off_grade_recv",
@@ -119069,7 +119544,7 @@
      "group": "grade",
      "v2025": 55.9,
      "v2024": null,
-     "pct": 0.313
+     "pct": 0.318
     },
     {
      "key": "off_grade_pblk",
@@ -119308,7 +119783,7 @@
      "group": "grade",
      "v2025": 76.7,
      "v2024": null,
-     "pct": 0.45
+     "pct": 0.454
     },
     {
      "key": "off_grade_recv",
@@ -119316,7 +119791,7 @@
      "group": "grade",
      "v2025": 69.3,
      "v2024": null,
-     "pct": 0.79
+     "pct": 0.791
     },
     {
      "key": "off_grade_pblk",
@@ -119324,7 +119799,7 @@
      "group": "grade",
      "v2025": 56.0,
      "v2024": null,
-     "pct": 0.56
+     "pct": 0.566
     },
     {
      "key": "off_grade_rblk",
@@ -124947,6 +125422,211 @@
    ]
   },
   {
+   "name": "Jason Patterson",
+   "player_id": "184636",
+   "team": "Kentucky",
+   "stats_team": null,
+   "conference": "SEC",
+   "position": "HB",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 11.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 57.0,
+    "rush_yds": 225.0,
+    "rush_td": 1.0,
+    "targets": 21.0,
+    "receptions": 17.0,
+    "rec_yds": 85.0,
+    "rec_td": 1.0
+   },
+   "games_2025": 11.0,
+   "games_2024": 4.0,
+   "usage": {
+    "rush_share_pct": 14.1,
+    "target_share_pct": 6.0
+   },
+   "game_log": [
+    {
+     "week": 3,
+     "rush_yds": 80.0,
+     "rec_yds": 9.0,
+     "receptions": 1.0,
+     "rush_att": 13.0,
+     "targets": 1.0
+    },
+    {
+     "week": 5,
+     "rush_yds": 3.0,
+     "rec_yds": 3.0,
+     "receptions": 1.0,
+     "rush_att": 1.0,
+     "targets": 1.0
+    },
+    {
+     "week": 6,
+     "rec_yds": -1.0,
+     "receptions": 2.0,
+     "targets": 2.0
+    },
+    {
+     "week": 8,
+     "rush_yds": 20.0,
+     "rec_yds": 4.0,
+     "receptions": 2.0,
+     "rush_att": 7.0,
+     "targets": 2.0
+    },
+    {
+     "week": 9,
+     "rush_yds": 51.0,
+     "rec_yds": 44.0,
+     "receptions": 7.0,
+     "rush_att": 16.0,
+     "targets": 9.0
+    },
+    {
+     "week": 11,
+     "rush_yds": 21.0,
+     "rec_yds": 15.0,
+     "receptions": 1.0,
+     "rush_att": 7.0,
+     "targets": 1.0
+    },
+    {
+     "week": 12,
+     "rush_yds": 23.0,
+     "rush_att": 4.0
+    },
+    {
+     "week": 13,
+     "rush_yds": 5.0,
+     "rec_yds": 8.0,
+     "receptions": 1.0,
+     "rush_att": 1.0,
+     "targets": 2.0
+    },
+    {
+     "week": 14,
+     "rush_yds": 22.0,
+     "rec_yds": 3.0,
+     "receptions": 2.0,
+     "rush_att": 8.0,
+     "targets": 3.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 316,
+    "of": 496
+   },
+   "conf_rank": {
+    "rank": 30,
+    "of": 60
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 57.0,
+     "v2024": 20.0,
+     "pct": 0.435
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 225.0,
+     "v2024": 111.0,
+     "pct": 0.364
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 0.0,
+     "pct": 0.273
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 21.0,
+     "v2024": 2.0,
+     "pct": 0.786
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 17.0,
+     "v2024": 1.0,
+     "pct": 0.77
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 85.0,
+     "v2024": 15.0,
+     "pct": 0.591
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": 0.0,
+     "pct": 0.774
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 3.95,
+     "v2024": 5.55,
+     "pct": 0.206
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 4.05,
+     "v2024": 7.5,
+     "pct": 0.264
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 81.0,
+     "v2024": 50.0,
+     "pct": 0.514
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 14.1,
+     "v2024": null,
+     "pct": 0.451
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 6.0,
+     "v2024": null,
+     "pct": 0.784
+    }
+   ]
+  },
+  {
    "name": "Seth McGowan",
    "player_id": "122936",
    "team": "Kentucky",
@@ -127209,7 +127889,7 @@
      "group": "grade",
      "v2025": 78.3,
      "v2024": null,
-     "pct": 0.513
+     "pct": 0.517
     },
     {
      "key": "off_grade_recv",
@@ -127217,7 +127897,7 @@
      "group": "grade",
      "v2025": 60.8,
      "v2024": null,
-     "pct": 0.567
+     "pct": 0.57
     },
     {
      "key": "off_grade_pblk",
@@ -127225,7 +127905,7 @@
      "group": "grade",
      "v2025": 46.3,
      "v2024": null,
-     "pct": 0.391
+     "pct": 0.397
     },
     {
      "key": "off_grade_rblk",
@@ -127233,7 +127913,7 @@
      "group": "grade",
      "v2025": 63.1,
      "v2024": null,
-     "pct": 0.785
+     "pct": 0.791
     }
    ]
   },
@@ -127462,7 +128142,7 @@
      "group": "grade",
      "v2025": 71.1,
      "v2024": null,
-     "pct": 0.133
+     "pct": 0.132
     },
     {
      "key": "off_grade_recv",
@@ -127470,7 +128150,7 @@
      "group": "grade",
      "v2025": 52.0,
      "v2024": null,
-     "pct": 0.177
+     "pct": 0.175
     },
     {
      "key": "off_grade_pblk",
@@ -127478,7 +128158,7 @@
      "group": "grade",
      "v2025": 43.1,
      "v2024": null,
-     "pct": 0.328
+     "pct": 0.334
     },
     {
      "key": "off_grade_rblk",
@@ -137734,7 +138414,7 @@
      "group": "grade",
      "v2025": 87.6,
      "v2024": null,
-     "pct": 0.85
+     "pct": 0.851
     },
     {
      "key": "off_grade_recv",
@@ -137742,7 +138422,7 @@
      "group": "grade",
      "v2025": 56.9,
      "v2024": null,
-     "pct": 0.377
+     "pct": 0.381
     },
     {
      "key": "off_grade_pblk",
@@ -137758,7 +138438,7 @@
      "group": "grade",
      "v2025": 69.9,
      "v2024": null,
-     "pct": 0.911
+     "pct": 0.917
     }
    ]
   },
@@ -137989,7 +138669,7 @@
      "group": "grade",
      "v2025": 63.3,
      "v2024": null,
-     "pct": 0.633
+     "pct": 0.636
     },
     {
      "key": "off_grade_pblk",
@@ -142719,7 +143399,7 @@
      "group": "grade",
      "v2025": 68.9,
      "v2024": null,
-     "pct": 0.192
+     "pct": 0.199
     },
     {
      "key": "off_grade_run",
@@ -142727,7 +143407,7 @@
      "group": "grade",
      "v2025": 74.5,
      "v2024": null,
-     "pct": 0.29
+     "pct": 0.295
     },
     {
      "key": "off_grade_recv",
@@ -142735,7 +143415,7 @@
      "group": "grade",
      "v2025": 60.3,
      "v2024": null,
-     "pct": 0.55
+     "pct": 0.553
     },
     {
      "key": "off_grade_pblk",
@@ -142743,7 +143423,7 @@
      "group": "grade",
      "v2025": 45.0,
      "v2024": null,
-     "pct": 0.361
+     "pct": 0.368
     },
     {
      "key": "off_grade_rblk",
@@ -142751,7 +143431,7 @@
      "group": "grade",
      "v2025": 67.0,
      "v2024": null,
-     "pct": 0.884
+     "pct": 0.891
     }
    ]
   },
@@ -145467,7 +146147,7 @@
      "group": "grade",
      "v2025": 51.9,
      "v2024": null,
-     "pct": 0.167
+     "pct": 0.166
     },
     {
      "key": "off_grade_pblk",
@@ -145475,7 +146155,7 @@
      "group": "grade",
      "v2025": 41.0,
      "v2024": null,
-     "pct": 0.298
+     "pct": 0.305
     },
     {
      "key": "off_grade_rblk",
@@ -147805,7 +148485,7 @@
      "group": "grade",
      "v2025": 80.9,
      "v2024": null,
-     "pct": 0.62
+     "pct": 0.623
     },
     {
      "key": "off_grade_recv",
@@ -147813,7 +148493,7 @@
      "group": "grade",
      "v2025": 69.2,
      "v2024": null,
-     "pct": 0.783
+     "pct": 0.785
     },
     {
      "key": "off_grade_pblk",
@@ -147829,7 +148509,7 @@
      "group": "grade",
      "v2025": 64.4,
      "v2024": null,
-     "pct": 0.844
+     "pct": 0.851
     }
    ]
   },
@@ -148554,7 +149234,7 @@
      "group": "grade",
      "v2025": 56.8,
      "v2024": null,
-     "pct": 0.136
+     "pct": 0.125
     },
     {
      "key": "off_grade_run",
@@ -148578,7 +149258,7 @@
      "group": "grade",
      "v2025": 56.2,
      "v2024": null,
-     "pct": 0.573
+     "pct": 0.579
     },
     {
      "key": "off_grade_rblk",
@@ -154120,7 +154800,7 @@
      "group": "grade",
      "v2025": 55.6,
      "v2024": null,
-     "pct": 0.28
+     "pct": 0.285
     },
     {
      "key": "off_grade_pblk",
@@ -154128,7 +154808,7 @@
      "group": "grade",
      "v2025": 65.7,
      "v2024": null,
-     "pct": 0.705
+     "pct": 0.712
     },
     {
      "key": "off_grade_rblk",
@@ -155776,7 +156456,7 @@
      "group": "grade",
      "v2025": 72.9,
      "v2024": null,
-     "pct": 0.203
+     "pct": 0.209
     },
     {
      "key": "off_grade_recv",
@@ -155784,7 +156464,7 @@
      "group": "grade",
      "v2025": 64.9,
      "v2024": null,
-     "pct": 0.673
+     "pct": 0.675
     },
     {
      "key": "off_grade_pblk",
@@ -156041,7 +156721,7 @@
      "group": "grade",
      "v2025": 86.9,
      "v2024": null,
-     "pct": 0.84
+     "pct": 0.841
     },
     {
      "key": "off_grade_recv",
@@ -156049,7 +156729,7 @@
      "group": "grade",
      "v2025": 65.3,
      "v2024": null,
-     "pct": 0.683
+     "pct": 0.685
     },
     {
      "key": "off_grade_pblk",
@@ -156065,7 +156745,7 @@
      "group": "grade",
      "v2025": 64.0,
      "v2024": null,
-     "pct": 0.811
+     "pct": 0.818
     }
    ]
   },
@@ -156561,7 +157241,7 @@
      "group": "grade",
      "v2025": 60.6,
      "v2024": null,
-     "pct": 0.455
+     "pct": 0.417
     },
     {
      "key": "off_grade_run",
@@ -156569,7 +157249,7 @@
      "group": "grade",
      "v2025": 80.5,
      "v2024": null,
-     "pct": 0.583
+     "pct": 0.586
     },
     {
      "key": "off_grade_recv",
@@ -156577,7 +157257,7 @@
      "group": "grade",
      "v2025": 61.5,
      "v2024": null,
-     "pct": 0.603
+     "pct": 0.606
     },
     {
      "key": "off_grade_pblk",
@@ -156585,7 +157265,7 @@
      "group": "grade",
      "v2025": 35.1,
      "v2024": null,
-     "pct": 0.202
+     "pct": 0.209
     },
     {
      "key": "off_grade_rblk",
@@ -159770,7 +160450,7 @@
      "group": "grade",
      "v2025": 75.8,
      "v2024": null,
-     "pct": 0.407
+     "pct": 0.411
     },
     {
      "key": "off_grade_recv",
@@ -159778,7 +160458,7 @@
      "group": "grade",
      "v2025": 75.9,
      "v2024": null,
-     "pct": 0.91
+     "pct": 0.911
     },
     {
      "key": "off_grade_pblk",
@@ -160711,250 +161391,6 @@
      "v2025": 11.9,
      "v2024": null,
      "pct": 0.833
-    }
-   ]
-  },
-  {
-   "name": "Anthony Smith",
-   "player_id": "122885",
-   "team": "Minnesota",
-   "stats_team": "East Carolina",
-   "conference": "American Athletic",
-   "position": "WR",
-   "height": "6' 6\"",
-   "weight": "280",
-   "season_2025": {
-    "games": 12.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 1.0,
-    "rush_yds": 45.0,
-    "rush_td": 1.0,
-    "targets": 94.0,
-    "receptions": 60.0,
-    "rec_yds": 897.0,
-    "rec_td": 5.0
-   },
-   "games_2025": 12.0,
-   "games_2024": 12.0,
-   "usage": {
-    "rush_share_pct": 0.2,
-    "target_share_pct": 23.4
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "rec_yds": 66.0,
-     "receptions": 6.0,
-     "targets": 8.0
-    },
-    {
-     "week": 2,
-     "rec_yds": 39.0,
-     "receptions": 6.0,
-     "targets": 8.0
-    },
-    {
-     "week": 3,
-     "rec_yds": 136.0,
-     "receptions": 11.0,
-     "targets": 15.0
-    },
-    {
-     "week": 4,
-     "rec_yds": 24.0,
-     "receptions": 2.0,
-     "targets": 9.0
-    },
-    {
-     "week": 5,
-     "rec_yds": 87.0,
-     "receptions": 3.0,
-     "targets": 4.0
-    },
-    {
-     "week": 7,
-     "rec_yds": 54.0,
-     "receptions": 2.0,
-     "targets": 7.0
-    },
-    {
-     "week": 8,
-     "rec_yds": 150.0,
-     "receptions": 4.0,
-     "targets": 6.0
-    },
-    {
-     "week": 10,
-     "rush_yds": 45.0,
-     "rec_yds": 58.0,
-     "receptions": 2.0,
-     "rush_att": 1.0,
-     "targets": 4.0
-    },
-    {
-     "week": 11,
-     "rec_yds": 69.0,
-     "receptions": 8.0,
-     "targets": 10.0
-    },
-    {
-     "week": 12,
-     "rec_yds": 62.0,
-     "receptions": 7.0,
-     "targets": 8.0
-    },
-    {
-     "week": 13,
-     "rec_yds": 143.0,
-     "receptions": 8.0,
-     "targets": 10.0
-    },
-    {
-     "week": 14,
-     "rec_yds": 9.0,
-     "receptions": 1.0,
-     "targets": 5.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 30,
-    "of": 709
-   },
-   "conf_rank": {
-    "rank": 4,
-    "of": 69
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": null,
-     "pct": 0.16
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 45.0,
-     "v2024": null,
-     "pct": 0.809
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": null,
-     "pct": 0.876
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 94.0,
-     "v2024": 76.0,
-     "pct": 0.957
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 60.0,
-     "v2024": 39.0,
-     "pct": 0.934
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 897.0,
-     "v2024": 773.0,
-     "pct": 0.958
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 5.0,
-     "v2024": 6.0,
-     "pct": 0.839
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 45.0,
-     "v2024": null,
-     "pct": 0.998
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 9.54,
-     "v2024": 10.17,
-     "pct": 0.743
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 64.0,
-     "v2024": 51.0,
-     "pct": 0.528
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 0.2,
-     "v2024": null,
-     "pct": 0.086
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 23.4,
-     "v2024": null,
-     "pct": 0.903
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 71.6,
-     "v2024": null,
-     "pct": 0.375
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 67.1,
-     "v2024": null,
-     "pct": 0.125
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 71.9,
-     "v2024": null,
-     "pct": 0.625
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 59.7,
-     "v2024": null,
-     "pct": 0.125
     }
    ]
   },
@@ -162853,7 +163289,7 @@
      "group": "grade",
      "v2025": 76.2,
      "v2024": null,
-     "pct": 0.423
+     "pct": 0.427
     },
     {
      "key": "off_grade_recv",
@@ -162861,7 +163297,7 @@
      "group": "grade",
      "v2025": 57.5,
      "v2024": null,
-     "pct": 0.403
+     "pct": 0.407
     },
     {
      "key": "off_grade_pblk",
@@ -162869,7 +163305,7 @@
      "group": "grade",
      "v2025": 45.4,
      "v2024": null,
-     "pct": 0.371
+     "pct": 0.377
     },
     {
      "key": "off_grade_rblk",
@@ -162877,7 +163313,7 @@
      "group": "grade",
      "v2025": 70.5,
      "v2024": null,
-     "pct": 0.937
+     "pct": 0.944
     }
    ]
   },
@@ -164930,7 +165366,7 @@
      "group": "grade",
      "v2025": 48.2,
      "v2024": null,
-     "pct": 0.11
+     "pct": 0.109
     },
     {
      "key": "off_grade_pblk",
@@ -165190,7 +165626,7 @@
      "group": "grade",
      "v2025": 84.7,
      "v2024": null,
-     "pct": 0.763
+     "pct": 0.765
     },
     {
      "key": "off_grade_recv",
@@ -165198,7 +165634,7 @@
      "group": "grade",
      "v2025": 57.7,
      "v2024": null,
-     "pct": 0.417
+     "pct": 0.421
     },
     {
      "key": "off_grade_pblk",
@@ -166707,7 +167143,7 @@
      "group": "grade",
      "v2025": 83.3,
      "v2024": null,
-     "pct": 0.717
+     "pct": 0.719
     },
     {
      "key": "off_grade_recv",
@@ -166723,7 +167159,7 @@
      "group": "grade",
      "v2025": 64.1,
      "v2024": null,
-     "pct": 0.672
+     "pct": 0.679
     },
     {
      "key": "off_grade_rblk",
@@ -168766,7 +169202,7 @@
      "group": "grade",
      "v2025": 70.4,
      "v2024": null,
-     "pct": 0.11
+     "pct": 0.109
     },
     {
      "key": "off_grade_recv",
@@ -169031,7 +169467,7 @@
      "group": "grade",
      "v2025": 80.6,
      "v2024": null,
-     "pct": 0.593
+     "pct": 0.596
     },
     {
      "key": "off_grade_recv",
@@ -169039,7 +169475,7 @@
      "group": "grade",
      "v2025": 70.4,
      "v2024": null,
-     "pct": 0.837
+     "pct": 0.838
     },
     {
      "key": "off_grade_pblk",
@@ -169047,7 +169483,7 @@
      "group": "grade",
      "v2025": 58.8,
      "v2024": null,
-     "pct": 0.613
+     "pct": 0.619
     },
     {
      "key": "off_grade_rblk",
@@ -175423,227 +175859,6 @@
    ]
   },
   {
-   "name": "EJ Smith",
-   "player_id": "131782",
-   "team": "Nevada",
-   "stats_team": "Texas A&M",
-   "conference": "SEC",
-   "position": "HB",
-   "height": "6' 0\"",
-   "weight": "243",
-   "season_2025": {
-    "games": 10.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 44.0,
-    "rush_yds": 205.0,
-    "rush_td": 4.0,
-    "targets": 5.0,
-    "receptions": 4.0,
-    "rec_yds": 18.0,
-    "rec_td": 0.0
-   },
-   "games_2025": 10.0,
-   "games_2024": 11.0,
-   "usage": {
-    "rush_share_pct": 9.2,
-    "target_share_pct": 1.3
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "rush_yds": 6.0,
-     "rush_att": 2.0
-    },
-    {
-     "week": 2,
-     "rush_yds": 25.0,
-     "rush_att": 3.0
-    },
-    {
-     "week": 7,
-     "rush_yds": 27.0,
-     "rush_att": 6.0
-    },
-    {
-     "week": 8,
-     "rush_yds": 52.0,
-     "rec_yds": 7.0,
-     "receptions": 1.0,
-     "rush_att": 7.0,
-     "targets": 1.0
-    },
-    {
-     "week": 9,
-     "rush_yds": 5.0,
-     "rush_att": 5.0
-    },
-    {
-     "week": 11,
-     "rush_yds": 24.0,
-     "rush_att": 6.0
-    },
-    {
-     "week": 12,
-     "rush_yds": 25.0,
-     "rec_yds": 2.0,
-     "receptions": 1.0,
-     "rush_att": 7.0,
-     "targets": 1.0
-    },
-    {
-     "week": 14,
-     "rush_yds": 27.0,
-     "rush_att": 4.0
-    },
-    {
-     "week": 16,
-     "rush_yds": 14.0,
-     "rush_att": 4.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 328,
-    "of": 496
-   },
-   "conf_rank": {
-    "rank": 34,
-    "of": 60
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 44.0,
-     "v2024": 49.0,
-     "pct": 0.346
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 205.0,
-     "v2024": 171.0,
-     "pct": 0.339
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 4.0,
-     "v2024": 0.0,
-     "pct": 0.652
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 5.0,
-     "v2024": 7.0,
-     "pct": 0.263
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 4.0,
-     "v2024": 6.0,
-     "pct": 0.276
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 18.0,
-     "v2024": 22.0,
-     "pct": 0.211
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": 0.0,
-     "pct": 0.331
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 4.66,
-     "v2024": 3.49,
-     "pct": 0.448
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 3.6,
-     "v2024": 3.14,
-     "pct": 0.198
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 80.0,
-     "v2024": 86.0,
-     "pct": 0.48
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 9.2,
-     "v2024": null,
-     "pct": 0.3
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 1.3,
-     "v2024": null,
-     "pct": 0.234
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 65.4,
-     "v2024": null,
-     "pct": 0.125
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 63.2,
-     "v2024": null,
-     "pct": 0.125
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 62.5,
-     "v2024": null,
-     "pct": 0.5
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 70.2,
-     "v2024": null,
-     "pct": 0.375
-    }
-   ]
-  },
-  {
    "name": "Herschel Turner",
    "player_id": "191372",
    "team": "Nevada",
@@ -180265,7 +180480,7 @@
      "group": "grade",
      "v2025": 65.1,
      "v2024": null,
-     "pct": 0.057
+     "pct": 0.056
     },
     {
      "key": "off_grade_recv",
@@ -180273,7 +180488,7 @@
      "group": "grade",
      "v2025": 56.0,
      "v2024": null,
-     "pct": 0.327
+     "pct": 0.331
     },
     {
      "key": "off_grade_pblk",
@@ -180281,7 +180496,7 @@
      "group": "grade",
      "v2025": 39.0,
      "v2024": null,
-     "pct": 0.255
+     "pct": 0.262
     },
     {
      "key": "off_grade_rblk",
@@ -182921,7 +183136,7 @@
      "group": "grade",
      "v2025": 69.8,
      "v2024": null,
-     "pct": 0.215
+     "pct": 0.222
     },
     {
      "key": "off_grade_run",
@@ -182929,7 +183144,7 @@
      "group": "grade",
      "v2025": 73.7,
      "v2024": null,
-     "pct": 0.237
+     "pct": 0.242
     },
     {
      "key": "off_grade_recv",
@@ -182937,7 +183152,7 @@
      "group": "grade",
      "v2025": 55.7,
      "v2024": null,
-     "pct": 0.297
+     "pct": 0.301
     },
     {
      "key": "off_grade_pblk",
@@ -183222,240 +183437,6 @@
      "v2025": 3.9,
      "v2024": null,
      "pct": 0.097
-    }
-   ]
-  },
-  {
-   "name": "Isaiah Johnson",
-   "player_id": "185903",
-   "team": "North Carolina",
-   "stats_team": "Cincinnati",
-   "conference": "Big 12",
-   "position": "WR",
-   "height": "6' 2\"",
-   "weight": "320",
-   "season_2025": {
-    "games": 12.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 3.0,
-    "rush_yds": 25.0,
-    "rush_td": 0.0,
-    "targets": 20.0,
-    "receptions": 12.0,
-    "rec_yds": 201.0,
-    "rec_td": 3.0
-   },
-   "games_2025": 12.0,
-   "games_2024": null,
-   "usage": {
-    "rush_share_pct": 0.8,
-    "target_share_pct": 6.3
-   },
-   "game_log": [
-    {
-     "week": 3,
-     "rec_yds": 50.0,
-     "receptions": 2.0,
-     "targets": 3.0
-    },
-    {
-     "week": 5,
-     "rec_yds": 33.0,
-     "receptions": 1.0,
-     "targets": 2.0
-    },
-    {
-     "week": 6,
-     "rec_yds": 26.0,
-     "receptions": 1.0,
-     "targets": 1.0
-    },
-    {
-     "week": 7,
-     "rec_yds": 14.0,
-     "receptions": 2.0,
-     "targets": 3.0
-    },
-    {
-     "week": 8,
-     "rec_yds": 14.0,
-     "receptions": 1.0,
-     "targets": 3.0
-    },
-    {
-     "week": 9,
-     "rush_yds": 24.0,
-     "rec_yds": 16.0,
-     "receptions": 2.0,
-     "rush_att": 2.0,
-     "targets": 2.0
-    },
-    {
-     "week": 10,
-     "rec_yds": 0.0,
-     "receptions": 0.0,
-     "targets": 1.0
-    },
-    {
-     "week": 12,
-     "rec_yds": 0.0,
-     "receptions": 0.0,
-     "targets": 1.0
-    },
-    {
-     "week": 13,
-     "rush_yds": 1.0,
-     "rec_yds": 43.0,
-     "receptions": 2.0,
-     "rush_att": 1.0,
-     "targets": 3.0
-    },
-    {
-     "week": 14,
-     "rec_yds": 5.0,
-     "receptions": 1.0,
-     "targets": 1.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 453,
-    "of": 709
-   },
-   "conf_rank": {
-    "rank": 52,
-    "of": 80
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 3.0,
-     "v2024": null,
-     "pct": 0.569
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 25.0,
-     "v2024": null,
-     "pct": 0.691
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": null,
-     "pct": 0.399
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 20.0,
-     "v2024": null,
-     "pct": 0.24
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 12.0,
-     "v2024": null,
-     "pct": 0.254
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 201.0,
-     "v2024": null,
-     "pct": 0.362
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 3.0,
-     "v2024": null,
-     "pct": 0.672
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 8.33,
-     "v2024": null,
-     "pct": 0.798
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 10.05,
-     "v2024": null,
-     "pct": 0.8
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 60.0,
-     "v2024": null,
-     "pct": 0.379
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 0.8,
-     "v2024": null,
-     "pct": 0.591
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 6.3,
-     "v2024": null,
-     "pct": 0.26
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 72.9,
-     "v2024": null,
-     "pct": 0.625
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 71.2,
-     "v2024": null,
-     "pct": 0.375
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 73.2,
-     "v2024": null,
-     "pct": 0.875
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 76.8,
-     "v2024": null,
-     "pct": 0.875
     }
    ]
   },
@@ -186995,7 +186976,7 @@
      "group": "grade",
      "v2025": 74.7,
      "v2024": null,
-     "pct": 0.307
+     "pct": 0.311
     },
     {
      "key": "off_grade_recv",
@@ -187003,7 +186984,7 @@
      "group": "grade",
      "v2025": 55.4,
      "v2024": null,
-     "pct": 0.27
+     "pct": 0.268
     },
     {
      "key": "off_grade_pblk",
@@ -187011,7 +186992,7 @@
      "group": "grade",
      "v2025": 38.2,
      "v2024": null,
-     "pct": 0.242
+     "pct": 0.248
     },
     {
      "key": "off_grade_rblk",
@@ -188485,7 +188466,7 @@
      "group": "grade",
      "v2025": 76.9,
      "v2024": null,
-     "pct": 0.457
+     "pct": 0.46
     },
     {
      "key": "off_grade_recv",
@@ -188493,7 +188474,7 @@
      "group": "grade",
      "v2025": 55.6,
      "v2024": null,
-     "pct": 0.28
+     "pct": 0.285
     },
     {
      "key": "off_grade_pblk",
@@ -189011,7 +188992,7 @@
      "group": "grade",
      "v2025": 80.8,
      "v2024": null,
-     "pct": 0.61
+     "pct": 0.613
     },
     {
      "key": "off_grade_recv",
@@ -189019,7 +189000,7 @@
      "group": "grade",
      "v2025": 52.9,
      "v2024": null,
-     "pct": 0.19
+     "pct": 0.189
     },
     {
      "key": "off_grade_pblk",
@@ -189027,7 +189008,7 @@
      "group": "grade",
      "v2025": 55.4,
      "v2024": null,
-     "pct": 0.546
+     "pct": 0.553
     },
     {
      "key": "off_grade_rblk",
@@ -189035,7 +189016,7 @@
      "group": "grade",
      "v2025": 67.2,
      "v2024": null,
-     "pct": 0.891
+     "pct": 0.897
     }
    ]
   },
@@ -189274,7 +189255,7 @@
      "group": "grade",
      "v2025": 82.2,
      "v2024": null,
-     "pct": 0.683
+     "pct": 0.685
     },
     {
      "key": "off_grade_recv",
@@ -189282,7 +189263,7 @@
      "group": "grade",
      "v2025": 65.8,
      "v2024": null,
-     "pct": 0.7
+     "pct": 0.702
     },
     {
      "key": "off_grade_pblk",
@@ -191372,297 +191353,6 @@
    ]
   },
   {
-   "name": "DJ McKinney",
-   "player_id": "175620",
-   "team": "Notre Dame",
-   "stats_team": "New Mexico",
-   "conference": "Mountain West",
-   "position": "HB",
-   "height": "6' 1\"",
-   "weight": "190",
-   "season_2025": {
-    "games": 12.0,
-    "pass_att": 3.0,
-    "pass_yds": 9.0,
-    "pass_td": 1.0,
-    "rush_att": 108.0,
-    "rush_yds": 466.0,
-    "rush_td": 7.0,
-    "targets": 16.0,
-    "receptions": 14.0,
-    "rec_yds": 156.0,
-    "rec_td": 0.0
-   },
-   "games_2025": 12.0,
-   "games_2024": 11.0,
-   "usage": {
-    "rush_share_pct": 26.9,
-    "target_share_pct": 5.4
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "pass_yds": 9.0,
-     "rush_yds": 5.0,
-     "rec_yds": 1.0,
-     "receptions": 1.0,
-     "pass_att": 1.0,
-     "rush_att": 2.0,
-     "targets": 1.0
-    },
-    {
-     "week": 2,
-     "rush_yds": 45.0,
-     "rec_yds": 7.0,
-     "receptions": 1.0,
-     "rush_att": 7.0,
-     "targets": 1.0
-    },
-    {
-     "week": 3,
-     "rush_yds": 89.0,
-     "rec_yds": 20.0,
-     "receptions": 1.0,
-     "rush_att": 21.0,
-     "targets": 1.0
-    },
-    {
-     "week": 5,
-     "rush_yds": 36.0,
-     "rec_yds": 10.0,
-     "receptions": 2.0,
-     "rush_att": 11.0,
-     "targets": 2.0
-    },
-    {
-     "week": 6,
-     "rush_yds": 11.0,
-     "rec_yds": 0.0,
-     "receptions": 0.0,
-     "rush_att": 4.0,
-     "targets": 1.0
-    },
-    {
-     "week": 7,
-     "pass_yds": 0.0,
-     "rush_yds": 15.0,
-     "pass_att": 2.0,
-     "rush_att": 3.0
-    },
-    {
-     "week": 8,
-     "rush_yds": 39.0,
-     "rec_yds": 43.0,
-     "receptions": 3.0,
-     "rush_att": 8.0,
-     "targets": 3.0
-    },
-    {
-     "week": 9,
-     "rush_yds": 53.0,
-     "rec_yds": 11.0,
-     "receptions": 1.0,
-     "rush_att": 11.0,
-     "targets": 1.0
-    },
-    {
-     "week": 10,
-     "rush_yds": 20.0,
-     "rec_yds": 0.0,
-     "receptions": 1.0,
-     "rush_att": 7.0,
-     "targets": 1.0
-    },
-    {
-     "week": 12,
-     "rush_yds": 52.0,
-     "rec_yds": 57.0,
-     "receptions": 2.0,
-     "rush_att": 17.0,
-     "targets": 2.0
-    },
-    {
-     "week": 13,
-     "rush_yds": 44.0,
-     "rec_yds": 6.0,
-     "receptions": 1.0,
-     "rush_att": 14.0,
-     "targets": 2.0
-    },
-    {
-     "week": 14,
-     "rush_yds": 57.0,
-     "rec_yds": 1.0,
-     "receptions": 1.0,
-     "rush_att": 3.0,
-     "targets": 1.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 171,
-    "of": 496
-   },
-   "conf_rank": {
-    "rank": 10,
-    "of": 31
-   },
-   "metrics": [
-    {
-     "key": "pass_att",
-     "label": "Pass Att",
-     "group": "season",
-     "v2025": 3.0,
-     "v2024": null,
-     "pct": 0.971
-    },
-    {
-     "key": "pass_yds",
-     "label": "Pass Yds",
-     "group": "season",
-     "v2025": 9.0,
-     "v2024": null,
-     "pct": 0.559
-    },
-    {
-     "key": "pass_td",
-     "label": "Pass TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": null,
-     "pct": 0.794
-    },
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 108.0,
-     "v2024": 95.0,
-     "pct": 0.74
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 466.0,
-     "v2024": 482.0,
-     "pct": 0.656
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 7.0,
-     "v2024": 3.0,
-     "pct": 0.865
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 16.0,
-     "v2024": 14.0,
-     "pct": 0.639
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 14.0,
-     "v2024": 11.0,
-     "pct": 0.68
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 156.0,
-     "v2024": 79.0,
-     "pct": 0.822
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 0.0,
-     "v2024": 0.0,
-     "pct": 0.331
-    },
-    {
-     "key": "ypa",
-     "label": "Yards / Att",
-     "group": "rate",
-     "v2025": 3.0,
-     "v2024": null,
-     "pct": 0.25
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 4.31,
-     "v2024": 5.07,
-     "pct": 0.308
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 9.75,
-     "v2024": 5.64,
-     "pct": 0.875
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 88.0,
-     "v2024": 79.0,
-     "pct": 0.683
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 26.9,
-     "v2024": null,
-     "pct": 0.736
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 5.4,
-     "v2024": null,
-     "pct": 0.737
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 66.6,
-     "v2024": null,
-     "pct": 0.375
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 72.4,
-     "v2024": null,
-     "pct": 0.875
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 64.2,
-     "v2024": null,
-     "pct": 0.125
-    }
-   ]
-  },
-  {
    "name": "Jadarian Price",
    "player_id": "156985",
    "team": "Notre Dame",
@@ -193599,7 +193289,7 @@
      "group": "grade",
      "v2025": 67.7,
      "v2024": null,
-     "pct": 0.09
+     "pct": 0.089
     },
     {
      "key": "off_grade_recv",
@@ -193607,7 +193297,7 @@
      "group": "grade",
      "v2025": 46.9,
      "v2024": null,
-     "pct": 0.09
+     "pct": 0.089
     },
     {
      "key": "off_grade_pblk",
@@ -193615,7 +193305,7 @@
      "group": "grade",
      "v2025": 58.1,
      "v2024": null,
-     "pct": 0.606
+     "pct": 0.613
     },
     {
      "key": "off_grade_rblk",
@@ -194902,7 +194592,7 @@
      "group": "grade",
      "v2025": 85.9,
      "v2024": null,
-     "pct": 0.803
+     "pct": 0.805
     },
     {
      "key": "off_grade_recv",
@@ -194910,7 +194600,7 @@
      "group": "grade",
      "v2025": 76.9,
      "v2024": null,
-     "pct": 0.923
+     "pct": 0.924
     },
     {
      "key": "off_grade_pblk",
@@ -194918,7 +194608,7 @@
      "group": "grade",
      "v2025": 41.9,
      "v2024": null,
-     "pct": 0.315
+     "pct": 0.321
     },
     {
      "key": "off_grade_rblk",
@@ -198473,7 +198163,7 @@
      "group": "grade",
      "v2025": 78.0,
      "v2024": null,
-     "pct": 0.503
+     "pct": 0.507
     },
     {
      "key": "off_grade_recv",
@@ -198481,7 +198171,7 @@
      "group": "grade",
      "v2025": 69.7,
      "v2024": null,
-     "pct": 0.8
+     "pct": 0.801
     },
     {
      "key": "off_grade_pblk",
@@ -198489,7 +198179,7 @@
      "group": "grade",
      "v2025": 43.8,
      "v2024": null,
-     "pct": 0.341
+     "pct": 0.348
     },
     {
      "key": "off_grade_rblk",
@@ -198732,7 +198422,7 @@
      "group": "grade",
      "v2025": 74.4,
      "v2024": null,
-     "pct": 0.277
+     "pct": 0.281
     },
     {
      "key": "off_grade_recv",
@@ -198748,7 +198438,7 @@
      "group": "grade",
      "v2025": 64.2,
      "v2024": null,
-     "pct": 0.679
+     "pct": 0.685
     },
     {
      "key": "off_grade_rblk",
@@ -198984,7 +198674,7 @@
      "group": "grade",
      "v2025": 73.9,
      "v2024": null,
-     "pct": 0.247
+     "pct": 0.252
     },
     {
      "key": "off_grade_recv",
@@ -198992,7 +198682,7 @@
      "group": "grade",
      "v2025": 65.9,
      "v2024": null,
-     "pct": 0.717
+     "pct": 0.719
     },
     {
      "key": "off_grade_pblk",
@@ -199000,7 +198690,7 @@
      "group": "grade",
      "v2025": 63.2,
      "v2024": null,
-     "pct": 0.662
+     "pct": 0.669
     },
     {
      "key": "off_grade_rblk",
@@ -201231,7 +200921,7 @@
      "group": "grade",
      "v2025": 69.9,
      "v2024": null,
-     "pct": 0.813
+     "pct": 0.815
     },
     {
      "key": "off_grade_pblk",
@@ -201239,7 +200929,7 @@
      "group": "grade",
      "v2025": 50.4,
      "v2024": null,
-     "pct": 0.46
+     "pct": 0.467
     },
     {
      "key": "off_grade_rblk",
@@ -201247,7 +200937,7 @@
      "group": "grade",
      "v2025": 66.4,
      "v2024": null,
-     "pct": 0.877
+     "pct": 0.884
     }
    ]
   },
@@ -204361,7 +204051,7 @@
      "group": "grade",
      "v2025": 73.3,
      "v2024": null,
-     "pct": 0.217
+     "pct": 0.222
     },
     {
      "key": "off_grade_recv",
@@ -204369,7 +204059,7 @@
      "group": "grade",
      "v2025": 55.1,
      "v2024": null,
-     "pct": 0.257
+     "pct": 0.255
     },
     {
      "key": "off_grade_pblk",
@@ -204385,7 +204075,7 @@
      "group": "grade",
      "v2025": 62.8,
      "v2024": null,
-     "pct": 0.778
+     "pct": 0.785
     }
    ]
   },
@@ -205645,7 +205335,7 @@
      "group": "grade",
      "v2025": 91.6,
      "v2024": null,
-     "pct": 0.963
+     "pct": 0.964
     },
     {
      "key": "off_grade_recv",
@@ -205653,7 +205343,7 @@
      "group": "grade",
      "v2025": 50.7,
      "v2024": null,
-     "pct": 0.143
+     "pct": 0.142
     },
     {
      "key": "off_grade_pblk",
@@ -205661,7 +205351,7 @@
      "group": "grade",
      "v2025": 54.2,
      "v2024": null,
-     "pct": 0.526
+     "pct": 0.533
     },
     {
      "key": "off_grade_rblk",
@@ -206086,7 +205776,7 @@
      "group": "grade",
      "v2025": 77.6,
      "v2024": null,
-     "pct": 0.483
+     "pct": 0.487
     },
     {
      "key": "off_grade_recv",
@@ -206094,7 +205784,7 @@
      "group": "grade",
      "v2025": 61.1,
      "v2024": null,
-     "pct": 0.583
+     "pct": 0.586
     },
     {
      "key": "off_grade_pblk",
@@ -206102,7 +205792,7 @@
      "group": "grade",
      "v2025": 37.2,
      "v2024": null,
-     "pct": 0.222
+     "pct": 0.228
     },
     {
      "key": "off_grade_rblk",
@@ -209268,7 +208958,7 @@
      "group": "grade",
      "v2025": 53.4,
      "v2024": null,
-     "pct": 0.203
+     "pct": 0.202
     },
     {
      "key": "off_grade_pblk",
@@ -214227,7 +213917,7 @@
      "group": "grade",
      "v2025": 81.5,
      "v2024": null,
-     "pct": 0.653
+     "pct": 0.656
     },
     {
      "key": "off_grade_recv",
@@ -214235,7 +213925,7 @@
      "group": "grade",
      "v2025": 57.6,
      "v2024": null,
-     "pct": 0.41
+     "pct": 0.414
     },
     {
      "key": "off_grade_pblk",
@@ -214243,7 +213933,7 @@
      "group": "grade",
      "v2025": 42.3,
      "v2024": null,
-     "pct": 0.321
+     "pct": 0.328
     },
     {
      "key": "off_grade_rblk",
@@ -217412,7 +217102,7 @@
      "group": "grade",
      "v2025": 83.8,
      "v2024": null,
-     "pct": 0.73
+     "pct": 0.732
     },
     {
      "key": "off_grade_recv",
@@ -217420,7 +217110,7 @@
      "group": "grade",
      "v2025": 59.3,
      "v2024": null,
-     "pct": 0.507
+     "pct": 0.51
     },
     {
      "key": "off_grade_pblk",
@@ -217680,7 +217370,7 @@
      "group": "grade",
      "v2025": 79.0,
      "v2024": null,
-     "pct": 0.537
+     "pct": 0.54
     },
     {
      "key": "off_grade_recv",
@@ -217688,7 +217378,7 @@
      "group": "grade",
      "v2025": 61.4,
      "v2024": null,
-     "pct": 0.597
+     "pct": 0.599
     },
     {
      "key": "off_grade_pblk",
@@ -223116,7 +222806,7 @@
      "group": "grade",
      "v2025": 60.9,
      "v2024": null,
-     "pct": 0.591
+     "pct": 0.542
     },
     {
      "key": "off_grade_run",
@@ -223124,7 +222814,7 @@
      "group": "grade",
      "v2025": 74.7,
      "v2024": null,
-     "pct": 0.307
+     "pct": 0.311
     },
     {
      "key": "off_grade_recv",
@@ -223132,7 +222822,7 @@
      "group": "grade",
      "v2025": 56.8,
      "v2024": null,
-     "pct": 0.367
+     "pct": 0.371
     },
     {
      "key": "off_grade_pblk",
@@ -223140,7 +222830,7 @@
      "group": "grade",
      "v2025": 49.1,
      "v2024": null,
-     "pct": 0.434
+     "pct": 0.44
     },
     {
      "key": "off_grade_rblk",
@@ -224175,7 +223865,7 @@
      "group": "grade",
      "v2025": 87.8,
      "v2024": null,
-     "pct": 0.857
+     "pct": 0.858
     },
     {
      "key": "off_grade_recv",
@@ -224183,7 +223873,7 @@
      "group": "grade",
      "v2025": 69.7,
      "v2024": null,
-     "pct": 0.8
+     "pct": 0.801
     },
     {
      "key": "off_grade_pblk",
@@ -224563,7 +224253,7 @@
      "group": "grade",
      "v2025": 61.0,
      "v2024": null,
-     "pct": 0.682
+     "pct": 0.625
     },
     {
      "key": "off_grade_run",
@@ -224571,7 +224261,7 @@
      "group": "grade",
      "v2025": 81.0,
      "v2024": null,
-     "pct": 0.63
+     "pct": 0.632
     },
     {
      "key": "off_grade_recv",
@@ -224587,7 +224277,7 @@
      "group": "grade",
      "v2025": 45.4,
      "v2024": null,
-     "pct": 0.371
+     "pct": 0.377
     },
     {
      "key": "off_grade_rblk",
@@ -227242,7 +226932,7 @@
      "group": "grade",
      "v2025": 78.3,
      "v2024": null,
-     "pct": 0.513
+     "pct": 0.517
     },
     {
      "key": "off_grade_recv",
@@ -227250,7 +226940,7 @@
      "group": "grade",
      "v2025": 58.6,
      "v2024": null,
-     "pct": 0.467
+     "pct": 0.47
     },
     {
      "key": "off_grade_pblk",
@@ -227258,7 +226948,7 @@
      "group": "grade",
      "v2025": 51.0,
      "v2024": null,
-     "pct": 0.467
+     "pct": 0.474
     },
     {
      "key": "off_grade_rblk",
@@ -229781,7 +229471,7 @@
      "group": "grade",
      "v2025": 74.2,
      "v2024": null,
-     "pct": 0.263
+     "pct": 0.268
     },
     {
      "key": "off_grade_recv",
@@ -229789,7 +229479,7 @@
      "group": "grade",
      "v2025": 57.3,
      "v2024": null,
-     "pct": 0.393
+     "pct": 0.397
     },
     {
      "key": "off_grade_pblk",
@@ -229797,7 +229487,7 @@
      "group": "grade",
      "v2025": 60.7,
      "v2024": null,
-     "pct": 0.626
+     "pct": 0.632
     },
     {
      "key": "off_grade_rblk",
@@ -229806,6 +229496,208 @@
      "v2025": 56.6,
      "v2024": null,
      "pct": 0.46
+    }
+   ]
+  },
+  {
+   "name": "Elijah Green",
+   "player_id": "122836",
+   "team": "Sam Houston",
+   "stats_team": null,
+   "conference": "Conference USA",
+   "position": "HB",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 8.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 57.0,
+    "rush_yds": 387.0,
+    "rush_td": 2.0,
+    "targets": 17.0,
+    "receptions": 15.0,
+    "rec_yds": 133.0,
+    "rec_td": 1.0
+   },
+   "games_2025": 8.0,
+   "games_2024": 7.0,
+   "usage": {
+    "rush_share_pct": 17.2,
+    "target_share_pct": 4.8
+   },
+   "game_log": [
+    {
+     "week": 0,
+     "rush_yds": 10.0,
+     "rec_yds": 61.0,
+     "receptions": 7.0,
+     "rush_att": 6.0,
+     "targets": 7.0
+    },
+    {
+     "week": 1,
+     "rush_yds": 36.0,
+     "rec_yds": 18.0,
+     "receptions": 1.0,
+     "rush_att": 8.0,
+     "targets": 2.0
+    },
+    {
+     "week": 2,
+     "rush_yds": 30.0,
+     "rec_yds": 45.0,
+     "receptions": 3.0,
+     "rush_att": 10.0,
+     "targets": 3.0
+    },
+    {
+     "week": 4,
+     "rush_yds": -2.0,
+     "rec_yds": 9.0,
+     "receptions": 1.0,
+     "rush_att": 2.0,
+     "targets": 1.0
+    },
+    {
+     "week": 8,
+     "rush_yds": 6.0,
+     "rec_yds": 0.0,
+     "receptions": 0.0,
+     "rush_att": 5.0,
+     "targets": 1.0
+    },
+    {
+     "week": 10,
+     "rush_yds": 191.0,
+     "rec_yds": 7.0,
+     "receptions": 1.0,
+     "rush_att": 10.0,
+     "targets": 1.0
+    },
+    {
+     "week": 11,
+     "rush_yds": 18.0,
+     "rec_yds": -4.0,
+     "receptions": 1.0,
+     "rush_att": 5.0,
+     "targets": 1.0
+    },
+    {
+     "week": 14,
+     "rush_yds": 98.0,
+     "rec_yds": -3.0,
+     "receptions": 1.0,
+     "rush_att": 11.0,
+     "targets": 1.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 213,
+    "of": 496
+   },
+   "conf_rank": {
+    "rank": 15,
+    "of": 32
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 57.0,
+     "v2024": 29.0,
+     "pct": 0.435
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 387.0,
+     "v2024": 201.0,
+     "pct": 0.573
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 2.0,
+     "v2024": 5.0,
+     "pct": 0.442
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 17.0,
+     "v2024": null,
+     "pct": 0.67
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 15.0,
+     "v2024": null,
+     "pct": 0.704
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 133.0,
+     "v2024": null,
+     "pct": 0.768
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": null,
+     "pct": 0.774
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 6.79,
+     "v2024": 6.93,
+     "pct": 0.923
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 7.82,
+     "v2024": null,
+     "pct": 0.766
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 88.0,
+     "v2024": null,
+     "pct": 0.683
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 17.2,
+     "v2024": null,
+     "pct": 0.531
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 4.8,
+     "v2024": null,
+     "pct": 0.674
     }
    ]
   },
@@ -230047,7 +229939,7 @@
      "group": "grade",
      "v2025": 77.1,
      "v2024": null,
-     "pct": 0.47
+     "pct": 0.474
     },
     {
      "key": "off_grade_recv",
@@ -230055,7 +229947,7 @@
      "group": "grade",
      "v2025": 78.7,
      "v2024": null,
-     "pct": 0.963
+     "pct": 0.964
     },
     {
      "key": "off_grade_pblk",
@@ -232208,7 +232100,7 @@
      "group": "grade",
      "v2025": 75.2,
      "v2024": null,
-     "pct": 0.353
+     "pct": 0.358
     },
     {
      "key": "off_grade_recv",
@@ -232216,7 +232108,7 @@
      "group": "grade",
      "v2025": 57.1,
      "v2024": null,
-     "pct": 0.383
+     "pct": 0.387
     },
     {
      "key": "off_grade_pblk",
@@ -232224,7 +232116,7 @@
      "group": "grade",
      "v2025": 53.8,
      "v2024": null,
-     "pct": 0.513
+     "pct": 0.52
     },
     {
      "key": "off_grade_rblk",
@@ -234827,7 +234719,7 @@
      "group": "grade",
      "v2025": 72.3,
      "v2024": null,
-     "pct": 0.187
+     "pct": 0.185
     },
     {
      "key": "off_grade_recv",
@@ -236068,7 +235960,7 @@
      "group": "grade",
      "v2025": 85.5,
      "v2024": null,
-     "pct": 0.79
+     "pct": 0.791
     },
     {
      "key": "off_grade_recv",
@@ -236076,7 +235968,7 @@
      "group": "grade",
      "v2025": 56.8,
      "v2024": null,
-     "pct": 0.367
+     "pct": 0.371
     },
     {
      "key": "off_grade_pblk",
@@ -241007,7 +240899,7 @@
      "group": "grade",
      "v2025": 73.5,
      "v2024": null,
-     "pct": 0.863
+     "pct": 0.864
     },
     {
      "key": "off_grade_pblk",
@@ -241015,7 +240907,7 @@
      "group": "grade",
      "v2025": 64.6,
      "v2024": null,
-     "pct": 0.689
+     "pct": 0.695
     },
     {
      "key": "off_grade_rblk",
@@ -243302,7 +243194,7 @@
      "group": "grade",
      "v2025": 34.9,
      "v2024": null,
-     "pct": 0.195
+     "pct": 0.202
     },
     {
      "key": "off_grade_rblk",
@@ -244344,187 +244236,6 @@
      "v2025": 20.6,
      "v2024": null,
      "pct": 0.813
-    }
-   ]
-  },
-  {
-   "name": "Josh Johnson",
-   "player_id": "186429",
-   "team": "Southern Miss",
-   "stats_team": "Air Force",
-   "conference": "Mountain West",
-   "position": "QB",
-   "height": "6' 0\"",
-   "weight": "320",
-   "season_2025": {
-    "games": 5.0,
-    "pass_att": 28.0,
-    "pass_yds": 374.0,
-    "pass_td": 4.0,
-    "rush_att": 31.0,
-    "rush_yds": 95.0,
-    "rush_td": 1.0,
-    "targets": null,
-    "receptions": null,
-    "rec_yds": null,
-    "rec_td": null
-   },
-   "games_2025": 5.0,
-   "games_2024": 6.0,
-   "usage": {
-    "rush_share_pct": 4.9,
-    "target_share_pct": null
-   },
-   "game_log": [
-    {
-     "week": 1,
-     "pass_yds": 112.0,
-     "rush_yds": 10.0,
-     "pass_att": 7.0,
-     "rush_att": 3.0
-    },
-    {
-     "week": 3,
-     "pass_yds": 112.0,
-     "rush_yds": 32.0,
-     "pass_att": 9.0,
-     "rush_att": 11.0
-    },
-    {
-     "week": 4,
-     "pass_yds": 0.0,
-     "rush_yds": 6.0,
-     "pass_att": 2.0,
-     "rush_att": 2.0
-    },
-    {
-     "week": 13,
-     "pass_yds": 46.0,
-     "rush_yds": 21.0,
-     "pass_att": 6.0,
-     "rush_att": 6.0
-    },
-    {
-     "week": 14,
-     "pass_yds": 104.0,
-     "rush_yds": 26.0,
-     "pass_att": 4.0,
-     "rush_att": 9.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 194,
-    "of": 255
-   },
-   "conf_rank": {
-    "rank": 14,
-    "of": 21
-   },
-   "metrics": [
-    {
-     "key": "pass_att",
-     "label": "Pass Att",
-     "group": "season",
-     "v2025": 28.0,
-     "v2024": 14.0,
-     "pct": 0.096
-    },
-    {
-     "key": "pass_yds",
-     "label": "Pass Yds",
-     "group": "season",
-     "v2025": 374.0,
-     "v2024": 126.0,
-     "pct": 0.238
-    },
-    {
-     "key": "pass_td",
-     "label": "Pass TD",
-     "group": "season",
-     "v2025": 4.0,
-     "v2024": 1.0,
-     "pct": 0.36
-    },
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 31.0,
-     "v2024": 15.0,
-     "pct": 0.419
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 95.0,
-     "v2024": 96.0,
-     "pct": 0.327
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 0.0,
-     "pct": 0.35
-    },
-    {
-     "key": "ypa",
-     "label": "Yards / Att",
-     "group": "rate",
-     "v2025": 13.36,
-     "v2024": 9.0,
-     "pct": 0.994
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 3.06,
-     "v2024": 6.4,
-     "pct": 0.197
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 4.9,
-     "v2024": null,
-     "pct": 0.26
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 72.2,
-     "v2024": null,
-     "pct": 1.0
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 80.0,
-     "v2024": null,
-     "pct": 1.0
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 49.6,
-     "v2024": null,
-     "pct": 1.0
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 60.0,
-     "v2024": null,
-     "pct": 1.0
     }
    ]
   },
@@ -245969,7 +245680,7 @@
      "group": "grade",
      "v2025": 33.8,
      "v2024": null,
-     "pct": 0.045
+     "pct": 0.042
     },
     {
      "key": "off_grade_run",
@@ -245977,7 +245688,7 @@
      "group": "grade",
      "v2025": 83.9,
      "v2024": null,
-     "pct": 0.74
+     "pct": 0.742
     },
     {
      "key": "off_grade_recv",
@@ -245985,7 +245696,7 @@
      "group": "grade",
      "v2025": 59.7,
      "v2024": null,
-     "pct": 0.543
+     "pct": 0.546
     },
     {
      "key": "off_grade_pblk",
@@ -248189,7 +247900,7 @@
      "group": "grade",
      "v2025": 70.7,
      "v2024": null,
-     "pct": 0.773
+     "pct": 0.792
     },
     {
      "key": "off_grade_run",
@@ -248205,7 +247916,7 @@
      "group": "grade",
      "v2025": 59.2,
      "v2024": null,
-     "pct": 0.497
+     "pct": 0.5
     },
     {
      "key": "off_grade_pblk",
@@ -248213,7 +247924,7 @@
      "group": "grade",
      "v2025": 30.4,
      "v2024": null,
-     "pct": 0.166
+     "pct": 0.172
     },
     {
      "key": "off_grade_rblk",
@@ -250806,7 +250517,7 @@
      "group": "grade",
      "v2025": 82.0,
      "v2024": null,
-     "pct": 0.67
+     "pct": 0.672
     },
     {
      "key": "off_grade_recv",
@@ -250814,7 +250525,7 @@
      "group": "grade",
      "v2025": 65.8,
      "v2024": null,
-     "pct": 0.7
+     "pct": 0.702
     },
     {
      "key": "off_grade_pblk",
@@ -255740,7 +255451,7 @@
      "group": "grade",
      "v2025": 55.9,
      "v2024": null,
-     "pct": 0.313
+     "pct": 0.318
     },
     {
      "key": "off_grade_pblk",
@@ -255748,7 +255459,7 @@
      "group": "grade",
      "v2025": 47.1,
      "v2024": null,
-     "pct": 0.401
+     "pct": 0.407
     },
     {
      "key": "off_grade_rblk",
@@ -255756,7 +255467,7 @@
      "group": "grade",
      "v2025": 64.3,
      "v2024": null,
-     "pct": 0.831
+     "pct": 0.838
     }
    ]
   },
@@ -255996,7 +255707,7 @@
      "group": "grade",
      "v2025": 78.9,
      "v2024": null,
-     "pct": 0.53
+     "pct": 0.533
     },
     {
      "key": "off_grade_recv",
@@ -256012,7 +255723,7 @@
      "group": "grade",
      "v2025": 57.8,
      "v2024": null,
-     "pct": 0.599
+     "pct": 0.606
     },
     {
      "key": "off_grade_rblk",
@@ -256020,7 +255731,7 @@
      "group": "grade",
      "v2025": 66.2,
      "v2024": null,
-     "pct": 0.871
+     "pct": 0.877
     }
    ]
   },
@@ -258404,7 +258115,7 @@
      "group": "grade",
      "v2025": 60.4,
      "v2024": null,
-     "pct": 0.318
+     "pct": 0.292
     },
     {
      "key": "off_grade_run",
@@ -258412,7 +258123,7 @@
      "group": "grade",
      "v2025": 79.4,
      "v2024": null,
-     "pct": 0.543
+     "pct": 0.546
     },
     {
      "key": "off_grade_recv",
@@ -258420,7 +258131,7 @@
      "group": "grade",
      "v2025": 77.1,
      "v2024": null,
-     "pct": 0.933
+     "pct": 0.934
     },
     {
      "key": "off_grade_pblk",
@@ -258428,7 +258139,7 @@
      "group": "grade",
      "v2025": 41.0,
      "v2024": null,
-     "pct": 0.298
+     "pct": 0.305
     },
     {
      "key": "off_grade_rblk",
@@ -258436,7 +258147,7 @@
      "group": "grade",
      "v2025": 62.5,
      "v2024": null,
-     "pct": 0.765
+     "pct": 0.772
     }
    ]
   },
@@ -258983,7 +258694,7 @@
      "group": "grade",
      "v2025": 88.0,
      "v2024": null,
-     "pct": 0.87
+     "pct": 0.871
     },
     {
      "key": "off_grade_recv",
@@ -258991,7 +258702,7 @@
      "group": "grade",
      "v2025": 58.1,
      "v2024": null,
-     "pct": 0.437
+     "pct": 0.44
     },
     {
      "key": "off_grade_pblk",
@@ -258999,7 +258710,7 @@
      "group": "grade",
      "v2025": 48.2,
      "v2024": null,
-     "pct": 0.421
+     "pct": 0.427
     },
     {
      "key": "off_grade_rblk",
@@ -260834,6 +260545,195 @@
    ]
   },
   {
+   "name": "EJ Smith",
+   "player_id": "131782",
+   "team": "Texas A&M",
+   "stats_team": null,
+   "conference": "SEC",
+   "position": "HB",
+   "height": "",
+   "weight": "",
+   "season_2025": {
+    "games": 10.0,
+    "pass_att": null,
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_att": 44.0,
+    "rush_yds": 205.0,
+    "rush_td": 4.0,
+    "targets": 5.0,
+    "receptions": 4.0,
+    "rec_yds": 18.0,
+    "rec_td": 0.0
+   },
+   "games_2025": 10.0,
+   "games_2024": 11.0,
+   "usage": {
+    "rush_share_pct": 9.2,
+    "target_share_pct": 1.3
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "rush_yds": 6.0,
+     "rush_att": 2.0
+    },
+    {
+     "week": 2,
+     "rush_yds": 25.0,
+     "rush_att": 3.0
+    },
+    {
+     "week": 7,
+     "rush_yds": 27.0,
+     "rush_att": 6.0
+    },
+    {
+     "week": 8,
+     "rush_yds": 52.0,
+     "rec_yds": 7.0,
+     "receptions": 1.0,
+     "rush_att": 7.0,
+     "targets": 1.0
+    },
+    {
+     "week": 9,
+     "rush_yds": 5.0,
+     "rush_att": 5.0
+    },
+    {
+     "week": 11,
+     "rush_yds": 24.0,
+     "rush_att": 6.0
+    },
+    {
+     "week": 12,
+     "rush_yds": 25.0,
+     "rec_yds": 2.0,
+     "receptions": 1.0,
+     "rush_att": 7.0,
+     "targets": 1.0
+    },
+    {
+     "week": 14,
+     "rush_yds": 27.0,
+     "rush_att": 4.0
+    },
+    {
+     "week": 16,
+     "rush_yds": 14.0,
+     "rush_att": 4.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 328,
+    "of": 496
+   },
+   "conf_rank": {
+    "rank": 34,
+    "of": 60
+   },
+   "metrics": [
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 44.0,
+     "v2024": 49.0,
+     "pct": 0.346
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 205.0,
+     "v2024": 171.0,
+     "pct": 0.339
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 4.0,
+     "v2024": 0.0,
+     "pct": 0.652
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 5.0,
+     "v2024": 7.0,
+     "pct": 0.263
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 4.0,
+     "v2024": 6.0,
+     "pct": 0.276
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 18.0,
+     "v2024": 22.0,
+     "pct": 0.211
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": 0.0,
+     "pct": 0.331
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 4.66,
+     "v2024": 3.49,
+     "pct": 0.448
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 3.6,
+     "v2024": 3.14,
+     "pct": 0.198
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 80.0,
+     "v2024": 86.0,
+     "pct": 0.48
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 9.2,
+     "v2024": null,
+     "pct": 0.3
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 1.3,
+     "v2024": null,
+     "pct": 0.234
+    }
+   ]
+  },
+  {
    "name": "Jamarion Morrow",
    "player_id": "199997",
    "team": "Texas A&M",
@@ -261458,7 +261358,7 @@
      "group": "grade",
      "v2025": 80.1,
      "v2024": null,
-     "pct": 0.563
+     "pct": 0.566
     },
     {
      "key": "off_grade_recv",
@@ -261466,7 +261366,7 @@
      "group": "grade",
      "v2025": 66.3,
      "v2024": null,
-     "pct": 0.73
+     "pct": 0.732
     },
     {
      "key": "off_grade_pblk",
@@ -261474,7 +261374,7 @@
      "group": "grade",
      "v2025": 47.5,
      "v2024": null,
-     "pct": 0.407
+     "pct": 0.414
     },
     {
      "key": "off_grade_rblk",
@@ -261482,7 +261382,7 @@
      "group": "grade",
      "v2025": 63.4,
      "v2024": null,
-     "pct": 0.798
+     "pct": 0.805
     }
    ]
   },
@@ -263800,243 +263700,6 @@
      "v2025": 3.8,
      "v2024": null,
      "pct": 0.535
-    }
-   ]
-  },
-  {
-   "name": "Jason Patterson",
-   "player_id": "184636",
-   "team": "Texas State",
-   "stats_team": "Kentucky",
-   "conference": "SEC",
-   "position": "HB",
-   "height": "6' 4\"",
-   "weight": "229",
-   "season_2025": {
-    "games": 11.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 57.0,
-    "rush_yds": 225.0,
-    "rush_td": 1.0,
-    "targets": 21.0,
-    "receptions": 17.0,
-    "rec_yds": 85.0,
-    "rec_td": 1.0
-   },
-   "games_2025": 11.0,
-   "games_2024": 4.0,
-   "usage": {
-    "rush_share_pct": 14.1,
-    "target_share_pct": 6.0
-   },
-   "game_log": [
-    {
-     "week": 3,
-     "rush_yds": 80.0,
-     "rec_yds": 9.0,
-     "receptions": 1.0,
-     "rush_att": 13.0,
-     "targets": 1.0
-    },
-    {
-     "week": 5,
-     "rush_yds": 3.0,
-     "rec_yds": 3.0,
-     "receptions": 1.0,
-     "rush_att": 1.0,
-     "targets": 1.0
-    },
-    {
-     "week": 6,
-     "rec_yds": -1.0,
-     "receptions": 2.0,
-     "targets": 2.0
-    },
-    {
-     "week": 8,
-     "rush_yds": 20.0,
-     "rec_yds": 4.0,
-     "receptions": 2.0,
-     "rush_att": 7.0,
-     "targets": 2.0
-    },
-    {
-     "week": 9,
-     "rush_yds": 51.0,
-     "rec_yds": 44.0,
-     "receptions": 7.0,
-     "rush_att": 16.0,
-     "targets": 9.0
-    },
-    {
-     "week": 11,
-     "rush_yds": 21.0,
-     "rec_yds": 15.0,
-     "receptions": 1.0,
-     "rush_att": 7.0,
-     "targets": 1.0
-    },
-    {
-     "week": 12,
-     "rush_yds": 23.0,
-     "rush_att": 4.0
-    },
-    {
-     "week": 13,
-     "rush_yds": 5.0,
-     "rec_yds": 8.0,
-     "receptions": 1.0,
-     "rush_att": 1.0,
-     "targets": 2.0
-    },
-    {
-     "week": 14,
-     "rush_yds": 22.0,
-     "rec_yds": 3.0,
-     "receptions": 2.0,
-     "rush_att": 8.0,
-     "targets": 3.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 316,
-    "of": 496
-   },
-   "conf_rank": {
-    "rank": 30,
-    "of": 60
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 57.0,
-     "v2024": 20.0,
-     "pct": 0.435
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 225.0,
-     "v2024": 111.0,
-     "pct": 0.364
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 0.0,
-     "pct": 0.273
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 21.0,
-     "v2024": 2.0,
-     "pct": 0.786
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 17.0,
-     "v2024": 1.0,
-     "pct": 0.77
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 85.0,
-     "v2024": 15.0,
-     "pct": 0.591
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": 0.0,
-     "pct": 0.774
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 3.95,
-     "v2024": 5.55,
-     "pct": 0.206
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 4.05,
-     "v2024": 7.5,
-     "pct": 0.264
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 81.0,
-     "v2024": 50.0,
-     "pct": 0.514
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 14.1,
-     "v2024": null,
-     "pct": 0.451
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 6.0,
-     "v2024": null,
-     "pct": 0.784
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 74.4,
-     "v2024": null,
-     "pct": 0.625
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 69.6,
-     "v2024": null,
-     "pct": 0.375
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 69.4,
-     "v2024": null,
-     "pct": 0.833
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 87.7,
-     "v2024": null,
-     "pct": 0.875
     }
    ]
   },
@@ -266368,7 +266031,7 @@
      "group": "grade",
      "v2025": 81.3,
      "v2024": null,
-     "pct": 0.643
+     "pct": 0.646
     },
     {
      "key": "off_grade_recv",
@@ -266376,7 +266039,7 @@
      "group": "grade",
      "v2025": 56.6,
      "v2024": null,
-     "pct": 0.343
+     "pct": 0.348
     },
     {
      "key": "off_grade_pblk",
@@ -266384,7 +266047,7 @@
      "group": "grade",
      "v2025": 30.4,
      "v2024": null,
-     "pct": 0.166
+     "pct": 0.172
     },
     {
      "key": "off_grade_rblk",
@@ -271623,7 +271286,7 @@
      "group": "grade",
      "v2025": 62.8,
      "v2024": null,
-     "pct": 0.623
+     "pct": 0.626
     },
     {
      "key": "off_grade_pblk",
@@ -271631,7 +271294,7 @@
      "group": "grade",
      "v2025": 46.1,
      "v2024": null,
-     "pct": 0.381
+     "pct": 0.387
     },
     {
      "key": "off_grade_rblk",
@@ -275528,6 +275191,321 @@
    ]
   },
   {
+   "name": "D.J. McKinney",
+   "player_id": "175620",
+   "team": "Tulsa",
+   "stats_team": "New Mexico",
+   "conference": "Mountain West",
+   "position": "HB",
+   "height": "5' 9\"",
+   "weight": "190",
+   "season_2025": {
+    "games": 12.0,
+    "pass_att": 3.0,
+    "pass_yds": 9.0,
+    "pass_td": 1.0,
+    "rush_att": 108.0,
+    "rush_yds": 466.0,
+    "rush_td": 7.0,
+    "targets": 16.0,
+    "receptions": 14.0,
+    "rec_yds": 156.0,
+    "rec_td": 0.0
+   },
+   "games_2025": 12.0,
+   "games_2024": 11.0,
+   "usage": {
+    "rush_share_pct": 26.9,
+    "target_share_pct": 5.4
+   },
+   "game_log": [
+    {
+     "week": 1,
+     "pass_yds": 9.0,
+     "rush_yds": 5.0,
+     "rec_yds": 1.0,
+     "receptions": 1.0,
+     "pass_att": 1.0,
+     "rush_att": 2.0,
+     "targets": 1.0
+    },
+    {
+     "week": 2,
+     "rush_yds": 45.0,
+     "rec_yds": 7.0,
+     "receptions": 1.0,
+     "rush_att": 7.0,
+     "targets": 1.0
+    },
+    {
+     "week": 3,
+     "rush_yds": 89.0,
+     "rec_yds": 20.0,
+     "receptions": 1.0,
+     "rush_att": 21.0,
+     "targets": 1.0
+    },
+    {
+     "week": 5,
+     "rush_yds": 36.0,
+     "rec_yds": 10.0,
+     "receptions": 2.0,
+     "rush_att": 11.0,
+     "targets": 2.0
+    },
+    {
+     "week": 6,
+     "rush_yds": 11.0,
+     "rec_yds": 0.0,
+     "receptions": 0.0,
+     "rush_att": 4.0,
+     "targets": 1.0
+    },
+    {
+     "week": 7,
+     "pass_yds": 0.0,
+     "rush_yds": 15.0,
+     "pass_att": 2.0,
+     "rush_att": 3.0
+    },
+    {
+     "week": 8,
+     "rush_yds": 39.0,
+     "rec_yds": 43.0,
+     "receptions": 3.0,
+     "rush_att": 8.0,
+     "targets": 3.0
+    },
+    {
+     "week": 9,
+     "rush_yds": 53.0,
+     "rec_yds": 11.0,
+     "receptions": 1.0,
+     "rush_att": 11.0,
+     "targets": 1.0
+    },
+    {
+     "week": 10,
+     "rush_yds": 20.0,
+     "rec_yds": 0.0,
+     "receptions": 1.0,
+     "rush_att": 7.0,
+     "targets": 1.0
+    },
+    {
+     "week": 12,
+     "rush_yds": 52.0,
+     "rec_yds": 57.0,
+     "receptions": 2.0,
+     "rush_att": 17.0,
+     "targets": 2.0
+    },
+    {
+     "week": 13,
+     "rush_yds": 44.0,
+     "rec_yds": 6.0,
+     "receptions": 1.0,
+     "rush_att": 14.0,
+     "targets": 2.0
+    },
+    {
+     "week": 14,
+     "rush_yds": 57.0,
+     "rec_yds": 1.0,
+     "receptions": 1.0,
+     "rush_att": 3.0,
+     "targets": 1.0
+    }
+   ],
+   "this_week": null,
+   "nat_rank": {
+    "rank": 171,
+    "of": 496
+   },
+   "conf_rank": {
+    "rank": 10,
+    "of": 31
+   },
+   "metrics": [
+    {
+     "key": "pass_att",
+     "label": "Pass Att",
+     "group": "season",
+     "v2025": 3.0,
+     "v2024": null,
+     "pct": 0.971
+    },
+    {
+     "key": "pass_yds",
+     "label": "Pass Yds",
+     "group": "season",
+     "v2025": 9.0,
+     "v2024": null,
+     "pct": 0.559
+    },
+    {
+     "key": "pass_td",
+     "label": "Pass TD",
+     "group": "season",
+     "v2025": 1.0,
+     "v2024": null,
+     "pct": 0.794
+    },
+    {
+     "key": "rush_att",
+     "label": "Rush Att",
+     "group": "season",
+     "v2025": 108.0,
+     "v2024": 95.0,
+     "pct": 0.74
+    },
+    {
+     "key": "rush_yds",
+     "label": "Rush Yds",
+     "group": "season",
+     "v2025": 466.0,
+     "v2024": 482.0,
+     "pct": 0.656
+    },
+    {
+     "key": "rush_td",
+     "label": "Rush TD",
+     "group": "season",
+     "v2025": 7.0,
+     "v2024": 3.0,
+     "pct": 0.865
+    },
+    {
+     "key": "targets",
+     "label": "Targets",
+     "group": "season",
+     "v2025": 16.0,
+     "v2024": 14.0,
+     "pct": 0.639
+    },
+    {
+     "key": "receptions",
+     "label": "Receptions",
+     "group": "season",
+     "v2025": 14.0,
+     "v2024": 11.0,
+     "pct": 0.68
+    },
+    {
+     "key": "rec_yds",
+     "label": "Rec Yds",
+     "group": "season",
+     "v2025": 156.0,
+     "v2024": 79.0,
+     "pct": 0.822
+    },
+    {
+     "key": "rec_td",
+     "label": "Rec TD",
+     "group": "season",
+     "v2025": 0.0,
+     "v2024": 0.0,
+     "pct": 0.331
+    },
+    {
+     "key": "ypa",
+     "label": "Yards / Att",
+     "group": "rate",
+     "v2025": 3.0,
+     "v2024": null,
+     "pct": 0.25
+    },
+    {
+     "key": "ypc",
+     "label": "Yards / Carry",
+     "group": "rate",
+     "v2025": 4.31,
+     "v2024": 5.07,
+     "pct": 0.308
+    },
+    {
+     "key": "ypt",
+     "label": "Yards / Target",
+     "group": "rate",
+     "v2025": 9.75,
+     "v2024": 5.64,
+     "pct": 0.875
+    },
+    {
+     "key": "catch_rate",
+     "label": "Catch Rate %",
+     "group": "rate",
+     "v2025": 88.0,
+     "v2024": 79.0,
+     "pct": 0.683
+    },
+    {
+     "key": "rush_share_pct",
+     "label": "Rush Share %",
+     "group": "usage",
+     "v2025": 26.9,
+     "v2024": null,
+     "pct": 0.736
+    },
+    {
+     "key": "target_share_pct",
+     "label": "Target Share %",
+     "group": "usage",
+     "v2025": 5.4,
+     "v2024": null,
+     "pct": 0.737
+    },
+    {
+     "key": "off_grade_off",
+     "label": "PFF Overall",
+     "group": "grade",
+     "v2025": 68.3,
+     "v2024": null,
+     "pct": 0.182
+    },
+    {
+     "key": "off_grade_pass",
+     "label": "PFF Pass",
+     "group": "grade",
+     "v2025": 63.3,
+     "v2024": null,
+     "pct": 0.708
+    },
+    {
+     "key": "off_grade_run",
+     "label": "PFF Run",
+     "group": "grade",
+     "v2025": 72.6,
+     "v2024": null,
+     "pct": 0.202
+    },
+    {
+     "key": "off_grade_recv",
+     "label": "PFF Receiving",
+     "group": "grade",
+     "v2025": 55.5,
+     "v2024": null,
+     "pct": 0.275
+    },
+    {
+     "key": "off_grade_pblk",
+     "label": "PFF Pass Blk",
+     "group": "grade",
+     "v2025": 29.7,
+     "v2024": null,
+     "pct": 0.149
+    },
+    {
+     "key": "off_grade_rblk",
+     "label": "PFF Run Blk",
+     "group": "grade",
+     "v2025": 61.3,
+     "v2024": null,
+     "pct": 0.758
+    }
+   ]
+  },
+  {
    "name": "Dominic Richardson",
    "player_id": "122985",
    "team": "Tulsa",
@@ -275754,240 +275732,6 @@
    ]
   },
   {
-   "name": "Elijah Green",
-   "player_id": "122836",
-   "team": "Tulsa",
-   "stats_team": "Sam Houston",
-   "conference": "Conference USA",
-   "position": "HB",
-   "height": "6' 2\"",
-   "weight": "195",
-   "season_2025": {
-    "games": 8.0,
-    "pass_att": null,
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_att": 57.0,
-    "rush_yds": 387.0,
-    "rush_td": 2.0,
-    "targets": 17.0,
-    "receptions": 15.0,
-    "rec_yds": 133.0,
-    "rec_td": 1.0
-   },
-   "games_2025": 8.0,
-   "games_2024": 7.0,
-   "usage": {
-    "rush_share_pct": 17.2,
-    "target_share_pct": 4.8
-   },
-   "game_log": [
-    {
-     "week": 0,
-     "rush_yds": 10.0,
-     "rec_yds": 61.0,
-     "receptions": 7.0,
-     "rush_att": 6.0,
-     "targets": 7.0
-    },
-    {
-     "week": 1,
-     "rush_yds": 36.0,
-     "rec_yds": 18.0,
-     "receptions": 1.0,
-     "rush_att": 8.0,
-     "targets": 2.0
-    },
-    {
-     "week": 2,
-     "rush_yds": 30.0,
-     "rec_yds": 45.0,
-     "receptions": 3.0,
-     "rush_att": 10.0,
-     "targets": 3.0
-    },
-    {
-     "week": 4,
-     "rush_yds": -2.0,
-     "rec_yds": 9.0,
-     "receptions": 1.0,
-     "rush_att": 2.0,
-     "targets": 1.0
-    },
-    {
-     "week": 8,
-     "rush_yds": 6.0,
-     "rec_yds": 0.0,
-     "receptions": 0.0,
-     "rush_att": 5.0,
-     "targets": 1.0
-    },
-    {
-     "week": 10,
-     "rush_yds": 191.0,
-     "rec_yds": 7.0,
-     "receptions": 1.0,
-     "rush_att": 10.0,
-     "targets": 1.0
-    },
-    {
-     "week": 11,
-     "rush_yds": 18.0,
-     "rec_yds": -4.0,
-     "receptions": 1.0,
-     "rush_att": 5.0,
-     "targets": 1.0
-    },
-    {
-     "week": 14,
-     "rush_yds": 98.0,
-     "rec_yds": -3.0,
-     "receptions": 1.0,
-     "rush_att": 11.0,
-     "targets": 1.0
-    }
-   ],
-   "this_week": null,
-   "nat_rank": {
-    "rank": 213,
-    "of": 496
-   },
-   "conf_rank": {
-    "rank": 15,
-    "of": 32
-   },
-   "metrics": [
-    {
-     "key": "rush_att",
-     "label": "Rush Att",
-     "group": "season",
-     "v2025": 57.0,
-     "v2024": 29.0,
-     "pct": 0.435
-    },
-    {
-     "key": "rush_yds",
-     "label": "Rush Yds",
-     "group": "season",
-     "v2025": 387.0,
-     "v2024": 201.0,
-     "pct": 0.573
-    },
-    {
-     "key": "rush_td",
-     "label": "Rush TD",
-     "group": "season",
-     "v2025": 2.0,
-     "v2024": 5.0,
-     "pct": 0.442
-    },
-    {
-     "key": "targets",
-     "label": "Targets",
-     "group": "season",
-     "v2025": 17.0,
-     "v2024": null,
-     "pct": 0.67
-    },
-    {
-     "key": "receptions",
-     "label": "Receptions",
-     "group": "season",
-     "v2025": 15.0,
-     "v2024": null,
-     "pct": 0.704
-    },
-    {
-     "key": "rec_yds",
-     "label": "Rec Yds",
-     "group": "season",
-     "v2025": 133.0,
-     "v2024": null,
-     "pct": 0.768
-    },
-    {
-     "key": "rec_td",
-     "label": "Rec TD",
-     "group": "season",
-     "v2025": 1.0,
-     "v2024": null,
-     "pct": 0.774
-    },
-    {
-     "key": "ypc",
-     "label": "Yards / Carry",
-     "group": "rate",
-     "v2025": 6.79,
-     "v2024": 6.93,
-     "pct": 0.923
-    },
-    {
-     "key": "ypt",
-     "label": "Yards / Target",
-     "group": "rate",
-     "v2025": 7.82,
-     "v2024": null,
-     "pct": 0.766
-    },
-    {
-     "key": "catch_rate",
-     "label": "Catch Rate %",
-     "group": "rate",
-     "v2025": 88.0,
-     "v2024": null,
-     "pct": 0.683
-    },
-    {
-     "key": "rush_share_pct",
-     "label": "Rush Share %",
-     "group": "usage",
-     "v2025": 17.2,
-     "v2024": null,
-     "pct": 0.531
-    },
-    {
-     "key": "target_share_pct",
-     "label": "Target Share %",
-     "group": "usage",
-     "v2025": 4.8,
-     "v2024": null,
-     "pct": 0.674
-    },
-    {
-     "key": "def_grade_def",
-     "label": "PFF Def Overall",
-     "group": "grade",
-     "v2025": 79.3,
-     "v2024": null,
-     "pct": 0.875
-    },
-    {
-     "key": "def_grade_rdef",
-     "label": "PFF Run Def",
-     "group": "grade",
-     "v2025": 72.2,
-     "v2024": null,
-     "pct": 0.625
-    },
-    {
-     "key": "def_grade_prush",
-     "label": "PFF Pass Rush",
-     "group": "grade",
-     "v2025": 55.4,
-     "v2024": null,
-     "pct": 0.167
-    },
-    {
-     "key": "def_grade_cov",
-     "label": "PFF Coverage",
-     "group": "grade",
-     "v2025": 80.8,
-     "v2024": null,
-     "pct": 0.625
-    }
-   ]
-  },
-  {
    "name": "Trequan Jones",
    "player_id": "204200",
    "team": "Tulsa",
@@ -276210,7 +275954,7 @@
      "group": "grade",
      "v2025": 86.8,
      "v2024": null,
-     "pct": 0.83
+     "pct": 0.831
     },
     {
      "key": "off_grade_recv",
@@ -276218,7 +275962,7 @@
      "group": "grade",
      "v2025": 56.7,
      "v2024": null,
-     "pct": 0.353
+     "pct": 0.358
     },
     {
      "key": "off_grade_pblk",
@@ -276226,7 +275970,7 @@
      "group": "grade",
      "v2025": 65.4,
      "v2024": null,
-     "pct": 0.699
+     "pct": 0.705
     },
     {
      "key": "off_grade_rblk",
@@ -278217,7 +277961,7 @@
      "group": "grade",
      "v2025": 85.1,
      "v2024": null,
-     "pct": 0.777
+     "pct": 0.778
     },
     {
      "key": "off_grade_recv",
@@ -278225,7 +277969,7 @@
      "group": "grade",
      "v2025": 73.8,
      "v2024": null,
-     "pct": 0.87
+     "pct": 0.871
     },
     {
      "key": "off_grade_pblk",
@@ -278696,7 +278440,7 @@
      "group": "grade",
      "v2025": 68.3,
      "v2024": null,
-     "pct": 0.179
+     "pct": 0.182
     },
     {
      "key": "off_grade_run",
@@ -278704,7 +278448,7 @@
      "group": "grade",
      "v2025": 74.1,
      "v2024": null,
-     "pct": 0.257
+     "pct": 0.262
     },
     {
      "key": "off_grade_recv",
@@ -278712,7 +278456,7 @@
      "group": "grade",
      "v2025": 43.3,
      "v2024": null,
-     "pct": 0.057
+     "pct": 0.056
     },
     {
      "key": "off_grade_pblk",
@@ -278720,7 +278464,7 @@
      "group": "grade",
      "v2025": 54.6,
      "v2024": null,
-     "pct": 0.533
+     "pct": 0.54
     },
     {
      "key": "off_grade_rblk",
@@ -283442,7 +283186,7 @@
      "group": "grade",
      "v2025": 70.9,
      "v2024": null,
-     "pct": 0.12
+     "pct": 0.119
     },
     {
      "key": "off_grade_recv",
@@ -283458,7 +283202,7 @@
      "group": "grade",
      "v2025": 47.7,
      "v2024": null,
-     "pct": 0.414
+     "pct": 0.421
     },
     {
      "key": "off_grade_rblk",
@@ -284179,7 +283923,7 @@
      "group": "grade",
      "v2025": 82.4,
      "v2024": null,
-     "pct": 0.697
+     "pct": 0.699
     },
     {
      "key": "off_grade_recv",
@@ -284187,7 +283931,7 @@
      "group": "grade",
      "v2025": 72.9,
      "v2024": null,
-     "pct": 0.857
+     "pct": 0.858
     },
     {
      "key": "off_grade_pblk",
@@ -284195,7 +283939,7 @@
      "group": "grade",
      "v2025": 61.9,
      "v2024": null,
-     "pct": 0.642
+     "pct": 0.649
     },
     {
      "key": "off_grade_rblk",
@@ -286396,7 +286140,7 @@
      "group": "grade",
      "v2025": 77.9,
      "v2024": null,
-     "pct": 0.493
+     "pct": 0.497
     },
     {
      "key": "off_grade_recv",
@@ -286404,7 +286148,7 @@
      "group": "grade",
      "v2025": 61.9,
      "v2024": null,
-     "pct": 0.617
+     "pct": 0.619
     },
     {
      "key": "off_grade_pblk",
@@ -286412,7 +286156,7 @@
      "group": "grade",
      "v2025": 40.7,
      "v2024": null,
-     "pct": 0.268
+     "pct": 0.275
     },
     {
      "key": "off_grade_rblk",
@@ -291339,7 +291083,7 @@
      "group": "grade",
      "v2025": 68.4,
      "v2024": null,
-     "pct": 0.097
+     "pct": 0.096
     },
     {
      "key": "off_grade_recv",
@@ -291347,7 +291091,7 @@
      "group": "grade",
      "v2025": 59.1,
      "v2024": null,
-     "pct": 0.49
+     "pct": 0.493
     },
     {
      "key": "off_grade_pblk",
@@ -294066,7 +293810,7 @@
      "group": "grade",
      "v2025": 68.4,
      "v2024": null,
-     "pct": 0.897
+     "pct": 0.904
     }
    ]
   },
@@ -297250,7 +296994,7 @@
      "group": "grade",
      "v2025": 84.0,
      "v2024": null,
-     "pct": 0.75
+     "pct": 0.752
     },
     {
      "key": "off_grade_recv",
@@ -297258,7 +297002,7 @@
      "group": "grade",
      "v2025": 57.9,
      "v2024": null,
-     "pct": 0.43
+     "pct": 0.434
     },
     {
      "key": "off_grade_pblk",
@@ -301171,7 +300915,7 @@
      "group": "grade",
      "v2025": 89.0,
      "v2024": null,
-     "pct": 0.903
+     "pct": 0.904
     },
     {
      "key": "off_grade_recv",
@@ -301179,7 +300923,7 @@
      "group": "grade",
      "v2025": 68.8,
      "v2024": null,
-     "pct": 0.777
+     "pct": 0.778
     },
     {
      "key": "off_grade_pblk",
@@ -301195,7 +300939,7 @@
      "group": "grade",
      "v2025": 70.0,
      "v2024": null,
-     "pct": 0.924
+     "pct": 0.93
     }
    ]
   },
@@ -303323,7 +303067,7 @@
      "group": "grade",
      "v2025": 80.9,
      "v2024": null,
-     "pct": 0.62
+     "pct": 0.623
     },
     {
      "key": "off_grade_recv",
@@ -303331,7 +303075,7 @@
      "group": "grade",
      "v2025": 47.0,
      "v2024": null,
-     "pct": 0.097
+     "pct": 0.096
     },
     {
      "key": "off_grade_pblk",
@@ -303347,7 +303091,7 @@
      "group": "grade",
      "v2025": 64.3,
      "v2024": null,
-     "pct": 0.831
+     "pct": 0.838
     }
    ]
   },
@@ -303588,7 +303332,7 @@
      "group": "grade",
      "v2025": 85.3,
      "v2024": null,
-     "pct": 0.783
+     "pct": 0.785
     },
     {
      "key": "off_grade_recv",
@@ -303596,7 +303340,7 @@
      "group": "grade",
      "v2025": 59.4,
      "v2024": null,
-     "pct": 0.517
+     "pct": 0.52
     },
     {
      "key": "off_grade_pblk",
@@ -303612,7 +303356,7 @@
      "group": "grade",
      "v2025": 63.9,
      "v2024": null,
-     "pct": 0.805
+     "pct": 0.811
     }
    ]
   },
@@ -305906,7 +305650,7 @@
      "group": "grade",
      "v2025": 76.5,
      "v2024": null,
-     "pct": 0.437
+     "pct": 0.44
     },
     {
      "key": "off_grade_recv",
@@ -305914,7 +305658,7 @@
      "group": "grade",
      "v2025": 71.0,
      "v2024": null,
-     "pct": 0.843
+     "pct": 0.844
     },
     {
      "key": "off_grade_pblk",
@@ -308589,7 +308333,7 @@
      "group": "grade",
      "v2025": 84.8,
      "v2024": null,
-     "pct": 0.77
+     "pct": 0.772
     },
     {
      "key": "off_grade_recv",
@@ -308597,7 +308341,7 @@
      "group": "grade",
      "v2025": 75.2,
      "v2024": null,
-     "pct": 0.89
+     "pct": 0.891
     },
     {
      "key": "off_grade_pblk",
@@ -308605,7 +308349,7 @@
      "group": "grade",
      "v2025": 44.8,
      "v2024": null,
-     "pct": 0.354
+     "pct": 0.361
     },
     {
      "key": "off_grade_rblk",
@@ -308860,7 +308604,7 @@
      "group": "grade",
      "v2025": 79.9,
      "v2024": null,
-     "pct": 0.55
+     "pct": 0.553
     },
     {
      "key": "off_grade_recv",
@@ -308868,7 +308612,7 @@
      "group": "grade",
      "v2025": 67.3,
      "v2024": null,
-     "pct": 0.757
+     "pct": 0.758
     },
     {
      "key": "off_grade_pblk",
@@ -308876,7 +308620,7 @@
      "group": "grade",
      "v2025": 66.0,
      "v2024": null,
-     "pct": 0.722
+     "pct": 0.728
     },
     {
      "key": "off_grade_rblk",
@@ -311426,7 +311170,7 @@
      "group": "grade",
      "v2025": 86.0,
      "v2024": null,
-     "pct": 0.81
+     "pct": 0.811
     },
     {
      "key": "off_grade_recv",
@@ -311434,7 +311178,7 @@
      "group": "grade",
      "v2025": 64.4,
      "v2024": null,
-     "pct": 0.66
+     "pct": 0.662
     },
     {
      "key": "off_grade_pblk",
@@ -311442,7 +311186,7 @@
      "group": "grade",
      "v2025": 59.8,
      "v2024": null,
-     "pct": 0.619
+     "pct": 0.626
     },
     {
      "key": "off_grade_rblk",
@@ -311840,7 +311584,7 @@
      "group": "grade",
      "v2025": 77.9,
      "v2024": null,
-     "pct": 0.493
+     "pct": 0.497
     },
     {
      "key": "off_grade_recv",
@@ -311856,7 +311600,7 @@
      "group": "grade",
      "v2025": 66.0,
      "v2024": null,
-     "pct": 0.722
+     "pct": 0.728
     },
     {
      "key": "off_grade_rblk",
@@ -311864,7 +311608,7 @@
      "group": "grade",
      "v2025": 62.6,
      "v2024": null,
-     "pct": 0.772
+     "pct": 0.778
     }
    ]
   },
@@ -314676,7 +314420,7 @@
      "group": "grade",
      "v2025": 80.1,
      "v2024": null,
-     "pct": 0.563
+     "pct": 0.566
     },
     {
      "key": "off_grade_recv",
@@ -314684,7 +314428,7 @@
      "group": "grade",
      "v2025": 53.0,
      "v2024": null,
-     "pct": 0.197
+     "pct": 0.195
     },
     {
      "key": "off_grade_pblk",
@@ -314692,7 +314436,7 @@
      "group": "grade",
      "v2025": 56.3,
      "v2024": null,
-     "pct": 0.579
+     "pct": 0.586
     },
     {
      "key": "off_grade_rblk",
@@ -315111,7 +314855,7 @@
      "group": "grade",
      "v2025": 58.4,
      "v2024": null,
-     "pct": 0.457
+     "pct": 0.46
     },
     {
      "key": "off_grade_pblk",
@@ -318205,7 +317949,7 @@
      "group": "grade",
      "v2025": 74.8,
      "v2024": null,
-     "pct": 0.317
+     "pct": 0.321
     },
     {
      "key": "off_grade_recv",
@@ -318213,7 +317957,7 @@
      "group": "grade",
      "v2025": 67.0,
      "v2024": null,
-     "pct": 0.743
+     "pct": 0.745
     },
     {
      "key": "off_grade_pblk",
@@ -322629,7 +322373,7 @@
      "group": "grade",
      "v2025": 73.1,
      "v2024": null,
-     "pct": 0.21
+     "pct": 0.215
     },
     {
      "key": "off_grade_recv",
@@ -322637,7 +322381,7 @@
      "group": "grade",
      "v2025": 66.0,
      "v2024": null,
-     "pct": 0.723
+     "pct": 0.725
     },
     {
      "key": "off_grade_pblk",
@@ -322645,7 +322389,7 @@
      "group": "grade",
      "v2025": 55.9,
      "v2024": null,
-     "pct": 0.553
+     "pct": 0.56
     },
     {
      "key": "off_grade_rblk",
@@ -324855,7 +324599,7 @@
      "group": "grade",
      "v2025": 89.4,
      "v2024": null,
-     "pct": 0.91
+     "pct": 0.911
     },
     {
      "key": "off_grade_recv",
@@ -324863,7 +324607,7 @@
      "group": "grade",
      "v2025": 59.6,
      "v2024": null,
-     "pct": 0.533
+     "pct": 0.536
     },
     {
      "key": "off_grade_pblk",
@@ -327968,7 +327712,7 @@
      "group": "grade",
      "v2025": 76.4,
      "v2024": null,
-     "pct": 0.43
+     "pct": 0.434
     },
     {
      "key": "off_grade_recv",
@@ -327976,7 +327720,7 @@
      "group": "grade",
      "v2025": 60.4,
      "v2024": null,
-     "pct": 0.557
+     "pct": 0.56
     },
     {
      "key": "off_grade_pblk",
@@ -330820,7 +330564,7 @@
      "group": "grade",
      "v2025": 82.3,
      "v2024": null,
-     "pct": 0.69
+     "pct": 0.692
     },
     {
      "key": "off_grade_recv",
@@ -330828,7 +330572,7 @@
      "group": "grade",
      "v2025": 57.3,
      "v2024": null,
-     "pct": 0.393
+     "pct": 0.397
     },
     {
      "key": "off_grade_pblk",
@@ -330836,7 +330580,7 @@
      "group": "grade",
      "v2025": 41.5,
      "v2024": null,
-     "pct": 0.308
+     "pct": 0.315
     },
     {
      "key": "off_grade_rblk",
@@ -333227,7 +332971,7 @@
      "group": "grade",
      "v2025": 83.9,
      "v2024": null,
-     "pct": 0.74
+     "pct": 0.742
     },
     {
      "key": "off_grade_recv",
@@ -333235,7 +332979,7 @@
      "group": "grade",
      "v2025": 41.1,
      "v2024": null,
-     "pct": 0.037
+     "pct": 0.036
     },
     {
      "key": "off_grade_pblk",
@@ -333243,7 +332987,7 @@
      "group": "grade",
      "v2025": 40.3,
      "v2024": null,
-     "pct": 0.262
+     "pct": 0.268
     },
     {
      "key": "off_grade_rblk",
@@ -333251,7 +332995,7 @@
      "group": "grade",
      "v2025": 64.5,
      "v2024": null,
-     "pct": 0.851
+     "pct": 0.858
     }
    ]
   },
@@ -333671,7 +333415,7 @@
      "group": "grade",
      "v2025": 58.6,
      "v2024": null,
-     "pct": 0.467
+     "pct": 0.47
     },
     {
      "key": "off_grade_pblk",
@@ -333679,7 +333423,7 @@
      "group": "grade",
      "v2025": 40.8,
      "v2024": null,
-     "pct": 0.281
+     "pct": 0.288
     },
     {
      "key": "off_grade_rblk",
@@ -336378,7 +336122,7 @@
      "group": "grade",
      "v2025": 71.3,
      "v2024": null,
-     "pct": 0.143
+     "pct": 0.142
     },
     {
      "key": "off_grade_recv",
@@ -336386,7 +336130,7 @@
      "group": "grade",
      "v2025": 64.9,
      "v2024": null,
-     "pct": 0.673
+     "pct": 0.675
     },
     {
      "key": "off_grade_pblk",
@@ -336394,7 +336138,7 @@
      "group": "grade",
      "v2025": 61.9,
      "v2024": null,
-     "pct": 0.642
+     "pct": 0.649
     },
     {
      "key": "off_grade_rblk",
@@ -336402,7 +336146,7 @@
      "group": "grade",
      "v2025": 64.3,
      "v2024": null,
-     "pct": 0.831
+     "pct": 0.838
     }
    ]
   },
@@ -337041,7 +336785,7 @@
      "group": "grade",
      "v2025": 75.0,
      "v2024": null,
-     "pct": 0.333
+     "pct": 0.338
     },
     {
      "key": "off_grade_recv",
@@ -337049,7 +336793,7 @@
      "group": "grade",
      "v2025": 77.1,
      "v2024": null,
-     "pct": 0.933
+     "pct": 0.934
     },
     {
      "key": "off_grade_pblk",

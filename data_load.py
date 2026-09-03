@@ -69,6 +69,32 @@ def load_pff(pff2c):
     return players
 
 
+# PFF's own offense position labels for the four skill-position groups
+# (master_crosswalk.csv's "RB", not this project's "HB" -- see
+# build_dfs_page_data.py's DK_SLOT for where that renaming happens
+# downstream). No "FB" observed in the crosswalk (too rare to be graded
+# separately), included anyway for parity with SKILL_POSITIONS elsewhere.
+PFF_SKILL_POSITIONS = {"QB", "RB", "WR", "TE", "FB"}
+
+
+def load_pff_skill_by_pkey(pff2c):
+    """
+    load_pff(), narrowed to offense skill positions and keyed by pkey --
+    the form every "what team is this skill player on THIS year"
+    resolution needs (backtest.py/build.py's canon_tkey, and the DFS/props
+    page builders' displayed team). Plain name-only pkey matching against
+    the FULL crosswalk (all ~2500 players, every position) risks a same-
+    name collision with an unrelated player at another position -- found
+    for real: a defensive back "Jordan Allen" at Houston was overriding a
+    Georgia Tech WR of the same name. Restricting to skill positions here
+    doesn't fully eliminate same-position collisions, but removes the
+    much larger cross-position collision surface (~2100 non-skill rows).
+    Only use load_pff() directly (unfiltered) for something that
+    genuinely needs every position, like build_def_index.
+    """
+    return {p["pkey"]: p for p in load_pff(pff2c) if p.get("position") in PFF_SKILL_POSITIONS}
+
+
 def _to_float(x):
     try:
         return float(str(x).replace(",", ""))

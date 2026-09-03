@@ -106,7 +106,6 @@ def percentile_rank(value, values):
 
 def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
     pff2c, _ = DL.load_team_map()
-    pff = DL.load_pff(pff2c)
     # The season TABLE always compares the two most recent COMPLETE seasons
     # (2025 vs. real 2024), regardless of which season/week the "this week"
     # props section below targets -- there's no played-game data for a
@@ -129,10 +128,12 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     # column tracks each player's CURRENT team, which for a transferred
     # player is already their 2026 destination, not the team their 2025
     # stats were earned on -- requiring a team match here silently dropped
-    # PFF grades for every portal player.
-    pff_by_pkey = {}
-    for p in pff:
-        pff_by_pkey.setdefault(p["pkey"], p)
+    # PFF grades for every portal player. Skill-position-only (see
+    # load_pff_skill_by_pkey) to avoid a same-name collision with an
+    # unrelated player at another position -- found for real: a defensive
+    # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
+    # the same name.
+    pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
 
     # Team volume pools (this season) for usage-share -- every player
     # counts toward the pool, not just the ones that clear MIN_VOLUME.
