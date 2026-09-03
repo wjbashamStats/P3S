@@ -179,6 +179,112 @@ POSITION_GROUPS = [
 ]
 
 
+# ---------- starter matchups (OL+QB+RB vs front-7, WR/TE vs CBs+Safeties) ----------
+# depth_charts.csv's defensive labels vary a LOT by team scheme (a 3-3-5
+# team's "BAN"/"SPUR"/"STAR" hybrid slots vs a plain 4-3 team's "DE"/
+# "MLB"/"CB"), and this project's shared DL._DEPTH_POS_MAP (data_load.py)
+# only ever needed to bucket QB/HB/WR/TE for volume projections -- it has
+# no OL or defensive buckets at all. This is a separate, LOCAL best-effort
+# bucketing built only for this page's starter-vs-starter matchup, not
+# something other builders should inherit. Hybrid EDGE/LB/S tweener spots
+# (SPUR, ROVER, MONEY, VIPER, etc.) are judgment calls, bucketed to
+# whichever side they line up on most often in a modern spread-down front.
+STARTER_POS_MAP = {
+    "QB": "QB",
+    "RB": "RB", "RB-A": "RB", "RB-B": "RB",
+    "LT": "OL", "RT": "OL", "LG": "OL", "RG": "OL", "C": "OL",
+    "QG": "OL", "QT": "OL", "SG": "OL", "ST": "OL",
+    "WR": "WR", "WR-X": "WR", "WR-Z": "WR", "WR-SL": "WR",
+    "WR-H": "WR", "WR-F": "WR", "WR-Y": "WR",
+    "SB": "WR", "SB-A": "WR", "SB-Z": "WR",
+    "TE": "TE", "TE-Y": "TE", "TE-H": "TE",
+    "DE": "DL", "DT": "DL", "NT": "DL", "LDE": "DL", "RDE": "DL",
+    "LDT": "DL", "RDT": "DL", "EDGE": "DL", "JACK": "DL", "RUSH": "DL",
+    "BUCK": "DL", "STUD": "DL", "DOG": "DL", "LEO": "DL", "WOLF": "DL",
+    "CAT": "DL", "CHEET": "DL", "MAXX": "DL",
+    "MLB": "LB", "WLB": "LB", "SLB": "LB", "LOLB": "LB", "ROLB": "LB",
+    "MAC": "LB", "BAN": "LB", "LILB": "LB", "RILB": "LB", "OLB": "LB",
+    "LLB": "LB", "RLB": "LB", "SPUR": "LB", "ROVER": "LB", "MONEY": "LB",
+    "STING": "LB", "JOKER": "LB", "VIPER": "LB", "SPEAR": "LB",
+    "CB": "CB", "LCB": "CB", "RCB": "CB", "FCB": "CB", "BCB": "CB",
+    "NB": "CB", "STAR": "CB", "HUSKY": "CB",
+    "FS": "S", "SS": "S", "BS": "S",
+}
+STARTER_TRENCH_OFF = {"QB", "RB", "OL"}
+STARTER_FRONT7 = {"DL", "LB"}
+STARTER_SKILL_OFF = {"WR", "TE"}
+STARTER_SECONDARY = {"CB", "S"}
+
+
+def load_starter_depth_rows_by_team(depth_chart_path):
+    """team display name -> list of {bucket, depth_rank, name, position}
+    for every row STARTER_POS_MAP recognizes, either side of the ball --
+    the label sets above never overlap between offense/defense so no
+    separate side filter is needed."""
+    from collections import defaultdict
+    out = defaultdict(list)
+    for r in csv.DictReader(open(depth_chart_path)):
+        pos = (r.get("position") or "").strip()
+        bucket = STARTER_POS_MAP.get(pos)
+        if not bucket:
+            continue
+        try:
+            rank = int(r.get("depth_rank"))
+        except (TypeError, ValueError):
+            continue
+        out[r["team"]].append(dict(bucket=bucket, depth_rank=rank, name=r.get("name", ""), position=pos))
+    return out
+
+
+def build_starter_unit(starter_rows_by_team, team_display, buckets, pff_by_pkey, grade_col):
+    """All depth_rank==1 starters at any bucket in `buckets` for this team,
+    joined to their individual PFF grade_col by name (same name-only join
+    pattern as build_position_player). avg is the mean of whichever
+    starters actually resolved a grade -- true freshmen / ungraded snaps
+    are listed with grade=None but excluded from the average, not zeroed."""
+    players = {}
+    for depth_team, rows in starter_rows_by_team.items():
+        n, td = norm(depth_team), norm(team_display)
+        if not (td in n or n in td):
+            continue
+        for row in rows:
+            if row["bucket"] in buckets and row["depth_rank"] == 1:
+                pkey = norm(row["name"])
+                pff = pff_by_pkey.get(pkey)
+                grade = _f(pff.get(grade_col), None) if pff else None
+                players[row["name"]] = dict(name=row["name"], position=row["position"], grade=grade)
+    plist = sorted(players.values(), key=lambda p: (p["position"], p["name"]))
+    graded = [p["grade"] for p in plist if p["grade"] is not None]
+    avg = round(sum(graded) / len(graded), 1) if graded else None
+    return dict(players=plist, avg=avg)
+
+
+def build_starter_matchups(starter_rows_by_team, home_team, away_team, pff_by_pkey):
+    """Two units per game, each shown both directions:
+      trenches: starting 5 OL + QB + RB (off_grade_off, each player's
+        overall PFF grade) vs the opponent's starting front 7 -- DL + LB
+        (def_grade_def, overall).
+      skill: starting WR/TE (off_grade_recv) vs the opponent's starting
+        CBs + Safeties (def_grade_cov) -- receiving grade vs coverage
+        grade specifically, since that's the actual matchup."""
+    def entry(off_team, def_team, off_buckets, off_col, def_buckets, def_col):
+        off_unit = build_starter_unit(starter_rows_by_team, off_team, off_buckets, pff_by_pkey, off_col)
+        def_unit = build_starter_unit(starter_rows_by_team, def_team, def_buckets, pff_by_pkey, def_col)
+        return dict(off_team=off_team, def_team=def_team,
+                    off_players=off_unit["players"], def_players=def_unit["players"],
+                    off_avg=off_unit["avg"], def_avg=def_unit["avg"])
+    return dict(
+        trenches=[
+            entry(home_team, away_team, STARTER_TRENCH_OFF, "off_grade_off", STARTER_FRONT7, "def_grade_def"),
+            entry(away_team, home_team, STARTER_TRENCH_OFF, "off_grade_off", STARTER_FRONT7, "def_grade_def"),
+        ],
+        skill=[
+            entry(home_team, away_team, STARTER_SKILL_OFF, "off_grade_recv", STARTER_SECONDARY, "def_grade_cov"),
+            entry(away_team, home_team, STARTER_SKILL_OFF, "off_grade_recv", STARTER_SECONDARY, "def_grade_cov"),
+        ],
+    )
+
+
 def load_depth_rows_by_team(depth_chart_path):
     """team display name (ourlads' own, WITH mascot) -> list of offense
     rows -- raw, not aggregated, since a position bucket can have more
@@ -298,6 +404,7 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
     net_rp_rank = rank_by_value(ratings_raw, "NetRP")
 
     depth_rows_by_team = load_depth_rows_by_team(depth_chart_path)
+    starter_rows_by_team = load_starter_depth_rows_by_team(depth_chart_path)
     grades_by_team = DL.load_team_grades(team_grades_path)
     pff2c, _ = DL.load_team_map()
     pff_rows = DL.load_pff(pff2c)
@@ -361,6 +468,7 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                 away_grades=match_team_grades(grades_by_team, ra.get("Team", away_team)),
                 home_positions={g["key"]: build_position_player(depth_rows_by_team, home_team, g, pff_by_pkey, season_by_pkey) for g in POSITION_GROUPS},
                 away_positions={g["key"]: build_position_player(depth_rows_by_team, away_team, g, pff_by_pkey, season_by_pkey) for g in POSITION_GROUPS},
+                starter_matchups=build_starter_matchups(starter_rows_by_team, home_team, away_team, pff_by_pkey),
             )
         out.append(row)
 
