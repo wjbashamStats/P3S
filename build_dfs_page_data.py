@@ -45,7 +45,18 @@ DK_SCORING = dict(
     rec_yds=0.1, rec_td=6, reception=0.5,
 )
 
-MIN_VOLUME = dict(pass_att=15, rush_att=8, targets=5)
+# This week's post-adjustment per-game volume floor -- separate from (and
+# lower than) config.MIN_PRIOR_VOLUME, which already screens for an
+# adequate SEASON sample before backtest.py will project a player at all.
+# This one exists to keep token garbage-time players out of the pool, not
+# to re-litigate whether a real complementary piece belongs. Lowered from
+# (15, 8, 5): the original targets=5 floor was catching real, salaried
+# WR2/WR3-type players in a tough single-week matchup -- e.g. Bryant Wesco
+# Jr. (Clemson), 44 targets/31 catches/537 yards across 7 games (a clear
+# #2 WR), fell to 3.25 projected targets this week (Clemson at LSU, a
+# meaningfully tougher matchup than his average game) and was excluded
+# entirely despite being real and FanDuel-salaried.
+MIN_VOLUME = dict(pass_att=8, rush_att=3, targets=2)
 
 
 def norm(s):
