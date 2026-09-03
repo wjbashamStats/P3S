@@ -152,26 +152,6 @@
    }
   },
   {
-   "name": "Jeremiyah Love",
-   "team": "Notre Dame",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Wisconsin Badgers @ Notre Dame Fighting Irish",
-   "opponent": "wisconsin",
-   "team_implied": 34.0,
-   "team_spread": -20.5,
-   "proj_fp": 40.47,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 140.6,
-    "rush_td": 3.37,
-    "rec_yds": 29.8,
-    "rec_td": 0.3,
-    "receptions": 2.8
-   }
-  },
-  {
    "name": "Liam Szarka",
    "team": "Air Force",
    "position": "QB",
@@ -366,26 +346,6 @@
     "pass_td": 1.75,
     "rush_yds": 89.2,
     "rush_td": 1.75,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Haynes King",
-   "team": "Georgia Tech",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Colorado Buffaloes @ Georgia Tech Yellow Jackets",
-   "opponent": "colorado",
-   "team_implied": 28.5,
-   "team_spread": -6.5,
-   "proj_fp": 34.8,
-   "proj": {
-    "pass_yds": 242.4,
-    "pass_td": 1.14,
-    "rush_yds": 106.6,
-    "rush_td": 1.65,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null

@@ -52,6 +52,30 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
+def load_excluded_players(path="dfs_excluded_players.csv"):
+    """
+    dfs_excluded_players.csv -- hand-curated list of skill players who show
+    up in player_season_totals.csv (prior season) but are confirmed gone
+    for the current season (early NFL draft declaration, graduation,
+    portal transfer out of FBS, etc). See the norm(raw_name) check in
+    build() for why this is a manual list rather than a depth-chart
+    cross-reference. Keyed by norm(name). Returns {} if the file doesn't
+    exist (fully opt-in).
+    """
+    import os
+    out = set()
+    if not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        key = norm(r.get("name", ""))
+        if key:
+            out.add(key)
+    return out
+
+
+EXCLUDED_PLAYERS = load_excluded_players()
+
+
 def dk_points(pass_yds, pass_td, rush_yds, rush_td, rec_yds, rec_td, receptions):
     return round(
         (pass_yds or 0) * DK_SCORING["pass_yds"] + (pass_td or 0) * DK_SCORING["pass_td"]
@@ -140,6 +164,24 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
             continue
 
         raw_name = r.get("player") or pkey
+
+        # player_season_totals.csv is prior-year (season-1) participation --
+        # it has no idea who graduated, transferred out, or declared for
+        # the draft since. Tried cross-referencing depth_charts.csv (the
+        # current-season Ourlads scrape) and rejecting anyone absent from
+        # it entirely, but that scrape is too incomplete to use that way:
+        # spot-checking 2025's 119 qualifying-volume QBs, 45 (38%) are
+        # missing from depth_charts.csv despite clearly still being 2026
+        # starters (Carson Beck, Fernando Mendoza, Diego Pavia, Garrett
+        # Nussmeier, Cade Klubnik, ...) -- a blanket absence filter would
+        # have stripped most of the league's real QB1s along with the
+        # handful of genuinely departed players. EXCLUDED_PLAYERS is a
+        # small hand-curated list instead (same opt-in-correction pattern
+        # as depth_chart_overrides.csv): add a name there only once
+        # confirmed gone (transferred out, graduated, drafted).
+        if norm(raw_name) in EXCLUDED_PLAYERS:
+            continue
+
         canon_tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
         team_c = pff2c.get(norm(r.get("team", "")), r.get("team", ""))
         if canon_tkey not in matchup_cache:
