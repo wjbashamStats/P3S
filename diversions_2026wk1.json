@@ -38,28 +38,28 @@
      "explosiveness": 127.0,
      "havoc": 5.0,
      "finishing_drives": 2.0,
-     "tarp": 9.0
+     "field_position": 49.5
     },
     "home_def": {
      "success_rate": 10.0,
      "explosiveness": 1.0,
      "havoc": 38.0,
      "finishing_drives": 6.0,
-     "tarp": 9.0
+     "field_position": 10.0
     },
     "away_off": {
      "success_rate": 136.0,
      "explosiveness": 30.0,
      "havoc": 135.0,
      "finishing_drives": 132.0,
-     "tarp": 105.0
+     "field_position": 103.5
     },
     "away_def": {
      "success_rate": 113.0,
      "explosiveness": 76.0,
      "havoc": 105.5,
      "finishing_drives": 59.0,
-     "tarp": 105.0
+     "field_position": 124.0
     }
    },
    "home_power": {
@@ -73,7 +73,7 @@
     "ats_rank": 2.0,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 27.0132062,
+    "seconds_per_play": 24.0721003,
     "tempo_rank": 11.0
    },
    "away_power": {
@@ -87,7 +87,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 16.1679813,
+    "seconds_per_play": 30.7617896,
     "tempo_rank": 132.0
    },
    "home_grades": {
@@ -557,28 +557,28 @@
      "explosiveness": 28.0,
      "havoc": 130.0,
      "finishing_drives": 134.0,
-     "tarp": 15.0
+     "field_position": 127.0
     },
     "home_def": {
      "success_rate": 75.0,
      "explosiveness": 23.0,
      "havoc": 62.5,
      "finishing_drives": 27.0,
-     "tarp": 15.0
+     "field_position": 93.5
     },
     "away_off": {
      "success_rate": 132.0,
      "explosiveness": 17.0,
      "havoc": 118.5,
      "finishing_drives": 97.0,
-     "tarp": 22.0
+     "field_position": 87.0
     },
     "away_def": {
      "success_rate": 109.0,
      "explosiveness": 67.0,
      "havoc": 109.5,
      "finishing_drives": 123.0,
-     "tarp": 22.0
+     "field_position": 126.0
     }
    },
    "home_power": {
@@ -592,7 +592,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 21.5294924,
+    "seconds_per_play": 26.4294049,
     "tempo_rank": 53.0
    },
    "away_power": {
@@ -606,7 +606,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 17.6610224,
+    "seconds_per_play": 26.1993865,
     "tempo_rank": 45.0
    },
    "home_grades": {
@@ -1081,28 +1081,28 @@
      "explosiveness": 60.0,
      "havoc": 100.0,
      "finishing_drives": 68.0,
-     "tarp": 36.0
+     "field_position": 119.5
     },
     "home_def": {
      "success_rate": 62.5,
      "explosiveness": 34.0,
      "havoc": 60.0,
      "finishing_drives": 60.0,
-     "tarp": 36.0
+     "field_position": 86.0
     },
     "away_off": {
      "success_rate": 85.0,
      "explosiveness": 115.0,
      "havoc": 79.5,
      "finishing_drives": 125.0,
-     "tarp": 1.0
+     "field_position": 129.0
     },
     "away_def": {
      "success_rate": 135.0,
      "explosiveness": 15.0,
      "havoc": 130.5,
      "finishing_drives": 133.0,
-     "tarp": 1.0
+     "field_position": 113.0
     }
    },
    "home_power": {
@@ -1116,7 +1116,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.455,
     "over_rank": 85.0,
-    "seconds_per_play": 23.6746323,
+    "seconds_per_play": 26.0634615,
     "tempo_rank": 41.0
    },
    "away_power": {
@@ -1130,7 +1130,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 18.72992,
+    "seconds_per_play": 27.2016129,
     "tempo_rank": 70.0
    },
    "home_grades": {
@@ -1605,28 +1605,28 @@
      "explosiveness": 99.0,
      "havoc": 10.0,
      "finishing_drives": 3.0,
-     "tarp": 22.0
+     "field_position": 16.5
     },
     "home_def": {
      "success_rate": 5.0,
      "explosiveness": 110.0,
      "havoc": 1.0,
      "finishing_drives": 1.0,
-     "tarp": 22.0
+     "field_position": 22.0
     },
     "away_off": {
      "success_rate": 3.0,
      "explosiveness": 33.0,
      "havoc": 6.5,
      "finishing_drives": 1.0,
-     "tarp": 131.0
+     "field_position": 5.0
     },
     "away_def": {
      "success_rate": 74.0,
      "explosiveness": 57.0,
      "havoc": 100.5,
      "finishing_drives": 95.0,
-     "tarp": 131.0
+     "field_position": 56.0
     }
    },
    "home_power": {
@@ -1640,7 +1640,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 31.6892979,
+    "seconds_per_play": 25.3386076,
     "tempo_rank": 27.0
    },
    "away_power": {
@@ -1654,7 +1654,7 @@
     "ats_rank": 3.5,
     "over_pct": 0.75,
     "over_rank": 3.0,
-    "seconds_per_play": 36.4873223,
+    "seconds_per_play": 24.0057804,
     "tempo_rank": 9.0
    },
    "home_grades": {
@@ -2124,28 +2124,28 @@
      "explosiveness": 56.0,
      "havoc": 104.0,
      "finishing_drives": 106.0,
-     "tarp": 53.0
+     "field_position": 114.0
     },
     "home_def": {
      "success_rate": 84.0,
      "explosiveness": 46.0,
      "havoc": 123.0,
      "finishing_drives": 78.0,
-     "tarp": 53.0
+     "field_position": 135.0
     },
     "away_off": {
      "success_rate": 133.0,
      "explosiveness": 113.0,
      "havoc": 127.0,
      "finishing_drives": 126.0,
-     "tarp": 13.0
+     "field_position": 132.5
     },
     "away_def": {
      "success_rate": 108.0,
      "explosiveness": 122.0,
      "havoc": 82.5,
      "finishing_drives": 98.0,
-     "tarp": 13.0
+     "field_position": 118.0
     }
    },
    "home_power": {
@@ -2159,7 +2159,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 27.7234863,
+    "seconds_per_play": 24.9808126,
     "tempo_rank": 21.0
    },
    "away_power": {
@@ -2173,7 +2173,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 18.0930847,
+    "seconds_per_play": 28.2665848,
     "tempo_rank": 97.0
    },
    "home_grades": {
@@ -2643,28 +2643,28 @@
      "explosiveness": 32.0,
      "havoc": 38.0,
      "finishing_drives": 8.5,
-     "tarp": 133.0
+     "field_position": 63.5
     },
     "home_def": {
      "success_rate": 31.0,
      "explosiveness": 112.0,
      "havoc": 53.0,
      "finishing_drives": 31.0,
-     "tarp": 133.0
+     "field_position": 78.5
     },
     "away_off": {
      "success_rate": 80.0,
      "explosiveness": 34.0,
      "havoc": 79.5,
      "finishing_drives": 32.0,
-     "tarp": 39.0
+     "field_position": 44.5
     },
     "away_def": {
      "success_rate": 66.0,
      "explosiveness": 81.0,
      "havoc": 44.0,
      "finishing_drives": 40.0,
-     "tarp": 39.0
+     "field_position": 98.0
     }
    },
    "home_power": {
@@ -2678,7 +2678,7 @@
     "ats_rank": 11.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 36.7474387,
+    "seconds_per_play": 26.543257,
     "tempo_rank": 57.0
    },
    "away_power": {
@@ -2692,7 +2692,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.546,
     "over_rank": 48.0,
-    "seconds_per_play": 26.6569832,
+    "seconds_per_play": 27.3054546,
     "tempo_rank": 75.0
    },
    "home_grades": {
@@ -3162,28 +3162,28 @@
      "explosiveness": 84.0,
      "havoc": 84.0,
      "finishing_drives": 89.0,
-     "tarp": 42.0
+     "field_position": 91.5
     },
     "home_def": {
      "success_rate": 47.0,
      "explosiveness": 128.0,
      "havoc": 28.0,
      "finishing_drives": 93.0,
-     "tarp": 42.0
+     "field_position": 120.0
     },
     "away_off": {
      "success_rate": 123.0,
      "explosiveness": 53.0,
      "havoc": 117.0,
      "finishing_drives": 62.0,
-     "tarp": 66.0
+     "field_position": 38.0
     },
     "away_def": {
      "success_rate": 124.0,
      "explosiveness": 78.0,
      "havoc": 86.5,
      "finishing_drives": 67.0,
-     "tarp": 66.0
+     "field_position": 115.5
     }
    },
    "home_power": {
@@ -3197,7 +3197,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 24.5092489,
+    "seconds_per_play": 25.5125495,
     "tempo_rank": 32.0
    },
    "away_power": {
@@ -3211,7 +3211,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.636,
     "over_rank": 21.0,
-    "seconds_per_play": 22.2332774,
+    "seconds_per_play": 27.8609866,
     "tempo_rank": 87.0
    },
    "home_grades": {
@@ -3681,28 +3681,28 @@
      "explosiveness": 54.0,
      "havoc": 18.0,
      "finishing_drives": 30.0,
-     "tarp": 90.0
+     "field_position": 16.5
     },
     "home_def": {
      "success_rate": 17.0,
      "explosiveness": 62.0,
      "havoc": 18.0,
      "finishing_drives": 22.0,
-     "tarp": 90.0
+     "field_position": 40.0
     },
     "away_off": {
      "success_rate": 23.0,
      "explosiveness": 120.0,
      "havoc": 16.5,
      "finishing_drives": 38.0,
-     "tarp": 130.0
+     "field_position": 56.0
     },
     "away_def": {
      "success_rate": 18.0,
      "explosiveness": 88.0,
      "havoc": 14.0,
      "finishing_drives": 25.0,
-     "tarp": 130.0
+     "field_position": 90.5
     }
    },
    "home_power": {
@@ -3716,7 +3716,7 @@
     "ats_rank": 11.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 23.5712535,
+    "seconds_per_play": 28.5396189,
     "tempo_rank": 103.0
    },
    "away_power": {
@@ -3730,7 +3730,7 @@
     "ats_rank": 34.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 32.5778626,
+    "seconds_per_play": 27.0238379,
     "tempo_rank": 65.0
    },
    "home_grades": {
@@ -4200,28 +4200,28 @@
      "explosiveness": 18.0,
      "havoc": 58.5,
      "finishing_drives": 51.0,
-     "tarp": 32.0
+     "field_position": 71.5
     },
     "home_def": {
      "success_rate": 54.0,
      "explosiveness": 33.0,
      "havoc": 72.0,
      "finishing_drives": 107.0,
-     "tarp": 32.0
+     "field_position": 107.0
     },
     "away_off": {
      "success_rate": 63.0,
      "explosiveness": 8.0,
      "havoc": 102.5,
      "finishing_drives": 54.0,
-     "tarp": 29.0
+     "field_position": 103.5
     },
     "away_def": {
      "success_rate": 43.0,
      "explosiveness": 51.0,
      "havoc": 10.0,
      "finishing_drives": 9.5,
-     "tarp": 29.0
+     "field_position": 98.0
     }
    },
    "home_power": {
@@ -4235,7 +4235,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 32.2156334,
+    "seconds_per_play": 29.6424802,
     "tempo_rank": 123.0
    },
    "away_power": {
@@ -4249,7 +4249,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 29.8722775,
+    "seconds_per_play": 26.3651163,
     "tempo_rank": 50.0
    },
    "home_grades": {
@@ -4719,28 +4719,28 @@
      "explosiveness": 19.0,
      "havoc": 71.5,
      "finishing_drives": 28.0,
-     "tarp": 97.0
+     "field_position": 22.0
     },
     "home_def": {
      "success_rate": 99.0,
      "explosiveness": 121.0,
      "havoc": 28.0,
      "finishing_drives": 131.0,
-     "tarp": 97.0
+     "field_position": 46.5
     },
     "away_off": {
      "success_rate": 40.0,
      "explosiveness": 91.0,
      "havoc": 20.5,
      "finishing_drives": 52.0,
-     "tarp": 119.0
+     "field_position": 2.0
     },
     "away_def": {
      "success_rate": 96.0,
      "explosiveness": 32.0,
      "havoc": 57.0,
      "finishing_drives": 63.0,
-     "tarp": 119.0
+     "field_position": 29.0
     }
    },
    "home_power": {
@@ -4754,7 +4754,7 @@
     "ats_rank": 78.5,
     "over_pct": 0.75,
     "over_rank": 3.0,
-    "seconds_per_play": 28.1773661,
+    "seconds_per_play": 28.7007078,
     "tempo_rank": 106.0
    },
    "away_power": {
@@ -4768,7 +4768,7 @@
     "ats_rank": 78.5,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 26.7900325,
+    "seconds_per_play": 24.0352823,
     "tempo_rank": 10.0
    },
    "home_grades": {
@@ -5238,28 +5238,28 @@
      "explosiveness": 135.0,
      "havoc": 8.0,
      "finishing_drives": 27.0,
-     "tarp": 101.0
+     "field_position": 8.0
     },
     "home_def": {
      "success_rate": 41.0,
      "explosiveness": 2.0,
      "havoc": 44.0,
      "finishing_drives": 33.0,
-     "tarp": 101.0
+     "field_position": 27.0
     },
     "away_off": {
      "success_rate": 131.0,
      "explosiveness": 67.0,
      "havoc": 34.5,
      "finishing_drives": 122.0,
-     "tarp": 39.0
+     "field_position": 117.0
     },
     "away_def": {
      "success_rate": 111.0,
      "explosiveness": 24.0,
      "havoc": 132.0,
      "finishing_drives": 50.5,
-     "tarp": 39.0
+     "field_position": 125.0
     }
    },
    "home_power": {
@@ -5273,7 +5273,7 @@
     "ats_rank": 11.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 20.1987717,
+    "seconds_per_play": 28.0184582,
     "tempo_rank": 92.0
    },
    "away_power": {
@@ -5287,7 +5287,7 @@
     "ats_rank": 131.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 17.8352602,
+    "seconds_per_play": 29.1890411,
     "tempo_rank": 116.0
    },
    "home_grades": {
@@ -5752,28 +5752,28 @@
      "explosiveness": 93.0,
      "havoc": 107.5,
      "finishing_drives": 133.0,
-     "tarp": 101.0
+     "field_position": 42.0
     },
     "home_def": {
      "success_rate": 86.0,
      "explosiveness": 37.0,
      "havoc": 96.5,
      "finishing_drives": 108.0,
-     "tarp": 101.0
+     "field_position": 40.0
     },
     "away_off": {
      "success_rate": 47.0,
      "explosiveness": 111.0,
      "havoc": 53.5,
      "finishing_drives": 34.0,
-     "tarp": 122.0
+     "field_position": 111.0
     },
     "away_def": {
      "success_rate": 19.0,
      "explosiveness": 113.0,
      "havoc": 75.0,
      "finishing_drives": 11.0,
-     "tarp": 122.0
+     "field_position": 82.0
     }
    },
    "home_power": {
@@ -5787,7 +5787,7 @@
     "ats_rank": 78.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 17.1771408,
+    "seconds_per_play": 27.5950119,
     "tempo_rank": 83.0
    },
    "away_power": {
@@ -5801,7 +5801,7 @@
     "ats_rank": 7.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 28.9951982,
+    "seconds_per_play": 24.3495935,
     "tempo_rank": 13.0
    },
    "home_grades": {
@@ -6271,28 +6271,28 @@
      "explosiveness": 1.0,
      "havoc": 41.5,
      "finishing_drives": 6.0,
-     "tarp": 32.0
+     "field_position": 12.0
     },
     "home_def": {
      "success_rate": 15.0,
      "explosiveness": 64.0,
      "havoc": 22.0,
      "finishing_drives": 7.0,
-     "tarp": 32.0
+     "field_position": 13.5
     },
     "away_off": {
      "success_rate": 124.0,
      "explosiveness": 102.0,
      "havoc": 120.5,
      "finishing_drives": 135.0,
-     "tarp": 1.0
+     "field_position": 91.5
     },
     "away_def": {
      "success_rate": 115.0,
      "explosiveness": 11.0,
      "havoc": 120.0,
      "finishing_drives": 26.0,
-     "tarp": 1.0
+     "field_position": 70.0
     }
    },
    "home_power": {
@@ -6306,7 +6306,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 31.4523089,
+    "seconds_per_play": 27.5944976,
     "tempo_rank": 82.0
    },
    "away_power": {
@@ -6320,7 +6320,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.167,
     "over_rank": 135.0,
-    "seconds_per_play": 14.2264852,
+    "seconds_per_play": 27.462141,
     "tempo_rank": 77.0
    },
    "home_grades": {
@@ -6795,28 +6795,28 @@
      "explosiveness": 104.0,
      "havoc": 67.5,
      "finishing_drives": 29.0,
-     "tarp": 47.0
+     "field_position": 34.5
     },
     "home_def": {
      "success_rate": 116.0,
      "explosiveness": 25.0,
      "havoc": 75.0,
      "finishing_drives": 121.0,
-     "tarp": 47.0
+     "field_position": 64.5
     },
     "away_off": {
      "success_rate": 59.0,
      "explosiveness": 38.0,
      "havoc": 67.5,
      "finishing_drives": 81.0,
-     "tarp": 94.0
+     "field_position": 73.0
     },
     "away_def": {
      "success_rate": 133.0,
      "explosiveness": 86.0,
      "havoc": 130.5,
      "finishing_drives": 135.0,
-     "tarp": 94.0
+     "field_position": 136.0
     }
    },
    "home_power": {
@@ -6830,7 +6830,7 @@
     "ats_rank": 34.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 23.3079043,
+    "seconds_per_play": 27.5776596,
     "tempo_rank": 81.0
    },
    "away_power": {
@@ -6844,7 +6844,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 25.2984453,
+    "seconds_per_play": 26.3483871,
     "tempo_rank": 49.0
    },
    "home_grades": {
@@ -7314,28 +7314,28 @@
      "explosiveness": 97.0,
      "havoc": 115.5,
      "finishing_drives": 64.0,
-     "tarp": 105.0
+     "field_position": 117.0
     },
     "home_def": {
      "success_rate": 112.0,
      "explosiveness": 27.0,
      "havoc": 111.0,
      "finishing_drives": 94.0,
-     "tarp": 105.0
+     "field_position": 121.5
     },
     "away_off": {
      "success_rate": 43.0,
      "explosiveness": 76.0,
      "havoc": 12.5,
      "finishing_drives": 58.0,
-     "tarp": 131.0
+     "field_position": 24.0
     },
     "away_def": {
      "success_rate": 4.0,
      "explosiveness": 14.0,
      "havoc": 7.0,
      "finishing_drives": 3.0,
-     "tarp": 131.0
+     "field_position": 35.0
     }
    },
    "home_power": {
@@ -7349,7 +7349,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 21.7838694,
+    "seconds_per_play": 28.8946667,
     "tempo_rank": 112.0
    },
    "away_power": {
@@ -7363,7 +7363,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 28.4630054,
+    "seconds_per_play": 29.1797432,
     "tempo_rank": 115.0
    },
    "home_grades": {
@@ -7833,28 +7833,28 @@
      "explosiveness": 131.0,
      "havoc": 65.0,
      "finishing_drives": 45.0,
-     "tarp": 9.0
+     "field_position": 103.5
     },
     "home_def": {
      "success_rate": 90.0,
      "explosiveness": 65.0,
      "havoc": 93.5,
      "finishing_drives": 53.5,
-     "tarp": 9.0
+     "field_position": 104.0
     },
     "away_off": {
      "success_rate": 97.0,
      "explosiveness": 7.0,
      "havoc": 112.5,
      "finishing_drives": 92.0,
-     "tarp": 29.0
+     "field_position": 38.0
     },
     "away_def": {
      "success_rate": 101.0,
      "explosiveness": 99.0,
      "havoc": 107.5,
      "finishing_drives": 132.0,
-     "tarp": 29.0
+     "field_position": 131.0
     }
    },
    "home_power": {
@@ -7868,7 +7868,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 22.2150059,
+    "seconds_per_play": 28.6948357,
     "tempo_rank": 105.0
    },
    "away_power": {
@@ -7882,7 +7882,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 31.264129,
+    "seconds_per_play": 27.0732293,
     "tempo_rank": 66.0
    },
    "home_grades": {
@@ -8362,28 +8362,28 @@
      "explosiveness": 37.0,
      "havoc": 3.5,
      "finishing_drives": 25.0,
-     "tarp": 1.0
+     "field_position": 38.0
     },
     "home_def": {
      "success_rate": 14.0,
      "explosiveness": 13.0,
      "havoc": 24.5,
      "finishing_drives": 77.0,
-     "tarp": 1.0
+     "field_position": 15.5
     },
     "away_off": {
      "success_rate": 81.0,
      "explosiveness": 40.0,
      "havoc": 53.5,
      "finishing_drives": 67.0,
-     "tarp": 78.0
+     "field_position": 25.5
     },
     "away_def": {
      "success_rate": 8.0,
      "explosiveness": 133.0,
      "havoc": 53.0,
      "finishing_drives": 112.0,
-     "tarp": 78.0
+     "field_position": 57.5
     }
    },
    "home_power": {
@@ -8397,7 +8397,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 29.7067814,
+    "seconds_per_play": 25.9656863,
     "tempo_rank": 37.0
    },
    "away_power": {
@@ -8411,7 +8411,7 @@
     "ats_rank": 34.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 27.1882907,
+    "seconds_per_play": 27.7053254,
     "tempo_rank": 86.0
    },
    "home_grades": {
@@ -8881,28 +8881,28 @@
      "explosiveness": 35.0,
      "havoc": 14.5,
      "finishing_drives": 13.0,
-     "tarp": 53.0
+     "field_position": 63.5
     },
     "home_def": {
      "success_rate": 95.0,
      "explosiveness": 22.0,
      "havoc": 123.0,
      "finishing_drives": 81.0,
-     "tarp": 53.0
+     "field_position": 27.0
     },
     "away_off": {
      "success_rate": 62.0,
      "explosiveness": 86.0,
      "havoc": 93.0,
      "finishing_drives": 100.0,
-     "tarp": 119.0
+     "field_position": 107.5
     },
     "away_def": {
      "success_rate": 88.5,
      "explosiveness": 123.0,
      "havoc": 127.5,
      "finishing_drives": 84.0,
-     "tarp": 119.0
+     "field_position": 110.5
     }
    },
    "home_power": {
@@ -8916,7 +8916,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 28.6486658,
+    "seconds_per_play": 29.487069,
     "tempo_rank": 120.0
    },
    "away_power": {
@@ -8930,7 +8930,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.636,
     "over_rank": 21.0,
-    "seconds_per_play": 25.4719935,
+    "seconds_per_play": 27.9845475,
     "tempo_rank": 90.0
    },
    "home_grades": {
@@ -9400,28 +9400,28 @@
      "explosiveness": 36.0,
      "havoc": 45.0,
      "finishing_drives": 11.0,
-     "tarp": 36.0
+     "field_position": 99.5
     },
     "home_def": {
      "success_rate": 33.0,
      "explosiveness": 79.0,
      "havoc": 60.0,
      "finishing_drives": 16.0,
-     "tarp": 36.0
+     "field_position": 46.5
     },
     "away_off": {
      "success_rate": 44.0,
      "explosiveness": 95.0,
      "havoc": 95.5,
      "finishing_drives": 84.0,
-     "tarp": 66.0
+     "field_position": 13.0
     },
     "away_def": {
      "success_rate": 13.0,
      "explosiveness": 41.0,
      "havoc": 46.5,
      "finishing_drives": 44.0,
-     "tarp": 66.0
+     "field_position": 46.5
     }
    },
    "home_power": {
@@ -9435,7 +9435,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 36.1429779,
+    "seconds_per_play": 23.8113571,
     "tempo_rank": 7.0
    },
    "away_power": {
@@ -9449,7 +9449,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 24.8120645,
+    "seconds_per_play": 27.0952928,
     "tempo_rank": 68.0
    },
    "home_grades": {
@@ -9745,28 +9745,28 @@
      "explosiveness": 45.0,
      "havoc": 20.5,
      "finishing_drives": 46.0,
-     "tarp": 135.0
+     "field_position": 7.0
     },
     "home_def": {
      "success_rate": 1.0,
      "explosiveness": 126.0,
      "havoc": 14.0,
      "finishing_drives": 36.0,
-     "tarp": 135.0
+     "field_position": 40.0
     },
     "away_off": {
      "success_rate": 55.0,
      "explosiveness": 94.0,
      "havoc": 79.5,
      "finishing_drives": 74.0,
-     "tarp": 63.0
+     "field_position": 69.5
     },
     "away_def": {
      "success_rate": 69.0,
      "explosiveness": 102.0,
      "havoc": 115.5,
      "finishing_drives": 58.0,
-     "tarp": 63.0
+     "field_position": 95.0
     }
    },
    "home_power": {
@@ -9780,7 +9780,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 28.9809876,
+    "seconds_per_play": 28.7768396,
     "tempo_rank": 107.0
    },
    "away_power": {
@@ -9794,7 +9794,7 @@
     "ats_rank": 131.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 25.7200261,
+    "seconds_per_play": 28.4049479,
     "tempo_rank": 99.0
    },
    "home_grades": {
@@ -10269,28 +10269,28 @@
      "explosiveness": 73.0,
      "havoc": 47.0,
      "finishing_drives": 103.0,
-     "tarp": 26.0
+     "field_position": 31.5
     },
     "home_def": {
      "success_rate": 59.0,
      "explosiveness": 5.0,
      "havoc": 62.5,
      "finishing_drives": 76.0,
-     "tarp": 26.0
+     "field_position": 84.5
     },
     "away_off": {
      "success_rate": 71.0,
      "explosiveness": 134.0,
      "havoc": 90.0,
      "finishing_drives": 128.0,
-     "tarp": 78.0
+     "field_position": 91.5
     },
     "away_def": {
      "success_rate": 38.0,
      "explosiveness": 130.0,
      "havoc": 38.0,
      "finishing_drives": 45.0,
-     "tarp": 78.0
+     "field_position": 129.0
     }
    },
    "home_power": {
@@ -10304,7 +10304,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 25.2803728,
+    "seconds_per_play": 29.0493976,
     "tempo_rank": 113.0
    },
    "away_power": {
@@ -10318,7 +10318,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 22.3253349,
+    "seconds_per_play": 29.563871,
     "tempo_rank": 122.0
    },
    "home_grades": {
@@ -10788,28 +10788,28 @@
      "explosiveness": 71.0,
      "havoc": 31.0,
      "finishing_drives": 50.0,
-     "tarp": 122.0
+     "field_position": 136.0
     },
     "home_def": {
      "success_rate": 105.5,
      "explosiveness": 100.0,
      "havoc": 134.5,
      "finishing_drives": 90.0,
-     "tarp": 122.0
+     "field_position": 110.5
     },
     "away_off": {
      "success_rate": 57.0,
      "explosiveness": 64.0,
      "havoc": 69.5,
      "finishing_drives": 130.0,
-     "tarp": 133.0
+     "field_position": 119.5
     },
     "away_def": {
      "success_rate": 80.0,
      "explosiveness": 89.0,
      "havoc": 129.0,
      "finishing_drives": 104.0,
-     "tarp": 133.0
+     "field_position": 129.0
     }
    },
    "home_power": {
@@ -10823,7 +10823,7 @@
     "ats_rank": 34.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 25.5168387,
+    "seconds_per_play": 31.0075949,
     "tempo_rank": 134.0
    },
    "away_power": {
@@ -10837,7 +10837,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 26.1824586,
+    "seconds_per_play": 22.7327327,
     "tempo_rank": 3.0
    },
    "home_grades": {
@@ -11307,28 +11307,28 @@
      "explosiveness": 72.0,
      "havoc": 95.5,
      "finishing_drives": 65.0,
-     "tarp": 17.0
+     "field_position": 22.0
     },
     "home_def": {
      "success_rate": 2.0,
      "explosiveness": 105.0,
      "havoc": 2.5,
      "finishing_drives": 5.0,
-     "tarp": 17.0
+     "field_position": 4.5
     },
     "away_off": {
      "success_rate": 135.0,
      "explosiveness": 4.0,
      "havoc": 124.0,
      "finishing_drives": 96.0,
-     "tarp": 90.0
+     "field_position": 82.0
     },
     "away_def": {
      "success_rate": 40.0,
      "explosiveness": 50.0,
      "havoc": 69.0,
      "finishing_drives": 86.0,
-     "tarp": 90.0
+     "field_position": 115.5
     }
    },
    "home_power": {
@@ -11342,7 +11342,7 @@
     "ats_rank": 54.0,
     "over_pct": 0.167,
     "over_rank": 135.0,
-    "seconds_per_play": 24.3852664,
+    "seconds_per_play": 25.7117318,
     "tempo_rank": 33.0
    },
    "away_power": {
@@ -11356,7 +11356,7 @@
     "ats_rank": 131.0,
     "over_pct": 0.667,
     "over_rank": 13.0,
-    "seconds_per_play": 22.8054516,
+    "seconds_per_play": 28.8641619,
     "tempo_rank": 109.0
    },
    "home_grades": {
@@ -11826,28 +11826,28 @@
      "explosiveness": 9.0,
      "havoc": 118.5,
      "finishing_drives": 66.0,
-     "tarp": 84.0
+     "field_position": 3.0
     },
     "home_def": {
      "success_rate": 16.0,
      "explosiveness": 108.0,
      "havoc": 19.5,
      "finishing_drives": 116.0,
-     "tarp": 84.0
+     "field_position": 90.5
     },
     "away_off": {
      "success_rate": 88.0,
      "explosiveness": 87.0,
      "havoc": 31.0,
      "finishing_drives": 75.0,
-     "tarp": 94.0
+     "field_position": 10.5
     },
     "away_def": {
      "success_rate": 52.0,
      "explosiveness": 38.0,
      "havoc": 11.5,
      "finishing_drives": 73.0,
-     "tarp": 94.0
+     "field_position": 8.5
     }
    },
    "home_power": {
@@ -11861,7 +11861,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.636,
     "over_rank": 21.0,
-    "seconds_per_play": 26.3176967,
+    "seconds_per_play": 25.3574007,
     "tempo_rank": 29.0
    },
    "away_power": {
@@ -11875,7 +11875,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 21.1620305,
+    "seconds_per_play": 26.4017957,
     "tempo_rank": 51.0
    },
    "home_grades": {
@@ -12171,28 +12171,28 @@
      "explosiveness": 51.0,
      "havoc": 48.5,
      "finishing_drives": 49.0,
-     "tarp": 84.0
+     "field_position": 87.0
     },
     "home_def": {
      "success_rate": 48.0,
      "explosiveness": 59.0,
      "havoc": 38.0,
      "finishing_drives": 23.0,
-     "tarp": 84.0
+     "field_position": 70.0
     },
     "away_off": {
      "success_rate": 99.0,
      "explosiveness": 90.0,
      "havoc": 62.0,
      "finishing_drives": 79.5,
-     "tarp": 66.0
+     "field_position": 59.5
     },
     "away_def": {
      "success_rate": 50.0,
      "explosiveness": 20.0,
      "havoc": 53.0,
      "finishing_drives": 21.0,
-     "tarp": 66.0
+     "field_position": 76.0
     }
    },
    "home_power": {
@@ -12206,7 +12206,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 23.3018397,
+    "seconds_per_play": 28.2862797,
     "tempo_rank": 98.0
    },
    "away_power": {
@@ -12220,7 +12220,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 20.1335925,
+    "seconds_per_play": 29.2160279,
     "tempo_rank": 117.0
    },
    "home_grades": {
@@ -12690,28 +12690,28 @@
      "explosiveness": 132.0,
      "havoc": 28.5,
      "finishing_drives": 56.0,
-     "tarp": 1.0
+     "field_position": 10.5
     },
     "home_def": {
      "success_rate": 68.0,
      "explosiveness": 83.0,
      "havoc": 93.5,
      "finishing_drives": 115.0,
-     "tarp": 1.0
+     "field_position": 40.0
     },
     "away_off": {
      "success_rate": 46.0,
      "explosiveness": 69.0,
      "havoc": 24.5,
      "finishing_drives": 83.0,
-     "tarp": 97.0
+     "field_position": 42.0
     },
     "away_def": {
      "success_rate": 61.0,
      "explosiveness": 87.0,
      "havoc": 96.5,
      "finishing_drives": 14.0,
-     "tarp": 97.0
+     "field_position": 70.0
     }
    },
    "home_power": {
@@ -12725,7 +12725,7 @@
     "ats_rank": 111.0,
     "over_pct": 0.75,
     "over_rank": 3.0,
-    "seconds_per_play": 22.9095077,
+    "seconds_per_play": 27.7020262,
     "tempo_rank": 85.0
    },
    "away_power": {
@@ -12739,7 +12739,7 @@
     "ats_rank": 78.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 26.5313871,
+    "seconds_per_play": 25.3454345,
     "tempo_rank": 28.0
    },
    "home_grades": {
@@ -13209,28 +13209,28 @@
      "explosiveness": 89.0,
      "havoc": 127.0,
      "finishing_drives": 90.0,
-     "tarp": 71.0
+     "field_position": 130.0
     },
     "home_def": {
      "success_rate": 120.0,
      "explosiveness": 97.0,
      "havoc": 115.5,
      "finishing_drives": 101.0,
-     "tarp": 71.0
+     "field_position": 104.0
     },
     "away_off": {
      "success_rate": 117.0,
      "explosiveness": 114.0,
      "havoc": 125.0,
      "finishing_drives": 127.0,
-     "tarp": 97.0
+     "field_position": 134.0
     },
     "away_def": {
      "success_rate": 26.0,
      "explosiveness": 49.0,
      "havoc": 118.5,
      "finishing_drives": 12.0,
-     "tarp": 97.0
+     "field_position": 98.0
     }
    },
    "home_power": {
@@ -13244,7 +13244,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 21.3145478,
+    "seconds_per_play": 27.9762443,
     "tempo_rank": 88.0
    },
    "away_power": {
@@ -13258,7 +13258,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.167,
     "over_rank": 135.0,
-    "seconds_per_play": 20.9537607,
+    "seconds_per_play": 24.4863103,
     "tempo_rank": 16.0
    },
    "home_grades": {
@@ -13728,28 +13728,28 @@
      "explosiveness": 20.0,
      "havoc": 75.5,
      "finishing_drives": 99.0,
-     "tarp": 9.0
+     "field_position": 22.0
     },
     "home_def": {
      "success_rate": 45.0,
      "explosiveness": 26.0,
      "havoc": 24.5,
      "finishing_drives": 83.0,
-     "tarp": 9.0
+     "field_position": 4.5
     },
     "away_off": {
      "success_rate": 35.0,
      "explosiveness": 22.0,
      "havoc": 16.5,
      "finishing_drives": 19.5,
-     "tarp": 57.0
+     "field_position": 127.0
     },
     "away_def": {
      "success_rate": 87.0,
      "explosiveness": 93.0,
      "havoc": 90.5,
      "finishing_drives": 106.0,
-     "tarp": 57.0
+     "field_position": 118.0
     }
    },
    "home_power": {
@@ -13763,7 +13763,7 @@
     "ats_rank": 111.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 25.5607976,
+    "seconds_per_play": 24.5088757,
     "tempo_rank": 17.0
    },
    "away_power": {
@@ -13777,7 +13777,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 32.7740304,
+    "seconds_per_play": 27.0078947,
     "tempo_rank": 62.0
    },
    "home_grades": {
@@ -14257,28 +14257,28 @@
      "explosiveness": 118.0,
      "havoc": 100.0,
      "finishing_drives": 57.0,
-     "tarp": 22.0
+     "field_position": 123.5
     },
     "home_def": {
      "success_rate": 22.0,
      "explosiveness": 98.0,
      "havoc": 51.0,
      "finishing_drives": 42.0,
-     "tarp": 22.0
+     "field_position": 70.0
     },
     "away_off": {
      "success_rate": 45.0,
      "explosiveness": 44.0,
      "havoc": 60.5,
      "finishing_drives": 71.0,
-     "tarp": 57.0
+     "field_position": 82.0
     },
     "away_def": {
      "success_rate": 100.0,
      "explosiveness": 18.0,
      "havoc": 127.5,
      "finishing_drives": 124.0,
-     "tarp": 57.0
+     "field_position": 82.0
     }
    },
    "home_power": {
@@ -14292,7 +14292,7 @@
     "ats_rank": 111.0,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 25.4808997,
+    "seconds_per_play": 29.4271949,
     "tempo_rank": 119.0
    },
    "away_power": {
@@ -14306,7 +14306,7 @@
     "ats_rank": 135.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 31.3315163,
+    "seconds_per_play": 29.487069,
     "tempo_rank": 120.0
    },
    "home_grades": {
@@ -14776,28 +14776,28 @@
      "explosiveness": 70.0,
      "havoc": 38.0,
      "finishing_drives": 19.5,
-     "tarp": 42.0
+     "field_position": 97.5
     },
     "home_def": {
      "success_rate": 36.0,
      "explosiveness": 47.0,
      "havoc": 105.5,
      "finishing_drives": 28.0,
-     "tarp": 42.0
+     "field_position": 113.0
     },
     "away_off": {
      "success_rate": 90.0,
      "explosiveness": 133.0,
      "havoc": 69.5,
      "finishing_drives": 41.0,
-     "tarp": 115.0
+     "field_position": 67.0
     },
     "away_def": {
      "success_rate": 91.0,
      "explosiveness": 3.0,
      "havoc": 100.5,
      "finishing_drives": 19.0,
-     "tarp": 115.0
+     "field_position": 107.0
     }
    },
    "home_power": {
@@ -14811,7 +14811,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 28.0345977,
+    "seconds_per_play": 25.2464146,
     "tempo_rank": 26.0
    },
    "away_power": {
@@ -14825,7 +14825,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.25,
     "over_rank": 132.0,
-    "seconds_per_play": 21.6280177,
+    "seconds_per_play": 24.3495935,
     "tempo_rank": 13.0
    },
    "home_grades": {
@@ -15295,28 +15295,28 @@
      "explosiveness": 83.0,
      "havoc": 105.0,
      "finishing_drives": 123.0,
-     "tarp": 101.0
+     "field_position": 135.0
     },
     "home_def": {
      "success_rate": 82.0,
      "explosiveness": 103.0,
      "havoc": 90.5,
      "finishing_drives": 52.0,
-     "tarp": 101.0
+     "field_position": 107.0
     },
     "away_off": {
      "success_rate": 12.0,
      "explosiveness": 122.0,
      "havoc": 9.0,
      "finishing_drives": 15.0,
-     "tarp": 42.0
+     "field_position": 28.5
     },
     "away_def": {
      "success_rate": 9.0,
      "explosiveness": 92.0,
      "havoc": 8.5,
      "finishing_drives": 8.0,
-     "tarp": 42.0
+     "field_position": 2.0
     }
    },
    "home_power": {
@@ -15330,7 +15330,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 19.4346909,
+    "seconds_per_play": 27.0155844,
     "tempo_rank": 63.0
    },
    "away_power": {
@@ -15344,7 +15344,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 26.6241242,
+    "seconds_per_play": 29.9696552,
     "tempo_rank": 127.0
    },
    "home_grades": {
@@ -15819,28 +15819,28 @@
      "explosiveness": 126.0,
      "havoc": 11.0,
      "finishing_drives": 76.0,
-     "tarp": 36.0
+     "field_position": 31.5
     },
     "home_def": {
      "success_rate": 64.0,
      "explosiveness": 6.0,
      "havoc": 46.5,
      "finishing_drives": 69.5,
-     "tarp": 36.0
+     "field_position": 46.5
     },
     "away_off": {
      "success_rate": 64.0,
      "explosiveness": 136.0,
      "havoc": 28.5,
      "finishing_drives": 88.0,
-     "tarp": 90.0
+     "field_position": 20.0
     },
     "away_def": {
      "success_rate": 32.0,
      "explosiveness": 58.0,
      "havoc": 41.0,
      "finishing_drives": 39.0,
-     "tarp": 90.0
+     "field_position": 60.0
     }
    },
    "home_power": {
@@ -15854,7 +15854,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 25.4819919,
+    "seconds_per_play": 26.1471653,
     "tempo_rank": 43.0
    },
    "away_power": {
@@ -15868,7 +15868,7 @@
     "ats_rank": 11.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 21.7358793,
+    "seconds_per_play": 23.4821883,
     "tempo_rank": 6.0
    },
    "home_grades": {
@@ -16338,28 +16338,28 @@
      "explosiveness": 29.0,
      "havoc": 41.5,
      "finishing_drives": 16.0,
-     "tarp": 125.0
+     "field_position": 67.0
     },
     "home_def": {
      "success_rate": 70.0,
      "explosiveness": 85.0,
      "havoc": 32.0,
      "finishing_drives": 96.0,
-     "tarp": 125.0
+     "field_position": 8.5
     },
     "away_off": {
      "success_rate": 67.0,
      "explosiveness": 129.0,
      "havoc": 110.5,
      "finishing_drives": 112.0,
-     "tarp": 61.0
+     "field_position": 53.0
     },
     "away_def": {
      "success_rate": 105.5,
      "explosiveness": 74.0,
      "havoc": 100.5,
      "finishing_drives": 89.0,
-     "tarp": 61.0
+     "field_position": 55.0
     }
    },
    "home_power": {
@@ -16373,7 +16373,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 26.7339355,
+    "seconds_per_play": 25.8382878,
     "tempo_rank": 35.0
    },
    "away_power": {
@@ -16387,7 +16387,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 25.8879463,
+    "seconds_per_play": 27.0817916,
     "tempo_rank": 67.0
    },
    "home_grades": {
@@ -16857,28 +16857,28 @@
      "explosiveness": 103.0,
      "havoc": 41.5,
      "finishing_drives": 24.0,
-     "tarp": 1.0
+     "field_position": 15.0
     },
     "home_def": {
      "success_rate": 65.0,
      "explosiveness": 30.0,
      "havoc": 75.0,
      "finishing_drives": 48.0,
-     "tarp": 1.0
+     "field_position": 22.0
     },
     "away_off": {
      "success_rate": 50.0,
      "explosiveness": 125.0,
      "havoc": 34.5,
      "finishing_drives": 59.0,
-     "tarp": 78.0
+     "field_position": 14.0
     },
     "away_def": {
      "success_rate": 35.0,
      "explosiveness": 129.0,
      "havoc": 69.0,
      "finishing_drives": 66.0,
-     "tarp": 78.0
+     "field_position": 31.0
     }
    },
    "home_power": {
@@ -16892,7 +16892,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.667,
     "over_rank": 13.0,
-    "seconds_per_play": 23.9759804,
+    "seconds_per_play": 28.0518617,
     "tempo_rank": 93.0
    },
    "away_power": {
@@ -16906,7 +16906,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 27.093327,
+    "seconds_per_play": 28.4049479,
     "tempo_rank": 99.0
    },
    "home_grades": {
@@ -17376,28 +17376,28 @@
      "explosiveness": 26.0,
      "havoc": 38.0,
      "finishing_drives": 8.5,
-     "tarp": 27.0
+     "field_position": 121.0
     },
     "home_def": {
      "success_rate": 117.0,
      "explosiveness": 17.0,
      "havoc": 66.0,
      "finishing_drives": 41.0,
-     "tarp": 27.0
+     "field_position": 37.0
     },
     "away_off": {
      "success_rate": 101.0,
      "explosiveness": 82.0,
      "havoc": 75.5,
      "finishing_drives": 105.0,
-     "tarp": 105.0
+     "field_position": 6.0
     },
     "away_def": {
      "success_rate": 34.0,
      "explosiveness": 35.0,
      "havoc": 34.5,
      "finishing_drives": 55.0,
-     "tarp": 105.0
+     "field_position": 57.5
     }
    },
    "home_power": {
@@ -17411,7 +17411,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 31.1386411,
+    "seconds_per_play": 24.3066667,
     "tempo_rank": 12.0
    },
    "away_power": {
@@ -17425,7 +17425,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 22.0907351,
+    "seconds_per_play": 26.665874,
     "tempo_rank": 58.0
    },
    "home_grades": {
@@ -17895,28 +17895,28 @@
      "explosiveness": 112.0,
      "havoc": 12.5,
      "finishing_drives": 77.5,
-     "tarp": 63.0
+     "field_position": 71.5
     },
     "home_def": {
      "success_rate": 88.5,
      "explosiveness": 69.0,
      "havoc": 107.5,
      "finishing_drives": 56.0,
-     "tarp": 63.0
+     "field_position": 18.0
     },
     "away_off": {
      "success_rate": 130.0,
      "explosiveness": 10.0,
      "havoc": 129.0,
      "finishing_drives": 94.0,
-     "tarp": 1.0
+     "field_position": 76.0
     },
     "away_def": {
      "success_rate": 78.0,
      "explosiveness": 114.0,
      "havoc": 80.5,
      "finishing_drives": 99.0,
-     "tarp": 1.0
+     "field_position": 90.5
     }
    },
    "home_power": {
@@ -17930,7 +17930,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 30.4669076,
+    "seconds_per_play": 28.2039046,
     "tempo_rank": 95.0
    },
    "away_power": {
@@ -17944,7 +17944,7 @@
     "ats_rank": 111.0,
     "over_pct": 0.417,
     "over_rank": 99.5,
-    "seconds_per_play": 21.2126869,
+    "seconds_per_play": 26.998913,
     "tempo_rank": 61.0
    },
    "home_grades": {
@@ -18414,28 +18414,28 @@
      "explosiveness": 105.0,
      "havoc": 112.5,
      "finishing_drives": 115.0,
-     "tarp": 9.0
+     "field_position": 56.0
     },
     "home_def": {
      "success_rate": 24.0,
      "explosiveness": 73.0,
      "havoc": 26.0,
      "finishing_drives": 15.0,
-     "tarp": 9.0
+     "field_position": 46.5
     },
     "away_off": {
      "success_rate": 56.0,
      "explosiveness": 77.0,
      "havoc": 60.5,
      "finishing_drives": 55.0,
-     "tarp": 71.0
+     "field_position": 38.0
     },
     "away_def": {
      "success_rate": 23.0,
      "explosiveness": 115.0,
      "havoc": 8.5,
      "finishing_drives": 9.5,
-     "tarp": 71.0
+     "field_position": 22.0
     }
    },
    "home_power": {
@@ -18449,7 +18449,7 @@
     "ats_rank": 121.0,
     "over_pct": 0.25,
     "over_rank": 132.0,
-    "seconds_per_play": 21.1060461,
+    "seconds_per_play": 24.8545838,
     "tempo_rank": 20.0
    },
    "away_power": {
@@ -18463,7 +18463,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.3,
     "over_rank": 130.0,
-    "seconds_per_play": 26.5520229,
+    "seconds_per_play": 27.2924425,
     "tempo_rank": 74.0
    },
    "home_grades": {
@@ -18933,28 +18933,28 @@
      "explosiveness": 2.0,
      "havoc": 88.0,
      "finishing_drives": 120.0,
-     "tarp": 71.0
+     "field_position": 27.0
     },
     "home_def": {
      "success_rate": 12.0,
      "explosiveness": 55.0,
      "havoc": 22.0,
      "finishing_drives": 30.0,
-     "tarp": 71.0
+     "field_position": 118.0
     },
     "away_off": {
      "success_rate": 108.0,
      "explosiveness": 106.0,
      "havoc": 114.0,
      "finishing_drives": 113.0,
-     "tarp": 71.0
+     "field_position": 63.5
     },
     "away_def": {
      "success_rate": 51.0,
      "explosiveness": 107.0,
      "havoc": 34.5,
      "finishing_drives": 71.0,
-     "tarp": 71.0
+     "field_position": 127.0
     }
    },
    "home_power": {
@@ -18968,7 +18968,7 @@
     "ats_rank": 23.0,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 26.0439085,
+    "seconds_per_play": 24.3932161,
     "tempo_rank": 15.0
    },
    "away_power": {
@@ -18982,7 +18982,7 @@
     "ats_rank": 65.5,
     "over_pct": 0.583,
     "over_rank": 34.5,
-    "seconds_per_play": 23.2325857,
+    "seconds_per_play": 28.8824121,
     "tempo_rank": 111.0
    },
    "home_grades": {
@@ -19452,28 +19452,28 @@
      "explosiveness": 23.0,
      "havoc": 31.0,
      "finishing_drives": 77.5,
-     "tarp": 97.0
+     "field_position": 59.5
     },
     "home_def": {
      "success_rate": 55.0,
      "explosiveness": 94.0,
      "havoc": 55.5,
      "finishing_drives": 38.0,
-     "tarp": 97.0
+     "field_position": 78.5
     },
     "away_off": {
      "success_rate": 19.0,
      "explosiveness": 14.0,
      "havoc": 71.5,
      "finishing_drives": 14.0,
-     "tarp": 119.0
+     "field_position": 78.5
     },
     "away_def": {
      "success_rate": 103.0,
      "explosiveness": 117.0,
      "havoc": 58.0,
      "finishing_drives": 72.0,
-     "tarp": 119.0
+     "field_position": 54.0
     }
    },
    "home_power": {
@@ -19487,7 +19487,7 @@
     "ats_rank": 11.0,
     "over_pct": 0.364,
     "over_rank": 115.5,
-    "seconds_per_play": 26.0012996,
+    "seconds_per_play": 26.5379538,
     "tempo_rank": 55.0
    },
    "away_power": {
@@ -19501,7 +19501,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.5,
     "over_rank": 67.0,
-    "seconds_per_play": 29.2154326,
+    "seconds_per_play": 25.3979849,
     "tempo_rank": 31.0
    },
    "home_grades": {
@@ -19976,28 +19976,28 @@
      "explosiveness": 63.0,
      "havoc": 6.5,
      "finishing_drives": 26.0,
-     "tarp": 17.0
+     "field_position": 9.0
     },
     "home_def": {
      "success_rate": 7.0,
      "explosiveness": 135.0,
      "havoc": 4.0,
      "finishing_drives": 105.0,
-     "tarp": 17.0
+     "field_position": 7.0
     },
     "away_off": {
      "success_rate": 110.0,
      "explosiveness": 3.0,
      "havoc": 136.0,
      "finishing_drives": 79.5,
-     "tarp": 105.0
+     "field_position": 49.5
     },
     "away_def": {
      "success_rate": 98.0,
      "explosiveness": 101.0,
      "havoc": 86.5,
      "finishing_drives": 92.0,
-     "tarp": 105.0
+     "field_position": 67.0
     }
    },
    "home_power": {
@@ -20011,7 +20011,7 @@
     "ats_rank": 94.0,
     "over_pct": 0.667,
     "over_rank": 13.0,
-    "seconds_per_play": 28.6858576,
+    "seconds_per_play": 22.8975501,
     "tempo_rank": 4.0
    },
    "away_power": {
@@ -20025,7 +20025,7 @@
     "ats_rank": 44.5,
     "over_pct": 0.333,
     "over_rank": 123.5,
-    "seconds_per_play": 24.532981,
+    "seconds_per_play": 27.2136536,
     "tempo_rank": 71.0
    },
    "home_grades": {

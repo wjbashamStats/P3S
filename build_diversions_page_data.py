@@ -37,11 +37,17 @@ pass/rush rate + success rate is driving the total, plus tempo.
 
 "How we got here" detail, added for the matchup-preview modal:
   - five_factors: rank_Offense_*/rank_defense_* (Success Rate, Explosive-
-    ness, Havoc, Finishing Drives i.e. PointsPerOpportunity, plus
-    rank_TARP as a 5th axis) for both sides of both teams -- these feed
-    two radar comparisons per game (each team's offense vs the
-    opponent's defense), same "1 = best" rank convention as every other
-    rank_ column in team_ratings.csv.
+    ness, Havoc, Finishing Drives i.e. PointsPerOpportunity, Field
+    Position) for both sides of both teams -- these feed two radar
+    comparisons per game (each team's offense vs the opponent's
+    defense), same "1 = best" rank convention as every other rank_
+    column in team_ratings.csv. An earlier version used rank_TARP as
+    the 5th axis on the mistaken belief that team_ratings had no
+    offense/defense split for field position -- it does
+    (rank_Offense_fieldPosition_averageStart / rank_defense_...), and
+    Field Position (not TARP) is the actual 5th factor in this
+    project's own reference tool, confirmed against a side-by-side
+    screenshot of it.
   - power_table: TAN/SP/NetRP/2022 ATS%/2022 Over%/pace, each with a
     rank. NetRP has no native rank column in the source file, so one is
     computed here the same way (sort all 136 teams descending, rank
@@ -89,7 +95,7 @@ FIVE_FACTOR_RANK_COLS = [
     ("explosiveness", "Explosiveness", "rank_Offense_explosiveness", "rank_defense_explosiveness"),
     ("havoc", "Havoc", "rank_Offense_havoc_total", "rank_defense_havoc_total"),
     ("finishing_drives", "Finishing Drives", "rank_Offense_pointsPerOpportunity", "rank_defense_pointsPerOpportunity"),
-    ("tarp", "TARP", "rank_TARP", "rank_TARP"),  # TARP isn't split off/def -- same team-wide rank both sides
+    ("field_position", "Field Position", "rank_Offense_fieldPosition_averageStart", "rank_defense_fieldPosition_averageStart"),
 ]
 
 
@@ -155,13 +161,23 @@ def five_factors(rh, ra):
 
 
 def power_table_entry(r, net_rp_rank):
+    # Seconds/Play comes from team_ratings' SPP column, NOT its "Tempo"
+    # column -- team_ratings_2025.csv has both, and they're unrelated:
+    # sorting all 136 teams by "Tempo" doesn't match rank_Tempo at all
+    # (124/136 teams off by more than 5 spots either direction), while
+    # sorting by SPP matches rank_Tempo exactly (0 mismatches). Found by
+    # comparing this page's Power Ratings table against the reference
+    # tool's Five Factors panel, which showed 26.2s/play (rank #131) for
+    # a team this file's "Tempo" column had at 17.7 (rank_Tempo said
+    # 131, which only lines up with SPP's 26.2, confirming SPP is the
+    # real seconds-per-play field and "Tempo" is something else / stale).
     return dict(
         tan=_f(r.get("TAN")), tan_rank=_f(r.get("rank_TAN"), None),
         sp=_f(r.get("SP")), sp_rank=_f(r.get("rank_SP"), None),
         net_rp=_f(r.get("NetRP")), net_rp_rank=net_rp_rank,
         ats_pct=_f(r.get("X2022_ATS_Percent"), None), ats_rank=_f(r.get("Rank_2022_ATS_Percent"), None),
         over_pct=_f(r.get("X2022_OU_Percent"), None), over_rank=_f(r.get("Rank_2022_OU_Percent"), None),
-        seconds_per_play=_f(r.get("Tempo")), tempo_rank=_f(r.get("rank_Tempo"), None),
+        seconds_per_play=_f(r.get("SPP")), tempo_rank=_f(r.get("rank_Tempo"), None),
     )
 
 

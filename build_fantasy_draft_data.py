@@ -20,9 +20,16 @@ row), not fixed line offsets.
 combination of three team-level signals, each ranked against the other
 67 P4 teams (P4 = SEC/Big Ten/ACC/Big 12; Notre Dame and any non-P4 team
 in Yahoo's list is dropped, per this being a P4-only build):
-  - pace        : team_ratings' Tempo (lower raw value = more snaps/game
-                  = more fantasy opportunity, so this is INVERTED before
-                  ranking -- see _pct())
+  - pace        : team_ratings' SPP (seconds/play; lower raw value = more
+                  snaps/game = more fantasy opportunity, so this is
+                  INVERTED before ranking -- see _pct()). NOT the CSV's
+                  "Tempo" column, which is a different, unrelated field --
+                  team_ratings_2025.csv has both, and sorting all 136
+                  teams by "Tempo" doesn't match the file's own rank_Tempo
+                  at all (124/136 teams off by 5+ spots), while sorting by
+                  SPP matches rank_Tempo with zero mismatches. Found via
+                  a user-reported mismatch against the reference tool's
+                  Five Factors panel (see build_diversions_page_data.py).
   - volume rate : off_rush_rate for RB, off_pass_rate for QB/WR/TE
   - success rate: off_rush_sr for RB, off_pass_sr for QB/WR/TE
 Weighted 40% volume / 40% success / 20% pace (see SITUATION_WEIGHTS) --
@@ -233,7 +240,7 @@ def match_override(overrides, team_display, position, last, first_initial):
 
 def pct_rank(values_by_team, invert=False):
     """Rank teams by value -> percentile 0-100 (100 = best). invert=True
-    means a LOWER raw value is better (e.g. Tempo: fewer seconds/play)."""
+    means a LOWER raw value is better (e.g. SPP: fewer seconds/play)."""
     items = sorted(values_by_team.items(), key=lambda kv: kv[1], reverse=not invert)
     n = len(items)
     out = {}
@@ -249,8 +256,8 @@ def build(yahoo_path, team_averages_path, team_ratings_path, depth_chart_path):
     tempo_raw = {}
     for r in csv.DictReader(open(team_ratings_path)):
         t = r.get("Team", "")
-        if t and r.get("Tempo"):
-            tempo_raw[t] = float(r["Tempo"])
+        if t and r.get("SPP"):
+            tempo_raw[t] = float(r["SPP"])
 
     p4_teams = [name for name, code in YAHOO_TEAM_MAP.items()]  # placeholder, real filter below
     p4_team_names = sorted({name for name in YAHOO_TEAM_MAP.values()
