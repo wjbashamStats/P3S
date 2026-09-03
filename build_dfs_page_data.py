@@ -54,13 +54,11 @@ def norm(s):
 
 def load_excluded_players(path="dfs_excluded_players.csv"):
     """
-    dfs_excluded_players.csv -- hand-curated list of skill players who show
-    up in player_season_totals.csv (prior season) but are confirmed gone
-    for the current season (early NFL draft declaration, graduation,
-    portal transfer out of FBS, etc). See the norm(raw_name) check in
-    build() for why this is a manual list rather than a depth-chart
-    cross-reference. Keyed by norm(name). Returns {} if the file doesn't
-    exist (fully opt-in).
+    dfs_excluded_players.csv -- manual override layered on top of build()'s
+    current_roster check (depth_charts.csv | master_crosswalk.csv). Use it
+    for a departed player who, for whatever reason, still shows up in one
+    of those two sources. Keyed by norm(name). Returns {} if the file
+    doesn't exist (fully opt-in).
     """
     import os
     out = set()
@@ -90,6 +88,20 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
     depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
+
+    # Current-roster check for player_season_totals.csv (prior-year stats
+    # with no idea who's since graduated, transferred out, or declared
+    # early for the draft -- e.g. Carson Beck, Fernando Mendoza, Diego
+    # Pavia, Garrett Nussmeier and Cade Klubnik all played big 2025
+    # snap counts but are gone for 2026). Two independent current-season
+    # sources, unioned since neither alone is complete: depth_chart (the
+    # ourlads.com scrape, deep at skill positions but with real gaps for
+    # some transfers) and master_crosswalk.csv (PFF's own current-team
+    # assignment -- confirmed correct via Drew Mestemaker showing OKLA
+    # STATE, his 2026 transfer destination, not his old team). A player
+    # missing from BOTH is treated as departed.
+    master_pkeys = {p["pkey"] for p in DL.load_pff(pff2c)}
+    current_roster = set(depth_chart) | master_pkeys
 
     print(f"Building week-{week} DK projections (season {season}) ...")
     projections = BT.build_projections(week, use_prior_year=True, lines_by_week=lines_by_week,
@@ -167,19 +179,18 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
 
         # player_season_totals.csv is prior-year (season-1) participation --
         # it has no idea who graduated, transferred out, or declared for
-        # the draft since. Tried cross-referencing depth_charts.csv (the
-        # current-season Ourlads scrape) and rejecting anyone absent from
-        # it entirely, but that scrape is too incomplete to use that way:
-        # spot-checking 2025's 119 qualifying-volume QBs, 45 (38%) are
-        # missing from depth_charts.csv despite clearly still being 2026
-        # starters (Carson Beck, Fernando Mendoza, Diego Pavia, Garrett
-        # Nussmeier, Cade Klubnik, ...) -- a blanket absence filter would
-        # have stripped most of the league's real QB1s along with the
-        # handful of genuinely departed players. EXCLUDED_PLAYERS is a
-        # small hand-curated list instead (same opt-in-correction pattern
-        # as depth_chart_overrides.csv): add a name there only once
-        # confirmed gone (transferred out, graduated, drafted).
-        if norm(raw_name) in EXCLUDED_PLAYERS:
+        # the draft since. A player missing from BOTH current-season
+        # sources (current_roster, built above) is treated as departed --
+        # confirmed against real cases: Carson Beck, Fernando Mendoza,
+        # Diego Pavia, Garrett Nussmeier and Cade Klubnik all had big 2025
+        # snap counts but are correctly absent from both depth_charts.csv
+        # and master_crosswalk.csv (which in turn correctly shows Drew
+        # Mestemaker on OKLA STATE, his 2026 transfer destination). Deep
+        # bench players neither source ever lists are an accepted
+        # trade-off -- a DFS pool shouldn't feature them prominently
+        # regardless. EXCLUDED_PLAYERS layers on top as a manual override
+        # for any name that slips through both sources anyway.
+        if norm(raw_name) not in current_roster or norm(raw_name) in EXCLUDED_PLAYERS:
             continue
 
         canon_tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
