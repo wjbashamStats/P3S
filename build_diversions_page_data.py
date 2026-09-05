@@ -399,9 +399,13 @@ def spread_reason(home_team, away_team, book_spread, pred_spread, spread_diff,
 
 
 def total_reason(home_team, away_team, book_total, pred_total, total_diff,
-                  home_avg, away_avg):
+                  home_avg, away_avg, total_floored=False):
     direction = "higher-scoring" if total_diff > 0 else "lower-scoring"
     parts = [f"Book expects a {direction} game than the team-total sum by {abs(total_diff):.1f} pts."]
+    if total_floored:
+        parts.append(f"(Floored to {pred_total:.1f} here -- the opponent-blind team-total sum alone "
+                     f"came in lower than the margin our power ratings imply, which isn't possible "
+                     f"for a real score: total always has to be at least as big as the spread.)")
     if home_avg and away_avg:
         ha, aa = home_avg.get("advanced") or {}, away_avg.get("advanced") or {}
         notes = []
@@ -457,6 +461,21 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
             pred_spread = -(sp_h - sp_a + hfa)
             ht_total, at_total = _f(rh["Team Total"]), _f(ra["Team Total"])
             pred_total = ht_total + at_total
+            # Mathematical floor, not a modeling opinion: total = home_score +
+            # away_score is always >= |home_score - away_score| = |margin|
+            # (equality only at a shutout). pred_spread comes from the SP+
+            # power-rating gap (opponent-aware -- it widens correctly for a
+            # bad team playing a great one), while pred_total comes from
+            # each team's own opponent-BLIND scoring baseline ("Team Total"
+            # doesn't adjust for who's on the other side of the ball), so
+            # the two can go mathematically inconsistent for a big enough
+            # mismatch. Caught via Ball State @ Ohio State: SP+ implies a
+            # 60.3-pt margin, but the naive baseline sum only reached 44.3,
+            # which would require a negative score to be true. Only ~1 game
+            # a week actually needs this (checked: 1/90 in this slate).
+            total_floored = pred_total < abs(pred_spread)
+            if total_floored:
+                pred_total = abs(pred_spread)
             spread_diff = round(book_spread - pred_spread, 1)
             total_diff = round(book_total - pred_total, 1)
             home_adj = (_f(rh.get("OffAdj")), _f(rh.get("DefAdj")), _f(rh.get("rank_TARP")))
@@ -478,7 +497,7 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                 spread_reason=spread_reason(home_team, away_team, book_spread, pred_spread, spread_diff,
                                             sp_h, sp_a, hfa, home_adj, away_adj),
                 total_reason=total_reason(home_team, away_team, book_total, pred_total, total_diff,
-                                          home_avg, away_avg),
+                                          home_avg, away_avg, total_floored),
                 home_display=rh.get("Team", home_team), away_display=ra.get("Team", away_team),
                 five_factors=five_factors(rh, ra),
                 home_power=power_table_entry(rh, net_rp_rank.get(home_key)),

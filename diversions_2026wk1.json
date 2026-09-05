@@ -5,525 +5,6 @@
  "date_end": "2026-09-07",
  "games": [
   {
-   "game_id": "9bb89639201454f186964f5b86365760",
-   "home_team": "Ohio State Buckeyes",
-   "away_team": "Ball State Cardinals",
-   "commence_time": "2026-09-05T16:30:00Z",
-   "book_spread": -50.5,
-   "book_total": 56.5,
-   "pred_spread": -60.3,
-   "pred_total": 44.3,
-   "spread_diff": 9.8,
-   "total_diff": 12.2,
-   "home_rated": true,
-   "away_rated": true,
-   "spread_reason": "The book leans 9.8 pts more toward Ball State Cardinals than SP+ + home-field alone would put them (SP+ gap +57.0 for Ohio State Buckeyes, +3.3 home edge).",
-   "total_reason": "Book expects a higher-scoring game than the team-total sum by 12.2 pts.",
-   "home_sp": 31.8,
-   "away_sp": -25.2,
-   "hfa": 3.3,
-   "home_team_total": 28.13188651,
-   "away_team_total": 16.16798131,
-   "home_off_adj": 6.0,
-   "home_def_adj": 4.5,
-   "home_rank_tarp": 9.0,
-   "away_off_adj": -3.0,
-   "away_def_adj": -1.0,
-   "away_rank_tarp": 105.0,
-   "home_display": "Ohio State",
-   "away_display": "Ball State",
-   "five_factors": {
-    "home_off": {
-     "success_rate": 1.0,
-     "explosiveness": 127.0,
-     "havoc": 5.0,
-     "finishing_drives": 2.0,
-     "field_position": 49.5
-    },
-    "home_def": {
-     "success_rate": 10.0,
-     "explosiveness": 1.0,
-     "havoc": 38.0,
-     "finishing_drives": 6.0,
-     "field_position": 10.0
-    },
-    "away_off": {
-     "success_rate": 136.0,
-     "explosiveness": 30.0,
-     "havoc": 135.0,
-     "finishing_drives": 132.0,
-     "field_position": 103.5
-    },
-    "away_def": {
-     "success_rate": 113.0,
-     "explosiveness": 76.0,
-     "havoc": 105.5,
-     "finishing_drives": 59.0,
-     "field_position": 124.0
-    }
-   },
-   "home_power": {
-    "tan": 97.3,
-    "tan_rank": 1.0,
-    "sp": 31.8,
-    "sp_rank": 1.0,
-    "net_rp": 10.5,
-    "net_rp_rank": 9,
-    "ats_pct": 0.909,
-    "ats_rank": 2.0,
-    "over_pct": 0.333,
-    "over_rank": 123.5,
-    "seconds_per_play": 24.0721003,
-    "tempo_rank": 43.0
-   },
-   "away_power": {
-    "tan": 32.7,
-    "tan_rank": 132.0,
-    "sp": -25.2,
-    "sp_rank": 131.0,
-    "net_rp": -4.0,
-    "net_rp_rank": 114,
-    "ats_pct": 0.583,
-    "ats_rank": 44.5,
-    "over_pct": 0.417,
-    "over_rank": 99.5,
-    "seconds_per_play": 30.7617896,
-    "tempo_rank": 134.0
-   },
-   "home_grades": {
-    "grade_over": 96.4,
-    "grade_off": 95.0,
-    "grade_pass": 93.0,
-    "grade_pblk": 77.1,
-    "grade_recv": 92.1,
-    "grade_run": 88.3,
-    "grade_rblk": 77.9,
-    "grade_def": 93.8,
-    "grade_rdef": 94.4,
-    "grade_tack": 90.8,
-    "grade_prsh": 76.8,
-    "grade_cov": 90.7,
-    "grade_spec": 81.0,
-    "pf": 444.0,
-    "pa": 93.0
-   },
-   "away_grades": {
-    "grade_over": 62.7,
-    "grade_off": 59.0,
-    "grade_pass": 47.9,
-    "grade_pblk": 57.7,
-    "grade_recv": 61.1,
-    "grade_run": 71.4,
-    "grade_rblk": 53.9,
-    "grade_def": 67.3,
-    "grade_rdef": 65.6,
-    "grade_tack": 54.5,
-    "grade_prsh": 83.0,
-    "grade_cov": 51.9,
-    "grade_spec": 65.8,
-    "pf": 190.0,
-    "pa": 358.0
-   },
-   "home_positions": {
-    "qb": {
-     "name": "Julian Sayin",
-     "pff_off_grade": 92.9,
-     "pff_group_grade": 92.5,
-     "pass_att": 328.0,
-     "pass_yds": 3065.0,
-     "pass_td": 30.0,
-     "rush_att": 33.0,
-     "rush_yds": 44.0,
-     "rush_td": 0.0,
-     "targets": null,
-     "receptions": null,
-     "rec_yds": null,
-     "rec_td": null,
-     "games": 12.0
-    },
-    "rb": {
-     "name": "Bo Jackson",
-     "pff_off_grade": 86.6,
-     "pff_group_grade": 85.9,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": 150.0,
-     "rush_yds": 947.0,
-     "rush_td": 5.0,
-     "targets": 18.0,
-     "receptions": 17.0,
-     "rec_yds": 187.0,
-     "rec_td": 1.0,
-     "games": 11.0
-    },
-    "wr": {
-     "name": "Jeremiah Smith",
-     "pff_off_grade": 90.7,
-     "pff_group_grade": 90.7,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": 2.0,
-     "rush_yds": 20.0,
-     "rush_td": 1.0,
-     "targets": 89.0,
-     "receptions": 72.0,
-     "rec_yds": 942.0,
-     "rec_td": 11.0,
-     "games": 11.0
-    },
-    "te": {
-     "name": "Nate Roberts",
-     "pff_off_grade": null,
-     "pff_group_grade": null,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": 2.0,
-     "rush_yds": 1.0,
-     "rush_td": 0.0,
-     "targets": 5.0,
-     "receptions": 4.0,
-     "rec_yds": 30.0,
-     "rec_td": 0.0,
-     "games": 12.0
-    }
-   },
-   "away_positions": {
-    "qb": {
-     "name": "Keldric Luster",
-     "pff_off_grade": null,
-     "pff_group_grade": null,
-     "pass_att": 3.0,
-     "pass_yds": 14.0,
-     "pass_td": 0.0,
-     "rush_att": 3.0,
-     "rush_yds": 14.0,
-     "rush_td": 0.0,
-     "targets": null,
-     "receptions": null,
-     "rec_yds": null,
-     "rec_td": null,
-     "games": 2.0
-    },
-    "rb": {
-     "name": "TJ Horton",
-     "pff_off_grade": 67.1,
-     "pff_group_grade": 66.7,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": 61.0,
-     "rush_yds": 173.0,
-     "rush_td": 0.0,
-     "targets": 19.0,
-     "receptions": 17.0,
-     "rec_yds": 73.0,
-     "rec_td": 1.0,
-     "games": 10.0
-    },
-    "wr": {
-     "name": "Donovan Hamilton",
-     "pff_off_grade": 61.4,
-     "pff_group_grade": 60.6,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": null,
-     "rush_yds": null,
-     "rush_td": null,
-     "targets": 38.0,
-     "receptions": 20.0,
-     "rec_yds": 248.0,
-     "rec_td": 0.0,
-     "games": 12.0
-    },
-    "te": {
-     "name": "Tate Hoover",
-     "pff_off_grade": 65.0,
-     "pff_group_grade": 51.2,
-     "pass_att": null,
-     "pass_yds": null,
-     "pass_td": null,
-     "rush_att": null,
-     "rush_yds": null,
-     "rush_td": null,
-     "targets": 2.0,
-     "receptions": 1.0,
-     "rec_yds": 9.0,
-     "rec_td": 0.0,
-     "games": 12.0
-    }
-   },
-   "starter_matchups": {
-    "trenches": [
-     {
-      "off_team": "Ohio State Buckeyes",
-      "def_team": "Ball State Cardinals",
-      "off_players": [
-       {
-        "name": "Carson Hinzman",
-        "position": "C",
-        "grade": 73.6
-       },
-       {
-        "name": "Luke Montgomery",
-        "position": "LG",
-        "grade": 73.4
-       },
-       {
-        "name": "Ian Moore",
-        "position": "LT",
-        "grade": null
-       },
-       {
-        "name": "Julian Sayin",
-        "position": "QB",
-        "grade": 92.9
-       },
-       {
-        "name": "Bo Jackson",
-        "position": "RB",
-        "grade": 86.6
-       },
-       {
-        "name": "Austin Siereveld",
-        "position": "RG",
-        "grade": null
-       },
-       {
-        "name": "Phillip Daniels",
-        "position": "RT",
-        "grade": null
-       }
-      ],
-      "def_players": [
-       {
-        "name": "Austin Stief",
-        "position": "DE",
-        "grade": null
-       },
-       {
-        "name": "Ameir Glenn",
-        "position": "DT",
-        "grade": null
-       },
-       {
-        "name": "Gavin Forsha",
-        "position": "MLB",
-        "grade": null
-       },
-       {
-        "name": "Kendrick Gilbert",
-        "position": "NT",
-        "grade": null
-       },
-       {
-        "name": "Jared Badie",
-        "position": "RUSH",
-        "grade": null
-       },
-       {
-        "name": "Cincear Lewis",
-        "position": "WLB",
-        "grade": null
-       }
-      ],
-      "off_avg": 81.6,
-      "def_avg": null
-     },
-     {
-      "off_team": "Ball State Cardinals",
-      "def_team": "Ohio State Buckeyes",
-      "off_players": [
-       {
-        "name": "Maxwell Wentz",
-        "position": "C",
-        "grade": 66.3
-       },
-       {
-        "name": "Zach Bandy",
-        "position": "LG",
-        "grade": null
-       },
-       {
-        "name": "Chris Hood",
-        "position": "LT",
-        "grade": null
-       },
-       {
-        "name": "Keldric Luster",
-        "position": "QB",
-        "grade": null
-       },
-       {
-        "name": "TJ Horton",
-        "position": "RB",
-        "grade": 67.1
-       },
-       {
-        "name": "Cole Mosier",
-        "position": "RG",
-        "grade": 50.6
-       },
-       {
-        "name": "Tristan Cook",
-        "position": "RT",
-        "grade": null
-       }
-      ],
-      "def_players": [
-       {
-        "name": "James Smith",
-        "position": "DT",
-        "grade": null
-       },
-       {
-        "name": "Kenyatta Jackson Jr.",
-        "position": "LDE",
-        "grade": 72.7
-       },
-       {
-        "name": "Payton Pierce",
-        "position": "MLB",
-        "grade": null
-       },
-       {
-        "name": "John Walker",
-        "position": "NT",
-        "grade": 70.7
-       },
-       {
-        "name": "Beau Atkinson",
-        "position": "RDE",
-        "grade": null
-       },
-       {
-        "name": "Christian Alliegro",
-        "position": "WLB",
-        "grade": 62.3
-       }
-      ],
-      "off_avg": 61.3,
-      "def_avg": 68.6
-     }
-    ],
-    "skill": [
-     {
-      "off_team": "Ohio State Buckeyes",
-      "def_team": "Ball State Cardinals",
-      "off_players": [
-       {
-        "name": "Nate Roberts",
-        "position": "TE",
-        "grade": null
-       },
-       {
-        "name": "Brandon Inniss",
-        "position": "WR-SL",
-        "grade": 65.9
-       },
-       {
-        "name": "Chris Henry Jr.",
-        "position": "WR-X",
-        "grade": null
-       },
-       {
-        "name": "Jeremiah Smith",
-        "position": "WR-Z",
-        "grade": 90.7
-       }
-      ],
-      "def_players": [
-       {
-        "name": "Sterling Smith",
-        "position": "FS",
-        "grade": null
-       },
-       {
-        "name": "Will Yates",
-        "position": "LCB",
-        "grade": 73.4
-       },
-       {
-        "name": "Chris Jackson",
-        "position": "NB",
-        "grade": null
-       },
-       {
-        "name": "Diant\u00e9 Griffin",
-        "position": "RCB",
-        "grade": null
-       },
-       {
-        "name": "Derek Fields",
-        "position": "SS",
-        "grade": 52.7
-       }
-      ],
-      "off_avg": 78.3,
-      "def_avg": 63.1
-     },
-     {
-      "off_team": "Ball State Cardinals",
-      "def_team": "Ohio State Buckeyes",
-      "off_players": [
-       {
-        "name": "Tate Hoover",
-        "position": "TE",
-        "grade": 51.2
-       },
-       {
-        "name": "Jabari Smith Jr.",
-        "position": "WR-SL",
-        "grade": null
-       },
-       {
-        "name": "Elisha Durham",
-        "position": "WR-X",
-        "grade": null
-       },
-       {
-        "name": "Donovan Hamilton",
-        "position": "WR-Z",
-        "grade": 60.6
-       }
-      ],
-      "def_players": [
-       {
-        "name": "Terry Moore",
-        "position": "FS",
-        "grade": null
-       },
-       {
-        "name": "Jermaine Mathews Jr.",
-        "position": "LCB",
-        "grade": 61.5
-       },
-       {
-        "name": "Earl Little Jr.",
-        "position": "NB",
-        "grade": null
-       },
-       {
-        "name": "Devin Sanchez",
-        "position": "RCB",
-        "grade": 59.5
-       },
-       {
-        "name": "Jaylen McClain",
-        "position": "SS",
-        "grade": 77.1
-       }
-      ],
-      "off_avg": 55.9,
-      "def_avg": 66.0
-     }
-    ]
-   }
-  },
-  {
    "game_id": "994c7280c9e8dcb041c260eb2c767d4d",
    "home_team": "South Carolina Gamecocks",
    "away_team": "Kent State Golden Flashes",
@@ -3124,6 +2605,525 @@
       ],
       "off_avg": 62.1,
       "def_avg": 64.7
+     }
+    ]
+   }
+  },
+  {
+   "game_id": "9bb89639201454f186964f5b86365760",
+   "home_team": "Ohio State Buckeyes",
+   "away_team": "Ball State Cardinals",
+   "commence_time": "2026-09-05T16:30:00Z",
+   "book_spread": -50.5,
+   "book_total": 56.5,
+   "pred_spread": -60.3,
+   "pred_total": 60.3,
+   "spread_diff": 9.8,
+   "total_diff": -3.8,
+   "home_rated": true,
+   "away_rated": true,
+   "spread_reason": "The book leans 9.8 pts more toward Ball State Cardinals than SP+ + home-field alone would put them (SP+ gap +57.0 for Ohio State Buckeyes, +3.3 home edge).",
+   "total_reason": "Book expects a lower-scoring game than the team-total sum by 3.8 pts. (Floored to 60.3 here -- the opponent-blind team-total sum alone came in lower than the margin our power ratings imply, which isn't possible for a real score: total always has to be at least as big as the spread.)",
+   "home_sp": 31.8,
+   "away_sp": -25.2,
+   "hfa": 3.3,
+   "home_team_total": 28.13188651,
+   "away_team_total": 16.16798131,
+   "home_off_adj": 6.0,
+   "home_def_adj": 4.5,
+   "home_rank_tarp": 9.0,
+   "away_off_adj": -3.0,
+   "away_def_adj": -1.0,
+   "away_rank_tarp": 105.0,
+   "home_display": "Ohio State",
+   "away_display": "Ball State",
+   "five_factors": {
+    "home_off": {
+     "success_rate": 1.0,
+     "explosiveness": 127.0,
+     "havoc": 5.0,
+     "finishing_drives": 2.0,
+     "field_position": 49.5
+    },
+    "home_def": {
+     "success_rate": 10.0,
+     "explosiveness": 1.0,
+     "havoc": 38.0,
+     "finishing_drives": 6.0,
+     "field_position": 10.0
+    },
+    "away_off": {
+     "success_rate": 136.0,
+     "explosiveness": 30.0,
+     "havoc": 135.0,
+     "finishing_drives": 132.0,
+     "field_position": 103.5
+    },
+    "away_def": {
+     "success_rate": 113.0,
+     "explosiveness": 76.0,
+     "havoc": 105.5,
+     "finishing_drives": 59.0,
+     "field_position": 124.0
+    }
+   },
+   "home_power": {
+    "tan": 97.3,
+    "tan_rank": 1.0,
+    "sp": 31.8,
+    "sp_rank": 1.0,
+    "net_rp": 10.5,
+    "net_rp_rank": 9,
+    "ats_pct": 0.909,
+    "ats_rank": 2.0,
+    "over_pct": 0.333,
+    "over_rank": 123.5,
+    "seconds_per_play": 24.0721003,
+    "tempo_rank": 43.0
+   },
+   "away_power": {
+    "tan": 32.7,
+    "tan_rank": 132.0,
+    "sp": -25.2,
+    "sp_rank": 131.0,
+    "net_rp": -4.0,
+    "net_rp_rank": 114,
+    "ats_pct": 0.583,
+    "ats_rank": 44.5,
+    "over_pct": 0.417,
+    "over_rank": 99.5,
+    "seconds_per_play": 30.7617896,
+    "tempo_rank": 134.0
+   },
+   "home_grades": {
+    "grade_over": 96.4,
+    "grade_off": 95.0,
+    "grade_pass": 93.0,
+    "grade_pblk": 77.1,
+    "grade_recv": 92.1,
+    "grade_run": 88.3,
+    "grade_rblk": 77.9,
+    "grade_def": 93.8,
+    "grade_rdef": 94.4,
+    "grade_tack": 90.8,
+    "grade_prsh": 76.8,
+    "grade_cov": 90.7,
+    "grade_spec": 81.0,
+    "pf": 444.0,
+    "pa": 93.0
+   },
+   "away_grades": {
+    "grade_over": 62.7,
+    "grade_off": 59.0,
+    "grade_pass": 47.9,
+    "grade_pblk": 57.7,
+    "grade_recv": 61.1,
+    "grade_run": 71.4,
+    "grade_rblk": 53.9,
+    "grade_def": 67.3,
+    "grade_rdef": 65.6,
+    "grade_tack": 54.5,
+    "grade_prsh": 83.0,
+    "grade_cov": 51.9,
+    "grade_spec": 65.8,
+    "pf": 190.0,
+    "pa": 358.0
+   },
+   "home_positions": {
+    "qb": {
+     "name": "Julian Sayin",
+     "pff_off_grade": 92.9,
+     "pff_group_grade": 92.5,
+     "pass_att": 328.0,
+     "pass_yds": 3065.0,
+     "pass_td": 30.0,
+     "rush_att": 33.0,
+     "rush_yds": 44.0,
+     "rush_td": 0.0,
+     "targets": null,
+     "receptions": null,
+     "rec_yds": null,
+     "rec_td": null,
+     "games": 12.0
+    },
+    "rb": {
+     "name": "Bo Jackson",
+     "pff_off_grade": 86.6,
+     "pff_group_grade": 85.9,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": 150.0,
+     "rush_yds": 947.0,
+     "rush_td": 5.0,
+     "targets": 18.0,
+     "receptions": 17.0,
+     "rec_yds": 187.0,
+     "rec_td": 1.0,
+     "games": 11.0
+    },
+    "wr": {
+     "name": "Jeremiah Smith",
+     "pff_off_grade": 90.7,
+     "pff_group_grade": 90.7,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": 2.0,
+     "rush_yds": 20.0,
+     "rush_td": 1.0,
+     "targets": 89.0,
+     "receptions": 72.0,
+     "rec_yds": 942.0,
+     "rec_td": 11.0,
+     "games": 11.0
+    },
+    "te": {
+     "name": "Nate Roberts",
+     "pff_off_grade": null,
+     "pff_group_grade": null,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": 2.0,
+     "rush_yds": 1.0,
+     "rush_td": 0.0,
+     "targets": 5.0,
+     "receptions": 4.0,
+     "rec_yds": 30.0,
+     "rec_td": 0.0,
+     "games": 12.0
+    }
+   },
+   "away_positions": {
+    "qb": {
+     "name": "Keldric Luster",
+     "pff_off_grade": null,
+     "pff_group_grade": null,
+     "pass_att": 3.0,
+     "pass_yds": 14.0,
+     "pass_td": 0.0,
+     "rush_att": 3.0,
+     "rush_yds": 14.0,
+     "rush_td": 0.0,
+     "targets": null,
+     "receptions": null,
+     "rec_yds": null,
+     "rec_td": null,
+     "games": 2.0
+    },
+    "rb": {
+     "name": "TJ Horton",
+     "pff_off_grade": 67.1,
+     "pff_group_grade": 66.7,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": 61.0,
+     "rush_yds": 173.0,
+     "rush_td": 0.0,
+     "targets": 19.0,
+     "receptions": 17.0,
+     "rec_yds": 73.0,
+     "rec_td": 1.0,
+     "games": 10.0
+    },
+    "wr": {
+     "name": "Donovan Hamilton",
+     "pff_off_grade": 61.4,
+     "pff_group_grade": 60.6,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": null,
+     "rush_yds": null,
+     "rush_td": null,
+     "targets": 38.0,
+     "receptions": 20.0,
+     "rec_yds": 248.0,
+     "rec_td": 0.0,
+     "games": 12.0
+    },
+    "te": {
+     "name": "Tate Hoover",
+     "pff_off_grade": 65.0,
+     "pff_group_grade": 51.2,
+     "pass_att": null,
+     "pass_yds": null,
+     "pass_td": null,
+     "rush_att": null,
+     "rush_yds": null,
+     "rush_td": null,
+     "targets": 2.0,
+     "receptions": 1.0,
+     "rec_yds": 9.0,
+     "rec_td": 0.0,
+     "games": 12.0
+    }
+   },
+   "starter_matchups": {
+    "trenches": [
+     {
+      "off_team": "Ohio State Buckeyes",
+      "def_team": "Ball State Cardinals",
+      "off_players": [
+       {
+        "name": "Carson Hinzman",
+        "position": "C",
+        "grade": 73.6
+       },
+       {
+        "name": "Luke Montgomery",
+        "position": "LG",
+        "grade": 73.4
+       },
+       {
+        "name": "Ian Moore",
+        "position": "LT",
+        "grade": null
+       },
+       {
+        "name": "Julian Sayin",
+        "position": "QB",
+        "grade": 92.9
+       },
+       {
+        "name": "Bo Jackson",
+        "position": "RB",
+        "grade": 86.6
+       },
+       {
+        "name": "Austin Siereveld",
+        "position": "RG",
+        "grade": null
+       },
+       {
+        "name": "Phillip Daniels",
+        "position": "RT",
+        "grade": null
+       }
+      ],
+      "def_players": [
+       {
+        "name": "Austin Stief",
+        "position": "DE",
+        "grade": null
+       },
+       {
+        "name": "Ameir Glenn",
+        "position": "DT",
+        "grade": null
+       },
+       {
+        "name": "Gavin Forsha",
+        "position": "MLB",
+        "grade": null
+       },
+       {
+        "name": "Kendrick Gilbert",
+        "position": "NT",
+        "grade": null
+       },
+       {
+        "name": "Jared Badie",
+        "position": "RUSH",
+        "grade": null
+       },
+       {
+        "name": "Cincear Lewis",
+        "position": "WLB",
+        "grade": null
+       }
+      ],
+      "off_avg": 81.6,
+      "def_avg": null
+     },
+     {
+      "off_team": "Ball State Cardinals",
+      "def_team": "Ohio State Buckeyes",
+      "off_players": [
+       {
+        "name": "Maxwell Wentz",
+        "position": "C",
+        "grade": 66.3
+       },
+       {
+        "name": "Zach Bandy",
+        "position": "LG",
+        "grade": null
+       },
+       {
+        "name": "Chris Hood",
+        "position": "LT",
+        "grade": null
+       },
+       {
+        "name": "Keldric Luster",
+        "position": "QB",
+        "grade": null
+       },
+       {
+        "name": "TJ Horton",
+        "position": "RB",
+        "grade": 67.1
+       },
+       {
+        "name": "Cole Mosier",
+        "position": "RG",
+        "grade": 50.6
+       },
+       {
+        "name": "Tristan Cook",
+        "position": "RT",
+        "grade": null
+       }
+      ],
+      "def_players": [
+       {
+        "name": "James Smith",
+        "position": "DT",
+        "grade": null
+       },
+       {
+        "name": "Kenyatta Jackson Jr.",
+        "position": "LDE",
+        "grade": 72.7
+       },
+       {
+        "name": "Payton Pierce",
+        "position": "MLB",
+        "grade": null
+       },
+       {
+        "name": "John Walker",
+        "position": "NT",
+        "grade": 70.7
+       },
+       {
+        "name": "Beau Atkinson",
+        "position": "RDE",
+        "grade": null
+       },
+       {
+        "name": "Christian Alliegro",
+        "position": "WLB",
+        "grade": 62.3
+       }
+      ],
+      "off_avg": 61.3,
+      "def_avg": 68.6
+     }
+    ],
+    "skill": [
+     {
+      "off_team": "Ohio State Buckeyes",
+      "def_team": "Ball State Cardinals",
+      "off_players": [
+       {
+        "name": "Nate Roberts",
+        "position": "TE",
+        "grade": null
+       },
+       {
+        "name": "Brandon Inniss",
+        "position": "WR-SL",
+        "grade": 65.9
+       },
+       {
+        "name": "Chris Henry Jr.",
+        "position": "WR-X",
+        "grade": null
+       },
+       {
+        "name": "Jeremiah Smith",
+        "position": "WR-Z",
+        "grade": 90.7
+       }
+      ],
+      "def_players": [
+       {
+        "name": "Sterling Smith",
+        "position": "FS",
+        "grade": null
+       },
+       {
+        "name": "Will Yates",
+        "position": "LCB",
+        "grade": 73.4
+       },
+       {
+        "name": "Chris Jackson",
+        "position": "NB",
+        "grade": null
+       },
+       {
+        "name": "Diant\u00e9 Griffin",
+        "position": "RCB",
+        "grade": null
+       },
+       {
+        "name": "Derek Fields",
+        "position": "SS",
+        "grade": 52.7
+       }
+      ],
+      "off_avg": 78.3,
+      "def_avg": 63.1
+     },
+     {
+      "off_team": "Ball State Cardinals",
+      "def_team": "Ohio State Buckeyes",
+      "off_players": [
+       {
+        "name": "Tate Hoover",
+        "position": "TE",
+        "grade": 51.2
+       },
+       {
+        "name": "Jabari Smith Jr.",
+        "position": "WR-SL",
+        "grade": null
+       },
+       {
+        "name": "Elisha Durham",
+        "position": "WR-X",
+        "grade": null
+       },
+       {
+        "name": "Donovan Hamilton",
+        "position": "WR-Z",
+        "grade": 60.6
+       }
+      ],
+      "def_players": [
+       {
+        "name": "Terry Moore",
+        "position": "FS",
+        "grade": null
+       },
+       {
+        "name": "Jermaine Mathews Jr.",
+        "position": "LCB",
+        "grade": 61.5
+       },
+       {
+        "name": "Earl Little Jr.",
+        "position": "NB",
+        "grade": null
+       },
+       {
+        "name": "Devin Sanchez",
+        "position": "RCB",
+        "grade": 59.5
+       },
+       {
+        "name": "Jaylen McClain",
+        "position": "SS",
+        "grade": 77.1
+       }
+      ],
+      "off_avg": 55.9,
+      "def_avg": 66.0
      }
     ]
    }
