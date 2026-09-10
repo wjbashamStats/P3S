@@ -23,6 +23,44 @@ def _get(path, params):
         return None
 
 
+def pull_sports(all_sports=True):
+    """List every sport key The Odds API currently offers. Futures-only
+    "sports" (season win totals, championship/conference outrights) each
+    live under their OWN sport key, separate from americanfootball_ncaaf,
+    and won't show up unless all_sports=True -- pull_futures.py --discover
+    uses this to find them rather than guessing key names."""
+    data = _get("/sports", dict(all="true" if all_sports else "false"))
+    return data or []
+
+
+def pull_outrights(sport_key):
+    """Futures/outright odds for a sport key whose market is 'outrights'
+    (season-long winner-style bets: national champion, conference winner,
+    possibly team win totals if offered this way). Different response
+    shape from pull_game_lines: one row per team/competitor with a
+    consensus price across books, not one row per game."""
+    data = _get(f"/sports/{sport_key}/odds",
+               dict(regions=C.ODDS_REGION, markets="outrights", oddsFormat=C.ODDS_FORMAT))
+    if not data:
+        return []
+    import statistics as st
+    from collections import defaultdict
+    by_team = defaultdict(list)
+    for ev in data:
+        for bk in ev.get("bookmakers", []):
+            for m in bk.get("markets", []):
+                if m["key"] != "outrights":
+                    continue
+                for oc in m.get("outcomes", []):
+                    if oc.get("name") and oc.get("price") is not None:
+                        by_team[oc["name"]].append(oc["price"])
+    rows = []
+    for team, prices in by_team.items():
+        rows.append(dict(team=team, consensus_price=st.median(prices), n_books=len(prices)))
+    rows.sort(key=lambda r: r["consensus_price"])
+    return rows
+
+
 def pull_events():
     data = _get(f"/sports/{C.ODDS_SPORT}/events", {})
     if not data:
