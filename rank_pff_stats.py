@@ -39,11 +39,13 @@ import re
 import sys
 from collections import defaultdict
 
-# Columns never ranked: identifiers, or metadata that isn't a performance
-# signal (declined_penalties is "penalty called, then declined" -- not a
-# stat about the player's play; player_game_count is sample size itself).
+# Columns never ranked: identifiers and team-crosswalk metadata only.
+# (Confirmed against PFF's own ranked exports: player_game_count and
+# declined_penalties DO get ranked there -- sample size and "penalty
+# called, then declined" both turn out to be real signal worth ranking,
+# just handled via lower_is_better below where that's true.)
 COMMON_EXCLUDE = {"player", "player_id", "position", "team_name", "franchise_id",
-                   "player_game_count", "declined_penalties"}
+                   "teamid", "Team", "2025 Team"}
 
 # Per file kind: which column to use as the minimum-sample gate + a
 # sensible early-season default threshold, and which stat columns are
@@ -56,18 +58,19 @@ KIND_CONFIG = {
             "interceptions", "turnover_worthy_plays", "twp_rate", "sacks",
             "sack_percent", "drops", "drop_rate", "penalties", "bats",
             "thrown_aways", "hit_as_threw", "pressure_to_sack_rate",
-            "def_gen_pressures",
+            "def_gen_pressures", "declined_penalties",
         },
     ),
     "rushing": dict(
         match=r"rushing",
         sample_col="attempts", default_min_sample=5,
-        lower_is_better={"fumbles", "drops", "penalties"},
+        lower_is_better={"fumbles", "drops", "penalties", "declined_penalties"},
     ),
     "receiving": dict(
         match=r"receiving",
         sample_col="targets", default_min_sample=3,
-        lower_is_better={"drops", "drop_rate", "fumbles", "interceptions", "penalties"},
+        lower_is_better={"drops", "drop_rate", "fumbles", "interceptions", "penalties",
+                          "declined_penalties"},
     ),
     "defense": dict(
         match=r"defense",
@@ -75,7 +78,7 @@ KIND_CONFIG = {
         lower_is_better={
             "missed_tackles", "missed_tackle_rate", "penalties",
             "qb_rating_against", "yards", "yards_per_reception",
-            "yards_after_catch", "touchdowns", "receptions",
+            "yards_after_catch", "touchdowns", "receptions", "declined_penalties",
         },
     ),
     "blocking": dict(
@@ -83,7 +86,7 @@ KIND_CONFIG = {
         sample_col="snap_counts_block", default_min_sample=15,
         lower_is_better={
             "sacks_allowed", "hits_allowed", "hurries_allowed",
-            "pressures_allowed", "penalties",
+            "pressures_allowed", "penalties", "declined_penalties",
         },
     ),
 }
