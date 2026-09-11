@@ -15,8 +15,13 @@ One-time setup:
   playwright install chromium
 
 Run:
-  python3 dump_futures_html.py
-  python3 dump_futures_html.py --out-dir futures_html_dump --wait 10
+  python3 dump_futures_html.py --week 1
+  python3 dump_futures_html.py --week 2 --wait 10
+
+Saves into futures_html/week<N>/ by default so each week's pull is its
+own dated snapshot (matches this project's convention of committing
+weekly live-pull outputs, e.g. hist_lines_live_2026wk1.csv) rather than
+overwriting the previous week's files.
 """
 import argparse
 import os
@@ -40,7 +45,9 @@ PAGES = {
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--out-dir", default="futures_html_dump")
+    ap.add_argument("--week", type=int, required=True, help="CFB week number for this pull")
+    ap.add_argument("--out-dir", default=None,
+                    help="override the default futures_html/week<N>/ location")
     ap.add_argument("--wait", type=float, default=8.0,
                     help="seconds to let each page's JS render before grabbing HTML")
     ap.add_argument("--only", default=None,
@@ -48,6 +55,8 @@ def main():
                          "win_totals,national_futures (default: all)")
     args = ap.parse_args()
 
+    out_dir = args.out_dir or f"futures_html/week{args.week}"
+    args.out_dir = out_dir
     os.makedirs(args.out_dir, exist_ok=True)
     keys = args.only.split(",") if args.only else list(PAGES.keys())
 
