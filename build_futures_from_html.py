@@ -15,10 +15,20 @@ Win_<Book>_TotalLine/Odds/OverUnder/Line columns (see --win-totals).
 Per-book columns are named from the ACTUAL header labels found on the
 page (Bet365, BetMGM, DraftKings, Caesars, FanDuel, RiversCasino, ...)
 rather than positionally guessed -- the old R version silently lost a
-book to a generic "X" column when a header didn't parse; this reads the
-book name from each column's own <span class="hidden">BookName</span> and
-zips it with that row's data-value in the same column position, so a
-missing/reordered book can't silently misalign.
+book to a generic "X" column when a header didn't parse. Each row is
+split into its own <td class="game-odds"> cells and zipped with the
+header list POSITIONALLY (not via a flat data-value scan across the
+whole row) -- a book with no offer for a given team renders as an empty
+<td>, and a flat scan would silently shift every later book left by one
+column for that row. Confirmed this actually happens: the week-1
+national-championship page alone had 79 such empty cells.
+
+Win-totals cells carry TWO data-value spans each (e.g. "o10.5" then
+"+125" -- the over/under line, then the price), unlike the single-price
+cells on the championship-winner pages, so they get their own parser
+that splits each into Win_<Book>_TotalLine / _Odds / _OverUnder / _Line
+-- matching the column names AllTeamsFuturesWorkingFinal.R's (disabled)
+clean_win_totals() already used.
 
 This sandbox can't reach vegasinsider.com directly (network policy), so
 these HTML files have to be saved/uploaded rather than fetched live --
@@ -52,7 +62,20 @@ HEADER_BOOK_RE = re.compile(
     r'<th[^>]*class="[^"]*book-pinup[^"]*"[^>]*>.*?<span[^>]*class="hidden"[^>]*>([^<]+)</span>',
     re.DOTALL | re.IGNORECASE,
 )
-DATA_VALUE_RE = re.compile(r'data-value">\s*([+-]?\d+)\s*<', re.IGNORECASE)
+# Only cells whose class is EXACTLY "game-odds" (not "game-odds blank",
+# the trailing filler column with no header-book counterpart) -- keeps
+# cell count aligned with parse_book_headers()'s count.
+CELL_RE = re.compile(r'<td class="game-odds">(.*?)</td>', re.DOTALL | re.IGNORECASE)
+CELL_DATA_VALUE_RE = re.compile(r'data-value">\s*([^<]+?)\s*<', re.IGNORECASE)
+
+
+def team_norm(team):
+    """norm() plus the same alias table data_load.load_team_grades() uses
+    (Miami (FL) -> Miami, Miami (OH) -> Miami Ohio, Louisiana-Monroe ->
+    ULM, etc) -- VegasInsider's team strings hit the same handful of
+    naming mismatches against team_ratings_2025.csv's own Team column."""
+    n = DL.norm(team)
+    return DL._TEAM_GRADE_ALIASES.get(n, n)
 
 
 def parse_book_headers(html_text):
@@ -65,7 +88,8 @@ def parse_book_headers(html_text):
 def parse_odds_table(html_text, label_prefix):
     """
     Returns {team_norm: {display_team, <prefix>_<Book>: price, ...}}.
-    label_prefix: e.g. "Nat" or "Conf".
+    label_prefix: e.g. "Nat" or "Conf". A cell with no offer from a book
+    (empty <td>) is simply omitted for that team/book, not misaligned.
     """
     books = parse_book_headers(html_text)
     out = OrderedDict()
@@ -75,12 +99,53 @@ def parse_odds_table(html_text, label_prefix):
         if not name_m:
             continue
         team = html.unescape(name_m.group(1)).strip()
-        prices = DATA_VALUE_RE.findall(block)
+        cells = CELL_RE.findall(block)
         row = dict(display_team=team)
-        for i, price in enumerate(prices):
+        for i, cell in enumerate(cells):
+            vals = CELL_DATA_VALUE_RE.findall(cell)
+            if not vals:
+                continue
             book = books[i] if i < len(books) else f"book_{i+1}"
-            row[f"{label_prefix}_{book}"] = price
-        out[DL.norm(team)] = row
+            row[f"{label_prefix}_{book}"] = html.unescape(vals[0]).strip()
+        out[team_norm(team)] = row
+    return out
+
+
+OU_LINE_RE = re.compile(r'^([ou])([\d.]+)$', re.IGNORECASE)
+
+
+def parse_win_totals_table(html_text):
+    """
+    Returns {team_norm: {display_team, Win_<Book>_TotalLine/_Odds/
+    _OverUnder/_Line, ...}}. Each cell holds two data-value spans: the
+    O/U line (e.g. "o10.5") and the price (e.g. "+125"); a cell with no
+    offer is skipped for that team/book, same as parse_odds_table.
+    """
+    books = parse_book_headers(html_text)
+    out = OrderedDict()
+    for m in ROW_RE.finditer(html_text):
+        _slug, block = m.group(1), m.group(2)
+        name_m = TEAM_NAME_RE.search(block)
+        if not name_m:
+            continue
+        team = html.unescape(name_m.group(1)).strip()
+        cells = CELL_RE.findall(block)
+        row = dict(display_team=team)
+        for i, cell in enumerate(cells):
+            vals = [html.unescape(v).strip() for v in CELL_DATA_VALUE_RE.findall(cell)]
+            if len(vals) < 2:
+                continue
+            total_line, odds_raw = vals[0], vals[1]
+            ou_m = OU_LINE_RE.match(total_line)
+            if not ou_m:
+                continue
+            book = books[i] if i < len(books) else f"book_{i+1}"
+            over_under = "Over" if ou_m.group(1).lower() == "o" else "Under"
+            row[f"Win_{book}_TotalLine"] = total_line
+            row[f"Win_{book}_Odds"] = odds_raw.lstrip("+")
+            row[f"Win_{book}_OverUnder"] = over_under
+            row[f"Win_{book}_Line"] = ou_m.group(2)
+        out[team_norm(team)] = row
     return out
 
 
@@ -91,6 +156,7 @@ def main():
     ap.add_argument("--conf", action="append", default=[], metavar="LABEL=path.html",
                     help="one conference championship page, e.g. SEC=sec_championship.html "
                          "(repeat for each conference)")
+    ap.add_argument("--win-totals", default=None, help="win-totals page HTML")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
@@ -142,6 +208,15 @@ def main():
             if row is not None:
                 row["Conference.y"] = row.get("Conference.y") or label
         print(f"[{label}] {matched}/{len(parsed)} teams matched to team_ratings_2025.csv")
+        if unmatched:
+            print(f"  unmatched (no Team match found): {unmatched}")
+
+    if args.win_totals:
+        with open(args.win_totals, encoding="utf-8") as f:
+            text = f.read()
+        parsed = parse_win_totals_table(text)
+        matched, unmatched = merge_in(parsed, seen)
+        print(f"[win-totals] {matched}/{len(parsed)} teams matched to team_ratings_2025.csv")
         if unmatched:
             print(f"  unmatched (no Team match found): {unmatched}")
 
