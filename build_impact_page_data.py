@@ -14,7 +14,7 @@ the 2026 season starts this should point --week at the current week).
 
 Run:  python3 build_impact_page_data.py --week 14 --out impact_players.json
 """
-import argparse, csv, json
+import argparse, csv, json, os
 import config as C
 import data_load as DL
 import project as P
@@ -53,6 +53,65 @@ METRIC_SPECS = [
 ]
 
 PRIMARY_STAT = {"QB": "pass_yds", "HB": "rush_yds", "FB": "rush_yds", "WR": "rec_yds", "TE": "rec_yds"}
+
+# Position-specific "advanced" metrics, sourced from PFF's own raw season
+# exports (pff_passing_advanced.csv / pff_rushing_advanced.csv /
+# pff_receiving_advanced.csv -- copies of the reference files the column
+# coverage in rank_pff_stats.py was aligned against) rather than the
+# season-totals/crosswalk data everything else on this page comes from.
+# Joined by player_id, which is the same PFF numeric ID space in both
+# player_season_totals.csv and these exports (verified: e.g. Caden
+# Veltkamp is 156642 in both) -- far more reliable than a name/team match.
+# (field, label, decimals). Percent fields are already 0-100 in the source
+# (btt_rate=4.5 means 4.5%), not 0-1, so no rescaling.
+ADV_CONFIG = {
+    "QB": dict(path="pff_passing_advanced.csv", fields=[
+        ("avg_depth_of_target", "aDOT (air yds/throw)", 1),
+        ("avg_time_to_throw", "Time to Throw (sec)", 2),
+        ("accuracy_percent", "Accuracy %", 1),
+        ("big_time_throws", "Big-Time Throws", 0),
+        ("btt_rate", "Big-Time Throw %", 1),
+        ("turnover_worthy_plays", "Turnover-Worthy Plays", 0),
+        ("twp_rate", "Turnover-Worthy %", 1),
+        ("sack_percent", "Sack %", 1),
+        ("qb_rating", "PFF QB Rating", 1),
+    ]),
+    "HB": dict(path="pff_rushing_advanced.csv", fields=[
+        ("yco_attempt", "Yards After Contact / Att", 2),
+        ("breakaway_percent", "Breakaway Yards %", 1),
+        ("elusive_rating", "Elusive Rating", 1),
+        ("avoided_tackles", "Avoided Tackles", 0),
+        ("explosive", "Explosive Runs", 0),
+        ("longest", "Longest Run", 0),
+    ]),
+    "WR": dict(path="pff_receiving_advanced.csv", fields=[
+        ("yprr", "Yards / Route Run", 2),
+        ("avg_depth_of_target", "aDOT (air yds/target)", 1),
+        ("contested_catch_rate", "Contested Catch %", 1),
+        ("drop_rate", "Drop %", 1),
+        ("yards_after_catch_per_reception", "YAC / Reception", 1),
+        ("route_rate", "Route Participation %", 1),
+        ("longest", "Longest Catch", 0),
+    ]),
+}
+ADV_CONFIG["FB"] = ADV_CONFIG["HB"]
+ADV_CONFIG["TE"] = ADV_CONFIG["WR"]
+
+
+def load_advanced_stats(path):
+    """path -> {player_id: {field: float}} using every numeric column in
+    that position's ADV_CONFIG fields list. Returns {} if the file isn't
+    there (advanced section just doesn't appear rather than erroring)."""
+    out = {}
+    if not path or not os.path.exists(path):
+        return out
+    with open(path, newline="") as f:
+        for r in csv.DictReader(f):
+            pid = r.get("player_id")
+            if not pid:
+                continue
+            out[pid] = r
+    return out
 
 
 def norm(s):
@@ -134,6 +193,13 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
     # the same name.
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
+
+    # Advanced position-specific metrics (aDOT, BTT/TWP, YCO/att, YPRR,
+    # etc), loaded once per source file and joined by player_id below.
+    adv_cache = {}
+    for cfg in {"QB": ADV_CONFIG["QB"], "HB": ADV_CONFIG["HB"], "WR": ADV_CONFIG["WR"]}.values():
+        if cfg["path"] not in adv_cache:
+            adv_cache[cfg["path"]] = load_advanced_stats(cfg["path"])
 
     # Team volume pools (this season) for usage-share -- every player
     # counts toward the pool, not just the ones that clear MIN_VOLUME.
@@ -232,13 +298,29 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
 
         this_week = week_props.get(pkey)
 
+        position = tot.get("position") or grades.get("position") or ""
+        adv_cfg = ADV_CONFIG.get(position)
+        advanced = None
+        if adv_cfg and player_id:
+            adv_row = adv_cache.get(adv_cfg["path"], {}).get(player_id)
+            if adv_row:
+                advanced = [
+                    dict(key=field, label=label, dec=dec,
+                         value=round(v, dec) if (v := _to_float(adv_row.get(field))) is not None else None)
+                    for field, label, dec in adv_cfg["fields"]
+                ]
+                advanced = [m for m in advanced if m["value"] is not None]
+                if not advanced:
+                    advanced = None
+
         players.append(dict(
             name=grades.get("name") or raw_name or pkey,
             player_id=player_id,
             team=display_team,
             stats_team=stats_team if stats_team != display_team else None,
             conference=conference,
-            position=tot.get("position") or grades.get("position") or "",
+            position=position,
+            advanced=advanced,
             height=grades.get("height") or "",
             weight=grades.get("weight") or "",
             season_2025=dict(games=tot.get("games"), **{k: tot.get(k) for k in
@@ -263,7 +345,7 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
         if pstat:
             ranked = sorted(plist, key=lambda p: (p["raw_values"].get(pstat) or 0), reverse=True)
             for i, p in enumerate(ranked):
-                p["nat_rank"] = dict(rank=i + 1, of=len(ranked))
+                p["prod_nat_rank"] = dict(rank=i + 1, of=len(ranked))
             by_conf = {}
             for p in plist:
                 by_conf.setdefault(p["conference"], []).append(p)
@@ -272,7 +354,25 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
                     continue
                 cranked = sorted(clist, key=lambda p: (p["raw_values"].get(pstat) or 0), reverse=True)
                 for i, p in enumerate(cranked):
-                    p["conf_rank"] = dict(rank=i + 1, of=len(cranked))
+                    p["prod_conf_rank"] = dict(rank=i + 1, of=len(cranked))
+
+        # PFF-grade rank -- the page's PRIMARY rank/sort (see p3s Player
+        # Impact redesign): only players PFF actually graded that season
+        # are ranked (no 0-fill for the ungraded, which would misrank them
+        # as worst-in-class rather than simply "no grade available").
+        graded = [p for p in plist if p["raw_values"].get("off_grade_off") is not None]
+        graded_ranked = sorted(graded, key=lambda p: p["raw_values"]["off_grade_off"], reverse=True)
+        for i, p in enumerate(graded_ranked):
+            p["grade_nat_rank"] = dict(rank=i + 1, of=len(graded_ranked))
+        by_conf_g = {}
+        for p in graded:
+            by_conf_g.setdefault(p["conference"], []).append(p)
+        for conf, clist in by_conf_g.items():
+            if not conf:
+                continue
+            cranked = sorted(clist, key=lambda p: p["raw_values"]["off_grade_off"], reverse=True)
+            for i, p in enumerate(cranked):
+                p["grade_conf_rank"] = dict(rank=i + 1, of=len(cranked))
 
         for key, label, group in METRIC_SPECS:
             vals = [p["raw_values"][key] for p in plist if p["raw_values"].get(key) is not None]
@@ -295,8 +395,10 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
             rows.append(dict(key=key, label=label, group=group, v2025=v, v2024=rv24.get(key),
                              pct=pct.get(key)))
         p["metrics"] = rows
-        p.setdefault("nat_rank", None)
-        p.setdefault("conf_rank", None)
+        p.setdefault("prod_nat_rank", None)
+        p.setdefault("prod_conf_rank", None)
+        p.setdefault("grade_nat_rank", None)
+        p.setdefault("grade_conf_rank", None)
 
     players.sort(key=lambda p: (p["team"], p["position"], p["name"]))
     return players
