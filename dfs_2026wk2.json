@@ -432,26 +432,6 @@
    }
   },
   {
-   "name": "Darian Mensah",
-   "team": "Miami",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 31.62,
-   "proj": {
-    "pass_yds": 374.1,
-    "pass_td": 3.31,
-    "rush_yds": 15.8,
-    "rush_td": 0.3,
-    "rec_yds": -0.5,
-    "rec_td": 0.0,
-    "receptions": 0.1
-   }
-  },
-  {
    "name": "Turbo Richard",
    "team": "Indiana",
    "position": "HB",
@@ -1012,6 +992,26 @@
    }
   },
   {
+   "name": "Darian Mensah",
+   "team": "Miami",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 24.98,
+   "proj": {
+    "pass_yds": 207.8,
+    "pass_td": 3.32,
+    "rush_yds": 15.8,
+    "rush_td": 0.3,
+    "rec_yds": -0.4,
+    "rec_td": 0.0,
+    "receptions": 0.1
+   }
+  },
+  {
    "name": "Steve Angeli",
    "team": "Syracuse",
    "position": "QB",
@@ -1086,6 +1086,26 @@
     "pass_td": 1.23,
     "rush_yds": 2.7,
     "rush_td": 0.1,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Goose Crowder",
+   "team": "Troy",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Alabama State Hornets @ Troy Trojans",
+   "opponent": null,
+   "team_implied": 37.0,
+   "team_spread": -22.5,
+   "proj_fp": 23.88,
+   "proj": {
+    "pass_yds": 252.6,
+    "pass_td": 2.6,
+    "rush_yds": 16.6,
+    "rush_td": 0.28,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -1352,26 +1372,6 @@
    }
   },
   {
-   "name": "Mark Fletcher Jr.",
-   "team": "Miami",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 22.59,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 86.8,
-    "rush_td": 1.91,
-    "rec_yds": 11.8,
-    "rec_td": 0.1,
-    "receptions": 1.3
-   }
-  },
-  {
    "name": "Beau Sparks",
    "team": "Texas State",
    "position": "WR",
@@ -1432,6 +1432,26 @@
    }
   },
   {
+   "name": "Mark Fletcher Jr.",
+   "team": "Miami",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 22.27,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 86.8,
+    "rush_td": 1.89,
+    "rec_yds": 10.3,
+    "rec_td": 0.1,
+    "receptions": 1.2
+   }
+  },
+  {
    "name": "Keelon Russell",
    "team": "Alabama",
    "position": "QB",
@@ -1472,43 +1492,23 @@
    }
   },
   {
-   "name": "Goose Crowder",
+   "name": "Tucker Kilcrease",
    "team": "Troy",
    "position": "QB",
    "dk_slot": "QB",
    "matchup": "Alabama State Hornets @ Troy Trojans",
-   "opponent": "alabama",
+   "opponent": null,
    "team_implied": 37.0,
    "team_spread": -22.5,
-   "proj_fp": 21.51,
+   "proj_fp": 21.64,
    "proj": {
-    "pass_yds": 193.5,
-    "pass_td": 2.6,
-    "rush_yds": 16.6,
-    "rush_td": 0.28,
+    "pass_yds": 194.0,
+    "pass_td": 1.24,
+    "rush_yds": 36.8,
+    "rush_td": 0.88,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
-   }
-  },
-  {
-   "name": "Malachi Toney",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 21.47,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 10.3,
-    "rush_td": 0.21,
-    "rec_yds": 99.4,
-    "rec_td": 0.81,
-    "receptions": 8.8
    }
   },
   {
@@ -1952,23 +1952,23 @@
    }
   },
   {
-   "name": "Tucker Kilcrease",
-   "team": "Troy",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Alabama State Hornets @ Troy Trojans",
-   "opponent": "alabama",
+   "name": "Malachi Toney",
+   "team": "Miami",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
    "team_implied": 37.0,
-   "team_spread": -22.5,
-   "proj_fp": 19.53,
+   "team_spread": -20.5,
+   "proj_fp": 19.56,
    "proj": {
-    "pass_yds": 141.2,
-    "pass_td": 1.24,
-    "rush_yds": 36.8,
-    "rush_td": 0.88,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 10.3,
+    "rush_td": 0.2,
+    "rec_yds": 86.4,
+    "rec_td": 0.81,
+    "receptions": 7.6
    }
   },
   {
@@ -2812,26 +2812,6 @@
    }
   },
   {
-   "name": "Cooper Barkate",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 15.92,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 90.5,
-    "rec_td": 0.61,
-    "receptions": 6.4
-   }
-  },
-  {
    "name": "Steve Chavez-Soto",
    "team": "Utah",
    "position": "HB",
@@ -3389,6 +3369,26 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
+   }
+  },
+  {
+   "name": "Cooper Barkate",
+   "team": "Miami",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 14.35,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 78.7,
+    "rec_td": 0.61,
+    "receptions": 5.6
    }
   },
   {
@@ -4392,26 +4392,6 @@
    }
   },
   {
-   "name": "CharMar Brown",
-   "team": "Miami",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 12.5,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 43.4,
-    "rush_td": 0.9,
-    "rec_yds": 11.5,
-    "rec_td": 0.16,
-    "receptions": 1.4
-   }
-  },
-  {
    "name": "Parker Kingston",
    "team": "BYU",
    "position": "WR",
@@ -4732,6 +4712,26 @@
    }
   },
   {
+   "name": "CharMar Brown",
+   "team": "Miami",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 12.1,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 43.4,
+    "rush_td": 0.89,
+    "rec_yds": 9.5,
+    "rec_td": 0.16,
+    "receptions": 1.1
+   }
+  },
+  {
    "name": "Josiah Freeman",
    "team": "Fresno State",
    "position": "WR",
@@ -4929,26 +4929,6 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
-   }
-  },
-  {
-   "name": "Cam Vaughn",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 11.82,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 0.5,
-    "rush_td": 0.0,
-    "rec_yds": 65.3,
-    "rec_td": 0.48,
-    "receptions": 4.7
    }
   },
   {
@@ -5226,26 +5206,6 @@
     "pass_td": 0.63,
     "rush_yds": 21.9,
     "rush_td": 0.06,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Jalen Macon",
-   "team": "Northern Illinois",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
-   "opponent": "illinois",
-   "team_implied": 21.8,
-   "team_spread": 5.0,
-   "proj_fp": 11.45,
-   "proj": {
-    "pass_yds": 140.4,
-    "pass_td": 0.78,
-    "rush_yds": 13.9,
-    "rush_td": 0.22,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -5932,6 +5892,26 @@
    }
   },
   {
+   "name": "Cam Vaughn",
+   "team": "Miami",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 10.3,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 0.5,
+    "rush_td": 0.0,
+    "rec_yds": 54.0,
+    "rec_td": 0.48,
+    "receptions": 3.9
+   }
+  },
+  {
    "name": "Tae Meadows",
    "team": "Auburn",
    "position": "HB",
@@ -6069,26 +6049,6 @@
     "rec_yds": 52.2,
     "rec_td": 0.53,
     "receptions": 3.4
-   }
-  },
-  {
-   "name": "Vandrevius Jacobs",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 10.08,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 57.4,
-    "rec_td": 0.41,
-    "receptions": 3.7
    }
   },
   {
@@ -6266,6 +6226,26 @@
     "pass_td": 1.03,
     "rush_yds": 1.7,
     "rush_td": 0.07,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Jalen Macon",
+   "team": "Northern Illinois",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
+   "opponent": null,
+   "team_implied": 21.8,
+   "team_spread": 5.0,
+   "proj_fp": 9.81,
+   "proj": {
+    "pass_yds": 98.9,
+    "pass_td": 0.78,
+    "rush_yds": 14.1,
+    "rush_td": 0.22,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -6712,6 +6692,26 @@
    }
   },
   {
+   "name": "Jordan Lovett",
+   "team": "Troy",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Alabama State Hornets @ Troy Trojans",
+   "opponent": null,
+   "team_implied": 37.0,
+   "team_spread": -22.5,
+   "proj_fp": 9.18,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 38.8,
+    "rush_td": 0.6,
+    "rec_yds": 9.8,
+    "rec_td": 0.03,
+    "receptions": 1.1
+   }
+  },
+  {
    "name": "Dominic Lee-Knicely",
    "team": "Coastal Carolina",
    "position": "HB",
@@ -6769,26 +6769,6 @@
     "rec_yds": 49.3,
     "rec_td": 0.4,
     "receptions": 3.6
-   }
-  },
-  {
-   "name": "Jordan Lovett",
-   "team": "Troy",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Alabama State Hornets @ Troy Trojans",
-   "opponent": "alabama",
-   "team_implied": 37.0,
-   "team_spread": -22.5,
-   "proj_fp": 9.1,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 38.8,
-    "rush_td": 0.6,
-    "rec_yds": 9.5,
-    "rec_td": 0.03,
-    "receptions": 1.0
    }
   },
   {
@@ -6869,6 +6849,26 @@
     "rec_yds": 50.3,
     "rec_td": 0.37,
     "receptions": 3.5
+   }
+  },
+  {
+   "name": "D'Shawntae Jones",
+   "team": "Miami Ohio",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
+   "opponent": null,
+   "team_implied": 40.5,
+   "team_spread": -30.5,
+   "proj_fp": 8.97,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 27.5,
+    "rush_td": 1.04,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -7009,6 +7009,26 @@
     "rec_yds": 47.9,
     "rec_td": 0.31,
     "receptions": 4.3
+   }
+  },
+  {
+   "name": "Vandrevius Jacobs",
+   "team": "Miami",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 8.79,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 47.5,
+    "rec_td": 0.41,
+    "receptions": 3.1
    }
   },
   {
@@ -7269,26 +7289,6 @@
     "rec_yds": 46.2,
     "rec_td": 0.36,
     "receptions": 3.4
-   }
-  },
-  {
-   "name": "DeAree Rogers",
-   "team": "Northern Illinois",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
-   "opponent": "illinois",
-   "team_implied": 21.8,
-   "team_spread": 5.0,
-   "proj_fp": 8.44,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 2.2,
-    "rush_td": 0.0,
-    "rec_yds": 46.5,
-    "rec_td": 0.25,
-    "receptions": 4.1
    }
   },
   {
@@ -7692,23 +7692,23 @@
    }
   },
   {
-   "name": "Telly Johnson Jr.",
-   "team": "Northern Illinois",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
-   "opponent": "illinois",
-   "team_implied": 21.8,
-   "team_spread": 5.0,
-   "proj_fp": 8.16,
+   "name": "Keith Reynolds",
+   "team": "Miami Ohio",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
+   "opponent": null,
+   "team_implied": 40.5,
+   "team_spread": -30.5,
+   "proj_fp": 8.14,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 42.6,
-    "rush_td": 0.3,
-    "rec_yds": 11.6,
-    "rec_td": 0.03,
-    "receptions": 1.5
+    "rush_yds": 14.1,
+    "rush_td": 0.07,
+    "rec_yds": 36.7,
+    "rec_td": 0.16,
+    "receptions": 3.4
    }
   },
   {
@@ -7869,6 +7869,26 @@
     "rec_yds": 8.2,
     "rec_td": 0.02,
     "receptions": 0.9
+   }
+  },
+  {
+   "name": "Telly Johnson Jr.",
+   "team": "Northern Illinois",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
+   "opponent": null,
+   "team_implied": 21.8,
+   "team_spread": 5.0,
+   "proj_fp": 7.95,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 43.2,
+    "rush_td": 0.3,
+    "rec_yds": 9.9,
+    "rec_td": 0.03,
+    "receptions": 1.3
    }
   },
   {
@@ -8232,6 +8252,26 @@
    }
   },
   {
+   "name": "DeAree Rogers",
+   "team": "Northern Illinois",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Illinois State Redbirds @ Northern Illinois Huskies",
+   "opponent": null,
+   "team_implied": 21.8,
+   "team_spread": 5.0,
+   "proj_fp": 7.47,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 2.2,
+    "rush_td": 0.0,
+    "rec_yds": 39.8,
+    "rec_td": 0.25,
+    "receptions": 3.5
+   }
+  },
+  {
    "name": "K.D. Hutchinson",
    "team": "Western Kentucky",
    "position": "WR",
@@ -8532,26 +8572,6 @@
    }
   },
   {
-   "name": "Girard Pringle Jr.",
-   "team": "Miami",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 7.13,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 34.8,
-    "rush_td": 0.48,
-    "rec_yds": 3.4,
-    "rec_td": 0.05,
-    "receptions": 0.3
-   }
-  },
-  {
    "name": "Chas Nimrod",
    "team": "Auburn",
    "position": "WR",
@@ -8669,6 +8689,26 @@
     "rec_yds": 36.1,
     "rec_td": 0.28,
     "receptions": 3.3
+   }
+  },
+  {
+   "name": "Girard Pringle Jr.",
+   "team": "Miami",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 6.99,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 34.8,
+    "rush_td": 0.47,
+    "rec_yds": 2.8,
+    "rec_td": 0.05,
+    "receptions": 0.2
    }
   },
   {
@@ -9469,26 +9509,6 @@
     "rec_yds": 32.9,
     "rec_td": 0.29,
     "receptions": 2.5
-   }
-  },
-  {
-   "name": "Keith Reynolds",
-   "team": "Miami Ohio",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "",
-   "opponent": null,
-   "team_implied": null,
-   "team_spread": null,
-   "proj_fp": 6.36,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 10.5,
-    "rush_td": 0.03,
-    "rec_yds": 29.7,
-    "rec_td": 0.13,
-    "receptions": 2.8
    }
   },
   {
@@ -10832,26 +10852,6 @@
    }
   },
   {
-   "name": "Elija Lofton",
-   "team": "Miami",
-   "position": "TE",
-   "dk_slot": "TE",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 5.15,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 1.3,
-    "rush_td": 0.01,
-    "rec_yds": 21.9,
-    "rec_td": 0.28,
-    "receptions": 2.2
-   }
-  },
-  {
    "name": "Zycarl Lewis Jr.",
    "team": "Tulane",
    "position": "WR",
@@ -11452,23 +11452,23 @@
    }
   },
   {
-   "name": "D'Shawntae Jones",
-   "team": "Miami Ohio",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "",
-   "opponent": null,
-   "team_implied": null,
-   "team_spread": null,
-   "proj_fp": 4.69,
+   "name": "Elija Lofton",
+   "team": "Miami",
+   "position": "TE",
+   "dk_slot": "TE",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 4.71,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 20.3,
-    "rush_td": 0.44,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
+    "rush_yds": 1.3,
+    "rush_td": 0.01,
+    "rec_yds": 19.0,
+    "rec_td": 0.28,
+    "receptions": 1.9
    }
   },
   {
@@ -12412,6 +12412,26 @@
    }
   },
   {
+   "name": "Lamar Sperling",
+   "team": "UTEP",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Texas Southern Tigers @ UTEP Miners",
+   "opponent": null,
+   "team_implied": 39.5,
+   "team_spread": -25.5,
+   "proj_fp": 4.04,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 22.3,
+    "rush_td": 0.24,
+    "rec_yds": 1.7,
+    "rec_td": 0.01,
+    "receptions": 0.3
+   }
+  },
+  {
    "name": "Bailey Stockton",
    "team": "Florida",
    "position": "WR",
@@ -12852,26 +12872,6 @@
    }
   },
   {
-   "name": "Joshua Moore",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 3.83,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 19.5,
-    "rec_td": 0.19,
-    "receptions": 1.5
-   }
-  },
-  {
    "name": "Caleb Odom",
    "team": "Ole Miss",
    "position": "TE",
@@ -12989,26 +12989,6 @@
     "rec_yds": 18.2,
     "rec_td": 0.14,
     "receptions": 2.2
-   }
-  },
-  {
-   "name": "Lamar Sperling",
-   "team": "UTEP",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Texas Southern Tigers @ UTEP Miners",
-   "opponent": "texas",
-   "team_implied": 39.5,
-   "team_spread": -25.5,
-   "proj_fp": 3.74,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 19.3,
-    "rush_td": 0.24,
-    "rec_yds": 1.7,
-    "rec_td": 0.01,
-    "receptions": 0.3
    }
   },
   {
@@ -13349,6 +13329,26 @@
     "rec_yds": 22.1,
     "rec_td": 0.05,
     "receptions": 2.0
+   }
+  },
+  {
+   "name": "Joshua Moore",
+   "team": "Miami",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Miami Hurricanes @ Wake Forest Demon Deacons",
+   "opponent": "wakeforest",
+   "team_implied": 37.0,
+   "team_spread": -20.5,
+   "proj_fp": 3.48,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 16.9,
+    "rec_td": 0.19,
+    "receptions": 1.3
    }
   },
   {
@@ -13852,6 +13852,26 @@
    }
   },
   {
+   "name": "Cade Yacamelli",
+   "team": "Miami Ohio",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
+   "opponent": null,
+   "team_implied": 40.5,
+   "team_spread": -30.5,
+   "proj_fp": 3.08,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 18.6,
+    "rush_td": 0.12,
+    "rec_yds": 3.0,
+    "rec_td": 0.01,
+    "receptions": 0.2
+   }
+  },
+  {
    "name": "Joshisa Trader",
    "team": "NC State",
    "position": "WR",
@@ -14029,6 +14049,26 @@
     "rec_yds": 14.6,
     "rec_td": 0.15,
     "receptions": 1.3
+   }
+  },
+  {
+   "name": "Christian Ross",
+   "team": "Miami Ohio",
+   "position": "TE",
+   "dk_slot": "TE",
+   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
+   "opponent": null,
+   "team_implied": 40.5,
+   "team_spread": -30.5,
+   "proj_fp": 3.02,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 16.3,
+    "rec_td": 0.11,
+    "receptions": 1.5
    }
   },
   {
@@ -14457,7 +14497,7 @@
    "position": "HB",
    "dk_slot": "RB",
    "matchup": "Texas Southern Tigers @ UTEP Miners",
-   "opponent": "texas",
+   "opponent": null,
    "team_implied": 39.5,
    "team_spread": -25.5,
    "proj_fp": 2.65,
@@ -14609,6 +14649,26 @@
     "rec_yds": 15.3,
     "rec_td": 0.06,
     "receptions": 1.3
+   }
+  },
+  {
+   "name": "Lazaro Rogers",
+   "team": "Miami Ohio",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
+   "opponent": null,
+   "team_implied": 40.5,
+   "team_spread": -30.5,
+   "proj_fp": 2.49,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 16.7,
+    "rush_td": 0.12,
+    "rec_yds": 0.4,
+    "rec_td": 0.0,
+    "receptions": 0.1
    }
   },
   {
@@ -14772,6 +14832,26 @@
    }
   },
   {
+   "name": "Jaylan Brown",
+   "team": "UTEP",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Texas Southern Tigers @ UTEP Miners",
+   "opponent": null,
+   "team_implied": 39.5,
+   "team_spread": -25.5,
+   "proj_fp": 2.34,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 13.8,
+    "rec_td": 0.05,
+    "receptions": 1.3
+   }
+  },
+  {
    "name": "Sedrick Irvin",
    "team": "Stanford",
    "position": "HB",
@@ -14849,26 +14929,6 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
-   }
-  },
-  {
-   "name": "Jaylan Brown",
-   "team": "UTEP",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Texas Southern Tigers @ UTEP Miners",
-   "opponent": "texas",
-   "team_implied": 39.5,
-   "team_spread": -25.5,
-   "proj_fp": 2.28,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 13.7,
-    "rec_td": 0.05,
-    "receptions": 1.2
    }
   },
   {

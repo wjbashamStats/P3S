@@ -213,6 +213,45 @@ def load_game_lines(path):
     return out
 
 
+# Raw slate names (Odds API game lines) whose longest-known-prefix
+# resolution is wrong, hand-verified by scanning every distinct
+# home_team/away_team string in the hist_lines_* and hist_props_* files
+# (217 names) for canonical tkeys claimed by more than one raw name.
+# Two failure modes, both fixed here rather than by loosening the prefix
+# rule -- see _resolve_raw_team's docstring for why the rule itself is
+# the only unambiguous one available:
+#
+#   1. A non-FBS school whose name STARTS with an FBS school's name
+#      ("Alabama State Hornets" -> alabama). These are genuine prefix
+#      matches, so no prefix rule can reject them; the longer, correct
+#      key simply doesn't exist in our universe (we only carry FBS).
+#      Mapped to None -- the same "not one of ours" answer the other 35
+#      FCS opponents on a typical slate already get, which callers
+#      already handle (no opponent adjustment).
+#      Left unfixed, Troy's week-2 2026 projections were adjusted for
+#      ALABAMA's defense because their opponent was Alabama State.
+#
+#   2. Miami (OH), whose Odds spelling norms to "miamiohredhawks" while
+#      our key is "miamiohio" -- they share only "miamioh", so neither
+#      is a prefix of the other and the only match left is "miami"
+#      (Miami FL). That made Miami (OH)'s game unreachable for its own
+#      players (no implied total at all) while handing it to Miami FL,
+#      who were not on the slate that week.
+SLATE_TEAM_ALIASES = {
+    "miamiohredhawks": "miamiohio",
+    "alabamastatehornets": None,
+    "arkansaspinebluffgoldenlions": None,
+    "houstonbaptisthuskies": None,
+    "illinoisstateredbirds": None,
+    "indianastatesycamores": None,
+    "northcarolinaataggies": None,
+    "northwesternstatedemons": None,
+    "tennesseestatetigers": None,
+    "texassoutherntigers": None,
+    "utahtechtrailblazers": None,
+}
+
+
 def _resolve_raw_team(raw_name, known_tkeys):
     """
     Given a normalized raw team name from a game line (WITH mascot, e.g.
@@ -234,7 +273,12 @@ def _resolve_raw_team(raw_name, known_tkeys):
     A&M Aggies" is shorter than "Texas Longhorns", so a length-heuristic
     picked Texas A&M for a Texas player). Only the longest-known-team-name
     prefix match is unambiguous.
+
+    SLATE_TEAM_ALIASES is consulted first, for the handful of raw names
+    the prefix rule cannot get right on its own (see that table).
     """
+    if raw_name in SLATE_TEAM_ALIASES:
+        return SLATE_TEAM_ALIASES[raw_name]
     candidates = [ck for ck in known_tkeys if ck and (raw_name.startswith(ck) or ck.startswith(raw_name))]
     return max(candidates, key=len) if candidates else None
 
