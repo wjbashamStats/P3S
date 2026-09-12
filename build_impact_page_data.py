@@ -193,6 +193,9 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
     # the same name.
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
+    depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
+    canonical_tkeys = {p["tkey"] for p in pff_by_pkey.values()}
+    team_display_by_tkey = {p["tkey"]: p["team_cfbd"] for p in pff_by_pkey.values()}
 
     # Advanced position-specific metrics (aDOT, BTT/TWP, YCO/att, YPRR,
     # etc), loaded once per source file and joined by player_id below.
@@ -260,9 +263,18 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
         raw_name, raw_team = raw_by_key.get((pkey, tkey), ("", ""))
         stats_team = pff2c.get(norm(raw_team), raw_team)
         # Display team: prefer the crosswalk's (current/2026) team when we
-        # have one, since that's where this player actually is now; fall
+        # have one, since that's where this player actually is now; then the
+        # current-season depth chart, which covers transfers the crosswalk
+        # misses (Kenny Minchey was showing Notre Dame while starting for
+        # Kentucky, Austin Simmons showing Ole Miss while at Missouri); fall
         # back to the 2025 team their stats below were earned on.
-        display_team = grades.get("team_cfbd") or stats_team
+        display_team = grades.get("team_cfbd")
+        if not display_team:
+            dc_tkey = DL.resolve_depth_chart_team(
+                (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys)
+            if dc_tkey:
+                display_team = team_display_by_tkey.get(dc_tkey, dc_tkey)
+        display_team = display_team or stats_team
         conference = conferences.get(norm(stats_team)) or conferences.get(norm(display_team))
 
         rates_2025_r = {k: (round(v, 2) if v is not None else None) for k, v in rates_2025.items()}

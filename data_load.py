@@ -471,7 +471,15 @@ def resolve_depth_chart_team(raw_team, known_tkeys):
     so callers fall through to their existing behavior rather than
     silently taking a wrong-but-plausible answer.
     """
-    alias = DEPTH_CHART_TEAM_ALIASES.get((raw_team or "").strip().lower(), raw_team)
+    # Fail closed on a missing/blank team. _resolve_raw_team matches on
+    # "either string is a prefix of the other", and EVERY key is trivially
+    # a prefix-match for "" -- so an unguarded blank resolves to whichever
+    # canonical name happens to be longest (Florida International), which
+    # is worse than not resolving at all. Callers treat None as "no
+    # depth-chart team" and fall through to their next source.
+    if not (raw_team or "").strip():
+        return None
+    alias = DEPTH_CHART_TEAM_ALIASES.get(raw_team.strip().lower(), raw_team)
     return _resolve_raw_team(norm(alias), known_tkeys)
 
 

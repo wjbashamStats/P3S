@@ -12921,44 +12921,6 @@
    "commence_time": "2026-09-12T23:30:00Z",
    "players": [
     {
-     "name": "Nathan McNeil",
-     "team": "Florida International",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 29.5,
-       "projection": 18.1,
-       "edge_pct": -38.6,
-       "over_price": 110.0,
-       "under_price": -143.0,
-       "n_books": "1",
-       "components": {
-        "volume": 4.43,
-        "efficiency": 4.761,
-        "opp_adj": 0.86
-       },
-       "breakdown": {
-        "volume_source": "team-share of iowa's 2024 rush_att pool, applied to floridainternational's 2025 pool",
-        "pace_script_adj": 1.492,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 28.8,
-        "league_avg_implied": 26.6,
-        "team_spread": -10.0,
-        "opponent": "buffalo",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.876,
-        "matchup_grade_adj": 0.982,
-        "tarp_adj": null,
-        "td_rate": 0.0197,
-        "expected_td": 0.087
-       }
-      }
-     }
-    },
-    {
      "name": "DJ Vonnahme",
      "team": "Iowa",
      "position": "TE",
@@ -13092,6 +13054,44 @@
         "tarp_adj": null,
         "td_rate": 0.0206,
         "expected_td": 0.036
+       }
+      }
+     }
+    },
+    {
+     "name": "Nathan McNeil",
+     "team": "Iowa",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 29.5,
+       "projection": 19.8,
+       "edge_pct": -32.9,
+       "over_price": 110.0,
+       "under_price": -143.0,
+       "n_books": "1",
+       "components": {
+        "volume": 4.93,
+        "efficiency": 4.761,
+        "opp_adj": 0.844
+       },
+       "breakdown": {
+        "volume_source": "team-share of iowa's 2024 rush_att pool, applied to iowa's 2025 pool",
+        "pace_script_adj": 1.599,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.8,
+        "league_avg_implied": 26.6,
+        "team_spread": -14.0,
+        "opponent": "iowastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.914,
+        "matchup_grade_adj": 1.489,
+        "tarp_adj": null,
+        "td_rate": 0.0197,
+        "expected_td": 0.097
        }
       }
      }
