@@ -181,7 +181,7 @@ def load_game_logs():
     return out
 
 
-def load_game_lines(path):
+def load_game_lines(path, date_start=None, date_end=None):
     """
     hist_lines_closing_wkN.csv (from historical_pull.R --game-lines) --
     one row per game: game_id, week, home_team, away_team, home_spread,
@@ -192,7 +192,18 @@ def load_game_lines(path):
     strings (WITH mascot, e.g. "Kansas State Wildcats" -- these do NOT
     equal our norm()'d crosswalk team keys, which drop the mascot; use
     find_team_game_line() below to match, not a dict lookup) plus the
-    derived home_implied/away_implied team totals.
+    derived home_implied/away_implied team totals and commence_time.
+
+    date_start/date_end (inclusive "YYYY-MM-DD") restrict the result to
+    one slate by kickoff date. A live pull labels every game it fetched
+    with the same week number, so a single week-2 file spans two
+    weekends (85 games Sept 11-13 and 15 more Sept 17-20 in the 2026
+    file) -- and since _best_team_side returns a team's FIRST matching
+    game, a team appearing in both weekends silently gets whichever the
+    file happens to list first. Narrow the window to the slate you're
+    building and that ambiguity is gone. Rows with no commence_time are
+    kept (the historical closing-line files carry no date at all, so a
+    window can't apply to them); omit both bounds to keep everything.
     """
     from collections import defaultdict
     out = defaultdict(list)
@@ -204,9 +215,12 @@ def load_game_lines(path):
         total = _to_float(r.get("total"))
         if week is None or home_spread is None or total is None:
             continue
+        ct = r.get("commence_time", "") or ""
+        if ct and date_start and not (date_start <= ct[:10] <= (date_end or "9999-12-31")):
+            continue
         out[week].append(dict(
             home_team=r.get("home_team", ""), away_team=r.get("away_team", ""),
-            home_spread=home_spread, total=total,
+            home_spread=home_spread, total=total, commence_time=ct,
             home_implied=total / 2 - home_spread / 2,
             away_implied=total / 2 + home_spread / 2,
         ))

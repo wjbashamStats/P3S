@@ -163,7 +163,8 @@ def percentile_rank(value, values):
     return (below + 0.5 * equal) / n
 
 
-def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
+def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None,
+          date_start=None, date_end=None, include_departed=False):
     pff2c, _ = DL.load_team_map()
     # The season TABLE always compares the two most recent COMPLETE seasons
     # (2025 vs. real 2024), regardless of which season/week the "this week"
@@ -215,7 +216,8 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     week_props = {}
     try:
         games = BPD.build_week(week, props_path, lines_path, ratings_path, grades_path, season=season,
-                               depth_chart_path=depth_chart_path)
+                               depth_chart_path=depth_chart_path,
+                               date_start=date_start, date_end=date_end)
         for g in games:
             for pl in g["players"]:
                 week_props[norm(pl["name"])] = dict(
@@ -227,11 +229,31 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     except FileNotFoundError as e:
         print(f"  [warn] skipping this-week props: {e}")
 
+    # Every card starts from a 2025 season-totals row, so by default the page
+    # carries last year's whole skill-position population -- including the
+    # ~40% who have since graduated or gone to the NFL (Diego Pavia, Ty
+    # Simpson, Jeremiyah Love, Jalon Daniels and 668 others). They have no
+    # 2026 team, so they render with a blank team and no "this week" section,
+    # and they dilute every rank and filter on the page. Three independent
+    # signals count as evidence a player is still on a 2026 roster, and any
+    # one of them keeps the card:
+    #   - master_crosswalk.csv (PFF's current-team assignment)
+    #   - depth_charts.csv (the ourlads 2026 scrape)
+    #   - a posted prop market for this week, which no book offers on a
+    #     player who isn't on a roster -- this one matters because the first
+    #     two have real gaps (it alone saves Nathan McNeil of Iowa).
+    # --include-departed restores the old, unfiltered population.
+    on_2026_roster = set(pff_by_pkey) | set(depth_chart) | set(week_props)
+
     players = []
+    n_departed = 0
     for (pkey, tkey), tot in totals.items():
         if tot.get("position") not in SKILL_POSITIONS:
             continue
         if not meets_volume_floor(tot):
+            continue
+        if not include_departed and pkey not in on_2026_roster:
+            n_departed += 1
             continue
 
         grades = pff_by_pkey.get(pkey, {})
@@ -413,6 +435,9 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
         p.setdefault("grade_conf_rank", None)
 
     players.sort(key=lambda p: (p["team"], p["position"], p["name"]))
+    if n_departed:
+        print(f"  dropped {n_departed} players with no 2026 roster evidence "
+              f"(--include-departed keeps them)")
     return players
 
 
@@ -431,11 +456,21 @@ def main():
                          "volume by ourlads.com depth-chart rank for pure-prior-year "
                          "weeks only (UNVALIDATED, see config.DEPTH_RANK_MULT). "
                          "No effect if omitted.")
+    ap.add_argument("--date-start", default=None,
+                    help="inclusive kickoff-date bound, YYYY-MM-DD -- restricts the "
+                         "game-lines file to one slate (a live pull labels two "
+                         "weekends with the same week number). No filter if omitted.")
+    ap.add_argument("--date-end", default=None, help="inclusive, YYYY-MM-DD")
+    ap.add_argument("--include-departed", action="store_true",
+                    help="keep 2025 players with no evidence of a 2026 roster spot "
+                         "(graduated/NFL). Off by default -- see build().")
     ap.add_argument("--out", default="impact_players.json")
     args = ap.parse_args()
 
     players = build(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
-                    season=args.season, depth_chart_path=args.depth_chart)
+                    season=args.season, depth_chart_path=args.depth_chart,
+                    date_start=args.date_start, date_end=args.date_end,
+                    include_departed=args.include_departed)
     payload = dict(season=args.season, season_table_year=2025, week=args.week,
                    generated_players=len(players), players=players)
     with open(args.out, "w") as f:

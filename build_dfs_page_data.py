@@ -93,9 +93,10 @@ def dk_points(pass_yds, pass_td, rush_yds, rush_td, rec_yds, rec_td, receptions)
         + (receptions or 0) * DK_SCORING["reception"], 2)
 
 
-def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
+def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None,
+          date_start=None, date_end=None):
     pff2c, _ = DL.load_team_map()
-    lines_by_week = DL.load_game_lines(lines_path)
+    lines_by_week = DL.load_game_lines(lines_path, date_start, date_end)
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
     depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
@@ -246,6 +247,14 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
         canon_tkey = norm(team_c)
         if canon_tkey not in matchup_cache:
             matchup_cache[canon_tkey] = matchup_for_tkey(canon_tkey)
+        # With a date window active, an empty matchup means this team has no
+        # game in the slate being built -- they're off this weekend, not
+        # merely missing a line. Nobody can roster them, and listing them
+        # with a blank opponent and no implied total reads as a data bug, so
+        # drop them. Without a window we keep the old behavior (every team
+        # in the file is in play).
+        if date_start and not matchup_cache[canon_tkey]:
+            continue
 
         any_mkt = pass_m or rush_m or rec_m or recy_m
         bd = any_mkt.get("breakdown", {}) if any_mkt else {}
@@ -287,11 +296,18 @@ def main():
                          "volume by ourlads.com depth-chart rank for pure-prior-year "
                          "weeks only (UNVALIDATED, see config.DEPTH_RANK_MULT). "
                          "No effect if omitted.")
+    ap.add_argument("--date-start", default=None,
+                    help="inclusive kickoff-date bound, YYYY-MM-DD -- restricts the "
+                         "game-lines file to one slate (a live pull labels two "
+                         "weekends with the same week number) and drops players "
+                         "whose team isn't on it. No filter if omitted.")
+    ap.add_argument("--date-end", default=None, help="inclusive, YYYY-MM-DD")
     ap.add_argument("--out", default="dfs_wk14.json")
     args = ap.parse_args()
 
     players = build(args.week, args.game_lines, args.team_ratings, args.team_grades, season=args.season,
-                    depth_chart_path=args.depth_chart)
+                    depth_chart_path=args.depth_chart,
+                    date_start=args.date_start, date_end=args.date_end)
     payload = dict(season=args.season, week=args.week, scoring=DK_SCORING, players=players)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)

@@ -21,9 +21,10 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None):
+def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2025, depth_chart_path=None,
+               date_start=None, date_end=None):
     pff2c, odds2c = DL.load_team_map()
-    lines_by_week = DL.load_game_lines(lines_path)
+    lines_by_week = DL.load_game_lines(lines_path, date_start, date_end)
     team_ratings = DL.load_team_ratings(ratings_path)
     team_grades = DL.load_team_grades(grades_path)
     depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
@@ -157,11 +158,17 @@ def main():
                          "volume by ourlads.com depth-chart rank for pure-prior-year "
                          "weeks only (UNVALIDATED, see config.DEPTH_RANK_MULT). "
                          "No effect if omitted.")
+    ap.add_argument("--date-start", default=None,
+                    help="inclusive kickoff-date bound, YYYY-MM-DD -- restricts the "
+                         "game-lines file to one slate (a live pull labels two "
+                         "weekends with the same week number). No filter if omitted.")
+    ap.add_argument("--date-end", default=None, help="inclusive, YYYY-MM-DD")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
     games = build_week(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
-                       season=args.season, depth_chart_path=args.depth_chart)
+                       season=args.season, depth_chart_path=args.depth_chart,
+                       date_start=args.date_start, date_end=args.date_end)
     payload = dict(week=args.week, season=args.season, games=games)
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1)
