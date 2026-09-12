@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-build_hub.py -- wraps the 4 standalone page fragments (dfs_page.html,
-impact_page.html, diversions_page.html, props_page.html) into one hub
+build_hub.py -- wraps the 4 built page fragments (dfs_page.html,
+impact_page.html, diversions_page.html, props_page.html -- produced by
+build_pages.py, which injects each page's data) into one hub
 artifact with a tab bar + an iframe per page (base64-encoded into
 srcdoc), so each page's own CSS/JS stays fully isolated -- no risk of
 collisions between e.g. the two pages that both declare `const DATA =`.
@@ -11,7 +12,13 @@ import os
 
 # Page fragments live next to this script. Override with PAGES_DIR to build
 # from a working copy elsewhere (e.g. a session scratchpad).
-SCRATCH = os.environ.get("PAGES_DIR", os.path.dirname(os.path.abspath(__file__))).rstrip("/") + "/"
+# Hub inputs are the BUILT pages (data already injected), not the templates
+# in this directory -- run pages/build_pages.py first. Override with
+# PAGES_DIR to build from a working copy elsewhere.
+SCRATCH = os.environ.get(
+    "PAGES_DIR",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "build"),
+).rstrip("/") + "/"
 
 TABS = [
     ("dfs", "DFS Lab", "dfs_page.html"),
