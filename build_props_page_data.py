@@ -56,12 +56,23 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2
         totals_by_pkey.setdefault(norm(r.get("player", "")), r)
 
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
+    canonical_tkeys = {p["tkey"] for p in pff_by_pkey.values()}
+    team_display_by_tkey = {p["tkey"]: p["team_cfbd"] for p in pff_by_pkey.values()}
 
     def resolve_player_team_position(pkey):
         r = totals_by_pkey.get(pkey)
         p = pff_by_pkey.get(pkey)
+        dc_tkey = DL.resolve_depth_chart_team(
+            (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys) if depth_chart else None
         if p is not None:
             tkey, team_cfbd = p["tkey"], p["team_cfbd"]
+        elif dc_tkey:
+            # crosswalk gap, but the current-season depth chart knows him --
+            # without this a transfer keeps last season's school as his
+            # label (Alberto Mendoza showing "Indiana" while listed in
+            # Georgia Tech's game).
+            tkey = dc_tkey
+            team_cfbd = team_display_by_tkey.get(dc_tkey, dc_tkey)
         elif r is not None:
             tkey = DL.resolve_tkey(r.get("team", ""), pff2c)
             team_cfbd = pff2c.get(norm(r.get("team", "")), r.get("team", ""))

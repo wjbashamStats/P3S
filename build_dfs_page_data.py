@@ -129,6 +129,12 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # and team_grades between them cover all 136 teams.
     canonical_tkeys = set(team_ratings) | set(team_grades) | {norm(t) for t in current_team_by_pkey.values()}
 
+    # tkey -> the CFBD-style display name to show for it. Built from the
+    # crosswalk's own team strings (the naming every other displayed team
+    # here already uses), so a depth-chart-resolved team renders
+    # identically to a crosswalk-resolved one.
+    team_display_by_tkey = {norm(t): t for t in current_team_by_pkey.values()}
+
     print(f"Building week-{week} DK projections (season {season}) ...")
     projections = BT.build_projections(week, use_prior_year=True, lines_by_week=lines_by_week,
                                        team_ratings=team_ratings, team_grades=team_grades, season=season,
@@ -221,7 +227,21 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
         if norm(raw_name) not in current_roster or norm(raw_name) in EXCLUDED_PLAYERS:
             continue
 
+        # Team identity precedence: master_crosswalk (PFF's own current-team
+        # assignment) first, then the ourlads depth chart, then -- only as a
+        # last resort -- player_season_totals.csv's team, which is LAST
+        # year's school. The depth-chart step matters because the crosswalk
+        # has real gaps for transfers (noted above): Alberto Mendoza is on
+        # the 2026 chart as Georgia Tech's QB1 but is absent from the
+        # crosswalk, so without it he kept "Indiana" and was matched to
+        # Indiana's game -- inheriting a 60.5 implied team total against an
+        # FCS opponent instead of Georgia Tech's number vs Tennessee.
         current_team_c = current_team_by_pkey.get(norm(raw_name))
+        if not current_team_c:
+            dc_rec = depth_chart.get(norm(raw_name)) or {}
+            dc_tkey = DL.resolve_depth_chart_team(dc_rec.get("raw_team"), canonical_tkeys)
+            if dc_tkey:
+                current_team_c = team_display_by_tkey.get(dc_tkey, dc_tkey)
         team_c = current_team_c or pff2c.get(norm(r.get("team", "")), r.get("team", ""))
         canon_tkey = norm(team_c)
         if canon_tkey not in matchup_cache:

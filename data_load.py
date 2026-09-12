@@ -437,6 +437,44 @@ def load_depth_chart_overrides(path="depth_chart_overrides.csv"):
     return out
 
 
+# ourlads/depth-chart team spellings that differ from the Odds-feed
+# spelling. 127 of the 138 names in depth_charts.csv already match odds
+# naming exactly; these are the eleven that don't, hand-verified one at a
+# time (same pattern as team_map.csv/pff_team_map.csv -- an exception
+# table, NOT a general mascot-suffix stripper, which is unsafe here: a
+# naive strip resolves "North Carolina State Wolfpack" to North Carolina
+# and "Louisiana-Monroe Warhawks" to Louisiana).
+DEPTH_CHART_TEAM_ALIASES = {
+    "central florida knights": "UCF Knights",
+    "connecticut huskies": "UConn Huskies",
+    "delaware fightin' blue hens": "Delaware Blue Hens",
+    "louisiana ragin' cajuns": "Louisiana Ragin Cajuns",
+    "louisiana-monroe warhawks": "UL Monroe Warhawks",
+    "massachusetts minutemen": "UMass Minutemen",
+    "miami (ohio) redhawks": "Miami Ohio RedHawks",
+    "mississippi rebels": "Ole Miss Rebels",
+    "north carolina state wolfpack": "NC State Wolfpack",
+    "sam houston bearkats": "Sam Houston State Bearkats",
+    "southern miss golden eagles": "Southern Mississippi Golden Eagles",
+}
+
+
+def resolve_depth_chart_team(raw_team, known_tkeys):
+    """
+    depth_charts.csv team string (ourlads, WITH mascot) -> canonical tkey.
+
+    Normalizes the eleven known ourlads-vs-odds spelling divergences via
+    DEPTH_CHART_TEAM_ALIASES first, then defers to _resolve_raw_team's
+    longest-known-prefix match (see that docstring for why longest is the
+    only safe rule among cousin schools). Returns None for a team that
+    isn't in known_tkeys at all -- an FCS opponent on the chart, say --
+    so callers fall through to their existing behavior rather than
+    silently taking a wrong-but-plausible answer.
+    """
+    alias = DEPTH_CHART_TEAM_ALIASES.get((raw_team or "").strip().lower(), raw_team)
+    return _resolve_raw_team(norm(alias), known_tkeys)
+
+
 def load_depth_chart(path, overrides_path="depth_chart_overrides.csv"):
     """
     depth_charts.csv (pull_depth_charts.py, scraped from ourlads.com) --
@@ -479,7 +517,12 @@ def load_depth_chart(path, overrides_path="depth_chart_overrides.csv"):
             continue
         prev = out.get(key)
         if prev is None or rank < prev["depth_rank"]:
-            out[key] = dict(position=bucket, depth_rank=rank)
+            # raw_team is carried unresolved: this loader has no canonical
+            # team universe to resolve against (see the keyed-by-name-only
+            # note above). Callers that need it pass their own known_tkeys
+            # to resolve_depth_chart_team().
+            out[key] = dict(position=bucket, depth_rank=rank, raw_team=r.get("team", ""))
     for key, rec in load_depth_chart_overrides(overrides_path).items():
-        out[key] = dict(position=rec["position"], depth_rank=rec["depth_rank"])
+        out[key] = dict(position=rec["position"], depth_rank=rec["depth_rank"],
+                        raw_team=rec.get("team", ""))
     return out

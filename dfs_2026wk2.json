@@ -532,26 +532,6 @@
    }
   },
   {
-   "name": "Alberto Mendoza",
-   "team": "Indiana",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Howard Bison @ Indiana Hoosiers",
-   "opponent": null,
-   "team_implied": 60.5,
-   "team_spread": -56.5,
-   "proj_fp": 30.72,
-   "proj": {
-    "pass_yds": 286.5,
-    "pass_td": 4.18,
-    "rush_yds": 14.3,
-    "rush_td": 0.19,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "LaNorris Sellers",
    "team": "South Carolina",
    "position": "QB",
@@ -832,26 +812,6 @@
    }
   },
   {
-   "name": "Kalieb Osborne",
-   "team": "Toledo",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Central Connecticut Blue Devils @ Toledo Rockets",
-   "opponent": null,
-   "team_implied": 45.0,
-   "team_spread": -35.5,
-   "proj_fp": 26.59,
-   "proj": {
-    "pass_yds": 300.9,
-    "pass_td": 2.47,
-    "rush_yds": 22.1,
-    "rush_td": 0.41,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Bear Bachmeier",
    "team": "BYU",
    "position": "QB",
@@ -1092,6 +1052,46 @@
    }
   },
   {
+   "name": "Lincoln Kienholz",
+   "team": "Louisville",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Villanova Wildcats @ Louisville Cardinals",
+   "opponent": null,
+   "team_implied": 47.0,
+   "team_spread": -37.5,
+   "proj_fp": 24.16,
+   "proj": {
+    "pass_yds": 312.4,
+    "pass_td": 2.34,
+    "rush_yds": 6.5,
+    "rush_td": 0.28,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "William Watson III",
+   "team": "UMass",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Sacred Heart Pioneers @ UMass Minutemen",
+   "opponent": null,
+   "team_implied": 38.5,
+   "team_spread": -23.5,
+   "proj_fp": 24.16,
+   "proj": {
+    "pass_yds": 459.4,
+    "pass_td": 1.23,
+    "rush_yds": 2.7,
+    "rush_td": 0.1,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Jordan Gant",
    "team": "Akron",
    "position": "HB",
@@ -1132,26 +1132,6 @@
    }
   },
   {
-   "name": "Jacurri Brown",
-   "team": "UCF",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UCF Knights @ Pittsburgh Panthers",
-   "opponent": "pittsburgh",
-   "team_implied": 24.8,
-   "team_spread": 7.0,
-   "proj_fp": 23.56,
-   "proj": {
-    "pass_yds": 262.1,
-    "pass_td": 2.99,
-    "rush_yds": 6.3,
-    "rush_td": 0.08,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Kamario Taylor",
    "team": "Mississippi State",
    "position": "QB",
@@ -1185,26 +1165,6 @@
     "pass_yds": 359.0,
     "pass_td": 1.64,
     "rush_yds": 12.2,
-    "rush_td": 0.21,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Austin Simmons",
-   "team": "Ole Miss",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Charlotte 49ers @ Ole Miss Rebels",
-   "opponent": "charlotte",
-   "team_implied": 53.0,
-   "team_spread": -45.5,
-   "proj_fp": 23.32,
-   "proj": {
-    "pass_yds": 324.4,
-    "pass_td": 2.03,
-    "rush_yds": 9.6,
     "rush_td": 0.21,
     "rec_yds": null,
     "rec_td": null,
@@ -1269,6 +1229,46 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
+   }
+  },
+  {
+   "name": "Alberto Mendoza",
+   "team": "Georgia Tech",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Tennessee Volunteers @ Georgia Tech Yellow Jackets",
+   "opponent": "tennessee",
+   "team_implied": 22.0,
+   "team_spread": 11.5,
+   "proj_fp": 23.22,
+   "proj": {
+    "pass_yds": 240.8,
+    "pass_td": 3.17,
+    "rush_yds": 7.1,
+    "rush_td": 0.03,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Mitch Griffis",
+   "team": "East Carolina",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Appalachian State Mountaineers @ East Carolina Pirates",
+   "opponent": "appalachianstate",
+   "team_implied": 31.5,
+   "team_spread": -6.5,
+   "proj_fp": 23.14,
+   "proj": {
+    "pass_yds": 331.3,
+    "pass_td": 2.04,
+    "rush_yds": 6.8,
+    "rush_td": 0.15,
+    "rec_yds": 1.0,
+    "rec_td": 0.0,
+    "receptions": 0.1
    }
   },
   {
@@ -1432,26 +1432,6 @@
    }
   },
   {
-   "name": "Ashton Daniels",
-   "team": "Auburn",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Southern Mississippi Golden Eagles @ Auburn Tigers",
-   "opponent": "southernmiss",
-   "team_implied": 44.8,
-   "team_spread": -33.0,
-   "proj_fp": 22.36,
-   "proj": {
-    "pass_yds": 288.3,
-    "pass_td": 1.06,
-    "rush_yds": 33.4,
-    "rush_td": 0.54,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Keelon Russell",
    "team": "Alabama",
    "position": "QB",
@@ -1612,26 +1592,6 @@
    }
   },
   {
-   "name": "Deuce Bailey",
-   "team": "Missouri State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Lindenwood Lions @ Missouri State Bears",
-   "opponent": null,
-   "team_implied": 34.6,
-   "team_spread": -16.5,
-   "proj_fp": 20.98,
-   "proj": {
-    "pass_yds": 261.3,
-    "pass_td": 1.85,
-    "rush_yds": 15.2,
-    "rush_td": 0.27,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Jeremiah Cobb",
    "team": "Auburn",
    "position": "HB",
@@ -1772,6 +1732,26 @@
    }
   },
   {
+   "name": "Hauss Hejny",
+   "team": "Colorado State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Southern Utah Thunderbirds @ Colorado State Rams",
+   "opponent": null,
+   "team_implied": 38.5,
+   "team_spread": -20.5,
+   "proj_fp": 20.38,
+   "proj": {
+    "pass_yds": 275.1,
+    "pass_td": 2.2,
+    "rush_yds": 2.1,
+    "rush_td": 0.06,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "John Alan Richter",
    "team": "Toledo",
    "position": "QB",
@@ -1812,23 +1792,23 @@
    }
   },
   {
-   "name": "Mitch Griffis",
-   "team": "Texas Tech",
+   "name": "Deuce Bailey",
+   "team": "Coastal Carolina",
    "position": "QB",
    "dk_slot": "QB",
-   "matchup": "Texas Tech Red Raiders @ Oregon State Beavers",
-   "opponent": "oregonstate",
-   "team_implied": 39.8,
-   "team_spread": -26.0,
-   "proj_fp": 20.16,
+   "matchup": "Fordham Rams @ Coastal Carolina Chanticleers",
+   "opponent": null,
+   "team_implied": 43.5,
+   "team_spread": -34.5,
+   "proj_fp": 19.95,
    "proj": {
-    "pass_yds": 233.9,
-    "pass_td": 2.16,
-    "rush_yds": 7.1,
-    "rush_td": 0.22,
-    "rec_yds": 0.9,
-    "rec_td": 0.0,
-    "receptions": 0.1
+    "pass_yds": 233.0,
+    "pass_td": 1.63,
+    "rush_yds": 18.9,
+    "rush_td": 0.37,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -1932,6 +1912,26 @@
    }
   },
   {
+   "name": "Aaron Philo",
+   "team": "Florida",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Campbell Fighting Camels @ Florida Gators",
+   "opponent": null,
+   "team_implied": 58.5,
+   "team_spread": -50.5,
+   "proj_fp": 19.57,
+   "proj": {
+    "pass_yds": 316.7,
+    "pass_td": 1.64,
+    "rush_yds": 1.8,
+    "rush_td": 0.03,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Blaze Berlowitz",
    "team": "Vanderbilt",
    "position": "QB",
@@ -2012,6 +2012,26 @@
    }
   },
   {
+   "name": "Malachi Singleton",
+   "team": "Appalachian State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Appalachian State Mountaineers @ East Carolina Pirates",
+   "opponent": "eastcarolina",
+   "team_implied": 25.0,
+   "team_spread": 6.5,
+   "proj_fp": 19.45,
+   "proj": {
+    "pass_yds": 193.5,
+    "pass_td": 2.43,
+    "rush_yds": 13.9,
+    "rush_td": 0.1,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Gio Lopez",
    "team": "Wake Forest",
    "position": "QB",
@@ -2089,6 +2109,26 @@
     "rec_yds": 12.8,
     "rec_td": 0.04,
     "receptions": 1.6
+   }
+  },
+  {
+   "name": "Kalieb Osborne",
+   "team": "UConn",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Maryland Terrapins @ UConn Huskies",
+   "opponent": "maryland",
+   "team_implied": 20.2,
+   "team_spread": 11.5,
+   "proj_fp": 19.21,
+   "proj": {
+    "pass_yds": 261.3,
+    "pass_td": 1.83,
+    "rush_yds": 10.6,
+    "rush_td": 0.07,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -2192,6 +2232,26 @@
    }
   },
   {
+   "name": "Michael Hawkins Jr.",
+   "team": "West Virginia",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
+   "opponent": null,
+   "team_implied": 48.5,
+   "team_spread": -41.5,
+   "proj_fp": 18.68,
+   "proj": {
+    "pass_yds": 208.9,
+    "pass_td": 2.07,
+    "rush_yds": 9.2,
+    "rush_td": 0.19,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "AJ Swann",
    "team": "Mississippi State",
    "position": "QB",
@@ -2266,6 +2326,26 @@
     "pass_td": 1.11,
     "rush_yds": 45.0,
     "rush_td": 0.24,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Luke Weaver",
+   "team": "San Jose State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Cal Poly Mustangs @ San Jose State Spartans",
+   "opponent": null,
+   "team_implied": 38.5,
+   "team_spread": -20.5,
+   "proj_fp": 18.33,
+   "proj": {
+    "pass_yds": 232.1,
+    "pass_td": 1.78,
+    "rush_yds": 11.6,
+    "rush_td": 0.13,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -2352,26 +2432,6 @@
    }
   },
   {
-   "name": "Michael Hawkins Jr.",
-   "team": "Oklahoma",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Oklahoma Sooners @ Michigan Wolverines",
-   "opponent": "michigan",
-   "team_implied": 24.2,
-   "team_spread": -5.0,
-   "proj_fp": 17.85,
-   "proj": {
-    "pass_yds": 241.3,
-    "pass_td": 1.85,
-    "rush_yds": 4.0,
-    "rush_td": 0.07,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Caden Creel",
    "team": "Jacksonville State",
    "position": "QB",
@@ -2392,26 +2452,6 @@
    }
   },
   {
-   "name": "Deshawn Purdie",
-   "team": "Wake Forest",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Wake Forest Demon Deacons @ Purdue Boilermakers",
-   "opponent": "purdue",
-   "team_implied": 26.2,
-   "team_spread": -3.0,
-   "proj_fp": 17.81,
-   "proj": {
-    "pass_yds": 252.0,
-    "pass_td": 1.79,
-    "rush_yds": 3.9,
-    "rush_td": 0.03,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Kenyon Clay",
    "team": "Arkansas State",
    "position": "HB",
@@ -2429,6 +2469,46 @@
     "rec_yds": 26.1,
     "rec_td": 0.32,
     "receptions": 3.7
+   }
+  },
+  {
+   "name": "Eli Holstein",
+   "team": "Virginia",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Norfolk State Spartans @ Virginia Cavaliers",
+   "opponent": null,
+   "team_implied": 51.0,
+   "team_spread": -46.5,
+   "proj_fp": 17.56,
+   "proj": {
+    "pass_yds": 156.4,
+    "pass_td": 1.85,
+    "rush_yds": 21.4,
+    "rush_td": 0.29,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Austin Simmons",
+   "team": "Missouri",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Missouri Tigers @ Kansas Jayhawks",
+   "opponent": "kansas",
+   "team_implied": 28.0,
+   "team_spread": -4.5,
+   "proj_fp": 17.37,
+   "proj": {
+    "pass_yds": 246.8,
+    "pass_td": 1.45,
+    "rush_yds": 10.1,
+    "rush_td": 0.12,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -2492,19 +2572,19 @@
    }
   },
   {
-   "name": "Luke Weaver",
-   "team": "Hawai'i",
+   "name": "Deshawn Purdie",
+   "team": "Liberty",
    "position": "QB",
    "dk_slot": "QB",
-   "matchup": "New Mexico State Aggies @ Hawaii Rainbow Warriors",
-   "opponent": "newmexicostate",
-   "team_implied": 28.2,
-   "team_spread": -7.0,
-   "proj_fp": 16.98,
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
+   "opponent": null,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 17.09,
    "proj": {
-    "pass_yds": 232.1,
-    "pass_td": 1.5,
-    "rush_yds": 12.2,
+    "pass_yds": 213.0,
+    "pass_td": 1.91,
+    "rush_yds": 4.7,
     "rush_td": 0.08,
     "rec_yds": null,
     "rec_td": null,
@@ -2609,26 +2689,6 @@
     "rec_yds": 6.9,
     "rec_td": 0.06,
     "receptions": 0.9
-   }
-  },
-  {
-   "name": "Cole Gonzales",
-   "team": "Pittsburgh",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UCF Knights @ Pittsburgh Panthers",
-   "opponent": "ucf",
-   "team_implied": 31.8,
-   "team_spread": -7.0,
-   "proj_fp": 16.78,
-   "proj": {
-    "pass_yds": 226.7,
-    "pass_td": 1.91,
-    "rush_yds": 0.5,
-    "rush_td": 0.01,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -2892,26 +2952,6 @@
    }
   },
   {
-   "name": "Zeon Chriss-Gremillion",
-   "team": "Houston",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Southern University Jaguars @ Houston Cougars",
-   "opponent": null,
-   "team_implied": 56.0,
-   "team_spread": -51.5,
-   "proj_fp": 15.51,
-   "proj": {
-    "pass_yds": 196.1,
-    "pass_td": 1.61,
-    "rush_yds": 8.1,
-    "rush_td": 0.07,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Mario Craver",
    "team": "Texas A&M",
    "position": "WR",
@@ -2932,26 +2972,6 @@
    }
   },
   {
-   "name": "Luke Moga",
-   "team": "Oregon",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Oregon Ducks @ Oklahoma State Cowboys",
-   "opponent": "oklahomastate",
-   "team_implied": 39.2,
-   "team_spread": -23.0,
-   "proj_fp": 15.48,
-   "proj": {
-    "pass_yds": 266.3,
-    "pass_td": 1.09,
-    "rush_yds": 3.0,
-    "rush_td": 0.03,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Bill Davis",
    "team": "Virginia Tech",
    "position": "HB",
@@ -2969,46 +2989,6 @@
     "rec_yds": 7.7,
     "rec_td": 0.03,
     "receptions": 0.8
-   }
-  },
-  {
-   "name": "Lincoln Kienholz",
-   "team": "Ohio State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Ohio State Buckeyes @ Texas Longhorns",
-   "opponent": "texas",
-   "team_implied": 24.0,
-   "team_spread": 1.5,
-   "proj_fp": 15.43,
-   "proj": {
-    "pass_yds": 205.8,
-    "pass_td": 1.5,
-    "rush_yds": 5.1,
-    "rush_td": 0.12,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Malachi Singleton",
-   "team": "Purdue",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Wake Forest Demon Deacons @ Purdue Boilermakers",
-   "opponent": "wakeforest",
-   "team_implied": 23.2,
-   "team_spread": 3.0,
-   "proj_fp": 15.41,
-   "proj": {
-    "pass_yds": 143.0,
-    "pass_td": 1.91,
-    "rush_yds": 14.1,
-    "rush_td": 0.11,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -3212,20 +3192,20 @@
    }
   },
   {
-   "name": "Eli Holstein",
-   "team": "Pittsburgh",
+   "name": "Luke Moga",
+   "team": "New Mexico",
    "position": "QB",
    "dk_slot": "QB",
-   "matchup": "UCF Knights @ Pittsburgh Panthers",
-   "opponent": "ucf",
-   "team_implied": 31.8,
-   "team_spread": -7.0,
-   "proj_fp": 14.71,
+   "matchup": "Mercyhurst Lakers @ New Mexico Lobos",
+   "opponent": null,
+   "team_implied": 47.5,
+   "team_spread": -41.5,
+   "proj_fp": 14.85,
    "proj": {
-    "pass_yds": 130.2,
-    "pass_td": 1.76,
-    "rush_yds": 16.0,
-    "rush_td": 0.14,
+    "pass_yds": 255.8,
+    "pass_td": 1.05,
+    "rush_yds": 2.8,
+    "rush_td": 0.03,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -3312,7 +3292,7 @@
    }
   },
   {
-   "name": "Max Johnson",
+   "name": "Billy Edwards Jr.",
    "team": "North Carolina",
    "position": "QB",
    "dk_slot": "QB",
@@ -3320,12 +3300,32 @@
    "opponent": null,
    "team_implied": 45.0,
    "team_spread": -35.5,
-   "proj_fp": 14.5,
+   "proj_fp": 14.6,
    "proj": {
-    "pass_yds": 206.3,
-    "pass_td": 1.36,
-    "rush_yds": 5.1,
-    "rush_td": 0.05,
+    "pass_yds": 234.6,
+    "pass_td": 1.3,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Zeon Chriss-Gremillion",
+   "team": "Tulane",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "South Alabama Jaguars @ Tulane Green Wave",
+   "opponent": "southalabama",
+   "team_implied": 29.8,
+   "team_spread": -10.0,
+   "proj_fp": 14.53,
+   "proj": {
+    "pass_yds": 183.3,
+    "pass_td": 1.57,
+    "rush_yds": 7.0,
+    "rush_td": 0.04,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -3349,26 +3349,6 @@
     "rec_yds": 11.4,
     "rec_td": 0.03,
     "receptions": 1.5
-   }
-  },
-  {
-   "name": "Jaxon Smolik",
-   "team": "Penn State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Penn State Nittany Lions @ Temple Owls",
-   "opponent": "temple",
-   "team_implied": 37.5,
-   "team_spread": -24.0,
-   "proj_fp": 14.49,
-   "proj": {
-    "pass_yds": 203.3,
-    "pass_td": 1.49,
-    "rush_yds": 1.8,
-    "rush_td": 0.03,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -3612,6 +3592,26 @@
    }
   },
   {
+   "name": "Landon Sims",
+   "team": "Wyoming",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Northern Colorado Bears @ Wyoming Cowboys",
+   "opponent": null,
+   "team_implied": 35.5,
+   "team_spread": -23.5,
+   "proj_fp": 14.0,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 69.2,
+    "rush_td": 0.65,
+    "rec_yds": 15.9,
+    "rec_td": 0.12,
+    "receptions": 1.8
+   }
+  },
+  {
    "name": "D.J. McKinney",
    "team": "Tulsa",
    "position": "HB",
@@ -3649,26 +3649,6 @@
     "rec_yds": 78.2,
     "rec_td": 0.24,
     "receptions": 7.4
-   }
-  },
-  {
-   "name": "Kenny Minchey",
-   "team": "Notre Dame",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Rice Owls @ Notre Dame Fighting Irish",
-   "opponent": "rice",
-   "team_implied": 49.8,
-   "team_spread": -44.5,
-   "proj_fp": 13.95,
-   "proj": {
-    "pass_yds": 217.0,
-    "pass_td": 0.8,
-    "rush_yds": 9.0,
-    "rush_td": 0.2,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -3772,26 +3752,6 @@
    }
   },
   {
-   "name": "Aaron Philo",
-   "team": "Georgia Tech",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Tennessee Volunteers @ Georgia Tech Yellow Jackets",
-   "opponent": "tennessee",
-   "team_implied": 22.0,
-   "team_spread": 11.5,
-   "proj_fp": 13.61,
-   "proj": {
-    "pass_yds": 229.1,
-    "pass_td": 1.07,
-    "rush_yds": 1.2,
-    "rush_td": 0.01,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Eric Singleton Jr.",
    "team": "Florida",
    "position": "WR",
@@ -3852,6 +3812,26 @@
    }
   },
   {
+   "name": "Dexter Williams II",
+   "team": "Tulsa",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Tulsa Golden Hurricane @ Sam Houston State Bearkats",
+   "opponent": "samhouston",
+   "team_implied": 32.5,
+   "team_spread": -13.5,
+   "proj_fp": 13.51,
+   "proj": {
+    "pass_yds": 144.1,
+    "pass_td": 0.89,
+    "rush_yds": 19.1,
+    "rush_td": 0.38,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Waymond Jordan",
    "team": "USC",
    "position": "HB",
@@ -3869,26 +3849,6 @@
     "rec_yds": 8.4,
     "rec_td": 0.04,
     "receptions": 0.8
-   }
-  },
-  {
-   "name": "Keldric Luster",
-   "team": "Texas State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UTSA Roadrunners @ Texas State Bobcats",
-   "opponent": "utsa",
-   "team_implied": 34.0,
-   "team_spread": -1.5,
-   "proj_fp": 13.49,
-   "proj": {
-    "pass_yds": 203.7,
-    "pass_td": 1.27,
-    "rush_yds": 1.7,
-    "rush_td": 0.01,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -4132,26 +4092,6 @@
    }
   },
   {
-   "name": "Dexter Williams II",
-   "team": "Kennesaw State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Georgia State Panthers @ Kennesaw State Owls",
-   "opponent": "georgiastate",
-   "team_implied": 31.5,
-   "team_spread": -8.5,
-   "proj_fp": 13.05,
-   "proj": {
-    "pass_yds": 144.1,
-    "pass_td": 0.87,
-    "rush_yds": 18.9,
-    "rush_td": 0.32,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Kenny Johnson",
    "team": "Texas Tech",
    "position": "WR",
@@ -4292,23 +4232,23 @@
    }
   },
   {
-   "name": "William Watson III",
-   "team": "Virginia Tech",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Old Dominion Monarchs @ Virginia Tech Hokies",
-   "opponent": "olddominion",
-   "team_implied": 33.8,
-   "team_spread": -19.0,
-   "proj_fp": 12.68,
+   "name": "Chris Johnson Jr.",
+   "team": "Clemson",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Georgia Southern Eagles @ Clemson Tigers",
+   "opponent": "georgiasouthern",
+   "team_implied": 37.5,
+   "team_spread": -20.0,
+   "proj_fp": 12.63,
    "proj": {
-    "pass_yds": 196.5,
-    "pass_td": 0.93,
-    "rush_yds": 3.6,
-    "rush_td": 0.13,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 48.5,
+    "rush_td": 0.74,
+    "rec_yds": 18.8,
+    "rec_td": 0.1,
+    "receptions": 1.7
    }
   },
   {
@@ -4509,26 +4449,6 @@
     "rec_yds": 66.9,
     "rec_td": 0.5,
     "receptions": 5.4
-   }
-  },
-  {
-   "name": "Ethan Hampton",
-   "team": "Illinois",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Duke Blue Devils @ Illinois Fighting Illini",
-   "opponent": "duke",
-   "team_implied": 28.5,
-   "team_spread": -5.5,
-   "proj_fp": 12.45,
-   "proj": {
-    "pass_yds": 218.4,
-    "pass_td": 0.85,
-    "rush_yds": 1.8,
-    "rush_td": 0.02,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -4792,6 +4712,26 @@
    }
   },
   {
+   "name": "Cade Wolford",
+   "team": "Cincinnati",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Western Carolina Catamounts @ Cincinnati Bearcats",
+   "opponent": null,
+   "team_implied": 48.5,
+   "team_spread": -36.5,
+   "proj_fp": 12.11,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 9.2,
+    "rush_td": 0.16,
+    "rec_yds": 51.7,
+    "rec_td": 0.64,
+    "receptions": 2.4
+   }
+  },
+  {
    "name": "Josiah Freeman",
    "team": "Fresno State",
    "position": "WR",
@@ -4869,26 +4809,6 @@
     "rec_yds": 11.4,
     "rec_td": 0.09,
     "receptions": 1.1
-   }
-  },
-  {
-   "name": "Chris Johnson Jr.",
-   "team": "SMU",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "UC Davis Aggies @ SMU Mustangs",
-   "opponent": null,
-   "team_implied": 43.5,
-   "team_spread": -28.5,
-   "proj_fp": 11.99,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 46.1,
-    "rush_td": 0.71,
-    "rec_yds": 17.1,
-    "rec_td": 0.1,
-    "receptions": 1.5
    }
   },
   {
@@ -5212,6 +5132,26 @@
    }
   },
   {
+   "name": "Peyton Lewis",
+   "team": "Virginia",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Norfolk State Spartans @ Virginia Cavaliers",
+   "opponent": null,
+   "team_implied": 51.0,
+   "team_spread": -46.5,
+   "proj_fp": 11.6,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 37.3,
+    "rush_td": 1.16,
+    "rec_yds": 5.4,
+    "rec_td": 0.02,
+    "receptions": 0.5
+   }
+  },
+  {
    "name": "Deuce Alexander",
    "team": "Ole Miss",
    "position": "WR",
@@ -5269,6 +5209,26 @@
     "rec_yds": 60.5,
     "rec_td": 0.52,
     "receptions": 4.7
+   }
+  },
+  {
+   "name": "Ashton Daniels",
+   "team": "Florida State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Florida State Seminoles @ Alabama Crimson Tide",
+   "opponent": "alabama",
+   "team_implied": 16.8,
+   "team_spread": 17.5,
+   "proj_fp": 11.49,
+   "proj": {
+    "pass_yds": 160.2,
+    "pass_td": 0.63,
+    "rush_yds": 21.9,
+    "rush_td": 0.06,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -5372,20 +5332,20 @@
    }
   },
   {
-   "name": "Billy Edwards Jr.",
-   "team": "Wisconsin",
+   "name": "Keldric Luster",
+   "team": "Ball State",
    "position": "QB",
    "dk_slot": "QB",
-   "matchup": "Western Illinois Leathernecks @ Wisconsin Badgers",
+   "matchup": "Stony Brook Seawolves @ Ball State Cardinals",
    "opponent": null,
-   "team_implied": 44.0,
-   "team_spread": -38.5,
-   "proj_fp": 11.23,
+   "team_implied": 34.8,
+   "team_spread": -14.0,
+   "proj_fp": 11.22,
    "proj": {
-    "pass_yds": 180.4,
-    "pass_td": 1.0,
-    "rush_yds": null,
-    "rush_td": null,
+    "pass_yds": 169.8,
+    "pass_td": 1.05,
+    "rush_yds": 1.4,
+    "rush_td": 0.02,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -5712,46 +5672,6 @@
    }
   },
   {
-   "name": "Grant Jordan",
-   "team": "UMass",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Sacred Heart Pioneers @ UMass Minutemen",
-   "opponent": null,
-   "team_implied": 38.5,
-   "team_spread": -23.5,
-   "proj_fp": 10.73,
-   "proj": {
-    "pass_yds": 117.9,
-    "pass_td": 0.53,
-    "rush_yds": 18.1,
-    "rush_td": 0.35,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Hauss Hejny",
-   "team": "Oklahoma State",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Oregon Ducks @ Oklahoma State Cowboys",
-   "opponent": "oregon",
-   "team_implied": 16.2,
-   "team_spread": 23.0,
-   "proj_fp": 10.7,
-   "proj": {
-    "pass_yds": 142.0,
-    "pass_td": 1.22,
-    "rush_yds": 1.3,
-    "rush_td": 0.0,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Kyan Mason",
    "team": "Akron",
    "position": "WR",
@@ -5769,6 +5689,26 @@
     "rec_yds": 54.4,
     "rec_td": 0.52,
     "receptions": 4.1
+   }
+  },
+  {
+   "name": "Jacurri Brown",
+   "team": "Rice",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Rice Owls @ Notre Dame Fighting Irish",
+   "opponent": "notredame",
+   "team_implied": 5.2,
+   "team_spread": 44.5,
+   "proj_fp": 10.58,
+   "proj": {
+    "pass_yds": 117.7,
+    "pass_td": 1.18,
+    "rush_yds": 10.1,
+    "rush_td": 0.03,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -5886,6 +5826,26 @@
     "pass_td": 0.93,
     "rush_yds": 7.5,
     "rush_td": 0.05,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Ethan Hampton",
+   "team": "Southern Miss",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Southern Mississippi Golden Eagles @ Auburn Tigers",
+   "opponent": "auburn",
+   "team_implied": 11.8,
+   "team_spread": 33.0,
+   "proj_fp": 10.46,
+   "proj": {
+    "pass_yds": 187.8,
+    "pass_td": 0.7,
+    "rush_yds": 1.1,
+    "rush_td": 0.0,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -6312,6 +6272,26 @@
    }
   },
   {
+   "name": "Terron Kellman",
+   "team": "Liberty",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
+   "opponent": null,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 9.78,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 49.4,
+    "rush_td": 0.72,
+    "rec_yds": 3.3,
+    "rec_td": 0.01,
+    "receptions": 0.3
+   }
+  },
+  {
    "name": "Kyri Shoels",
    "team": "Utah",
    "position": "WR",
@@ -6412,26 +6392,6 @@
    }
   },
   {
-   "name": "Landon Sims",
-   "team": "Wyoming",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Northern Colorado Bears @ Wyoming Cowboys",
-   "opponent": "newmexicostate",
-   "team_implied": 28.2,
-   "team_spread": -7.0,
-   "proj_fp": 9.71,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 39.9,
-    "rush_td": 0.32,
-    "rec_yds": 18.8,
-    "rec_td": 0.13,
-    "receptions": 2.2
-   }
-  },
-  {
    "name": "Devin McCuin",
    "team": "Ohio State",
    "position": "WR",
@@ -6469,26 +6429,6 @@
     "rec_yds": 46.0,
     "rec_td": 0.37,
     "receptions": 4.5
-   }
-  },
-  {
-   "name": "Peyton Lewis",
-   "team": "Tennessee",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Tennessee Volunteers @ Georgia Tech Yellow Jackets",
-   "opponent": "georgiatech",
-   "team_implied": 33.5,
-   "team_spread": -11.5,
-   "proj_fp": 9.63,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 35.6,
-    "rush_td": 0.86,
-    "rec_yds": 5.6,
-    "rec_td": 0.02,
-    "receptions": 0.5
    }
   },
   {
@@ -6549,6 +6489,26 @@
     "rec_yds": 58.7,
     "rec_td": 0.27,
     "receptions": 4.1
+   }
+  },
+  {
+   "name": "Cole Gonzales",
+   "team": "Charlotte",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Charlotte 49ers @ Ole Miss Rebels",
+   "opponent": "olemiss",
+   "team_implied": 7.5,
+   "team_spread": 45.5,
+   "proj_fp": 9.47,
+   "proj": {
+    "pass_yds": 128.9,
+    "pass_td": 1.07,
+    "rush_yds": 0.2,
+    "rush_td": 0.0,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -6632,6 +6592,26 @@
    }
   },
   {
+   "name": "Jaxon Smolik",
+   "team": "Temple",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Penn State Nittany Lions @ Temple Owls",
+   "opponent": "pennstate",
+   "team_implied": 13.5,
+   "team_spread": 24.0,
+   "proj_fp": 9.31,
+   "proj": {
+    "pass_yds": 128.9,
+    "pass_td": 1.01,
+    "rush_yds": 0.9,
+    "rush_td": 0.0,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "AJ Wilson",
    "team": "UTSA",
    "position": "WR",
@@ -6666,6 +6646,26 @@
     "pass_td": null,
     "rush_yds": 18.4,
     "rush_td": 1.24,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
+   "name": "Max Johnson",
+   "team": "Georgia Southern",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Georgia Southern Eagles @ Clemson Tigers",
+   "opponent": "clemson",
+   "team_implied": 17.5,
+   "team_spread": 20.0,
+   "proj_fp": 9.26,
+   "proj": {
+    "pass_yds": 130.4,
+    "pass_td": 0.92,
+    "rush_yds": 3.5,
+    "rush_td": 0.01,
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
@@ -6749,26 +6749,6 @@
     "rec_yds": 42.6,
     "rec_td": 0.5,
     "receptions": 3.5
-   }
-  },
-  {
-   "name": "Cade Wolford",
-   "team": "Kent State",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Wofford Terriers @ Kent State Golden Flashes",
-   "opponent": null,
-   "team_implied": 29.0,
-   "team_spread": -10.5,
-   "proj_fp": 9.11,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 9.5,
-    "rush_td": 0.11,
-    "rec_yds": 37.9,
-    "rec_td": 0.47,
-    "receptions": 1.8
    }
   },
   {
@@ -6972,26 +6952,6 @@
    }
   },
   {
-   "name": "Dilin Jones",
-   "team": "Wisconsin",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Western Illinois Leathernecks @ Wisconsin Badgers",
-   "opponent": null,
-   "team_implied": 44.0,
-   "team_spread": -38.5,
-   "proj_fp": 8.87,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 38.4,
-    "rush_td": 0.63,
-    "rec_yds": 5.8,
-    "rec_td": 0.03,
-    "receptions": 0.9
-   }
-  },
-  {
    "name": "Nick Poulos",
    "team": "Ohio",
    "position": "QB",
@@ -7049,26 +7009,6 @@
     "rec_yds": 47.9,
     "rec_td": 0.31,
     "receptions": 4.3
-   }
-  },
-  {
-   "name": "Fame Ijeboi",
-   "team": "Minnesota",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Mississippi State Bulldogs @ Minnesota Golden Gophers",
-   "opponent": "mississippistate",
-   "team_implied": 27.2,
-   "team_spread": 0.0,
-   "proj_fp": 8.79,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 51.5,
-    "rush_td": 0.29,
-    "rec_yds": 7.6,
-    "rec_td": 0.09,
-    "receptions": 1.1
    }
   },
   {
@@ -7252,26 +7192,6 @@
    }
   },
   {
-   "name": "McCae Hillstead",
-   "team": "BYU",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Arizona Wildcats @ BYU Cougars",
-   "opponent": "arizona",
-   "team_implied": 28.0,
-   "team_spread": -7.5,
-   "proj_fp": 8.51,
-   "proj": {
-    "pass_yds": 119.2,
-    "pass_td": 0.82,
-    "rush_yds": 3.1,
-    "rush_td": 0.02,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Darrion Dupree",
    "team": "Wisconsin",
    "position": "HB",
@@ -7289,6 +7209,26 @@
     "rec_yds": 4.5,
     "rec_td": 0.02,
     "receptions": 0.7
+   }
+  },
+  {
+   "name": "McCae Hillstead",
+   "team": "Utah State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Utah State Aggies @ Washington Huskies",
+   "opponent": "washington",
+   "team_implied": 14.2,
+   "team_spread": 27.0,
+   "proj_fp": 8.48,
+   "proj": {
+    "pass_yds": 142.3,
+    "pass_td": 0.66,
+    "rush_yds": 1.4,
+    "rush_td": 0.0,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -7352,6 +7292,26 @@
    }
   },
   {
+   "name": "Kenny Minchey",
+   "team": "Kentucky",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Alabama Crimson Tide @ Kentucky Wildcats",
+   "opponent": "alabama",
+   "team_implied": 19.2,
+   "team_spread": 10.0,
+   "proj_fp": 8.43,
+   "proj": {
+    "pass_yds": 139.1,
+    "pass_td": 0.54,
+    "rush_yds": 4.8,
+    "rush_td": 0.04,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Adrian Norton",
    "team": "Marshall",
    "position": "WR",
@@ -7369,6 +7329,26 @@
     "rec_yds": 39.3,
     "rec_td": 0.49,
     "receptions": 3.1
+   }
+  },
+  {
+   "name": "Justin Marshall",
+   "team": "Liberty",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
+   "opponent": null,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 8.42,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 41.8,
+    "rush_td": 0.5,
+    "rec_yds": 7.3,
+    "rec_td": 0.02,
+    "receptions": 0.7
    }
   },
   {
@@ -7492,6 +7472,26 @@
    }
   },
   {
+   "name": "James Peoples",
+   "team": "Penn State",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Penn State Nittany Lions @ Temple Owls",
+   "opponent": "temple",
+   "team_implied": 37.5,
+   "team_spread": -24.0,
+   "proj_fp": 8.33,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 37.6,
+    "rush_td": 0.58,
+    "rec_yds": 5.6,
+    "rec_td": 0.02,
+    "receptions": 0.8
+   }
+  },
+  {
    "name": "Anthony Brown-Stephens",
    "team": "Tulane",
    "position": "WR",
@@ -7549,6 +7549,26 @@
     "rec_yds": 39.3,
     "rec_td": 0.45,
     "receptions": 3.3
+   }
+  },
+  {
+   "name": "Dilin Jones",
+   "team": "LSU",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Louisiana Tech Bulldogs @ LSU Tigers",
+   "opponent": "louisianatech",
+   "team_implied": 45.2,
+   "team_spread": -35.0,
+   "proj_fp": 8.27,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 31.9,
+    "rush_td": 0.53,
+    "rec_yds": 8.9,
+    "rec_td": 0.05,
+    "receptions": 1.4
    }
   },
   {
@@ -7669,26 +7689,6 @@
     "rec_yds": null,
     "rec_td": null,
     "receptions": null
-   }
-  },
-  {
-   "name": "Cyncir Bowers",
-   "team": "West Virginia",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -41.5,
-   "proj_fp": 8.17,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 30.8,
-    "rush_td": 0.47,
-    "rec_yds": 12.6,
-    "rec_td": 0.09,
-    "receptions": 0.9
    }
   },
   {
@@ -8009,26 +8009,6 @@
     "rec_yds": 44.7,
     "rec_td": 0.24,
     "receptions": 3.7
-   }
-  },
-  {
-   "name": "Terron Kellman",
-   "team": "Wyoming",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Northern Colorado Bears @ Wyoming Cowboys",
-   "opponent": null,
-   "team_implied": 35.5,
-   "team_spread": -23.5,
-   "proj_fp": 7.72,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 37.6,
-    "rush_td": 0.55,
-    "rec_yds": 4.1,
-    "rec_td": 0.01,
-    "receptions": 0.4
    }
   },
   {
@@ -8912,26 +8892,6 @@
    }
   },
   {
-   "name": "Trey Cornist",
-   "team": "Central Michigan",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Colgate Raiders @ Central Michigan Chippewas",
-   "opponent": null,
-   "team_implied": 35.5,
-   "team_spread": -21.5,
-   "proj_fp": 6.86,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 48.1,
-    "rush_td": 0.32,
-    "rec_yds": 0.6,
-    "rec_td": 0.0,
-    "receptions": 0.1
-   }
-  },
-  {
    "name": "Decker DeGraaf",
    "team": "Washington",
    "position": "TE",
@@ -9332,26 +9292,6 @@
    }
   },
   {
-   "name": "Justin Marshall",
-   "team": "Colorado State",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Southern Utah Thunderbirds @ Colorado State Rams",
-   "opponent": null,
-   "team_implied": 38.5,
-   "team_spread": -20.5,
-   "proj_fp": 6.43,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 28.5,
-    "rush_td": 0.34,
-    "rec_yds": 9.2,
-    "rec_td": 0.03,
-    "receptions": 0.9
-   }
-  },
-  {
    "name": "Colin Chase",
    "team": "Temple",
    "position": "WR",
@@ -9712,6 +9652,26 @@
    }
   },
   {
+   "name": "Nolan Ray",
+   "team": "Boston College",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Rutgers Scarlet Knights @ Boston College Eagles",
+   "opponent": "rutgers",
+   "team_implied": 28.2,
+   "team_spread": -3.0,
+   "proj_fp": 6.28,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 39.7,
+    "rush_td": 0.21,
+    "rec_yds": 5.5,
+    "rec_td": 0.02,
+    "receptions": 0.8
+   }
+  },
+  {
    "name": "Luke Lindenmeyer",
    "team": "Nebraska",
    "position": "TE",
@@ -9729,6 +9689,26 @@
     "rec_yds": 33.3,
     "rec_td": 0.23,
     "receptions": 3.0
+   }
+  },
+  {
+   "name": "Fame Ijeboi",
+   "team": "Purdue",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Wake Forest Demon Deacons @ Purdue Boilermakers",
+   "opponent": "wakeforest",
+   "team_implied": 23.2,
+   "team_spread": 3.0,
+   "proj_fp": 6.2,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 31.6,
+    "rush_td": 0.24,
+    "rec_yds": 6.0,
+    "rec_td": 0.09,
+    "receptions": 0.9
    }
   },
   {
@@ -9912,26 +9892,6 @@
    }
   },
   {
-   "name": "Nolan Ray",
-   "team": "Maryland",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Maryland Terrapins @ UConn Huskies",
-   "opponent": "uconn",
-   "team_implied": 31.8,
-   "team_spread": -11.5,
-   "proj_fp": 6.0,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 33.2,
-    "rush_td": 0.26,
-    "rec_yds": 5.8,
-    "rec_td": 0.02,
-    "receptions": 0.8
-   }
-  },
-  {
    "name": "Robby Washington",
    "team": "Coastal Carolina",
    "position": "WR",
@@ -10009,26 +9969,6 @@
     "rec_yds": 28.1,
     "rec_td": 0.35,
     "receptions": 2.0
-   }
-  },
-  {
-   "name": "Duke Watson",
-   "team": "Louisville",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Villanova Wildcats @ Louisville Cardinals",
-   "opponent": null,
-   "team_implied": 47.0,
-   "team_spread": -37.5,
-   "proj_fp": 5.91,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 22.4,
-    "rush_td": 0.37,
-    "rec_yds": 6.2,
-    "rec_td": 0.09,
-    "receptions": 0.6
    }
   },
   {
@@ -10352,6 +10292,26 @@
    }
   },
   {
+   "name": "Kanye Udoh",
+   "team": "Liberty",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
+   "opponent": null,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 5.65,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 32.8,
+    "rush_td": 0.37,
+    "rec_yds": 0.6,
+    "rec_td": 0.0,
+    "receptions": 0.1
+   }
+  },
+  {
    "name": "Rico Flores Jr.",
    "team": "Virginia",
    "position": "WR",
@@ -10409,6 +10369,26 @@
     "rec_yds": 27.3,
     "rec_td": 0.15,
     "receptions": 2.9
+   }
+  },
+  {
+   "name": "Kiefer Sibley",
+   "team": "New Mexico",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Mercyhurst Lakers @ New Mexico Lobos",
+   "opponent": null,
+   "team_implied": 47.5,
+   "team_spread": -41.5,
+   "proj_fp": 5.58,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 22.8,
+    "rush_td": 0.49,
+    "rec_yds": 2.0,
+    "rec_td": 0.01,
+    "receptions": 0.2
    }
   },
   {
@@ -10552,6 +10532,26 @@
    }
   },
   {
+   "name": "Grant Jordan",
+   "team": "Oklahoma State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Oregon Ducks @ Oklahoma State Cowboys",
+   "opponent": "oregon",
+   "team_implied": 16.2,
+   "team_spread": 23.0,
+   "proj_fp": 5.48,
+   "proj": {
+    "pass_yds": 71.6,
+    "pass_td": 0.32,
+    "rush_yds": 12.1,
+    "rush_td": 0.03,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Teddy Hoffmann",
    "team": "NC State",
    "position": "WR",
@@ -10649,6 +10649,26 @@
     "rec_yds": 26.0,
     "rec_td": 0.28,
     "receptions": 2.2
+   }
+  },
+  {
+   "name": "Kaderris Roberts",
+   "team": "Delaware",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Delaware Blue Hens @ Vanderbilt Commodores",
+   "opponent": "vanderbilt",
+   "team_implied": 16.8,
+   "team_spread": 21.0,
+   "proj_fp": 5.35,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 11.2,
+    "rush_td": 0.01,
+    "rec_yds": 20.9,
+    "rec_td": 0.14,
+    "receptions": 2.5
    }
   },
   {
@@ -10892,6 +10912,26 @@
    }
   },
   {
+   "name": "Malachi Thomas",
+   "team": "LSU",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Louisiana Tech Bulldogs @ LSU Tigers",
+   "opponent": "louisianatech",
+   "team_implied": 45.2,
+   "team_spread": -35.0,
+   "proj_fp": 5.08,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 21.9,
+    "rush_td": 0.12,
+    "rec_yds": 10.4,
+    "rec_td": 0.12,
+    "receptions": 0.8
+   }
+  },
+  {
    "name": "Karmello English",
    "team": "Coastal Carolina",
    "position": "WR",
@@ -10909,26 +10949,6 @@
     "rec_yds": 21.9,
     "rec_td": 0.3,
     "receptions": 2.2
-   }
-  },
-  {
-   "name": "Khalil Wilkins",
-   "team": "West Virginia",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -41.5,
-   "proj_fp": 5.03,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 29.7,
-    "rush_td": 0.34,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
    }
   },
   {
@@ -11132,23 +11152,23 @@
    }
   },
   {
-   "name": "Javion Kinnard",
-   "team": "Colorado State",
+   "name": "Victor Rosa",
+   "team": "Ohio",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Southern Utah Thunderbirds @ Colorado State Rams",
-   "opponent": null,
-   "team_implied": 38.5,
-   "team_spread": -20.5,
-   "proj_fp": 4.82,
+   "matchup": "Jacksonville State Gamecocks @ Ohio Bobcats",
+   "opponent": "jacksonvillestate",
+   "team_implied": 26.2,
+   "team_spread": -2.5,
+   "proj_fp": 4.84,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 5.9,
-    "rush_td": 0.04,
-    "rec_yds": 23.3,
-    "rec_td": 0.12,
-    "receptions": 1.9
+    "rush_yds": 19.8,
+    "rush_td": 0.22,
+    "rec_yds": 8.1,
+    "rec_td": 0.05,
+    "receptions": 0.8
    }
   },
   {
@@ -11472,6 +11492,26 @@
    }
   },
   {
+   "name": "Bryan Jackson II",
+   "team": "Wisconsin",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Western Illinois Leathernecks @ Wisconsin Badgers",
+   "opponent": null,
+   "team_implied": 44.0,
+   "team_spread": -38.5,
+   "proj_fp": 4.68,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 17.3,
+    "rush_td": 0.46,
+    "rec_yds": 1.0,
+    "rec_td": 0.0,
+    "receptions": 0.1
+   }
+  },
+  {
    "name": "Maguire Anderson",
    "team": "Florida International",
    "position": "WR",
@@ -11532,26 +11572,6 @@
    }
   },
   {
-   "name": "Dylan Edwards",
-   "team": "Kansas State",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Washington State Cougars @ Kansas State Wildcats",
-   "opponent": "washingtonstate",
-   "team_implied": 33.2,
-   "team_spread": -17.5,
-   "proj_fp": 4.66,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 20.6,
-    "rush_td": 0.36,
-    "rec_yds": 2.4,
-    "rec_td": 0.01,
-    "receptions": 0.3
-   }
-  },
-  {
    "name": "London Humphreys",
    "team": "Georgia",
    "position": "WR",
@@ -11609,26 +11629,6 @@
     "rec_yds": 20.1,
     "rec_td": 0.28,
     "receptions": 1.9
-   }
-  },
-  {
-   "name": "Bryan Jackson II",
-   "team": "USC",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Louisiana Ragin Cajuns @ USC Trojans",
-   "opponent": "louisiana",
-   "team_implied": 45.2,
-   "team_spread": -31.0,
-   "proj_fp": 4.65,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 16.7,
-    "rush_td": 0.45,
-    "rec_yds": 1.7,
-    "rec_td": 0.01,
-    "receptions": 0.2
    }
   },
   {
@@ -11912,26 +11912,6 @@
    }
   },
   {
-   "name": "Jaziun Patterson",
-   "team": "Iowa",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Iowa State Cyclones @ Iowa Hawkeyes",
-   "opponent": "iowastate",
-   "team_implied": 27.8,
-   "team_spread": -14.0,
-   "proj_fp": 4.46,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 33.1,
-    "rush_td": 0.15,
-    "rec_yds": 1.2,
-    "rec_td": 0.01,
-    "receptions": 0.2
-   }
-  },
-  {
    "name": "Semaj Morgan",
    "team": "UCLA",
    "position": "WR",
@@ -11949,26 +11929,6 @@
     "rec_yds": 22.8,
     "rec_td": 0.16,
     "receptions": 2.0
-   }
-  },
-  {
-   "name": "James Peoples",
-   "team": "Ohio State",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Ohio State Buckeyes @ Texas Longhorns",
-   "opponent": "texas",
-   "team_implied": 24.0,
-   "team_spread": 1.5,
-   "proj_fp": 4.44,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 22.5,
-    "rush_td": 0.21,
-    "rec_yds": 4.7,
-    "rec_td": 0.01,
-    "receptions": 0.7
    }
   },
   {
@@ -12232,43 +12192,43 @@
    }
   },
   {
-   "name": "AJ Newberry",
-   "team": "Vanderbilt",
+   "name": "Mel Brown",
+   "team": "Colorado State",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Delaware Blue Hens @ Vanderbilt Commodores",
-   "opponent": "delaware",
-   "team_implied": 37.8,
-   "team_spread": -21.0,
-   "proj_fp": 4.18,
+   "matchup": "Southern Utah Thunderbirds @ Colorado State Rams",
+   "opponent": null,
+   "team_implied": 38.5,
+   "team_spread": -20.5,
+   "proj_fp": 4.19,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 7.8,
-    "rush_td": 0.51,
-    "rec_yds": 2.2,
-    "rec_td": 0.01,
-    "receptions": 0.2
+    "rush_yds": 17.6,
+    "rush_td": 0.32,
+    "rec_yds": 2.7,
+    "rec_td": 0.02,
+    "receptions": 0.3
    }
   },
   {
-   "name": "DeVon Rice",
-   "team": "Kansas State",
+   "name": "Damari Alston",
+   "team": "Tulsa",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Washington State Cougars @ Kansas State Wildcats",
-   "opponent": "washingtonstate",
-   "team_implied": 33.2,
-   "team_spread": -17.5,
-   "proj_fp": 4.16,
+   "matchup": "Tulsa Golden Hurricane @ Sam Houston State Bearkats",
+   "opponent": "samhouston",
+   "team_implied": 32.5,
+   "team_spread": -13.5,
+   "proj_fp": 4.17,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 12.3,
-    "rush_td": 0.4,
-    "rec_yds": 3.2,
-    "rec_td": 0.01,
-    "receptions": 0.3
+    "rush_yds": 18.7,
+    "rush_td": 0.27,
+    "rec_yds": 3.9,
+    "rec_td": 0.02,
+    "receptions": 0.4
    }
   },
   {
@@ -12312,6 +12272,26 @@
    }
   },
   {
+   "name": "Christian Clark",
+   "team": "South Carolina",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Towson Tigers @ South Carolina Gamecocks",
+   "opponent": null,
+   "team_implied": 49.5,
+   "team_spread": -43.5,
+   "proj_fp": 4.14,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 17.4,
+    "rush_td": 0.26,
+    "rec_yds": 5.2,
+    "rec_td": 0.02,
+    "receptions": 0.4
+   }
+  },
+  {
    "name": "DeCorion Temple",
    "team": "Oregon State",
    "position": "TE",
@@ -12349,26 +12329,6 @@
     "rec_yds": 26.7,
     "rec_td": 0.06,
     "receptions": 2.2
-   }
-  },
-  {
-   "name": "Damari Alston",
-   "team": "Auburn",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Southern Mississippi Golden Eagles @ Auburn Tigers",
-   "opponent": "southernmiss",
-   "team_implied": 44.8,
-   "team_spread": -33.0,
-   "proj_fp": 4.12,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 16.7,
-    "rush_td": 0.3,
-    "rec_yds": 3.4,
-    "rec_td": 0.02,
-    "receptions": 0.4
    }
   },
   {
@@ -12432,23 +12392,43 @@
    }
   },
   {
-   "name": "Jahiem White",
-   "team": "West Virginia",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
+   "name": "Juice Vereen",
+   "team": "Colorado State",
+   "position": "TE",
+   "dk_slot": "TE",
+   "matchup": "Southern Utah Thunderbirds @ Colorado State Rams",
    "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -41.5,
-   "proj_fp": 4.08,
+   "team_implied": 38.5,
+   "team_spread": -20.5,
+   "proj_fp": 4.05,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 14.0,
-    "rush_td": 0.37,
-    "rec_yds": 2.4,
-    "rec_td": 0.01,
-    "receptions": 0.3
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 18.9,
+    "rec_td": 0.24,
+    "receptions": 1.4
+   }
+  },
+  {
+   "name": "Bailey Stockton",
+   "team": "Florida",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Campbell Fighting Camels @ Florida Gators",
+   "opponent": null,
+   "team_implied": 58.5,
+   "team_spread": -50.5,
+   "proj_fp": 4.04,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 1.3,
+    "rush_td": 0.01,
+    "rec_yds": 24.4,
+    "rec_td": 0.06,
+    "receptions": 2.1
    }
   },
   {
@@ -12469,6 +12449,26 @@
     "rec_yds": 26.8,
     "rec_td": 0.06,
     "receptions": 2.0
+   }
+  },
+  {
+   "name": "Jaziun Patterson",
+   "team": "Michigan State",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Eastern Michigan Eagles @ Michigan State Spartans",
+   "opponent": "easternmichigan",
+   "team_implied": 33.5,
+   "team_spread": -17.5,
+   "proj_fp": 4.01,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 25.9,
+    "rush_td": 0.15,
+    "rec_yds": 2.4,
+    "rec_td": 0.01,
+    "receptions": 0.4
    }
   },
   {
@@ -12532,26 +12532,6 @@
    }
   },
   {
-   "name": "Cole Rusk",
-   "team": "Illinois",
-   "position": "TE",
-   "dk_slot": "TE",
-   "matchup": "Duke Blue Devils @ Illinois Fighting Illini",
-   "opponent": "duke",
-   "team_implied": 28.5,
-   "team_spread": -5.5,
-   "proj_fp": 3.97,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 23.1,
-    "rec_td": 0.11,
-    "receptions": 2.0
-   }
-  },
-  {
    "name": "Rodney Gallagher III",
    "team": "Arizona",
    "position": "WR",
@@ -12592,6 +12572,26 @@
    }
   },
   {
+   "name": "Ashton Gray",
+   "team": "East Carolina",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Appalachian State Mountaineers @ East Carolina Pirates",
+   "opponent": "appalachianstate",
+   "team_implied": 31.5,
+   "team_spread": -6.5,
+   "proj_fp": 3.94,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 20.6,
+    "rush_td": 0.31,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Zion Steptoe",
    "team": "Minnesota",
    "position": "WR",
@@ -12629,6 +12629,26 @@
     "rec_yds": 16.6,
     "rec_td": 0.24,
     "receptions": 1.7
+   }
+  },
+  {
+   "name": "Khalil Wilkins",
+   "team": "Marshall",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Middle Tennessee Blue Raiders @ Marshall Thundering Herd",
+   "opponent": "middletennessee",
+   "team_implied": 35.2,
+   "team_spread": -13.5,
+   "proj_fp": 3.93,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 22.1,
+    "rush_td": 0.29,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -12772,26 +12792,6 @@
    }
   },
   {
-   "name": "Aidan Mizell",
-   "team": "Florida",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Campbell Fighting Camels @ Florida Gators",
-   "opponent": null,
-   "team_implied": 58.5,
-   "team_spread": -50.5,
-   "proj_fp": 3.87,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 20.8,
-    "rec_td": 0.13,
-    "receptions": 2.0
-   }
-  },
-  {
    "name": "Omari Hayes",
    "team": "Iowa State",
    "position": "WR",
@@ -12892,6 +12892,26 @@
    }
   },
   {
+   "name": "Jaylin Lucas",
+   "team": "Tulane",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "South Alabama Jaguars @ Tulane Green Wave",
+   "opponent": "southalabama",
+   "team_implied": 29.8,
+   "team_spread": -10.0,
+   "proj_fp": 3.81,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 14.2,
+    "rush_td": 0.05,
+    "rec_yds": 12.0,
+    "rec_td": 0.04,
+    "receptions": 1.3
+   }
+  },
+  {
    "name": "Tony Livingston",
    "team": "Baylor",
    "position": "TE",
@@ -12932,26 +12952,6 @@
    }
   },
   {
-   "name": "Justin Williams-Thomas",
-   "team": "Marshall",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Middle Tennessee Blue Raiders @ Marshall Thundering Herd",
-   "opponent": "middletennessee",
-   "team_implied": 35.2,
-   "team_spread": -13.5,
-   "proj_fp": 3.77,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 15.6,
-    "rush_td": 0.23,
-    "rec_yds": 3.4,
-    "rec_td": 0.05,
-    "receptions": 0.3
-   }
-  },
-  {
    "name": "Hunter Tipton",
    "team": "Memphis",
    "position": "TE",
@@ -12989,6 +12989,26 @@
     "rec_yds": 18.2,
     "rec_td": 0.14,
     "receptions": 2.2
+   }
+  },
+  {
+   "name": "Lamar Sperling",
+   "team": "UTEP",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Texas Southern Tigers @ UTEP Miners",
+   "opponent": "texas",
+   "team_implied": 39.5,
+   "team_spread": -25.5,
+   "proj_fp": 3.74,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 19.3,
+    "rush_td": 0.24,
+    "rec_yds": 1.7,
+    "rec_td": 0.01,
+    "receptions": 0.3
    }
   },
   {
@@ -13192,6 +13212,26 @@
    }
   },
   {
+   "name": "Javarius Green",
+   "team": "Boston College",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Rutgers Scarlet Knights @ Boston College Eagles",
+   "opponent": "rutgers",
+   "team_implied": 28.2,
+   "team_spread": -3.0,
+   "proj_fp": 3.6,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 22.7,
+    "rec_td": 0.06,
+    "receptions": 1.9
+   }
+  },
+  {
    "name": "Ardell Banks",
    "team": "Kent State",
    "position": "WR",
@@ -13209,26 +13249,6 @@
     "rec_yds": 19.2,
     "rec_td": 0.17,
     "receptions": 1.3
-   }
-  },
-  {
-   "name": "CJ Baxter",
-   "team": "Texas",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Ohio State Buckeyes @ Texas Longhorns",
-   "opponent": "ohiostate",
-   "team_implied": 25.5,
-   "team_spread": -1.5,
-   "proj_fp": 3.59,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 14.2,
-    "rush_td": 0.11,
-    "rec_yds": 5.7,
-    "rec_td": 0.08,
-    "receptions": 0.9
    }
   },
   {
@@ -13532,6 +13552,26 @@
    }
   },
   {
+   "name": "Justin Williams-Thomas",
+   "team": "UMass",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Sacred Heart Pioneers @ UMass Minutemen",
+   "opponent": null,
+   "team_implied": 38.5,
+   "team_spread": -23.5,
+   "proj_fp": 3.3,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 13.4,
+    "rush_td": 0.18,
+    "rec_yds": 3.5,
+    "rec_td": 0.06,
+    "receptions": 0.3
+   }
+  },
+  {
    "name": "Jahlil McClain",
    "team": "Fresno State",
    "position": "WR",
@@ -13609,26 +13649,6 @@
     "rec_yds": 16.8,
     "rec_td": 0.14,
     "receptions": 1.5
-   }
-  },
-  {
-   "name": "Nic Anderson",
-   "team": "LSU",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Louisiana Tech Bulldogs @ LSU Tigers",
-   "opponent": "louisianatech",
-   "team_implied": 45.2,
-   "team_spread": -35.0,
-   "proj_fp": 3.24,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 13.8,
-    "rec_td": 0.19,
-    "receptions": 1.4
    }
   },
   {
@@ -13792,6 +13812,86 @@
    }
   },
   {
+   "name": "Aidan Mizell",
+   "team": "UCLA",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "San Diego State Aztecs @ UCLA Bruins",
+   "opponent": "sandiegostate",
+   "team_implied": 33.8,
+   "team_spread": -12.5,
+   "proj_fp": 3.09,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 15.9,
+    "rec_td": 0.12,
+    "receptions": 1.5
+   }
+  },
+  {
+   "name": "Cole Rusk",
+   "team": "Arizona",
+   "position": "TE",
+   "dk_slot": "TE",
+   "matchup": "Arizona Wildcats @ BYU Cougars",
+   "opponent": "byu",
+   "team_implied": 20.5,
+   "team_spread": 7.5,
+   "proj_fp": 3.09,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 17.6,
+    "rec_td": 0.1,
+    "receptions": 1.5
+   }
+  },
+  {
+   "name": "Joshisa Trader",
+   "team": "NC State",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Richmond Spiders @ NC State Wolfpack",
+   "opponent": null,
+   "team_implied": 42.0,
+   "team_spread": -33.5,
+   "proj_fp": 3.08,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 17.3,
+    "rec_td": 0.12,
+    "receptions": 1.3
+   }
+  },
+  {
+   "name": "Duke Watson",
+   "team": "UCF",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "UCF Knights @ Pittsburgh Panthers",
+   "opponent": "pittsburgh",
+   "team_implied": 24.8,
+   "team_spread": 7.0,
+   "proj_fp": 3.06,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 12.5,
+    "rush_td": 0.11,
+    "rec_yds": 4.9,
+    "rec_td": 0.07,
+    "receptions": 0.5
+   }
+  },
+  {
    "name": "Lavon Brown",
    "team": "Colorado State",
    "position": "WR",
@@ -13952,46 +14052,6 @@
    }
   },
   {
-   "name": "Joshisa Trader",
-   "team": "Miami",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Holy Cross Crusaders @ Miami (OH) RedHawks",
-   "opponent": null,
-   "team_implied": 40.5,
-   "team_spread": -30.5,
-   "proj_fp": 2.98,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 17.0,
-    "rec_td": 0.11,
-    "receptions": 1.2
-   }
-  },
-  {
-   "name": "Jaylen Henderson",
-   "team": "West Virginia",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -41.5,
-   "proj_fp": 2.96,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 16.4,
-    "rush_td": 0.22,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Mark Hamper",
    "team": "California",
    "position": "WR",
@@ -14012,23 +14072,23 @@
    }
   },
   {
-   "name": "Manny Covey",
-   "team": "Cincinnati",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Western Carolina Catamounts @ Cincinnati Bearcats",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -36.5,
+   "name": "Cam Fancher",
+   "team": "Michigan State",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Eastern Michigan Eagles @ Michigan State Spartans",
+   "opponent": "easternmichigan",
+   "team_implied": 33.5,
+   "team_spread": -17.5,
    "proj_fp": 2.95,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 11.5,
-    "rush_td": 0.18,
-    "rec_yds": 4.9,
-    "rec_td": 0.01,
-    "receptions": 0.3
+    "rush_yds": 16.8,
+    "rush_td": 0.21,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -14072,6 +14132,26 @@
    }
   },
   {
+   "name": "Jaylen Henderson",
+   "team": "Liberty",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
+   "opponent": null,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 2.91,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 16.1,
+    "rush_td": 0.22,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Caden Jensen",
    "team": "Louisiana",
    "position": "TE",
@@ -14092,43 +14172,23 @@
    }
   },
   {
-   "name": "Cade Yacamelli",
-   "team": "Wisconsin",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Western Illinois Leathernecks @ Wisconsin Badgers",
-   "opponent": null,
-   "team_implied": 44.0,
-   "team_spread": -38.5,
-   "proj_fp": 2.89,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 17.5,
-    "rush_td": 0.12,
-    "rec_yds": 2.7,
-    "rec_td": 0.01,
-    "receptions": 0.2
-   }
-  },
-  {
-   "name": "Arhmad Branch",
-   "team": "Purdue",
+   "name": "Horatio Fields",
+   "team": "Ole Miss",
    "position": "WR",
    "dk_slot": "WR",
-   "matchup": "Wake Forest Demon Deacons @ Purdue Boilermakers",
-   "opponent": "wakeforest",
-   "team_implied": 23.2,
-   "team_spread": 3.0,
-   "proj_fp": 2.87,
+   "matchup": "Charlotte 49ers @ Ole Miss Rebels",
+   "opponent": "charlotte",
+   "team_implied": 53.0,
+   "team_spread": -45.5,
+   "proj_fp": 2.88,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
     "rush_yds": null,
     "rush_td": null,
-    "rec_yds": 14.3,
-    "rec_td": 0.15,
-    "receptions": 1.1
+    "rec_yds": 14.5,
+    "rec_td": 0.12,
+    "receptions": 1.4
    }
   },
   {
@@ -14167,46 +14227,6 @@
     "rush_yds": null,
     "rush_td": null,
     "rec_yds": 17.7,
-    "rec_td": 0.06,
-    "receptions": 1.5
-   }
-  },
-  {
-   "name": "Nicco Marchiol",
-   "team": "West Virginia",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "UT Martin Skyhawks @ West Virginia Mountaineers",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -41.5,
-   "proj_fp": 2.85,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 14.2,
-    "rush_td": 0.24,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Javarius Green",
-   "team": "North Carolina",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "East Tennessee State Buccaneers @ North Carolina Tar Heels",
-   "opponent": null,
-   "team_implied": 45.0,
-   "team_spread": -35.5,
-   "proj_fp": 2.85,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 17.6,
     "rec_td": 0.06,
     "receptions": 1.5
    }
@@ -14332,43 +14352,23 @@
    }
   },
   {
-   "name": "KD Daniels",
-   "team": "Florida",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Campbell Fighting Camels @ Florida Gators",
-   "opponent": null,
-   "team_implied": 58.5,
-   "team_spread": -50.5,
-   "proj_fp": 2.76,
+   "name": "Xavier Townsend",
+   "team": "Purdue",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Wake Forest Demon Deacons @ Purdue Boilermakers",
+   "opponent": "wakeforest",
+   "team_implied": 23.2,
+   "team_spread": 3.0,
+   "proj_fp": 2.78,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 14.6,
-    "rush_td": 0.17,
-    "rec_yds": 1.5,
-    "rec_td": 0.01,
-    "receptions": 0.2
-   }
-  },
-  {
-   "name": "Jay Harris",
-   "team": "Oregon",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Oregon Ducks @ Oklahoma State Cowboys",
-   "opponent": "oklahomastate",
-   "team_implied": 39.2,
-   "team_spread": -23.0,
-   "proj_fp": 2.74,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 13.0,
-    "rush_td": 0.15,
-    "rec_yds": 3.9,
-    "rec_td": 0.01,
-    "receptions": 0.2
+    "rush_yds": 1.0,
+    "rush_td": 0.04,
+    "rec_yds": 16.1,
+    "rec_td": 0.04,
+    "receptions": 1.2
    }
   },
   {
@@ -14472,6 +14472,26 @@
    }
   },
   {
+   "name": "Marquise Davis",
+   "team": "Louisville",
+   "position": "HB",
+   "dk_slot": "RB",
+   "matchup": "Villanova Wildcats @ Louisville Cardinals",
+   "opponent": null,
+   "team_implied": 47.0,
+   "team_spread": -37.5,
+   "proj_fp": 2.64,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 14.9,
+    "rush_td": 0.19,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Preston Howard",
    "team": "Maryland",
    "position": "TE",
@@ -14552,6 +14572,26 @@
    }
   },
   {
+   "name": "Davi Belfort",
+   "team": "James Madison",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Wagner Seahawks @ James Madison Dukes",
+   "opponent": null,
+   "team_implied": 50.0,
+   "team_spread": -45.5,
+   "proj_fp": 2.56,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 14.4,
+    "rush_td": 0.19,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
+   }
+  },
+  {
    "name": "Dakota Twitty",
    "team": "Virginia",
    "position": "TE",
@@ -14612,23 +14652,23 @@
    }
   },
   {
-   "name": "Ja'Kobi Jackson",
-   "team": "Florida",
+   "name": "Peyton Jones",
+   "team": "Liberty",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Campbell Fighting Camels @ Florida Gators",
+   "matchup": "Gardner-Webb Runnin Bulldogs @ Liberty Flames",
    "opponent": null,
-   "team_implied": 58.5,
-   "team_spread": -50.5,
-   "proj_fp": 2.42,
+   "team_implied": 41.2,
+   "team_spread": -27.5,
+   "proj_fp": 2.45,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 13.3,
-    "rush_td": 0.12,
-    "rec_yds": 2.3,
+    "rush_yds": 7.0,
+    "rush_td": 0.21,
+    "rec_yds": 2.7,
     "rec_td": 0.01,
-    "receptions": 0.2
+    "receptions": 0.3
    }
   },
   {
@@ -14649,6 +14689,26 @@
     "rec_yds": 11.6,
     "rec_td": 0.05,
     "receptions": 1.6
+   }
+  },
+  {
+   "name": "Mekhi Miller",
+   "team": "Missouri State",
+   "position": "WR",
+   "dk_slot": "WR",
+   "matchup": "Lindenwood Lions @ Missouri State Bears",
+   "opponent": null,
+   "team_implied": 34.6,
+   "team_spread": -16.5,
+   "proj_fp": 2.37,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": null,
+    "rush_td": null,
+    "rec_yds": 12.7,
+    "rec_td": 0.07,
+    "receptions": 1.3
    }
   },
   {
@@ -14689,26 +14749,6 @@
     "rec_yds": 14.7,
     "rec_td": 0.04,
     "receptions": 1.2
-   }
-  },
-  {
-   "name": "Mekhi Miller",
-   "team": "Tulsa",
-   "position": "WR",
-   "dk_slot": "WR",
-   "matchup": "Tulsa Golden Hurricane @ Sam Houston State Bearkats",
-   "opponent": "samhouston",
-   "team_implied": 32.5,
-   "team_spread": -13.5,
-   "proj_fp": 2.35,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": null,
-    "rush_td": null,
-    "rec_yds": 12.7,
-    "rec_td": 0.07,
-    "receptions": 1.3
    }
   },
   {
@@ -14772,26 +14812,6 @@
    }
   },
   {
-   "name": "Christian Clark",
-   "team": "Texas",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Ohio State Buckeyes @ Texas Longhorns",
-   "opponent": "ohiostate",
-   "team_implied": 25.5,
-   "team_spread": -1.5,
-   "proj_fp": 2.3,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 9.7,
-    "rush_td": 0.12,
-    "rec_yds": 4.1,
-    "rec_td": 0.01,
-    "receptions": 0.3
-   }
-  },
-  {
    "name": "Cameron Monteiro",
    "team": "Akron",
    "position": "WR",
@@ -14809,6 +14829,26 @@
     "rec_yds": 14.2,
     "rec_td": 0.04,
     "receptions": 1.2
+   }
+  },
+  {
+   "name": "Lucian Anderson III",
+   "team": "South Carolina",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Towson Tigers @ South Carolina Gamecocks",
+   "opponent": null,
+   "team_implied": 49.5,
+   "team_spread": -43.5,
+   "proj_fp": 2.28,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 14.2,
+    "rush_td": 0.14,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -14953,22 +14993,42 @@
   },
   {
    "name": "Nate Palmer",
-   "team": "TCU",
+   "team": "Wisconsin",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Grambling State Tigers @ TCU Horned Frogs",
+   "matchup": "Western Illinois Leathernecks @ Wisconsin Badgers",
    "opponent": null,
-   "team_implied": 49.0,
-   "team_spread": -43.5,
+   "team_implied": 44.0,
+   "team_spread": -38.5,
    "proj_fp": 2.19,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 15.6,
+    "rush_yds": 15.9,
     "rush_td": 0.08,
-    "rec_yds": 0.8,
-    "rec_td": 0.01,
+    "rec_yds": 0.5,
+    "rec_td": 0.0,
     "receptions": 0.1
+   }
+  },
+  {
+   "name": "Brandon Rose",
+   "team": "Utah",
+   "position": "QB",
+   "dk_slot": "QB",
+   "matchup": "Arkansas Razorbacks @ Utah Utes",
+   "opponent": "arkansas",
+   "team_implied": 33.9,
+   "team_spread": -12.5,
+   "proj_fp": 2.16,
+   "proj": {
+    "pass_yds": null,
+    "pass_td": null,
+    "rush_yds": 15.6,
+    "rush_td": 0.1,
+    "rec_yds": null,
+    "rec_td": null,
+    "receptions": null
    }
   },
   {
@@ -14989,26 +15049,6 @@
     "rec_yds": 1.6,
     "rec_td": 0.01,
     "receptions": 0.2
-   }
-  },
-  {
-   "name": "J'Marion Burnette",
-   "team": "Houston",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Southern University Jaguars @ Houston Cougars",
-   "opponent": null,
-   "team_implied": 56.0,
-   "team_spread": -51.5,
-   "proj_fp": 2.09,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 12.3,
-    "rush_td": 0.08,
-    "rec_yds": 1.6,
-    "rec_td": 0.03,
-    "receptions": 0.1
    }
   },
   {
@@ -15092,103 +15132,43 @@
    }
   },
   {
-   "name": "Ayo Adeyi",
-   "team": "James Madison",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Wagner Seahawks @ James Madison Dukes",
-   "opponent": null,
-   "team_implied": 50.0,
-   "team_spread": -45.5,
-   "proj_fp": 1.84,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 12.5,
-    "rush_td": 0.09,
-    "rec_yds": 0.6,
-    "rec_td": 0.0,
-    "receptions": 0.0
-   }
-  },
-  {
-   "name": "Jerrick Gibson",
-   "team": "Texas",
-   "position": "HB",
-   "dk_slot": "RB",
-   "matchup": "Ohio State Buckeyes @ Texas Longhorns",
-   "opponent": "ohiostate",
-   "team_implied": 25.5,
-   "team_spread": -1.5,
-   "proj_fp": 1.8,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 10.6,
-    "rush_td": 0.12,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
    "name": "Makhi Hughes",
-   "team": "Oregon",
+   "team": "Houston",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Oregon Ducks @ Oklahoma State Cowboys",
-   "opponent": "oklahomastate",
-   "team_implied": 39.2,
-   "team_spread": -23.0,
-   "proj_fp": 1.8,
+   "matchup": "Southern University Jaguars @ Houston Cougars",
+   "opponent": null,
+   "team_implied": 56.0,
+   "team_spread": -51.5,
+   "proj_fp": 1.97,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 8.3,
-    "rush_td": 0.1,
+    "rush_yds": 9.3,
+    "rush_td": 0.12,
     "rec_yds": 2.0,
     "rec_td": 0.01,
     "receptions": 0.2
    }
   },
   {
-   "name": "Chance Williams",
-   "team": "Cincinnati",
+   "name": "Bryce Baker",
+   "team": "Virginia Tech",
    "position": "HB",
    "dk_slot": "RB",
-   "matchup": "Western Carolina Catamounts @ Cincinnati Bearcats",
-   "opponent": null,
-   "team_implied": 48.5,
-   "team_spread": -36.5,
-   "proj_fp": 1.73,
+   "matchup": "Old Dominion Monarchs @ Virginia Tech Hokies",
+   "opponent": "olddominion",
+   "team_implied": 33.8,
+   "team_spread": -19.0,
+   "proj_fp": 1.55,
    "proj": {
     "pass_yds": null,
     "pass_td": null,
-    "rush_yds": 6.1,
-    "rush_td": 0.19,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
-   }
-  },
-  {
-   "name": "Brandon Rose",
-   "team": "UMass",
-   "position": "QB",
-   "dk_slot": "QB",
-   "matchup": "Sacred Heart Pioneers @ UMass Minutemen",
-   "opponent": null,
-   "team_implied": 38.5,
-   "team_spread": -23.5,
-   "proj_fp": 1.41,
-   "proj": {
-    "pass_yds": null,
-    "pass_td": null,
-    "rush_yds": 9.5,
-    "rush_td": 0.08,
-    "rec_yds": null,
-    "rec_td": null,
-    "receptions": null
+    "rush_yds": 7.7,
+    "rush_td": 0.07,
+    "rec_yds": 1.9,
+    "rec_td": 0.01,
+    "receptions": 0.3
    }
   }
  ]

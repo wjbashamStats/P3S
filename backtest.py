@@ -172,7 +172,19 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         # above) over season_totals' stale one, so a transferred player's
         # opponent/game-context/matchup-grade/TARP all resolve against the
         # team he's actually playing for this year.
-        canon_tkey = current_tkey_by_pkey.get(pkey) or DL.resolve_tkey(tkey, pff2c)
+        # The crosswalk has real gaps for transfers, and a miss here is
+        # expensive: it silently falls back to last season's school, so the
+        # player inherits that team's THIS-week game context. Alberto
+        # Mendoza (2026 Georgia Tech QB1, absent from the crosswalk, still
+        # "INDIANA" in season totals) was picking up Indiana's 60.5 implied
+        # total against an FCS opponent. The ourlads depth chart is the
+        # second current-season source; fall through to the stale team only
+        # when neither knows him.
+        canon_tkey = current_tkey_by_pkey.get(pkey)
+        if not canon_tkey and depth_chart:
+            canon_tkey = DL.resolve_depth_chart_team(
+                (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys)
+        canon_tkey = canon_tkey or DL.resolve_tkey(tkey, pff2c)
         grades = pff_by_key.get((pkey, canon_tkey), {}) or pff_by_key.get((pkey, tkey), {})
         player_name = grades.get("name") or pkey
 
