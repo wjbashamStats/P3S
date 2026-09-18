@@ -7,6 +7,7 @@ already produces. Runs every Sunday; writes one ranked CSV.
 ## The weekly drop
 
     actionnet/input/AN_season.xlsx        <- replace this each week
+    actionnet/input/trends/*.html         <- and re-save these three
 
 That is the only thing that has to change. Export the Action Network workbook,
 overwrite that file, commit. The Sunday job reads whatever is sitting there, so
@@ -23,7 +24,7 @@ Optional inputs, both auto-detected when present:
 | flag | source | without it |
 |---|---|---|
 | `--odds-csv` | `futures_<season>.csv` from `build_futures_from_html.py` | odds columns omitted |
-| `--records-csv` | TeamRankings export (`Team` + `W`/`L`, or a `Record` string) | falls back to parsing the PFF tab, which matches 130 of 138 teams |
+| `--trends-dir` | the three saved TeamRankings trends pages (see `input/trends/README.md`) | falls back to parsing the PFF tab, which matches 130 of 138 teams |
 
 No third-party packages. `xlsx_read.py` is a small read-only .xlsx parser built
 on `zipfile` + `xml.etree`, so a scheduled run can never fail on a pip install.
@@ -31,13 +32,19 @@ It is checked against openpyxl cell-for-cell by `test_xlsx_read.py`, which skips
 itself when openpyxl isn't installed:
 
     python3 actionnet/test_xlsx_read.py actionnet/input/AN_season.xlsx
+    python3 actionnet/test_teamrankings.py
 
 ## What the workbook doesn't have
 
 - **Futures odds.** `2026 Futures` has Win Total Feb/MAR/Jul columns but they're
   empty. Comes from the futures pipeline instead, joined on `Team` -- the export
   already uses our naming, so the old `VI` crosswalk step is gone.
-- **Records.** From TeamRankings, not the workbook.
+- **Records.** From TeamRankings, not the workbook: win/loss, against-the-spread
+  and over/under, parsed from the saved trends pages. TeamRankings abbreviates
+  its team names, so resolution runs alias table -> our name -> TeamID's
+  TeamRankings column -> a normalised form; all 138 names on the 2026-09-18
+  slate resolve, with no two mapping to the same team
+  (`actionnet/test_teamrankings.py` asserts both).
 - **Mascot.** Derived from `TeamID`'s ESPN name; resolves 129 of 138.
 - **Logos.** Not in an `info` sheet; taken from the `Twitter` tab, 132 of 138.
 

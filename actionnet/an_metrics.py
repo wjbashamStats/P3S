@@ -17,7 +17,7 @@ Sheet mapping (old Google Sheet -> workbook tab):
     info           info          -> TeamID + Twitter     (partial, see below)
     records        Sheet1        -> PFF                  (partial, see below)
     odds           CombinedOdds  -> NOT IN THE WORKBOOK  (--odds-csv)
-    records        Sheet1        -> TeamRankings          (--records-csv)
+    records        Sheet1        -> TeamRankings          (--trends-dir)
 
 WHAT THE WORKBOOK DOES NOT HAVE
   1. CombinedOdds. No per-team futures prices in the workbook ('{season}
@@ -33,10 +33,13 @@ WHAT THE WORKBOOK DOES NOT HAVE
      are new to the 2026 PR and had no 2025 futures.
   3. Mascot. Derived here from TeamID's ESPN name by stripping the school off
      the front; resolves 129 of 138.
-  4. Records come from TeamRankings, not the workbook. Pass --records-csv with
-     Team/W/L columns. Without it this falls back to parsing PFF's RECORD
-     ("1 - 1"), whose own spellings only match 130 of 138 -- the fallback is
-     reported as such in the log so a silent downgrade is visible.
+  4. Records come from TeamRankings, not the workbook. Save the three trends
+     pages (win_trends.html, ats_trends.html, ou_trends.html from
+     teamrankings.com/ncf/trends/) into one directory and pass --trends-dir;
+     they carry win/loss, against-the-spread and over/under records together.
+     Without it this falls back to parsing PFF's RECORD ("1 - 1"), whose own
+     spellings only match 130 of 138 -- the fallback is reported in the log so
+     a silent downgrade is visible.
   5. Logos. Not in an info sheet; taken from Twitter column D, 132 of 138.
 
 THINGS IN THE WORKBOOK THAT LOOK WRONG (flagged at runtime, not fixed)
@@ -58,6 +61,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from xlsx_read import Workbook, to_num, to_str
+from teamrankings import TEAMRANKINGS_ALIASES, load_trends_dir
 
 
 # --------------------------------------------------------------------------
@@ -195,7 +199,7 @@ def report_join(rows, key, label, log):
         + (f"  -> {', '.join(missing[:8])}" if missing else ""))
 
 
-def build(xlsx_path, season, odds_csv=None, records_csv=None, log=print):
+def build(xlsx_path, season, odds_csv=None, trends_dir=None, log=print):
     # Print the input's age: the weekly job reads whatever sits at the fixed
     # input path, so a workbook nobody refreshed still produces a clean run with
     # last week's numbers. This is the line that makes that visible.
@@ -391,41 +395,47 @@ def build(xlsx_path, season, odds_csv=None, records_csv=None, log=print):
     log(f"[derive] Mascot from ESPN name: {len(ratings) - len(unresolved)} resolved, "
         f"{len(unresolved)} not ({', '.join(unresolved[:8])})")
 
-    # -- records: TeamRankings, falling back to PFF --------------------------
-    # TeamRankings is the intended source. Its team spellings are abbreviated
-    # ("Ohio St.", "Appalachian St."), so names are matched through TeamID's
-    # TeamRankings column first and then on a normalised form, rather than
-    # assuming they arrive in our spelling.
+    # -- trends: TeamRankings win / ATS / over-under, falling back to PFF ----
+    # TeamRankings abbreviates its team names ("N Texas", "Miami OH"), so
+    # resolution goes: the hand-verified alias table for the five the other two
+    # steps miss, then TeamID's own TeamRankings column, then a normalised form
+    # that expands "St" to "State" and drops punctuation. That covers all 138.
     recs = {}
-    if records_csv and os.path.exists(records_csv):
+    if trends_dir and os.path.isdir(trends_dir):
         tr_name = {v.get("TR"): k for k, v in xw.items() if v.get("TR")}
         norm_pr = {_norm_team(t): t for t in by_team}
-        with open(records_csv, newline="", encoding="utf-8") as fh:
-            for row in csv.DictReader(fh):
-                raw = to_str(row.get("Team") or row.get("Name") or row.get("team"))
-                if not raw:
-                    continue
-                team = tr_name.get(raw) or norm_pr.get(_norm_team(raw))
-                if not team:
-                    continue
-                w, l = to_num(row.get("W")), to_num(row.get("L"))
-                if w is None or l is None:
-                    w, l = _parse_record(to_str(row.get("RECORD") or row.get("Record")))
-                recs[team] = {"RECORD": (f"{int(w)} - {int(l)}" if w is not None and l is not None
-                                         else to_str(row.get("Record"))),
-                              "W": w, "L": l}
-        log(f"[join] {'records (TeamRankings)':<22} from {os.path.basename(records_csv)}")
+        # Normalised TeamID.TeamRankings matters on its own: "Miami OH" is not
+        # our team name and not an exact TeamID hit, but TeamID stores
+        # "Miami (OH)", which normalises to the same key. Normalising only
+        # against our own names would drop it.
+        norm_tr = {_norm_team(v["TR"]): k for k, v in xw.items() if v.get("TR")}
+        merged = load_trends_dir(trends_dir, log)
+        unresolved_tr = []
+        for raw, cols in merged.items():
+            team = (TEAMRANKINGS_ALIASES.get(raw)
+                    or (raw if raw in by_team else None)
+                    or tr_name.get(raw)
+                    or norm_pr.get(_norm_team(raw))
+                    or norm_tr.get(_norm_team(raw)))
+            if not team:
+                unresolved_tr.append(raw)
+                continue
+            recs[team] = {k: v for k, v in cols.items() if k != "team"}
+        log(f"[join] {'trends (TeamRankings)':<22} {len(recs)} teams resolved"
+            + (f", UNRESOLVED: {', '.join(unresolved_tr)}" if unresolved_tr else ""))
+        probe = "TR_win_win_loss_record"
     else:
-        log(f"[fall] {'records':<22} no TeamRankings export -- parsing PFF's RECORD instead")
+        log(f"[fall] {'trends':<22} no --trends-dir -- parsing PFF's RECORD instead")
         for row in wb.grid("PFF", 3, None, 1, 6):
             team, rec = to_str(row[0]), to_str(row[5])
             if not team or not rec or team in recs:
                 continue
             w, l = _parse_record(rec)
             recs[team] = {"RECORD": rec, "W": w, "L": l}
+        probe = "RECORD"
     for r in ratings:
         r.update(recs.get(r["Team"], {}))
-    report_join(ratings, "RECORD", "records", log)
+    report_join(ratings, probe, "records", log)
 
     return ratings
 
@@ -444,6 +454,9 @@ def write_csv(rows, path):
     return cols
 
 
+HERE_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("--xlsx", required=True, help="Action Network season workbook (.xlsx)")
@@ -451,8 +464,9 @@ def main():
     ap.add_argument("--odds-csv", default=None,
                     help="futures export keyed on our team naming; defaults to "
                          "futures_<season>.csv beside the repo root if present")
-    ap.add_argument("--records-csv", default=None,
-                    help="TeamRankings records export (Team plus W/L or Record); "
+    ap.add_argument("--trends-dir", default=None,
+                    help="directory holding the saved TeamRankings trends pages "
+                         "(win_trends.html / ats_trends.html / ou_trends.html); "
                          "without it, records fall back to the PFF tab")
     ap.add_argument("--out", default=None, help="output CSV (default: AN_<season>_<date>.csv)")
     args = ap.parse_args()
@@ -460,12 +474,15 @@ def main():
     if not os.path.exists(args.xlsx):
         raise SystemExit(f"workbook not found: {args.xlsx}")
     out = args.out or f"AN_{args.season}_{datetime.date.today():%Y%m%d}.csv"
+    trends = args.trends_dir
+    if trends is None:
+        guess = os.path.join(HERE_REPO, "actionnet", "input", "trends")
+        trends = guess if os.path.isdir(guess) else None
     odds = args.odds_csv
     if odds is None:
-        guess = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                             f"futures_{args.season}.csv")
+        guess = os.path.join(HERE_REPO, f"futures_{args.season}.csv")
         odds = guess if os.path.exists(guess) else None
-    rows = build(args.xlsx, args.season, odds, args.records_csv)
+    rows = build(args.xlsx, args.season, odds, trends)
     cols = write_csv(rows, out)
     print(f"\nwrote {out}: {len(rows)} teams, {len(cols)} columns")
 
