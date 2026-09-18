@@ -15,7 +15,9 @@ subfolders):
   `historical_pull.py`, `build_player_tables.py` — the model backend.
 - `*_season_clean.csv` / `*_weekly_clean.csv` — cleaned & deduped 2025 PFF
   stats per market (passing/rushing/receiving/defense/blocking), and
-  `clean_pff_stats.py`, the cleaning script.
+  `clean_pff_stats.py`, the cleaning script. `2024_*_season_clean.csv` is the
+  prior season; `2026_*_season_clean.csv` is **this** season to date (the
+  weekly drop — see "Weekly PFF refresh" below).
 - `master_crosswalk.csv` / `master_players.csv` / `unique_teams.csv` — PFF grade
   crosswalk across all 12 positions (2,547 players).
 - `team_map.csv` — `cfbd_name,odds_name` overrides for teams the fuzzy matcher
@@ -27,6 +29,30 @@ subfolders):
 2. Rotate the CFBD + Odds API keys — they were exposed during development.
 3. `hist_raw/` is created when you run the historical pull locally; it's
    gitignored (bulk data).
+
+## Weekly PFF refresh
+Export the five season-summary files from PFF (passing, rushing, receiving,
+defense, offense blocking) **before** the week you are about to project, save
+them as `2026_{passing,rushing,receiving,defense,blocking}_season_clean.csv`,
+then:
+
+```bash
+python3 build_player_tables.py     # rebuilds player_current_totals.csv
+```
+
+Those files are this season to date, keyed by `player_id`. From there
+`project.blend_prior_and_current` weights each player's 2026 rate against his
+2025 one by how many 2026 games he has played
+(`config.CURRENT_SEASON_BLEND_GAMES`), and players with no 2025 record at all
+(true freshmen, FCS/JUCO arrivals) enter the projection pool off their 2026
+numbers alone. Export *before* the slate, not after it: the file is a running
+total with no week column, so nothing downstream can filter out a week that has
+already been played, and a late export leaves the blend reading the results it
+is meant to be predicting.
+
+Do **not** overwrite the bare `*_season_clean.csv` files with an in-season
+export: those are 2025's finished season, which is what a 2026 run uses as its
+prior year (`config.PRIOR_TOTALS_BY_SEASON`).
 
 ## Quick start
 ```bash

@@ -34,6 +34,14 @@ checked at ~99.5-100% stable for the same person year over year (the
 handful of exceptions are genuine same-name-different-player
 collisions, quirk #5).
 
+Also builds player_current_totals.csv from the 2026_*_season_clean.csv
+files (the weekly in-season PFF drop), if present -- this season's
+games-to-date, keyed by player_id like the prior-year file and for the
+same reason. project.blend_prior_and_current consumes it as the
+current-season side from week 4 on (config.PRIOR_ONLY_UNTIL_WEEK). Drop
+in a refreshed export BEFORE the week you are projecting, never after it
+has been played, or the blend is reading results it is meant to predict.
+
 Run:  python3 build_player_tables.py
 Regenerate any time the *_clean.csv files change; outputs are gitignored.
 """
@@ -49,6 +57,20 @@ SEASON_SOURCES = [
                                      "touchdowns": "rush_td"}),
     ("receiving_season_clean.csv", {"targets": "targets", "receptions": "receptions",
                                      "yards": "rec_yds", "touchdowns": "rec_td"}),
+]
+# 2026 season-to-date (the weekly PFF drop). Same schema as the files
+# above, but they cover only the games played so far this year -- they are
+# the CURRENT-season side of project.blend_prior_and_current, not a
+# prior-year baseline. Kept in their own 2026_-prefixed files so the bare
+# *_season_clean.csv set stays 2025's finished season, which is what
+# config.PRIOR_TOTALS_BY_SEASON[2026] points at.
+CURRENT_SEASON_SOURCES = [
+    ("2026_passing_season_clean.csv",   {"attempts": "pass_att", "yards": "pass_yds",
+                                          "touchdowns": "pass_td"}),
+    ("2026_rushing_season_clean.csv",   {"attempts": "rush_att", "yards": "rush_yds",
+                                          "touchdowns": "rush_td"}),
+    ("2026_receiving_season_clean.csv", {"targets": "targets", "receptions": "receptions",
+                                          "yards": "rec_yds", "touchdowns": "rec_td"}),
 ]
 PRIOR_SEASON_SOURCES = [
     ("2024_passing_season_clean.csv",   {"attempts": "pass_att", "yards": "pass_yds",
@@ -158,6 +180,12 @@ def main():
         _write(build_season_totals(PRIOR_SEASON_SOURCES), SEASON_COLS, "player_prior_totals.csv")
     else:
         print("No 2024_*_season_clean.csv files found -- skipping player_prior_totals.csv")
+
+    if any(os.path.exists(os.path.join(BASE_DIR, f)) for f, _ in CURRENT_SEASON_SOURCES):
+        print("Building player_current_totals.csv (2026 season-to-date, keyed by player_id) ...")
+        _write(build_season_totals(CURRENT_SEASON_SOURCES), SEASON_COLS, "player_current_totals.csv")
+    else:
+        print("No 2026_*_season_clean.csv files found -- skipping player_current_totals.csv")
 
 
 if __name__ == "__main__":

@@ -87,6 +87,17 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=season) if use_prior_year else {}
+    # This season's own games-to-date, keyed by player_id. Empty for any
+    # season not in config.CURRENT_TOTALS_BY_SEASON (the 2025 backtest),
+    # where `logs` above already IS the current season and stays the
+    # current-season side of the blend. For 2026 it's the only correct
+    # source: those logs are 2025's weeks, not this year's.
+    cur_totals = DL.load_current_totals(season=season) if use_prior_year else {}
+    cur_season_has_totals_file = season in C.CURRENT_TOTALS_BY_SEASON
+    # `totals` is last season's roster; fold in anyone who only exists in
+    # this season's data so the loop below can see them at all.
+    n_totals_prior_roster = len(totals)
+    DL.add_current_only_players(totals, cur_totals)
     pos_means = P.position_means(prior if (use_prior_year and prior) else totals)
     pos_td_means = P.position_td_rate_means(prior if (use_prior_year and prior) else totals)
     def_index = P.build_def_index(pff)
@@ -111,9 +122,20 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
 
     if use_prior_year:
         prior_year_label = season - 1
+        args_season_label = season
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
-        mode = ("blended with weeks < %d" % week if week > C.PRIOR_ONLY_UNTIL_WEEK
-                else f"pure {prior_year_label} (no current-season games exist yet to blend)")
+        n_with_cur = sum(1 for tot in totals.values() if tot.get("player_id") in cur_totals)
+        if cur_season_has_totals_file:
+            n_new = len(totals) - n_totals_prior_roster
+            mode = (f"blended with {args_season_label} to date "
+                    f"({n_with_cur}/{len(totals)} have a {args_season_label} record, "
+                    f"{n_new} of them {args_season_label}-only)"
+                    if n_with_cur else
+                    f"pure {prior_year_label} (no {args_season_label} totals file yet)")
+        elif week > C.PRIOR_ONLY_UNTIL_WEEK:
+            mode = "blended with weeks < %d" % week
+        else:
+            mode = f"pure {prior_year_label} (no current-season games exist yet to blend)"
         print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
@@ -149,7 +171,21 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         n_cur_games = None
         if use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
-            if week > C.PRIOR_ONLY_UNTIL_WEEK:
+            cur_rec = cur_totals.get(tot.get("player_id")) if cur_season_has_totals_file else None
+            if cur_rec is not None:
+                # Season-to-date totals file (2026). No week gate here:
+                # PRIOR_ONLY_UNTIL_WEEK exists because weeks 1-3 have no
+                # current-season signal TO blend, and this file is that
+                # signal -- it carries each player's real games-played, so
+                # the blend weight already handles a 1- or 2-game sample
+                # (w = n/(n+CURRENT_SEASON_BLEND_GAMES)). Gating on the
+                # week number would also be unreliable: `week` is the odds
+                # pull's own label, which does not track the season week.
+                # `logs` is the wrong year for this season and is
+                # deliberately not consulted.
+                n_cur_games = int(cur_rec.get("games") or 0)
+                source = P.blend_prior_and_current(prior_rec, [], current_totals=cur_rec)
+            elif week > C.PRIOR_ONLY_UNTIL_WEEK and not cur_season_has_totals_file:
                 current_games = [g for g in logs.get((pkey, tkey), [])
                                  if g.get("week") is not None and g["week"] < week]
                 n_cur_games = len(current_games)
@@ -233,12 +269,19 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
                                   f"{canon_tkey}'s 2025 {vol_col} pool -- no usable personal sample "
                                   f"(UNVALIDATED, see project.TYPICAL_STARTER_SHARE)")
             if vol_source is None:
+                # Label the years the run is actually using: for the 2025
+                # backtest prior-year is 2024, for a 2026 run it's 2025
+                # (config.PRIOR_TOTALS_BY_SEASON).
+                prior_yr, cur_yr = season - 1, season
+                n_prior_games = prior_rec.get("games") if prior_rec else 0
                 if not use_prior_year:
-                    vol_source = f"{tot.get('games')} 2025 games (in-season)"
-                elif week <= C.PRIOR_ONLY_UNTIL_WEEK:
-                    vol_source = f"{prior_rec.get('games') if prior_rec else 0} 2024 games (pure prior-year, week <= {C.PRIOR_ONLY_UNTIL_WEEK})"
+                    vol_source = f"{tot.get('games')} {cur_yr} games (in-season)"
+                elif n_cur_games is None:
+                    vol_source = (f"{n_prior_games} {prior_yr} games "
+                                  f"(pure prior-year, no {cur_yr} games on file)")
                 else:
-                    vol_source = f"blended: {n_cur_games} 2025 games + {prior_rec.get('games') if prior_rec else 0} 2024 games"
+                    vol_source = (f"blended: {n_cur_games} {cur_yr} games + "
+                                  f"{n_prior_games} {prior_yr} games")
             proj = P.project_player_market(source, logs.get((pkey, tkey)), rates_shrunk,
                                            mkey, mdef, def_index, opp_tkey=opp_tkey,
                                            vol_adj=vol_adj, extra_adj=extra_adj,

@@ -159,6 +159,112 @@ def load_prior_totals(season=None):
     return out
 
 
+def load_current_totals(season=None):
+    """
+    This season's own games-to-date, keyed by player_id ONLY -- same shape
+    and same join-key reasoning as load_prior_totals() above. Built by
+    build_player_tables.py from the 2026_*_season_clean.csv weekly PFF
+    drop; resolved per season via config.CURRENT_TOTALS_BY_SEASON.
+
+    Returns {} for a season with no entry (the 2025 backtest: there the
+    *_weekly_clean.csv game logs ARE the current season, so callers keep
+    using those) and for a listed season whose file hasn't been dropped in
+    yet.
+    """
+    path = C.CURRENT_TOTALS_BY_SEASON.get(season)
+    out = {}
+    if not path or not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        pid = r.get("player_id")
+        if not pid:
+            continue
+        rec = {k: _to_float(v) for k, v in r.items()
+               if k not in ("player", "team", "player_id", "position")}
+        rec["games"] = rec.get("games") or 1
+        # Roster identity kept alongside the stats (unlike load_prior_totals,
+        # which only ever supplies rates): add_current_only_players below
+        # uses this record AS the season-totals row for a player who has no
+        # prior-year one, so it needs the name/team/position too.
+        rec["team"] = r.get("team")
+        rec["player"] = r.get("player")
+        rec["position"] = r.get("position")
+        out[pid] = rec
+    return out
+
+
+def add_current_only_players(totals, cur_totals):
+    """
+    Fold players who exist ONLY in this season's data into the season-totals
+    table `totals` (keyed (pkey, tkey), as load_season_totals returns).
+
+    The projection loops in build.py/backtest.py iterate `totals`, which is
+    last season's roster -- so a true freshman or a JUCO/FCS arrival with no
+    prior-year PFF record never enters the loop at all, however much he is
+    playing now. Through 2026 week 3 that silently dropped ~200 players
+    averaging 5+ touches a game, most of them new starting QBs.
+
+    Their record carries the same columns (player/team/position/player_id +
+    stat totals), so it serves as their roster identity here. In the loop
+    they resolve to prior_rec=None and blend to pure current-to-date, which
+    is the only honest projection for someone with no history.
+
+    Mutates and returns `totals`. A no-op when cur_totals is empty.
+    """
+    if not cur_totals:
+        return totals
+    known = {t.get("player_id") for t in totals.values() if t.get("player_id")}
+    for pid, rec in cur_totals.items():
+        if pid in known:
+            continue
+        key = (norm(rec.get("player", "")), norm(rec.get("team", "")))
+        if key in totals:
+            continue
+        row = dict(rec)
+        row["player_id"] = pid
+        row["games"] = rec.get("games") or 1
+        totals[key] = row
+    return totals
+
+
+def load_totals_rows(season=None):
+    """
+    The raw season-totals CSV rows (strings, not floats), keyed by
+    (pkey, tkey) -- for the page builders, which want the display name,
+    team and position rather than the stat values load_season_totals()
+    parses out.
+
+    Rows from this season's own totals file (config.CURRENT_TOTALS_BY_SEASON)
+    are folded in for any player who has no prior-year row, the same gap
+    add_current_only_players closes on the projection side: without it a
+    2026-only starter gets a projection and is then dropped from every page
+    for want of a position label. Both files are written by
+    build_player_tables._write with the same SEASON_COLS header, so the rows
+    are interchangeable.
+    """
+    rows = {}
+    if os.path.exists(C.SEASON_TOTALS):
+        for r in csv.DictReader(open(C.SEASON_TOTALS)):
+            rows.setdefault((norm(r.get("player", "")), norm(r.get("team", ""))), r)
+    cur_path = C.CURRENT_TOTALS_BY_SEASON.get(season)
+    if cur_path and os.path.exists(cur_path):
+        known = {r.get("player_id") for r in rows.values() if r.get("player_id")}
+        for r in csv.DictReader(open(cur_path)):
+            if r.get("player_id") in known:
+                continue
+            rows.setdefault((norm(r.get("player", "")), norm(r.get("team", ""))), r)
+    return rows
+
+
+def load_totals_by_pkey(season=None):
+    """load_totals_rows() collapsed to one row per player name (first wins),
+    which is how the page builders look up a player's team/position."""
+    out = {}
+    for (pkey, _tkey), r in load_totals_rows(season).items():
+        out.setdefault(pkey, r)
+    return out
+
+
 def load_game_logs():
     """
     player_game_logs.csv — one row per player-game, prior year.

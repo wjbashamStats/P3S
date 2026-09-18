@@ -51,7 +51,7 @@ STAT_COLS = ("pass_att", "pass_yds", "rush_att", "rush_yds",
 TD_COL_BY_VOL = {"pass_att": "pass_td", "rush_att": "rush_td", "targets": "rec_td"}
 
 
-def blend_prior_and_current(prior_tot, current_games_list):
+def blend_prior_and_current(prior_tot, current_games_list, current_totals=None):
     """
     Week 4+ design (config.PRIOR_ONLY_UNTIL_WEEK): blend real prior-year
     (2024) totals with this season's own games played so far, weighted by
@@ -65,9 +65,28 @@ def blend_prior_and_current(prior_tot, current_games_list):
     an "effective games" count (prior_games + current_games), not real
     per-game counts, so that dividing by that games figure recovers the
     correctly-blended per-game rate elsewhere in the pipeline.
+
+    The current-season side arrives in one of two shapes, and
+    current_totals wins whenever it is given:
+      current_games_list -- per-game rows from player_game_logs.csv. This
+          is the 2025 backtest's path; those logs are 2025's own weeks.
+      current_totals     -- a season-to-date TOTALS record from
+          player_current_totals.csv (config.CURRENT_TOTALS_BY_SEASON).
+          This is the live 2026 path: PFF's in-season export is a running
+          total carrying a player_game_count, not a week-by-week split, so
+          the games figure rides on the record instead of being len() of a
+          list. Which also means the caller can't filter it by week -- the
+          file has to be a snapshot taken BEFORE the week being projected
+          (see build_player_tables.py), or the blend sees results it is
+          supposed to be predicting.
+    Either way n_cur is a real games-played count and the weighting below
+    is identical.
     """
     current_games_list = current_games_list or []
-    n_cur = len(current_games_list)
+    if current_totals:
+        n_cur = int(current_totals.get("games") or 0)
+    else:
+        n_cur = len(current_games_list)
     w = n_cur / (n_cur + C.CURRENT_SEASON_BLEND_GAMES) if n_cur else 0.0
 
     prior_games = (prior_tot or {}).get("games") or 0
@@ -75,8 +94,19 @@ def blend_prior_and_current(prior_tot, current_games_list):
 
     out = {"games": effective_games}
     for col in STAT_COLS:
-        cur_total = sum((g.get(col) or 0) for g in current_games_list)
-        cur_per_game = (cur_total / n_cur) if n_cur else None
+        if current_totals:
+            # A blank column here means the player has no row in that
+            # market's current-season export, i.e. zero of that stat so
+            # far -- treat it as 0, exactly as the game-log path does by
+            # summing absent keys. Falling back to prior-year instead
+            # would keep projecting carries for a QB who has stopped
+            # running; a real 0 still only gets weight w, so it shrinks
+            # toward prior-year rather than erasing it.
+            cur_total = current_totals.get(col) or 0.0
+            cur_per_game = (cur_total / n_cur) if n_cur else None
+        else:
+            cur_total = sum((g.get(col) or 0) for g in current_games_list)
+            cur_per_game = (cur_total / n_cur) if n_cur else None
         prior_val = (prior_tot or {}).get(col)
         prior_per_game = (prior_val / prior_games) if (prior_val is not None and prior_games) else None
 

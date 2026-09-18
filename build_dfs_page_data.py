@@ -144,9 +144,10 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # Team/position context, same source + fixes as the Impact page
     # (player_season_totals.csv has far wider coverage than the PFF
     # crosswalk; see build_impact_page_data.py's history on this).
-    totals_by_pkey = {}
-    for r in csv.DictReader(open(C.SEASON_TOTALS)):
-        totals_by_pkey.setdefault(norm(r.get("player", "")), r)
+    # Includes players who only exist in this season's data (a true
+    # freshman starter has no 2025 row); without them a 2026-only player
+    # gets a projection and is then dropped here for want of a position.
+    totals_by_pkey = DL.load_totals_by_pkey(season)
 
     # Matchup context straight from the full game-lines file (66 games),
     # NOT from the props join (only 41 games have a posted prop) -- a DFS

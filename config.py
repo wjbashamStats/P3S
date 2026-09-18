@@ -86,6 +86,20 @@ PRIOR_TOTALS_BY_SEASON = {
     2026: SEASON_TOTALS,
 }
 
+# This season's OWN games-to-date, keyed by player_id -- built by
+# build_player_tables.py from the 2026_*_season_clean.csv weekly PFF drop.
+# This is the current-season side of project.blend_prior_and_current from
+# week 4 on (PRIOR_ONLY_UNTIL_WEEK). It exists because the *_weekly_clean
+# .csv game logs are 2025's: feeding those in as "this season's games" for
+# a 2026 run would blend 2025 with 2025. A season listed here therefore
+# never falls back to the game logs for its current-season signal -- with
+# the file missing the blend degrades to prior-year-only, which is right,
+# rather than to the wrong year's weeks.
+CURRENT_SEASON_TOTALS = os.path.join(BASE_DIR, "player_current_totals.csv")
+CURRENT_TOTALS_BY_SEASON = {
+    2026: CURRENT_SEASON_TOTALS,
+}
+
 # ---------------- MARKET DEFINITIONS ----------------
 # Each Odds API prop market maps to: the stat we project, the volume + efficiency
 # columns it decomposes into, and which defensive grade adjusts it.

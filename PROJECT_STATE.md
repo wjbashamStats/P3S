@@ -53,7 +53,8 @@ project.py              projection engine (rate × volume × opponent)
 odds.py                 live Odds API puller (spreads/totals + props)
 build.py                orchestrator -> prop_edges.csv + impact.json  [TESTED --no-odds, real data]
 build_player_tables.py  adapter: per-market *_clean.csv -> player_season_totals.csv /
-                         player_game_logs.csv (gitignored, generated -- rerun after clean-file changes)
+                         player_game_logs.csv / player_prior_totals.csv /
+                         player_current_totals.csv (gitignored, generated -- rerun after clean-file changes)
 historical_pull.py      2025 historical props puller  [TESTED via dry-run]
 team_map.csv            cfbd_name,odds_name overrides (3 entries so far)
 2025_schedule.csv       CFBD 2025 schedule (download_1_.csv)
@@ -65,7 +66,11 @@ output/                 (created at runtime) prop_edges.csv + impact.json
 clean_pff_stats.py       reusable dedup/cleaner for PFF exports
 EDA_report.md            full findings
 *_weekly_clean.csv       passing/rushing/receiving/defense game logs (deduped)
-*_season_clean.csv       season totals for all + blocking
+*_season_clean.csv       2025 season totals for all + blocking (the prior year for a 2026 run)
+2024_*_season_clean.csv  2024 season totals (the prior year for the 2025 backtest)
+2026_*_season_clean.csv  2026 season to date -- the weekly PFF drop; feeds
+                         player_current_totals.csv and the prior/current blend
+                         (README "Weekly PFF refresh")
 
 (PFF crosswalk from earlier phase)
 master_crosswalk.csv     2,547 player-position rows, enriched (off_/def_ prefixed grades+snaps)

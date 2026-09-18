@@ -179,10 +179,8 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
 
     # load_season_totals() drops the raw "player"/"team" strings from its
     # dict (they're join keys, not stats) -- re-read them directly for display.
-    raw_by_key = {}
-    for r in csv.DictReader(open(C.SEASON_TOTALS)):
-        raw_by_key[(norm(r.get("player", "")), norm(r.get("team", "")))] = \
-            (r.get("player", ""), r.get("team", ""))
+    raw_by_key = {k: (r.get("player", ""), r.get("team", ""))
+                  for k, r in DL.load_totals_rows(season).items()}
 
     # Keyed by name only (not (pkey, tkey)): master_crosswalk.csv's "team"
     # column tracks each player's CURRENT team, which for a transferred
@@ -242,8 +240,13 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     #   - a posted prop market for this week, which no book offers on a
     #     player who isn't on a roster -- this one matters because the first
     #     two have real gaps (it alone saves Nathan McNeil of Iowa).
+    #   - a row in this season's own PFF totals (player_current_totals.csv),
+    #     which is the strongest signal of the four: he has actually played
+    #     a snap this year.
     # --include-departed restores the old, unfiltered population.
-    on_2026_roster = set(pff_by_pkey) | set(depth_chart) | set(week_props)
+    cur_totals = DL.load_current_totals(season=season)
+    on_2026_roster = (set(pff_by_pkey) | set(depth_chart) | set(week_props)
+                      | {norm(r.get("player", "")) for r in cur_totals.values()})
 
     players = []
     n_departed = 0

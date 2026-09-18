@@ -91,12 +91,32 @@ def main():
     totals = DL.load_season_totals()
     logs = DL.load_game_logs()
     prior = DL.load_prior_totals(season=args.season) if args.use_prior_year else {}
+    # This season's own games-to-date, keyed by player_id -- see
+    # backtest.build_projections for why `logs` can't serve this role for
+    # 2026 (those logs are 2025's weeks).
+    cur_totals = DL.load_current_totals(season=args.season) if args.use_prior_year else {}
+    cur_season_has_totals_file = args.season in C.CURRENT_TOTALS_BY_SEASON
+    # `totals` is last season's roster; fold in anyone who only exists in
+    # this season's data (see data_load.add_current_only_players).
+    n_totals_prior_roster = len(totals)
+    DL.add_current_only_players(totals, cur_totals)
     print(f"  PFF players: {len(pff)} | season-total players: {len(totals)}")
     if args.use_prior_year:
         prior_year_label = args.season - 1
+        args_season_label = args.season
         n_with_prior = sum(1 for tot in totals.values() if tot.get("player_id") in prior)
-        mode = ("blended with weeks < %d" % args.week if args.week > C.PRIOR_ONLY_UNTIL_WEEK
-                else f"pure {prior_year_label} (no current-season games exist yet to blend)")
+        n_with_cur = sum(1 for tot in totals.values() if tot.get("player_id") in cur_totals)
+        if cur_season_has_totals_file:
+            n_new = len(totals) - n_totals_prior_roster
+            mode = (f"blended with {args_season_label} to date "
+                    f"({n_with_cur}/{len(totals)} have a {args_season_label} record, "
+                    f"{n_new} of them {args_season_label}-only)"
+                    if n_with_cur else
+                    f"pure {prior_year_label} (no {args_season_label} totals file yet)")
+        elif args.week > C.PRIOR_ONLY_UNTIL_WEEK:
+            mode = "blended with weeks < %d" % args.week
+        else:
+            mode = f"pure {prior_year_label} (no current-season games exist yet to blend)"
         print(f"  --use-prior-year: {len(prior)} players with a {prior_year_label} record | "
               f"{n_with_prior}/{len(totals)} of this year's roster matched to one | mode: {mode}")
 
@@ -186,11 +206,19 @@ def main():
         prior_rec = None
         if args.use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
-            if args.week > C.PRIOR_ONLY_UNTIL_WEEK:
-                # week 4+: blend with this season's own games-to-date (weeks
-                # < args.week only, so no lookahead) -- legitimate even for a
-                # player with no 2024 record (prior_rec=None blends to pure
-                # current-to-date, still no lookahead).
+            cur_rec = cur_totals.get(tot.get("player_id")) if cur_season_has_totals_file else None
+            if cur_rec is not None:
+                # Blend with this season's own games-to-date (see
+                # backtest.build_projections for why there is no week gate
+                # on this branch, and why `logs` is not consulted for a
+                # season that has a totals file). Legitimate even for a
+                # player with no prior-year record: prior_rec=None blends
+                # to pure current-to-date.
+                source = P.blend_prior_and_current(prior_rec, [], current_totals=cur_rec)
+            elif args.week > C.PRIOR_ONLY_UNTIL_WEEK and not cur_season_has_totals_file:
+                # No current-season totals file for this season, so the
+                # weekly game logs ARE this season's (the 2025 path);
+                # filter to weeks < args.week so there's no lookahead.
                 current_games = [g for g in logs.get((pkey, tkey), [])
                                  if g.get("week") is not None and g["week"] < args.week]
                 source = P.blend_prior_and_current(prior_rec, current_games)

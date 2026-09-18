@@ -52,9 +52,10 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2
     # unrelated player at another position -- found for real: a defensive
     # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
     # the same name.
-    totals_by_pkey = {}
-    for r in csv.DictReader(open(C.SEASON_TOTALS)):
-        totals_by_pkey.setdefault(norm(r.get("player", "")), r)
+    # Includes players who only exist in this season's data (a true
+    # freshman starter has no 2025 row); without them a 2026-only player
+    # gets a projection and is then dropped here for want of a position.
+    totals_by_pkey = DL.load_totals_by_pkey(season)
 
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
     canonical_tkeys = {p["tkey"] for p in pff_by_pkey.values()}
