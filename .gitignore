@@ -26,3 +26,4 @@ venv/
 .DS_Store
 pages/build/
 actionnet/out/
+ranked/

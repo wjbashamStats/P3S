@@ -28,7 +28,7 @@ WHAT THE WORKBOOK DOES NOT HAVE
      Conf_*, Win_*). Auto-detected as futures_{season}.csv, or pass --odds-csv.
   2. VI is NOT needed. The old script joined odds on the VegasInsider spelling
      because the scrape carried raw VI names; the futures export is keyed on our
-     naming instead. futures_2025.csv matches '2026 PR'!Team on 136 of 138
+     naming instead. futures_2026.csv matches '2026 PR'!Team on 136 of 138
      straight across -- the two misses (North Dakota State, Sacramento State)
      are new to the 2026 PR and had no 2025 futures.
   3. Mascot. Derived here from TeamID's ESPN name by stripping the school off
