@@ -251,7 +251,7 @@
 
 <main>
   <div class="caveat">
-    <strong>Real week-1 slate (Sept 2-7).</strong> The live lines pull now carries a real kickoff
+    <strong id="slateNote">Real slate.</strong> The live lines pull now carries a real kickoff
     date on every row, so this is filtered directly to the actual week. Team matching is an EXACT
     Team+Mascot match, not substring — an earlier version substring-matched "North Carolina A&T"
     to "North Carolina" and produced a nonsense 55-point "diversion" that was really just a data
@@ -784,6 +784,9 @@
   }
 
   document.getElementById('weekTag').textContent = `Week ${DATA.week} · ${DATA.season} · ${DATA.date_start} to ${DATA.date_end}`;
+  // Was hardcoded to week 1 (Sept 2-7) and went stale every rebuild.
+  document.getElementById('slateNote').textContent =
+    `Real week-${DATA.week} slate (${DATA.date_start} to ${DATA.date_end}).`;
   renderHead();
   renderRows();
   renderTopBets();

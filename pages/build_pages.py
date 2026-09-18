@@ -14,7 +14,8 @@ of which 98.8% was impact_2026wk2.json -- so every weekly rebuild stored
 the same data twice in git history.
 
 data-source is resolved with {season} and {week} substituted, so one
-template serves every week. data-encoding="json-string" wraps a non-JSON
+template serves every week; {{season}}/{{week}} (doubled) do the same in
+the page's own prose, for copy that names the file it was built from. data-encoding="json-string" wraps a non-JSON
 source (the FanDuel salary CSV) as a JSON string literal, which is how the
 page's own loader expects it.
 
@@ -71,6 +72,11 @@ def build_page(template, out_dir, season, week, data_dir):
                 f'{body}</script>')
 
     out_html = TAG_RE.sub(sub, html)
+    # Prose that names the week it was built for. Doubled braces so the
+    # token can't collide with the single-brace {season}/{week} used inside
+    # data-source, or with any literal brace in the page's CSS or JS.
+    out_html = (out_html.replace("{{season}}", str(season))
+                        .replace("{{week}}", str(week)))
     if not injected:
         return None
     os.makedirs(out_dir, exist_ok=True)
