@@ -14,11 +14,11 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,2,2026-09-12,prop,Nick Minicucci Over pass yds,219.5,Delaware @ Vanderbilt,1.15,-115,290.4,LOSS,182 (27 att 6.74 ypa),-1.15,volume fine efficiency missed
 2026,2,2026-09-12,prop,Ryan Browne Under pass yds,234.5,Wake Forest @ Purdue,1.15,-115,141.7,LOSS,329 (43 att 7.65 ypa),-1.15,his wk1 317-yd game contradicted the Under and was ignored
 2026,2,2026-09-12,prop,Jayden Denegal Over pass yds,146.5,San Diego State @ UCLA,1.15,-115,202.3,LOSS,45 (17 att 2.65 ypa),-1.15,low volume and 2.65 ypa
+2026,3,2026-09-19,spread,UCF,-17.5,Georgia State @ UCF,1.10,-110,-29.5,PENDING,,,SP+ gap 27.4 + 2.1 HFA; GSU allowed 454 pts in 2025
+2026,3,2026-09-19,spread,Western Kentucky,+44.5,Western Kentucky @ Indiana,1.10,-110,-32.6,PENDING,,,book 11.9 past model; WKU 0.750 ATS rk7
 2026,3,2026-09-19,spread,Texas Tech,-7.5,Houston @ Texas Tech,1.10,-110,-18.2,PENDING,,,SP+ gap 14.9 + 3.3 HFA; TTU 0.917 ATS rk1
-2026,3,2026-09-19,spread,Clemson,-3.0,North Carolina @ Clemson,1.10,-110,-11.5,PENDING,,,SP+ gap 9.0 + 2.5 HFA
-2026,3,2026-09-19,spread,Nevada,-3.5,Nevada @ Middle Tennessee,1.10,-110,-11.8,PENDING,,,SP+ gap 13.8 for Nevada
-2026,3,2026-09-19,spread,South Carolina,-3.5,Mississippi State @ South Carolina,1.10,-110,-11.0,PENDING,,,SP+ gap 8.2; TARP 15 vs 71
-2026,3,2026-09-19,spread,West Virginia,+10.5,Virginia @ West Virginia,1.10,-110,+3.3,PENDING,,,TARP favors WVU vs 2025 SP+
+2026,3,2026-09-19,spread,Buffalo,+41.0,Buffalo @ Penn State,1.10,-110,-30.8,PENDING,,,book 10.2 past model; PSU 0.333 ATS rk121
+2026,3,2026-09-19,spread,Rutgers,+21.5,USC @ Rutgers,1.10,-110,+12.4,PENDING,,,Rutgers off grade 89.5; USC def 77.2
 2026,3,2026-09-19,total,Over,48.5,East Carolina @ Old Dominion,1.10,-110,66.7,PENDING,,,both top-10 tempo; largest gap on board
 2026,3,2026-09-19,total,Under,52.5,Purdue @ UCLA,1.10,-110,40.7,PENDING,,,tempo rk 125/101; UCLA off grade 65.6
 2026,3,2026-09-19,total,Over,49.5,Florida State @ Alabama,1.10,-110,58.8,PENDING,,,FSU tempo rk 9; both off grades 83+
@@ -26,6 +26,6 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,3,2026-09-19,total,Under,55.25,UAB @ Louisiana,1.10,-110,47.8,PENDING,,,UAB def grade 55.0 is the risk
 2026,3,2026-09-19,prop,Lawayne McCoy Over rec yds,37.5,SMU @ Louisville,1.15,-115,69.9,PENDING,,,82.0 yds/gm 2026; 25 rts/gm; PFF 76.0
 2026,3,2026-09-19,prop,Jeremiah Koger Over rec yds,37.5,Florida @ Auburn,1.15,-115,60.4,PENDING,,,61.5 yds/gm; 6.0 tgt/gm; 5 books
-2026,3,2026-09-19,prop,Trent Mosley Over rec yds,59.5,USC @ Rutgers,1.15,-115,113.7,PENDING,,,85.0 yds/gm; PFF 89.8
+2026,3,2026-09-19,prop,Omarion Miller Over receptions,5.5,Kansas @ Arizona State,1.15,-115,8.3,PENDING,,,8.5 rec/gm on 12.0 tgt/gm 2026; 3 books
 2026,3,2026-09-19,prop,Micah Welch Over rush yds,39.5,Colorado @ Northwestern,1.15,-115,56.9,PENDING,,,82.0 yds/gm on 13 att/gm; PFF 84.0
 2026,3,2026-09-19,prop,Nic Anderson Under rec yds,20.5,Kentucky @ Texas A&M,1.15,-115,8.2,PENDING,,,24 rts/gm but 0.35 yprr; KY implied 16.6
