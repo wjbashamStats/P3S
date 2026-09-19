@@ -387,13 +387,33 @@ def build(xlsx_path, season, odds_csv=None, trends_dir=None, log=print):
         r["logo"] = logos.get(r["Team"])
     report_join(ratings, "logo", "Twitter (logos)", log)
 
+    # Stripping the school off the front of the ESPN name is not safe on its
+    # own: one team's name can be a prefix of another's. The 2026 workbook has
+    # Arizona and Arizona State's ESPN cells swapped, so Arizona's row read
+    # "Arizona State Sun Devils" and the prefix rule turned that into the
+    # mascot "State Sun Devils" -- which then collides with Arizona State on
+    # the norm(Team + Mascot) key the page builders join on, and hands one
+    # school the other's ratings. Guard it: if the ESPN value starts with a
+    # LONGER team name that is also in this file, it belongs to that team, not
+    # to this row. Report rather than guess; the workbook is the thing to fix.
+    names = sorted({r["Team"] for r in ratings if r.get("Team")}, key=len, reverse=True)
+    misfiled = []
     for r in ratings:
         espn, team = r.get("ESPN"), r["Team"]
+        owner = next((n for n in names if espn and n != team
+                      and len(n) > len(team) and espn.startswith(n)), None)
+        if owner:
+            misfiled.append(f"{team} -> {espn!r} (is {owner}'s)")
+            r["Mascot"] = None
+            continue
         r["Mascot"] = (espn[len(team):].strip()
                        if espn and espn.startswith(team) and len(espn) > len(team) else None)
     unresolved = [r["Team"] for r in ratings if not r["Mascot"]]
     log(f"[derive] Mascot from ESPN name: {len(ratings) - len(unresolved)} resolved, "
         f"{len(unresolved)} not ({', '.join(unresolved[:8])})")
+    if misfiled:
+        log(f"[warn] TeamID ESPN name is on the wrong row for {len(misfiled)}: "
+            + "; ".join(misfiled))
 
     # -- trends: TeamRankings win / ATS / over-under, falling back to PFF ----
     # TeamRankings abbreviates its team names ("N Texas", "Miami OH"), so

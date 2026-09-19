@@ -14,16 +14,16 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,2,2026-09-12,prop,Nick Minicucci Over pass yds,219.5,Delaware @ Vanderbilt,1.15,-115,290.4,LOSS,182 (27 att 6.74 ypa),-1.15,volume fine efficiency missed
 2026,2,2026-09-12,prop,Ryan Browne Under pass yds,234.5,Wake Forest @ Purdue,1.15,-115,141.7,LOSS,329 (43 att 7.65 ypa),-1.15,his wk1 317-yd game contradicted the Under and was ignored
 2026,2,2026-09-12,prop,Jayden Denegal Over pass yds,146.5,San Diego State @ UCLA,1.15,-115,202.3,LOSS,45 (17 att 2.65 ypa),-1.15,low volume and 2.65 ypa
-2026,3,2026-09-19,spread,UCF,-17.5,Georgia State @ UCF,1.10,-110,-29.5,PENDING,,,SP+ gap 27.4 + 2.1 HFA; GSU allowed 454 pts in 2025
-2026,3,2026-09-19,spread,Western Kentucky,+44.5,Western Kentucky @ Indiana,1.10,-110,-32.6,PENDING,,,book 11.9 past model; WKU/IU both 0-2 ATS 2026
-2026,3,2026-09-19,spread,Texas Tech,-7.5,Houston @ Texas Tech,1.10,-110,-18.2,PENDING,,,SP+ gap 14.9 + 3.3 HFA; TTU 0-2 ATS 2026 (107th)
-2026,3,2026-09-19,spread,Clemson,-3.0,North Carolina @ Clemson,1.10,-110,-11.5,PENDING,,,SP+ gap 9.0 + 2.5 HFA; UNC OL returns 1126 snaps (135th)
-2026,3,2026-09-19,spread,Nevada,-3.5,Nevada @ Middle Tennessee,1.10,-110,+11.8,PENDING,,,SP+ gap 13.8 vs 2.0 HFA; MTSU pass block 48.3
-2026,3,2026-09-19,total,Over,48.5,East Carolina @ Old Dominion,1.10,-110,66.7,PENDING,,,both top-10 tempo; largest gap on board
-2026,3,2026-09-19,total,Under,52.5,Purdue @ UCLA,1.10,-110,40.7,PENDING,,,tempo rk 125/101; UCLA off grade 65.6
-2026,3,2026-09-19,total,Over,49.5,Florida State @ Alabama,1.10,-110,58.8,PENDING,,,FSU tempo rk 9; both off grades 83+
-2026,3,2026-09-19,total,Under,52.5,Charlotte @ Appalachian State,1.10,-110,43.5,PENDING,,,Charlotte tempo rk 132; App St def 82.5
-2026,3,2026-09-19,total,Under,55.25,UAB @ Louisiana,1.10,-110,47.8,PENDING,,,UAB def grade 55.0 is the risk
+2026,3,2026-09-19,spread,UCF,-17.5,Georgia State @ UCF,1.10,-110,-29.3,PENDING,,,2026 SP+ 5.6 (53rd) vs -21.6 (134th); GSU 2-0 vs weak slate
+2026,3,2026-09-19,spread,Nevada,-3.5,Nevada @ Middle Tennessee,1.10,-110,+11.7,PENDING,,,MTSU 0 sacks / 15 pressures in 2 gm; Kelley 8.4 ypc
+2026,3,2026-09-19,spread,South Carolina,-3.5,Mississippi State @ South Carolina,1.10,-110,-9.7,PENDING,,,SC def 10th SR vs MSU 38th; both 2-0
+2026,3,2026-09-19,spread,Louisiana,-7.5,UAB @ Louisiana,1.10,-110,-13.3,PENDING,,,UAB OL 7.5% pressure rate (4th worst FBS); def 131st SR
+2026,3,2026-09-19,spread,Louisiana Tech,+20.0,Louisiana Tech @ Baylor,1.10,-110,-14.9,PENDING,,,LT 2nd in explosiveness + 6th havoc; Baylor slowest tempo
+2026,3,2026-09-19,total,Over,48.0,Colorado @ Northwestern,1.10,-110,57.1,PENDING,,,NW 100th SR allowed + 16 pressures; Lewis 9.8 ypa
+2026,3,2026-09-19,total,Under,62.5,North Texas @ Texas State,1.10,-110,53.4,PENDING,,,TSU 120th finishing drives; both offenses bottom-third
+2026,3,2026-09-19,total,Over,55.5,Miami @ Wake Forest,1.10,-110,64.2,PENDING,,,Miami 1st SR; WF 132nd SR allowed; both 2-0 to the over
+2026,3,2026-09-19,total,Over,53.5,Virginia Tech @ Maryland,1.10,-110,62.1,PENDING,,,MD 8th SR but 125th finishing drives allowed; 0 INTs both QBs
+2026,3,2026-09-19,total,Over,53.5,Florida @ Auburn,1.10,-110,61.8,PENDING,,,FLA 1st in pts per opportunity; AUB 3rd fastest tempo
 2026,3,2026-09-19,prop,Lawayne McCoy Over rec yds,37.5,SMU @ Louisville,1.15,-115,69.9,PENDING,,,82.0 yds/gm 2026; 25 rts/gm; PFF 76.0
 2026,3,2026-09-19,prop,Jeremiah Koger Over rec yds,37.5,Florida @ Auburn,1.15,-115,60.4,PENDING,,,61.5 yds/gm; 6.0 tgt/gm; 5 books
 2026,3,2026-09-19,prop,Omarion Miller Over receptions,5.5,Kansas @ Arizona State,1.15,-115,8.3,PENDING,,,8.5 rec/gm on 12.0 tgt/gm 2026; 3 books

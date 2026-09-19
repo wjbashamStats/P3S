@@ -209,6 +209,55 @@ def _competition_rank(pairs):
     return out
 
 
+SHRINK_GAMES = 4.0
+
+
+def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
+    """Regress each team's Team Total toward the slate's own mean, weighted by
+    games played: w = n / (n + k), total = w * team + (1 - w) * mean.
+
+    The Team Total column is each team's own points per game, and on the 2026
+    workbook that is two or three games deep. Un-regressed it is not a rating,
+    it is a schedule artifact: through week 2 it had Mississippi State at 45.9
+    and South Carolina at 41.2, so their game projected 87.1 against a book
+    total of 58.5, a 28.6-point "edge" that is really just two teams who have
+    played nobody yet. The same column on the frozen 2025 file had the opposite
+    problem, describing a season that is over.
+
+    This is the same shrinkage project.blend_prior_and_current already applies
+    to player rates, with the league mean standing in for the prior instead of
+    last season, so it stays inside the current season. k = 4 games puts a
+    2-0 team at one third its own number and two thirds the field's, and the
+    weight climbs on its own as the season fills in; by November a team carries
+    its own scoring almost entirely.
+
+    Games come from the TeamRankings win-trends record (W + L + T). A team with
+    no record parsed keeps its raw number and is reported.
+    """
+    totals = [_f(r.get("Team Total"), None) for r in ratings_raw.values()]
+    totals = [t for t in totals if t is not None]
+    if not totals:
+        return
+    mean = sum(totals) / len(totals)
+    shrunk, no_games = 0, []
+    for r in ratings_raw.values():
+        own = _f(r.get("Team Total"), None)
+        if own is None:
+            continue
+        n = sum(_f(r.get(c), 0.0) for c in ("TR_win_win_loss_record_W",
+                                            "TR_win_win_loss_record_L",
+                                            "TR_win_win_loss_record_T"))
+        if not n:
+            no_games.append(r.get("Team"))
+            continue
+        w = n / (n + k)
+        r["Team Total"] = w * own + (1.0 - w) * mean
+        shrunk += 1
+    log(f"[shrink] team totals toward the slate mean {mean:.1f} (k={k:.0f} games): "
+        f"{shrunk} teams"
+        + (f"; no record, left raw: {', '.join(no_games)}" if no_games else ""))
+
+
 def load_tr_trends(trends_dir, ratings_raw, log=print):
     """Current-season ATS / over-under records from the saved TeamRankings
     pages, keyed the same norm(Team+Mascot) way as ratings_raw.
@@ -558,11 +607,16 @@ def total_reason(home_team, away_team, book_total, pred_total, total_diff,
 
 def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
           pff_crosswalk_path, season_totals_path, team_grades_path, team_map_path, date_start, date_end,
-          trends_dir=DEFAULT_TRENDS_DIR):
+          trends_dir=DEFAULT_TRENDS_DIR, shrink_totals=True):
     ratings_raw = load_ratings_raw(ratings_path)
     team_avg = {t["team"]: t for t in json.load(open(team_averages_path))["teams"]}
     net_rp_rank = rank_by_value(ratings_raw, "NetRP")
     tr_trends = load_tr_trends(trends_dir, ratings_raw)
+    if shrink_totals:
+        for key, cols in tr_trends.items():
+            ratings_raw[key].update({c: v for c, v in cols.items()
+                                     if c.startswith('TR_win_win_loss_record')})
+        shrink_team_totals(ratings_raw)
 
     depth_rows_by_team = load_depth_rows_by_team(depth_chart_path)
     starter_rows_by_team = load_starter_depth_rows_by_team(depth_chart_path)
@@ -670,12 +724,17 @@ def main():
                     help="directory holding the saved TeamRankings trends pages "
                          "(ats_trends.html / ou_trends.html); the power table falls "
                          "back to team_ratings' 2022 ATS/Over columns without them")
+    ap.add_argument("--no-shrink-totals", action="store_true",
+                    help="use each team's raw points-per-game in the predicted total "
+                         "instead of regressing it toward the slate mean by games played "
+                         "(see shrink_team_totals)")
     ap.add_argument("--out", default="diversions_2026wk1.json")
     args = ap.parse_args()
 
     games = build(args.game_lines, args.team_ratings, args.team_averages, args.depth_chart,
                   args.pff_crosswalk, args.season_totals, args.team_grades, args.team_map,
-                  args.date_start, args.date_end, args.trends_dir)
+                  args.date_start, args.date_end, args.trends_dir,
+                  shrink_totals=not args.no_shrink_totals)
     n_full = sum(1 for g in games if g["pred_spread"] is not None)
     n_grades = sum(1 for g in games if g.get("home_grades") or g.get("away_grades"))
     payload = dict(week=args.week, season=args.season, date_start=args.date_start,
