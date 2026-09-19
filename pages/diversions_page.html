@@ -184,6 +184,7 @@
   .dt-table tbody tr:nth-child(even) td { background: var(--surface-2); }
   .dt-table tbody tr:hover td { filter: brightness(0.97); }
   .dt-table td.fill-cell { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pt-record { color: var(--text-dim); font-weight: 400; font-size: 11px; }
   .power-table-head { padding: 9px 12px; background: var(--surface-2); border-bottom: 2px solid var(--line); font-weight: 700; font-size: 13px; }
 
   .power-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -524,13 +525,22 @@
     return `background:${hex}`;
   }
 
+  // ATS / Over cells carry the record alongside the percentage when we have
+  // it: three games in, "100% (2-0-0)" is honest about the sample in a way a
+  // bare "100%" is not.
+  function pctWithRecord(pct, record) {
+    if (pct === null || pct === undefined) return '—';
+    const shown = (pct * 100).toFixed(0) + '%';
+    return record ? `${shown} <span class="pt-record">(${record})</span>` : shown;
+  }
+
   function powerTableHTML(team, p) {
     const rows = [
       ['TAN Power Rating', p.tan.toFixed(1), p.tan_rank],
       ['SP+', p.sp.toFixed(1), p.sp_rank],
       ['Net RP', p.net_rp.toFixed(1), p.net_rp_rank],
-      ['2022 ATS W/L%', p.ats_pct !== null ? (p.ats_pct * 100).toFixed(0) + '%' : '—', p.ats_rank],
-      ['2022 Over W/L%', p.over_pct !== null ? (p.over_pct * 100).toFixed(0) + '%' : '—', p.over_rank],
+      [p.ats_label || 'ATS W/L%', pctWithRecord(p.ats_pct, p.ats_record), p.ats_rank],
+      [p.over_label || 'Over W/L%', pctWithRecord(p.over_pct, p.over_record), p.over_rank],
       ['Seconds/Play', p.seconds_per_play.toFixed(1), p.tempo_rank],
     ];
     return `<div class="dt-table">

@@ -100,13 +100,21 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    legitimately at both C and OT. Clean before name joins.
 4. **Delaware players** show 0'0"/0 size (PFF incomplete data) — cosmetic.
 5. **player_id is the reliable join key** across PFF files; names collide.
-6. **ATS and over/under records in the power table are 2022, not last season.**
-   The source columns are literally `X2022_ATS_Percent` / `X2022_OU_Percent`
-   (plus their rank columns) in team_ratings_2025.csv, and the Line Diversions
-   page labels them honestly as "2022 ATS W/L%". Everything else in that table
-   -- SP+, TAN, Net RP, seconds/play -- and all the PFF grades and PF/PA are
-   2025. Easy to misread a 2022 cover rate as a current one when writing about
-   a game; it is background, not a live signal.
+6. **ATS and over/under records in the power table are current-season now,
+   but only because the TeamRankings pages are saved.** They used to come from
+   `X2022_ATS_Percent` / `X2022_OU_Percent` in team_ratings_2025.csv, which
+   despite that file's name really are the 2022 season -- a 2026 betting page
+   quoting 2022 cover rates, which did mislead a week-3 write-up before it was
+   caught. build_diversions_page_data now reads actionnet/input/trends
+   (ats_trends.html / ou_trends.html, parsed by actionnet/teamrankings.py),
+   ranks the percentages itself since those pages carry no rank column, and
+   falls back to the 2022 columns when the pages are missing. The row relabels
+   itself either way, so the page always says which vintage it is showing --
+   check that label before quoting the number. Note the current-season sample
+   is tiny in September (a 2-0 team shows as 100%, first nationally, tied with
+   45 others), which is why the page prints the record next to the percentage.
+   build_team_preview_data.py still reads the 2022 columns; nothing renders
+   them today, but it would need the same treatment if that page comes back.
 7. **Home-field edge is applied unconditionally, including at neutral sites.**
    build_diversions_page_data adds each team's HFACW to the home side of every
    game, and the Odds API feed names one team "home" even for a neutral-site
