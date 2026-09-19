@@ -21,11 +21,11 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,3,2026-09-19,spread,Louisiana Tech,+20.0,Louisiana Tech @ Baylor,1.10,-110,-14.9,PENDING,,,LT 2nd in explosiveness + 6th havoc; Baylor slowest tempo
 2026,3,2026-09-19,total,Over,48.0,Colorado @ Northwestern,1.10,-110,57.1,PENDING,,,NW 100th SR allowed + 16 pressures; Lewis 9.8 ypa
 2026,3,2026-09-19,total,Under,62.5,North Texas @ Texas State,1.10,-110,53.4,PENDING,,,TSU 120th finishing drives; both offenses bottom-third
-2026,3,2026-09-19,total,Over,55.5,Miami @ Wake Forest,1.10,-110,64.2,PENDING,,,Miami 1st SR; WF 132nd SR allowed; both 2-0 to the over
 2026,3,2026-09-19,total,Over,53.5,Virginia Tech @ Maryland,1.10,-110,62.1,PENDING,,,MD 8th SR but 125th finishing drives allowed; 0 INTs both QBs
+2026,3,2026-09-19,total,Over,45.5,New Mexico @ Oklahoma,1.10,-110,53.8,PENDING,,,both offenses converting opportunities; two slow strong defenses is the risk
 2026,3,2026-09-19,total,Over,53.5,Florida @ Auburn,1.10,-110,61.8,PENDING,,,FLA 1st in pts per opportunity; AUB 3rd fastest tempo
-2026,3,2026-09-19,prop,Lawayne McCoy Over rec yds,37.5,SMU @ Louisville,1.15,-115,69.9,PENDING,,,82.0 yds/gm 2026; 25 rts/gm; PFF 76.0
-2026,3,2026-09-19,prop,Jeremiah Koger Over rec yds,37.5,Florida @ Auburn,1.15,-115,60.4,PENDING,,,61.5 yds/gm; 6.0 tgt/gm; 5 books
-2026,3,2026-09-19,prop,Omarion Miller Over receptions,5.5,Kansas @ Arizona State,1.15,-115,8.3,PENDING,,,8.5 rec/gm on 12.0 tgt/gm 2026; 3 books
-2026,3,2026-09-19,prop,Micah Welch Over rush yds,39.5,Colorado @ Northwestern,1.15,-115,56.9,PENDING,,,82.0 yds/gm on 13 att/gm; PFF 84.0
-2026,3,2026-09-19,prop,Nic Anderson Under rec yds,20.5,Kentucky @ Texas A&M,1.15,-115,8.2,PENDING,,,24 rts/gm but 0.35 yprr; KY implied 16.6
+2026,3,2026-09-19,prop,Noah Kim Over pass yds,130.5,Eastern Michigan @ Wisconsin,1.15,-115,227.5,PENDING,,,192.0 yds/gm on 36 att/gm; 5.3 ypa but volume clears it
+2026,3,2026-09-19,prop,Micah Hudson Under receptions,2.5,Houston @ Texas Tech,1.15,-115,1.1,PENDING,,,26 rts/gm but 3.0 tgt/gm; 4th on team at 10.2% share
+2026,3,2026-09-19,prop,Keshaun Singleton Over rec yds,44.5,Florida @ Auburn,1.15,-115,67.8,PENDING,,,65.5 yds/gm on 8.0 tgt/gm; team-leading 23.5% share; 5 books
+2026,3,2026-09-19,prop,Kenny Johnson Over receptions,3.5,Houston @ Texas Tech,1.15,-115,5.3,PENDING,,,4.5 rec/gm on 6.0 tgt/gm at 75% catch rate
+2026,3,2026-09-19,prop,George Pettaway Under rush yds,70.5,James Madison @ San Diego State,1.15,-115,34.6,PENDING,,,43.5 yds/gm at 3.6 ypc; Herman 12.4 ypc taking work

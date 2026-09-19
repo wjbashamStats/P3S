@@ -83,7 +83,8 @@ slate; pass --date-start/--date-end to point at a different week.
 
 Run:  python3 build_diversions_page_data.py --out diversions_2026wk1.json
 """
-import argparse, csv, json, os, sys
+import argparse, csv, datetime, json, os, sys
+import config as C
 import data_load as DL
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "actionnet"))
@@ -605,9 +606,25 @@ def total_reason(home_team, away_team, book_total, pred_total, total_diff,
     return " ".join(parts)
 
 
+def _started(commence_time, now=None):
+    """True once kickoff has passed. The date window is a whole weekend, so on a
+    Saturday morning the board still carries Thursday and Friday night's games:
+    week 3 2026 had Miami at Wake Forest sitting on the board with an 8.7-point
+    total "edge" in a game that had already been played. Stamped on every game
+    rather than filtered out, so the board can still show them; --drop-started
+    removes them for pick selection."""
+    if not commence_time:
+        return False
+    try:
+        t = datetime.datetime.fromisoformat(str(commence_time).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return t < (now or datetime.datetime.now(datetime.timezone.utc))
+
+
 def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
           pff_crosswalk_path, season_totals_path, team_grades_path, team_map_path, date_start, date_end,
-          trends_dir=DEFAULT_TRENDS_DIR, shrink_totals=True):
+          trends_dir=DEFAULT_TRENDS_DIR, shrink_totals=True, drop_started=False):
     ratings_raw = load_ratings_raw(ratings_path)
     team_avg = {t["team"]: t for t in json.load(open(team_averages_path))["teams"]}
     net_rp_rank = rank_by_value(ratings_raw, "NetRP")
@@ -690,6 +707,7 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                                             sp_h, sp_a, hfa, home_adj, away_adj),
                 total_reason=total_reason(home_team, away_team, book_total, pred_total, total_diff,
                                           home_avg, away_avg, total_floored),
+                started=_started(ct),
                 home_display=rh.get("Team", home_team), away_display=ra.get("Team", away_team),
                 five_factors=five_factors(rh, ra),
                 home_power=power_table_entry(rh, net_rp_rank.get(home_key), tr_trends.get(home_key)),
@@ -701,6 +719,11 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                 starter_matchups=build_starter_matchups(starter_rows_by_team, home_team, away_team, pff_by_pkey),
             )
         out.append(row)
+
+    if drop_started:
+        n = len(out)
+        out = [r for r in out if not r.get("started")]
+        print(f"[drop] {n - len(out)} game(s) whose kickoff has already passed")
 
     out.sort(key=lambda r: -(abs(r["spread_diff"] or 0) + abs(r["total_diff"] or 0)))
     return out
@@ -714,7 +737,9 @@ def main():
     ap.add_argument("--depth-chart", default="depth_charts.csv")
     ap.add_argument("--pff-crosswalk", default="master_crosswalk.csv")
     ap.add_argument("--season-totals", default="player_season_totals.csv")
-    ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--team-grades", default=None,
+                    help="PFF team-grade export; defaults to the --season file "
+                         "from config.TEAM_GRADES_BY_SEASON")
     ap.add_argument("--team-map", default="team_map.csv")
     ap.add_argument("--date-start", default="2026-09-02", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--date-end", default="2026-09-07", help="inclusive, YYYY-MM-DD")
@@ -724,17 +749,22 @@ def main():
                     help="directory holding the saved TeamRankings trends pages "
                          "(ats_trends.html / ou_trends.html); the power table falls "
                          "back to team_ratings' 2022 ATS/Over columns without them")
+    ap.add_argument("--drop-started", action="store_true",
+                    help="leave out games whose kickoff has already passed; every game "
+                         "carries a 'started' flag either way")
     ap.add_argument("--no-shrink-totals", action="store_true",
                     help="use each team's raw points-per-game in the predicted total "
                          "instead of regressing it toward the slate mean by games played "
                          "(see shrink_team_totals)")
     ap.add_argument("--out", default="diversions_2026wk1.json")
     args = ap.parse_args()
+    if args.team_grades is None:
+        args.team_grades = C.team_grades_for(args.season)
 
     games = build(args.game_lines, args.team_ratings, args.team_averages, args.depth_chart,
                   args.pff_crosswalk, args.season_totals, args.team_grades, args.team_map,
                   args.date_start, args.date_end, args.trends_dir,
-                  shrink_totals=not args.no_shrink_totals)
+                  shrink_totals=not args.no_shrink_totals, drop_started=args.drop_started)
     n_full = sum(1 for g in games if g["pred_spread"] is not None)
     n_grades = sum(1 for g in games if g.get("home_grades") or g.get("away_grades"))
     payload = dict(week=args.week, season=args.season, date_start=args.date_start,

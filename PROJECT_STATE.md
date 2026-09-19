@@ -146,7 +146,21 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    mascot and reports it; build_team_ratings_2026.py fills the blank from the old
    snapshot. Fix it in the workbook; nine other teams have no derivable mascot at
    all and are filled the same way.
-10. **Home-field edge is applied unconditionally, including at neutral sites.**
+10. **The date window is a weekend, so the board can carry games already played.**
+    build_diversions_page_data filters on a date range, and on a Saturday morning
+    that range still contains Thursday and Friday night. Week 3 2026 had Miami at
+    Wake Forest on the board with an 8.7-point total "edge" in a game that had
+    kicked off the night before, and it was picked before a web search caught it.
+    Every game now carries a `started` flag; --drop-started removes them, and pick
+    selection should always use it.
+11. **PFF team grades are a per-season export.** team_pff_grades_<season>.csv,
+    picked by config.team_grades_for(season) from TEAM_GRADES_BY_SEASON. The page
+    builders take --season and resolve it; an unmapped season falls back to 2025
+    so the backtest keeps reading what it was validated on. The 2026 file came
+    from premium.pff.com/ncaa/teams/2026/REGPO -- note the page renders its table
+    from an API call after load, so saving the HTML gets nothing; copy the table
+    itself. Rank is computed here (grade_over descending), not taken from the page.
+12. **Home-field edge is applied unconditionally, including at neutral sites.**
    build_diversions_page_data adds each team's HFACW to the home side of every
    game, and the Odds API feed names one team "home" even for a neutral-site
    game. Week 3 2026 has Kansas vs Arizona State at Wembley Stadium in London:
