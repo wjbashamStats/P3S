@@ -116,13 +116,18 @@ def build(week, lines_path, ratings_path, grades_path, season=2025, depth_chart_
     # current_team_by_pkey also drives each surviving player's displayed
     # team/matchup below: player_season_totals.csv's own "team" column is
     # last year's team, so a transfer (e.g. Byrum Brown, South Florida ->
-    # Auburn) was showing his old team, old opponent, and old game context
-    # -- master_crosswalk.csv is the source of truth for "team this year".
+    # Auburn) was showing his old team, old opponent, and old game context.
+    # This season's own totals file is the best answer for "team this year"
+    # and master_crosswalk.csv, a preseason build, is the fallback.
     # Skill-position-only (see load_pff_skill_by_pkey) to avoid a same-name
     # collision with an unrelated player at another position -- found for
     # real: a defensive back "Jordan Allen" at Houston was overriding a
     # Georgia Tech WR of the same name.
+    # This season's own totals file first, then the preseason crosswalk --
+    # same precedence and same reason as backtest.py's canon_tkey chain (see
+    # data_load.current_team_by_player).
     current_team_by_pkey = {pkey: p["team_cfbd"] for pkey, p in DL.load_pff_skill_by_pkey(pff2c).items()}
+    current_team_by_pkey.update(DL.current_team_by_player(season, pff2c))
     current_roster = set(depth_chart) | set(current_team_by_pkey)
 
     # Universe of "known real teams" for matchup_for_tkey's game-line

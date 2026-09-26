@@ -169,9 +169,11 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         source = None
         prior_rec = None
         n_cur_games = None
+        # Hoisted out of the use_prior_year branch below: the team resolution
+        # further down wants this record's team even when it is not blending.
+        cur_rec = cur_totals.get(tot.get("player_id")) if cur_season_has_totals_file else None
         if use_prior_year:
             prior_rec = prior.get(tot.get("player_id"))
-            cur_rec = cur_totals.get(tot.get("player_id")) if cur_season_has_totals_file else None
             if cur_rec is not None:
                 # Season-to-date totals file (2026). No week gate here:
                 # PRIOR_ONLY_UNTIL_WEEK exists because weeks 1-3 have no
@@ -216,7 +218,13 @@ def build_projections(week, use_prior_year=False, lines_by_week=None, team_ratin
         # total against an FCS opponent. The ourlads depth chart is the
         # second current-season source; fall through to the stale team only
         # when neither knows him.
-        canon_tkey = current_tkey_by_pkey.get(pkey)
+        # This season's own box scores come first: a transfer appears on his
+        # new team the week he first plays, where the crosswalk is a preseason
+        # file and the depth chart is only loaded when a caller asks for it.
+        # See data_load.current_team_by_player for what a miss here costs.
+        canon_tkey = (DL.resolve_tkey(cur_rec.get("team"), pff2c)
+                      if cur_rec and cur_rec.get("team") else None)
+        canon_tkey = canon_tkey or current_tkey_by_pkey.get(pkey)
         if not canon_tkey and depth_chart:
             canon_tkey = DL.resolve_depth_chart_team(
                 (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys)

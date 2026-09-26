@@ -288,8 +288,27 @@ DEPTH_RANK_MULT_DEFAULT = 0.45  # 5th string or below
 # +26.9 -> +6.3) without yet trading it for a new systematic undershoot.
 TOTAL_ADJ_CLAMP = (0.75, 1.35)
 
-# Minimum prior-year volume to project a player at all (filters noise).
+# Minimum volume to project a player at all (filters noise). These are
+# FULL-SEASON totals: 100 pass attempts is a season's worth of starting, not
+# a week's.
 MIN_PRIOR_VOLUME = dict(pass_att=100, rush_att=30, targets=20)
+# The season length those totals assume, and the floor below which a sample
+# is too short to trust as a rate.
+#
+# The floor was written when the only source was a completed prior year, so
+# comparing a season total against it was the same as comparing a rate. Once
+# the blend started carrying current-season-only players
+# (CURRENT_TOTALS_BY_SEASON), that stopped being true: a 2026 first-year
+# starter's whole sample is three games, and 100 attempts is unreachable in
+# three games for anyone short of 33 a game. Week 4 2026 was the first week
+# this bit -- eight of the fourteen-game main slate's starting quarterbacks
+# had no projection at all, Alabama's and Tennessee's among them, each with
+# 60-95 real attempts on the season. project.project_player_market therefore
+# prorates the floor to the games actually on hand, but only from
+# MIN_RATE_FLOOR_GAMES up: a one-game sample stays held to the full-season
+# number, which is what keeps a 16-carry cameo out.
+FLOOR_SEASON_GAMES = 12.0
+MIN_RATE_FLOOR_GAMES = 2
 
 # Edge thresholds for flagging (in the stat's own units).
 EDGE_FLAG = dict(pass_yds=20, rush_yds=12, rec_yds=12,

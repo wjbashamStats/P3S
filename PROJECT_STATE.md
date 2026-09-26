@@ -179,6 +179,54 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    neutral-site game is off by roughly one HFA, and the "home"/"away" labels
    on it may be backwards. No flag for this exists in the data; check the
    venue by hand before betting a neutral-site diversion.
+13. **The volume floor is a season total, and is prorated to the sample on
+   hand.** config.MIN_PRIOR_VOLUME (100 pass attempts / 30 carries / 20
+   targets) was written when the only source was a completed prior year, so
+   comparing a season total against it was the same as comparing a rate. Once
+   the blend started carrying current-season-only players it stopped being
+   true, and week 4 2026 was the week it bit: a first-year starter's whole
+   sample is three games and nobody reaches 100 attempts in three games
+   without throwing 33 a game, so eight of the fourteen-game FanDuel slate's
+   starting quarterbacks had no projection at all -- Alabama's, Tennessee's,
+   Florida's, Louisville's among them -- and the DFS pool could not field a
+   quarterback for those teams. project.project_player_market now scales the
+   floor by games/config.FLOOR_SEASON_GAMES, from
+   config.MIN_RATE_FLOOR_GAMES (2) games up; a one-game sample stays held to
+   the full season number, which is what keeps a 16-carry cameo out. Never
+   scaled up, so a player carrying a prior year plus this one is unchanged.
+   Effect on week 4: +98 prop market rows, 0 lost, and every pre-existing
+   projection identical. test_volume_floor.py pins both halves.
+14. **A player's team comes from this season's box scores first, not the
+   preseason crosswalk.** master_crosswalk.csv is built before the season and
+   has real gaps for transfers; the ourlads depth chart is only loaded when a
+   caller passes --depth-chart, which none of the live page builds do. So the
+   resolution chain was falling through to last year's school for 30 of 367
+   week-4 prop rows, and a stale team is not a cosmetic label -- opponent,
+   implied team total and the PFF matchup grades all key off it. Michael
+   Hawkins Jr. was carrying Oklahoma's implied total against Georgia while
+   actually starting for West Virginia against Oklahoma State, and Alberto
+   Mendoza was back on Indiana's number, the case a backtest.py comment says
+   was already fixed. data_load.current_team_by_player reads the weekly PFF
+   drop (a transfer appears on his new team the first week he plays) and now
+   sits at the front of the chain in backtest.py, build_props_page_data,
+   build_dfs_page_data and build_impact_page_data. Watch the position
+   spelling: that file says HB where the crosswalk says RB, and a set missing
+   HB silently drops every running back (see
+   data_load.TOTALS_SKILL_POSITIONS). Three week-4 rows flipped from a
+   positive edge to a negative one once on the right team (Damari Alston
+   +19.6% -> -29.8%, Gi'Bran Payne +11.6% -> -37.9%, Horatio Fields +1.9% ->
+   -5.4%) -- those edges were artifacts of the wrong team's game context.
+15. **The page-data JSONs cannot be rebuilt from a fresh clone.**
+   player_season_totals.csv, player_current_totals.csv, player_prior_totals.csv
+   and player_game_logs.csv are all gitignored -- they are generated locally by
+   build_player_tables.py from the PFF drops. A committed props/dfs/impact
+   JSON therefore records a state of those files that may no longer exist.
+   Already bitten once: impact_2026wk4.json was committed with 1,169 cards and
+   any rebuild gives 1,035, because it was built before that turn's final
+   build_player_tables run. The rebuild is the correct one -- all 134 missing
+   players have no 2026 PFF record and only 3 are on the depth chart, which is
+   exactly what the roster filter is for. If a JSON needs to be reproducible,
+   the tables it was built from have to be committed alongside it.
 
 ---
 

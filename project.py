@@ -575,14 +575,30 @@ def project_player_market(tot, logs, rates_shrunk, market_key, mdef,
     vol_col = mdef["volume"]
     total_vol = tot.get(vol_col)
 
-    # volume floor: skip players without enough prior sample for this side
-    # -- skipped when a volume override was already supplied (team_share_
-    # volume or starter_share_volume), since the whole point of an override
-    # is replacing this player's own noisy count with a team-level estimate;
-    # the floor exists to guard against THAT noise, which no longer applies.
+    # volume floor: skip players without enough sample for this side -- and
+    # skipped entirely when a volume override was already supplied
+    # (team_share_volume or starter_share_volume), since the whole point of
+    # an override is replacing this player's own noisy count with a
+    # team-level estimate; the floor exists to guard against THAT noise,
+    # which no longer applies.
+    #
+    # config.MIN_PRIOR_VOLUME is a FULL-SEASON total, so it only reads as a
+    # rate when `games` is a full season. It no longer always is: the blend
+    # hands this function current-season-only players whose whole record is
+    # a few games (see config.FLOOR_SEASON_GAMES for the week-4 2026 case
+    # that surfaced it). Prorate the floor to the sample on hand so the bar
+    # stays the same per-game bar, holding a sample under
+    # MIN_RATE_FLOOR_GAMES to the unprorated season number -- one big game
+    # is not a rate, and that is the case the floor is genuinely for. Never
+    # scale UP: a player carrying a prior year plus this one is past a full
+    # season of games and keeps the original floor.
     if per_game_vol_override is None:
+        if total_vol is None:
+            return None
         min_vol = C.MIN_PRIOR_VOLUME.get(vol_col)
-        if total_vol is None or (min_vol and total_vol < min_vol):
+        if min_vol and C.MIN_RATE_FLOOR_GAMES <= games < C.FLOOR_SEASON_GAMES:
+            min_vol *= games / C.FLOOR_SEASON_GAMES
+        if min_vol and total_vol < min_vol:
             return None
 
     base_vol = per_game_vol_override if per_game_vol_override is not None else (total_vol / games)

@@ -192,6 +192,7 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
     # back "Jordan Allen" at Houston was overriding a Georgia Tech WR of
     # the same name.
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
+    cur_team_by_pkey = DL.current_team_by_player(season, pff2c)
     depth_chart = DL.load_depth_chart(depth_chart_path) if depth_chart_path else {}
     canonical_tkeys = {p["tkey"] for p in pff_by_pkey.values()}
     team_display_by_tkey = {p["tkey"]: p["team_cfbd"] for p in pff_by_pkey.values()}
@@ -287,13 +288,13 @@ def build(week, props_path, lines_path, ratings_path, grades_path, season=2025, 
 
         raw_name, raw_team = raw_by_key.get((pkey, tkey), ("", ""))
         stats_team = pff2c.get(norm(raw_team), raw_team)
-        # Display team: prefer the crosswalk's (current/2026) team when we
-        # have one, since that's where this player actually is now; then the
-        # current-season depth chart, which covers transfers the crosswalk
-        # misses (Kenny Minchey was showing Notre Dame while starting for
-        # Kentucky, Austin Simmons showing Ole Miss while at Missouri); fall
-        # back to the 2025 team their stats below were earned on.
-        display_team = grades.get("team_cfbd")
+        # Display team: this season's own box scores first -- they are the
+        # most current statement of where a player is, and the crosswalk is a
+        # preseason build that misses transfers (Kenny Minchey was showing
+        # Notre Dame while starting for Kentucky, Austin Simmons showing Ole
+        # Miss while at Missouri). Then the crosswalk, then the current-season
+        # depth chart, then the 2025 team their stats below were earned on.
+        display_team = cur_team_by_pkey.get(pkey) or grades.get("team_cfbd")
         if not display_team:
             dc_tkey = DL.resolve_depth_chart_team(
                 (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys)

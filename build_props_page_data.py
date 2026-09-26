@@ -60,13 +60,21 @@ def build_week(week, props_path, lines_path, ratings_path, grades_path, season=2
     pff_by_pkey = DL.load_pff_skill_by_pkey(pff2c)
     canonical_tkeys = {p["tkey"] for p in pff_by_pkey.values()}
     team_display_by_tkey = {p["tkey"]: p["team_cfbd"] for p in pff_by_pkey.values()}
+    # This season's own box scores, ahead of the preseason crosswalk -- the
+    # label has to agree with the team the projection was built against (see
+    # data_load.current_team_by_player), or the page reads "Aaron Philo,
+    # Georgia Tech" inside Ole Miss at Florida.
+    cur_team_by_pkey = DL.current_team_by_player(season, pff2c)
 
     def resolve_player_team_position(pkey):
         r = totals_by_pkey.get(pkey)
         p = pff_by_pkey.get(pkey)
+        cur_team = cur_team_by_pkey.get(pkey)
         dc_tkey = DL.resolve_depth_chart_team(
             (depth_chart.get(pkey) or {}).get("raw_team"), canonical_tkeys) if depth_chart else None
-        if p is not None:
+        if cur_team:
+            tkey, team_cfbd = norm(cur_team), cur_team
+        elif p is not None:
             tkey, team_cfbd = p["tkey"], p["team_cfbd"]
         elif dc_tkey:
             # crosswalk gap, but the current-season depth chart knows him --

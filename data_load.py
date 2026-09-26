@@ -75,6 +75,11 @@ def load_pff(pff2c):
 # downstream). No "FB" observed in the crosswalk (too rare to be graded
 # separately), included anyway for parity with SKILL_POSITIONS elsewhere.
 PFF_SKILL_POSITIONS = {"QB", "RB", "WR", "TE", "FB"}
+# The same set as PFF's crosswalk spells it in the season-totals exports,
+# which say HB where the crosswalk says RB. Both are needed: a set missing HB
+# silently drops every running back in player_current_totals.csv (659 of its
+# 2,467 rows).
+TOTALS_SKILL_POSITIONS = PFF_SKILL_POSITIONS | {"HB"}
 
 
 def load_pff_skill_by_pkey(pff2c):
@@ -254,6 +259,42 @@ def load_totals_rows(season=None):
                 continue
             rows.setdefault((norm(r.get("player", "")), norm(r.get("team", ""))), r)
     return rows
+
+
+def current_team_by_player(season=None, pff2c=None):
+    """{norm(player name): canonical team} from this season's own totals file.
+
+    The weekly PFF drop is the most current statement of who a player is
+    playing for -- it is this season's box scores, so a transfer shows up on
+    his new team the first week he plays. master_crosswalk.csv is a preseason
+    build and has real gaps for transfers, and the ourlads depth chart is only
+    consulted when a caller passes --depth-chart, which the live page builds
+    do not. That left the resolution chain falling through to last year's
+    school for 30 of 367 week-4 2026 prop rows, and a stale team is not a
+    cosmetic label: opponent, implied team total and the PFF matchup grades
+    all key off it, so Michael Hawkins Jr. was carrying Oklahoma's number
+    against Georgia while actually starting for West Virginia against
+    Oklahoma State.
+
+    Keyed by name rather than player_id because that is what the page
+    builders' pkey is. Name collisions resolve first-wins, same convention as
+    load_totals_by_pkey, and non-skill rows are dropped for the same reason
+    load_pff_skill_by_pkey drops them: the file carries a couple dozen
+    punters and defenders who happened to touch the ball, and a name-only
+    key lets one of those override the skill player it collides with. Note
+    this file says HB where the crosswalk says RB -- see
+    TOTALS_SKILL_POSITIONS.
+    """
+    path = C.CURRENT_TOTALS_BY_SEASON.get(season)
+    out = {}
+    if not path or not os.path.exists(path):
+        return out
+    for r in csv.DictReader(open(path)):
+        name, team = r.get("player"), r.get("team")
+        if not name or not team or r.get("position") not in TOTALS_SKILL_POSITIONS:
+            continue
+        out.setdefault(norm(name), pff2c.get(norm(team), team) if pff2c else team)
+    return out
 
 
 def load_totals_by_pkey(season=None):

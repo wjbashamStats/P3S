@@ -721,6 +721,75 @@
      }
     },
     {
+     "name": "Tait Reynolds",
+     "team": "Clemson",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 218.5,
+       "projection": 112.6,
+       "edge_pct": -48.5,
+       "over_price": -115.0,
+       "under_price": -115.0,
+       "n_books": "6",
+       "components": {
+        "volume": 21.86,
+        "efficiency": 7.039,
+        "opp_adj": 0.732
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.025,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -2.5,
+        "opponent": "california",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.579,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0156,
+        "expected_td": 0.342
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 31.5,
+       "projection": 47.1,
+       "edge_pct": 49.5,
+       "over_price": -115.0,
+       "under_price": -112.0,
+       "n_books": "2",
+       "components": {
+        "volume": 8.66,
+        "efficiency": 4.701,
+        "opp_adj": 1.157
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.129,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -2.5,
+        "opponent": "california",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.129,
+        "matchup_grade_adj": 1.025,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "Tyler Brown",
      "team": "Clemson",
      "position": "WR",
@@ -907,6 +976,37 @@
         "tarp_adj": null,
         "td_rate": 0.0179,
         "expected_td": 0.558
+       }
+      },
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 8.5,
+       "projection": 16.6,
+       "edge_pct": 95.3,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.4,
+        "efficiency": 6.854,
+        "opp_adj": 1.009
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.202,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -9.5,
+        "opponent": "colorado",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.009,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -1114,6 +1214,75 @@
         "tarp_adj": null,
         "td_rate": 0.0587,
         "expected_td": 0.312
+       }
+      }
+     }
+    },
+    {
+     "name": "Dekalon Taylor",
+     "team": "Colorado",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 30.5,
+       "projection": 15.0,
+       "edge_pct": -50.8,
+       "over_price": -118.0,
+       "under_price": -111.5,
+       "n_books": "3",
+       "components": {
+        "volume": 2.3,
+        "efficiency": 4.82,
+        "opp_adj": 1.351
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.555,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 23.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 9.5,
+        "opponent": "baylor",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.732,
+        "matchup_grade_adj": 0.749,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 16.2,
+       "edge_pct": 54.3,
+       "over_price": -118.0,
+       "under_price": -110.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.16,
+        "efficiency": 8.222,
+        "opp_adj": 0.911
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.89,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 23.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 9.5,
+        "opponent": "baylor",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.911,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1176,
+        "expected_td": 0.254
        }
       }
      }
@@ -1441,10 +1610,110 @@
      }
     },
     {
+     "name": "Johnathan Montague Jr.",
+     "team": "Boston College",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 27.0,
+       "projection": 23.8,
+       "edge_pct": -11.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 2.41,
+        "efficiency": 9.476,
+        "opp_adj": 1.044
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.723,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "virginiatech",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.044,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 0.482
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.7,
+       "edge_pct": -32.0,
+       "over_price": 109.0,
+       "under_price": -141.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.41,
+        "efficiency": 0.68,
+        "opp_adj": 1.044
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.723,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "virginiatech",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.044,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 0.482
+       }
+      }
+     }
+    },
+    {
      "name": "Mason McKenzie",
      "team": "Boston College",
      "position": "QB",
      "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 168.0,
+       "projection": 175.3,
+       "edge_pct": 4.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 20.49,
+        "efficiency": 7.415,
+        "opp_adj": 1.153
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.723,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "virginiatech",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.153,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0353,
+        "expected_td": 0.723
+       }
+      },
       "player_rush_yds": {
        "stat": "rush_yds",
        "book_line": 46.0,
@@ -1703,6 +1972,75 @@
         "tarp_adj": null,
         "td_rate": 0.0472,
         "expected_td": 0.05
+       }
+      }
+     }
+    },
+    {
+     "name": "Brayden Trimble",
+     "team": "Illinois",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 22.5,
+       "projection": 20.2,
+       "edge_pct": -10.2,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.45,
+        "efficiency": 8.076,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 13.9,
+        "league_avg_implied": 26.4,
+        "team_spread": 26.25,
+        "opponent": "ohiostate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.805,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.9,
+       "edge_pct": -24.0,
+       "over_price": 109.0,
+       "under_price": -141.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.45,
+        "efficiency": 0.746,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 13.9,
+        "league_avg_implied": 26.4,
+        "team_spread": 26.25,
+        "opponent": "ohiostate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.805,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -2282,75 +2620,6 @@
    "commence_time": "2026-09-26T16:00:00Z",
    "players": [
     {
-     "name": "Kam Shanks",
-     "team": "Arkansas",
-     "position": "WR",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 23.5,
-       "projection": 21.2,
-       "edge_pct": -9.8,
-       "over_price": -118.0,
-       "under_price": -112.0,
-       "n_books": "3",
-       "components": {
-        "volume": 2.95,
-        "efficiency": 7.592,
-        "opp_adj": 0.947
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
-        "pace_script_adj": 1.07,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 28.8,
-        "league_avg_implied": 26.4,
-        "team_spread": -7.0,
-        "opponent": "tulsa",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.947,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.069,
-        "expected_td": 0.203
-       }
-      },
-      "player_receptions": {
-       "stat": "receptions",
-       "book_line": 1.5,
-       "projection": 1.9,
-       "edge_pct": 26.7,
-       "over_price": -175.0,
-       "under_price": 135.0,
-       "n_books": "1",
-       "components": {
-        "volume": 2.95,
-        "efficiency": 0.672,
-        "opp_adj": 0.947
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
-        "pace_script_adj": 1.07,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 28.8,
-        "league_avg_implied": 26.4,
-        "team_spread": -7.0,
-        "opponent": "tulsa",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.947,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.069,
-        "expected_td": 0.203
-       }
-      }
-     }
-    },
-    {
      "name": "Isaac Brown",
      "team": "Louisville",
      "position": "HB",
@@ -2565,6 +2834,75 @@
      }
     },
     {
+     "name": "Lincoln Kienholz",
+     "team": "Louisville",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 247.5,
+       "projection": 151.3,
+       "edge_pct": -38.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3",
+       "components": {
+        "volume": 14.76,
+        "efficiency": 9.569,
+        "opp_adj": 1.072
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 1.26,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 35.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -13.0,
+        "opponent": "wakeforest",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.675,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0801,
+        "expected_td": 1.183
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 39.5,
+       "projection": 39.5,
+       "edge_pct": 0.0,
+       "over_price": -116.5,
+       "under_price": -111.5,
+       "n_books": "2",
+       "components": {
+        "volume": 11.54,
+        "efficiency": 4.927,
+        "opp_adj": 0.695
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 1.944,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 35.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -13.0,
+        "opponent": "wakeforest",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.09,
+        "matchup_grade_adj": 1.004,
+        "tarp_adj": null,
+        "td_rate": 0.1237,
+        "expected_td": 1.428
+       }
+      }
+     }
+    },
+    {
      "name": "Tre Richardson",
      "team": "Louisville",
      "position": "WR",
@@ -2698,75 +3036,6 @@
         "tarp_adj": null,
         "td_rate": 0.0,
         "expected_td": 0.0
-       }
-      }
-     }
-    },
-    {
-     "name": "Lincoln Kienholz",
-     "team": "Ohio State",
-     "position": "QB",
-     "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 247.5,
-       "projection": 151.3,
-       "edge_pct": -38.9,
-       "over_price": -114.0,
-       "under_price": -115.0,
-       "n_books": "3",
-       "components": {
-        "volume": 14.47,
-        "efficiency": 9.569,
-        "opp_adj": 1.093
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
-        "pace_script_adj": 1.235,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 40.1,
-        "league_avg_implied": 26.4,
-        "team_spread": -26.25,
-        "opponent": "illinois",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.22,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0801,
-        "expected_td": 1.16
-       }
-      },
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 39.5,
-       "projection": 39.5,
-       "edge_pct": 0.0,
-       "over_price": -116.5,
-       "under_price": -111.5,
-       "n_books": "2",
-       "components": {
-        "volume": 13.9,
-        "efficiency": 4.927,
-        "opp_adj": 0.577
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
-        "pace_script_adj": 2.34,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 40.1,
-        "league_avg_implied": 26.4,
-        "team_spread": -26.25,
-        "opponent": "illinois",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.96,
-        "matchup_grade_adj": 1.26,
-        "tarp_adj": null,
-        "td_rate": 0.1237,
-        "expected_td": 1.72
        }
       }
      }
@@ -3012,6 +3281,75 @@
         "tarp_adj": null,
         "td_rate": 0.0643,
         "expected_td": 0.186
+       }
+      }
+     }
+    },
+    {
+     "name": "Kam Shanks",
+     "team": "Wake Forest",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 17.3,
+       "edge_pct": -26.4,
+       "over_price": -118.0,
+       "under_price": -112.0,
+       "n_books": "3",
+       "components": {
+        "volume": 2.37,
+        "efficiency": 7.592,
+        "opp_adj": 0.964
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
+        "pace_script_adj": 0.858,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 13.0,
+        "opponent": "louisville",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.964,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.069,
+        "expected_td": 0.163
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.5,
+       "edge_pct": 0.0,
+       "over_price": -175.0,
+       "under_price": 135.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.37,
+        "efficiency": 0.672,
+        "opp_adj": 0.964
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
+        "pace_script_adj": 0.858,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 13.0,
+        "opponent": "louisville",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.964,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.069,
+        "expected_td": 0.163
        }
       }
      }
@@ -3463,6 +3801,75 @@
         "tarp_adj": null,
         "td_rate": 0.089,
         "expected_td": 0.916
+       }
+      }
+     }
+    },
+    {
+     "name": "Faizon Brandon",
+     "team": "Tennessee",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 211.5,
+       "projection": 125.4,
+       "edge_pct": -40.7,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 20.24,
+        "efficiency": 7.753,
+        "opp_adj": 0.799
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.949,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.5,
+        "opponent": "texas",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.799,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0938,
+        "expected_td": 1.897
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 28.0,
+       "projection": 32.2,
+       "edge_pct": 15.0,
+       "over_price": -116.0,
+       "under_price": -113.0,
+       "n_books": "2",
+       "components": {
+        "volume": 5.67,
+        "efficiency": 5.6,
+        "opp_adj": 1.013
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.74,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.5,
+        "opponent": "texas",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.976,
+        "matchup_grade_adj": 0.825,
+        "tarp_adj": null,
+        "td_rate": 0.1304,
+        "expected_td": 0.74
        }
       }
      }
@@ -4028,6 +4435,44 @@
    "commence_time": "2026-09-26T16:45:00Z",
    "players": [
     {
+     "name": "CJ Baxter",
+     "team": "Kentucky",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 80.5,
+       "projection": 56.5,
+       "edge_pct": -29.8,
+       "over_price": -113.0,
+       "under_price": -114.5,
+       "n_books": "2",
+       "components": {
+        "volume": 21.83,
+        "efficiency": 4.435,
+        "opp_adj": 0.583
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 8.0 2025 games",
+        "pace_script_adj": 2.315,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.5,
+        "opponent": "southalabama",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.005,
+        "matchup_grade_adj": 1.048,
+        "tarp_adj": null,
+        "td_rate": 0.0606,
+        "expected_td": 1.323
+       }
+      }
+     }
+    },
+    {
      "name": "DJ Miller",
      "team": "Kentucky",
      "position": "WR",
@@ -4135,6 +4580,144 @@
      }
     },
     {
+     "name": "Kenny Darby",
+     "team": "Kentucky",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 61.5,
+       "projection": 60.3,
+       "edge_pct": -2.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 5.77,
+        "efficiency": 9.6,
+        "opp_adj": 1.088
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.237,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.5,
+        "opponent": "southalabama",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.088,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1429,
+        "expected_td": 0.824
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 4.3,
+       "edge_pct": -4.4,
+       "over_price": 118.0,
+       "under_price": -154.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.77,
+        "efficiency": 0.684,
+        "opp_adj": 1.088
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.237,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.5,
+        "opponent": "southalabama",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.088,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1429,
+        "expected_td": 0.824
+       }
+      }
+     }
+    },
+    {
+     "name": "Kenny Minchey",
+     "team": "Kentucky",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 243.5,
+       "projection": 149.2,
+       "edge_pct": -38.7,
+       "over_price": -113.0,
+       "under_price": -114.5,
+       "n_books": "2",
+       "components": {
+        "volume": 16.66,
+        "efficiency": 8.204,
+        "opp_adj": 1.092
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 6.0 2025 games",
+        "pace_script_adj": 1.237,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.5,
+        "opponent": "southalabama",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.31,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0742,
+        "expected_td": 1.236
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 8.5,
+       "projection": 17.5,
+       "edge_pct": 105.9,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1",
+       "components": {
+        "volume": 6.61,
+        "efficiency": 4.541,
+        "opp_adj": 0.583
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 6.0 2025 games",
+        "pace_script_adj": 2.315,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.5,
+        "opponent": "southalabama",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.005,
+        "matchup_grade_adj": 1.048,
+        "tarp_adj": null,
+        "td_rate": 0.0333,
+        "expected_td": 0.22
+       }
+      }
+     }
+    },
+    {
      "name": "Willie Rodriguez",
      "team": "Kentucky",
      "position": "TE",
@@ -4204,44 +4787,6 @@
      }
     },
     {
-     "name": "Kenny Minchey",
-     "team": "Notre Dame",
-     "position": "QB",
-     "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 243.5,
-       "projection": 149.2,
-       "edge_pct": -38.7,
-       "over_price": -113.0,
-       "under_price": -114.5,
-       "n_books": "2",
-       "components": {
-        "volume": 16.64,
-        "efficiency": 8.204,
-        "opp_adj": 1.093
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 6.0 2025 games",
-        "pace_script_adj": 1.235,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 42.5,
-        "league_avg_implied": 26.4,
-        "team_spread": -27.5,
-        "opponent": "purdue",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.193,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0742,
-        "expected_td": 1.235
-       }
-      }
-     }
-    },
-    {
      "name": "Bishop Davenport",
      "team": "South Alabama",
      "position": "QB",
@@ -4275,44 +4820,6 @@
         "tarp_adj": null,
         "td_rate": 0.0442,
         "expected_td": 0.856
-       }
-      }
-     }
-    },
-    {
-     "name": "CJ Baxter",
-     "team": "Texas",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 80.5,
-       "projection": 56.5,
-       "edge_pct": -29.8,
-       "over_price": -113.0,
-       "under_price": -114.5,
-       "n_books": "2",
-       "components": {
-        "volume": 13.05,
-        "efficiency": 4.435,
-        "opp_adj": 0.975
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 8.0 2025 games",
-        "pace_script_adj": 1.384,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 30.2,
-        "league_avg_implied": 26.4,
-        "team_spread": -5.5,
-        "opponent": "tennessee",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.008,
-        "matchup_grade_adj": 1.17,
-        "tarp_adj": null,
-        "td_rate": 0.0606,
-        "expected_td": 0.791
        }
       }
      }
@@ -4390,6 +4897,44 @@
         "tarp_adj": null,
         "td_rate": 0.0746,
         "expected_td": 0.665
+       }
+      }
+     }
+    },
+    {
+     "name": "Harry Dalton III",
+     "team": "Maryland",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 34.5,
+       "projection": 29.6,
+       "edge_pct": -14.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.33,
+        "efficiency": 4.556,
+        "opp_adj": 1.221
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.981,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 1.5,
+        "opponent": "ucla",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.967,
+        "matchup_grade_adj": 1.263,
+        "tarp_adj": null,
+        "td_rate": 0.0789,
+        "expected_td": 0.421
        }
       }
      }
@@ -4990,44 +5535,6 @@
        }
       }
      }
-    },
-    {
-     "name": "Harry Dalton III",
-     "team": "USC",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 34.5,
-       "projection": 24.8,
-       "edge_pct": -28.1,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "1",
-       "components": {
-        "volume": 5.32,
-        "efficiency": 4.556,
-        "opp_adj": 1.021
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 0.98,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 29.2,
-        "league_avg_implied": 26.4,
-        "team_spread": 3.0,
-        "opponent": "oregon",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.97,
-        "matchup_grade_adj": 1.053,
-        "tarp_adj": null,
-        "td_rate": 0.0789,
-        "expected_td": 0.42
-       }
-      }
-     }
     }
    ]
   },
@@ -5037,144 +5544,6 @@
    "away_team": "Notre Dame Fighting Irish",
    "commence_time": "2026-09-26T18:00:00Z",
    "players": [
-    {
-     "name": "Xavier Townsend",
-     "team": "Iowa State",
-     "position": "WR",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 40.5,
-       "projection": 34.8,
-       "edge_pct": -14.1,
-       "over_price": -112.0,
-       "under_price": -118.0,
-       "n_books": "3",
-       "components": {
-        "volume": 3.33,
-        "efficiency": 10.627,
-        "opp_adj": 0.985
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
-        "pace_script_adj": 0.761,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 19.8,
-        "league_avg_implied": 26.4,
-        "team_spread": 8.0,
-        "opponent": "utah",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.842,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0654,
-        "expected_td": 0.218
-       }
-      },
-      "player_receptions": {
-       "stat": "receptions",
-       "book_line": 3.5,
-       "projection": 2.6,
-       "edge_pct": -25.7,
-       "over_price": -149.0,
-       "under_price": 115.0,
-       "n_books": "1",
-       "components": {
-        "volume": 3.33,
-        "efficiency": 0.797,
-        "opp_adj": 0.985
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
-        "pace_script_adj": 0.761,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 19.8,
-        "league_avg_implied": 26.4,
-        "team_spread": 8.0,
-        "opponent": "utah",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.842,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0654,
-        "expected_td": 0.218
-       }
-      }
-     }
-    },
-    {
-     "name": "Fame Ijeboi",
-     "team": "Minnesota",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 43.5,
-       "projection": 45.3,
-       "edge_pct": 4.1,
-       "over_price": -112.5,
-       "under_price": -115.0,
-       "n_books": "2",
-       "components": {
-        "volume": 5.44,
-        "efficiency": 4.661,
-        "opp_adj": 1.786
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
-        "pace_script_adj": 0.42,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 17.8,
-        "league_avg_implied": 26.4,
-        "team_spread": 10.5,
-        "opponent": "washington",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.838,
-        "matchup_grade_adj": 1.009,
-        "tarp_adj": null,
-        "td_rate": 0.0742,
-        "expected_td": 0.404
-       }
-      },
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 13.5,
-       "projection": 10.6,
-       "edge_pct": -21.5,
-       "over_price": -108.0,
-       "under_price": -120.0,
-       "n_books": "1",
-       "components": {
-        "volume": 1.52,
-        "efficiency": 6.688,
-        "opp_adj": 1.045
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
-        "pace_script_adj": 0.717,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 17.8,
-        "league_avg_implied": 26.4,
-        "team_spread": 10.5,
-        "opponent": "washington",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.937,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0245,
-        "expected_td": 0.037
-       }
-      }
-     }
-    },
     {
      "name": "Aneyas Williams",
      "team": "Notre Dame",
@@ -5278,6 +5647,75 @@
         "tarp_adj": null,
         "td_rate": 0.1017,
         "expected_td": 0.668
+       }
+      }
+     }
+    },
+    {
+     "name": "Jaden Greathouse",
+     "team": "Notre Dame",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 22.0,
+       "projection": 21.5,
+       "edge_pct": -2.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 2.29,
+        "efficiency": 8.89,
+        "opp_adj": 1.055
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.235,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 42.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -27.5,
+        "opponent": "purdue",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.055,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.5,
+       "edge_pct": -40.0,
+       "over_price": 124.0,
+       "under_price": -161.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.29,
+        "efficiency": 0.64,
+        "opp_adj": 1.055
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.235,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 42.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -27.5,
+        "opponent": "purdue",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.055,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -5455,6 +5893,37 @@
         "td_rate": 0.0577,
         "expected_td": 1.003
        }
+      },
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 5.5,
+       "projection": 28.1,
+       "edge_pct": 410.9,
+       "over_price": -125.0,
+       "under_price": -103.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.88,
+        "efficiency": 9.245,
+        "opp_adj": 1.055
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.235,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 42.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -27.5,
+        "opponent": "purdue",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.055,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1429,
+        "expected_td": 0.411
+       }
       }
      }
     },
@@ -5528,6 +5997,251 @@
      }
     },
     {
+     "name": "Chauncey Magwood",
+     "team": "Purdue",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 14.4,
+       "edge_pct": -58.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 1.68,
+        "efficiency": 8.38,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0625,
+        "expected_td": 0.105
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 1.2,
+       "edge_pct": -65.7,
+       "over_price": 136.0,
+       "under_price": -179.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.68,
+        "efficiency": 0.706,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0625,
+        "expected_td": 0.105
+       }
+      }
+     }
+    },
+    {
+     "name": "De'Nylon Morrissette",
+     "team": "Purdue",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 16.5,
+       "projection": 10.4,
+       "edge_pct": -37.0,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.47,
+        "efficiency": 6.909,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1667,
+        "expected_td": 0.245
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 0.9,
+       "edge_pct": -40.0,
+       "over_price": -130.0,
+       "under_price": 100.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.47,
+        "efficiency": 0.613,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1667,
+        "expected_td": 0.245
+       }
+      }
+     }
+    },
+    {
+     "name": "Fame Ijeboi",
+     "team": "Purdue",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 43.5,
+       "projection": 45.3,
+       "edge_pct": 4.1,
+       "over_price": -112.5,
+       "under_price": -115.0,
+       "n_books": "2",
+       "components": {
+        "volume": 1.81,
+        "efficiency": 4.661,
+        "opp_adj": 5.357
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
+        "pace_script_adj": 0.14,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.715,
+        "matchup_grade_adj": 0.601,
+        "tarp_adj": null,
+        "td_rate": 0.0742,
+        "expected_td": 0.134
+       }
+      },
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 13.5,
+       "projection": 10.6,
+       "edge_pct": -21.5,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.56,
+        "efficiency": 6.688,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0245,
+        "expected_td": 0.038
+       }
+      }
+     }
+    },
+    {
+     "name": "George Burhenn",
+     "team": "Purdue",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 10.5,
+       "projection": 17.2,
+       "edge_pct": 63.8,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.78,
+        "efficiency": 9.457,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0588,
+        "expected_td": 0.105
+       }
+      }
+     }
+    },
+    {
      "name": "Ryan Browne",
      "team": "Purdue",
      "position": "QB",
@@ -5564,6 +6278,75 @@
        }
       }
      }
+    },
+    {
+     "name": "Xavier Townsend",
+     "team": "Purdue",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 40.5,
+       "projection": 34.8,
+       "edge_pct": -14.1,
+       "over_price": -112.0,
+       "under_price": -118.0,
+       "n_books": "3",
+       "components": {
+        "volume": 3.21,
+        "efficiency": 10.627,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0654,
+        "expected_td": 0.21
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.6,
+       "edge_pct": -25.7,
+       "over_price": -149.0,
+       "under_price": 115.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.21,
+        "efficiency": 0.797,
+        "opp_adj": 1.02
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
+        "pace_script_adj": 0.735,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 15.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 27.5,
+        "opponent": "notredame",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.004,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0654,
+        "expected_td": 0.21
+       }
+      }
+     }
     }
    ]
   },
@@ -5573,6 +6356,44 @@
    "away_team": "Boise State Broncos",
    "commence_time": "2026-09-26T19:30:00Z",
    "players": [
+    {
+     "name": "Akeem Wright",
+     "team": "Boise State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.5,
+       "projection": 34.8,
+       "edge_pct": 36.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 3.88,
+        "efficiency": 8.485,
+        "opp_adj": 1.057
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.059,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -7.5,
+        "opponent": "westernmichigan",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.057,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0909,
+        "expected_td": 0.353
+       }
+      }
+     }
+    },
     {
      "name": "Dylan Riley",
      "team": "Boise State",
@@ -5955,70 +6776,139 @@
    "commence_time": "2026-09-26T19:30:00Z",
    "players": [
     {
-     "name": "Horatio Fields",
-     "team": "Auburn",
+     "name": "Aaron Philo",
+     "team": "Florida",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 231.5,
+       "projection": 181.3,
+       "edge_pct": -21.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 16.84,
+        "efficiency": 9.67,
+        "opp_adj": 1.114
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 1.163,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 31.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "olemiss",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.114,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0724,
+        "expected_td": 1.219
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 18.5,
+       "projection": 18.6,
+       "edge_pct": 0.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 4.05,
+        "efficiency": 4.51,
+        "opp_adj": 1.016
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 1.329,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 31.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "olemiss",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.059,
+        "matchup_grade_adj": 1.384,
+        "tarp_adj": null,
+        "td_rate": 0.0938,
+        "expected_td": 0.38
+       }
+      }
+     }
+    },
+    {
+     "name": "Bailey Stockton",
+     "team": "Florida",
      "position": "WR",
      "markets": {
       "player_reception_yds": {
        "stat": "rec_yds",
-       "book_line": 42.5,
-       "projection": 43.3,
-       "edge_pct": 1.9,
-       "over_price": -118.0,
-       "under_price": -112.0,
+       "book_line": 18.5,
+       "projection": 28.5,
+       "edge_pct": 54.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
        "n_books": "3",
        "components": {
-        "volume": 5.84,
-        "efficiency": 7.937,
-        "opp_adj": 0.934
+        "volume": 3.69,
+        "efficiency": 7.482,
+        "opp_adj": 1.032
        },
        "breakdown": {
-        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 1.202,
+        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
+        "pace_script_adj": 1.163,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 32.5,
+        "team_implied": 31.0,
         "league_avg_implied": 26.4,
-        "team_spread": -9.5,
-        "opponent": "vanderbilt",
+        "team_spread": -3.5,
+        "opponent": "olemiss",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.934,
+        "success_rate_adj": 1.032,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0588,
-        "expected_td": 0.344
+        "td_rate": 0.045,
+        "expected_td": 0.166
        }
       },
       "player_receptions": {
        "stat": "receptions",
-       "book_line": 4.5,
-       "projection": 3.9,
-       "edge_pct": -13.3,
-       "over_price": 120.0,
-       "under_price": -157.5,
-       "n_books": "2",
+       "book_line": 1.5,
+       "projection": 2.8,
+       "edge_pct": 86.7,
+       "over_price": -185.0,
+       "under_price": 142.0,
+       "n_books": "1",
        "components": {
-        "volume": 5.84,
-        "efficiency": 0.721,
-        "opp_adj": 0.934
+        "volume": 3.69,
+        "efficiency": 0.735,
+        "opp_adj": 1.032
        },
        "breakdown": {
-        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 1.202,
+        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
+        "pace_script_adj": 1.163,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 32.5,
+        "team_implied": 31.0,
         "league_avg_implied": 26.4,
-        "team_spread": -9.5,
-        "opponent": "vanderbilt",
+        "team_spread": -3.5,
+        "opponent": "olemiss",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.934,
+        "success_rate_adj": 1.032,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0588,
-        "expected_td": 0.344
+        "td_rate": 0.045,
+        "expected_td": 0.166
        }
       }
      }
@@ -6269,75 +7159,6 @@
      }
     },
     {
-     "name": "Bailey Stockton",
-     "team": "Georgia Tech",
-     "position": "WR",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 18.5,
-       "projection": 26.2,
-       "edge_pct": 41.6,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "3",
-       "components": {
-        "volume": 3.09,
-        "efficiency": 7.482,
-        "opp_adj": 1.131
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
-        "pace_script_adj": 0.975,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 26.0,
-        "league_avg_implied": 26.4,
-        "team_spread": -3.5,
-        "opponent": "stanford",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.131,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.045,
-        "expected_td": 0.139
-       }
-      },
-      "player_receptions": {
-       "stat": "receptions",
-       "book_line": 1.5,
-       "projection": 2.6,
-       "edge_pct": 73.3,
-       "over_price": -185.0,
-       "under_price": 142.0,
-       "n_books": "1",
-       "components": {
-        "volume": 3.09,
-        "efficiency": 0.735,
-        "opp_adj": 1.131
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 10.0 2025 games",
-        "pace_script_adj": 0.975,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 26.0,
-        "league_avg_implied": 26.4,
-        "team_spread": -3.5,
-        "opponent": "stanford",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.131,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.045,
-        "expected_td": 0.139
-       }
-      }
-     }
-    },
-    {
      "name": "Caleb Odom",
      "team": "Ole Miss",
      "position": "TE",
@@ -6476,6 +7297,75 @@
      }
     },
     {
+     "name": "Horatio Fields",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 40.2,
+       "edge_pct": -5.4,
+       "over_price": -118.0,
+       "under_price": -112.0,
+       "n_books": "3",
+       "components": {
+        "volume": 5.1,
+        "efficiency": 7.937,
+        "opp_adj": 0.993
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.049,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.5,
+        "opponent": "florida",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.993,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0588,
+        "expected_td": 0.3
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.6,
+       "edge_pct": -20.0,
+       "over_price": 120.0,
+       "under_price": -157.5,
+       "n_books": "2",
+       "components": {
+        "volume": 5.1,
+        "efficiency": 0.721,
+        "opp_adj": 0.993
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.049,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.5,
+        "opponent": "florida",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.993,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0588,
+        "expected_td": 0.3
+       }
+      }
+     }
+    },
+    {
      "name": "Johntay Cook II",
      "team": "Ole Miss",
      "position": "WR",
@@ -6578,6 +7468,75 @@
         "tarp_adj": null,
         "td_rate": 0.0842,
         "expected_td": 1.347
+       }
+      }
+     }
+    },
+    {
+     "name": "Traylon Ray",
+     "team": "Ole Miss",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 36.5,
+       "projection": 41.8,
+       "edge_pct": 14.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 4.2,
+        "efficiency": 10.02,
+        "opp_adj": 0.993
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.049,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.5,
+        "opponent": "florida",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.993,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0833,
+        "expected_td": 0.35
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.0,
+       "edge_pct": -14.3,
+       "over_price": -105.0,
+       "under_price": -123.0,
+       "n_books": "1",
+       "components": {
+        "volume": 4.2,
+        "efficiency": 0.724,
+        "opp_adj": 0.993
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.049,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.5,
+        "opponent": "florida",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.993,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0833,
+        "expected_td": 0.35
        }
       }
      }
@@ -7265,6 +8224,44 @@
      }
     },
     {
+     "name": "Hank Brown",
+     "team": "Iowa",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 155.5,
+       "projection": 68.3,
+       "edge_pct": -56.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 9.12,
+        "efficiency": 7.079,
+        "opp_adj": 1.058
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 0.709,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.5,
+        "opponent": "michigan",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.39,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0481,
+        "expected_td": 0.439
+       }
+      }
+     }
+    },
+    {
      "name": "Kamari Moulton",
      "team": "Iowa",
      "position": "HB",
@@ -7715,6 +8712,44 @@
        }
       }
      }
+    },
+    {
+     "name": "Savion Hiter",
+     "team": "Michigan",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 40.5,
+       "projection": 26.1,
+       "edge_pct": -35.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 7.72,
+        "efficiency": 4.542,
+        "opp_adj": 0.745
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.007,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -5.5,
+        "opponent": "iowa",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.73,
+        "matchup_grade_adj": 0.708,
+        "tarp_adj": null,
+        "td_rate": 0.087,
+        "expected_td": 0.671
+       }
+      }
+     }
     }
    ]
   },
@@ -7970,75 +9005,6 @@
      }
     },
     {
-     "name": "Ricky Johnson",
-     "team": "Mississippi State",
-     "position": "WR",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 25.5,
-       "projection": 14.2,
-       "edge_pct": -44.3,
-       "over_price": -119.5,
-       "under_price": -108.5,
-       "n_books": "2",
-       "components": {
-        "volume": 2.4,
-        "efficiency": 6.873,
-        "opp_adj": 0.864
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
-        "pace_script_adj": 1.199,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 32.1,
-        "league_avg_implied": 26.4,
-        "team_spread": -5.75,
-        "opponent": "missouri",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.864,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0,
-        "expected_td": 0.0
-       }
-      },
-      "player_receptions": {
-       "stat": "receptions",
-       "book_line": 2.5,
-       "projection": 1.2,
-       "edge_pct": -52.0,
-       "over_price": 122.0,
-       "under_price": -159.0,
-       "n_books": "1",
-       "components": {
-        "volume": 2.4,
-        "efficiency": 0.599,
-        "opp_adj": 0.864
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
-        "pace_script_adj": 1.199,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 32.1,
-        "league_avg_implied": 26.4,
-        "team_spread": -5.75,
-        "opponent": "missouri",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.864,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0,
-        "expected_td": 0.0
-       }
-      }
-     }
-    },
-    {
      "name": "Braden Pegan",
      "team": "Utah",
      "position": "WR",
@@ -8215,6 +9181,144 @@
      }
     },
     {
+     "name": "Noah Bennee",
+     "team": "Utah",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 18.5,
+       "projection": 24.4,
+       "edge_pct": 31.9,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3",
+       "components": {
+        "volume": 2.06,
+        "efficiency": 13.465,
+        "opp_adj": 0.88
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.03,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.0,
+        "opponent": "iowastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.88,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.3333,
+        "expected_td": 0.687
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.3,
+       "edge_pct": -13.3,
+       "over_price": -169.0,
+       "under_price": 130.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.06,
+        "efficiency": 0.724,
+        "opp_adj": 0.88
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.03,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.0,
+        "opponent": "iowastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.88,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.3333,
+        "expected_td": 0.687
+       }
+      }
+     }
+    },
+    {
+     "name": "Ricky Johnson",
+     "team": "Utah",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.5,
+       "projection": 12.5,
+       "edge_pct": -51.0,
+       "over_price": -119.5,
+       "under_price": -108.5,
+       "n_books": "2",
+       "components": {
+        "volume": 2.06,
+        "efficiency": 6.873,
+        "opp_adj": 0.88
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
+        "pace_script_adj": 1.03,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.0,
+        "opponent": "iowastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.88,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.1,
+       "edge_pct": -56.0,
+       "over_price": 122.0,
+       "under_price": -159.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.06,
+        "efficiency": 0.599,
+        "opp_adj": 0.88
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
+        "pace_script_adj": 1.03,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 27.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.0,
+        "opponent": "iowastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.88,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "Wayshawn Parker",
      "team": "Utah",
      "position": "HB",
@@ -8323,44 +9427,6 @@
    "commence_time": "2026-09-26T19:30:00Z",
    "players": [
     {
-     "name": "Duke Watson",
-     "team": "Louisville",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 72.0,
-       "projection": 66.8,
-       "edge_pct": -7.2,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "2",
-       "components": {
-        "volume": 15.27,
-        "efficiency": 6.296,
-        "opp_adj": 0.695
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
-        "pace_script_adj": 1.944,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 35.0,
-        "league_avg_implied": 26.4,
-        "team_spread": -13.0,
-        "opponent": "wakeforest",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.09,
-        "matchup_grade_adj": 1.004,
-        "tarp_adj": null,
-        "td_rate": 0.0649,
-        "expected_td": 0.992
-       }
-      }
-     }
-    },
-    {
      "name": "Ed Small",
      "team": "TCU",
      "position": "WR",
@@ -8425,6 +9491,75 @@
         "tarp_adj": null,
         "td_rate": 0.0579,
         "expected_td": 0.322
+       }
+      }
+     }
+    },
+    {
+     "name": "Jaden Craig",
+     "team": "TCU",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 237.5,
+       "projection": 230.0,
+       "edge_pct": -3.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 29.99,
+        "efficiency": 8.114,
+        "opp_adj": 0.945
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.967,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "ucf",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.945,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0753,
+        "expected_td": 2.257
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 9.0,
+       "projection": 18.6,
+       "edge_pct": 106.7,
+       "over_price": -113.0,
+       "under_price": -116.0,
+       "n_books": "2",
+       "components": {
+        "volume": 4.34,
+        "efficiency": 5.646,
+        "opp_adj": 0.761
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.086,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "ucf",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.793,
+        "matchup_grade_adj": 0.96,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -8575,6 +9710,113 @@
      }
     },
     {
+     "name": "Kari Ashley",
+     "team": "TCU",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.0,
+       "projection": 53.5,
+       "edge_pct": 57.4,
+       "over_price": -116.0,
+       "under_price": -113.0,
+       "n_books": "2",
+       "components": {
+        "volume": 5.8,
+        "efficiency": 9.372,
+        "opp_adj": 0.984
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.967,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "ucf",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.984,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1667,
+        "expected_td": 0.967
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.1,
+       "edge_pct": 17.1,
+       "over_price": 141.0,
+       "under_price": -185.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.8,
+        "efficiency": 0.724,
+        "opp_adj": 0.984
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.967,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 25.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "ucf",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.984,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1667,
+        "expected_td": 0.967
+       }
+      }
+     }
+    },
+    {
+     "name": "Duke Watson",
+     "team": "UCF",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 72.0,
+       "projection": 37.1,
+       "edge_pct": -48.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 5.99,
+        "efficiency": 6.296,
+        "opp_adj": 0.984
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 0.762,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "tcu",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.802,
+        "matchup_grade_adj": 0.771,
+        "tarp_adj": null,
+        "td_rate": 0.0649,
+        "expected_td": 0.389
+       }
+      }
+     }
+    },
+    {
      "name": "Dylan Wade",
      "team": "UCF",
      "position": "TE",
@@ -8639,6 +9881,75 @@
         "tarp_adj": null,
         "td_rate": 0.0597,
         "expected_td": 0.225
+       }
+      }
+     }
+    },
+    {
+     "name": "Josh Derry",
+     "team": "UCF",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 23.5,
+       "edge_pct": -31.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 3.18,
+        "efficiency": 7.606,
+        "opp_adj": 0.973
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.867,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "tcu",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.973,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.0,
+       "edge_pct": -20.0,
+       "over_price": -141.0,
+       "under_price": 109.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.18,
+        "efficiency": 0.658,
+        "opp_adj": 0.973
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.867,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "tcu",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.973,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -8790,6 +10101,44 @@
    "commence_time": "2026-09-26T20:00:00Z",
    "players": [
     {
+     "name": "Max Johnson",
+     "team": "Georgia Southern",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 209.5,
+       "projection": 155.9,
+       "edge_pct": -25.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 22.62,
+        "efficiency": 6.367,
+        "opp_adj": 1.083
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.769,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 19.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 17.5,
+        "opponent": "houston",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.083,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0194,
+        "expected_td": 0.439
+       }
+      }
+     }
+    },
+    {
      "name": "Amare Thomas",
      "team": "Houston",
      "position": "WR",
@@ -8935,6 +10284,44 @@
      }
     },
     {
+     "name": "Makhi Hughes",
+     "team": "Houston",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 74.5,
+       "projection": 54.9,
+       "edge_pct": -26.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 17.64,
+        "efficiency": 4.996,
+        "opp_adj": 0.623
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 2.167,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 37.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -17.5,
+        "opponent": "georgiasouthern",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.832,
+        "matchup_grade_adj": 1.158,
+        "tarp_adj": null,
+        "td_rate": 0.0351,
+        "expected_td": 0.619
+       }
+      }
+     }
+    },
+    {
      "name": "Patrick Overmyer",
      "team": "Houston",
      "position": "TE",
@@ -9006,82 +10393,6 @@
         "tarp_adj": null,
         "td_rate": 0.0152,
         "expected_td": 0.119
-       }
-      }
-     }
-    },
-    {
-     "name": "Max Johnson",
-     "team": "North Carolina",
-     "position": "QB",
-     "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 209.5,
-       "projection": 140.5,
-       "edge_pct": -32.9,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "1",
-       "components": {
-        "volume": 21.63,
-        "efficiency": 6.367,
-        "opp_adj": 1.02
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 0.735,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 10.0,
-        "league_avg_implied": 26.4,
-        "team_spread": 36.5,
-        "opponent": "eastcarolina",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.846,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0194,
-        "expected_td": 0.42
-       }
-      }
-     }
-    },
-    {
-     "name": "Makhi Hughes",
-     "team": "Oregon",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 74.5,
-       "projection": 35.3,
-       "edge_pct": -52.6,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "1",
-       "components": {
-        "volume": 11.07,
-        "efficiency": 4.996,
-        "opp_adj": 0.639
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 1.36,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 32.2,
-        "league_avg_implied": 26.4,
-        "team_spread": -3.0,
-        "opponent": "usc",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.019,
-        "matchup_grade_adj": 0.627,
-        "tarp_adj": null,
-        "td_rate": 0.0351,
-        "expected_td": 0.388
        }
       }
      }
@@ -9228,6 +10539,75 @@
         "tarp_adj": null,
         "td_rate": 0.0596,
         "expected_td": 0.515
+       }
+      }
+     }
+    },
+    {
+     "name": "DeShawn Spencer",
+     "team": "Auburn",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 19.2,
+       "edge_pct": -10.7,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.8,
+        "efficiency": 7.338,
+        "opp_adj": 0.934
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.202,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -9.5,
+        "opponent": "vanderbilt",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.934,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2857,
+        "expected_td": 0.8
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.8,
+       "edge_pct": 20.0,
+       "over_price": -179.0,
+       "under_price": 137.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.8,
+        "efficiency": 0.684,
+        "opp_adj": 0.934
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.202,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.5,
+        "league_avg_implied": 26.4,
+        "team_spread": -9.5,
+        "opponent": "vanderbilt",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.934,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2857,
+        "expected_td": 0.8
        }
       }
      }
@@ -9473,6 +10853,75 @@
         "tarp_adj": null,
         "td_rate": 0.0728,
         "expected_td": 0.629
+       }
+      }
+     }
+    },
+    {
+     "name": "Jared Curtis",
+     "team": "Vanderbilt",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 229.5,
+       "projection": 170.7,
+       "edge_pct": -25.6,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4",
+       "components": {
+        "volume": 19.58,
+        "efficiency": 7.64,
+        "opp_adj": 1.141
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.89,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 23.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 9.5,
+        "opponent": "auburn",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.141,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0606,
+        "expected_td": 1.187
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 17.0,
+       "projection": 28.1,
+       "edge_pct": 65.3,
+       "over_price": -111.0,
+       "under_price": -117.0,
+       "n_books": "2",
+       "components": {
+        "volume": 4.26,
+        "efficiency": 4.89,
+        "opp_adj": 1.351
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.555,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 23.0,
+        "league_avg_implied": 26.4,
+        "team_spread": 9.5,
+        "opponent": "auburn",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.9,
+        "matchup_grade_adj": 0.876,
+        "tarp_adj": null,
+        "td_rate": 0.087,
+        "expected_td": 0.37
        }
       }
      }
@@ -9940,6 +11389,75 @@
         "tarp_adj": null,
         "td_rate": 0.0397,
         "expected_td": 0.128
+       }
+      }
+     }
+    },
+    {
+     "name": "Jayden Savoury",
+     "team": "Michigan State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 26.5,
+       "projection": 14.5,
+       "edge_pct": -45.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 1.81,
+        "efficiency": 8.834,
+        "opp_adj": 0.91
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 0.824,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 21.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.5,
+        "opponent": "nebraska",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.836,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.2,
+       "edge_pct": -52.0,
+       "over_price": -137.0,
+       "under_price": 106.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.81,
+        "efficiency": 0.737,
+        "opp_adj": 0.91
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 0.824,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 21.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.5,
+        "opponent": "nebraska",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.836,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -11255,6 +12773,75 @@
      }
     },
     {
+     "name": "Da'Wain Lofton",
+     "team": "Delaware",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 50.5,
+       "projection": 27.9,
+       "edge_pct": -44.8,
+       "over_price": -120.0,
+       "under_price": -108.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.14,
+        "efficiency": 8.691,
+        "opp_adj": 1.023
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 1.0 2025 games",
+        "pace_script_adj": 0.733,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 20.0,
+        "opponent": "virginia",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0333,
+        "expected_td": 0.105
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 2.0,
+       "edge_pct": -55.6,
+       "over_price": 104.0,
+       "under_price": -135.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.14,
+        "efficiency": 0.628,
+        "opp_adj": 1.023
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 1.0 2025 games",
+        "pace_script_adj": 0.733,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 16.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 20.0,
+        "opponent": "virginia",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0333,
+        "expected_td": 0.105
+       }
+      }
+     }
+    },
+    {
      "name": "Nick Minicucci",
      "team": "Delaware",
      "position": "QB",
@@ -11743,6 +13330,75 @@
        }
       }
      }
+    },
+    {
+     "name": "TyLyric Coleman",
+     "team": "Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 23.5,
+       "projection": 18.3,
+       "edge_pct": -22.1,
+       "over_price": -111.0,
+       "under_price": -117.0,
+       "n_books": "2",
+       "components": {
+        "volume": 2.3,
+        "efficiency": 8.17,
+        "opp_adj": 0.975
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.238,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 36.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.0,
+        "opponent": "delaware",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.975,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0769,
+        "expected_td": 0.177
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.6,
+       "edge_pct": -36.0,
+       "over_price": 126.0,
+       "under_price": -164.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.3,
+        "efficiency": 0.715,
+        "opp_adj": 0.975
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.238,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 36.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -20.0,
+        "opponent": "delaware",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.975,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0769,
+        "expected_td": 0.177
+       }
+      }
+     }
     }
    ]
   },
@@ -11982,6 +13638,75 @@
      }
     },
     {
+     "name": "Keelon Russell",
+     "team": "Alabama",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 259.5,
+       "projection": 138.2,
+       "edge_pct": -46.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 19.88,
+        "efficiency": 8.177,
+        "opp_adj": 0.85
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.221,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 33.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -12.5,
+        "opponent": "southcarolina",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.85,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0702,
+        "expected_td": 1.395
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 30.0,
+       "projection": 29.9,
+       "edge_pct": -0.3,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 7.16,
+        "efficiency": 6.224,
+        "opp_adj": 0.672
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.857,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 33.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -12.5,
+        "opponent": "southcarolina",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.818,
+        "matchup_grade_adj": 0.821,
+        "tarp_adj": null,
+        "td_rate": 0.0741,
+        "expected_td": 0.53
+       }
+      }
+     }
+    },
+    {
      "name": "Lotzeir Brooks",
      "team": "Alabama",
      "position": "WR",
@@ -12184,6 +13909,44 @@
         "tarp_adj": null,
         "td_rate": 0.0593,
         "expected_td": 0.407
+       }
+      }
+     }
+    },
+    {
+     "name": "Trae'shawn Brown",
+     "team": "Alabama",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 35.5,
+       "projection": 50.6,
+       "edge_pct": 42.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 14.86,
+        "efficiency": 5.076,
+        "opp_adj": 0.672
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.857,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 33.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -12.5,
+        "opponent": "southcarolina",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.818,
+        "matchup_grade_adj": 0.821,
+        "tarp_adj": null,
+        "td_rate": 0.125,
+        "expected_td": 1.857
        }
       }
      }
@@ -12611,6 +14374,75 @@
      }
     },
     {
+     "name": "Gi'Bran Payne",
+     "team": "Cincinnati",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 47.5,
+       "projection": 29.5,
+       "edge_pct": -37.9,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 4.68,
+        "efficiency": 5.852,
+        "opp_adj": 1.075
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 0.697,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 6.5,
+        "opponent": "kansasstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.835,
+        "matchup_grade_adj": 1.074,
+        "tarp_adj": null,
+        "td_rate": 0.0426,
+        "expected_td": 0.199
+       }
+      },
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 9.5,
+       "projection": 9.5,
+       "edge_pct": 0.0,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.2,
+        "efficiency": 5.432,
+        "opp_adj": 0.797
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
+        "pace_script_adj": 0.941,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 6.5,
+        "opponent": "kansasstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.761,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "Isaiah Johnson",
      "team": "Cincinnati",
      "position": "WR",
@@ -12813,6 +14645,75 @@
         "tarp_adj": null,
         "td_rate": 0.101,
         "expected_td": 0.463
+       }
+      }
+     }
+    },
+    {
+     "name": "Larenzo Fenner",
+     "team": "Cincinnati",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 17.5,
+       "projection": 14.8,
+       "edge_pct": -15.4,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.2,
+        "efficiency": 8.48,
+        "opp_adj": 0.797
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.941,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 6.5,
+        "opponent": "kansasstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.761,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.4,
+       "edge_pct": -6.7,
+       "over_price": -143.0,
+       "under_price": 110.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.2,
+        "efficiency": 0.78,
+        "opp_adj": 0.797
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.941,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 24.5,
+        "league_avg_implied": 26.4,
+        "team_spread": 6.5,
+        "opponent": "kansasstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.761,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -13168,44 +15069,6 @@
        }
       }
      }
-    },
-    {
-     "name": "Gi'Bran Payne",
-     "team": "Notre Dame",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 47.5,
-       "projection": 53.0,
-       "edge_pct": 11.6,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "3",
-       "components": {
-        "volume": 15.71,
-        "efficiency": 5.852,
-        "opp_adj": 0.577
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 3.0 2025 games",
-        "pace_script_adj": 2.34,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 42.5,
-        "league_avg_implied": 26.4,
-        "team_spread": -27.5,
-        "opponent": "purdue",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.267,
-        "matchup_grade_adj": 1.007,
-        "tarp_adj": null,
-        "td_rate": 0.0426,
-        "expected_td": 0.669
-       }
-      }
-     }
     }
    ]
   },
@@ -13215,44 +15078,6 @@
    "away_team": "Oklahoma State Cowboys",
    "commence_time": "2026-09-26T23:00:00Z",
    "players": [
-    {
-     "name": "Michael Hawkins Jr.",
-     "team": "Oklahoma",
-     "position": "QB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 86.5,
-       "projection": 44.9,
-       "edge_pct": -48.1,
-       "over_price": -112.0,
-       "under_price": -116.0,
-       "n_books": "2",
-       "components": {
-        "volume": 3.35,
-        "efficiency": 6.076,
-        "opp_adj": 2.206
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
-        "pace_script_adj": 0.34,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 15.2,
-        "league_avg_implied": 26.4,
-        "team_spread": 13.5,
-        "opponent": "georgia",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.794,
-        "matchup_grade_adj": 0.735,
-        "tarp_adj": null,
-        "td_rate": 0.1159,
-        "expected_td": 0.388
-       }
-      }
-     }
-    },
     {
      "name": "Caleb Hawkins",
      "team": "Oklahoma State",
@@ -13318,6 +15143,44 @@
         "tarp_adj": null,
         "td_rate": 0.0766,
         "expected_td": 1.367
+       }
+      }
+     }
+    },
+    {
+     "name": "Carson Kolb",
+     "team": "Oklahoma State",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 13.5,
+       "projection": 20.2,
+       "edge_pct": 49.6,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.97,
+        "efficiency": 6.201,
+        "opp_adj": 1.098
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.112,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 2.0,
+        "opponent": "westvirginia",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.098,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.25,
+        "expected_td": 0.743
        }
       }
      }
@@ -13806,6 +15669,44 @@
      }
     },
     {
+     "name": "Jaden Bray",
+     "team": "West Virginia",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 25.5,
+       "projection": 34.4,
+       "edge_pct": 34.9,
+       "over_price": -116.5,
+       "under_price": -114.0,
+       "n_books": "4",
+       "components": {
+        "volume": 4.03,
+        "efficiency": 9.744,
+        "opp_adj": 0.875
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.177,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 31.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -2.0,
+        "opponent": "oklahomastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.875,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "John Neider",
      "team": "West Virginia",
      "position": "WR",
@@ -13873,6 +15774,75 @@
        }
       }
      }
+    },
+    {
+     "name": "Michael Hawkins Jr.",
+     "team": "West Virginia",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 172.5,
+       "projection": 78.8,
+       "edge_pct": -54.3,
+       "over_price": -114.5,
+       "under_price": -115.0,
+       "n_books": "4",
+       "components": {
+        "volume": 15.47,
+        "efficiency": 7.998,
+        "opp_adj": 0.637
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.177,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 31.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -2.0,
+        "opponent": "oklahomastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.561,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1196,
+        "expected_td": 1.85
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 86.5,
+       "projection": 71.1,
+       "edge_pct": -17.8,
+       "over_price": -112.0,
+       "under_price": -116.0,
+       "n_books": "2",
+       "components": {
+        "volume": 12.54,
+        "efficiency": 6.076,
+        "opp_adj": 0.933
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.272,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 31.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -2.0,
+        "opponent": "oklahomastate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.941,
+        "matchup_grade_adj": 0.992,
+        "tarp_adj": null,
+        "td_rate": 0.1159,
+        "expected_td": 1.454
+       }
+      }
+     }
     }
    ]
   },
@@ -13882,6 +15852,75 @@
    "away_team": "Appalachian State Mountaineers",
    "commence_time": "2026-09-26T23:30:00Z",
    "players": [
+    {
+     "name": "Chris Lofton",
+     "team": "Appalachian State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 49.5,
+       "projection": 27.4,
+       "edge_pct": -44.6,
+       "over_price": -103.0,
+       "under_price": -125.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.52,
+        "efficiency": 8.396,
+        "opp_adj": 0.93
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 20.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "ncstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.93,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0769,
+        "expected_td": 0.271
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.2,
+       "edge_pct": -37.1,
+       "over_price": 113.0,
+       "under_price": -147.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.52,
+        "efficiency": 0.677,
+        "opp_adj": 0.93
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 20.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "ncstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.93,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0769,
+        "expected_td": 0.271
+       }
+      }
+     }
+    },
     {
      "name": "Jaquari Lewis",
      "team": "Appalachian State",
@@ -13921,70 +15960,177 @@
      }
     },
     {
-     "name": "Joshisa Trader",
-     "team": "Miami",
+     "name": "Malachi Singleton",
+     "team": "Appalachian State",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 238.5,
+       "projection": 106.6,
+       "edge_pct": -55.3,
+       "over_price": -112.0,
+       "under_price": -115.0,
+       "n_books": "1",
+       "components": {
+        "volume": 13.71,
+        "efficiency": 8.414,
+        "opp_adj": 0.925
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
+        "pace_script_adj": 0.811,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 20.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "ncstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.755,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0576,
+        "expected_td": 0.79
+       }
+      }
+     }
+    },
+    {
+     "name": "Nate Branch",
+     "team": "Appalachian State",
      "position": "WR",
      "markets": {
       "player_reception_yds": {
        "stat": "rec_yds",
-       "book_line": 35.0,
-       "projection": 29.4,
-       "edge_pct": -16.0,
-       "over_price": -112.0,
-       "under_price": -116.0,
-       "n_books": "2",
+       "book_line": 29.5,
+       "projection": 30.8,
+       "edge_pct": 4.4,
+       "over_price": -115.0,
+       "under_price": -112.0,
+       "n_books": "1",
        "components": {
-        "volume": 3.69,
-        "efficiency": 8.196,
-        "opp_adj": 0.975
+        "volume": 4.33,
+        "efficiency": 7.659,
+        "opp_adj": 0.93
        },
        "breakdown": {
-        "volume_source": "blended: 3 2026 games + 9.0 2025 games",
-        "pace_script_adj": 1.235,
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 47.8,
+        "team_implied": 20.8,
         "league_avg_implied": 26.4,
-        "team_spread": -41.5,
-        "opponent": "centralmichigan",
+        "team_spread": 14.0,
+        "opponent": "ncstate",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.975,
+        "success_rate_adj": 0.93,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0213,
-        "expected_td": 0.079
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       },
       "player_receptions": {
        "stat": "receptions",
-       "book_line": 2.5,
-       "projection": 2.2,
-       "edge_pct": -12.0,
-       "over_price": -145.0,
-       "under_price": 112.0,
+       "book_line": 3.5,
+       "projection": 2.7,
+       "edge_pct": -22.9,
+       "over_price": 141.0,
+       "under_price": -185.0,
        "n_books": "1",
        "components": {
-        "volume": 3.69,
-        "efficiency": 0.603,
-        "opp_adj": 0.975
+        "volume": 4.33,
+        "efficiency": 0.675,
+        "opp_adj": 0.93
        },
        "breakdown": {
-        "volume_source": "blended: 3 2026 games + 9.0 2025 games",
-        "pace_script_adj": 1.235,
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 47.8,
+        "team_implied": 20.8,
         "league_avg_implied": 26.4,
-        "team_spread": -41.5,
-        "opponent": "centralmichigan",
+        "team_spread": 14.0,
+        "opponent": "ncstate",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.975,
+        "success_rate_adj": 0.93,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0213,
-        "expected_td": 0.079
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
+     "name": "Sam Pickett III",
+     "team": "Appalachian State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 59.5,
+       "projection": 44.7,
+       "edge_pct": -24.9,
+       "over_price": 112.0,
+       "under_price": -145.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.14,
+        "efficiency": 9.348,
+        "opp_adj": 0.93
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 20.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "ncstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.93,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1053,
+        "expected_td": 0.541
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 4.5,
+       "projection": 3.4,
+       "edge_pct": -24.4,
+       "over_price": 132.0,
+       "under_price": -172.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.14,
+        "efficiency": 0.709,
+        "opp_adj": 0.93
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.811,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 20.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 14.0,
+        "opponent": "ncstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.93,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1053,
+        "expected_td": 0.541
        }
       }
      }
@@ -14135,6 +16281,75 @@
      }
     },
     {
+     "name": "Joshisa Trader",
+     "team": "NC State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 35.0,
+       "projection": 29.8,
+       "edge_pct": -14.9,
+       "over_price": -112.0,
+       "under_price": -116.0,
+       "n_books": "2",
+       "components": {
+        "volume": 3.75,
+        "efficiency": 8.196,
+        "opp_adj": 0.969
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 9.0 2025 games",
+        "pace_script_adj": 1.257,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 34.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -14.0,
+        "opponent": "appalachianstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.969,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0213,
+        "expected_td": 0.08
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 2.2,
+       "edge_pct": -12.0,
+       "over_price": -145.0,
+       "under_price": 112.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.75,
+        "efficiency": 0.603,
+        "opp_adj": 0.969
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 9.0 2025 games",
+        "pace_script_adj": 1.257,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 34.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -14.0,
+        "opponent": "appalachianstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.969,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0213,
+        "expected_td": 0.08
+       }
+      }
+     }
+    },
+    {
      "name": "Keenan Jackson",
      "team": "NC State",
      "position": "WR",
@@ -14271,44 +16486,6 @@
        }
       }
      }
-    },
-    {
-     "name": "Malachi Singleton",
-     "team": "Purdue",
-     "position": "QB",
-     "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 238.5,
-       "projection": 106.6,
-       "edge_pct": -55.3,
-       "over_price": -112.0,
-       "under_price": -115.0,
-       "n_books": "1",
-       "components": {
-        "volume": 12.42,
-        "efficiency": 8.414,
-        "opp_adj": 1.02
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
-        "pace_script_adj": 0.735,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 15.0,
-        "league_avg_implied": 26.4,
-        "team_spread": 27.5,
-        "opponent": "notredame",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.013,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0576,
-        "expected_td": 0.716
-       }
-      }
-     }
     }
    ]
   },
@@ -14383,6 +16560,44 @@
         "tarp_adj": null,
         "td_rate": 0.0576,
         "expected_td": 0.266
+       }
+      }
+     }
+    },
+    {
+     "name": "Cole Rusk",
+     "team": "Arizona",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 19.5,
+       "projection": 20.7,
+       "edge_pct": 6.2,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "3",
+       "components": {
+        "volume": 2.26,
+        "efficiency": 9.471,
+        "opp_adj": 0.969
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
+        "pace_script_adj": 1.079,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "washingtonstate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.969,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0227,
+        "expected_td": 0.051
        }
       }
      }
@@ -14633,82 +16848,6 @@
      }
     },
     {
-     "name": "Cole Rusk",
-     "team": "Illinois",
-     "position": "TE",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 19.5,
-       "projection": 14.9,
-       "edge_pct": -23.6,
-       "over_price": -110.0,
-       "under_price": -118.0,
-       "n_books": "3",
-       "components": {
-        "volume": 1.54,
-        "efficiency": 9.471,
-        "opp_adj": 1.02
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 12.0 2025 games",
-        "pace_script_adj": 0.735,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 13.9,
-        "league_avg_implied": 26.4,
-        "team_spread": 26.25,
-        "opponent": "ohiostate",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.805,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0227,
-        "expected_td": 0.035
-       }
-      }
-     }
-    },
-    {
-     "name": "Daniel Blood",
-     "team": "Missouri",
-     "position": "WR",
-     "markets": {
-      "player_reception_yds": {
-       "stat": "rec_yds",
-       "book_line": 30.5,
-       "projection": 16.2,
-       "edge_pct": -46.9,
-       "over_price": -115.0,
-       "under_price": -114.0,
-       "n_books": "3",
-       "components": {
-        "volume": 2.05,
-        "efficiency": 8.157,
-        "opp_adj": 0.967
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
-        "pace_script_adj": 1.012,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 26.4,
-        "league_avg_implied": 26.4,
-        "team_spread": 5.75,
-        "opponent": "mississippistate",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.967,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0,
-        "expected_td": 0.0
-       }
-      }
-     }
-    },
-    {
      "name": "Branden Ganashamoorthy",
      "team": "Washington State",
      "position": "WR",
@@ -14782,6 +16921,37 @@
      "team": "Washington State",
      "position": "QB",
      "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 172.5,
+       "projection": 117.1,
+       "edge_pct": -32.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 16.48,
+        "efficiency": 6.887,
+        "opp_adj": 1.031
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.727,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 18.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 10.5,
+        "opponent": "arizona",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.748,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0294,
+        "expected_td": 0.485
+       }
+      },
       "player_rush_yds": {
        "stat": "rush_yds",
        "book_line": 31.5,
@@ -14811,6 +16981,113 @@
         "tarp_adj": null,
         "td_rate": 0.0625,
         "expected_td": 0.284
+       }
+      }
+     }
+    },
+    {
+     "name": "Daniel Blood",
+     "team": "Washington State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 12.4,
+       "edge_pct": -59.3,
+       "over_price": -115.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 1.47,
+        "efficiency": 8.157,
+        "opp_adj": 1.031
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 11.0 2025 games",
+        "pace_script_adj": 0.727,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 18.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 10.5,
+        "opponent": "arizona",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
+     "name": "Darrius Clemons",
+     "team": "Washington State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 30.6,
+       "edge_pct": -18.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 4.12,
+        "efficiency": 7.203,
+        "opp_adj": 1.031
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.727,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 18.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 10.5,
+        "opponent": "arizona",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.7,
+       "edge_pct": -22.9,
+       "over_price": -122.0,
+       "under_price": -106.0,
+       "n_books": "1",
+       "components": {
+        "volume": 4.12,
+        "efficiency": 0.642,
+        "opp_adj": 1.031
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.727,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 18.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 10.5,
+        "opponent": "arizona",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -14861,6 +17138,106 @@
    "away_team": "Texas A&M Aggies",
    "commence_time": "2026-09-26T23:30:00Z",
    "players": [
+    {
+     "name": "Dilin Jones",
+     "team": "LSU",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 9.5,
+       "projection": 9.1,
+       "edge_pct": -4.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 2.12,
+        "efficiency": 4.501,
+        "opp_adj": 0.957
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 1.117,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 30.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.25,
+        "opponent": "texasam",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.957,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 92.0,
+       "projection": 71.5,
+       "edge_pct": -22.3,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "2",
+       "components": {
+        "volume": 23.11,
+        "efficiency": 4.536,
+        "opp_adj": 0.682
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 1.498,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 30.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.25,
+        "opponent": "texasam",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.923,
+        "matchup_grade_adj": 0.739,
+        "tarp_adj": null,
+        "td_rate": 0.0384,
+        "expected_td": 0.886
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.6,
+       "edge_pct": -36.0,
+       "over_price": 124.0,
+       "under_price": -161.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.12,
+        "efficiency": 0.775,
+        "opp_adj": 0.957
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 1.117,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 30.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -8.25,
+        "opponent": "texasam",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.957,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
     {
      "name": "Eugene Wilson III",
      "team": "LSU",
@@ -15412,44 +17789,6 @@
        }
       }
      }
-    },
-    {
-     "name": "Dilin Jones",
-     "team": "Wisconsin",
-     "position": "HB",
-     "markets": {
-      "player_rush_yds": {
-       "stat": "rush_yds",
-       "book_line": 92.0,
-       "projection": 52.5,
-       "edge_pct": -42.9,
-       "over_price": -110.0,
-       "under_price": -118.0,
-       "n_books": "2",
-       "components": {
-        "volume": 6.69,
-        "efficiency": 4.536,
-        "opp_adj": 1.731
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
-        "pace_script_adj": 0.433,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 17.0,
-        "league_avg_implied": 26.4,
-        "team_spread": 10.0,
-        "opponent": "pennstate",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.873,
-        "matchup_grade_adj": 1.172,
-        "tarp_adj": null,
-        "td_rate": 0.0384,
-        "expected_td": 0.257
-       }
-      }
-     }
     }
    ]
   },
@@ -15874,6 +18213,144 @@
      }
     },
     {
+     "name": "Messiah Hampton",
+     "team": "Oregon",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 30.5,
+       "projection": 37.7,
+       "edge_pct": 23.6,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3",
+       "components": {
+        "volume": 4.04,
+        "efficiency": 8.642,
+        "opp_adj": 1.079
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.211,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "usc",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.079,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 0.808
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.3,
+       "edge_pct": 32.0,
+       "over_price": -167.0,
+       "under_price": 128.0,
+       "n_books": "1",
+       "components": {
+        "volume": 4.04,
+        "efficiency": 0.746,
+        "opp_adj": 1.079
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.211,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.0,
+        "opponent": "usc",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.079,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 0.808
+       }
+      }
+     }
+    },
+    {
+     "name": "Corey Simms",
+     "team": "USC",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 29.5,
+       "projection": 20.8,
+       "edge_pct": -29.5,
+       "over_price": -110.0,
+       "under_price": -118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.37,
+        "efficiency": 9.555,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0588,
+        "expected_td": 0.139
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.6,
+       "edge_pct": -36.0,
+       "over_price": 100.0,
+       "under_price": -130.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.37,
+        "efficiency": 0.724,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0588,
+        "expected_td": 0.139
+       }
+      }
+     }
+    },
+    {
      "name": "Jayden Maiava",
      "team": "USC",
      "position": "QB",
@@ -15945,6 +18422,75 @@
         "tarp_adj": null,
         "td_rate": 0.0495,
         "expected_td": 0.653
+       }
+      }
+     }
+    },
+    {
+     "name": "Mark Bowman",
+     "team": "USC",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 37.5,
+       "projection": 39.4,
+       "edge_pct": 5.1,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 5.29,
+        "efficiency": 8.087,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1053,
+        "expected_td": 0.557
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 3.5,
+       "edge_pct": 0.0,
+       "over_price": -119.0,
+       "under_price": -109.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.29,
+        "efficiency": 0.717,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1053,
+        "expected_td": 0.557
        }
       }
      }
@@ -16052,6 +18598,75 @@
         "tarp_adj": null,
         "td_rate": 0.0453,
         "expected_td": 0.531
+       }
+      }
+     }
+    },
+    {
+     "name": "Zacharyus Williams",
+     "team": "USC",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.5,
+       "projection": 22.4,
+       "edge_pct": -8.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.95,
+        "efficiency": 12.472,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0714,
+        "expected_td": 0.139
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 1.3,
+       "edge_pct": -13.3,
+       "over_price": -172.0,
+       "under_price": 132.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.95,
+        "efficiency": 0.736,
+        "opp_adj": 0.92
+       },
+       "breakdown": {
+        "volume_source": "blended: 4 2026 games + 4.0 2025 games",
+        "pace_script_adj": 1.115,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 29.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 3.0,
+        "opponent": "oregon",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.92,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0714,
+        "expected_td": 0.139
        }
       }
      }
@@ -16341,6 +18956,213 @@
      }
     },
     {
+     "name": "Sanfrisco Magee",
+     "team": "Mississippi State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 34.5,
+       "projection": 22.0,
+       "edge_pct": -36.2,
+       "over_price": -112.0,
+       "under_price": -118.0,
+       "n_books": "3",
+       "components": {
+        "volume": 2.95,
+        "efficiency": 8.633,
+        "opp_adj": 0.864
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 5.0 2025 games",
+        "pace_script_adj": 1.199,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -5.75,
+        "opponent": "missouri",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.864,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1744,
+        "expected_td": 0.515
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 1.8,
+       "edge_pct": -48.6,
+       "over_price": 146.0,
+       "under_price": -192.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.95,
+        "efficiency": 0.699,
+        "opp_adj": 0.864
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 5.0 2025 games",
+        "pace_script_adj": 1.199,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -5.75,
+        "opponent": "missouri",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.864,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1744,
+        "expected_td": 0.515
+       }
+      }
+     }
+    },
+    {
+     "name": "Zion Ragins",
+     "team": "Mississippi State",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 41.5,
+       "projection": 45.4,
+       "edge_pct": 9.4,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3",
+       "components": {
+        "volume": 5.99,
+        "efficiency": 8.776,
+        "opp_adj": 0.864
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.199,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -5.75,
+        "opponent": "missouri",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.864,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 1.198
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 3.2,
+       "edge_pct": 28.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.99,
+        "efficiency": 0.624,
+        "opp_adj": 0.864
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.199,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 32.1,
+        "league_avg_implied": 26.4,
+        "team_spread": -5.75,
+        "opponent": "missouri",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.864,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2,
+        "expected_td": 1.198
+       }
+      }
+     }
+    },
+    {
+     "name": "Austin Simmons",
+     "team": "Missouri",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 224.5,
+       "projection": 120.3,
+       "edge_pct": -46.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 15.39,
+        "efficiency": 8.822,
+        "opp_adj": 0.886
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 8.0 2025 games",
+        "pace_script_adj": 1.012,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.4,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.75,
+        "opponent": "mississippistate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.886,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0939,
+        "expected_td": 1.445
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 4.5,
+       "projection": 7.0,
+       "edge_pct": 55.6,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 1.95,
+        "efficiency": 3.743,
+        "opp_adj": 0.962
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 8.0 2025 games",
+        "pace_script_adj": 0.779,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.4,
+        "league_avg_implied": 26.4,
+        "team_spread": 5.75,
+        "opponent": "mississippistate",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.881,
+        "matchup_grade_adj": 1.048,
+        "tarp_adj": null,
+        "td_rate": 0.0286,
+        "expected_td": 0.056
+       }
+      }
+     }
+    },
+    {
      "name": "Brett Norfleet",
      "team": "Missouri",
      "position": "TE",
@@ -16615,44 +19437,6 @@
        }
       }
      }
-    },
-    {
-     "name": "Austin Simmons",
-     "team": "Ole Miss",
-     "position": "QB",
-     "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 224.5,
-       "projection": 137.6,
-       "edge_pct": -38.7,
-       "over_price": -114.0,
-       "under_price": -114.0,
-       "n_books": "3",
-       "components": {
-        "volume": 15.96,
-        "efficiency": 8.822,
-        "opp_adj": 0.977
-       },
-       "breakdown": {
-        "volume_source": "blended: 3 2026 games + 8.0 2025 games",
-        "pace_script_adj": 1.049,
-        "depth_rank_adj": null,
-        "depth_rank": null,
-        "team_implied": 27.5,
-        "league_avg_implied": 26.4,
-        "team_spread": 3.5,
-        "opponent": "florida",
-        "pff_def_grade_adj": 1.0,
-        "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.977,
-        "matchup_grade_adj": 1.0,
-        "tarp_adj": null,
-        "td_rate": 0.0939,
-        "expected_td": 1.499
-       }
-      }
-     }
     }
    ]
   },
@@ -16808,6 +19592,44 @@
      }
     },
     {
+     "name": "Ismael Cisse",
+     "team": "Arkansas",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 21.5,
+       "projection": 18.6,
+       "edge_pct": -13.5,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.5,
+        "efficiency": 7.861,
+        "opp_adj": 0.947
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.07,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -7.0,
+        "opponent": "tulsa",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.947,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.2857,
+        "expected_td": 0.714
+       }
+      }
+     }
+    },
+    {
      "name": "KJ Jackson",
      "team": "Arkansas",
      "position": "QB",
@@ -16841,6 +19663,37 @@
         "tarp_adj": null,
         "td_rate": 0.0456,
         "expected_td": 0.978
+       }
+      },
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 22.5,
+       "projection": 20.8,
+       "edge_pct": -7.6,
+       "over_price": -112.0,
+       "under_price": -116.0,
+       "n_books": "2",
+       "components": {
+        "volume": 4.92,
+        "efficiency": 5.338,
+        "opp_adj": 0.791
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 5.0 2025 games",
+        "pace_script_adj": 1.378,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -7.0,
+        "opponent": "tulsa",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.037,
+        "matchup_grade_adj": 0.762,
+        "tarp_adj": null,
+        "td_rate": 0.064,
+        "expected_td": 0.315
        }
       }
      }
@@ -16915,142 +19768,180 @@
      }
     },
     {
+     "name": "Ty Lockwood",
+     "team": "Arkansas",
+     "position": "TE",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 24.5,
+       "projection": 14.9,
+       "edge_pct": -39.2,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 2.14,
+        "efficiency": 7.345,
+        "opp_adj": 0.947
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 6.0 2025 games",
+        "pace_script_adj": 1.07,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.8,
+        "league_avg_implied": 26.4,
+        "team_spread": -7.0,
+        "opponent": "tulsa",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.947,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0714,
+        "expected_td": 0.153
+       }
+      }
+     }
+    },
+    {
      "name": "Damari Alston",
-     "team": "Auburn",
+     "team": "Tulsa",
      "position": "HB",
      "markets": {
       "player_rush_yds": {
        "stat": "rush_yds",
        "book_line": 53.0,
-       "projection": 63.4,
-       "edge_pct": 19.6,
+       "projection": 37.2,
+       "edge_pct": -29.8,
        "over_price": -114.0,
        "under_price": -114.0,
        "n_books": "2",
        "components": {
-        "volume": 16.27,
+        "volume": 5.86,
         "efficiency": 4.834,
-        "opp_adj": 0.806
+        "opp_adj": 1.314
        },
        "breakdown": {
         "volume_source": "blended: 3 2026 games + 4.0 2025 games",
-        "pace_script_adj": 1.675,
+        "pace_script_adj": 0.603,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 32.5,
+        "team_implied": 21.8,
         "league_avg_implied": 26.4,
-        "team_spread": -9.5,
-        "opponent": "vanderbilt",
+        "team_spread": 7.0,
+        "opponent": "arkansas",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.976,
-        "matchup_grade_adj": 1.159,
+        "success_rate_adj": 1.19,
+        "matchup_grade_adj": 1.103,
         "tarp_adj": null,
         "td_rate": 0.0588,
-        "expected_td": 0.957
+        "expected_td": 0.345
        }
       }
      }
     },
     {
      "name": "Dexter Williams II",
-     "team": "Kennesaw State",
+     "team": "Tulsa",
      "position": "QB",
      "markets": {
       "player_pass_yds": {
        "stat": "pass_yds",
        "book_line": 170.5,
-       "projection": 134.3,
-       "edge_pct": -21.2,
+       "projection": 101.8,
+       "edge_pct": -40.3,
        "over_price": -113.0,
        "under_price": -114.5,
        "n_books": "2",
        "components": {
-        "volume": 13.47,
+        "volume": 12.62,
         "efficiency": 6.632,
-        "opp_adj": 1.503
+        "opp_adj": 1.217
        },
        "breakdown": {
         "volume_source": "blended: 2 2026 games + 8.0 2025 games",
-        "pace_script_adj": 0.893,
+        "pace_script_adj": 0.837,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 23.2,
+        "team_implied": 21.8,
         "league_avg_implied": 26.4,
-        "team_spread": 6.5,
-        "opponent": "arkansasstate",
+        "team_spread": 7.0,
+        "opponent": "arkansas",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.503,
+        "success_rate_adj": 1.217,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
         "td_rate": 0.0663,
-        "expected_td": 0.893
+        "expected_td": 0.837
        }
       },
       "player_rush_yds": {
        "stat": "rush_yds",
        "book_line": 17.0,
-       "projection": 12.7,
-       "edge_pct": -25.3,
+       "projection": 13.4,
+       "edge_pct": -21.2,
        "over_price": -112.0,
        "under_price": -116.0,
        "n_books": "2",
        "components": {
-        "volume": 2.37,
+        "volume": 2.16,
         "efficiency": 4.714,
-        "opp_adj": 1.133
+        "opp_adj": 1.314
        },
        "breakdown": {
         "volume_source": "blended: 2 2026 games + 8.0 2025 games",
-        "pace_script_adj": 0.662,
+        "pace_script_adj": 0.603,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 23.2,
+        "team_implied": 21.8,
         "league_avg_implied": 26.4,
-        "team_spread": 6.5,
-        "opponent": "arkansasstate",
+        "team_spread": 7.0,
+        "opponent": "arkansas",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.07,
-        "matchup_grade_adj": 0.87,
+        "success_rate_adj": 1.19,
+        "matchup_grade_adj": 1.103,
         "tarp_adj": null,
         "td_rate": 0.0698,
-        "expected_td": 0.165
+        "expected_td": 0.151
        }
       }
      }
     },
     {
      "name": "Jimmy Calloway",
-     "team": "Tulane",
+     "team": "Tulsa",
      "position": "WR",
      "markets": {
       "player_reception_yds": {
        "stat": "rec_yds",
        "book_line": 41.5,
-       "projection": 27.7,
-       "edge_pct": -33.3,
+       "projection": 19.8,
+       "edge_pct": -52.3,
        "over_price": -118.0,
        "under_price": -110.0,
        "n_books": "2",
        "components": {
-        "volume": 4.53,
+        "volume": 3.04,
         "efficiency": 6.115,
-        "opp_adj": 1.0
+        "opp_adj": 1.062
        },
        "breakdown": {
         "volume_source": "blended: 3 2026 games + 13.0 2025 games",
-        "pace_script_adj": 1.244,
+        "pace_script_adj": 0.837,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 35.2,
+        "team_implied": 21.8,
         "league_avg_implied": 26.4,
-        "team_spread": -18.0,
-        "opponent": "southernmiss",
+        "team_spread": 7.0,
+        "opponent": "arkansas",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.0,
+        "success_rate_adj": 1.062,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
         "td_rate": 0.0,
@@ -17060,32 +19951,101 @@
       "player_receptions": {
        "stat": "receptions",
        "book_line": 3.5,
-       "projection": 2.5,
-       "edge_pct": -28.6,
+       "projection": 1.8,
+       "edge_pct": -48.6,
        "over_price": -108.0,
        "under_price": -120.0,
        "n_books": "1",
        "components": {
-        "volume": 4.53,
+        "volume": 3.04,
         "efficiency": 0.552,
-        "opp_adj": 1.0
+        "opp_adj": 1.062
        },
        "breakdown": {
         "volume_source": "blended: 3 2026 games + 13.0 2025 games",
-        "pace_script_adj": 1.244,
+        "pace_script_adj": 0.837,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 35.2,
+        "team_implied": 21.8,
         "league_avg_implied": 26.4,
-        "team_spread": -18.0,
-        "opponent": "southernmiss",
+        "team_spread": 7.0,
+        "opponent": "arkansas",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 1.0,
+        "success_rate_adj": 1.062,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
         "td_rate": 0.0,
         "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
+     "name": "Oran Singleton Jr.",
+     "team": "Tulsa",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 36.0,
+       "projection": 21.9,
+       "edge_pct": -39.2,
+       "over_price": -112.0,
+       "under_price": -116.5,
+       "n_books": "2",
+       "components": {
+        "volume": 2.39,
+        "efficiency": 8.61,
+        "opp_adj": 1.062
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.837,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 21.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 7.0,
+        "opponent": "arkansas",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.062,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1,
+        "expected_td": 0.239
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 2.5,
+       "projection": 1.7,
+       "edge_pct": -32.0,
+       "over_price": -145.0,
+       "under_price": 112.0,
+       "n_books": "1",
+       "components": {
+        "volume": 2.39,
+        "efficiency": 0.659,
+        "opp_adj": 1.062
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 4.0 2025 games",
+        "pace_script_adj": 0.837,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 21.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 7.0,
+        "opponent": "arkansas",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.062,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1,
+        "expected_td": 0.239
        }
       }
      }
@@ -17580,6 +20540,44 @@
      }
     },
     {
+     "name": "Damien Morgan",
+     "team": "Nevada",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 32.3,
+       "edge_pct": -24.0,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "1",
+       "components": {
+        "volume": 4.84,
+        "efficiency": 7.321,
+        "opp_adj": 0.911
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.854,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 22.2,
+        "league_avg_implied": 26.4,
+        "team_spread": 6.0,
+        "opponent": "airforce",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.911,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "Dominic Kelley",
      "team": "Nevada",
      "position": "FB",
@@ -17701,6 +20699,113 @@
    "away_team": "Georgia Tech Yellow Jackets",
    "commence_time": "2026-09-27T02:30:00Z",
    "players": [
+    {
+     "name": "Alberto Mendoza",
+     "team": "Georgia Tech",
+     "position": "QB",
+     "markets": {
+      "player_pass_yds": {
+       "stat": "pass_yds",
+       "book_line": 220.5,
+       "projection": 157.2,
+       "edge_pct": -28.7,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "3",
+       "components": {
+        "volume": 13.76,
+        "efficiency": 8.255,
+        "opp_adj": 1.384
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
+        "pace_script_adj": 0.975,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "stanford",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.459,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0695,
+        "expected_td": 0.956
+       }
+      }
+     }
+    },
+    {
+     "name": "Dalen Penson",
+     "team": "Georgia Tech",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 44.5,
+       "projection": 54.0,
+       "edge_pct": 21.3,
+       "over_price": -114.0,
+       "under_price": -115.0,
+       "n_books": "3",
+       "components": {
+        "volume": 5.2,
+        "efficiency": 9.18,
+        "opp_adj": 1.131
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.975,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "stanford",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.131,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.1,
+       "edge_pct": 17.1,
+       "over_price": 104.5,
+       "under_price": -137.5,
+       "n_books": "2",
+       "components": {
+        "volume": 5.2,
+        "efficiency": 0.696,
+        "opp_adj": 1.131
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.975,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "stanford",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.131,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
     {
      "name": "Jordan Allen",
      "team": "Georgia Tech",
@@ -17871,39 +20976,70 @@
      }
     },
     {
-     "name": "Alberto Mendoza",
-     "team": "Indiana",
-     "position": "QB",
+     "name": "Kevin Roche Jr.",
+     "team": "Georgia Tech",
+     "position": "TE",
      "markets": {
-      "player_pass_yds": {
-       "stat": "pass_yds",
-       "book_line": 220.5,
-       "projection": 106.2,
-       "edge_pct": -51.8,
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 29.5,
+       "projection": 48.1,
+       "edge_pct": 63.1,
        "over_price": -114.0,
        "under_price": -114.0,
-       "n_books": "3",
+       "n_books": "1",
        "components": {
-        "volume": 14.45,
-        "efficiency": 8.255,
-        "opp_adj": 0.891
+        "volume": 5.2,
+        "efficiency": 8.18,
+        "opp_adj": 1.131
        },
        "breakdown": {
-        "volume_source": "blended: 3 2026 games + 7.0 2025 games",
-        "pace_script_adj": 1.024,
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.975,
         "depth_rank_adj": null,
         "depth_rank": null,
-        "team_implied": 28.5,
+        "team_implied": 26.0,
         "league_avg_implied": 26.4,
-        "team_spread": -22.5,
-        "opponent": "northwestern",
+        "team_spread": -3.5,
+        "opponent": "stanford",
         "pff_def_grade_adj": 1.0,
         "pff_def_grade_adj_active": false,
-        "success_rate_adj": 0.891,
+        "success_rate_adj": 1.131,
         "matchup_grade_adj": 1.0,
         "tarp_adj": null,
-        "td_rate": 0.0695,
-        "expected_td": 1.004
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 4.1,
+       "edge_pct": 17.1,
+       "over_price": 124.0,
+       "under_price": -161.0,
+       "n_books": "1",
+       "components": {
+        "volume": 5.2,
+        "efficiency": 0.696,
+        "opp_adj": 1.131
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.975,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 26.0,
+        "league_avg_implied": 26.4,
+        "team_spread": -3.5,
+        "opponent": "stanford",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.131,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
@@ -18507,6 +21643,82 @@
      }
     },
     {
+     "name": "TJ Thomas",
+     "team": "Minnesota",
+     "position": "HB",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 9.5,
+       "projection": 21.3,
+       "edge_pct": 124.2,
+       "over_price": -116.0,
+       "under_price": -111.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.11,
+        "efficiency": 6.55,
+        "opp_adj": 1.045
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 0.717,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 17.8,
+        "league_avg_implied": 26.4,
+        "team_spread": 10.5,
+        "opponent": "washington",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.937,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
+     "name": "Brian Bonner Jr.",
+     "team": "Washington",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 32.5,
+       "projection": 55.7,
+       "edge_pct": 71.4,
+       "over_price": -114.0,
+       "under_price": -114.0,
+       "n_books": "2",
+       "components": {
+        "volume": 11.22,
+        "efficiency": 5.506,
+        "opp_adj": 0.902
+       },
+       "breakdown": {
+        "volume_source": "blended: 2 2026 games + 0 2025 games",
+        "pace_script_adj": 1.496,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.037,
+        "matchup_grade_adj": 0.999,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
+       }
+      }
+     }
+    },
+    {
      "name": "Chris Lawson",
      "team": "Washington",
      "position": "WR",
@@ -18778,6 +21990,182 @@
         "tarp_adj": null,
         "td_rate": 0.0405,
         "expected_td": 0.298
+       }
+      }
+     }
+    },
+    {
+     "name": "Jordan Clay",
+     "team": "Washington",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 15.5,
+       "projection": 22.5,
+       "edge_pct": 45.2,
+       "over_price": -116.0,
+       "under_price": -111.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.47,
+        "efficiency": 6.976,
+        "opp_adj": 0.928
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.042,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1,
+        "expected_td": 0.347
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 1.5,
+       "projection": 2.2,
+       "edge_pct": 46.7,
+       "over_price": -154.0,
+       "under_price": 118.0,
+       "n_books": "1",
+       "components": {
+        "volume": 3.47,
+        "efficiency": 0.68,
+        "opp_adj": 0.928
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.042,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1,
+        "expected_td": 0.347
+       }
+      }
+     }
+    },
+    {
+     "name": "Rashid Williams",
+     "team": "Washington",
+     "position": "WR",
+     "markets": {
+      "player_reception_yds": {
+       "stat": "rec_yds",
+       "book_line": 42.5,
+       "projection": 34.2,
+       "edge_pct": -19.5,
+       "over_price": -114.5,
+       "under_price": -114.0,
+       "n_books": "4",
+       "components": {
+        "volume": 4.02,
+        "efficiency": 9.171,
+        "opp_adj": 0.928
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.042,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1111,
+        "expected_td": 0.447
+       }
+      },
+      "player_receptions": {
+       "stat": "receptions",
+       "book_line": 3.5,
+       "projection": 2.6,
+       "edge_pct": -25.7,
+       "over_price": 127.5,
+       "under_price": -168.0,
+       "n_books": "2",
+       "components": {
+        "volume": 4.02,
+        "efficiency": 0.702,
+        "opp_adj": 0.928
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 2.0 2025 games",
+        "pace_script_adj": 1.042,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 0.928,
+        "matchup_grade_adj": 1.0,
+        "tarp_adj": null,
+        "td_rate": 0.1111,
+        "expected_td": 0.447
+       }
+      }
+     }
+    },
+    {
+     "name": "Trey Cooley",
+     "team": "Washington",
+     "position": "HB",
+     "markets": {
+      "player_rush_yds": {
+       "stat": "rush_yds",
+       "book_line": 25.5,
+       "projection": 34.9,
+       "edge_pct": 36.9,
+       "over_price": -108.0,
+       "under_price": -120.0,
+       "n_books": "1",
+       "components": {
+        "volume": 8.98,
+        "efficiency": 4.313,
+        "opp_adj": 0.902
+       },
+       "breakdown": {
+        "volume_source": "blended: 3 2026 games + 0 2025 games",
+        "pace_script_adj": 1.496,
+        "depth_rank_adj": null,
+        "depth_rank": null,
+        "team_implied": 28.2,
+        "league_avg_implied": 26.4,
+        "team_spread": -10.5,
+        "opponent": "minnesota",
+        "pff_def_grade_adj": 1.0,
+        "pff_def_grade_adj_active": false,
+        "success_rate_adj": 1.037,
+        "matchup_grade_adj": 0.999,
+        "tarp_adj": null,
+        "td_rate": 0.0,
+        "expected_td": 0.0
        }
       }
      }
