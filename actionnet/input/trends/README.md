@@ -45,3 +45,17 @@ so delete the stale one or the refresh does nothing.
 | `ats_trends.html` | `ats_trends.txt` |
 | `ou_trends.html` | `ou_trends.txt` |
 | `win_trends.html` | `win_trends.txt` |
+
+A paste also arrives messier than a saved page: the O/U table once came
+through twice over, the header repeated partway down, the first copy severed
+mid-record, and the tail of the severed row on a line of its own. All three
+are skipped, so a duplicated or half-copied paste parses back to the same
+rows as a clean one -- no need to tidy it up first.
+
+## Checking a refresh
+
+The win and ATS pages share a MOV and an ATS +/- column, so they should agree
+team for team; a disagreement means one of the two is a week older than the
+other. Games played should match across all three, with one exception: a team
+whose game had no line posted (an FCS buy game) is a game short on
+`ats_trends` only, which is correct, not a stale page.
