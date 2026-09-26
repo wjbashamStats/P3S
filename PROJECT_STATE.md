@@ -100,6 +100,78 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    legitimately at both C and OT. Clean before name joins.
 4. **Delaware players** show 0'0"/0 size (PFF incomplete data) — cosmetic.
 5. **player_id is the reliable join key** across PFF files; names collide.
+6. **ATS and over/under records in the power table are current-season now,
+   but only because the TeamRankings pages are saved.** They used to come from
+   `X2022_ATS_Percent` / `X2022_OU_Percent` in team_ratings_2025.csv, which
+   despite that file's name really are the 2022 season -- a 2026 betting page
+   quoting 2022 cover rates, which did mislead a week-3 write-up before it was
+   caught. build_diversions_page_data now reads actionnet/input/trends
+   (ats_trends.html / ou_trends.html, parsed by actionnet/teamrankings.py),
+   ranks the percentages itself since those pages carry no rank column, and
+   falls back to the 2022 columns when the pages are missing. The row relabels
+   itself either way, so the page always says which vintage it is showing --
+   check that label before quoting the number. Note the current-season sample
+   is tiny in September (a 2-0 team shows as 100%, first nationally, tied with
+   45 others), which is why the page prints the record next to the percentage.
+   build_team_preview_data.py still reads the 2022 columns; nothing renders
+   them today, but it would need the same treatment if that page comes back.
+7. **team_ratings_2025.csv is the frozen preseason board, not a live rating.**
+   Despite the name it is a 2026 file, but it is a one-off snapshot and its SP /
+   TAN columns never move. The workbook's '2026 PR' sheet is the live one and is
+   refreshed weekly; by week 3 they disagreed on all 136 shared teams (Clemson
+   12.8 vs 8.1, Western Kentucky -5.3 vs -13.3, Houston 8.2 vs 11.6), always in
+   the direction of results. Reading the frozen file made the diversions an
+   artifact: the model held a preseason opinion while the book priced two games,
+   so the biggest "edges" landed on exactly the teams whose season had gone
+   differently than expected. Measured on the 54 rated week-3 games, the old
+   model's lean agreed with 2026 margin of victory 31% of the time, correlation
+   -0.57 (-0.62 on ATS +/-). On the live rating that is -0.02 and 50%.
+   build_team_ratings_2026.py writes team_ratings_<season>.csv from the
+   workbook; pass it with --team-ratings. The five-factor rank_ columns come
+   across as CFBData26, so the radars become current-season too. Run it every
+   week the workbook is refreshed, or the page silently goes stale again.
+8. **Team Total needs regressing early in the season.** It is each team's own
+   points per game, so two games in it is a schedule artifact, not a rating:
+   raw, it had Mississippi State at 45.9 and South Carolina at 41.2 and
+   projected their game at 87.1 against a book total of 58.5.
+   build_diversions_page_data.shrink_team_totals regresses it toward the slate
+   mean by games played (w = n/(n+4), the same shrinkage the player projections
+   use), which is on by default; --no-shrink-totals turns it off.
+9. **The workbook's TeamID sheet had Arizona and Arizona State's ESPN names
+   swapped.** an_metrics derives Mascot by stripping the school off the front of
+   the ESPN name, so Arizona's row produced the mascot "State Sun Devils", which
+   collides with Arizona State on the norm(Team + Mascot) key every page builder
+   joins on: one school gets the other's ratings. an_metrics now detects an ESPN
+   value that starts with a longer team name also present in the file, nulls the
+   mascot and reports it; build_team_ratings_2026.py fills the blank from the old
+   snapshot. Fix it in the workbook; nine other teams have no derivable mascot at
+   all and are filled the same way.
+10. **The date window is a weekend, so the board can carry games already played.**
+    build_diversions_page_data filters on a date range, and on a Saturday morning
+    that range still contains Thursday and Friday night. Week 3 2026 had Miami at
+    Wake Forest on the board with an 8.7-point total "edge" in a game that had
+    kicked off the night before, and it was picked before a web search caught it.
+    Every game now carries a `started` flag; --drop-started removes them, and pick
+    selection should always use it.
+11. **PFF team grades are a per-season export.** team_pff_grades_<season>.csv,
+    picked by config.team_grades_for(season) from TEAM_GRADES_BY_SEASON. The page
+    builders take --season and resolve it; an unmapped season falls back to 2025
+    so the backtest keeps reading what it was validated on. The 2026 file came
+    from premium.pff.com/ncaa/teams/2026/REGPO -- note the page renders its table
+    from an API call after load, so saving the HTML gets nothing; copy the table
+    itself. Rank is computed here (grade_over descending), not taken from the page.
+12. **Home-field edge is applied unconditionally, including at neutral sites.**
+   build_diversions_page_data adds each team's HFACW to the home side of every
+   game, and the Odds API feed names one team "home" even for a neutral-site
+   game. Week 3 2026 has Kansas vs Arizona State at Wembley Stadium in London:
+   the feed lists Arizona State as home, the book lists the game as Arizona
+   State @ Kansas, and our predicted spread carries a home edge neither side
+   actually has. The spread magnitude and both implied team totals are still
+   right (the favorite is the favorite either way), so props built off implied
+   totals are unaffected -- but any predicted-spread diversion for a
+   neutral-site game is off by roughly one HFA, and the "home"/"away" labels
+   on it may be backwards. No flag for this exists in the data; check the
+   venue by hand before betting a neutral-site diversion.
 
 ---
 

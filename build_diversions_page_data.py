@@ -48,10 +48,16 @@ pass/rush rate + success rate is driving the total, plus tempo.
     Field Position (not TARP) is the actual 5th factor in this
     project's own reference tool, confirmed against a side-by-side
     screenshot of it.
-  - power_table: TAN/SP/NetRP/2022 ATS%/2022 Over%/pace, each with a
+  - power_table: TAN/SP/NetRP/ATS%/Over%/pace, each with a
     rank. NetRP has no native rank column in the source file, so one is
     computed here the same way (sort all 136 teams descending, rank
     1..136) -- see rank_by_value().
+    ATS%/Over% are the CURRENT season from the saved TeamRankings pages
+    (actionnet/input/trends, --trends-dir) with a rank computed here
+    since those pages carry no rank column; when the pages are absent
+    they fall back to team_ratings' X2022_* columns, which really are
+    the 2022 season, and the row relabels itself so the page says so
+    -- see load_tr_trends() / _ats_ou_entry().
   - qb: each team's depth-chart-confirmed starter (depth_rank==1),
     joined to their PFF grade (master_crosswalk.csv) and real 2025
     season stats (player_season_totals.csv) by name -- same name-only
@@ -77,8 +83,12 @@ slate; pass --date-start/--date-end to point at a different week.
 
 Run:  python3 build_diversions_page_data.py --out diversions_2026wk1.json
 """
-import argparse, csv, json
+import argparse, csv, datetime, json, os, sys
+import config as C
 import data_load as DL
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "actionnet"))
+from teamrankings import TEAMRANKINGS_ALIASES, load_trends_dir  # noqa: E402
 
 
 def norm(s):
@@ -142,6 +152,161 @@ def _f(x, default=0.0):
         return default
 
 
+# TeamRankings spellings that don't reduce to a team_ratings_2025.csv "Team"
+# value by normalisation alone. Hand-verified one at a time against that
+# file's own Team column -- every target below is a real row in it. The
+# directional abbreviations can't be expanded by rule: "E Carolina" is East
+# and "E Michigan" is Eastern, so the single letter carries no information
+# about which word TeamRankings dropped. "Mississippi" is Ole Miss on that
+# site (it lists Mississippi State separately as "Mississippi St").
+# actionnet/teamrankings.py has its own five-entry alias table; it resolves
+# against the workbook's '2026 PR' sheet, which spells teams differently
+# again, so the two tables stay separate on purpose.
+TRENDS_TEAM_ALIASES = {
+    "Mississippi": "Ole Miss",
+    "S Florida": "South Florida",
+    "S Alabama": "South Alabama",
+    "App State": "Appalachian State",
+    "W Michigan": "Western Michigan",
+    "E Michigan": "Eastern Michigan",
+    "W Kentucky": "Western Kentucky",
+    "E Carolina": "East Carolina",
+    "N Illinois": "Northern Illinois",
+    "Miami OH": "Miami Ohio",
+    "Middle Tenn": "Middle Tennessee",
+    "Florida Intl": "Florida International",
+    "Coastal Car": "Coastal Carolina",
+}
+
+# FCS teams TeamRankings covers that team_ratings_2025.csv correctly does
+# not rate -- expected misses, not join bugs, so they're not reported.
+TRENDS_UNRATED = {"North Dakota State", "Sacramento State"}
+
+DEFAULT_TRENDS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                  "actionnet", "input", "trends")
+
+
+def _tr_norm(name):
+    """TeamRankings' loose key: lowercase alphanumerics with 'St'/'St.'
+    expanded to 'State', same rule actionnet/an_metrics.py joins on."""
+    s = (name or "").lower().replace("&", " and ")
+    s = s.replace(" st.", " state").replace(" st ", " state ")
+    if s.endswith(" st"):
+        s = s[:-3] + " state"
+    return "".join(ch for ch in s if ch.isalnum())
+
+
+def _competition_rank(pairs):
+    """{key: rank} over [(key, value)], best value = rank 1, ties SHARE the
+    better rank and consume the ones after it (1,2,2,4) -- the convention
+    TeamRankings itself uses. Ties matter a lot here: three games into a
+    season most of the slate sits on 1.000 / .500 / .000, and handing those
+    teams distinct ranks would invent a precision the record doesn't have."""
+    out, prev_val, prev_rank = {}, None, 0
+    for i, (k, v) in enumerate(sorted(pairs, key=lambda kv: kv[1], reverse=True), start=1):
+        rank = prev_rank if v == prev_val else i
+        out[k] = rank
+        prev_val, prev_rank = v, rank
+    return out
+
+
+SHRINK_GAMES = 4.0
+
+
+def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
+    """Regress each team's Team Total toward the slate's own mean, weighted by
+    games played: w = n / (n + k), total = w * team + (1 - w) * mean.
+
+    The Team Total column is each team's own points per game, and on the 2026
+    workbook that is two or three games deep. Un-regressed it is not a rating,
+    it is a schedule artifact: through week 2 it had Mississippi State at 45.9
+    and South Carolina at 41.2, so their game projected 87.1 against a book
+    total of 58.5, a 28.6-point "edge" that is really just two teams who have
+    played nobody yet. The same column on the frozen 2025 file had the opposite
+    problem, describing a season that is over.
+
+    This is the same shrinkage project.blend_prior_and_current already applies
+    to player rates, with the league mean standing in for the prior instead of
+    last season, so it stays inside the current season. k = 4 games puts a
+    2-0 team at one third its own number and two thirds the field's, and the
+    weight climbs on its own as the season fills in; by November a team carries
+    its own scoring almost entirely.
+
+    Games come from the TeamRankings win-trends record (W + L + T). A team with
+    no record parsed keeps its raw number and is reported.
+    """
+    totals = [_f(r.get("Team Total"), None) for r in ratings_raw.values()]
+    totals = [t for t in totals if t is not None]
+    if not totals:
+        return
+    mean = sum(totals) / len(totals)
+    shrunk, no_games = 0, []
+    for r in ratings_raw.values():
+        own = _f(r.get("Team Total"), None)
+        if own is None:
+            continue
+        n = sum(_f(r.get(c), 0.0) for c in ("TR_win_win_loss_record_W",
+                                            "TR_win_win_loss_record_L",
+                                            "TR_win_win_loss_record_T"))
+        if not n:
+            no_games.append(r.get("Team"))
+            continue
+        w = n / (n + k)
+        r["Team Total"] = w * own + (1.0 - w) * mean
+        shrunk += 1
+    log(f"[shrink] team totals toward the slate mean {mean:.1f} (k={k:.0f} games): "
+        f"{shrunk} teams"
+        + (f"; no record, left raw: {', '.join(no_games)}" if no_games else ""))
+
+
+def load_tr_trends(trends_dir, ratings_raw, log=print):
+    """Current-season ATS / over-under records from the saved TeamRankings
+    pages, keyed the same norm(Team+Mascot) way as ratings_raw.
+
+    This is what the power table SHOULD show: team_ratings_2025.csv carries
+    X2022_ATS_Percent / X2022_OU_Percent, and despite living in a file named
+    for 2025 those columns are literally the 2022 season -- a 2026 betting
+    page quoting 2022 cover rates as if they were current is the kind of
+    thing that quietly misleads. TeamRankings is the live source, so it wins
+    when present and the 2022 columns stay as the fallback for a week where
+    nobody saved the pages (see power_table_entry).
+
+    Ranks are computed here rather than read: the trends pages carry the
+    percentages but no rank column.
+    """
+    if not trends_dir or not os.path.isdir(trends_dir):
+        log(f"[fall] trends   no {trends_dir} -- power table stays on the 2022 columns")
+        return {}
+    merged = load_trends_dir(trends_dir, log)
+    if not merged:
+        return {}
+    # ratings_raw is keyed norm(Team+Mascot); TeamRankings says "Air Force",
+    # so index the rows by their bare Team name (both raw and St-expanded)
+    # and resolve into that.
+    by_team = {}
+    for key, row in ratings_raw.items():
+        for variant in (norm(row.get("Team", "")), _tr_norm(row.get("Team", ""))):
+            if variant:
+                by_team.setdefault(variant, key)
+    out, unresolved = {}, []
+    for raw, cols in merged.items():
+        name = TRENDS_TEAM_ALIASES.get(raw) or TEAMRANKINGS_ALIASES.get(raw, raw)
+        key = by_team.get(norm(name)) or by_team.get(_tr_norm(name))
+        if not key:
+            if name not in TRENDS_UNRATED:
+                unresolved.append(raw)
+            continue
+        out[key] = cols
+    log(f"[join] trends (TeamRankings)  {len(out)}/{len(merged)} teams resolved"
+        + (f", UNRESOLVED: {', '.join(unresolved)}" if unresolved else ""))
+    ats = [(k, c["TR_ats_cover_pct"]) for k, c in out.items() if c.get("TR_ats_cover_pct") is not None]
+    ovr = [(k, c["TR_ou_over_pct"]) for k, c in out.items() if c.get("TR_ou_over_pct") is not None]
+    ats_rank, over_rank = _competition_rank(ats), _competition_rank(ovr)
+    for k, c in out.items():
+        c["ats_rank"], c["over_rank"] = ats_rank.get(k), over_rank.get(k)
+    return out
+
+
 def rank_by_value(ratings_raw, field, reverse=True):
     """Compute a 1..N rank across all rows on a field with no native
     rank_ column in the source file (NetRP) -- same 'sort descending,
@@ -160,7 +325,7 @@ def five_factors(rh, ra):
     return dict(home_off=home_off, home_def=home_def, away_off=away_off, away_def=away_def)
 
 
-def power_table_entry(r, net_rp_rank):
+def power_table_entry(r, net_rp_rank, tr=None):
     # Seconds/Play comes from team_ratings' SPP column, NOT its "Tempo"
     # column -- team_ratings_2025.csv has both, and they're unrelated
     # (see the SPP-vs-Tempo comment history in this file's git log).
@@ -178,9 +343,30 @@ def power_table_entry(r, net_rp_rank):
         tan=_f(r.get("TAN")), tan_rank=_f(r.get("rank_TAN"), None),
         sp=_f(r.get("SP")), sp_rank=_f(r.get("rank_SP"), None),
         net_rp=_f(r.get("NetRP")), net_rp_rank=net_rp_rank,
-        ats_pct=_f(r.get("X2022_ATS_Percent"), None), ats_rank=_f(r.get("Rank_2022_ATS_Percent"), None),
-        over_pct=_f(r.get("X2022_OU_Percent"), None), over_rank=_f(r.get("Rank_2022_OU_Percent"), None),
         seconds_per_play=_f(r.get("SPP")), tempo_rank=_f(r.get("rank_SPP"), None),
+        **_ats_ou_entry(r, tr),
+    )
+
+
+def _ats_ou_entry(r, tr):
+    """Current-season ATS/over-under when the TeamRankings pages were saved,
+    the 2022 columns when they weren't -- labelled either way, because these
+    two rows are the only ones in the power table whose vintage isn't obvious
+    from the number itself."""
+    if tr:
+        return dict(
+            ats_pct=tr.get("TR_ats_cover_pct"), ats_rank=tr.get("ats_rank"),
+            ats_record=tr.get("TR_ats_ats_record"), ats_label="ATS W/L%",
+            over_pct=tr.get("TR_ou_over_pct"), over_rank=tr.get("over_rank"),
+            over_record=tr.get("TR_ou_over_record"), over_label="Over W/L%",
+            trends_vintage="current",
+        )
+    return dict(
+        ats_pct=_f(r.get("X2022_ATS_Percent"), None), ats_rank=_f(r.get("Rank_2022_ATS_Percent"), None),
+        ats_record=None, ats_label="2022 ATS W/L%",
+        over_pct=_f(r.get("X2022_OU_Percent"), None), over_rank=_f(r.get("Rank_2022_OU_Percent"), None),
+        over_record=None, over_label="2022 Over W/L%",
+        trends_vintage="2022",
     )
 
 
@@ -420,11 +606,34 @@ def total_reason(home_team, away_team, book_total, pred_total, total_diff,
     return " ".join(parts)
 
 
+def _started(commence_time, now=None):
+    """True once kickoff has passed. The date window is a whole weekend, so on a
+    Saturday morning the board still carries Thursday and Friday night's games:
+    week 3 2026 had Miami at Wake Forest sitting on the board with an 8.7-point
+    total "edge" in a game that had already been played. Stamped on every game
+    rather than filtered out, so the board can still show them; --drop-started
+    removes them for pick selection."""
+    if not commence_time:
+        return False
+    try:
+        t = datetime.datetime.fromisoformat(str(commence_time).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return t < (now or datetime.datetime.now(datetime.timezone.utc))
+
+
 def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
-          pff_crosswalk_path, season_totals_path, team_grades_path, team_map_path, date_start, date_end):
+          pff_crosswalk_path, season_totals_path, team_grades_path, team_map_path, date_start, date_end,
+          trends_dir=DEFAULT_TRENDS_DIR, shrink_totals=True, drop_started=False):
     ratings_raw = load_ratings_raw(ratings_path)
     team_avg = {t["team"]: t for t in json.load(open(team_averages_path))["teams"]}
     net_rp_rank = rank_by_value(ratings_raw, "NetRP")
+    tr_trends = load_tr_trends(trends_dir, ratings_raw)
+    if shrink_totals:
+        for key, cols in tr_trends.items():
+            ratings_raw[key].update({c: v for c, v in cols.items()
+                                     if c.startswith('TR_win_win_loss_record')})
+        shrink_team_totals(ratings_raw)
 
     depth_rows_by_team = load_depth_rows_by_team(depth_chart_path)
     starter_rows_by_team = load_starter_depth_rows_by_team(depth_chart_path)
@@ -498,10 +707,11 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                                             sp_h, sp_a, hfa, home_adj, away_adj),
                 total_reason=total_reason(home_team, away_team, book_total, pred_total, total_diff,
                                           home_avg, away_avg, total_floored),
+                started=_started(ct),
                 home_display=rh.get("Team", home_team), away_display=ra.get("Team", away_team),
                 five_factors=five_factors(rh, ra),
-                home_power=power_table_entry(rh, net_rp_rank.get(home_key)),
-                away_power=power_table_entry(ra, net_rp_rank.get(away_key)),
+                home_power=power_table_entry(rh, net_rp_rank.get(home_key), tr_trends.get(home_key)),
+                away_power=power_table_entry(ra, net_rp_rank.get(away_key), tr_trends.get(away_key)),
                 home_grades=match_team_grades(grades_by_team, rh.get("Team", home_team)),
                 away_grades=match_team_grades(grades_by_team, ra.get("Team", away_team)),
                 home_positions={g["key"]: build_position_player(depth_rows_by_team, home_team, g, pff_by_pkey, season_by_pkey) for g in POSITION_GROUPS},
@@ -509,6 +719,11 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                 starter_matchups=build_starter_matchups(starter_rows_by_team, home_team, away_team, pff_by_pkey),
             )
         out.append(row)
+
+    if drop_started:
+        n = len(out)
+        out = [r for r in out if not r.get("started")]
+        print(f"[drop] {n - len(out)} game(s) whose kickoff has already passed")
 
     out.sort(key=lambda r: -(abs(r["spread_diff"] or 0) + abs(r["total_diff"] or 0)))
     return out
@@ -522,18 +737,34 @@ def main():
     ap.add_argument("--depth-chart", default="depth_charts.csv")
     ap.add_argument("--pff-crosswalk", default="master_crosswalk.csv")
     ap.add_argument("--season-totals", default="player_season_totals.csv")
-    ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--team-grades", default=None,
+                    help="PFF team-grade export; defaults to the --season file "
+                         "from config.TEAM_GRADES_BY_SEASON")
     ap.add_argument("--team-map", default="team_map.csv")
     ap.add_argument("--date-start", default="2026-09-02", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--date-end", default="2026-09-07", help="inclusive, YYYY-MM-DD")
     ap.add_argument("--week", type=int, default=1)
     ap.add_argument("--season", type=int, default=2026)
+    ap.add_argument("--trends-dir", default=DEFAULT_TRENDS_DIR,
+                    help="directory holding the saved TeamRankings trends pages "
+                         "(ats_trends.html / ou_trends.html); the power table falls "
+                         "back to team_ratings' 2022 ATS/Over columns without them")
+    ap.add_argument("--drop-started", action="store_true",
+                    help="leave out games whose kickoff has already passed; every game "
+                         "carries a 'started' flag either way")
+    ap.add_argument("--no-shrink-totals", action="store_true",
+                    help="use each team's raw points-per-game in the predicted total "
+                         "instead of regressing it toward the slate mean by games played "
+                         "(see shrink_team_totals)")
     ap.add_argument("--out", default="diversions_2026wk1.json")
     args = ap.parse_args()
+    if args.team_grades is None:
+        args.team_grades = C.team_grades_for(args.season)
 
     games = build(args.game_lines, args.team_ratings, args.team_averages, args.depth_chart,
                   args.pff_crosswalk, args.season_totals, args.team_grades, args.team_map,
-                  args.date_start, args.date_end)
+                  args.date_start, args.date_end, args.trends_dir,
+                  shrink_totals=not args.no_shrink_totals, drop_started=args.drop_started)
     n_full = sum(1 for g in games if g["pred_spread"] is not None)
     n_grades = sum(1 for g in games if g.get("home_grades") or g.get("away_grades"))
     payload = dict(week=args.week, season=args.season, date_start=args.date_start,

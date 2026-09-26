@@ -27,3 +27,6 @@ venv/
 pages/build/
 actionnet/out/
 ranked/
+
+# actionnet weekly export -- regenerate with actionnet/an_metrics.py
+AN_2026_*.csv

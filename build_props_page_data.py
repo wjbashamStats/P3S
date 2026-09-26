@@ -153,7 +153,9 @@ def main():
     ap.add_argument("--props", default="hist_props_closing_wk1-15.csv")
     ap.add_argument("--game-lines", default="hist_lines_closing_wk1-15.csv")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
-    ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--team-grades", default=None,
+                    help="PFF team-grade export; defaults to the --season file "
+                         "from config.TEAM_GRADES_BY_SEASON")
     ap.add_argument("--depth-chart", default=None,
                     help="path to depth_charts.csv (pull_depth_charts.py) -- nudges "
                          "volume by ourlads.com depth-chart rank for pure-prior-year "
@@ -166,6 +168,8 @@ def main():
     ap.add_argument("--date-end", default=None, help="inclusive, YYYY-MM-DD")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
+    if args.team_grades is None:
+        args.team_grades = C.team_grades_for(args.season)
 
     games = build_week(args.week, args.props, args.game_lines, args.team_ratings, args.team_grades,
                        season=args.season, depth_chart_path=args.depth_chart,

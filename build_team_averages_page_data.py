@@ -13,6 +13,7 @@ projection.
 Run:  python3 build_team_averages_page_data.py --out team_averages.json
 """
 import argparse, csv, json
+import config as C
 import data_load as DL
 
 VOL_COLS = ("pass_att", "pass_yds", "pass_td", "rush_att", "rush_yds", "rush_td",
@@ -127,11 +128,15 @@ def build(season_totals_path, team_grades_path, team_ratings_path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--season-totals", default="player_season_totals.csv")
-    ap.add_argument("--team-grades", default="team_pff_grades_2025.csv")
+    ap.add_argument("--team-grades", default=None,
+                    help="PFF team-grade export; defaults to the --season file "
+                         "from config.TEAM_GRADES_BY_SEASON")
     ap.add_argument("--team-ratings", default="team_ratings_2025.csv")
     ap.add_argument("--season", type=int, default=2025)
     ap.add_argument("--out", default="team_averages_2025.json")
     args = ap.parse_args()
+    if args.team_grades is None:
+        args.team_grades = C.team_grades_for(args.season)
 
     teams = build(args.season_totals, args.team_grades, args.team_ratings)
     payload = dict(season=args.season, teams=teams)

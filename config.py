@@ -179,7 +179,21 @@ SUCCESS_RATE_STRENGTH_BY_STAT = dict(
     rush_yds=0.15,                     # roughly flat -- default is fine
 )
 
-# Team-level PFF grade matchup adjustment (team_pff_grades_2025.csv) --
+# PFF's own team-level grade export, one file per season. The page builders
+# pick by --season via team_grades_for(); an unmapped season falls back to the
+# 2025 file so the backtest keeps reading the season it was validated on.
+# Drop next season's export in and add a line here.
+TEAM_GRADES_BY_SEASON = {
+    2025: "team_pff_grades_2025.csv",
+    2026: "team_pff_grades_2026.csv",
+}
+
+
+def team_grades_for(season):
+    return TEAM_GRADES_BY_SEASON.get(int(season), TEAM_GRADES_BY_SEASON[2025])
+
+
+# Team-level PFF grade matchup adjustment (see TEAM_GRADES_BY_SEASON) --
 # replaces the old individual-player-aggregated PFF opponent grade
 # (OPP_ADJ_STRENGTH, disabled above): this is PFF's own team-level grade,
 # not our aggregation of it, and it's a MATCHUP (this team's own relevant
