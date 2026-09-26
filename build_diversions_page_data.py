@@ -213,6 +213,32 @@ def _competition_rank(pairs):
 SHRINK_GAMES = 4.0
 
 
+def _pff_games_played(path_fmt="2026_{}_season_clean.csv"):
+    """Games played per team, from the weekly PFF drop rather than the trends pages.
+
+    shrink_team_totals needs a games count, and the TeamRankings pages are saved
+    by hand, so they go stale the moment a week is played without someone
+    re-saving them: in week 4 they still read 2-0 for teams with four games in,
+    which over-shrinks every team total toward the slate mean by a third. The
+    PFF export is refreshed every week as part of the same routine and carries
+    player_game_count, so the team's maximum across its players is the current
+    number. Falls back to the trends record for any team PFF does not cover.
+    """
+    out = {}
+    pff2c, _ = DL.load_team_map()
+    for kind in ("passing", "rushing", "receiving", "defense", "blocking"):
+        path = path_fmt.format(kind)
+        if not os.path.exists(path):
+            continue
+        for r in csv.DictReader(open(path)):
+            team = pff2c.get(norm(r.get("team_name", "")), r.get("team_name", ""))
+            n = _f(r.get("player_game_count"), 0.0)
+            k = norm(team)
+            if n and n > out.get(k, 0):
+                out[k] = n
+    return out
+
+
 def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     """Regress each team's Team Total toward the slate's own mean, weighted by
     games played: w = n / (n + k), total = w * team + (1 - w) * mean.
@@ -235,19 +261,24 @@ def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     Games come from the TeamRankings win-trends record (W + L + T). A team with
     no record parsed keeps its raw number and is reported.
     """
+    games_by_team = _pff_games_played()
     totals = [_f(r.get("Team Total"), None) for r in ratings_raw.values()]
     totals = [t for t in totals if t is not None]
     if not totals:
         return
     mean = sum(totals) / len(totals)
-    shrunk, no_games = 0, []
+    shrunk, no_games, stale = 0, [], []
     for r in ratings_raw.values():
         own = _f(r.get("Team Total"), None)
         if own is None:
             continue
-        n = sum(_f(r.get(c), 0.0) for c in ("TR_win_win_loss_record_W",
-                                            "TR_win_win_loss_record_L",
-                                            "TR_win_win_loss_record_T"))
+        tr_n = sum(_f(r.get(c), 0.0) for c in ("TR_win_win_loss_record_W",
+                                               "TR_win_win_loss_record_L",
+                                               "TR_win_win_loss_record_T"))
+        pff_n = games_by_team.get(norm(r.get("Team", "")))
+        n = pff_n or tr_n
+        if pff_n and tr_n and pff_n - tr_n >= 1:
+            stale.append(f"{r.get('Team')} {tr_n:.0f}->{pff_n:.0f}")
         if not n:
             no_games.append(r.get("Team"))
             continue
@@ -257,6 +288,11 @@ def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     log(f"[shrink] team totals toward the slate mean {mean:.1f} (k={k:.0f} games): "
         f"{shrunk} teams"
         + (f"; no record, left raw: {', '.join(no_games)}" if no_games else ""))
+    if stale:
+        log(f"[warn] {'TeamRankings trends are stale':<22} PFF has more games played for "
+            f"{len(stale)} teams (e.g. {', '.join(stale[:4])}). Games played came from PFF; "
+            f"the power table's ATS and Over rows still show the saved pages' records. "
+            f"Re-save actionnet/input/trends/*.html.")
 
 
 def load_tr_trends(trends_dir, ratings_raw, log=print):
@@ -663,6 +699,10 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
             spread_diff=None, total_diff=None,
             home_rated=bool(rh), away_rated=bool(ra),
             spread_reason=None, total_reason=None,
+            # stamped on the base record, not inside the both-teams-rated
+            # branch: an FCS buy game has no rating and still has a kickoff,
+            # and --drop-started has to be able to see it.
+            started=_started(ct),
         )
         if rh and ra:
             sp_h, sp_a = _f(rh["SP"]), _f(ra["SP"])
@@ -707,7 +747,6 @@ def build(lines_path, ratings_path, team_averages_path, depth_chart_path,
                                             sp_h, sp_a, hfa, home_adj, away_adj),
                 total_reason=total_reason(home_team, away_team, book_total, pred_total, total_diff,
                                           home_avg, away_avg, total_floored),
-                started=_started(ct),
                 home_display=rh.get("Team", home_team), away_display=ra.get("Team", away_team),
                 five_factors=five_factors(rh, ra),
                 home_power=power_table_entry(rh, net_rp_rank.get(home_key), tr_trends.get(home_key)),

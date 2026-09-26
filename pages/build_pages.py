@@ -43,7 +43,18 @@ SRC_RE = re.compile(r'data-source="([^"]+)"')
 ENC_RE = re.compile(r'data-encoding="([^"]+)"')
 
 
+# A data file that has not arrived yet is not a build failure. The FanDuel
+# salary CSV is uploaded separately from the rest of the weekly refresh and
+# often lands after the lines do, and the DFS page has its own paste-in salary
+# box for exactly that case -- so an absent source injects an empty payload and
+# is reported, rather than taking down the other three pages with it. Anything
+# else missing is still worth seeing in the log.
+EMPTY = {"json-string": '""', "json": "null"}
+
+
 def payload_for(path, encoding):
+    if not os.path.exists(path):
+        return None
     with open(path, encoding="utf-8") as f:
         text = f.read()
     if encoding == "json-string":
@@ -56,7 +67,7 @@ def payload_for(path, encoding):
 def build_page(template, out_dir, season, week, data_dir):
     with open(template, encoding="utf-8") as f:
         html = f.read()
-    injected = []
+    injected, missing = [], []
 
     def sub(m):
         attrs = m.group("attrs")
@@ -66,8 +77,13 @@ def build_page(template, out_dir, season, week, data_dir):
         rel = src_m.group(1).format(season=season, week=week)
         path = os.path.join(data_dir, rel)
         enc_m = ENC_RE.search(attrs)
-        body = payload_for(path, enc_m.group(1) if enc_m else "json")
-        injected.append((m.group("id"), rel, len(body)))
+        enc = enc_m.group(1) if enc_m else "json"
+        body = payload_for(path, enc)
+        if body is None:
+            missing.append((m.group("id"), rel))
+            body = EMPTY.get(enc, "null")
+        else:
+            injected.append((m.group("id"), rel, len(body)))
         return (f'<script id="{m.group("id")}" type="application/json"{attrs}>'
                 f'{body}</script>')
 
@@ -77,6 +93,8 @@ def build_page(template, out_dir, season, week, data_dir):
     # data-source, or with any literal brace in the page's CSS or JS.
     out_html = (out_html.replace("{{season}}", str(season))
                         .replace("{{week}}", str(week)))
+    for tag_id, rel in missing:
+        print(f"  [miss] {os.path.basename(template)}: {tag_id} <- {rel} not found; injected empty")
     if not injected:
         return None
     os.makedirs(out_dir, exist_ok=True)

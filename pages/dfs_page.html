@@ -286,7 +286,7 @@
   </div>
 
   <div class="section-title">Load Salaries</div>
-  <p class="section-sub">This week's real FanDuel salary export is pre-loaded below (fanduel_salaries_{{season}}wk{{week}}.csv). Paste a different CSV or upload a file to replace it — works with any export that has name/position/salary/team columns, DraftKings included (use the site toggle above to match).</p>
+  <p class="section-sub" id="salarySub">This week's real FanDuel salary export is pre-loaded below (fanduel_salaries_{{season}}wk{{week}}.csv). Paste a different CSV or upload a file to replace it — works with any export that has name/position/salary/team columns, DraftKings included (use the site toggle above to match).</p>
   <div class="card">
     <div class="import-row">
       <div class="import-col">
@@ -1090,6 +1090,18 @@
       const el = document.getElementById('fanduelSalaryData');
       if (!el) return;
       const salaryText = JSON.parse(el.textContent);
+      // The salary export is uploaded separately from the rest of the weekly
+      // refresh and often lands after the page is built, in which case the
+      // build injects an empty payload. Say so rather than running an empty
+      // string through the parser, which reports it as a malformed CSV and
+      // reads as though the bundled file were broken.
+      const sub = document.getElementById('salarySub');
+      if (!salaryText || !salaryText.trim()) {
+        if (sub) sub.textContent = "This week's FanDuel salary export has not been loaded into this build. "
+          + "Paste a CSV or upload a file below to enable the lineup generator -- any export with "
+          + "name/position/salary/team columns works, DraftKings included (use the site toggle above to match).";
+        return;
+      }
       const fdBtn = document.querySelector('#siteToggle button[data-site="FD"]');
       if (fdBtn) fdBtn.click();
       document.getElementById('salaryInput').value = salaryText;
