@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Checks for the TeamRankings trends parser and its name resolution.
 
-Two things are verified:
+Three things are verified:
 
   1. Parsing, against a fixture cut from a real saved page -- HTML entities,
      the data-sort full-precision values, W-L-T splitting, and the team slug.
-  2. Name resolution, against the full 138-team slate as the live page spells
+  2. Parsing a tab-delimited paste of the table, which is what comes across
+     on a week the saved page does not. The trap there is the percent column:
+     the page's data-sort holds a fraction while the visible cell reads
+     "100.0%", so a paste has to be divided down to line up with the .html.
+  3. Name resolution, against the full 138-team slate as the live page spells
      it. This is the part that silently rots: TeamRankings abbreviates, the
      workbook's TeamID column is stale for a handful, and a name that fails to
      resolve drops that team's records without anything looking broken.
@@ -17,7 +21,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from teamrankings import TEAMRANKINGS_ALIASES, load_trends          # noqa: E402
+from teamrankings import (TEAMRANKINGS_ALIASES, load_trends,        # noqa: E402
+                          parse_trends_text)
 from an_metrics import _norm_team                                    # noqa: E402
 from xlsx_read import Workbook, to_str                               # noqa: E402
 
@@ -62,6 +67,52 @@ def test_parse():
     return not fails
 
 
+PASTE = """Team	ATS Record	Cover %	MOV	ATS +/-
+Louisiana Tech 	3-0-0 	100.0% 	8.7 	+12.0
+Toledo 	1-0-1 	100.0% 	21.5 	+8.8
+Texas A&M 	2-1-0 	66.7% 	9.3 	-1.5
+Old Dominion 	0-3-0 	0.0% 	-1.7 	-10.3"""
+
+# Same four rows with the tabs collapsed to runs of spaces, which is what a
+# copy out of some browsers produces. Team names keep their single spaces.
+PASTE_SPACED = "\n".join("   ".join(c.strip() for c in ln.split("\t"))
+                          for ln in PASTE.splitlines())
+
+
+def test_parse_text():
+    rows = parse_trends_text(PASTE, "TR_ats")
+    by = {r["team"]: r for r in rows}
+    spaced = {r["team"]: r for r in parse_trends_text(PASTE_SPACED, "TR_ats")}
+    checks = [
+        (len(rows) == 4, f"expected 4 rows, got {len(rows)}"),
+        ("Louisiana Tech" in by, "trailing space not stripped from team name"),
+        ("Texas A&M" in by, "'&' in a team name broke the split"),
+        # 100.0% must land as the fraction the .html's data-sort gives, not 100
+        (by["Louisiana Tech"]["TR_ats_cover_pct"] == 1, "100.0% did not become 1"),
+        (abs(by["Texas A&M"]["TR_ats_cover_pct"] - 0.667) < 1e-9, "66.7% did not become 0.667"),
+        (by["Old Dominion"]["TR_ats_cover_pct"] == 0, "0.0% did not become 0"),
+        (by["Louisiana Tech"]["TR_ats_ats_plus_minus"] == 12, "leading + not stripped"),
+        (by["Old Dominion"]["TR_ats_mov"] == -1.7, "negative value not read"),
+        (by["Toledo"]["TR_ats_ats_record"] == "1-0-1", "record not kept as text"),
+        (by["Toledo"]["TR_ats_ats_record_T"] == 1, "tie not split out of the record"),
+        (by["Louisiana Tech"]["team_slug"] is None, "a paste has no slug to report"),
+        ("TR_ats_cover_pct" in by["Toledo"], "'Cover %' column lost its pct suffix"),
+        (spaced == by, "space-delimited paste parsed differently from tab-delimited"),
+    ]
+    for bad, msg in ((PASTE.split("\n", 1)[1], "header-less paste accepted"),
+                     ("", "empty paste accepted")):
+        try:
+            parse_trends_text(bad, "TR_ats")
+            checks.append((False, msg))
+        except ValueError:
+            checks.append((True, msg))
+    fails = [msg for ok, msg in checks if not ok]
+    for f in fails:
+        print(f"  FAIL {f}")
+    print(f"  paste parsing: {len(checks) - len(fails)}/{len(checks)} checks passed")
+    return not fails
+
+
 def test_resolution(xlsx):
     """Same chain as an_metrics.build(): alias, our name, TeamID, normalised."""
     wb = Workbook(xlsx)
@@ -97,6 +148,7 @@ def test_resolution(xlsx):
 def main():
     xlsx = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "input", "AN_season.xlsx")
     ok = test_parse()
+    ok = test_parse_text() and ok
     if os.path.exists(xlsx):
         ok = test_resolution(xlsx) and ok
     else:

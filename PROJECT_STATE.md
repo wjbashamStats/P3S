@@ -115,6 +115,13 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    45 others), which is why the page prints the record next to the percentage.
    build_team_preview_data.py still reads the 2022 columns; nothing renders
    them today, but it would need the same treatment if that page comes back.
+   The three pages are saved by hand and go stale one at a time, so the build
+   now reports each page separately against PFF's games-played count: a page
+   behind on a quarter of the slate or more is a [warn] naming that file, a
+   handful behind is a [note] (those teams just played on a Thursday). A page
+   can also arrive as a tab-delimited paste of the table saved as
+   ats_trends.txt; it parses into the same columns, at the display precision
+   rather than data-sort's, and the .html wins when both are sitting there.
 7. **team_ratings_2025.csv is the frozen preseason board, not a live rating.**
    Despite the name it is a 2026 file, but it is a one-off snapshot and its SP /
    TAN columns never move. The workbook's '2026 PR' sheet is the live one and is

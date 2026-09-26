@@ -88,6 +88,7 @@ import config as C
 import data_load as DL
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "actionnet"))
+import teamrankings as TR                                        # noqa: E402
 from teamrankings import TEAMRANKINGS_ALIASES, load_trends_dir  # noqa: E402
 
 
@@ -239,6 +240,31 @@ def _pff_games_played(path_fmt="2026_{}_season_clean.csv"):
     return out
 
 
+# The record column each saved trends page contributes, by filename, so a
+# staleness report can name the page a reader has to go re-save.
+TREND_RECORD_COLS = {
+    "win_trends": tuple(f"TR_win_win_loss_record_{s}" for s in "WLT"),
+    "ats_trends": tuple(f"TR_ats_ats_record_{s}" for s in "WLT"),
+    "ou_trends": tuple(f"TR_ou_over_record_{s}" for s in "WLT"),
+}
+
+
+# Behind on this share of the slate or more and the page is genuinely a week
+# old; below it, the gap is just the teams that played on a Thursday.
+STALE_PAGE_SHARE = 0.25
+
+
+def _trends_path(stem, directory=None):
+    """The file a given trends page was read from, for a message that tells the
+    reader which one to go re-save (.html or a .txt paste)."""
+    directory = directory or DEFAULT_TRENDS_DIR
+    for ext in TR.EXTS:
+        path = os.path.join(directory, stem + ext)
+        if os.path.exists(path):
+            return path
+    return os.path.join(directory, stem + TR.EXTS[0])
+
+
 def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     """Regress each team's Team Total toward the slate's own mean, weighted by
     games played: w = n / (n + k), total = w * team + (1 - w) * mean.
@@ -258,8 +284,9 @@ def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     weight climbs on its own as the season fills in; by November a team carries
     its own scoring almost entirely.
 
-    Games come from the TeamRankings win-trends record (W + L + T). A team with
-    no record parsed keeps its raw number and is reported.
+    Games come from the weekly PFF drop, falling back to a TeamRankings record
+    (W + L + T) when a team is missing from it. A team with neither keeps its
+    raw number and is reported.
     """
     games_by_team = _pff_games_played()
     totals = [_f(r.get("Team Total"), None) for r in ratings_raw.values()]
@@ -267,18 +294,24 @@ def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     if not totals:
         return
     mean = sum(totals) / len(totals)
-    shrunk, no_games, stale = 0, [], []
+    shrunk, no_games = 0, []
+    # Per trends page, how many teams it is behind PFF on. The three pages are
+    # saved by hand and go stale one at a time, so naming the page that is
+    # behind beats saying "the trends", which sent a reader to re-save all
+    # three when only win_trends was old.
+    stale = {label: [] for label in TREND_RECORD_COLS}
     for r in ratings_raw.values():
         own = _f(r.get("Team Total"), None)
         if own is None:
             continue
-        tr_n = sum(_f(r.get(c), 0.0) for c in ("TR_win_win_loss_record_W",
-                                               "TR_win_win_loss_record_L",
-                                               "TR_win_win_loss_record_T"))
         pff_n = games_by_team.get(norm(r.get("Team", "")))
+        tr_n = 0.0
+        for label, cols in TREND_RECORD_COLS.items():
+            page_n = sum(_f(r.get(c), 0.0) for c in cols)
+            tr_n = max(tr_n, page_n)
+            if pff_n and page_n and pff_n - page_n >= 1:
+                stale[label].append(f"{r.get('Team')} {page_n:.0f}->{pff_n:.0f}")
         n = pff_n or tr_n
-        if pff_n and tr_n and pff_n - tr_n >= 1:
-            stale.append(f"{r.get('Team')} {tr_n:.0f}->{pff_n:.0f}")
         if not n:
             no_games.append(r.get("Team"))
             continue
@@ -288,11 +321,21 @@ def shrink_team_totals(ratings_raw, k=SHRINK_GAMES, log=print):
     log(f"[shrink] team totals toward the slate mean {mean:.1f} (k={k:.0f} games): "
         f"{shrunk} teams"
         + (f"; no record, left raw: {', '.join(no_games)}" if no_games else ""))
-    if stale:
-        log(f"[warn] {'TeamRankings trends are stale':<22} PFF has more games played for "
-            f"{len(stale)} teams (e.g. {', '.join(stale[:4])}). Games played came from PFF; "
-            f"the power table's ATS and Over rows still show the saved pages' records. "
-            f"Re-save actionnet/input/trends/*.html.")
+    n_teams = len(ratings_raw) or 1
+    for label, rows in stale.items():
+        if not rows:
+            continue
+        example = ", ".join(rows[:4])
+        if len(rows) < n_teams * STALE_PAGE_SHARE:
+            # A handful behind is just this week's early games: the page was
+            # saved before Thursday night and PFF already has those box scores.
+            log(f"[note] {label:<22} {len(rows)} teams have played since it was "
+                f"saved ({example}) -- expected for a midweek kickoff.")
+            continue
+        log(f"[warn] {'stale ' + label:<22} PFF has more games played for "
+            f"{len(rows)} of {n_teams} teams (e.g. {example}). Games played came "
+            f"from PFF; the rows this page feeds still show its records. "
+            f"Re-save {_trends_path(label)}.")
 
 
 def load_tr_trends(trends_dir, ratings_raw, log=print):

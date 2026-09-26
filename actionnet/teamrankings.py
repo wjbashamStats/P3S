@@ -19,6 +19,12 @@ Values come from each cell's data-sort attribute, not its visible text: the
 page rounds for display but keeps full precision in the attribute (ATS +/-
 renders "+10.3" while data-sort says 10.25). Any cell holding a W-L-T record
 is additionally split into numeric _W / _L / _T columns.
+
+A page can also arrive as a tab-delimited paste of just the table (copy the
+rows out of the browser, save as ats_trends.txt beside the .html). Those rows
+carry the rounded display values and no team slug, but they parse into the
+same columns, so a week where only the text came across still refreshes. The
+.html is preferred when both are present.
 """
 import html as _html
 import os
@@ -157,14 +163,90 @@ def parse_trends(html_text, prefix):
     return out
 
 
+def _split_row(line):
+    """Tabs when the paste has them, otherwise runs of two or more spaces --
+    team names carry single spaces, so one space is never a separator."""
+    if "\t" in line:
+        return [c.strip() for c in line.split("\t")]
+    return [c.strip() for c in re.split(r"\s{2,}", line.strip())]
+
+
+def _text_value(raw):
+    """Display text -> number, matching what data-sort gives on the page.
+
+    Percentages are the one that matters: the page's data-sort holds a
+    fraction (1.0 for a 100% cover rate) while the cell reads "100.0%", so a
+    paste that kept the percent sign has to be divided down or every rank and
+    label built off it comes out 100x high. Signed values ("+12.0") and
+    thousands separators go through float() once stripped.
+    """
+    raw = (raw or "").strip()
+    if not raw or raw in ("--", "-", "N/A"):
+        return None
+    pct = raw.endswith("%")
+    txt = raw[:-1].strip() if pct else raw
+    txt = txt.replace(",", "").lstrip("+")
+    try:
+        f = float(txt)
+    except ValueError:
+        return raw
+    if pct:
+        f /= 100.0
+    return int(f) if f.is_integer() and abs(f) < 1e15 else f
+
+
+def parse_trends_text(text, prefix):
+    """[{team, team_slug, <prefix>_<col>...}] for a tab-delimited paste.
+
+    Same output shape as parse_trends so callers cannot tell the two apart,
+    except team_slug is None -- a paste has no links in it.
+    """
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    if not lines:
+        raise ValueError("empty trends paste")
+    headers = _split_row(lines[0])
+    if len(headers) < 2 or _RECORD_RE.match(headers[1] or ""):
+        raise ValueError("first line is not a header row -- paste the column "
+                         "headers along with the rows")
+    names = [f"{prefix}_{_slug(h)}" for h in headers]
+    out = []
+    for ln in lines[1:]:
+        cells = _split_row(ln)
+        if not cells or not cells[0]:
+            continue
+        row = {"team": cells[0], "team_slug": None}
+        for i, raw in enumerate(cells[1:], start=1):
+            if i >= len(names):
+                break
+            key = names[i]
+            m = _RECORD_RE.match(raw)
+            if m:
+                row[key] = f"{int(m.group(1))}-{int(m.group(2))}-{int(m.group(3) or 0)}"
+                row[key + "_W"] = int(m.group(1))
+                row[key + "_L"] = int(m.group(2))
+                row[key + "_T"] = int(m.group(3) or 0)
+            else:
+                row[key] = _text_value(raw)
+        out.append(row)
+    if not out:
+        raise ValueError("no data rows in trends paste")
+    return out
+
+
 def load_trends(path, prefix):
     with open(path, encoding="utf-8", errors="replace") as fh:
-        return parse_trends(fh.read(), prefix)
+        text = fh.read()
+    if os.path.splitext(path)[1].lower() in (".txt", ".tsv"):
+        return parse_trends_text(text, prefix)
+    return parse_trends(text, prefix)
 
 
-PAGES = (("win_trends.html", "TR_win"),
-         ("ats_trends.html", "TR_ats"),
-         ("ou_trends.html", "TR_ou"))
+# Per page, the filenames tried in order: a saved page first, then a paste of
+# the table on its own.
+PAGES = (("win_trends", "TR_win"),
+         ("ats_trends", "TR_ats"),
+         ("ou_trends", "TR_ou"))
+EXTS = (".html", ".txt", ".tsv")
 
 
 def load_trends_dir(directory, log=print):
@@ -174,13 +256,18 @@ def load_trends_dir(directory, log=print):
     were saved still produces the columns for those two.
     """
     merged = {}
-    for filename, prefix in PAGES:
-        path = os.path.join(directory, filename)
-        if not os.path.exists(path):
-            log(f"[miss] {'trends ' + filename:<22} not in {directory}")
+    for stem, prefix in PAGES:
+        path = next((p for p in (os.path.join(directory, stem + e) for e in EXTS)
+                     if os.path.exists(p)), None)
+        if path is None:
+            log(f"[miss] {'trends ' + stem:<22} not in {directory}")
             continue
         rows = load_trends(path, prefix)
         for r in rows:
-            merged.setdefault(r["team"], {}).update(r)
-        log(f"[read] {'trends ' + filename:<22} {len(rows)} teams")
+            cols = merged.setdefault(r["team"], {})
+            # A paste carries team_slug=None; don't let it wipe a slug an
+            # earlier saved page already supplied for the same team.
+            cols.update({k: v for k, v in r.items()
+                         if v is not None or cols.get(k) is None})
+        log(f"[read] {'trends ' + os.path.basename(path):<22} {len(rows)} teams")
     return merged

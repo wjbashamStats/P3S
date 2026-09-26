@@ -28,3 +28,20 @@ no configuration, and a column TeamRankings adds later appears on its own.
 Values come from each cell's `data-sort` attribute rather than its visible
 text, because the page rounds for display (ATS +/- renders `+10.3` where
 `data-sort` holds `10.25`).
+
+## Pasting just the table
+
+If only the table comes across -- select the rows in the browser, copy, and
+save them as `ats_trends.txt` (or `.tsv`) -- the parser reads that too. Keep
+the header line; the columns are named off it. Tabs are the separator, and
+runs of two or more spaces work as well, since a team name never carries more
+than one. Two things are lost relative to the saved page: the values are the
+rounded display numbers rather than `data-sort`'s full precision, and there
+are no links, so `team_slug` is empty. The `.html` wins when both are present,
+so delete the stale one or the refresh does nothing.
+
+| saved page | paste |
+|---|---|
+| `ats_trends.html` | `ats_trends.txt` |
+| `ou_trends.html` | `ou_trends.txt` |
+| `win_trends.html` | `win_trends.txt` |
