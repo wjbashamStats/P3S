@@ -99,6 +99,20 @@ def test_parse_text():
         ("TR_ats_cover_pct" in by["Toledo"], "'Cover %' column lost its pct suffix"),
         (spaced == by, "space-delimited paste parsed differently from tab-delimited"),
     ]
+    # The O/U table arrived as the whole thing twice with the header repeated
+    # partway, the first copy severed mid-record, and the tail of that severed
+    # row on a line of its own. None of the three can be a real row.
+    lines = PASTE.splitlines()
+    messy = "\n".join([lines[0], lines[1], "Toledo \t1-0-", lines[0]]
+                       + lines[1:] + ["0 \t66.7% \t9.3 \t-1.5"])
+    recovered = {r["team"]: r for r in parse_trends_text(messy, "TR_ats")}
+    checks += [
+        (recovered == by, "duplicated/severed paste did not parse back to the clean rows"),
+        ("Team" not in recovered, "a repeated header line parsed as a team"),
+        ("0" not in recovered, "a severed row's tail parsed as a team"),
+        (recovered["Toledo"]["TR_ats_ats_record"] == "1-0-1",
+         "a truncated duplicate displaced the complete row"),
+    ]
     for bad, msg in ((PASTE.split("\n", 1)[1], "header-less paste accepted"),
                      ("", "empty paste accepted")):
         try:

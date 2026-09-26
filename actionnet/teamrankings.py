@@ -195,11 +195,24 @@ def _text_value(raw):
     return int(f) if f.is_integer() and abs(f) < 1e15 else f
 
 
-def parse_trends_text(text, prefix):
+def parse_trends_text(text, prefix, log=None):
     """[{team, team_slug, <prefix>_<col>...}] for a tab-delimited paste.
 
     Same output shape as parse_trends so callers cannot tell the two apart,
     except team_slug is None -- a paste has no links in it.
+
+    A hand-made paste arrives messier than a saved page, and one already has:
+    the table came through twice with the header repeated in the middle, the
+    first copy cut off partway through a row ("Oregon\t3-0-"), and the tail of
+    that severed row turned up later as a line of its own. So three things are
+    tolerated, because none of them can be a real row:
+
+      * a repeat of the header line, which would otherwise parse as a team
+        called "Team";
+      * a line whose first cell is a number or a W-L-T record, which is the
+        tail of a row whose team name got cut off the front;
+      * a team appearing twice, where the row with more cells parsed wins, so
+        a truncated copy never displaces the complete one.
     """
     lines = [ln for ln in text.splitlines() if ln.strip()]
     if not lines:
@@ -209,12 +222,20 @@ def parse_trends_text(text, prefix):
         raise ValueError("first line is not a header row -- paste the column "
                          "headers along with the rows")
     names = [f"{prefix}_{_slug(h)}" for h in headers]
-    out = []
+    head_key = headers[0].strip().lower()
+    out, widths, dropped = {}, {}, 0
     for ln in lines[1:]:
         cells = _split_row(ln)
-        if not cells or not cells[0]:
+        team = cells[0] if cells else ""
+        if not team or team.strip().lower() == head_key:
             continue
-        row = {"team": cells[0], "team_slug": None}
+        if _RECORD_RE.match(team) or _text_value(team) != team:
+            dropped += 1          # headless tail of a severed row
+            continue
+        if team in out and len(cells) <= widths[team]:
+            dropped += 1          # a shorter duplicate; keep the one we have
+            continue
+        row = {"team": team, "team_slug": None}
         for i, raw in enumerate(cells[1:], start=1):
             if i >= len(names):
                 break
@@ -227,17 +248,21 @@ def parse_trends_text(text, prefix):
                 row[key + "_T"] = int(m.group(3) or 0)
             else:
                 row[key] = _text_value(raw)
-        out.append(row)
+        dropped += team in out
+        out[team], widths[team] = row, len(cells)
     if not out:
         raise ValueError("no data rows in trends paste")
-    return out
+    if dropped and log:
+        log(f"[note] trends paste: {len(out)} teams, {dropped} duplicate or "
+            f"partial lines ignored")
+    return list(out.values())
 
 
-def load_trends(path, prefix):
+def load_trends(path, prefix, log=None):
     with open(path, encoding="utf-8", errors="replace") as fh:
         text = fh.read()
     if os.path.splitext(path)[1].lower() in (".txt", ".tsv"):
-        return parse_trends_text(text, prefix)
+        return parse_trends_text(text, prefix, log=log)
     return parse_trends(text, prefix)
 
 
@@ -262,7 +287,7 @@ def load_trends_dir(directory, log=print):
         if path is None:
             log(f"[miss] {'trends ' + stem:<22} not in {directory}")
             continue
-        rows = load_trends(path, prefix)
+        rows = load_trends(path, prefix, log=log)
         for r in rows:
             cols = merged.setdefault(r["team"], {})
             # A paste carries team_slug=None; don't let it wipe a slug an
