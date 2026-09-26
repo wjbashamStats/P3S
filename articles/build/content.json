@@ -1,0 +1,618 @@
+{
+ "spreads": [
+  {
+   "pick": "Troy +3.0",
+   "game": "Troy Trojans @ Utah State Aggies",
+   "img": "Troy_at_Utah_State",
+   "facts": [
+    [
+     "Book line",
+     "Utah State -3.0"
+    ],
+    [
+     "Model number",
+     "Troy -7.7"
+    ],
+    [
+     "Gap",
+     "10.7 pts, 9.1 after the slate's own level"
+    ],
+    [
+     "SP+ (2026)",
+     "Troy +1.0 (67th) vs Utah State -9.3 (106th)"
+    ],
+    [
+     "Home edge",
+     "+2.6"
+    ],
+    [
+     "2026 records",
+     "Troy 2-1 (+3.3 MOV), Utah State 0-3 (-15.7 MOV)"
+    ],
+    [
+     "Utah State offense",
+     "131st Success Rate, 136th Finishing Drives"
+    ]
+   ],
+   "paras": [
+    "Book has Utah State -3.0 at home. The 2026 rating puts Troy ahead by 7.7: Troy +1.0 (67th) against Utah State -9.3 (106th), home edge +2.6. A 10.7-point gap, and 9.1 of it survives once the slate's own level is removed, which is the largest on the board.",
+    "Utah State is 0-3 and has been outscored by 15.7 a game. The offense is the reason: 131st in Success Rate, 136th in Finishing Drives, and a 37.4 passing grade against a 55.1 offense grade, with 31 points scored across two graded games. Neither their record nor their scoring argues with the rating, which is what separates this from the week 3 fades that lost.",
+    "Troy is 2-1 with a +3.3 margin and an 80.6 passing grade, 76.7 running. Their offense ranks 10th in Explosiveness; it ranks 122nd in Success Rate, so the scoring arrives in chunks rather than drives. Against a defense ranked tied 77th in Success Rate that is the workable half of the profile.",
+    "The counterweight is Utah State's run defense, 88.9 rdef on an 81.2 tackling grade, the one unit on their roster grading above average. Troy's 53.2 run block grade is the matchup that could hold this to a field goal game. Taking the points rather than the side is the reason the number is +3.0 and not -3.0."
+   ]
+  },
+  {
+   "pick": "Penn State -10.0",
+   "game": "Wisconsin Badgers @ Penn State Nittany Lions",
+   "img": "Wisconsin_at_Penn_State",
+   "facts": [
+    [
+     "Book line",
+     "Penn State -10.0"
+    ],
+    [
+     "Model number",
+     "Penn State -17.2"
+    ],
+    [
+     "Gap",
+     "7.2 pts, 8.8 after the slate's own level"
+    ],
+    [
+     "SP+ (2026)",
+     "Penn State +19.1 (12th) vs Wisconsin +5.1 (56th)"
+    ],
+    [
+     "Penn State 2026",
+     "3-0, +35.0 MOV, 72 points for and 9 against"
+    ],
+    [
+     "Penn State defense",
+     "8th Success Rate, 2nd Field Position, 91.1 coverage"
+    ],
+    [
+     "Wisconsin pass protection",
+     "53.2 pass block grade"
+    ]
+   ],
+   "paras": [
+    "Book has Penn State -10.0. The 2026 rating puts it at -17.2: Penn State +19.1 (12th) against Wisconsin +5.1 (56th), home edge +3.2. A 7.2-point gap, 8.8 once the slate's Over-and-favorite tilt is taken out.",
+    "Penn State has allowed 9 points in two graded games. The defense ranks 8th in Success Rate, 11th in Explosiveness allowed and 2nd in Field Position, on a 91.1 coverage grade and an 85.1 defensive grade. The offense is not a passenger either: 91.1 passing, 83.4 offense, 82.3 receiving, and 72 points scored.",
+    "Wisconsin is 2-1 with a +14.3 margin and a 5th-ranked Net Rating, so this is not a bad team. The specific problem is the line of scrimmage: a 53.2 pass block grade against a 57.1 passing grade, and an offense that ranks tied 118th in Finishing Drives. Penn State's pass rush grades only 62.4, their weakest defensive number, which is the one lever Wisconsin has.",
+    "This is a lay on the better-rated team at home rather than a fade of a good record. Three of the seven spread losses so far were the other shape: laying a weak rating against a team whose ATS record was running ahead of it. Penn State is 2-1 ATS and covering by 5.8 a game; Wisconsin is 1-2 and minus 0.7."
+   ]
+  },
+  {
+   "pick": "Georgia Tech +3.5",
+   "game": "Georgia Tech Yellow Jackets @ Stanford Cardinal",
+   "img": "Georgia_Tech_at_Stanford",
+   "facts": [
+    [
+     "Book line",
+     "Stanford -3.5"
+    ],
+    [
+     "Model number",
+     "Georgia Tech -10.2"
+    ],
+    [
+     "Gap",
+     "6.7 pts, 5.1 after the slate's own level"
+    ],
+    [
+     "SP+ (2026)",
+     "Georgia Tech +4.4 (60th) vs Stanford -7.4 (100th)"
+    ],
+    [
+     "Home edge",
+     "+1.6"
+    ],
+    [
+     "2026 margins",
+     "Georgia Tech +3.7, Stanford -19.0"
+    ],
+    [
+     "Stanford defense",
+     "121st Success Rate, 137th Finishing Drives, 128th Havoc"
+    ]
+   ],
+   "paras": [
+    "Book has Stanford -3.5 at home. The 2026 rating has Georgia Tech by 10.2: Georgia Tech +4.4 (60th) against Stanford -7.4 (100th), home edge only +1.6. A 6.7-point gap.",
+    "Both teams are 1-2, and the margins are not close. Georgia Tech is plus 3.7 a game, Stanford minus 19.0, with 43 points scored and 72 allowed across two graded games. Stanford's defense ranks 121st in Success Rate, 137th in Finishing Drives and 128th in Havoc; the offense ranks 116th, 121st and 135th in Success Rate, Finishing Drives and Field Position.",
+    "Georgia Tech's own profile is uneven. The passing grade is 69.3 and the run grade 76.7, but both lines grade badly: 42.4 pass block and 44.5 run block. Against a defense generating almost no havoc that is less costly than it would be anywhere else.",
+    "The caution is the ATS record: Georgia Tech is 0-3 and covering by minus 7.2 a game, so the market has been right about them three times. QB Alberto Mendoza transferred in from Indiana, which is why the hub carried him on Indiana's number until this week's team-resolution fix."
+   ]
+  },
+  {
+   "pick": "Iowa +5.5",
+   "game": "Iowa Hawkeyes @ Michigan Wolverines",
+   "img": "Iowa_at_Michigan",
+   "facts": [
+    [
+     "Book line",
+     "Michigan -5.5"
+    ],
+    [
+     "Model number",
+     "Michigan -0.3"
+    ],
+    [
+     "Gap",
+     "5.2 pts, 3.6 after the slate's own level"
+    ],
+    [
+     "SP+ (2026)",
+     "Iowa +17.3 (18th) vs Michigan +15.1 (21st)"
+    ],
+    [
+     "Home edge",
+     "+2.5"
+    ],
+    [
+     "2026 margins",
+     "Iowa +32.7, Michigan +14.3, both 3-0 and 2-1 ATS"
+    ],
+    [
+     "Iowa defense",
+     "1st Success Rate, tied 5th Field Position, 13 points allowed"
+    ]
+   ],
+   "paras": [
+    "Book has Michigan -5.5. SP+ has these two 2.2 points apart in Iowa's favor, so the model number after home field is Michigan -0.3. A 5.2-point gap on a game the ratings call close to even.",
+    "Iowa's defense ranks 1st nationally in Success Rate, 12th in Explosiveness allowed and tied 5th in Field Position, on a 91.6 run defense grade and a 90.3 defensive grade. They have allowed 13 points in two graded games and are winning by 32.7. Michigan is also 3-0 but by 14.3, with 30 points scored across the same two games.",
+    "Michigan's offense is the side of this the model is pricing: 85th in Success Rate, 78th in Explosiveness, 113th in Field Position, on a 45.0 passing grade. Their own defense is real, 20th in Success Rate and 9th in Finishing Drives on an 85.1 pass rush grade, which is the argument for a low number rather than for laying points.",
+    "The hub flags the other side of this itself. The 2026-forward continuity metric favors Michigan by a distance, rank 37 against Iowa's 104, so the market may be pricing roster change that a season-long rating cannot see yet. Both teams are 2-1 ATS."
+   ]
+  },
+  {
+   "pick": "Nebraska -5.5",
+   "game": "Nebraska Cornhuskers @ Michigan State Spartans",
+   "img": "Nebraska_at_Michigan_State",
+   "facts": [
+    [
+     "Book line",
+     "Nebraska -5.5"
+    ],
+    [
+     "Model number",
+     "Nebraska -10.3"
+    ],
+    [
+     "Gap",
+     "4.8 pts, 3.2 after the slate's own level"
+    ],
+    [
+     "SP+ (2026)",
+     "Nebraska +14.5 (23rd) vs Michigan State +2.3 (65th)"
+    ],
+    [
+     "Home edge",
+     "+1.9, one of the slate's smallest"
+    ],
+    [
+     "Nebraska 2026",
+     "3-0, +34.7 MOV, 105 points in two graded games"
+    ],
+    [
+     "Nebraska offense",
+     "5th Explosiveness, 6th Finishing Drives, 90.7 run grade"
+    ]
+   ],
+   "paras": [
+    "Book has Nebraska -5.5 on the road. The 2026 rating puts it at -10.3: a 12.2-point SP+ gap against a home edge of only +1.9. A 4.8-point disagreement.",
+    "Nebraska is 3-0 by 34.7 a game with 105 points scored across two graded games. The offense ranks 5th in Explosiveness, 6th in Finishing Drives and 21st in Success Rate, on an 86.7 offense grade, 90.7 running and 85.9 passing. Their Net Rating is 4th nationally.",
+    "Michigan State is 2-1 by 7.0 and has the record to defend, 2-0-1 ATS and covering by 7.3 a game. The rating disagrees with the schedule that produced it: the defense ranks 90th in Success Rate and the offense 77th, 108th and 99th in Success Rate, Explosiveness and Finishing Drives despite an 87.1 passing grade.",
+    "Laying a road number against a team that has not lost ATS is the shape that has cost this card before. The distinction here is the size of the rating gap and the size of the home edge; at 1.9 points, Michigan State's venue is worth less than almost any other on the slate."
+   ]
+  }
+ ],
+ "totals": [
+  {
+   "pick": "Under 56.5",
+   "game": "Houston Cougars @ Georgia Southern Eagles",
+   "img": "Houston_at_Georgia_Southern",
+   "facts": [
+    [
+     "Book total",
+     "56.5"
+    ],
+    [
+     "Model number",
+     "56.8"
+    ],
+    [
+     "Residual",
+     "-6.0 pts to the Under once the defensive tilt is removed"
+    ],
+    [
+     "Game spread",
+     "Houston -17.5"
+    ],
+    [
+     "Georgia Southern defense",
+     "10th Success Rate, tied 7th Havoc"
+    ],
+    [
+     "Georgia Southern offense",
+     "111th Success Rate, 116th Explosiveness, 44.9 passing grade"
+    ],
+    [
+     "Georgia Southern totals",
+     "1-2 to the Over, games landing 13.2 under"
+    ]
+   ],
+   "paras": [
+    "Book has 56.5. The team-total sum says 56.8, so raw the model has no opinion. The reason this is a play is what that flat number means in context: across the 49 rated games on this slate the model leans Over by 2.7 on average, and it leans hardest exactly where the defenses are best. For two defenses of this quality the fit expects a 6-point Over lean, and the model is not giving one.",
+    "Georgia Southern's defense ranks 10th in Success Rate and tied 7th in Havoc, and their games have landed 13.2 points under the posted total. The offense is the other half: 111th in Success Rate, 116th in Explosiveness, tied 118th in Finishing Drives, 129th in Field Position, on a 44.9 passing grade. They have scored 38 points in two graded games.",
+    "Houston is the better team by a distance, 2-1 with a +27.3 margin and 110 points scored, and their own games are 3-0 to the Over. The shape of their offense is what matters for a total: 4th in Success Rate but 107th in Explosiveness. That is a unit that moves the chains and burns clock, not one that scores in two plays.",
+    "A 17.5-point spread also caps the second half. The favorite that is grinding by construction has less reason to keep throwing, and the underdog that cannot generate explosive plays has no fast way back."
+   ]
+  },
+  {
+   "pick": "Over 43.5",
+   "game": "Hawai'i Rainbow Warriors @ Wyoming Cowboys",
+   "img": "Hawaii_at_Wyoming",
+   "facts": [
+    [
+     "Book total",
+     "43.5"
+    ],
+    [
+     "Model number",
+     "48.8"
+    ],
+    [
+     "Residual",
+     "+7.1 pts to the Over once the defensive tilt is removed"
+    ],
+    [
+     "Hawai'i games",
+     "62 points for, 77 against in two graded games"
+    ],
+    [
+     "Wyoming defense",
+     "117th Success Rate, 126th Havoc"
+    ],
+    [
+     "Tempo",
+     "Hawai'i 26th at 25.1 seconds a snap, Wyoming 105th"
+    ],
+    [
+     "Both defenses",
+     "Hawai'i 105th Success Rate, Wyoming 117th"
+    ]
+   ],
+   "paras": [
+    "Book has 43.5, the model 48.8. That 5.3 is a bigger number than it looks: with two defenses this bad the slate fit expects the model to lean Under by about 1.8, and it is leaning Over instead. The residual is +7.1, the largest Over on the board.",
+    "Hawai'i's two graded games have produced 62 points for and 77 against, 69.5 a game combined. They snap it every 25.1 seconds, 26th nationally, against a Wyoming offense that plays 105th. The tempo mismatch is worth possessions in a game priced at 43.5.",
+    "Wyoming's defense ranks 117th in Success Rate and 126th in Havoc, with a 58.9 coverage grade. Hawai'i's ranks 105th in Success Rate on a 53.5 tackling grade and a 57.9 run defense grade. Neither side has a unit that stops a drive on merit.",
+    "The argument against is Wyoming's offense: 91st in Success Rate, 130th in Explosiveness, 129th in Finishing Drives, and 34 points across two graded games. If this lands under it will be because Wyoming contributes 13 and the game never gets going, which is exactly what their 0-3 ATS record and minus 16.8 cover margin describe."
+   ]
+  },
+  {
+   "pick": "Under 56.5",
+   "game": "Northern Illinois Huskies @ Georgia State Panthers",
+   "img": "Northern_Illinois_at_Georgia_State",
+   "facts": [
+    [
+     "Book total",
+     "56.5"
+    ],
+    [
+     "Model number",
+     "51.3"
+    ],
+    [
+     "Residual",
+     "-5.7 pts to the Under"
+    ],
+    [
+     "Game spread",
+     "Georgia State -10.5"
+    ],
+    [
+     "Northern Illinois offense",
+     "128th Success Rate, 137th Finishing Drives"
+    ],
+    [
+     "Northern Illinois 2026",
+     "0-3, 24 points scored in two graded games"
+    ],
+    [
+     "Georgia State",
+     "2-1, 3-0 ATS, 90 points in two graded games"
+    ]
+   ],
+   "paras": [
+    "Book has 56.5, the model 51.3. Georgia State can get most of the way there on their own, so this is a bet about whether Northern Illinois contributes anything.",
+    "Northern Illinois is 0-3 and has been outscored by 23.0 a game. The offense ranks 128th in Success Rate, 137th in Finishing Drives and 115th in Explosiveness, on a 51.9 offense grade and a 45.5 run block grade, with 24 points scored across two graded games. That is 12 a game against a Georgia State defense allowing 13.5.",
+    "Georgia State is the live half. They are 2-1, 3-0 ATS covering by 15.2 a game, with 90 points in two graded games and a 90.5 passing grade behind an 81.1 pass block grade. Their offense ranks 35th in Success Rate.",
+    "The exposure is Georgia State's finishing: their defense ranks 121st in Finishing Drives, so opponents who reach the red zone convert. Northern Illinois getting there is the whole question, and 137th in Finishing Drives is the answer the season has given so far. This is also the third straight week the board has pointed at a Georgia State game; the previous two were spreads fading them, and both lost."
+   ]
+  },
+  {
+   "pick": "Under 58.5",
+   "game": "Missouri Tigers @ Mississippi State Bulldogs",
+   "img": "Missouri_at_Mississippi_State",
+   "facts": [
+    [
+     "Book total",
+     "58.5"
+    ],
+    [
+     "Model number",
+     "59.9"
+    ],
+    [
+     "Residual",
+     "-5.1 pts to the Under"
+    ],
+    [
+     "Records",
+     "both 3-0; Missouri +22.3 MOV, Mississippi State +27.0"
+    ],
+    [
+     "Points allowed",
+     "Missouri 17.5 a game, Mississippi State 13.0"
+    ],
+    [
+     "Missouri defense",
+     "16th Success Rate, 5th Havoc"
+    ],
+    [
+     "Mississippi State tempo",
+     "10th fastest at 24.3 seconds a snap"
+    ]
+   ],
+   "paras": [
+    "Book has 58.5, the model 59.9, so raw this is a 1.4-point Over lean. With two defenses of this quality the slate fit expects the model to be 6.5 points over the book, which leaves a 5.1-point residual to the Under.",
+    "The scoring records are the Over case and they are built on schedule. Both teams are 3-0, Missouri by 22.3 a game and Mississippi State by 27.0, with 92 and 100 points in two graded games. What they have allowed is the more useful number: 17.5 and 13.0 a game.",
+    "Missouri's defense ranks 16th in Success Rate and 5th in Havoc with an 80.2 pass rush grade. Mississippi State's ranks 37th in Success Rate on an 87.2 run defense grade and an 82.3 coverage grade. A 58.5 total asks each of these offenses for 29 against the best defense either has seen.",
+    "Mississippi State's tempo is the reason this is the least comfortable of the five: 24.3 seconds a snap, 10th nationally, and their games have gone 11.2 points over the posted total. Missouri's own weak spot is Explosiveness allowed, 134th, so one long play changes the arithmetic here faster than in the other four."
+   ]
+  },
+  {
+   "pick": "Over 44.5",
+   "game": "Rice Owls @ Fresno State Bulldogs",
+   "img": "Rice_at_Fresno_State",
+   "facts": [
+    [
+     "Book total",
+     "44.5"
+    ],
+    [
+     "Model number",
+     "48.3"
+    ],
+    [
+     "Residual",
+     "+4.5 pts to the Over"
+    ],
+    [
+     "Game spread",
+     "Fresno State -13.0"
+    ],
+    [
+     "Points allowed",
+     "Rice 27.5 a game, Fresno State 21.0"
+    ],
+    [
+     "Defensive ranks",
+     "Rice 102nd Success Rate, Fresno State 97th"
+    ],
+    [
+     "Fresno State pass block",
+     "36.8 grade"
+    ]
+   ],
+   "paras": [
+    "Book has 44.5, the model 48.3. With two defenses ranked outside the top 95 the fit expects a slight Under lean, so the residual is +4.5.",
+    "What the two teams have allowed is the case: 27.5 a game for Rice and 21.0 for Fresno State, 48.5 combined against a total of 44.5. Rice's defense ranks 102nd in Success Rate and 116th in Finishing Drives; Fresno State's ranks 97th in Success Rate.",
+    "Neither offense is good enough to make this comfortable. Rice ranks 87th in Success Rate and 131st in Explosiveness with 31 points in two graded games; Fresno State ranks 129th in Success Rate and has a 36.8 pass block grade, though they rank 20th in Explosiveness, which is the one way this gets to 45 quickly.",
+    "This is the thinnest of the five and is sized the same as the rest only because the card is flat. A 13-point spread with two offenses this inefficient is the profile that produces a 24-17 game."
+   ]
+  }
+ ],
+ "props": [
+  {
+   "pick": "Jadan Baugh Over 119.0 Rushing Yards",
+   "game": "Ole Miss Rebels @ Florida Gators",
+   "facts": [
+    [
+     "Book line",
+     "119.0"
+    ],
+    [
+     "Model projection",
+     "149.8 (+25.9%)"
+    ],
+    [
+     "2026 to date",
+     "146.0 yds/gm across 3 games"
+    ],
+    [
+     "Volume",
+     "18.3 carries/gm, 55 on the season"
+    ],
+    [
+     "Line vs production",
+     "27.0 yds/gm below his average"
+    ],
+    [
+     "Ole Miss tackling",
+     "42.5 grade; 96th in Success Rate defense"
+    ],
+    [
+     "Books",
+     "2"
+    ]
+   ],
+   "paras": [
+    "Baugh has 438 rushing yards in three games, 146.0 a game, against a line of 119.0. The projection is 149.8. He has 55 carries, 18.3 a game, and an 8.0 yards per carry average that is not going to hold; the line only asks for 6.5 on the same volume.",
+    "The efficiency is earned rather than lucky in the way that matters here. His run grade is 91.7 and his offense grade 90.1, with 27 avoided tackles, 255 yards after contact, 10 explosive runs and a long of 75. A 64.2% breakaway share does mean the yardage arrives unevenly, which is the risk on a line this high.",
+    "Ole Miss is the matchup. Their tackling grade is 42.5, the weakest unit on either roster in this game, against a back whose distinguishing 2026 number is 27 broken tackles. Their defense ranks 96th in Success Rate and 114th in Field Position, and the run defense grade of 68.6 is the only defensive number above 62.5 they carry.",
+    "Florida are 3.5-point home favorites with a 31.0 implied team total against a league average of 26.4, so the script supports carries rather than working against them. Baugh is not a receiving threat, 2 targets on 32 routes, so this is a pure ground projection."
+   ]
+  },
+  {
+   "pick": "Jamal Rule Over 66.5 Rushing Yards",
+   "game": "Nebraska Cornhuskers @ Michigan State Spartans",
+   "facts": [
+    [
+     "Book line",
+     "66.5"
+    ],
+    [
+     "Model projection",
+     "106.9 (+60.8%)"
+    ],
+    [
+     "2026 to date",
+     "109.7 yds/gm across 3 games"
+    ],
+    [
+     "Volume",
+     "12.7 carries/gm, 38 on the season"
+    ],
+    [
+     "Line vs production",
+     "43.2 yds/gm below his average"
+    ],
+    [
+     "Michigan State defense",
+     "90th in Success Rate"
+    ],
+    [
+     "Books",
+     "3"
+    ]
+   ],
+   "paras": [
+    "Rule has 329 rushing yards in three games, 109.7 a game, against a line of 66.5. The projection is 106.9. The line asks for 5.25 yards a carry on his 12.7 carries a game; he is at 8.7.",
+    "The caveat is where those yards come from. His breakaway share is 55.9%, so more than half the production is long runs, and the volume is modest for a lead back. What supports it is the contact running underneath: 217 yards after contact on 38 carries, 9 avoided tackles, 10 explosive runs, an 84.2 run grade and an 86.0 offense grade with no fumbles.",
+    "Nebraska's offense ranks 5th in Explosiveness and 6th in Finishing Drives on a 90.7 run grade, and they have scored 105 points across two graded games. Michigan State's defense ranks 90th in Success Rate; their run defense grade of 77.1 is respectable but their 61.0 tackling grade is not.",
+    "This is the same game as the Nebraska -5.5 spread, so the two positions are correlated. Nebraska's implied total is 27.0 against a 26.4 league average, and at a 5.5-point spread there is no blowout script to take the ball out of his hands in the fourth quarter."
+   ]
+  },
+  {
+   "pick": "Hollywood Smothers Over 52.0 Rushing Yards",
+   "game": "Texas Longhorns @ Tennessee Volunteers",
+   "facts": [
+    [
+     "Book line",
+     "52.0"
+    ],
+    [
+     "Model projection",
+     "101.8 (+95.8%)"
+    ],
+    [
+     "2026 to date",
+     "66.0 yds/gm across 3 games"
+    ],
+    [
+     "Volume",
+     "13.7 carries/gm, 41 on the season"
+    ],
+    [
+     "Line vs production",
+     "14.0 yds/gm below his average"
+    ],
+    [
+     "Tennessee tackling",
+     "56.4 grade; 65.9 run defense"
+    ],
+    [
+     "Books",
+     "2"
+    ]
+   ],
+   "paras": [
+    "Smothers has 198 rushing yards in three games, 66.0 a game, against a line of 52.0. He has 41 carries at 4.8 a carry; the line asks for 3.8 on the same volume.",
+    "The model's 101.8 is not the number to bet into. It carries a 1.384 pace and script multiplier, the highest on any pick here, which is doing more work than the underlying rate does. The honest projection is his own production adjusted for the matchup, which lands in the 66 to 75 range, and that is still comfortably clear of 52.0.",
+    "He is a big-play back: 31.8% breakaway share, 5 explosive runs, a long of 45, 11 avoided tackles and 140 yards after contact on a 77.1 run grade. Tennessee's tackling grade is 56.4 against a 65.9 run defense grade, the softer half of a defense that is otherwise strong through the air at 89.4 coverage and 79.0 pass rush.",
+    "Texas is a 5.5-point road underdog with a 30.2 implied total, the highest of any team on this prop card. The risk is the split: he has 13.7 carries a game rather than a true workhorse share, so a negative script costs him more than it would a 20-carry back."
+   ]
+  },
+  {
+   "pick": "Iverson Howard Under 59.5 Rushing Yards",
+   "game": "UCLA Bruins @ Maryland Terrapins",
+   "facts": [
+    [
+     "Book line",
+     "59.5"
+    ],
+    [
+     "Model projection",
+     "35.3 (-40.7%)"
+    ],
+    [
+     "2026 to date",
+     "46.0 yds/gm across 3 games"
+    ],
+    [
+     "Volume",
+     "12.3 carries/gm, 37 on the season"
+    ],
+    [
+     "Line vs production",
+     "13.5 yds/gm above his average"
+    ],
+    [
+     "Explosive running",
+     "10.9% breakaway share, long run of 15 all season"
+    ],
+    [
+     "Books",
+     "2"
+    ]
+   ],
+   "paras": [
+    "Howard has 138 rushing yards in three games, 46.0 a game, against a line of 59.5. The projection is 35.3. At his 12.3 carries a game the line asks for 4.8 yards a carry; he is at 3.7.",
+    "The reason this is an Under rather than a coin flip is the absence of a long run. His breakaway share is 10.9% and his longest carry of the season is 15 yards, across 37 attempts. A back at 3.7 a carry with no explosive plays has to be given volume he is not getting to reach 59.5; 13 first downs on 37 carries says he is being used to stay on schedule.",
+    "The underlying grades are ordinary rather than bad: 71.5 run grade, 68.5 offense, 8 avoided tackles and 122 yards after contact. He is not a receiving outlet either, 6 targets on 49 routes for 26 yards at a minus 1.7 average depth of target.",
+    "UCLA's defense ranks 52nd in Success Rate and tied 5th in Field Position on a 67.7 run defense grade. The game is close to a pick, Maryland +1.5 with a 27.5 implied total, so there is no script that forces extra carries on him either way."
+   ]
+  },
+  {
+   "pick": "Jaron Tibbs Over 3.5 Receptions",
+   "game": "Kansas State Wildcats @ Cincinnati Bearcats",
+   "facts": [
+    [
+     "Book line",
+     "3.5"
+    ],
+    [
+     "Model projection",
+     "5.1 (+45.7%)"
+    ],
+    [
+     "2026 to date",
+     "5.0 catches/gm across 3 games"
+    ],
+    [
+     "Volume",
+     "7.3 targets/gm, 93 routes, 22 targets"
+    ],
+    [
+     "Line vs production",
+     "1.5 catches/gm below his average"
+    ],
+    [
+     "Usage",
+     "12.8 average depth of target, 1.74 yards per route run"
+    ],
+    [
+     "Books",
+     "2"
+    ]
+   ],
+   "paras": [
+    "Tibbs has 15 catches in three games, 5.0 a game, against a line of 3.5. The projection is 5.1. He has run 93 routes and drawn 22 targets, 7.3 a game, which is the volume that makes four catches a normal outcome rather than a good one.",
+    "He is the field-stretcher rather than the possession option: 12.8 average depth of target, 10.8 yards a reception, 1.74 yards per route run, 60% on contested catches and 2 drops. A 12.8 aDOT does add variance to a receptions line, since the completion rate on those throws is lower than on a checkdown.",
+    "Kansas State's implied team total is 31.0 against a 26.4 league average, the highest on this card, and they are 6.5-point road favorites with 105 points scored in two graded games. Their passing grade is only 58.5, which is the honest argument against a receiving prop here; what the offense does grade well is protection, 86.1 pass block, and that is what keeps a 7-target-a-game route runner on schedule.",
+    "Cincinnati's coverage grade is 90.0, the strongest defensive number on either side, and their defense ranks tied 28th in Havoc. That is the argument against, and it is why this is a receptions line rather than a yardage line: volume survives good coverage better than efficiency does."
+   ]
+  }
+ ]
+}
