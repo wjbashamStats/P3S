@@ -8,10 +8,9 @@ const GAMES = [
   ['Iowa Hawkeyes',       'Iowa_at_Michigan'],
   ['Nebraska',            'Nebraska_at_Michigan_State'],
   ['Houston',             'Houston_at_Georgia_Southern'],
-  ["Hawai",               'Hawaii_at_Wyoming'],
-  ['Northern Illinois',   'Northern_Illinois_at_Georgia_State'],
-  ['Missouri Tigers',     'Missouri_at_Mississippi_State'],
-  ['Rice Owls',           'Rice_at_Fresno_State'],
+  ['Wake Forest',         'Wake_Forest_at_Louisville'],
+  ['UNLV',                'UNLV_at_Akron'],
+  ['Virginia Tech',       'Virginia_Tech_at_Boston_College'],
 ];
 const SECTION_RANGES = [
   ['Five Factors', 'Power Ratings', 'context'],

@@ -34,11 +34,10 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,4,2026-09-26,spread,Georgia Tech,+3.5,Georgia Tech @ Stanford,1.10,-110,-10.2,PENDING,,,"de-meaned +5.1; Stanford -19.0 MOV, 121st SR defense. GT 0-3 ATS is the caution"
 2026,4,2026-09-26,spread,Iowa,+5.5,Iowa @ Michigan,1.10,-110,+0.3,PENDING,,,de-meaned +3.6; SP+ has it 2.2 apart. Hub flags TARP favoring Michigan 37 to 104
 2026,4,2026-09-26,spread,Nebraska,-5.5,Nebraska @ Michigan State,1.10,-110,-10.3,PENDING,,,de-meaned +3.2; 12.2-pt SP+ gap against a 1.9 home edge. MSU 2-0-1 ATS is the caution
-2026,4,2026-09-26,total,Under,56.5,Houston @ Georgia Southern,1.10,-110,56.8,PENDING,,,residual -6.0; raw model is flat but the fit expects +6 for two defenses this good
-2026,4,2026-09-26,total,Over,43.5,Hawai'i @ Wyoming,1.10,-110,48.8,PENDING,,,residual +7.1; model leans Over where the fit expects Under. 69.5 pts/gm in Hawaii games
-2026,4,2026-09-26,total,Under,56.5,Northern Illinois @ Georgia State,1.10,-110,51.3,PENDING,,,"residual -5.7; NIU 12 pts/gm, 128th SR, 137th Finishing Drives"
-2026,4,2026-09-26,total,Under,58.5,Missouri @ Mississippi State,1.10,-110,59.9,PENDING,,,"residual -5.1; raw lean is Over. Both defenses top-40, allowing 17.5 and 13.0"
-2026,4,2026-09-26,total,Over,44.5,Rice @ Fresno State,1.10,-110,48.3,PENDING,,,residual +4.5; thinnest of the five. Combined points allowed 48.5 vs a 44.5 total
+2026,4,2026-09-26,total,Over,57.0,Wake Forest @ Louisville,1.10,-110,58.5,PENDING,,,"resid +2.3, points check +10.3, both Over records, both top-half tempo: only game on the slate hitting all four"
+2026,4,2026-09-26,total,Under,56.5,Houston @ Georgia Southern,1.10,-110,56.8,PENDING,,,"resid -6.0, points check -5.2; GaSo 10th SR defense scoring 21.7, Houston 107th explosiveness, 17.5-pt spread"
+2026,4,2026-09-26,total,Under,52.5,UNLV @ Akron,1.10,-110,51.2,PENDING,,,"resid -2.1, points check -5.5; combined 38.7 pts/gm, Akron 138th explosiveness, UNLV 0-3 Over"
+2026,4,2026-09-26,total,Over,47.0,Virginia Tech @ Boston College,1.10,-110,56.4,PENDING,,,"resid +4.4, points check +9.3; VT 54.1 coverage vs a BC offense throwing on 57% of snaps"
 2026,4,2026-09-26,prop,Jadan Baugh Over rush yds,119.0,Ole Miss @ Florida,1.14,-114.0,149.8,PENDING,,,146.0 yds/gm on 18.3 carries; Ole Miss 42.5 tackling grade
 2026,4,2026-09-26,prop,Jamal Rule Over rush yds,66.5,Nebraska @ Michigan State,1.14,-114.0,106.9,PENDING,,,109.7 yds/gm; 55.9% breakaway share is the risk. Correlated with the Nebraska spread
 2026,4,2026-09-26,prop,Hollywood Smothers Over rush yds,52.0,Texas @ Tennessee,1.13,-113.0,101.8,PENDING,,,"66.0 yds/gm vs a 52.0 line; model 101.8 carries a 1.384 pace term, honest number is 66-75"

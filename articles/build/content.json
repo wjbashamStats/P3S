@@ -208,6 +208,47 @@
  ],
  "totals": [
   {
+   "pick": "Over 57.0",
+   "game": "Wake Forest Demon Deacons @ Louisville Cardinals",
+   "img": "Wake_Forest_at_Louisville",
+   "facts": [
+    [
+     "Book total",
+     "57.0"
+    ],
+    [
+     "Model number",
+     "58.5"
+    ],
+    [
+     "Residual",
+     "+2.3 to the Over once the defensive tilt is removed"
+    ],
+    [
+     "Points allowed",
+     "Wake Forest 28.3 a game, Louisville 28.3"
+    ],
+    [
+     "Wake Forest defense",
+     "128th Success Rate, 130th Havoc, 47.6 tackling"
+    ],
+    [
+     "Over records",
+     "Wake Forest 2-1 (+7.8), Louisville 3-0 (+18.2)"
+    ],
+    [
+     "Tempo",
+     "Wake Forest 31st, Louisville 65th"
+    ]
+   ],
+   "paras": [
+    "Book has 57.0, the model 58.5. This is the only game on the slate where all four checks point the same way: the residual, the two teams' own scoring and points allowed, their over/under records, and tempo.",
+    "Both teams are allowing 28.3 points a game, 56.6 combined against a total of 57.0, before either offense is counted. Wake Forest's defense ranks 128th in Success Rate and 130th in Havoc on a 47.6 tackling grade; they generate almost nothing and miss tackles when they arrive.",
+    "Louisville is the reason the number gets there. They score 46.0 a game on an offense ranked 12th in Success Rate, 24th in Explosiveness and 15th in Finishing Drives, with an 88.2 run grade. Their games are 3-0 to the Over and have landed 18.2 points above the posted number, the largest over-margin on this card.",
+    "Wake Forest is not a passenger either at 32.0 a game with an offense ranked 35th in Explosiveness. Louisville's defense ranks 73rd in Success Rate and 103rd in Finishing Drives, so the game does not have a side that shortens it. Both teams play in the top half of tempo, 31st and 65th."
+   ]
+  },
+  {
    "pick": "Under 56.5",
    "game": "Houston Cougars @ Georgia Southern Eagles",
    "img": "Houston_at_Georgia_Southern",
@@ -222,7 +263,7 @@
     ],
     [
      "Residual",
-     "-6.0 pts to the Under once the defensive tilt is removed"
+     "-6.0 to the Under once the defensive tilt is removed"
     ],
     [
      "Game spread",
@@ -234,7 +275,7 @@
     ],
     [
      "Georgia Southern offense",
-     "111th Success Rate, 116th Explosiveness, 48.6 passing grade"
+     "111th Success Rate, 116th Explosiveness, 21.7 points a game"
     ],
     [
      "Georgia Southern totals",
@@ -242,174 +283,92 @@
     ]
    ],
    "paras": [
-    "Book has 56.5. The team-total sum says 56.8, so raw the model has no opinion. The reason this is a play is what that flat number means in context: across the 49 rated games on this slate the model leans Over by 2.7 on average, and it leans hardest exactly where the defenses are best. For two defenses of this quality the fit expects a 6-point Over lean, and the model is not giving one.",
+    "Book has 56.5. The team-total sum says 56.8, so raw the model has no opinion. The reason this is a play is what that flat number means in context: across the 49 rated games on this slate the model leans Over by 2.7 on average, and it leans hardest exactly where the defenses are best. For two defenses of this quality the fit expects a 6-point Over lean, and the model is not giving one. A simple points-based check agrees, putting the game at 51.3.",
     "Georgia Southern's defense ranks 10th in Success Rate and tied 7th in Havoc, and their games have landed 13.2 points under the posted total. The offense is the other half: 111th in Success Rate, 116th in Explosiveness, tied 118th in Finishing Drives, 129th in Field Position, on a 48.6 passing grade. They are scoring 21.7 a game.",
     "Houston is the better team by a distance, 2-1 with a +27.3 margin at 45.3 points a game, and their own games are 3-0 to the Over. The shape of their offense is what matters for a total: 4th in Success Rate but 107th in Explosiveness, on an 86.0 run grade against a 70.6 passing grade. That is a unit that moves the chains and burns clock, not one that scores in two plays.",
-    "A 17.5-point spread also caps the second half. The favorite that is grinding by construction has less reason to keep throwing, and the underdog that cannot generate explosive plays has no fast way back. Georgia Southern's tackling grade of 55.5 is the risk: it is the one number that lets Houston turn a methodical drive into a short one."
+    "A 17.5-point spread also caps the second half. Georgia Southern's tackling grade of 55.5 is the risk: it is the one number that lets Houston turn a methodical drive into a short one."
    ]
   },
   {
-   "pick": "Over 43.5",
-   "game": "Hawai'i Rainbow Warriors @ Wyoming Cowboys",
-   "img": "Hawaii_at_Wyoming",
+   "pick": "Under 52.5",
+   "game": "UNLV Rebels @ Akron Zips",
+   "img": "UNLV_at_Akron",
    "facts": [
     [
      "Book total",
-     "43.5"
+     "52.5"
     ],
     [
      "Model number",
-     "48.8"
+     "51.2"
     ],
     [
      "Residual",
-     "+7.1 pts to the Over once the defensive tilt is removed"
+     "-2.1 to the Under"
     ],
     [
-     "Hawai'i games",
-     "94 points for, 94 against in three games, 62.7 a game combined"
+     "Combined scoring",
+     "38.7 a game between them against a 52.5 total"
     ],
     [
-     "Wyoming defense",
-     "117th Success Rate, 126th Havoc, 60.8 coverage"
+     "UNLV offense",
+     "126th Success Rate, 126th Finishing Drives, 16.0 points a game"
     ],
     [
-     "Tempo",
-     "Hawai'i 26th at 25.1 seconds a snap, Wyoming 105th"
+     "Akron offense",
+     "138th in Explosiveness, last nationally"
     ],
     [
-     "Both defenses",
-     "Hawai'i 105th Success Rate, Wyoming 117th"
+     "Over records",
+     "UNLV 0-3 (-14.8), Akron 2-1 (+3.8)"
     ]
    ],
    "paras": [
-    "Book has 43.5, the model 48.8. That 5.3 is a bigger number than it looks: with two defenses this bad the slate fit expects the model to lean Under by about 1.8, and it is leaning Over instead. The residual is +7.1, the largest Over on the board.",
-    "Hawai'i's three games have produced 94 points for and 94 against, 62.7 a game combined, against a total of 43.5. They snap it every 25.1 seconds, 26th nationally, against a Wyoming offense that plays 105th. The tempo mismatch is worth possessions in a game priced this low.",
-    "Wyoming's defense ranks 117th in Success Rate and 126th in Havoc with a 60.8 coverage grade. Hawai'i's ranks 105th in Success Rate on a 53.2 tackling grade and a 56.6 run defense grade, the worst run defense number in this document. Neither side has a unit that stops a drive on merit.",
-    "The argument against is Wyoming's offense: 91st in Success Rate, 130th in Explosiveness, 129th in Finishing Drives, a 55.4 passing grade, and 14.7 points a game. If this lands under it will be because Wyoming contributes 13 and the game never gets going, which is exactly what their 0-3 ATS record and minus 16.8 cover margin describe."
+    "Book has 52.5, the model 51.2, and a points-based check puts it at 47.0. Between them these two teams are scoring 38.7 a game.",
+    "UNLV is the anchor. They score 16.0 a game on an offense ranked 126th in Success Rate, 126th in Finishing Drives and 99th in Explosiveness, and their three games have landed 14.8 points under the posted total, 0-3 to the Over.",
+    "Akron scores 22.7 but ranks 138th in Explosiveness, last nationally. Neither team has a way to score quickly, which matters more than the raw scoring average: a total gets to 52 on chunk plays and short fields, and this game has no source of either.",
+    "The case against is that both defenses are as bad as both offenses. UNLV allows 25.7 and Akron 29.7, 55.4 combined, which is above the total on its own. Akron's defense ranks 128th in Field Position and UNLV's 114th in Finishing Drives, so the arithmetic works only if the offenses stay as inefficient as they have been."
    ]
   },
   {
-   "pick": "Under 56.5",
-   "game": "Northern Illinois Huskies @ Georgia State Panthers",
-   "img": "Northern_Illinois_at_Georgia_State",
+   "pick": "Over 47.0",
+   "game": "Virginia Tech Hokies @ Boston College Eagles",
+   "img": "Virginia_Tech_at_Boston_College",
    "facts": [
     [
      "Book total",
-     "56.5"
+     "47.0"
     ],
     [
      "Model number",
-     "51.3"
+     "56.4"
     ],
     [
      "Residual",
-     "-5.7 pts to the Under"
+     "+4.4 to the Over"
+    ],
+    [
+     "Virginia Tech 2026",
+     "3-0, 50.7 points a game, 3-0 to the Over (+14.2)"
+    ],
+    [
+     "Virginia Tech coverage",
+     "54.1 grade, the one soft number on a strong defense"
+    ],
+    [
+     "Boston College",
+     "pass-heavy at 57% of plays and 43% success rate on them"
     ],
     [
      "Game spread",
-     "Georgia State -10.5"
-    ],
-    [
-     "Northern Illinois offense",
-     "128th Success Rate, 137th Finishing Drives"
-    ],
-    [
-     "Northern Illinois 2026",
-     "0-3, 13.7 points a game, 41 in three"
-    ],
-    [
-     "Georgia State",
-     "2-1, 3-0 ATS, 40.0 points a game"
+     "Virginia Tech -14.0"
     ]
    ],
    "paras": [
-    "Book has 56.5, the model 51.3. Georgia State can get most of the way there on their own, so this is a bet about whether Northern Illinois contributes anything.",
-    "Northern Illinois is 0-3 and has been outscored by 23.0 a game. The offense ranks 128th in Success Rate, 137th in Finishing Drives and 115th in Explosiveness, on a 57.9 offense grade and a 44.7 run block grade, with 41 points across three games. That is 13.7 a game against a Georgia State defense allowing 23.7.",
-    "Georgia State is the live half. They are 2-1, 3-0 ATS covering by 15.2 a game, at 40.0 points a game with an 83.6 passing grade. Their offense ranks 35th in Success Rate.",
-    "The exposure is Georgia State's finishing: their defense ranks 121st in Finishing Drives on a 57.4 tackling grade, so opponents who reach the red zone convert. Northern Illinois getting there is the whole question, and 137th in Finishing Drives is the answer the season has given so far. This is also the third straight week the board has pointed at a Georgia State game; the previous two were spreads fading them, and both lost."
-   ]
-  },
-  {
-   "pick": "Under 58.5",
-   "game": "Missouri Tigers @ Mississippi State Bulldogs",
-   "img": "Missouri_at_Mississippi_State",
-   "facts": [
-    [
-     "Book total",
-     "58.5"
-    ],
-    [
-     "Model number",
-     "59.9"
-    ],
-    [
-     "Residual",
-     "-5.1 pts to the Under"
-    ],
-    [
-     "Records",
-     "both 3-0; Missouri +22.3 MOV, Mississippi State +27.0"
-    ],
-    [
-     "Points allowed",
-     "Missouri 17.3 a game, Mississippi State 20.0"
-    ],
-    [
-     "Missouri defense",
-     "16th Success Rate, 5th Havoc, 89.2 pass rush"
-    ],
-    [
-     "Mississippi State tempo",
-     "10th fastest at 24.3 seconds a snap"
-    ]
-   ],
-   "paras": [
-    "Book has 58.5, the model 59.9, so raw this is a 1.4-point Over lean. With two defenses of this quality the slate fit expects the model to be 6.5 points over the book, which leaves a 5.1-point residual to the Under.",
-    "The scoring records are the Over case and they are built on schedule. Both teams are 3-0, Missouri by 22.3 a game and Mississippi State by 27.0, at 39.7 and 47.0 points scored. What they have allowed is the more useful number: 17.3 and 20.0 a game.",
-    "Missouri's defense ranks 16th in Success Rate and 5th in Havoc on an 89.2 pass rush grade and an 85.8 coverage grade. Mississippi State's ranks 37th in Success Rate on an 89.6 coverage grade. A 58.5 total asks each of these offenses for 29 against the best defense either has seen.",
-    "Mississippi State's tempo is the reason this is the least comfortable of the five: 24.3 seconds a snap, 10th nationally, and their games have gone 11.2 points over the posted total. Missouri's own weak spot is Explosiveness allowed, 134th, alongside a 54.4 tackling grade, so one long play changes the arithmetic here faster than in the other four."
-   ]
-  },
-  {
-   "pick": "Over 44.5",
-   "game": "Rice Owls @ Fresno State Bulldogs",
-   "img": "Rice_at_Fresno_State",
-   "facts": [
-    [
-     "Book total",
-     "44.5"
-    ],
-    [
-     "Model number",
-     "48.3"
-    ],
-    [
-     "Residual",
-     "+4.5 pts to the Over"
-    ],
-    [
-     "Game spread",
-     "Fresno State -13.0"
-    ],
-    [
-     "Points allowed",
-     "Rice 27.7 a game, Fresno State 17.3"
-    ],
-    [
-     "Defensive ranks",
-     "Rice 102nd Success Rate, Fresno State 97th"
-    ],
-    [
-     "Fresno State pass block",
-     "32.0 grade, lowest in this document"
-    ]
-   ],
-   "paras": [
-    "Book has 44.5, the model 48.3. With two defenses ranked outside the top 95 the fit expects a slight Under lean, so the residual is +4.5.",
-    "What the two teams have allowed is the case: 27.7 a game for Rice and 17.3 for Fresno State, 45.0 combined against a total of 44.5. Rice's defense ranks 102nd in Success Rate and 116th in Finishing Drives; Fresno State's ranks 97th in Success Rate.",
-    "Neither offense is good enough to make this comfortable. Rice ranks 87th in Success Rate and 131st in Explosiveness at 17.3 points a game; Fresno State ranks 129th in Success Rate and has a 32.0 pass block grade, the lowest number in this document, though they rank 20th in Explosiveness, which is the one way this gets to 45 quickly.",
-    "This is the thinnest of the five and is sized the same as the rest only because the card is flat. A 13-point spread with two offenses this inefficient is the profile that produces a 24-17 game."
+    "Book has 47.0, the model 56.4, and a points-based check lands at 56.3. The two agree almost exactly, which is unusual on this slate.",
+    "Virginia Tech scores 50.7 a game and their three games are all over the posted number by 14.2 on average. The offense ranks 27th in Success Rate, 14th in Finishing Drives and 18th in Field Position, and the defense is real: 19th in Success Rate, 1st in Havoc, a 95.0 run defense grade and an 88.8 pass rush grade.",
+    "The matchup is the coverage grade. Virginia Tech's is 54.1, the only defensive number they carry below 76, and Boston College throws it on 57% of snaps at a 43% success rate. The hub flags that combination itself as pushing real scoring above a flat team-average baseline.",
+    "The argument against is Boston College's own record: 0-3 to the Over with games landing 7.8 under, an offense ranked 112th in Success Rate and 118th in Finishing Drives, and 21.7 points a game. At a 14-point spread this gets to 47 mainly if Virginia Tech alone reaches the low 30s, which their average says they will."
    ]
   }
  ],
