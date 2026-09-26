@@ -42,5 +42,5 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,4,2026-09-26,prop,Jadan Baugh Over rush yds,119.0,Ole Miss @ Florida,1.14,-114.0,149.8,PENDING,,,146.0 yds/gm on 18.3 carries; Ole Miss 42.5 tackling grade
 2026,4,2026-09-26,prop,Jamal Rule Over rush yds,66.5,Nebraska @ Michigan State,1.14,-114.0,106.9,PENDING,,,109.7 yds/gm; 55.9% breakaway share is the risk. Correlated with the Nebraska spread
 2026,4,2026-09-26,prop,Hollywood Smothers Over rush yds,52.0,Texas @ Tennessee,1.13,-113.0,101.8,PENDING,,,"66.0 yds/gm vs a 52.0 line; model 101.8 carries a 1.384 pace term, honest number is 66-75"
-2026,4,2026-09-26,prop,Iverson Howard Under rush yds,59.5,UCLA @ Maryland,1.14,-114.0,35.3,PENDING,,,"46.0 yds/gm at 3.7 ypc, 10.9% breakaway, longest run 15 all season"
+2026,4,2026-09-26,prop,Iverson Howard Under rush yds,59.5,UCLA @ Maryland,1.14,-114.0,30.9,PENDING,,,"46.0 yds/gm at 3.7 ypc, 10.9% breakaway, longest run 15 all season; refreshed grades moved the projection 35.3 -> 30.9"
 2026,4,2026-09-26,prop,Jaron Tibbs Over receptions,3.5,Kansas State @ Cincinnati,1.42,-141.5,5.1,PENDING,,,5.0 catches/gm on 7.3 targets; Cincinnati 90.0 coverage and a 58.5 K-State passing grade are the risks
