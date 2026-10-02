@@ -89,3 +89,31 @@ python3 build.py --week 1 --season 2025 --no-odds
 # historical props pull (spends credits — dry-run first!)
 python3 historical_pull.py --schedule 2025_schedule.csv --season 2025 --week 1 --dry-run
 ```
+
+## Weekly refresh
+
+One command:
+
+```bash
+python3 refresh_week.py --week 5
+```
+
+It pulls the TeamRankings trends pages, rebuilds the player tables and team
+ratings, builds the four page-data files and the hub, then prints a readiness
+report naming anything still stale. The slate window is read out of the lines
+file (the day with the most kickoffs, plus a day either side) rather than
+assumed from the week number, because a live odds pull labels two weekends
+with the same week.
+
+Add `--pff-dir ~/Downloads` on a week with new PFF exports to clean and rank
+them on the way through. Add `--pull-odds` to pull fresh lines and props --
+that one spends Odds API credits, so it never runs by default.
+
+`--only board pages` re-runs just the tail end; `--dry-run` prints the
+commands without running them.
+
+What still arrives by hand each week: the Action Network workbook
+(`actionnet/input/AN_season.xlsx`), the PFF team-grades page
+(`team_pff_grades_2026.csv`), and the FanDuel salary export
+(`fanduel_salaries_<season>wk<N>.csv`). The readiness report names each one if
+it is behind.
