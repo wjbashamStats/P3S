@@ -47,7 +47,18 @@ tab_button_html = "\n".join(
     for key, label in tab_buttons
 )
 
-hub = f"""<title>CFB Betting Hub</title>
+# A complete document, not a fragment. This was emitted bare for a long time
+# and browsers rendered it in quirks mode, which was survivable while it was
+# only ever opened as a local file. Served over HTTP it is not: quirks mode
+# changes the box model, and without a charset meta the non-ASCII in team
+# names (Hawai'i) and headers depends on the server guessing right.
+hub = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CFB Betting Hub</title>
 <style>
   :root {{
     --ink: #0a0e1a;
@@ -94,6 +105,8 @@ hub = f"""<title>CFB Betting Hub</title>
   }}
   iframe.active {{ display: block; }}
 </style>
+</head>
+<body>
 <div class="bar">
   <span class="brand">CFB&nbsp;Betting&nbsp;Hub</span>
 {tab_button_html}
@@ -124,6 +137,8 @@ hub = f"""<title>CFB Betting Hub</title>
   }}
   showTab('{tab_buttons[0][0]}');
 </script>
+</body>
+</html>
 """
 
 out_path = SCRATCH + "hub_page.html"

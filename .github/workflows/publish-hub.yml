@@ -1,0 +1,105 @@
+name: Publish hub
+
+# Rebuilds the betting hub from whatever data is committed and publishes it to
+# GitHub Pages. The site is therefore always a function of the repo, never a
+# stale upload -- push a new week's JSONs and the page follows.
+#
+# One-time setup in the repo: Settings -> Pages -> Build and deployment ->
+# Source: GitHub Actions. Until that is set, this workflow builds fine and the
+# deploy step fails.
+#
+# NOTE: this publishes to a PUBLIC URL. The repo is public, so nothing new is
+# exposed, but anyone with the link can read the hub.
+
+on:
+  push:
+    branches:
+      - main
+      - claude/college-football-betting-handoff-mhf2nh
+    paths:
+      # Only the inputs the hub is built from, so a data-only or docs-only
+      # commit does not burn an Actions run.
+      - 'diversions_2026wk*.json'
+      - 'props_2026wk*.json'
+      - 'dfs_2026wk*.json'
+      - 'impact_2026wk*.json'
+      - 'fanduel_salaries_2026wk*.csv'
+      - 'pages/**'
+      - '.github/workflows/publish-hub.yml'
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Week to publish (blank = the highest week with a diversions file)'
+        required: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; a newer push supersedes an in-flight older one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # No pip install: this project is stdlib-only by convention.
+
+      - name: Pick the week to publish
+        id: week
+        run: |
+          set -euo pipefail
+          WEEK="${{ github.event.inputs.week }}"
+          if [ -z "$WEEK" ]; then
+            WEEK=$(ls diversions_2026wk*.json 2>/dev/null \
+                   | sed -E 's/.*wk([0-9]+)\.json/\1/' | sort -n | tail -1)
+          fi
+          if [ -z "$WEEK" ]; then
+            echo "No diversions_2026wk*.json in the repo; nothing to publish." >&2
+            exit 1
+          fi
+          echo "week=$WEEK" >> "$GITHUB_OUTPUT"
+          echo "Publishing week $WEEK"
+
+      - name: Build the pages and the hub
+        run: |
+          set -euo pipefail
+          python3 pages/build_pages.py --season 2026 --week "${{ steps.week.outputs.week }}"
+          python3 pages/build_hub.py
+
+      - name: Stage the site
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp pages/build/hub_page.html _site/index.html
+          # The individual tabs, so a direct link to one still works.
+          for f in dfs impact props diversions; do
+            [ -f "pages/build/${f}_page.html" ] && cp "pages/build/${f}_page.html" "_site/${f}.html"
+          done
+          # Tell crawlers to stay out. This is a private-ish tool on a public
+          # URL; no reason for it to be indexed.
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          ls -la _site
+          echo "index.html is $(du -h _site/index.html | cut -f1)"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
