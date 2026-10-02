@@ -254,6 +254,36 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    (UMass's Jordan Washington was matching a Washington RB). Teams with a
    salaried player went 29 -> 28 on a 14-game slate, which is the check.
 
+18. **Quote one definition per quantity, and recompute it before shipping.**
+   The week 5 draft carried five spread "margin check" figures that had been
+   computed two different ways: two from each team's point differential halved
+   plus home field, three from the un-halved differential, and one row in a
+   facts table had simply been copied from a different game. Three of the five
+   were wrong by 3 to 7 points, and one of them was the basis of a claim that a
+   pick had "the tightest agreement on this card" when the check in fact said
+   the line was already right. The same pass caught Ohio State logged as 4-1
+   when the grades file says 3-1, two carry shares that were wrong (Baugh 51.9%
+   against a real 48.6%, Mohammed 71.6% against 63.5%), and six per-game
+   averages that had been truncated rather than rounded. Nothing in the data
+   was wrong; every one of these was introduced between reading the data and
+   writing the sentence.
+   `articles/build/recompute.py` and `articles/build/screen_props.py` now exist
+   to close that gap. They rebuild the whole candidate table and the prop
+   survivor list from the committed JSONs and print them; the card is checked
+   against their output, not against memory. Two traps are written into
+   recompute.py's docstring because both were hit while building it: the
+   residual's predictor is the average defensive SUCCESS RATE rank, not the mean
+   of all five factors (the latter gives r=-0.69 and a different top five), and
+   a team's per-game scoring must use its OWN game count, which was 3, 4 or 5
+   in week 5.
+
+19. **A consensus line is not a bettable line.** The week 5 lines file had
+   Marshall/James Madison at a total of 56.25, which is an average across books
+   and a number nobody posts. A pick written at 56.2 cannot be graded against
+   anything real. Write the pick at the nearest standard number that is no
+   better than the consensus -- Under 56.0, not Under 56.5 -- and say in the
+   write-up that the feed said 56.25.
+
 ---
 
 ## Odds API — cost model (CRITICAL, don't burn the budget)
