@@ -1,7 +1,31 @@
 # TeamRankings trends pages
 
-Save these three pages here each week, alongside the workbook. Right-click →
-Save Page As (HTML only is fine — the parser only reads the results table):
+Preferred: run `python3 pull_trends.py` from the repo root, **on your own
+machine**. This sandbox's network policy blocks teamrankings.com (the agent
+proxy answers 403 to the CONNECT), which is why these pages spent the first
+five weeks of the season arriving as Save Page As files and pasted tables.
+
+```bash
+python3 pull_trends.py                 # all three, config.SEASON
+python3 pull_trends.py --pages ats ou  # just the ones that moved
+python3 pull_trends.py --dry-run       # fetch + validate, write nothing
+```
+
+It fetches `?range=yearly_<season>` for each page, parses the result with the
+same `teamrankings.py` the build uses *before* writing anything, and refuses
+to replace a file that parses to more teams than the fetch did (the bad fetch
+lands as `<name>.rejected` instead). It prints games played per team, which is
+the freshness tell — if that reads 3 when the PFF drop is at 4, the pages are
+a week behind. A `<stem>.txt` paste is renamed to `.superseded` once the
+`.html` lands, since the loader prefers `.html` and leaving both is a trap.
+
+`--from-cache DIR` re-runs the parse and validation against pages already on
+disk, with no network, which is also how to check a page saved by hand.
+
+The manual routes below still work and need no network.
+
+Right-click → Save Page As (HTML only is fine — the parser only reads the
+results table):
 
 | file | page |
 |---|---|

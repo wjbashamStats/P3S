@@ -228,6 +228,32 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    exactly what the roster filter is for. If a JSON needs to be reproducible,
    the tables it was built from have to be committed alongside it.
 
+16. **The naive points check has been tested once and it inverted the
+   totals selection.** Week 4's QA replaced four totals after a points-based
+   expectation (each team's own scoring blended with what the opponent allows)
+   disagreed with them. The four removed went 3-1 (+1.90u); the four kept went
+   1-2-1 (-1.20u). The swap cost 3.10u. Removing Hawai'i/Wyoming was still
+   right, and for a reason that had nothing to do with the check: its write-up
+   carried a wrong points figure and the pick collapsed without it. But on the
+   other three the naive measure was wrong every time and the residual was
+   right every time. Across all eight the residual alone was 4-3-1. n is 8, so
+   this proves nothing either way about the residual; what it does say is that
+   the points check has no demonstrated right to veto, and it should not be
+   used as one again until it has a record. Report both numbers, pick on the
+   residual, and say when they disagree.
+17. **A DFS salary sheet can carry two different players with the same name.**
+   Week 5 2026 had an Austin Simmons at QB for Missouri at $9,600 and another
+   at TE for Washington at $4,000. The DFS page joined salaries on normalised
+   name alone and gave Missouri's starter the $4,000 tag -- a high-projection
+   body at minimum salary, which the lineup generator would put in every
+   lineup. pages/dfs_page.html now resolves the sheet's team abbreviations
+   against our team names by majority vote over the unambiguous matches, then
+   picks the row whose team is the player's; an unresolvable collision is left
+   unsalaried and named in the status line. The same pass drops a player whose
+   only name match belongs to someone on a team that is not on the slate
+   (UMass's Jordan Washington was matching a Washington RB). Teams with a
+   salaried player went 29 -> 28 on a 14-game slate, which is the check.
+
 ---
 
 ## Odds API — cost model (CRITICAL, don't burn the budget)

@@ -29,15 +29,15 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,3,2026-09-19,prop,Keshaun Singleton Over rec yds,44.5,Florida @ Auburn,1.15,-115,67.8,WIN,99,1.00,65.5 yds/gm on 8.0 tgt/gm; team-leading 23.5% share; 5 books
 2026,3,2026-09-19,prop,Kenny Johnson Over receptions,3.5,Houston @ Texas Tech,1.15,-115,5.3,WIN,4,1.00,4.5 rec/gm on 6.0 tgt/gm at 75% catch rate
 2026,3,2026-09-19,prop,George Pettaway Under rush yds,70.5,James Madison @ San Diego State,1.15,-115,34.6,LOSS,85,-1.15,43.5 yds/gm at 3.6 ypc; Herman 12.4 ypc taking work
-2026,4,2026-09-26,spread,Troy,+3.0,Troy @ Utah State,1.10,-110,-7.7,PENDING,,,"de-meaned gap +9.1, largest on the board; Utah State 0-3 with a 37.4 passing grade"
-2026,4,2026-09-26,spread,Penn State,-10.0,Wisconsin @ Penn State,1.10,-110,-17.2,PENDING,,,de-meaned -8.8; laying the better rating at home rather than fading a record
-2026,4,2026-09-26,spread,Georgia Tech,+3.5,Georgia Tech @ Stanford,1.10,-110,-10.2,PENDING,,,"de-meaned +5.1; Stanford -19.0 MOV, 121st SR defense. GT 0-3 ATS is the caution"
-2026,4,2026-09-26,spread,Iowa,+5.5,Iowa @ Michigan,1.10,-110,+0.3,PENDING,,,de-meaned +3.6; SP+ has it 2.2 apart. Hub flags TARP favoring Michigan 37 to 104
-2026,4,2026-09-26,spread,Nebraska,-5.5,Nebraska @ Michigan State,1.10,-110,-10.3,PENDING,,,de-meaned +3.2; 12.2-pt SP+ gap against a 1.9 home edge. MSU 2-0-1 ATS is the caution
-2026,4,2026-09-26,total,Over,57.0,Wake Forest @ Louisville,1.10,-110,58.5,PENDING,,,"resid +2.3, points check +10.3, both Over records, both top-half tempo: only game on the slate hitting all four"
-2026,4,2026-09-26,total,Under,56.5,Houston @ Georgia Southern,1.10,-110,56.8,PENDING,,,"resid -6.0, points check -5.2; GaSo 10th SR defense scoring 21.7, Houston 107th explosiveness, 17.5-pt spread"
-2026,4,2026-09-26,total,Under,52.5,UNLV @ Akron,1.10,-110,51.2,PENDING,,,"resid -2.1, points check -5.5; combined 38.7 pts/gm, Akron 138th explosiveness, UNLV 0-3 Over"
-2026,4,2026-09-26,total,Over,47.0,Virginia Tech @ Boston College,1.10,-110,56.4,PENDING,,,"resid +4.4, points check +9.3; VT 54.1 coverage vs a BC offense throwing on 57% of snaps"
+2026,4,2026-09-26,spread,Troy,+3.0,Troy @ Utah State,1.10,-110,-7.7,LOSS,Troy 10-21 Utah State,-1.10,covered by -8.0
+2026,4,2026-09-26,spread,Penn State,-10.0,Wisconsin @ Penn State,1.10,-110,-17.2,LOSS,Wisconsin 24-20 Penn State,-1.10,covered by -14.0
+2026,4,2026-09-26,spread,Georgia Tech,+3.5,Georgia Tech @ Stanford,1.10,-110,-10.2,LOSS,Georgia Tech 27-34 Stanford,-1.10,covered by -3.5
+2026,4,2026-09-26,spread,Iowa,+5.5,Iowa @ Michigan,1.10,-110,+0.3,WIN,Iowa 20-19 Michigan,1.00,covered by +6.5
+2026,4,2026-09-26,spread,Nebraska,-5.5,Nebraska @ Michigan State,1.10,-110,-10.3,WIN,Nebraska 31-13 Michigan State,1.00,covered by +12.5
+2026,4,2026-09-26,total,Over,57.0,Wake Forest @ Louisville,1.10,-110,58.5,PUSH,57 (30-27),0.00,landed +0.0 vs the number
+2026,4,2026-09-26,total,Under,56.5,Houston @ Georgia Southern,1.10,-110,56.8,LOSS,70 (42-28),-1.10,landed +13.5 vs the number
+2026,4,2026-09-26,total,Under,52.5,UNLV @ Akron,1.10,-110,51.2,WIN,48 (38-10),1.00,landed -4.5 vs the number
+2026,4,2026-09-26,total,Over,47.0,Virginia Tech @ Boston College,1.10,-110,56.4,LOSS,35 (21-14),-1.10,landed -12.0 vs the number
 2026,4,2026-09-26,prop,Jadan Baugh Over rush yds,119.0,Ole Miss @ Florida,1.14,-114.0,149.8,WIN,142 rush yds,1.00,week 4 delta from the PFF drop: 438 in 3g -> 580 in 4g
 2026,4,2026-09-26,prop,Jamal Rule Over rush yds,66.5,Nebraska @ Michigan State,1.14,-114.0,106.9,LOSS,4 rush yds,-1.14,329 in 3g -> 333 in 4g; the 55.9% breakaway share flagged as the risk is what failed
 2026,4,2026-09-26,prop,Hollywood Smothers Over rush yds,52.0,Texas @ Tennessee,1.13,-113.0,101.8,VOID,DNP,0.00,"did not play: Texas played a 4th game, Smothers stayed at 3 with identical attempts and yards. Availability was not checked before posting"

@@ -578,20 +578,60 @@
       status.className = 'import-status';
       return;
     }
-    const byName = {};
-    pool.forEach(p => { byName[normName(p.name)] = p; p.salary = null; });
+    // Group salary rows by name rather than keeping one: a slate can carry two
+    // different players with the same name, and picking the wrong one is not a
+    // cosmetic error. Week 5 2026 had an Austin Simmons at QB for Missouri at
+    // $9,600 and a different Austin Simmons at TE for Washington at $4,000 --
+    // a name-only join gave Missouri's starter the $4,000 tag, which is exactly
+    // the kind of minimum-priced, high-projection body the optimizer would put
+    // in every lineup.
+    const rowsByName = {};
+    rows.forEach(r => { (rowsByName[normName(r.name)] ||= []).push(r); });
+    pool.forEach(p => { p.salary = null; });
+
+    // Resolve the sheet's team abbreviations against our team names by majority
+    // vote over the unambiguous matches, so no hardcoded abbreviation table has
+    // to be maintained per site.
+    const votes = {};
+    pool.forEach(p => {
+      const rs = rowsByName[normName(p.name)];
+      if (!rs || rs.length !== 1 || !rs[0].team) return;
+      ((votes[rs[0].team] ||= {})[p.team] ||= 0, votes[rs[0].team][p.team]++);
+    });
+    const abbrevTeam = {};
+    Object.entries(votes).forEach(([abbrev, tally]) => {
+      abbrevTeam[abbrev] = Object.entries(tally).sort((a, b) => b[1] - a[1])[0][0];
+    });
+
     let matched = 0;
-    const unmatched = [];
-    rows.forEach(r => {
-      const key = normName(r.name);
-      const p = byName[key];
-      if (p) { p.salary = r.salary; matched++; }
-      else unmatched.push(r.name);
+    const collisions = [];
+    pool.forEach(p => {
+      const rs = rowsByName[normName(p.name)];
+      if (!rs || !rs.length) return;
+      let pick = rs[0];
+      if (rs.length > 1) {
+        // Two players share this name: take the one whose team is ours.
+        const onTeam = rs.filter(r => abbrevTeam[r.team] === p.team);
+        if (onTeam.length !== 1) { collisions.push(p.name); return; }
+        pick = onTeam[0];
+        collisions.push(p.name + ' (resolved to ' + pick.team + ')');
+      } else if (pick.team && abbrevTeam[pick.team] && abbrevTeam[pick.team] !== p.team) {
+        // Unique name, but it belongs to a player on another team -- our man is
+        // not on this slate at all.
+        return;
+      }
+      p.salary = pick.salary; matched++;
+      pick._used = true;
     });
     salariesLoaded = matched > 0;
+    // Salary rows nothing in the pool claimed. Most are bench players we never
+    // project; a recognisable starter here is a name-spelling problem.
+    const unmatched = rows.filter(r => !r._used).map(r => r.name);
     const salaryTeams = new Set(rows.map(r => r.team).filter(Boolean)).size;
     const slateNote = salaryTeams ? ` (this salary sheet covers ${salaryTeams} teams -- our full player pool spans every Week ${DATA.week} team, so anyone whose team isn't in this slate won't have a salary to match)` : '';
-    status.textContent = `${matched}/${rows.length} salary rows matched to our projections${slateNote}`;
+    const collisionNote = collisions.length
+      ? ` Shared names on this slate: ${collisions.join(', ')}.` : '';
+    status.textContent = `${matched}/${rows.length} salary rows matched to our projections${slateNote}${collisionNote}`;
     status.className = 'import-status' + (matched > 0 ? ' ok' : '');
     if (unmatched.length) {
       unmatchedBox.hidden = false;
