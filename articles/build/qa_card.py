@@ -90,6 +90,13 @@ class QA:
     def check_kickoffs(self):
         print("\n--- kickoffs (Eastern) ---")
         tz = datetime.timezone(datetime.timedelta(hours=-4))
+        now = datetime.datetime.now(datetime.timezone.utc)
+        for f in (f"hist_lines_live_{self.season}wk{self.week}.csv",
+                  f"diversions_{self.season}wk{self.week}.json"):
+            age = (now - datetime.datetime.fromtimestamp(
+                os.path.getmtime(os.path.join(ROOT, f)), datetime.timezone.utc)).total_seconds() / 3600
+            print(f"  note {f} is {age:.1f} h old"
+                  + ("   <-- lines will have moved; check the number before betting" if age > 6 else ""))
         for sec in ("spreads", "totals", "props"):
             for it in self.content[sec]:
                 g = self.game_of(it)
@@ -99,10 +106,15 @@ class QA:
                 e = u.astimezone(tz)
                 sat = e.weekday() == 5
                 self.ok(sat, "not Saturday in ET", f"{it['pick']} {e:%a %Y-%m-%d %H:%M}")
-                self.ok(not g["started"], "already started", it["pick"])
+                # the board's own `started` flag is frozen at build time, so a game
+                # that kicked off after the build still reads False. The live test is
+                # the kickoff timestamp against the clock.
+                ahead = (u - datetime.datetime.now(datetime.timezone.utc)).total_seconds() / 3600
+                self.ok(ahead > 0, "kickoff is in the past", f"{it['pick']} {u:%Y-%m-%d %H:%M}Z")
+                self.ok(not g["started"], "flagged started on the board", it["pick"])
                 note = "  (reads Sunday in UTC)" if u.weekday() == 6 else ""
-                print(f"  {'ok  ' if sat and not g['started'] else 'FAIL'} {it['pick']:<46}"
-                      f"{e:%a %H:%M ET}  UTC {u:%a %H:%M}{note}")
+                print(f"  {'ok  ' if sat and ahead > 0 else 'FAIL'} {it['pick']:<46}"
+                      f"{e:%a %H:%M ET}  UTC {u:%a %H:%M}  in {ahead:5.1f}h{note}")
 
     # -------------------------------------------------------------------- ties
     def check_ties(self):
@@ -304,6 +316,189 @@ class QA:
             self.ok(gp == team_max, "player is behind his team's game count",
                     f"{name}: {gp} vs {team_max}")
 
+    # ----------------------------------------------------------- superlatives
+    # A superlative is a claim about a SET, and the set is never the one memory
+    # reaches for. Week 5 shipped five false ones -- "the slowest on this card"
+    # when two teams on the same card were slower, "the fourth largest on the
+    # board" when it was sixth, "the thinnest cushion" when another pick had
+    # less, "the best defensive number in this game" when the opponent's run
+    # defense was higher, and "the widest unit gap in this game" when tackling
+    # was twice as wide. So every scoped superlative must be registered here
+    # with a predicate that computes it. An unregistered one fails.
+    SUP = (r'(largest|smallest|most|least|widest|biggest|highest|lowest|weakest|strongest|'
+           r'hardest|easiest|best|worst|fastest|slowest|tightest|thinnest|only|'
+           r'second-largest|third-slowest|dead last)')
+    SCOPE = (r'(on this card|on the card|on this prop card|on the board|on the slate|'
+             r'in this game|in this matchup|in the country|of any team|of any back|'
+             r'of any receiver|of any player|of the ten teams|nationally)')
+
+    def card_rows(self, sec):
+        out = []
+        for it in self.content[sec]:
+            g = self.game_of(it)
+            out.append((it, g, self.calc[(g["away_team"], g["home_team"])]))
+        return out
+
+    def cushions(self):
+        """Spread card: how far the points check sits past the market, per pick."""
+        out = {}
+        for it, g, r in self.card_rows("spreads"):
+            net = r["spread_gap"] - self.level
+            out[it["pick"]] = -r["pts_check_spread"] if net < 0 else r["pts_check_spread"]
+        return out
+
+    def card_teams(self, sec, key):
+        vals = []
+        for it, g, r in self.card_rows(sec):
+            for side in ("home", "away"):
+                vals.append((g[side + "_display"], g[side + "_power"][key]))
+        return sorted(set(vals), key=lambda x: x[1])
+
+    def implied(self, sec):
+        out = []
+        for it, g, r in self.card_rows(sec):
+            tot, sp = r["book_total"], r["book_spread"]
+            out += [(g["away_display"], (tot + sp) / 2), (g["home_display"], (tot - sp) / 2)]
+        return sorted(set(out), key=lambda x: x[1])
+
+    def prop_rows(self):
+        out = []
+        for it in self.content["props"]:
+            name = max((nm for nm in list(self.rush) + list(self.recv) if it["pick"].startswith(nm)),
+                       key=len, default=None)
+            kind = "rush" if "Rushing" in it["pick"] else "recv"
+            out.append((it, name, kind, (self.rush if kind == "rush" else self.recv)[name]))
+        return out
+
+    def check_superlatives(self):
+        print("\n--- scoped superlatives, each computed rather than recalled ---")
+        cu = self.cushions()
+        nets = {abs(r["spread_gap"] - self.level) for r in self.calc.values()}
+        resids = {abs(r["resid"]) for r in self.calc.values()}
+        sp_tempo = self.card_teams("spreads", "tempo_rank")
+        to_tempo = self.card_teams("totals", "tempo_rank")
+        pr_imp = self.implied("props")
+        props = self.prop_rows()
+
+        def gap_to_line(row, it):
+            line = float(next(v for k, v in it["facts"] if k == "Book line"))
+            gp = int(row["player_game_count"])
+            return abs(float(row["yards"]) / gp - line)
+
+        shares = {}
+        for it, name, kind, row in props:
+            if kind == "rush":
+                team = row["team_name"]
+                tot = sum(float(r["attempts"] or 0) for r in self.rush.values() if r["team_name"] == team)
+                shares[name] = float(row["attempts"]) / tot * 100
+        covs = {}
+        for it, g, r in self.card_rows("props"):
+            name = max((nm for nm in list(self.rush) + list(self.recv) if it["pick"].startswith(nm)), key=len)
+            row = self.rush.get(name) or self.recv.get(name)
+            # the opponent is the side whose PFF team name is not the player's
+            for side in ("home", "away"):
+                other = "away" if side == "home" else "home"
+                if g[side + "_display"].upper().startswith(row["team_name"].split()[0][:4]):
+                    covs[it["pick"]] = g[other + "_grades"]["grade_cov"]
+            covs.setdefault(it["pick"], None)
+
+        REG = {
+          "11.4 after the slate's level is removed, and the largest on the board":
+            lambda: round(max(nets), 1) == 11.4 and max(
+                self.calc.values(), key=lambda r: abs(r["spread_gap"] - self.level)
+            )["home"] == "Miami Ohio",
+          "third-slowest of the ten teams on this card behind Miami Ohio and Bowling Green":
+            lambda: [n for n, _ in sp_tempo[::-1]][:3] == ["Miami Ohio", "Bowling Green", "New Mexico"],
+          "4.3 clear of the line, the most on this card":
+            lambda: round(max(cu.values()), 1) == round(cu["Fresno State +1.5"], 1) == 4.3,
+          "the most room any pick on this card has on that measure":
+            lambda: max(cu, key=cu.get) == "Fresno State +1.5",
+          "the weakest-supported spread on the card":
+            lambda: min(cu, key=cu.get) == "Illinois -10.0",
+          "the second-largest point-based edge on the card at 4.2":
+            lambda: (round(sorted(cu.values(), reverse=True)[1], 1)
+                     == round(cu["Ohio -3.5"], 1) == 4.2),
+          "+7.1, the largest on the board": lambda: 7.1 == round(max(resids), 1),
+          "the largest on the slate, and the points-based check agrees":
+            lambda: 7.1 == round(max(resids), 1),
+          "the pick on the card with the most evidence against it":
+            lambda: sum(1 for it, g, r in self.card_rows("totals")
+                        if (r["pts_check_total"] > 0) != (r["resid"] > 0)
+                        and g["home_power"]["over_record"].startswith("4-0")
+                        and g["away_power"]["over_record"].startswith("4-0")) == 1,
+          "the only Under on the card where both reads agree":
+            lambda: sum(1 for it, g, r in self.card_rows("totals") if it["pick"].startswith("Under")
+                        and (r["pts_check_total"] < 0) == (r["resid"] < 0)) == 1,
+          "the best efficiency defense in the country":
+            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
+                        ["five_factors"]["home_def"]["success_rate"] == 1,
+          "15th-fastest tempo, the fastest on this card":
+            lambda: to_tempo[0] == ("James Madison", 15.0),
+          "31.5 implied total, the highest on this prop card":
+            lambda: pr_imp[-1][0] == "Florida" and round(pr_imp[-1][1], 1) == 31.5,
+          "the weakest unit in this matchup":
+            lambda: min(v for side in ("home", "away")
+                        for k, v in self.board[("California Golden Bears", "UNLV Rebels")][side + "_grades"].items()
+                        if k.startswith("grade_")) == 49.2,
+          "the largest of any back on this card":
+            lambda: max(shares, key=shares.get) == "Adam Mohammed" and round(shares["Adam Mohammed"], 1) == 63.5,
+          "34.0 yds/gm below his average, the widest gap on this card":
+            lambda: max((gap_to_line(r, i), n) for i, n, k, r in props)[1] == "Kari Ashley",
+          "the widest production-to-line gap on this prop card":
+            lambda: max((gap_to_line(r, i), n) for i, n, k, r in props)[1] == "Kari Ashley",
+          "20.8 implied total, the lowest of any team on this card":
+            lambda: pr_imp[0][0] == "TCU" and round(pr_imp[0][1], 1) == 20.8,
+          "89.7 grade, the hardest matchup on this card":
+            lambda: max(v for v in covs.values() if v) == 89.7,
+          "the most of any receiver on this card":
+            lambda: max(((float(r["routes"]), n) for i, n, k, r in props if k == "recv"))[1] == "Chas Nimrod",
+          "the hardest matchup any pick on this card draws":
+            lambda: max(covs, key=lambda k: covs[k] or 0) == "Chas Nimrod Over 47.5 Receiving Yards",
+          "the widest unit gap in the game is actually tackling":
+            lambda: max(((abs(self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"][k]
+                             - self.board[("BYU Cougars", "TCU Horned Frogs")]["away_grades"][k]), k)
+                        for k in self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"]
+                        if k.startswith("grade_")))[1] == "grade_tack",
+          "the weakest of anyone this card is backing to go Over":
+            lambda: min(((float(r["grades_pass_route"]), n) for i, n, k, r in props
+                         if k == "recv" and "Over" in i["pick"]))[1] == "Chas Nimrod",
+          "dead last in the latter two":
+            lambda: self.board[("Bowling Green Falcons", "Miami (OH) RedHawks")]["five_factors"]["away_off"]
+                        ["explosiveness"] == 138 and
+                    self.board[("Bowling Green Falcons", "Miami (OH) RedHawks")]["five_factors"]["away_off"]
+                        ["finishing_drives"] == 138,
+          "138th of 138 in Finishing Drives":
+            lambda: self.board[("Ohio Bobcats", "Kent State Golden Flashes")]["five_factors"]["away_def"]
+                        ["finishing_drives"] == 138,
+          "1st nationally in Success Rate":
+            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
+                        ["five_factors"]["home_def"]["success_rate"] == 1,
+        }
+        seen = set()
+        for sec in ("spreads", "totals", "props"):
+            for it in self.content[sec]:
+                for src in [v for _, v in it["facts"]] + it["paras"]:
+                    for sent in re.split(r'(?<=[.;:])\s+', src):
+                        if not (re.search(self.SUP, sent, re.I) and re.search(self.SCOPE, sent, re.I)):
+                            continue
+                        key = next((k for k in REG if k in sent), None)
+                        if key is None:
+                            self.ok(False, "UNREGISTERED superlative -- verify it or rewrite it",
+                                    f"{it['pick']}: {sent.strip()[:110]}")
+                            print(f"  FAIL {it['pick'][:24]:<25}unregistered: {sent.strip()[:80]}")
+                            continue
+                        seen.add(key)
+                        try:
+                            good = bool(REG[key]())
+                        except Exception as e:
+                            good = False
+                            key = f"{key} (predicate raised {type(e).__name__}: {e})"
+                        self.ok(good, "FALSE superlative", f"{it['pick']}: {key}")
+                        print(f"  {'ok  ' if good else 'FAIL'} {it['pick'][:24]:<25}{key[:86]}")
+        unused = [k for k in REG if k not in seen]
+        if unused:
+            print(f"  note: {len(unused)} registered claims no longer appear in the card")
+
     # ------------------------------------------------------------------ history
     def check_history(self):
         """The Purdue/Illinois Under argues from week 4's grading. Those figures are
@@ -356,6 +551,7 @@ def main():
     qa.check_numbers()
     qa.check_scoring()
     qa.check_props()
+    qa.check_superlatives()
     qa.check_history()
     qa.check_log()
     print("\n" + "=" * 72)

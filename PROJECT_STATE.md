@@ -314,6 +314,40 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    magnitudes, and last week's 3-1 grading record read as a team record. A QA
    script needs its own failures triaged as carefully as the card's.
 
+21. **A superlative is a claim about a set, and the set is never the one memory
+   reaches for.** A third pass over the week 5 card -- after two earlier passes
+   and after the automated checker was already green on 170 numeric checks --
+   found five more defects, every one of them a superlative:
+   - "New Mexico's own tempo is 134th, the slowest on this card." Miami Ohio is
+     136th and Bowling Green 135th, both on the same card.
+   - "1.9 points is the thinnest cushion any spread on this card has." The
+     Illinois lay has 0.2, and the same document says so two pages later.
+   - "the model gap is the fourth largest on the board." Sixth on the board;
+     fourth among the candidates that cleared the direction screen. The card
+     had collapsed two different sets into one sentence.
+   - "an 89.6 coverage grade, the best defensive number in this game." TCU's
+     run defense grades 92.0.
+   - and then, in the fix for that one, "the widest unit gap in this game" --
+     also false, because tackling is 34.8 apart against coverage's 18.6. A
+     correction written without running the comparison is just a new error.
+   `qa_card.py` now carries a superlative registry: every sentence combining a
+   superlative with a scope ("on this card", "on the board", "in this game",
+   "in the country", "of any back") must match a registered key whose predicate
+   computes the claim from the data, and an unregistered one is a failure. That
+   forces a superlative to be either verified in code or rewritten. 241 checks
+   on week 5, all passing. Three of the new predicates failed on first run from
+   comparing a rounded figure against an unrounded max -- the predicate's own
+   arithmetic needs the same care as the claim's.
+
+22. **The board's `started` flag is frozen at build time.** It said False for a
+   Friday-night game that had kicked off five hours earlier, because the board
+   was built before it. It is not a live check and must not be used as one; the
+   live test is the kickoff timestamp against the clock, which qa_card.py now
+   does, printing hours-to-kickoff per pick. It also prints the age of the lines
+   file and warns past six hours: a card built the day before is sound in its
+   reasoning and stale in its numbers, and a near-pick'em or a 3.5 is exactly
+   where that matters.
+
 ---
 
 ## Odds API — cost model (CRITICAL, don't burn the budget)
