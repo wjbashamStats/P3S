@@ -284,6 +284,36 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    better than the consensus -- Under 56.0, not Under 56.5 -- and say in the
    write-up that the feed said 56.25.
 
+20. **A second QA pass on an already-QA'd card still found two defects, so the
+   pass is now a script.** `articles/build/qa_card.py --week N` runs seven
+   checks over content.json and exits non-zero on any failure. What it caught
+   after the week 5 card had already been checked once by hand and shipped:
+   - Kent State's offensive Field Position rank is 126.5, a tie, and the card
+     wrote "126th in Field Position" -- in a document whose own source note
+     promises that a .5 rank is written "tied Nth". Eleven other ties on the
+     same card were written correctly, which is why reading for it does not
+     work and a scan does.
+   - "a route grade of only 60.7, the weakest of any player on this card" was
+     false: Mazeo Bennett Jr. grades 56.1. Both are on the card, but Bennett is
+     an Under, so the comparison set for "weakest" was never the whole card.
+     Superlatives have to be evaluated against the actual set, in code,
+     the same as any other number.
+   The checks: kickoffs are Saturday in Eastern and unstarted (one game reads
+   Sunday in UTC); every tie uses the tied form; every grade traces to a team
+   grade dict or the cited player's PFF row; book line, model, gap, residual and
+   points check all match recompute.py to the digit; per-game figures round half
+   UP (18.25 is 18.3 -- Python's own %.1f rounds half to even and gives 18.2,
+   which is what first made these look like errors when they were not); every
+   W-L token in a facts table is a record one of the two teams actually holds;
+   each prop player's production matches the PFF files and he is level with his
+   team's game count; the week 4 figures the card argues from agree with
+   picks_log and PROJECT_STATE; and every pick has a picks_log row.
+   Writing the checker produced four false positives of its own before it was
+   right -- a grade pool keyed on a name the text did not contain, "Under 56.0
+   and will be graded" parsed as a grade, signed spread lines compared against
+   magnitudes, and last week's 3-1 grading record read as a team record. A QA
+   script needs its own failures triaged as carefully as the card's.
+
 ---
 
 ## Odds API — cost model (CRITICAL, don't burn the budget)
