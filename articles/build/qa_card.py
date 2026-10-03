@@ -410,39 +410,22 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
-          "11.4 after the slate's level is removed, and the largest on the board":
-            lambda: round(max(nets), 1) == 11.4 and max(
-                self.calc.values(), key=lambda r: abs(r["spread_gap"] - self.level)
-            )["home"] == "Miami Ohio",
+          "the slowest tempo in the country at 138th":
+            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
+                        ["home_power"]["tempo_rank"] == 138.0,
+          "the slowest pace in the country, 138th of 138":
+            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
+                        ["home_power"]["tempo_rank"] == 138.0,
+          "the better passing offence in the game":
+            lambda: (self.board[("Virginia Cavaliers", "Florida State Seminoles")]["away_grades"]["grade_pass"]
+                     > self.board[("Virginia Cavaliers", "Florida State Seminoles")]["home_grades"]["grade_pass"]),
+          "the weak unit on the field":
+            lambda: (self.board[("Syracuse Orange", "UConn Huskies")]["home_grades"]["grade_def"]
+                     < self.board[("Syracuse Orange", "UConn Huskies")]["away_grades"]["grade_def"]),
+          "comfortably the better offense on the field":
+            lambda: (self.board[("Stanford Cardinal", "Wake Forest Demon Deacons")]["home_grades"]["grade_off"]
+                     > self.board[("Stanford Cardinal", "Wake Forest Demon Deacons")]["away_grades"]["grade_off"]),
           "+7.1, the largest on the board": lambda: 7.1 == round(max(resids), 1),
-          "the largest on the slate, and the points-based check agrees":
-            lambda: 7.1 == round(max(resids), 1),
-          "15th-fastest tempo nationally":
-            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
-                        ["home_power"]["tempo_rank"] == 15.0,
-          "the best efficiency defense in the country":
-            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
-                        ["five_factors"]["home_def"]["success_rate"] == 1,
-          "the weakest unit in this matchup":
-            lambda: min(v for side in ("home", "away")
-                        for k, v in self.board[("California Golden Bears", "UNLV Rebels")][side + "_grades"].items()
-                        if k.startswith("grade_")) == 49.2,
-          "the widest unit gap in the game is actually tackling":
-            lambda: max(((abs(self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"][k]
-                             - self.board[("BYU Cougars", "TCU Horned Frogs")]["away_grades"][k]), k)
-                        for k in self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"]
-                        if k.startswith("grade_")))[1] == "grade_tack",
-          "dead last in the latter two":
-            lambda: self.board[("Bowling Green Falcons", "Miami (OH) RedHawks")]["five_factors"]["away_off"]
-                        ["explosiveness"] == 138 and
-                    self.board[("Bowling Green Falcons", "Miami (OH) RedHawks")]["five_factors"]["away_off"]
-                        ["finishing_drives"] == 138,
-          "138th of 138 in Finishing Drives":
-            lambda: self.board[("Ohio Bobcats", "Kent State Golden Flashes")]["five_factors"]["away_def"]
-                        ["finishing_drives"] == 138,
-          "1st nationally in Success Rate":
-            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
-                        ["five_factors"]["home_def"]["success_rate"] == 1,
         }
         seen = set()
         for sec in ("spreads", "totals", "props"):
@@ -480,7 +463,10 @@ class QA:
         for r in prior:
             tally[r["result"].strip().upper()] = tally.get(r["result"].strip().upper(), 0) + 1
         kept = f"{tally['WIN']}-{tally['LOSS']}-{tally['PUSH']}"
-        text = " ".join(self.text(it) for it in self.content["totals"])
+        import html as _html, re as _re, zipfile as _zip
+        _z = _zip.ZipFile(os.path.join(ROOT, "articles", "Week5_Totals.docx"))
+        text = _html.unescape(_re.sub(r"<[^>]+>", " ",
+                 _z.read("word/document.xml").decode("utf-8")))
         self.ok(kept in text, "the kept-totals record does not match picks_log",
                 f"log says {kept}")
         print(f"  {'ok  ' if kept in text else 'FAIL'} week {self.week-1} totals in picks_log: {kept}")

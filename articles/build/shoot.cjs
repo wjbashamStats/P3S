@@ -2,15 +2,15 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const path = require('path');
 const PAGE_PATH = path.join(__dirname, 'diversions_page.html');
 const GAMES = [
-  ['Troy Trojans',        'Troy_at_Utah_State'],
-  ['Wisconsin',           'Wisconsin_at_Penn_State'],
-  ['Georgia Tech',        'Georgia_Tech_at_Stanford'],
-  ['Iowa Hawkeyes',       'Iowa_at_Michigan'],
-  ['Nebraska',            'Nebraska_at_Michigan_State'],
-  ['Houston',             'Houston_at_Georgia_Southern'],
-  ['Wake Forest',         'Wake_Forest_at_Louisville'],
-  ['UNLV',                'UNLV_at_Akron'],
-  ['Virginia Tech',       'Virginia_Tech_at_Boston_College'],
+  ['Eastern Michigan',   'Eastern_Michigan_at_UMass'],
+  ['Virginia Cavaliers', 'Virginia_at_Florida_State'],
+  ['Syracuse',           'Syracuse_at_UConn'],
+  ['Western Michigan',   'Western_Michigan_at_Buffalo'],
+  ['Ohio Bobcats',       'Ohio_at_Kent_State'],
+  ['Stanford',           'Stanford_at_Wake_Forest'],
+  ['California',         'California_at_UNLV'],
+  ['Washington Huskies', 'Washington_at_USC'],
+  ['Miami Hurricanes',   'Miami_at_Clemson'],
 ];
 const SECTION_RANGES = [
   ['Five Factors', 'Power Ratings', 'context'],

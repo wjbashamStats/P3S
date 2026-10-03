@@ -43,18 +43,18 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,4,2026-09-26,prop,Hollywood Smothers Over rush yds,52.0,Texas @ Tennessee,1.13,-113.0,101.8,VOID,DNP,0.00,"did not play: Texas played a 4th game, Smothers stayed at 3 with identical attempts and yards. Availability was not checked before posting"
 2026,4,2026-09-26,prop,Iverson Howard Under rush yds,59.5,UCLA @ Maryland,1.14,-114.0,30.9,WIN,34 rush yds,1.00,138 in 3g -> 172 in 4g
 2026,4,2026-09-26,prop,Jaron Tibbs Over receptions,3.5,Kansas State @ Cincinnati,1.42,-141.5,5.1,LOSS,1 reception,-1.42,15 in 3g -> 16 in 4g
-2026,5,2026-10-03,spread,Miami Ohio,-13.5,Bowling Green @ Miami Ohio,1.10,-110,-25.3,,,,"largest de-meaned gap on the board (11.4); points check -16.2 agrees, 2.7 clear of the line"
-2026,5,2026-10-03,spread,New Mexico,-22.5,UTEP @ New Mexico,1.10,-110,-33.5,,,,"de-meaned gap 10.6; points check -24.4 agrees but only 1.9 clear; NM 4-0 ATS, tempo 134th"
-2026,5,2026-10-03,spread,Fresno State,+1.5,Fresno State @ Washington State,1.10,-110,-5.9,,,,"de-meaned gap 7.8; points check -2.8, the largest point-based edge on the card at 4.3"
-2026,5,2026-10-03,spread,Illinois,-10.0,Purdue @ Illinois,1.10,-110,-17.6,,,,"de-meaned gap 7.2; points check -10.2, i.e. the line itself. Weakest-supported spread on the card"
-2026,5,2026-10-03,spread,Ohio,-3.5,Ohio @ Kent State,1.10,-110,-10.1,,,,"de-meaned gap 7.0; points check -7.7 agrees, 4.2 clear. Road favorite under a touchdown"
-2026,5,2026-10-03,total,Over,45.5,Ohio State @ Iowa,1.10,-110,59.5,,,,"residual +7.1, largest on the board; points check 49.0 agrees. Same profile left off in wk4 (Iowa-Michigan 39 vs 38.5)"
-2026,5,2026-10-03,total,Over,47.5,Miami @ Clemson,1.10,-110,57.5,,,,residual +6.2; points check 51.9 agrees. One-offense Over; 16.5-pt blowout risk
-2026,5,2026-10-03,total,Under,62.5,Purdue @ Illinois,1.10,-110,53.4,,,,residual -5.4; points check 66.0 and both teams 4-0 to the Over disagree. Taken on the residual per wk4 lesson; flagged most likely wrong
-2026,5,2026-10-03,total,Under,58.5,Washington @ USC,1.10,-110,56.2,,,,residual -5.2; points check 55.5 agrees. Only Under on the card where both reads agree
-2026,5,2026-10-03,total,Under,56.0,Marshall @ James Madison,1.10,-110,53.7,,,,"residual -4.7; feed consensus was 56.25, logged at the bettable 56.0. Points check 56.5, neutral"
-2026,5,2026-10-03,prop,Jadan Baugh Over rush yds,118.0,Florida @ Missouri,1.13,-112.5,155.6,,,,"580 yds in 4g (145.0/gm); 21.0 car/gm, 48.6% of Florida carries; 52.4% breakaway is the risk"
-2026,5,2026-10-03,prop,Adam Mohammed Over rush yds,64.5,California @ UNLV,1.15,-114.5,80.8,,,,"336 yds in 4g (84.0/gm); 63.5% of Cal carries, next man 16 all season; 302 of 336 after contact"
-2026,5,2026-10-03,prop,Kari Ashley Over rec yds,32.5,BYU @ TCU,1.15,-114.5,44.9,,,,266 yds in 4g (66.5/gm) vs a 32.5 line; 2.96 yprr on 90 routes. Risk is TCU's 20.8 implied total (0.813 pace adj)
-2026,5,2026-10-03,prop,Mazeo Bennett Jr. Under rec yds,37.5,Kentucky @ South Carolina,1.15,-114.5,21.7,,,,"109 yds in 4g (27.3/gm); 1.11 yprr, 4 drops on 21 targets, no catch over 18 yds"
-2026,5,2026-10-03,prop,Chas Nimrod Over rec yds,47.5,Auburn @ Tennessee,1.15,-114.5,57.2,,,,"240 yds in 4g on 8.0 tgt/gm and 147 routes; usage bet, 60.7 route grade. Taken over Waseem (larger edge) to avoid a third position in Purdue-Illinois"
+2026,5,2026-10-03,spread,UMass,-6.0,Eastern Michigan @ UMass,1.10,-110,-13.3,,,,"net gap 6.9; points check -17.4, i.e. 11.4 past the line. UMass 4-0, 1st in Finishing Drives allowed, 12.8 ppg"
+2026,5,2026-10-03,spread,Virginia,-2.5,Virginia @ Florida State,1.10,-110,-6.8,,,,"net gap 4.7; points check -8.5, 6.0 past the line. SP+ 21st vs 53rd priced as a coin flip"
+2026,5,2026-10-03,spread,UConn,+7.0,Syracuse @ UConn,1.10,-110,+0.2,,,,"net gap 6.4; both reads call it a pick'em, book gives 7. UConn 82.7 off / 85.9 pass. Syracuse only 3 games of data"
+2026,5,2026-10-03,spread,Ohio,-3.5,Ohio @ Kent State,1.10,-110,-10.1,,,,"net gap 7.0; points check -7.7, 4.2 past the line. Kent State 16.3/36.0 on a 137th-ranked offense"
+2026,5,2026-10-03,spread,Buffalo,+14.0,Western Michigan @ Buffalo,1.10,-110,+7.3,,,,"net gap 6.3; points check +5.3, 8.7 past the line. Buffalo 0-4 ATS is the reason it is fifth, not first"
+2026,5,2026-10-03,total,Under,48.5,Eastern Michigan @ UMass,1.10,-110,46.4,,,,residual -4.4; points check 47.6 agrees; O/U records 2-7; UMass tempo 138th of 138 and 1st in Finishing Drives allowed
+2026,5,2026-10-03,total,Under,53.5,California @ UNLV,1.10,-110,52.5,,,,"residual -3.5; points check 46.4, i.e. 7.1 under the market; O/U records 1-7; offenses 102nd and 117th"
+2026,5,2026-10-03,total,Over,53.5,Stanford @ Wake Forest,1.10,-110,53.0,,,,"residual +3.2; points check 57.0 agrees; both fast (19th, 34th), both defenses bad (122nd, 127th)"
+2026,5,2026-10-03,total,Under,58.5,Washington @ USC,1.10,-110,56.2,,,,residual -5.2; points check 55.5 agrees; Washington 16.8 allowed on a 92.0 run defense; USC 91st in Explosiveness
+2026,5,2026-10-03,total,Over,47.5,Miami @ Clemson,1.10,-110,57.5,,,,residual +6.2; points check 51.9 agrees; Miami 51.8 ppg vs a 132nd-ranked offense. 16.5-pt blowout risk
+2026,5,2026-10-03,prop,Asaad Waseem Over rec yds,61.5,Purdue @ Illinois,1.10,-109.5,82.7,,,,"355 yds in 4g (88.8/gm) vs 61.5; 3.86 yprr, 82.9 route grade, 0 drops on 32 tgt; Illinois def 113th SR; pace adj 1.038"
+2026,5,2026-10-03,prop,Adam Mohammed Over rush yds,64.5,California @ UNLV,1.15,-114.5,80.8,,,,"336 yds in 4g (84.0/gm); 63.5% of Cal carries, next man 16 all season; 302 of 336 after contact; UNLV tackling 49.2"
+2026,5,2026-10-03,prop,Kari Ashley Over rec yds,32.5,BYU @ TCU,1.15,-114.5,44.9,,,,266 yds in 4g (66.5/gm) vs 32.5; 2.96 yprr on 90 routes. Clears despite BYU 89.6 cov and a 0.813 pace adj
+2026,5,2026-10-03,prop,Mazeo Bennett Jr. Under rec yds,37.5,Kentucky @ South Carolina,1.15,-114.5,21.7,,,,"109 yds in 4g (27.3/gm); 1.11 yprr, 4 drops on 21 tgt, longest catch 18 yds all season"
+2026,5,2026-10-03,prop,Jadan Baugh Over rush yds,118.0,Florida @ Missouri,1.13,-112.5,155.6,,,,"580 yds in 4g (145.0/gm); line asks 5.6 ypc, he is at 6.9. Projection discounted for a 1.471 pace multiplier"
