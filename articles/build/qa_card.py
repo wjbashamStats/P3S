@@ -410,6 +410,12 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
+          "15th-fastest tempo in the country":
+            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
+                        ["home_power"]["tempo_rank"] == 15.0,
+          "UMass the slowest team in the country":
+            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
+                        ["home_power"]["tempo_rank"] == 138.0,
           "the slowest tempo in the country at 138th":
             lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
                         ["home_power"]["tempo_rank"] == 138.0,
