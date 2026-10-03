@@ -318,13 +318,20 @@ class QA:
 
     # ----------------------------------------------------------- superlatives
     # A superlative is a claim about a SET, and the set is never the one memory
-    # reaches for. Week 5 shipped five false ones -- "the slowest on this card"
+    # reaches for. Week 5 drafted five false ones -- "the slowest on this card"
     # when two teams on the same card were slower, "the fourth largest on the
     # board" when it was sixth, "the thinnest cushion" when another pick had
     # less, "the best defensive number in this game" when the opponent's run
     # defense was higher, and "the widest unit gap in this game" when tackling
     # was twice as wide. So every scoped superlative must be registered here
     # with a predicate that computes it. An unregistered one fails.
+    #
+    # Cross-card comparisons are not written at all any more: which of five picks
+    # has the biggest gap ranks the card against itself and says nothing about the
+    # game. "on this card" therefore stays in SCOPE with nothing registered behind
+    # it, so reintroducing one fails the run rather than shipping unverified.
+    # Slate-wide ("on the board", all 49 games), within-game and national claims
+    # are real and stay registered.
     SUP = (r'(largest|smallest|most|least|widest|biggest|highest|lowest|weakest|strongest|'
            r'hardest|easiest|best|worst|fastest|slowest|tightest|thinnest|only|'
            r'second-largest|third-slowest|dead last)')
@@ -407,61 +414,24 @@ class QA:
             lambda: round(max(nets), 1) == 11.4 and max(
                 self.calc.values(), key=lambda r: abs(r["spread_gap"] - self.level)
             )["home"] == "Miami Ohio",
-          "third-slowest of the ten teams on this card behind Miami Ohio and Bowling Green":
-            lambda: [n for n, _ in sp_tempo[::-1]][:3] == ["Miami Ohio", "Bowling Green", "New Mexico"],
-          "4.3 clear of the line, the most on this card":
-            lambda: round(max(cu.values()), 1) == round(cu["Fresno State +1.5"], 1) == 4.3,
-          "the most room any pick on this card has on that measure":
-            lambda: max(cu, key=cu.get) == "Fresno State +1.5",
-          "the weakest-supported spread on the card":
-            lambda: min(cu, key=cu.get) == "Illinois -10.0",
-          "the second-largest point-based edge on the card at 4.2":
-            lambda: (round(sorted(cu.values(), reverse=True)[1], 1)
-                     == round(cu["Ohio -3.5"], 1) == 4.2),
           "+7.1, the largest on the board": lambda: 7.1 == round(max(resids), 1),
           "the largest on the slate, and the points-based check agrees":
             lambda: 7.1 == round(max(resids), 1),
-          "the pick on the card with the most evidence against it":
-            lambda: sum(1 for it, g, r in self.card_rows("totals")
-                        if (r["pts_check_total"] > 0) != (r["resid"] > 0)
-                        and g["home_power"]["over_record"].startswith("4-0")
-                        and g["away_power"]["over_record"].startswith("4-0")) == 1,
-          "the only Under on the card where both reads agree":
-            lambda: sum(1 for it, g, r in self.card_rows("totals") if it["pick"].startswith("Under")
-                        and (r["pts_check_total"] < 0) == (r["resid"] < 0)) == 1,
+          "15th-fastest tempo nationally":
+            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
+                        ["home_power"]["tempo_rank"] == 15.0,
           "the best efficiency defense in the country":
             lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
                         ["five_factors"]["home_def"]["success_rate"] == 1,
-          "15th-fastest tempo, the fastest on this card":
-            lambda: to_tempo[0] == ("James Madison", 15.0),
-          "31.5 implied total, the highest on this prop card":
-            lambda: pr_imp[-1][0] == "Florida" and round(pr_imp[-1][1], 1) == 31.5,
           "the weakest unit in this matchup":
             lambda: min(v for side in ("home", "away")
                         for k, v in self.board[("California Golden Bears", "UNLV Rebels")][side + "_grades"].items()
                         if k.startswith("grade_")) == 49.2,
-          "the largest of any back on this card":
-            lambda: max(shares, key=shares.get) == "Adam Mohammed" and round(shares["Adam Mohammed"], 1) == 63.5,
-          "34.0 yds/gm below his average, the widest gap on this card":
-            lambda: max((gap_to_line(r, i), n) for i, n, k, r in props)[1] == "Kari Ashley",
-          "the widest production-to-line gap on this prop card":
-            lambda: max((gap_to_line(r, i), n) for i, n, k, r in props)[1] == "Kari Ashley",
-          "20.8 implied total, the lowest of any team on this card":
-            lambda: pr_imp[0][0] == "TCU" and round(pr_imp[0][1], 1) == 20.8,
-          "89.7 grade, the hardest matchup on this card":
-            lambda: max(v for v in covs.values() if v) == 89.7,
-          "the most of any receiver on this card":
-            lambda: max(((float(r["routes"]), n) for i, n, k, r in props if k == "recv"))[1] == "Chas Nimrod",
-          "the hardest matchup any pick on this card draws":
-            lambda: max(covs, key=lambda k: covs[k] or 0) == "Chas Nimrod Over 47.5 Receiving Yards",
           "the widest unit gap in the game is actually tackling":
             lambda: max(((abs(self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"][k]
                              - self.board[("BYU Cougars", "TCU Horned Frogs")]["away_grades"][k]), k)
                         for k in self.board[("BYU Cougars", "TCU Horned Frogs")]["home_grades"]
                         if k.startswith("grade_")))[1] == "grade_tack",
-          "the weakest of anyone this card is backing to go Over":
-            lambda: min(((float(r["grades_pass_route"]), n) for i, n, k, r in props
-                         if k == "recv" and "Over" in i["pick"]))[1] == "Chas Nimrod",
           "dead last in the latter two":
             lambda: self.board[("Bowling Green Falcons", "Miami (OH) RedHawks")]["five_factors"]["away_off"]
                         ["explosiveness"] == 138 and
