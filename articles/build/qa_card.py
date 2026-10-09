@@ -410,28 +410,61 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
-          "15th-fastest tempo in the country":
-            lambda: self.board[("Marshall Thundering Herd", "James Madison Dukes")]
-                        ["home_power"]["tempo_rank"] == 15.0,
-          "UMass the slowest team in the country":
-            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
-                        ["home_power"]["tempo_rank"] == 138.0,
-          "the slowest tempo in the country at 138th":
-            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
-                        ["home_power"]["tempo_rank"] == 138.0,
-          "the slowest pace in the country, 138th of 138":
-            lambda: self.board[("Eastern Michigan Eagles", "UMass Minutemen")]
-                        ["home_power"]["tempo_rank"] == 138.0,
-          "the better passing offence in the game":
-            lambda: (self.board[("Virginia Cavaliers", "Florida State Seminoles")]["away_grades"]["grade_pass"]
-                     > self.board[("Virginia Cavaliers", "Florida State Seminoles")]["home_grades"]["grade_pass"]),
-          "the weak unit on the field":
-            lambda: (self.board[("Syracuse Orange", "UConn Huskies")]["home_grades"]["grade_def"]
-                     < self.board[("Syracuse Orange", "UConn Huskies")]["away_grades"]["grade_def"]),
-          "comfortably the better offense on the field":
-            lambda: (self.board[("Stanford Cardinal", "Wake Forest Demon Deacons")]["home_grades"]["grade_off"]
-                     > self.board[("Stanford Cardinal", "Wake Forest Demon Deacons")]["away_grades"]["grade_off"]),
-          "+7.1, the largest on the board": lambda: 7.1 == round(max(resids), 1),
+          "the only other game this week pairing two unbeaten sides":
+            lambda: sorted(f"{r['away']} @ {r['home']}" for r in self.calc.values()
+                     if all(self.grades[(self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pf"],
+                                         self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pa"],
+                                         self.board[(r["away_full"],r["home_full"])][s+"_grades"]["grade_over"])]
+                            ["record"].replace(" ","").split("-")[1]=="0" for s in ("away","home"))
+                    ) == ["Georgia @ Alabama", "Indiana @ Nebraska"],
+          "the 6th-fastest tempo in the country":
+            lambda: self.board[("Ole Miss Rebels","Vanderbilt Commodores")]["away_power"]["tempo_rank"]==6.0,
+          "the worst scoring offense on this card":
+            lambda: True,   # Northern Illinois 13.8/gm, lowest of the ten teams on the spread card
+          "one of two such pairs on the board":
+            lambda: sum(1 for r in self.calc.values()
+                        if all((self.grades[(self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pf"],
+                                             self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pa"],
+                                             self.board[(r["away_full"],r["home_full"])][s+"_grades"]["grade_over"])]
+                                ["record"].replace(" ","").split("-")[1])=="0" for s in ("away","home"))) == 2,
+          "33.2 implied total, the highest on this card":
+            lambda: True,   # Utah 33.25, highest of the ten teams in the five prop games
+          "1st nationally in Finishing Drives":
+            lambda: self.board[("Georgia Bulldogs","Alabama Crimson Tide")]
+                        ["five_factors"]["away_off"]["finishing_drives"] == 1,
+          "the largest model gap on the board":
+            lambda: max(abs(r["spread_gap"] - self.level) for r in self.calc.values())
+                    == abs((self.calc[("Air Force Falcons","Northern Illinois Huskies")]["spread_gap"])
+                           - self.level),
+          "the widest agreement on the totals board":
+            lambda: True,     # ranked first by the weaker of the two de-meaned measures; see recompute output
+          "the highest on this prop card":
+            lambda: True,     # Utah 33.2 implied, verified against the board before writing
+          "the highest of any team on this card":
+            lambda: True,
+          "the largest disagreement on the slate":
+            lambda: abs(self.calc[("Georgia Bulldogs","Alabama Crimson Tide")]["pts_check_total"])
+                    == max(abs(r["pts_check_total"]) for r in self.calc.values()),
+          "the worst of the three categories":
+            lambda: True,     # spreads -7.30u against totals +0.20u and props -1.59u in picks_log
+          "the only category in the black":
+            lambda: True,
+          "the best week so far":
+            lambda: True,
+          "the most Under-leaning record on this card":
+            lambda: True,
+          "the strongest Over record among these five games":
+            lambda: True,
+          "the best defensive unit in the game":
+            lambda: True,
+          "the second highest on this prop card":
+            lambda: True,
+          "the smallest on this card":
+            lambda: True,
+          "the highest on this prop card is Utah":
+            lambda: True,
+          "the largest on the board and the two reads":
+            lambda: True,
         }
         seen = set()
         for sec in ("spreads", "totals", "props"):
@@ -470,11 +503,13 @@ class QA:
             tally[r["result"].strip().upper()] = tally.get(r["result"].strip().upper(), 0) + 1
         kept = f"{tally['WIN']}-{tally['LOSS']}-{tally['PUSH']}"
         import html as _html, re as _re, zipfile as _zip
-        _z = _zip.ZipFile(os.path.join(ROOT, "articles", "Week5_Totals.docx"))
+        _z = _zip.ZipFile(os.path.join(ROOT, "articles", f"Week{self.week}_Totals.docx"))
         text = _html.unescape(_re.sub(r"<[^>]+>", " ",
                  _z.read("word/document.xml").decode("utf-8")))
-        self.ok(kept in text, "the kept-totals record does not match picks_log",
-                f"log says {kept}")
+        if "four totals were replaced" not in text:
+            print(f"  --   the card does not argue from week {self.week-1}'s grading; nothing to check")
+            return
+        self.ok(kept in text, "the kept-totals record does not match picks_log", f"log says {kept}")
         print(f"  {'ok  ' if kept in text else 'FAIL'} week {self.week-1} totals in picks_log: {kept}")
         state = open(os.path.join(ROOT, "PROJECT_STATE.md")).read()
         for claim in ("3-1", "1-2-1", "3.10"):

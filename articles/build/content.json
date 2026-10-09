@@ -1,677 +1,677 @@
 {
  "spreads": [
   {
-   "pick": "UMass -6.0",
-   "game": "Eastern Michigan Eagles @ UMass Minutemen",
-   "img": "Eastern_Michigan_at_UMass",
+   "pick": "Pittsburgh -3.5",
+   "game": "North Carolina Tar Heels @ Pittsburgh Panthers",
+   "img": "North_Carolina_at_Pittsburgh",
    "facts": [
     [
      "Book line",
-     "UMass -6.0"
+     "Pittsburgh -3.5"
     ],
     [
      "Model number",
-     "UMass -13.3"
+     "Pittsburgh -15.5"
     ],
     [
      "Gap",
-     "7.3 pts, 6.9 after the slate's own level"
+     "12.0 pts, 12.8 after the slate's own level"
     ],
     [
      "Points check",
-     "UMass -17.4, which is 11.4 past the market"
+     "Pittsburgh -12.9, which is 9.4 past the market"
     ],
     [
      "SP+ (2026)",
-     "UMass -6.2 (94th) vs Eastern Michigan -18.0 (127th), home edge +1.5"
+     "Pittsburgh +14.6 (18th) vs North Carolina +1.8 (tied 64th), home edge +2.7"
     ],
     [
-     "UMass 2026",
-     "4-0, 3-1 ATS, 36.3 points a game and 12.8 allowed"
+     "Pittsburgh 2026",
+     "5-0, 4-1 ATS, 38.4 points a game and 13.4 allowed"
     ],
     [
-     "UMass defense",
-     "1st in Finishing Drives allowed, 6th in Explosiveness, 92.2 defensive grade"
+     "Pittsburgh defense",
+     "7th Success Rate, 14th Finishing Drives, 93.1 run defense"
     ],
     [
-     "Eastern Michigan offense",
-     "2-3, 19.0 a game, 122nd Success Rate, 58.5 passing"
+     "North Carolina",
+     "2-2, 24.0 for and 19.5 against, offense 120th in Explosiveness"
     ]
    ],
    "paras": [
-    "Book has UMass -6.0. The rating says -13.3 and the points check, built only from each team's own 2026 point differential plus home field, says -17.4. Two measures that share no inputs land 7 and 11 points past the market, and both say the same thing.",
-    "UMass are 4-0 and the defense is the reason. They rank 1st nationally in Finishing Drives allowed and 6th in Explosiveness allowed, on a 92.2 defensive grade, 92.5 against the run, 91.0 in coverage and 84.4 tackling. They have given up 12.8 points a game. That is not a 6-point home team's profile.",
-    "Eastern Michigan have scored 19.0 a game across five, on an offense ranked 122nd in Success Rate, 112th in Explosiveness and 114th in Finishing Drives behind a 58.5 passing grade and a 58.3 pass block grade. Their own defense is respectable in coverage at 81.8 but tackles at 52.6, which is the unit UMass's 85.1 run grade attacks.",
-    "The risk is the number rather than the matchup. Laying 6 means a one-score win does not pay, and UMass play the slowest tempo in the country at 138th, so there are fewer possessions in which to build a margin. The counterweight is that neither record is running ahead of its rating: UMass are 3-1 against the spread, Eastern Michigan 2-3."
+    "Book has Pittsburgh -3.5. The rating says -15.5 and the points check, built only from each team's own 2026 point differential plus home field, says -12.9. Two measures sharing no inputs land nine and twelve points past a field goal.",
+    "Pittsburgh are 5-0 and the margin is not an accident. They score 38.4 and allow 13.4, the defense ranks 7th in Success Rate and 14th in Finishing Drives on a 90.2 defensive grade and 93.1 against the run, and the offense grades 84.5 passing behind an 82.8 pass block grade.",
+    "North Carolina are 2-2 at 24.0 points a game. The offense ranks 49th in Success Rate but 120th in Explosiveness, so it moves the ball without threatening, and that is the profile a defense ranked 131st in Explosiveness allowed is built to live with. Their own defense ranks 106th in Success Rate.",
+    "The risk is the price being short for a reason the numbers cannot see. Three and a half points on a 5-0 team against a .500 opponent is the market saying it does not believe the gap, and a 12-point disagreement with two independent measures usually means someone knows something. Pittsburgh's 59.4 tackling grade is the one soft number to point at."
    ]
   },
   {
-   "pick": "Virginia -2.5",
-   "game": "Virginia Cavaliers @ Florida State Seminoles",
-   "img": "Virginia_at_Florida_State",
+   "pick": "Vanderbilt +9.5",
+   "game": "Ole Miss Rebels @ Vanderbilt Commodores",
+   "img": "Ole_Miss_at_Vanderbilt",
    "facts": [
     [
      "Book line",
-     "Virginia -2.5"
+     "Ole Miss -9.5"
     ],
     [
      "Model number",
-     "Virginia -6.8"
+     "Vanderbilt +3.5"
     ],
     [
      "Gap",
-     "4.3 pts, 4.7 after the slate's own level"
+     "6.0 pts, 6.8 after the slate's own level"
     ],
     [
      "Points check",
-     "Virginia -8.5, which is 6.0 past the market"
+     "Vanderbilt -0.2, effectively a pick'em, 9.7 past the market"
     ],
     [
      "SP+ (2026)",
-     "Virginia +14.4 (21st) vs Florida State +5.7 (53rd), home edge +1.9"
-    ],
-    [
-     "Virginia 2026",
-     "3-1, 3-1 ATS, 40.5 points a game and 13.0 allowed"
-    ],
-    [
-     "Florida State 2026",
-     "2-2, 1-2-1 ATS, 32.0 for and 25.3 against"
-    ],
-    [
-     "Florida State defense",
-     "102nd Success Rate, 111th Explosiveness, 65.2 coverage"
-    ]
-   ],
-   "paras": [
-    "Book has Virginia -2.5 on the road. The rating says -6.8 and the points check says -8.5. The thing worth pausing on is the ratings themselves: Virginia sit 21st at +14.4 and Florida State 53rd at +5.7, which is a two-tier gap being priced as a coin flip with home field.",
-    "Virginia have the better unit on both sides. They score 40.5 and allow 13.0, with an offense grading 87.7 overall and 90.0 passing behind an 86.4 pass block grade, and a defense ranked 19th in Success Rate and 4th in Explosiveness allowed on an 88.0 coverage grade.",
-    "Florida State's defense is where the number should come from. They rank 102nd in Success Rate, 111th in Explosiveness allowed and 80th in Finishing Drives, on a 65.2 coverage grade and a 66.3 run defense grade, against the better passing offense in the game.",
-    "The honest risk is Florida State's offense, which ranks 2nd nationally in Explosiveness and 18th in Finishing Drives. They do not move the ball efficiently, 80th in Success Rate, but they score in chunks, and Virginia's 60.4 tackling grade is the one soft number on that defense. A 2.5-point road lay also offers no margin: this needs an outright win."
-   ]
-  },
-  {
-   "pick": "UConn +7.0",
-   "game": "Syracuse Orange @ UConn Huskies",
-   "img": "Syracuse_at_UConn",
-   "facts": [
-    [
-     "Book line",
-     "Syracuse -7.0"
-    ],
-    [
-     "Model number",
-     "UConn +0.2, effectively a pick'em"
-    ],
-    [
-     "Gap",
-     "6.8 pts, 6.4 after the slate's own level"
-    ],
-    [
-     "Points check",
-     "UConn -0.9, which is 7.9 past the market"
-    ],
-    [
-     "SP+ (2026)",
-     "UConn -3.7 (tied 86th) vs Syracuse -1.2 (75th), home edge +2.3"
-    ],
-    [
-     "UConn 2026",
-     "2-2, 2-1-1 ATS, 34.8 points a game and 22.3 allowed"
-    ],
-    [
-     "UConn offense",
-     "82.7 offensive grade, 85.9 passing, 89.4 run, 13th in Explosiveness"
-    ],
-    [
-     "Syracuse 2026",
-     "1-2, 1-2 ATS, 32.3 for and 17.0 against across three games"
-    ]
-   ],
-   "paras": [
-    "Book has Syracuse -7.0. Both independent reads call this a pick'em: the rating has UConn by 0.2 and the points check has them by 0.9. Nothing here supports a touchdown.",
-    "UConn's offense is the case. It grades 82.7 overall, 85.9 passing and 89.4 running, and ranks 13th nationally in Explosiveness and 30th in Finishing Drives. They score 34.8 a game. Against a Syracuse defense that is solid rather than stifling at 41st in Success Rate and a 73.6 coverage grade, that unit does not need seven points of help.",
-    "Syracuse's problem is their own offense, 109th in Success Rate and 92nd in Finishing Drives on a 61.7 passing grade and a 58.6 pass block grade. The 17.0 points allowed figure is the headline, and it is the one that makes the market's number look reasonable.",
-    "Two cautions. Syracuse have played three games to UConn's four, so there is a game less of evidence on one side than the other. And UConn's defense is the weak unit on the field, 57.9 in coverage and 57.2 tackling, so this is a bet on outscoring rather than on stopping anyone. Taking the points rather than laying them is the whole point of the position."
-   ]
-  },
-  {
-   "pick": "Ohio -3.5",
-   "game": "Ohio Bobcats @ Kent State Golden Flashes",
-   "img": "Ohio_at_Kent_State",
-   "facts": [
-    [
-     "Book line",
-     "Kent State +3.5"
-    ],
-    [
-     "Model number",
-     "Ohio -10.1"
-    ],
-    [
-     "Gap",
-     "6.6 pts, 7.0 after the slate's own level"
-    ],
-    [
-     "Points check",
-     "Ohio -7.7, which is 4.2 past the market"
-    ],
-    [
-     "SP+ (2026)",
-     "Ohio -10.5 (109th) vs Kent State -22.4 (130th), home edge +1.8"
+     "Ole Miss +11.0 (36th) vs Vanderbilt +5.1 (tied 56th), home edge +2.4"
     ],
     [
      "Scoring",
-     "Ohio 30.3 for / 31.0 against, Kent State 16.3 / 36.0"
+     "Ole Miss 35.5 for / 30.8 against, Vanderbilt 25.4 / 25.0"
     ],
     [
-     "Kent State offense",
-     "137th Success Rate, 125th Finishing Drives, 42.8 run block"
+     "Ole Miss defense",
+     "127th Success Rate, 50.5 coverage, 44.7 tackling"
     ],
     [
      "Records",
-     "both 2-2, both 2-2 ATS"
+     "Ole Miss 3-1 (1-3 ATS), Vanderbilt 3-2 (3-2 ATS)"
     ]
    ],
    "paras": [
-    "Book has Ohio -3.5 on the road. The rating says -10.1 and the points check says -7.7. Both want roughly a touchdown more than the market.",
-    "Kent State have scored 16.3 a game and allowed 36.0. The offense ranks 137th in Success Rate, 125th in Finishing Drives and tied 126th in Field Position behind a 42.8 run block grade and a 44.7 pass block grade. The defense ranks 133rd in Success Rate and 137th in Finishing Drives on a 50.4 run defense grade.",
-    "Ohio are mediocre rather than good, 2-2 at 30.3 points a game with a 69th-ranked Success Rate offense, and their own defense ranks 138th of 138 in Finishing Drives allowed. The case here is entirely relative, and it only needs to be.",
-    "Both teams are 2-2 against the spread, so neither record is running ahead of its rating, and this is a road favourite of under a touchdown rather than a large lay. Kent State at home is the risk, and 3.5 is a short number to have to cover: a win by exactly three is the likeliest way it fails."
+    "Book has Ole Miss -9.5 on the road. The rating still makes Vanderbilt a 3.5-point underdog, so it is not calling an upset, but the points check has the game at a pick'em. Both reads put the fair number well inside a touchdown.",
+    "Ole Miss are the better team and also the leakier one. They score 35.5 but concede 30.8, and the defense ranks 127th in Success Rate and 109th in Finishing Drives on a 50.5 coverage grade and a 44.7 tackling grade. A team that gives up 30 a game laying nine and a half on the road is the whole position.",
+    "Vanderbilt are ordinary on offense, 104th in Success Rate and 116th in Finishing Drives behind a 50.9 pass block grade, which is why this is taking points rather than backing a winner. What they do have is a defense ranked 69th with an 82.3 coverage grade against a passing offense that grades 86.2.",
+    "The pace argument cuts against. Ole Miss play the 6th-fastest tempo in the country against Vanderbilt's 110th, so there are more possessions than a home underdog wants. Ole Miss being 1-3 against the spread is the counterweight: the market has already been asking too much of them."
    ]
   },
   {
-   "pick": "James Madison -19.0",
-   "game": "Marshall Thundering Herd @ James Madison Dukes",
-   "img": "Marshall_at_James_Madison",
+   "pick": "Air Force -7.5",
+   "game": "Air Force Falcons @ Northern Illinois Huskies",
+   "img": "Air_Force_at_Northern_Illinois",
    "facts": [
     [
      "Book line",
-     "James Madison -19.0"
+     "Air Force -7.5"
     ],
     [
      "Model number",
-     "James Madison -26.0"
+     "Air Force -21.3"
     ],
     [
      "Gap",
-     "7.0 pts, 6.6 after the slate's own level"
+     "13.8 pts, 13.0 after the slate's own level"
     ],
     [
      "Points check",
-     "James Madison -24.3, which is 5.3 past the market"
+     "Air Force -13.7, which is 6.2 past the market"
     ],
     [
      "SP+ (2026)",
-     "James Madison +9.9 (tied 36th) vs Marshall -12.5 (115th), home edge +3.6"
+     "Air Force -0.1 (tied 71st) vs Northern Illinois -23.4 (133rd), home edge +2.0"
     ],
     [
-     "James Madison 2026",
-     "4-0, 4-0 ATS, 44.8 points a game and 12.3 allowed"
+     "Northern Illinois",
+     "0-4, 13.8 points a game and 36.3 allowed"
     ],
     [
-     "James Madison defense",
-     "1st in Success Rate, 18th in Finishing Drives, 90.3 run defense"
+     "Northern Illinois offense",
+     "126th Success Rate, 137th Finishing Drives, 47.0 run block"
     ],
     [
-     "Marshall",
-     "3-1 but 1-3 ATS, defense 130th Success Rate, 54.0 coverage, 48.9 tackling"
+     "Air Force defense",
+     "14th Success Rate, 79.3 coverage"
     ]
    ],
    "paras": [
-    "Book has James Madison -19.0. The rating says -26.0 and the points check, built only from each team's own 2026 point differential plus home field, says -24.3. Both land five to seven points past a number that is already three scores, which is the unusual part: a market this far out on a favourite is normally where the two measures start pulling back.",
-    "James Madison are 4-0 and 4-0 against the spread. The defense ranks 1st nationally in Success Rate and 18th in Finishing Drives, on an 85.4 defensive grade and 90.3 against the run, and has conceded 12.3 points a game. The offense scores 44.8 behind a 77.1 pass block grade at the 15th-fastest tempo in the country.",
-    "Marshall are 3-1 but 1-3 against the spread, and the units explain which of those two records to believe. Their defense ranks 130th in Success Rate, 118th in Finishing Drives and tied 127th in Havoc on a 54.0 coverage grade and a 48.9 tackling grade, against a James Madison offense ranked 44th. Their own offense ranks 94th and tied 128th in Finishing Drives, against the defense ranked 1st.",
-    "The risk is the size of the number. Nineteen points asks a favourite to stay engaged into the fourth quarter, and James Madison's fast tempo shortens the game rather than lengthening it, so there are fewer possessions in which to build the margin. What argues the other way is the 4-0 ATS record: this is a team that has already covered numbers of this shape, and Marshall's record is running behind its rating rather than ahead of it."
+    "Book has Air Force -7.5 on the road. The rating says -21.3 and the points check says -13.7. This is the largest model gap on the board and the two reads still agree on direction with six points to spare.",
+    "Northern Illinois are 0-4, score 13.8 a game and concede 36.3. The offense ranks 126th in Success Rate and 137th in Finishing Drives behind a 47.0 run block grade, and the defense ranks 110th, 107th and 94th across Success Rate, Explosiveness and Finishing Drives.",
+    "Air Force are not good either and the position does not need them to be. They are 3-1 at 29.0 points a game with a defense ranked 14th in Success Rate on a 79.3 coverage grade, against the worst scoring offense on this card.",
+    "The honest risk is the shape of an Air Force game. Their offense ranks 129th in Explosiveness, so they grind rather than pull away, and a triple-option team that leads comfortably stops throwing and lets the clock run. Northern Illinois's 82.0 tackling grade is their one competent unit, and it is the one that keeps a game like this closer than the ratings say."
+   ]
+  },
+  {
+   "pick": "Army -3.0",
+   "game": "Tulane Green Wave @ Army Black Knights",
+   "img": "Tulane_at_Army",
+   "facts": [
+    [
+     "Book line",
+     "Army -3.0"
+    ],
+    [
+     "Model number",
+     "Army -8.4"
+    ],
+    [
+     "Gap",
+     "5.4 pts, 6.2 after the slate's own level"
+    ],
+    [
+     "Points check",
+     "Army -12.1, which is 9.1 past the market"
+    ],
+    [
+     "SP+ (2026)",
+     "Army -1.4 (79th) vs Tulane -6.7 (97th), home edge +3.0"
+    ],
+    [
+     "Scoring",
+     "Army 33.3 for / 19.8 against, Tulane 18.8 / 23.3"
+    ],
+    [
+     "Army offense",
+     "4th Success Rate, 92.9 offensive grade, 87.7 run block"
+    ],
+    [
+     "Tulane offense",
+     "135th Success Rate, 132nd Finishing Drives, 54.6 pass block"
+    ]
+   ],
+   "paras": [
+    "Book has Army -3.0 at home. The rating says -8.4 and the points check, which knows only what each side has scored and allowed, says -12.1. The second measure is the more emphatic of the two here, which is unusual.",
+    "Army's offense is the case. It ranks 4th nationally in Success Rate on a 92.9 offensive grade, 89.9 passing and 87.7 run blocking, and they score 33.3 a game. Against a Tulane defense ranked 66th with a 56.6 coverage grade and a 51.8 tackling grade, that is a unit mismatch the three points does not price.",
+    "Tulane cannot move the ball. They rank 135th in Success Rate and 132nd in Finishing Drives behind a 54.6 pass block grade and score 18.8 a game. Their one distinction is ranking 1st in Explosiveness, which is the warning attached to this: a team that cannot sustain anything but can hit a long one is exactly the profile that steals a backdoor cover.",
+    "Army's defense is the reason this is only three: 117th in Success Rate and 121st in Havoc on a 61.5 coverage grade. Tulane at 1-3 against the spread is running behind its rating rather than ahead of it, which is the shape this card wants to be on the right side of."
+   ]
+  },
+  {
+   "pick": "UCF +10.5",
+   "game": "UCF Knights @ Oklahoma State Cowboys",
+   "img": "UCF_at_Oklahoma_State",
+   "facts": [
+    [
+     "Book line",
+     "Oklahoma State -10.5"
+    ],
+    [
+     "Model number",
+     "Oklahoma State -4.8"
+    ],
+    [
+     "Gap",
+     "5.7 pts, 4.9 after the slate's own level"
+    ],
+    [
+     "Points check",
+     "Oklahoma State -4.0, which is 6.5 past the market"
+    ],
+    [
+     "SP+ (2026)",
+     "Oklahoma State +10.5 (42nd) vs UCF +8.4 (49th), home edge +2.7"
+    ],
+    [
+     "Scoring",
+     "UCF 32.4 for / 17.6 against, Oklahoma State 37.3 / 19.8"
+    ],
+    [
+     "UCF defense",
+     "51st Success Rate, 13th Finishing Drives, 89.0 run defense, 81.7 tackling"
+    ],
+    [
+     "Records",
+     "UCF 3-2 (4-1 ATS), Oklahoma State 3-1 (3-1 ATS)"
+    ]
+   ],
+   "paras": [
+    "Book has Oklahoma State -10.5. The rating says -4.8 and the points check says -4.0. Two measures put the fair number at under a touchdown and the market is asking for a touchdown and a half more.",
+    "The two teams are closer than the price suggests. SP+ separates them by two points, 42nd against 49th. UCF concede 17.6 a game behind a defense ranked 51st in Success Rate and 13th in Finishing Drives, on an 89.0 run defense grade and 81.7 tackling, which is the best defensive unit in the game.",
+    "Oklahoma State are the better offense, 26th in Success Rate on an 82.3 grade, and that is the honest case for laying the points. What undercuts it is 124th in Explosiveness: they move the ball steadily and do not break games open, which is the profile that struggles to cover double digits.",
+    "UCF's own offense is the problem, 102nd in Success Rate on a 55.1 passing grade, and a team that cannot score can lose by three touchdowns as easily as by seven points. Taking the points rather than the side is how the position survives that. UCF are 4-1 against the spread, so the market has been underrating them rather than the reverse."
    ]
   }
  ],
  "totals": [
   {
-   "pick": "Under 48.5",
-   "game": "Eastern Michigan Eagles @ UMass Minutemen",
-   "img": "Eastern_Michigan_at_UMass",
+   "pick": "Under 59.0",
+   "game": "Coastal Carolina Chanticleers @ Marshall Thundering Herd",
+   "img": "Coastal_Carolina_at_Marshall",
    "facts": [
     [
      "Book total",
-     "48.5"
-    ],
-    [
-     "Model number",
-     "46.4"
-    ],
-    [
-     "Residual",
-     "-4.4"
+     "59.0"
     ],
     [
      "Points check",
-     "47.6, agreeing"
-    ],
-    [
-     "Over records",
-     "Eastern Michigan 1-4, UMass 1-3"
-    ],
-    [
-     "Tempo",
-     "UMass 138th of 138, Eastern Michigan 98th"
-    ],
-    [
-     "UMass defense",
-     "1st in Finishing Drives allowed, 12.8 points a game"
-    ],
-    [
-     "Game spread",
-     "UMass -6.0"
-    ]
-   ],
-   "paras": [
-    "Book has 48.5, the model 46.4, residual -4.4, and the points check at 47.6. Every reading available points the same way, which is rare enough to be the reason this leads the card.",
-    "Tempo is the structural argument. UMass play the slowest pace in the country, 138th of 138, and Eastern Michigan are 98th. Fewer snaps means fewer scoring chances, and the two teams are a combined 2-7 to the Over.",
-    "UMass's defense ranks 1st nationally in Finishing Drives allowed and 6th in Explosiveness allowed, on a 92.2 defensive grade and 91.0 coverage, and has conceded 12.8 points a game. Eastern Michigan's offense ranks 122nd in Success Rate on a 58.5 passing grade and scores 19.0. Those two facts have to coexist with a 48.5 total, and they do not sit comfortably together.",
-    "The way this loses is UMass themselves, who score 36.3 a game behind an 85.1 run grade. If Eastern Michigan's 52.6 tackling grade gives way early and UMass reach the mid-30s alone, the Under needs Eastern Michigan held near single digits. This card also lays UMass -6.0 in the same game; the two win together on a controlled win and separate only if UMass run away with it at pace, which their 138th-ranked tempo argues against."
-   ]
-  },
-  {
-   "pick": "Under 53.5",
-   "game": "California Golden Bears @ UNLV Rebels",
-   "img": "California_at_UNLV",
-   "facts": [
-    [
-     "Book total",
-     "53.5"
+     "53.5, which is 8.7 below the market once the slate's own level is out"
     ],
     [
      "Model number",
-     "52.5"
+     "50.9, which is 9.7 below once de-meaned"
     ],
     [
      "Residual",
-     "-3.5"
+     "-3.7, agreeing but smaller"
     ],
     [
-     "Points check",
-     "46.4, which is 7.1 below the market"
-    ],
-    [
-     "Over records",
-     "California 1-3, UNLV 0-4"
+     "Scoring",
+     "Coastal Carolina 24.8 for / 25.0 against, Marshall 22.2 / 35.0"
     ],
     [
      "Offenses",
-     "California 102nd Success Rate, UNLV 117th"
-    ],
-    [
-     "California coverage",
-     "91.2 grade"
-    ],
-    [
-     "Game spread",
-     "UNLV -2.5"
-    ]
-   ],
-   "paras": [
-    "Book has 53.5. Each team's own scoring puts the game at 46.4, a seven-point disagreement with the market, and the model agrees in direction at 52.5 with a -3.5 residual.",
-    "The records are blunt. UNLV are 0-4 to the Over and California 1-3, so seven of their eight games have finished under the number. That is not proof, but it is the same signal arriving from a different direction.",
-    "Neither offense moves the ball. California rank 102nd in Success Rate, 88th in Explosiveness and 127th in Finishing Drives; UNLV rank 117th, 73rd and 123rd. California's defense carries a 91.2 coverage grade and ranks 25th in Finishing Drives allowed, and UNLV score 21.5 a game.",
-    "Tempo is the one thing arguing the other way, with both teams in the faster half at 39th and 50th, so there will be possessions. The other risk is UNLV's 49.2 tackling grade against California's 79.1 run grade, which is also why this card takes Adam Mohammed over his rushing line in the same game. A ground game that controls the clock serves both positions rather than splitting them."
-   ]
-  },
-  {
-   "pick": "Over 53.5",
-   "game": "Stanford Cardinal @ Wake Forest Demon Deacons",
-   "img": "Stanford_at_Wake_Forest",
-   "facts": [
-    [
-     "Book total",
-     "53.5"
-    ],
-    [
-     "Model number",
-     "53.0"
-    ],
-    [
-     "Residual",
-     "+3.2"
-    ],
-    [
-     "Points check",
-     "57.0, agreeing"
+     "Coastal Carolina 99th Success Rate, Marshall 75th and 127th in Finishing Drives"
     ],
     [
      "Over records",
-     "Stanford 3-1, Wake Forest 2-2"
-    ],
-    [
-     "Tempo",
-     "Stanford 19th, Wake Forest 34th"
-    ],
-    [
-     "Defenses",
-     "Stanford 122nd Success Rate, Wake Forest 127th"
+     "Coastal Carolina 3-2, Marshall 3-2"
     ],
     [
      "Game spread",
-     "Wake Forest -14.0"
+     "Marshall -4.0"
     ]
    ],
    "paras": [
-    "Book has 53.5, the residual is +3.2 and the points check lands at 57.0. Both reads want the Over and the structure underneath them is straightforward.",
-    "Neither team can get off the field. Stanford's defense ranks 122nd in Success Rate, 118th in Explosiveness allowed and 132nd in Finishing Drives on a 49.6 tackling grade; Wake Forest's ranks 127th in Success Rate. Stanford have conceded 33.5 points a game.",
-    "Both play fast, 19th and 34th in tempo, so these are two bad defenses that also hand the ball back quickly. Wake Forest score 31.5 a game on an 81.4 run grade and rank 57th in Success Rate, comfortably the better offense on the field.",
-    "The risk is the shape rather than the arithmetic. Wake Forest are 14-point favourites and the model agrees with that number, so a one-sided game in which Stanford stop scoring is live. Stanford's own offense ranks 112th in Success Rate behind a 50.6 pass block grade, and the Over needs them to contribute something."
+    "Book has 59.0. Each team's own scoring puts the game at 53.5 and the rating at 50.9, and both sit eight to ten points below the market once the slate's level is removed. This is the widest agreement on the totals board.",
+    "Neither offense justifies a 59. Coastal Carolina score 24.8 a game on an offense ranked 99th in Success Rate and 91st in Finishing Drives; Marshall score 22.2 on one ranked 75th and 127th. Between them that is 47 points of recent form against a number asking for 59.",
+    "Marshall's defense is what built the number and it is genuinely bad: 133rd in Success Rate, 126th in Finishing Drives and 132nd in Havoc on a 49.9 coverage grade and a 50.1 tackling grade. They concede 35.0 a game. The question is whether Coastal Carolina can exploit it, and a 99th-ranked offense on a 51.2 run block grade is not the unit to assume will.",
+    "The way this loses is Marshall's defense doing what it has done all season while Coastal Carolina find 35 of their own. Both teams are 3-2 to the Over, so the records give no help in either direction."
    ]
   },
   {
-   "pick": "Under 58.5",
-   "game": "Washington Huskies @ USC Trojans",
-   "img": "Washington_at_USC",
+   "pick": "Over 51.5",
+   "game": "LSU Tigers @ Kentucky Wildcats",
+   "img": "LSU_at_Kentucky",
    "facts": [
     [
      "Book total",
-     "58.5"
-    ],
-    [
-     "Model number",
-     "56.2"
-    ],
-    [
-     "Residual",
-     "-5.2"
+     "51.5"
     ],
     [
      "Points check",
-     "55.5, agreeing"
+     "60.1, which is 5.4 above the market de-meaned"
     ],
     [
-     "Washington defense",
-     "16.8 allowed a game, 26th Success Rate, 92.0 run defense"
+     "Model number",
+     "60.0, 6.9 above de-meaned"
     ],
     [
-     "USC offense",
-     "5th Success Rate but 91st Explosiveness"
+     "Residual",
+     "+5.2, agreeing"
     ],
     [
-     "Over records",
-     "Washington 2-2, USC 4-1"
+     "LSU",
+     "4-1, 43.6 points a game, 15th Success Rate offense, 90.6 passing"
+    ],
+    [
+     "Kentucky",
+     "4-1, 34.6 for and 26.8 against, 13th Success Rate offense, 4-1 to the Over"
+    ],
+    [
+     "Kentucky defense",
+     "104th Success Rate, 52.2 tackling"
     ],
     [
      "Game spread",
-     "USC -9.0"
+     "LSU -8.5"
     ]
    ],
    "paras": [
-    "Book has 58.5, the model 56.2 with a -5.2 residual, and the points check at 55.5. Both reads lean Under.",
-    "Washington's defense is the argument. They allow 16.8 points a game on a unit ranked 26th in Success Rate, 20th in Havoc and 23rd in Finishing Drives, with a 92.0 run defense grade and an 84.8 coverage grade. Their own offense is ordinary, 64th in Success Rate and 73rd in Finishing Drives, scoring 28.0.",
-    "USC are the Over case and a real one: 5th in Success Rate, a 92.9 offensive grade, 90.9 passing, 39.8 points a game and 4-1 to the Over. What tempers it is 91st in Explosiveness, which means long drives rather than quick scores, and both teams sitting in the slower half of tempo at 76th and 81st.",
-    "USC's defense is the risk. It ranks 91st in Success Rate, 113th in Explosiveness allowed, 130th in Havoc and 119th in Finishing Drives on a 59.2 coverage grade and 50.7 tackling. If Washington's offense is better than its ranks, this reaches 59 quickly."
+    "Book has 51.5. The points check lands at 60.1 and the rating at 60.0, two measures built from different inputs arriving within a tenth of each other, and both are five to seven points clear of the market once the slate's level is out.",
+    "Both offenses are top fifteen in Success Rate, LSU 15th and Kentucky 13th, and both are scoring: 43.6 and 34.6. LSU grade 90.6 passing and 85.4 running, Kentucky 87.2 running behind a 79.4 pass block grade.",
+    "Kentucky's defense is the opening. It ranks 104th in Success Rate and 96th in Finishing Drives on a 52.2 tackling grade, against the better of the two offenses. They are 4-1 to the Over, the strongest Over record among these five games.",
+    "LSU's defense is the risk and it is a serious one: 2nd in Success Rate, 5th in Havoc, a 93.5 defensive grade and 93.7 in coverage, conceding 15.2 a game. If Kentucky are held to 14, LSU have to reach 38 alone. That is the single assumption this pick rests on."
    ]
   },
   {
-   "pick": "Over 47.5",
-   "game": "Miami Hurricanes @ Clemson Tigers",
-   "img": "Miami_at_Clemson",
+   "pick": "Under 52.0",
+   "game": "Eastern Michigan Eagles @ Akron Zips",
+   "img": "Eastern_Michigan_at_Akron",
    "facts": [
     [
      "Book total",
-     "47.5"
-    ],
-    [
-     "Model number",
-     "57.5"
-    ],
-    [
-     "Residual",
-     "+6.2"
+     "52.0"
     ],
     [
      "Points check",
-     "51.9, agreeing"
+     "49.9, which is 5.3 below the market de-meaned"
     ],
     [
-     "Miami",
-     "4-0, 51.8 points a game, 3rd in Success Rate, 94.1 offensive grade"
+     "Model number",
+     "46.1, 7.5 below de-meaned"
     ],
     [
-     "Clemson offense",
-     "132nd Success Rate, 117th Finishing Drives, 40.1 passing"
+     "Residual",
+     "-3.9, agreeing"
+    ],
+    [
+     "Scoring",
+     "Eastern Michigan 22.2 for / 25.0 against, Akron 19.0 / 33.6"
+    ],
+    [
+     "Offenses",
+     "Eastern Michigan 108th Success Rate and 110th Explosiveness, Akron 135th Explosiveness"
+    ],
+    [
+     "Eastern Michigan defense",
+     "86.1 coverage, 83.4 defensive grade"
     ],
     [
      "Over records",
-     "Miami 3-1, Clemson 2-2"
-    ],
-    [
-     "Game spread",
-     "Miami -16.5"
+     "Eastern Michigan 2-4, Akron 3-2"
     ]
    ],
    "paras": [
-    "Book has 47.5, the model 57.5, residual +6.2, and the points check at 51.9. Both reads want the Over.",
-    "Miami are scoring 51.8 a game. The offense ranks 3rd in Success Rate, 14th in Finishing Drives and 4th in Havoc allowed, on a 94.1 offensive grade, 93.9 passing and 88.0 receiving, and they have put up 207 points in four games while allowing 36.",
-    "Clemson are the drag. Despite a 3-1 record their offense ranks 132nd in Success Rate, 117th in Finishing Drives and 127th in Havoc allowed, with a 40.1 passing grade, and they score 21.0 a game. Their defense is better than that, 16th in Finishing Drives on an 88.5 coverage grade, but it ranks 84th in Success Rate, which is the relevant number against this opponent.",
-    "So the Over is a bet on one offense, not two. Miami at 16.5-point road favourites raises the blowout risk: 35-7 lands under. The counter is that Miami's own average clears 47.5 with a field goal from Clemson, and Clemson's 50.3 tackling grade is not the unit that slows a 94.1 offense."
+    "Book has 52.0. The points check says 49.9 and the rating 46.1, both below the market once the slate's level is removed, and the residual agrees at -3.9.",
+    "Neither team can score. Eastern Michigan manage 22.2 a game on an offense ranked 108th in Success Rate and 110th in Explosiveness; Akron manage 19.0 on one ranked 135th in Explosiveness with a 59.5 passing grade. Their combined 41.2 is a long way under 52.",
+    "Eastern Michigan's defense is the better unit on the field by some distance, grading 83.4 overall and 86.1 in coverage against an Akron passing attack that grades 59.5. Eastern Michigan are 2-4 to the Over, the most Under-leaning record on this card.",
+    "Akron's defense is the counter-argument: 111th in Success Rate, 122nd in Explosiveness allowed and 121st in Finishing Drives on a 52.7 coverage grade, conceding 33.6 a game. If Eastern Michigan's offense is better than its ranks against that, the number is reachable."
+   ]
+  },
+  {
+   "pick": "Over 48.0",
+   "game": "Indiana Hoosiers @ Nebraska Cornhuskers",
+   "img": "Indiana_at_Nebraska",
+   "facts": [
+    [
+     "Book total",
+     "48.0"
+    ],
+    [
+     "Points check",
+     "56.4, which is 5.2 above the market de-meaned"
+    ],
+    [
+     "Model number",
+     "60.0, 10.4 above de-meaned"
+    ],
+    [
+     "Residual",
+     "+4.6, agreeing"
+    ],
+    [
+     "Indiana",
+     "5-0, 44.2 points a game, 7th Success Rate, 16th Explosiveness, 5th Finishing Drives"
+    ],
+    [
+     "Nebraska",
+     "5-0, 43.6 points a game, 21st Success Rate, 14th Explosiveness, 7th Finishing Drives"
+    ],
+    [
+     "Both defenses",
+     "Indiana 3rd Success Rate, Nebraska 28th"
+    ],
+    [
+     "Game spread",
+     "Indiana -7.5"
+    ]
+   ],
+   "paras": [
+    "Book has 48.0. The points check says 56.4 and the rating 60.0, both well above the market, and the residual agrees at +4.6 even after the defensive tilt is removed.",
+    "Two unbeaten teams scoring 44.2 and 43.6 a game are being asked for 48 between them. Indiana rank 7th in Success Rate, 16th in Explosiveness and 5th in Finishing Drives on a 92.2 offensive grade; Nebraska rank 21st, 14th and 7th on an 83.6 grade. Both finish drives, which is the factor that converts yards into the points a total needs.",
+    "This is the game where the method change matters most. Indiana's defense ranks 3rd in Success Rate and Nebraska's 28th, so the old residual approach discounted this heavily for having two good defenses. Those defenses have also faced nobody like these offenses.",
+    "The honest risk is exactly that: 48 is low because both defenses are real, Indiana concede 10.8 a game and Nebraska 14.2. A 20-17 game is entirely available and would beat this comfortably."
+   ]
+  },
+  {
+   "pick": "Over 51.5",
+   "game": "Georgia Bulldogs @ Alabama Crimson Tide",
+   "img": "Georgia_at_Alabama",
+   "facts": [
+    [
+     "Book total",
+     "51.5"
+    ],
+    [
+     "Points check",
+     "67.6, which is 12.9 above the market de-meaned"
+    ],
+    [
+     "Model number",
+     "58.1, 5.0 above de-meaned"
+    ],
+    [
+     "Residual",
+     "-0.7, which says nothing either way"
+    ],
+    [
+     "Georgia",
+     "5-0, 51.4 points a game, 3rd Success Rate, 1st in Finishing Drives, 5-0 to the Over"
+    ],
+    [
+     "Alabama",
+     "5-0, 49.6 points a game, 11th Success Rate, 2nd in Finishing Drives, 5-0 to the Over"
+    ],
+    [
+     "Over records",
+     "both 5-0, one of two such pairs on the board"
+    ],
+    [
+     "Game spread",
+     "Alabama -1.5"
+    ]
+   ],
+   "paras": [
+    "Book has 51.5. The points check lands at 67.6, sixteen points above the market and the largest disagreement on the slate, and the rating agrees in direction at 58.1.",
+    "Both teams are 5-0 and both are scoring more than 49 a game. Indiana at Nebraska is the only other game this week pairing two unbeaten sides, and it is also on this card. Georgia rank 3rd in Success Rate and 1st nationally in Finishing Drives; Alabama rank 11th and 2nd. Georgia grade 93.5 on offense and 90.8 passing, Alabama 89.7 and 91.4. Every one of their ten games this season has gone Over.",
+    "The residual is flat here at -0.7, and this is the clearest illustration of why this card stopped selecting on it. Both defenses rank inside the top 20 in Success Rate, so the tilt correction wipes out the entire signal in a game where two unbeaten offenses are averaging 50 and the market is asking for 51.5 between them.",
+    "The case against is the obvious one: this is the biggest game of the weekend between two elite defenses, Georgia grading 93.9 and Alabama 91.0, and marquee matchups tighten up. Alabama's 66.8 tackling grade and 116th rank in Explosiveness allowed is the crack in that argument."
    ]
   }
  ],
  "props": [
   {
-   "pick": "Asaad Waseem Over 61.5 Receiving Yards",
-   "game": "Purdue Boilermakers @ Illinois Fighting Illini",
+   "pick": "Dylan Riley Over 82.5 Rushing Yards",
+   "game": "Boise State Broncos @ Fresno State Bulldogs",
    "facts": [
     [
      "Book line",
-     "61.5"
+     "82.5"
     ],
     [
      "Model projection",
-     "82.7 (+34.5%)"
+     "145.9 (+76.8%), discounted for a 1.354 pace multiplier"
     ],
     [
      "2026 to date",
-     "355 yards in 4 games, 88.8 a game"
+     "690 yards in 5 games, 138.0 a game"
     ],
     [
      "Volume",
-     "8.0 targets a game, 32 on the season, 92 routes"
+     "21.6 carries a game, 108 on the season: 51.9% of Boise State's carries"
     ],
     [
      "Efficiency",
-     "3.86 yards per route run, 11.2 average depth of target, 82.9 route grade"
+     "6.4 yards a carry against a line asking 3.8"
+    ],
+    [
+     "Grades",
+     "80.4 run grade, 447 yards after contact, 24 avoided tackles, long of 83"
+    ],
+    [
+     "Script",
+     "Boise State -6.5 with a 27.5 implied total"
+    ],
+    [
+     "Books",
+     "2"
+    ]
+   ],
+   "paras": [
+    "Riley has 690 rushing yards in five games, 138.0 a game, against a line of 82.5. The projection of 145.9 carries a 1.354 pace multiplier and should be read down, but it is not what this rests on: 82.5 asks for 3.8 yards a carry on his 21.6 attempts and he is at 6.4.",
+    "The volume is the foundation. 51.9% of everything Boise State run, 21.6 carries a game, and 447 of his 690 yards after contact with 24 avoided tackles on an 80.4 run grade. A back carrying that load clears a line set at 60% of his average by accumulation alone.",
+    "A 40.9% breakaway share and a long of 83 mean the distribution is lumpy, and that is the risk the card just paid for with Jadan Baugh, who went for 13 on 12 carries off a similar profile. The difference is the line: Baugh needed 5.6 a carry, Riley needs 3.8.",
+    "Boise State are 6.5-point favourites with a 27.5 implied total, which is the script that keeps a lead back on the field. Fresno State are the matchup and they are not a wall."
+   ]
+  },
+  {
+   "pick": "Jackson Harris Over 46.5 Receiving Yards",
+   "game": "LSU Tigers @ Kentucky Wildcats",
+   "facts": [
+    [
+     "Book line",
+     "46.5"
+    ],
+    [
+     "Model projection",
+     "81.3 (+74.8%), discounted for a 1.160 pace multiplier"
+    ],
+    [
+     "2026 to date",
+     "317 yards in 5 games, 63.4 a game"
+    ],
+    [
+     "Volume",
+     "5.2 targets a game, 26 on the season, 122 routes"
+    ],
+    [
+     "Efficiency",
+     "2.60 yards per route run, 13.0 average depth of target, 73.4 route grade"
     ],
     [
      "Hands",
-     "24 catches on 32 targets, no drops"
+     "15 catches on 26 targets, 2 drops, long of 57, 2 touchdowns"
     ],
     [
-     "Illinois defense",
-     "113th Success Rate, 75.5 coverage, 49.9 tackling"
+     "Script",
+     "LSU -8.5 with a 30.0 implied total"
     ],
     [
      "Books",
-     "2"
+     "3"
     ]
    ],
    "paras": [
-    "Waseem has 355 receiving yards in four games, 88.8 a game, against a line of 61.5. The projection is 82.7, and the pace multiplier behind it is 1.038, so almost none of that number is a script assumption. It is the production.",
-    "The efficiency is what carries it. 3.86 yards per route run on 92 routes, 24 catches on 32 targets with no drops, an 11.2 average depth of target and an 82.9 route grade, with a long of 37. He is a primary read on a downfield route tree, not a volume accumulator.",
-    "Illinois are the matchup and they are soft where it matters. Their defense ranks 113th in Success Rate, 111th in Havoc and 105th in Finishing Drives, with a 75.5 coverage grade and a 49.9 tackling grade. Purdue are 10-point underdogs with a 26.2 implied total, which is the script that produces throws: trailing teams pass.",
-    "The argument against is the one that always applies to a receiver. Eight targets a game is real but it is not guaranteed in any single game, and 61.5 needs roughly two-thirds of his average. A quiet first half and a Purdue deficit that turns into a running clock is how it fails."
+    "Harris has 317 receiving yards in five games, 63.4 a game, against a line of 46.5. His own rate clears the number by 17 before the model is consulted.",
+    "The efficiency is downfield rather than volume-driven. 2.60 yards per route run on 122 routes at a 13.0 average depth of target, with a 73.4 route grade and a long of 57. He is the deep element in an LSU passing game grading 90.6.",
+    "Kentucky are the matchup and they are the reason this is here: 104th in Success Rate on defense, 96th in Finishing Drives and a 52.2 tackling grade. LSU carry a 30.0 implied total, the second highest on this prop card.",
+    "The argument against is his target share. 5.2 a game is thin for a receiver asked to clear 46.5, and a 13.0 aDOT means a quiet afternoon is one incompletion away from a bust. This is a boom profile and it will miss badly when it misses. The same game carries Over 51.5 on this card, so the two reinforce rather than fight."
    ]
   },
   {
-   "pick": "Adam Mohammed Over 64.5 Rushing Yards",
-   "game": "California Golden Bears @ UNLV Rebels",
+   "pick": "Lee Beebe Jr. Over 71.5 Rushing Yards",
+   "game": "Indiana Hoosiers @ Nebraska Cornhuskers",
    "facts": [
     [
      "Book line",
-     "64.5"
+     "71.5"
     ],
     [
      "Model projection",
-     "80.8 (+25.3%)"
+     "108.4 (+51.6%), discounted for a 1.408 pace multiplier"
     ],
     [
      "2026 to date",
-     "336 yards in 4 games, 84.0 a game"
+     "524 yards in 5 games, 104.8 a game"
     ],
     [
      "Volume",
-     "18.3 carries a game, 73 on the season: 63.5% of California's carries"
+     "17.8 carries a game, 89 on the season: 47.1% of Indiana's carries"
     ],
     [
-     "Running style",
-     "14.3% breakaway share, 302 of 336 yards after contact, long of 28"
+     "Efficiency",
+     "5.9 yards a carry against a line asking 4.0"
     ],
     [
      "Grades",
-     "77.4 run grade, 26 avoided tackles, no fumbles"
+     "79.8 run grade, 312 yards after contact, 21 avoided tackles, 4 touchdowns"
     ],
     [
-     "UNLV tackling",
-     "49.2 grade"
-    ],
-    [
-     "Books",
-     "2"
-    ]
-   ],
-   "paras": [
-    "Mohammed has 336 rushing yards in four games, 84.0 a game, against a line of 64.5. At his 18.3 carries a game the line asks for 3.5 yards a carry; he is at 4.6.",
-    "The running style is what makes the number dependable. A 14.3% breakaway share and a long of 28 mean almost none of his output is boom: 302 of his 336 yards came after contact, with 26 avoided tackles and no fumbles on a 77.4 run grade. A back who gets two and three yards at a time clears a yardage line by accumulation rather than by one play.",
-    "The volume is the edge. 63.5% of California's carries is a workhorse share and the next man has 16 attempts all season, so there is no committee to price. UNLV tackle at 49.2 against California's 79.1 run grade, a 30-point gap in the unit this position runs through.",
-    "The game is near a pick at California +2.5, so no blowout script in either direction takes the ball out of his hands. This card also takes Under 53.5 in the same game; a run-heavy, clock-controlling afternoon serves both, which is the rare case where two positions in one game reinforce rather than fight."
-   ]
-  },
-  {
-   "pick": "Kari Ashley Over 32.5 Receiving Yards",
-   "game": "BYU Cougars @ TCU Horned Frogs",
-   "facts": [
-    [
-     "Book line",
-     "32.5"
-    ],
-    [
-     "Model projection",
-     "44.9 (+38.2%)"
-    ],
-    [
-     "2026 to date",
-     "266 yards in 4 games, 66.5 a game"
-    ],
-    [
-     "Volume",
-     "6.3 targets a game, 25 on the season, 90 routes"
-    ],
-    [
-     "Efficiency",
-     "2.96 yards per route run, 9.2 average depth of target, 77.5 route grade"
-    ],
-    [
-     "Line vs production",
-     "34.0 yds/gm below his average"
-    ],
-    [
-     "Working against it",
-     "BYU 89.6 coverage, TCU implied total 20.8, 0.813 pace adjustment"
+     "Script",
+     "Indiana -7.5 with a 27.8 implied total"
     ],
     [
      "Books",
-     "2"
+     "3"
     ]
    ],
    "paras": [
-    "Ashley has 266 receiving yards in four games, 66.5 a game, against a line of 32.5. The market is asking for roughly half of what he has been doing.",
-    "The efficiency is not a one-game spike. 2.96 yards per route run on 90 routes, 19 catches on 25 targets, three touchdowns, a 9.2 average depth of target and a 77.5 route grade, with a long of 37. A tight end running that many routes at that rate is being used as a primary read rather than a checkdown. Two drops is the one blemish.",
-    "What makes this interesting is that the number survives everything working against it. BYU allow 15.7 a game and grade 89.6 in coverage. TCU are 6-point home underdogs with a 20.8 implied total, and the model applies a 0.813 pace adjustment for the low-scoring script it expects. After all of that the projection still sits 38% above the line, because the starting production is so far clear of it.",
-    "The honest risk is the script rather than the matchup. A team expected to score 21 throws less than one expected to score 31, and BYU's defense is built to make that worse. TCU's own best defensive number, a 92.0 run defense, also argues their offense will spend time behind."
+    "Beebe has 524 rushing yards in five games, 104.8 a game, against a line of 71.5. At his 17.8 carries a game the line asks for 4.0 a carry; he is at 5.9.",
+    "He is the lead back on an unbeaten team, taking 47.1% of Indiana's carries behind an offensive line grading 85.1 in pass protection and an offense ranked 7th in Success Rate and 5th in Finishing Drives. 312 of his 524 yards came after contact, with a long of 70.",
+    "Nebraska's defense ranks 28th in Success Rate but 98th in Explosiveness allowed, which is the gap a 38.0% breakaway back needs. Indiana are 7.5-point favourites with a 27.8 implied total, so the script keeps him carrying.",
+    "The risk is the committee. Turbo Richard also cleared the screens in this game at 117.4 yards a game, so Indiana's carries are shared two ways and either back can take the bulk on a given afternoon. Only one of them is here for that reason. This card also takes Over 48.0 in the game, which the position reinforces."
    ]
   },
   {
-   "pick": "Mazeo Bennett Jr. Under 37.5 Receiving Yards",
-   "game": "Kentucky Wildcats @ South Carolina Gamecocks",
+   "pick": "Braden Pegan Over 49.5 Receiving Yards",
+   "game": "Kansas Jayhawks @ Utah Utes",
    "facts": [
     [
      "Book line",
-     "37.5"
+     "49.5"
     ],
     [
      "Model projection",
-     "21.7 (-42.1%)"
+     "72.0 (+45.5%), discounted for a 1.252 pace multiplier"
     ],
     [
      "2026 to date",
-     "109 yards in 4 games, 27.3 a game"
+     "264 yards in 4 games, 66.0 a game"
     ],
     [
      "Volume",
-     "5.3 targets a game, 21 on the season, 98 routes"
+     "6.8 targets a game, 27 on the season, 108 routes"
     ],
     [
      "Efficiency",
-     "1.11 yards per route run, 4 drops on 21 targets, 56.1 route grade"
+     "2.44 yards per route run, 16.8 average depth of target, 76.2 route grade"
     ],
     [
-     "Longest catch",
-     "18 yards, all season"
+     "Hands",
+     "17 catches on 27 targets, 2 drops, 4 touchdowns"
     ],
     [
-     "Working against it",
-     "Kentucky 88th Success Rate defense, South Carolina implied total 28.8"
+     "Script",
+     "Utah -15.5 with a 33.2 implied total, the highest on this card"
     ],
     [
      "Books",
-     "2"
+     "3"
     ]
    ],
    "paras": [
-    "Bennett has 109 receiving yards in four games, 27.3 a game, against a line of 37.5. The line is asking for 38% more than he has produced in any sustained stretch.",
-    "The case is efficiency, not usage, which is what makes it unusual: it requires nothing to happen. He has run 98 routes for 1.11 yards per route run, caught 10 of 21 targets, and dropped four, on a 56.1 route grade. His longest catch all season is 18 yards. A receiver with no explosive play and a sub-50% catch rate needs volume he is not getting to reach 37.5.",
-    "A 9.0 average depth of target means these are intermediate throws rather than screens, which cuts both ways: more yards when they land, a lower completion rate on the way.",
-    "Kentucky's defense is the argument against and it is not small. They rank 88th in Success Rate and 115th in Field Position while allowing 25.0 a game, which is not a unit that shuts receivers down. South Carolina are 3-point home favourites with a 28.8 implied total, so there is no negative script forcing volume away from him either. One 40-yard play beats this, which is the whole risk in a sentence."
+    "Pegan has 264 receiving yards in four games, 66.0 a game, against a line of 49.5. The line sits 16.5 below his own rate.",
+    "A 16.8 average depth of target is the highest on this prop card, and he converts it: 2.44 yards per route run on 108 routes, 17 catches on 27 targets, four touchdowns, a long of 37 and a 76.2 route grade. 6.8 targets a game is a real share rather than an occasional shot.",
+    "Utah carry a 33.2 implied total, the highest of any team on this card, so the offense is expected to be productive. Kansas are the matchup.",
+    "The script is the risk and it is the familiar one. Utah are 15.5-point favourites, and a favourite that large can be up three scores by the fourth quarter with its deep threat on the sideline. A 16.8 aDOT receiver in a blowout is the single most likely way this number goes unreached."
    ]
   },
   {
-   "pick": "Jadan Baugh Over 118.0 Rushing Yards",
-   "game": "Florida Gators @ Missouri Tigers",
+   "pick": "Rodney Fields Jr. Over 53.5 Rushing Yards",
+   "game": "Houston Cougars @ Kansas State Wildcats",
    "facts": [
     [
      "Book line",
-     "118.0"
+     "53.5"
     ],
     [
      "Model projection",
-     "155.6 (+31.9%), read down for a 1.471 pace multiplier"
+     "76.2 (+42.4%), discounted for a 1.242 pace multiplier"
     ],
     [
      "2026 to date",
-     "580 yards in 4 games, 145.0 a game"
+     "274 yards in 4 games, 68.5 a game"
     ],
     [
      "Volume",
-     "21.0 carries a game, 84 on the season: 48.6% of Florida's carries"
+     "12.3 carries a game, 49 on the season: 32.5% of Kansas State's carries"
     ],
     [
      "Efficiency",
-     "6.9 yards a carry against a line asking 5.6"
+     "5.6 yards a carry against a line asking 4.3"
     ],
     [
      "Grades",
-     "92.6 run grade, 34 avoided tackles, 358 yards after contact, 11 touchdowns"
+     "78.5 run grade, 4 touchdowns, long of 75"
     ],
     [
-     "Missouri run defense",
-     "84.3 grade and 9th in Havoc, but 126th in Explosiveness allowed"
+     "Working against it",
+     "51.5% breakaway share, only 5 avoided tackles on 49 carries"
     ],
     [
      "Books",
-     "2"
+     "3"
     ]
    ],
    "paras": [
-    "Baugh has 580 rushing yards in four games, 145.0 a game, against a line of 118.0. The projection of 155.6 carries a 1.471 pace multiplier and should be discounted, but the projection is not what this rests on: 118 asks for 5.6 yards a carry on his 21.0 attempts and he is at 6.9.",
-    "The underlying work supports the rate. A 92.6 run grade, 34 avoided tackles, 358 yards after contact, 13 explosive runs, 11 touchdowns and a long of 75, with no fumbles on 84 carries. He takes 48.6% of everything Florida run and 56.4% of the carries that are not the quarterback's.",
-    "Missouri are the hard part. They allow 20.8 a game on an 84.3 run defense grade, 9th in Havoc and 36th in Success Rate, with a 90.0 pass rush grade. What keeps the matchup workable is 126th in Explosiveness allowed, which is the one thing a back with a 52.4% breakaway share needs.",
-    "That breakaway share is also the risk. More than half his yardage arrives on a handful of carries, so the distribution is lumpy: he either clears this comfortably or falls well short, with little in between. Florida are 5.5-point favourites with a 31.5 implied total, so the script supports the carries."
+    "Fields has 274 rushing yards in four games, 68.5 a game, against a line of 53.5. At 12.3 carries a game the line asks for 4.3 a carry and he is at 5.6.",
+    "Kansas State are near a pick'em at -2.5 with a 28.8 implied total, so there is no blowout script in either direction to take the ball out of his hands.",
+    "This is the weakest of the five and the write-up should say why rather than bury it. A 32.5% carry share is the smallest on this card, five avoided tackles and 122 yards after contact on 49 carries is thin, and a 51.5% breakaway share with a long of 75 means more than half his season came on a handful of plays. Strip the long run and he is at roughly 50 a game against a 53.5 line.",
+    "It clears the screens because the model edge, the production gap and the role floor all pass, and it is here on that basis rather than on conviction. If the card were four props instead of five, this is the one that would come off."
    ]
   }
  ]

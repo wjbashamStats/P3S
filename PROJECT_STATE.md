@@ -416,3 +416,31 @@ EDGE 250, DT 250 = 2,547 player-position rows.
   (`if False`, always 0). It now reports snapshot files already on disk in
   `hist_raw/` (not scoped to the current run's games — dry-run still makes
   zero API calls, so it can't resolve event ids to check precisely).
+
+23. **The totals residual was tested on 93 games and it is the worst signal
+   available. Stop selecting on it.** Differencing the PFF points columns gives
+   a verified final score for every game, not just the ones bet, so weeks 4 and
+   5 yield 93 scored games against 15 graded picks. Scored on all of them:
+
+       raw model gap        47-43   52.2%   -0.30u
+       points check         50-40   55.6%   +6.00u
+       residual             42-49   46.2%  -11.90u
+
+   At the 3-to-5 point thresholds the card actually bets, the residual runs
+   39-42% and loses money at every one. Its premise is sound -- the tilt is
+   real, the slope has been negative every week and has steepened monotonically
+   (-0.026, -0.069, -0.099, -0.099, -0.108) -- but removing the tilt removes
+   signal with it. The likeliest reading is that the market over-adjusts for
+   defensive quality rather than the model under-adjusting, so the model's
+   "bias" is partly a real edge.
+   This supersedes quirk 16, which drew the opposite conclusion from n=8.
+
+24. **A signal that only picks Overs is not a signal.** The points check looked
+   like the answer at 55.6%, until the base rate: blind Overs went 51-40 across
+   the same 93 games, also 56.0%. The raw check runs +3.2 and is positive in 36
+   of 44 games, so ranking on it unadjusted just finds the biggest Overs. Both
+   measures are now de-meaned per slate before anything is ranked. De-meaned,
+   the check drops to 54-59% depending on threshold, with p around 0.2 to 0.4.
+   Every spread signal is likewise a coin flip: model gap 13-12 at threshold,
+   points check 31-29. Nothing in this model has a demonstrated edge, and the
+   card should say so rather than imply otherwise.
