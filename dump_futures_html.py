@@ -31,6 +31,7 @@ Run:
   python3 dump_futures_html.py --week 6
   python3 dump_futures_html.py --week 6 --wait 12 --only win_totals
   python3 dump_futures_html.py --week 6 --dry-run      # fetch + validate, write nothing
+  python3 dump_futures_html.py --validate futures_html/week6   # check saved pages, no network
 
 Then, back in the repo:
   python3 refresh_futures.py --week 6
@@ -72,10 +73,47 @@ WEEK1_ROWS = {
 FLOORS = {k: (100 if v > 100 else 6) for k, v in WEEK1_ROWS.items()}
 
 
+def validate_dir(dirpath):
+    """Report what each saved page parses to. No network, no browser."""
+    import glob
+    paths = sorted(glob.glob(os.path.join(dirpath, "*.html")))
+    if not paths:
+        print(f"no *.html in {dirpath}")
+        return 1
+    missing = [k for k in PAGES if not os.path.exists(os.path.join(dirpath, k + ".html"))]
+    bad = []
+    for path in paths:
+        key = os.path.basename(path)[: -len(".html")]
+        rows = parse_winner_table(open(path, encoding="utf-8", errors="replace").read())
+        baseline = WEEK1_ROWS.get(key)
+        floor = FLOORS.get(key, 1)
+        if not rows:
+            state = "FAIL  no odds table -- a consent wall or bot check looks exactly like this"
+            bad.append(key)
+        elif baseline and len(rows) < floor:
+            state = f"warn  {len(rows)} rows against {baseline} in week 1 -- check it rendered in full"
+            bad.append(key)
+        else:
+            state = (f"ok    {len(rows)} rows"
+                     + (f" (week 1: {baseline})" if baseline else "")
+                     + f", best {rows[0]['team']} {rows[0]['consensus_price']:+g}")
+        print(f"  {key:24} {state}")
+    if missing:
+        print(f"\n[warn] not in this folder: {', '.join(missing)}")
+        print("       refresh_futures.py merges only the pages it finds, so a market with no")
+        print("       page here silently keeps the prices it already had.")
+    print(f"\n{len(paths) - len(bad)}/{len(paths)} pages usable")
+    return 1 if bad else 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--week", type=int, required=True, help="CFB week number for this pull")
+    ap.add_argument("--week", type=int, help="CFB week number for this pull")
+    ap.add_argument("--validate", metavar="DIR", default=None,
+                    help="parse every *.html in DIR with the build's parser and report, "
+                         "fetching nothing. Use this when the pages were saved by hand "
+                         "(Save Page As) instead of rendered by this script.")
     ap.add_argument("--out-dir", default=None,
                     help="override the default futures_html/week<N>/ location")
     ap.add_argument("--wait", type=float, default=8.0,
@@ -87,6 +125,11 @@ def main():
     ap.add_argument("--dry-run", action="store_true",
                     help="fetch and validate, write nothing")
     args = ap.parse_args()
+
+    if args.validate:
+        return validate_dir(args.validate)
+    if args.week is None:
+        ap.error("--week is required unless --validate DIR is given")
 
     try:
         from playwright.sync_api import sync_playwright
