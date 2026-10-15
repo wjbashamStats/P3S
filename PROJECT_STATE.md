@@ -2,7 +2,7 @@
 
 Handoff doc for continuing this project in Claude Code. Captures what's built,
 every decision made, known data quirks, and the ordered next steps.
-Last updated: 2026-08-28.
+Last updated: 2026-10-15.
 
 ---
 
@@ -444,3 +444,47 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    Every spread signal is likewise a coin flip: model gap 13-12 at threshold,
    points check 31-29. Nothing in this model has a demonstrated edge, and the
    card should say so rather than imply otherwise.
+
+25. **Score-pairing recovers each team's own numbers exactly; it does NOT
+   reliably recover who they played.** Differencing the grades file gives every
+   team an unambiguous `(scored, allowed)` for the week, so a game total
+   (`scored + allowed`) and a margin (`scored - allowed`) are exact for the team
+   whose row they came from. Matching a team to its opponent by looking for the
+   mirror pair is a different problem and it is frequently ambiguous: in the
+   week 6 drop, 20 of the 110 teams that played had two or three candidate
+   opponents: 20-17 and 27-24 were each the score of three different games that
+   week, and 41-24 and 28-25 of two apiece. Greedy first-match pairing therefore
+   produced "Texas 24 - James Madison 27", two teams that did not play each other
+   (Texas lost 24-27 somewhere, James Madison won 27-24 somewhere else). The
+   consequence for grading is nil as long as each pick is graded off the team
+   it names -- that is what was done for week 6 -- but any backtest that joins
+   a derived game to a betting line by the paired matchup can silently join the
+   wrong game. Grade and backtest off single-team deltas, and treat a recovered
+   matchup as a hypothesis unless the score pair is unique on the slate.
+
+---
+
+## Running record (through week 6, 2026)
+
+Five props from the week 6 card are still ungraded: they need the PFF player
+drop that covers week 6, and the player files on disk stop at week 5.
+
+```
+                 W- L- P   voids    units
+week 2           6- 9- 0            -4.10
+week 3           7- 7- 1            -0.75
+week 4           5- 7- 1     1      -3.06
+week 5           7- 7- 0     1      -0.78
+week 6           4- 5- 1            -1.50   (5 props pending)
+---------------------------------------------------
+spreads          8-16- 1            -9.60
+totals          12-10- 2            +1.00
+props            9- 9- 0     2      -1.59
+---------------------------------------------------
+season          29-35- 3     2     -10.19
+```
+
+Spreads are where the money has gone: 8-16-1 is a 33% cover rate across five
+weeks and accounts for 94% of the season's loss. Totals are the only category
+above water, and only barely. That is the same conclusion quirks 23 and 24
+reached from the 93-game test, now visible in the actual card results.

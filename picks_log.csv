@@ -58,16 +58,16 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,5,2026-10-03,prop,Kari Ashley Over rec yds,32.5,BYU @ TCU,1.15,-114.5,44.9,WIN,108 rec yds,1.00,cleared 32.5 by 75 despite BYU's 89.6 coverage and a 0.813 pace haircut
 2026,5,2026-10-03,prop,Mazeo Bennett Jr. Under rec yds,37.5,Kentucky @ South Carolina,1.15,-114.5,21.7,LOSS,92 rec yds,-1.15,92 yards against a 37.5 line and a 27.3 season average. One 40-yard play was named as the whole risk
 2026,5,2026-10-03,prop,Jadan Baugh Over rush yds,118.0,Florida @ Missouri,1.13,-112.5,155.6,LOSS,13 rush yds,-1.13,"13 rush yds on 12 carries, 1.1 a carry. He got the volume and nothing else; the 52.4% breakaway profile is exactly this distribution's downside"
-2026,6,2026-10-10,spread,Pittsburgh,-3.5,North Carolina @ Pittsburgh,1.10,-110,-15.5,,,,"net gap 12.8; points check -12.9, 9.4 past the line. Pitt 5-0, 7th SR defense, 38.4/13.4"
-2026,6,2026-10-10,spread,Vanderbilt,+9.5,Ole Miss @ Vanderbilt,1.10,-110,+3.5,,,,"net gap 6.8; points check has it a pick'em, 9.7 past the line. Ole Miss def 127th SR, allows 30.8"
-2026,6,2026-10-10,spread,Air Force,-7.5,Air Force @ Northern Illinois,1.10,-110,-21.3,,,,"net gap 13.0, largest on the board; points check -13.7, 6.2 past. NIU 0-4, 13.8 ppg"
-2026,6,2026-10-10,spread,Army,-3.0,Tulane @ Army,1.10,-110,-8.4,,,,"net gap 6.2; points check -12.1, 9.1 past. Army off 4th SR; Tulane off 135th"
-2026,6,2026-10-10,spread,UCF,+10.5,UCF @ Oklahoma State,1.10,-110,+4.8,,,,"net gap 4.9; points check 6.5 past. Replaced James Madison -7.5, which fades a 4-1 ATS team"
-2026,6,2026-10-10,total,Under,59.0,Coastal Carolina @ Marshall,1.10,-110,50.9,,,,"de-meaned points check -8.7 and model gap -9.7 agree, widest on the board. Offenses 99th and 75th SR"
-2026,6,2026-10-10,total,Over,51.5,LSU @ Kentucky,1.10,-110,60.0,,,,"points check 60.1 and model 60.0 within a tenth; both top-15 SR offenses; Kentucky def 104th, 4-1 to the Over"
-2026,6,2026-10-10,total,Under,52.0,Eastern Michigan @ Akron,1.10,-110,46.1,,,,"de-meaned points check -5.3, model gap -7.5. Combined scoring 41.2 against a 52 line"
-2026,6,2026-10-10,total,Over,48.0,Indiana @ Nebraska,1.10,-110,60.0,,,,two 5-0 teams scoring 44.2 and 43.6 asked for 48. Residual +4.6 agrees; old method discounted it for two good defenses
-2026,6,2026-10-10,total,Over,51.5,Georgia @ Alabama,1.10,-110,58.1,,,,"points check 67.6, 12.9 above de-meaned. Both 5-0, both 5-0 to the Over, 1st and 2nd in Finishing Drives. Residual flat at -0.7"
+2026,6,2026-10-10,spread,Pittsburgh,-3.5,North Carolina @ Pittsburgh,1.10,-110,-15.5,LOSS,lost 17-21,-1.10,lost outright as a 3.5-point home favorite. 17 points from an offense averaging 38.4; the QB who had been out was named as the risk before kickoff
+2026,6,2026-10-10,spread,Vanderbilt,+9.5,Ole Miss @ Vanderbilt,1.10,-110,+3.5,LOSS,lost 17-52,-1.10,buried by 35. The model had Ole Miss 6.8 better and the line 9.5; the game was never inside the number
+2026,6,2026-10-10,spread,Air Force,-7.5,Air Force @ Northern Illinois,1.10,-110,-21.3,WIN,won 28-7,1.00,covered 7.5 by 13.5. The largest net gap on the board produced the cleanest cover
+2026,6,2026-10-10,spread,Army,-3.0,Tulane @ Army,1.10,-110,-8.4,PUSH,won 20-17,0.00,won by exactly 3 on a 3.0 line. Both signals had Army 6-12 better; the margin landed on the number
+2026,6,2026-10-10,spread,UCF,+10.5,UCF @ Oklahoma State,1.10,-110,+4.8,LOSS,lost 28-42,-1.10,lost by 14 as a 10.5-point underdog
+2026,6,2026-10-10,total,Under,59.0,Coastal Carolina @ Marshall,1.10,-110,50.9,WIN,48 points,1.00,"11 under the number. Coastal Carolina 27, Marshall 21"
+2026,6,2026-10-10,total,Over,51.5,LSU @ Kentucky,1.10,-110,60.0,WIN,69 points,1.00,"17.5 over. Kentucky 35, LSU 34 — the points check had 60.1 and the model 60.0"
+2026,6,2026-10-10,total,Under,52.0,Eastern Michigan @ Akron,1.10,-110,46.1,WIN,48 points,1.00,"4 under the number. Eastern Michigan 25, Akron 23"
+2026,6,2026-10-10,total,Over,48.0,Indiana @ Nebraska,1.10,-110,60.0,LOSS,37 points,-1.10,"11 short. Two 5-0 offenses averaging 44.2 and 43.6 combined for 37; Indiana 20, Nebraska 17"
+2026,6,2026-10-10,total,Over,51.5,Georgia @ Alabama,1.10,-110,58.1,LOSS,37 points,-1.10,"14.5 short. Georgia 20, Alabama 17 — the points check asked for 67.6 and the game delivered 37"
 2026,6,2026-10-10,prop,Dylan Riley Over rush yds,82.5,Boise State @ Fresno State,1.10,-110,145.9,,,,"690 yds in 5g (138.0/gm); 21.6 car/gm, 51.9% of carries, 6.4 ypa vs a line asking 3.8. Projection discounted for a 1.354 multiplier"
 2026,6,2026-10-10,prop,Jackson Harris Over rec yds,46.5,LSU @ Kentucky,1.10,-110,81.3,,,,317 yds in 5g (63.4/gm); 2.60 yprr on a 13.0 aDOT; Kentucky def 104th SR. Boom profile on 5.2 tgt/gm
 2026,6,2026-10-10,prop,Lee Beebe Jr. Over rush yds,71.5,Indiana @ Nebraska,1.10,-110,108.4,,,,"524 yds in 5g (104.8/gm); 47.1% of Indiana carries, 5.9 ypa vs a line asking 4.0. Committee risk with Turbo Richard"
