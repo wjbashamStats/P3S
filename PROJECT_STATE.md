@@ -462,12 +462,24 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    wrong game. Grade and backtest off single-team deltas, and treat a recovered
    matchup as a hypothesis unless the score pair is unique on the slate.
 
+26. **PFF restates prior weeks, so a season-total delta is close to but not
+   exactly one week's production.** The week 7 drop lowered a prior-week figure
+   for 25 receivers, 29 backs, 1 quarterback and 34 defenders against the file
+   it replaced -- Nate Branch 203 receiving yards down to 198, Will Wilson 175
+   rushing down to 174, single pressures and tackles coming off elsewhere.
+   Nobody's game count moved backwards and every player carried forward except
+   one Army walk-on with a one-game, zero-tackle line, so the drop is sound; the
+   restatements are re-charting, in the 1-to-6 unit range. The consequence for
+   delta grading is that a downward restatement of the prior total inflates the
+   computed week. Before grading a prop off a delta, check that the player's
+   prior season total still matches what the pick was written against -- all
+   five week 6 props did (690, 317, 524, 264, 274), so the deltas are exact, but
+   a 5-yard restatement on a line won by 7 would be the difference between a
+   win and a loss.
+
 ---
 
 ## Running record (through week 6, 2026)
-
-Five props from the week 6 card are still ungraded: they need the PFF player
-drop that covers week 6, and the player files on disk stop at week 5.
 
 ```
                  W- L- P   voids    units
@@ -475,16 +487,18 @@ week 2           6- 9- 0            -4.10
 week 3           7- 7- 1            -0.75
 week 4           5- 7- 1     1      -3.06
 week 5           7- 7- 0     1      -0.78
-week 6           4- 5- 1            -1.50   (5 props pending)
+week 6           7- 7- 1            -0.70
 ---------------------------------------------------
 spreads          8-16- 1            -9.60
 totals          12-10- 2            +1.00
-props            9- 9- 0     2      -1.59
+props           12-11- 0     2      -0.79
 ---------------------------------------------------
-season          29-35- 3     2     -10.19
+season          32-37- 3     2      -9.39
 ```
 
-Spreads are where the money has gone: 8-16-1 is a 33% cover rate across five
-weeks and accounts for 94% of the season's loss. Totals are the only category
-above water, and only barely. That is the same conclusion quirks 23 and 24
-reached from the 93-game test, now visible in the actual card results.
+Spreads are where all of the money has gone: 8-16-1 is a 33% cover rate across
+five weeks, and at -9.60u they are more than the entire season's loss -- totals
+and props together are +0.21u. That is the same conclusion quirks 23 and 24
+reached from the 93-game test, now visible in the card results. Nothing in the
+spread model has shown an edge in five weeks of live picks or in the backtest,
+and the card should keep saying so.
