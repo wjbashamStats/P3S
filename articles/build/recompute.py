@@ -24,10 +24,19 @@ Definitions, fixed here so they stop drifting between weeks:
                  totals are opponent-blind and the market is not, so that fit is
                  most of the raw gap. Average DEFENSIVE SUCCESS RATE RANK is the
                  predictor -- not the mean of all five factors, which gives a
-                 different and wrong answer.
+                 different and wrong answer. REPORTED ONLY, never selected on:
+                 tested on 93 games it went 42-49 and lost at every threshold
+                 (PROJECT_STATE quirk 23, which supersedes quirk 16).
+  de-meaned      a signal minus its own mean across the slate. Both the model
+                 gap and the points check run positive on totals -- the check is
+                 positive in most games -- so ranking either one raw just finds
+                 the biggest Overs, which is the Over base rate and not a signal
+                 (quirk 24). Everything selected on is de-meaned first.
 
-The points check is reported, never used to reorder the totals card: week 4
-tested that and it cost 3.10 units (PROJECT_STATE quirk 16).
+Selection, for both categories: keep the games where the two de-meaned signals
+agree in direction, then rank by the SMALLER of the two magnitudes, so a pick
+needs both to be saying something rather than one shouting. Neither signal has
+a demonstrated edge; this is the discipline, not a promise.
 """
 import argparse, csv, datetime, json, os, statistics, sys
 
@@ -141,13 +150,39 @@ def main():
               f"points {r['pts_margin']:+6.1f} ({r['pts_check_spread']:+5.1f} vs line) "
               f"{'agree' if agree else 'DISAGREE'}")
 
-    print(f"\n--- totals, top {args.top} by |residual| ---")
-    for r in sorted(rows, key=lambda r: -abs(r["resid"]))[:args.top]:
-        agree = (r["pts_check_total"] < 0) == (r["resid"] < 0)
-        print(f"{r['away']:>17} @ {r['home']:<17} {'Under' if r['resid']<0 else 'Over ':<6}"
-              f"{r['book_total']:6.2f} model{r['pred_total']:6.1f} gap{r['total_gap']:+6.1f} "
-              f"resid{r['resid']:+5.1f} | points{r['pts_total']:6.1f} ({r['pts_check_total']:+5.1f}) "
-              f"{'agree' if agree else 'DISAGREE':8} avgSRdef{r['avg_def_sr']:6.1f}")
+    mean_pct = statistics.fmean(r["pts_check_total"] for r in rows)
+    mean_pcs = statistics.fmean(r["pts_check_spread"] for r in rows)
+    for r in rows:
+        r["dm_total"] = r["total_gap"] - sl_tot
+        r["dm_pct"] = r["pts_check_total"] - mean_pct
+        r["dm_spread"] = r["adj_spread_gap"]
+        r["dm_pcs"] = r["pts_check_spread"] - mean_pcs
+        r["tot_both"] = min(abs(r["dm_total"]), abs(r["dm_pct"]))
+        r["sp_both"] = min(abs(r["dm_spread"]), abs(r["dm_pcs"]))
+
+    print(f"\n--- totals, de-meaned signals agree, top {args.top} by the smaller magnitude ---")
+    print(f"    points-check total mean {mean_pct:+.2f}, removed below")
+    agreed = [r for r in rows if r["dm_total"] * r["dm_pct"] > 0]
+    for r in sorted(agreed, key=lambda r: -r["tot_both"])[:args.top]:
+        side = "Over " if r["dm_total"] > 0 else "Under"
+        print(f"{r['away']:>17} @ {r['home']:<17} {side:<6}{r['book_total']:6.2f} "
+              f"model{r['pred_total']:6.1f} dm{r['dm_total']:+6.2f} | "
+              f"points{r['pts_total']:6.1f} dm{r['dm_pct']:+6.2f} | "
+              f"both{r['tot_both']:6.2f} | resid{r['resid']:+5.1f} "
+              f"avgSRdef{r['avg_def_sr']:6.1f}  {r['kick']}")
+    print(f"    {len(agreed)}/{len(rows)} games have the two agreeing")
+
+    print(f"\n--- spreads, de-meaned signals agree, top {args.top} by the smaller magnitude ---")
+    print(f"    points-check spread mean {mean_pcs:+.2f}, removed below")
+    agreed = [r for r in rows if r["dm_spread"] * r["dm_pcs"] > 0]
+    for r in sorted(agreed, key=lambda r: -r["sp_both"])[:args.top]:
+        home_side = r["dm_spread"] < 0
+        side = r["home"] if home_side else r["away"]
+        num = r["book_spread"] if home_side else -r["book_spread"]
+        print(f"{r['away']:>17} @ {r['home']:<17} {side+' '+format(num,'+.1f'):<22}"
+              f"gap dm{r['dm_spread']:+6.2f} | points dm{r['dm_pcs']:+6.2f} | "
+              f"both{r['sp_both']:6.2f} | {r['arec']} at {r['hrec']}  {r['kick']}")
+    print(f"    {len(agreed)}/{len(rows)} games have the two agreeing")
 
     if args.json_out:
         json.dump(dict(slate_spread_level=sl_sp, slate_total_level=sl_tot,

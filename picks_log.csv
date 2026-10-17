@@ -73,3 +73,18 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,6,2026-10-10,prop,Lee Beebe Jr. Over rush yds,71.5,Indiana @ Nebraska,1.10,-110,108.4,LOSS,31 rush yds,-1.10,31 on 9 carries. The committee risk named with Turbo Richard is exactly what happened -- 9 carries against a 21-a-game pace in a 20-17 game
 2026,6,2026-10-10,prop,Braden Pegan Over rec yds,49.5,Kansas @ Utah,1.10,-110,72.0,WIN,72 rec yds,1.00,"72 on 11 targets, 22.5 over. The blowout script arrived (Utah 41-24) and the targets came anyway"
 2026,6,2026-10-10,prop,Rodney Fields Jr. Over rush yds,53.5,Houston @ Kansas State,1.10,-110,76.2,LOSS,46 rush yds,-1.10,"46 on 14 carries, 7.5 short. Disclosed as the weakest of the five on a 32.5% carry share; Kansas State lost 16-35 and the run game never led"
+2026,7,2026-10-17,spread,UMass,+7.5,UMass @ Buffalo,1.10,-110,-1.7,,,,"net gap 9.4, widest on the board; points check has UMass by 6.0, 13.5 past the line. UMass 4-2, def 17th SR, 29.7/18.2"
+2026,7,2026-10-17,spread,BYU,+10.5,Notre Dame @ BYU,1.10,-110,+3.5,,,,"net gap 6.8; points check Notre Dame by 2.9, 7.6 past. BYU 5-0, 5-0 ATS, off 7th; home field 3.0"
+2026,7,2026-10-17,spread,Mississippi State,+17.5,Mississippi State @ LSU,1.10,-110,+11.7,,,,"net gap 6.0; points check LSU by 8.8, 8.7 past. MSU 4-1 ATS, off 29th SR, tempo 6th"
+2026,7,2026-10-17,spread,Missouri,+5.0,Missouri @ Ole Miss,1.10,-110,+0.5,,,,"net gap 4.7; points check Missouri by 1.1, 6.1 past. Missouri prsh 2nd, havoc 4th; Ole Miss cov 125th"
+2026,7,2026-10-17,spread,Wyoming,-7.5,Northern Illinois @ Wyoming,1.10,-110,-12.4,,,,"net gap 4.7; points check Wyoming by 10.8, 3.3 past. NIU 0-5, 12.4 ppg, spec 138th"
+2026,7,2026-10-17,total,Over,43.0,Wisconsin @ UCLA,1.10,-110,53.2,,,,"model 53.2 and points check 52.7 agree, strongest pair on the board. Combined scoring 70.8 against a 43 line"
+2026,7,2026-10-17,total,Over,56.0,Mississippi State @ LSU,1.10,-110,63.6,,,,model 63.6 and points check 63.8 within two tenths. Tempo 6th and 17th; MSU def 112th in Finishing Drives
+2026,7,2026-10-17,total,Over,51.5,Nebraska @ Oregon,1.10,-110,59.6,,,,"model 59.6, points check 58.7. Combined scoring 80.2 against a 51.5 line; Oregon 4-1 to the Over"
+2026,7,2026-10-17,total,Under,62.5,Oklahoma State @ Houston,1.10,-110,60.6,,,,"model 60.6, points check 59.4, residual -5.2 all agree. Both offenses 127th and 128th in Explosiveness"
+2026,7,2026-10-17,total,Under,56.5,Georgia Tech @ Virginia Tech,1.10,-110,54.7,,,,"model 54.7, points check 55.7, residual -5.6. Georgia Tech 27.2 ppg; VT 2nd in Havoc"
+2026,7,2026-10-17,prop,DJ Epps Over rec yds,35.5,Cincinnati @ West Virginia,1.10,-110,65.0,,,,"393 yds in 6g (65.5/gm) against a 35.5 line; 17.8 aDOT, 28.1 a catch, 3.3 yprr. Deep-threat variance is the risk"
+2026,7,2026-10-17,prop,Jackson Harris Over rec yds,49.5,Mississippi State @ LSU,1.10,-110,82.3,,,,"371 yds in 6g (61.8/gm); 5.5 tgt/gm, 2.36 yprr. MSU pass rush 135th of 138. Cleared 46.5 last week"
+2026,7,2026-10-17,prop,Aeryn Hampton Over rec yds,30.5,Washington State @ Oregon State,1.10,-110,46.9,,,,"245 yds in 6g (40.8/gm); 4.8 tgt/gm, 69% catch rate. Oregon State 41.8 ppg, off 11th SR. Blowout script at -18.5 is the risk"
+2026,7,2026-10-17,prop,Andrew Rappleyea Under rec yds,30.5,Penn State @ Michigan,1.10,-110,15.7,,,,"146 yds in 6g (24.3/gm) against a 30.5 line; 6.6 aDOT, long of 20. Michigan def 4th, games 1-4 to the Over"
+2026,7,2026-10-17,prop,Horatio Fields Over rec yds,26.5,Missouri @ Ole Miss,1.10,-110,37.4,,,,"190 yds in 5g (38.0/gm); 4.8 tgt/gm, 71% catch rate. Missouri coverage 70th, their softest unit"

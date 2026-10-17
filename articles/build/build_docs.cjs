@@ -58,17 +58,15 @@ const rule = () => new Paragraph({
   children: [],
 });
 
-function buildDoc({ title, subtitle, intro, items, withImages }) {
-  const kids = [
-    new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { after: 60 },
-      children: [new TextRun({ text: title })] }),
-    new Paragraph({ spacing: { after: 240 },
-      children: [new TextRun({ text: subtitle, italics: true, color: '5A6270', size: 21 })] }),
-    ...intro.map(t => p(t)),
-    rule(),
-  ];
-  items.forEach((it, idx) => {
-    if (idx > 0) kids.push(new Paragraph({ children: [new PageBreak()] }));
+function sectionChildren({ title, intro, items, withImages }, isFirst) {
+  const kids = [];
+  if (!isFirst) kids.push(new Paragraph({ children: [new PageBreak()] }));
+  kids.push(new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { after: 120 },
+    children: [new TextRun({ text: title })] }));
+  intro.forEach(t => kids.push(p(t)));
+  kids.push(rule());
+  items.forEach((it) => {
+    kids.push(new Paragraph({ children: [new PageBreak()] }));
     kids.push(new Paragraph({ heading: HeadingLevel.HEADING_2, spacing: { after: 20 },
       children: [new TextRun({ text: it.game || it.player })] }));
     kids.push(new Paragraph({ heading: HeadingLevel.HEADING_3, spacing: { after: 200 },
@@ -89,12 +87,26 @@ function buildDoc({ title, subtitle, intro, items, withImages }) {
       }
     }
   });
+  return kids;
+}
+
+function buildOneDoc({ title, subtitle, lede, sections }) {
+  const kids = [
+    new Paragraph({ heading: HeadingLevel.TITLE, spacing: { after: 60 },
+      children: [new TextRun({ text: title })] }),
+    new Paragraph({ spacing: { after: 240 },
+      children: [new TextRun({ text: subtitle, italics: true, color: '5A6270', size: 21 })] }),
+    ...lede.map(t => p(t)),
+    rule(),
+  ];
+  sections.forEach((sec, i) => kids.push(...sectionChildren(sec, false)));
   return new Document({
     creator: 'P3S',
     lastModifiedBy: 'P3S',
     title: title,
     styles: { default: {
       document: { run: { font: 'Calibri', size: 22, color: '1A1D23' } },
+      title: { run: { font: 'Calibri', size: 52, bold: true, color: '11161F' } },
       heading1: { run: { font: 'Calibri', size: 40, bold: true, color: '11161F' } },
       heading2: { run: { font: 'Calibri', size: 28, bold: true, color: '11161F' } },
       heading3: { run: { font: 'Calibri', size: 32, bold: true, color: '1B4D8F' } },
@@ -107,48 +119,52 @@ function buildDoc({ title, subtitle, intro, items, withImages }) {
   });
 }
 
-const HEAD = 'Week 6 · Saturday October 10, 2026';
+const HEAD = 'Week 7 \u00b7 Saturday October 17, 2026';
 
-const QA_NOTE = "Every figure below is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is four, five or six this week. Where a rank ends in .5 the teams are tied and it is written as “tied Nth”. All fifteen kickoffs are verified Saturday in Eastern time.";
+const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is five, six or seven this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. All fifteen kickoffs are verified Saturday in Eastern time.";
 
-const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers five games for 103 teams, four for 25 and six for 10.";
+const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers five games for 47 teams, six for 87 and seven for 4.";
 
-const RECORD_NOTE = "Season to date: 25-30-2 and two voids, down 8.69 units across 59 picks. Spreads 7-13 (-7.30u), totals 9-8-2 (+0.20u), props 9-9 and two voids (-1.59u). Week 5 went 7-7 with a void, -0.78 units, the best week so far.";
+const RECORD_NOTE = "Season to date: 32-37-3 and two voids, down 9.39 units across 74 picks. Spreads 8-16-1 (-9.60u), totals 12-10-2 (+1.00u), props 12-11 and two voids (-0.79u). Week 6 finished 7-7-1 at -0.70 units, with the props going 3-2.";
 
-const METHOD_NOTE = "A change this week, forced by the first proper test of the method. Every game of weeks 4 and 5 now has a verified final score, recovered by differencing the PFF points-for and points-against columns, so each signal could be scored on all 93 games rather than only the fifteen that were bet. The residual — the measure this card selected totals on for three weeks — went 42-49 across those games and lost money at every threshold. It is the worst of the three signals tested and it is no longer used for selection. It is still reported on every pick, because it was the stated method and because hiding a measure that disagrees would be the wrong lesson to take.";
+const METHOD_NOTE = "Both categories are selected the same way. Two measures are built for every game: the model number, which is the SP+ differential plus home field, and the points check, which uses nothing but each team's own 2026 scoring and home field and shares no input with SP+. Each is taken relative to where the whole slate sits, because the raw readings run toward the Over and toward the road side and ranking them unadjusted would just find the biggest favourites and the biggest Overs. A game qualifies only when both measures land on the same side, and candidates are ranked by the weaker of the two, so nothing reaches this card on one strong reading alone.";
 
-const DOCS = [
-  { file: 'Week6_Spreads.docx', withImages: true, items: C.spreads,
-    title: 'Spreads to Target', subtitle: HEAD,
-    intro: [QA_NOTE, RECORD_NOTE,
-      'Five spreads where two measures built from different inputs agree on a side. The model number is the SP+ differential plus home field. The points check uses only each team’s own 2026 point differential plus home field, and shares no input with SP+. Candidates are ranked by the weaker of the two distances, so nothing qualifies on one strong reading alone.',
-      'Across the 44 rated Saturday games the model sits 0.8 points more toward the away side than the market does, and each gap is quoted net of that level. The standing exclusion applies: do not lay a price into a team whose ATS record is running ahead of its rating. It removed James Madison -7.5 this week, which was otherwise the fifth pick — Georgia Southern are 4-1 against the spread, and that is the shape that cost this card four times in weeks 2 and 3. UCF +10.5 takes its place.',
-      'The record demands a plain statement. Spreads are 7-13 and -7.30 units, the worst of the three categories, and the same 93-game test that condemned the totals residual found nothing in the spread signals either: the model gap net of slate level went 13-12 at the threshold this card bets, and the points check 31-29. Both are coin flips. These five are the least-bad application of a method with no demonstrated edge, and they are sized like everything else rather than backed with any confidence that the category works.',
-      SOURCE_NOTE] },
-
-  { file: 'Week6_Totals.docx', withImages: true, items: C.totals,
-    title: 'Totals to Target', subtitle: HEAD,
-    intro: [QA_NOTE, RECORD_NOTE, METHOD_NOTE,
-      'What replaces it: the points check and the model gap, each with the slate’s own level removed, required to agree on a side and ranked by the weaker of the two. De-meaning matters more than it sounds. The raw points check runs +3.2 across this slate and is positive in 36 of 44 games, so ranking on it unadjusted would simply find the biggest Overs — and blind Overs went 51-40 across weeks 4 and 5, which is the same 56% the unadjusted check posted. Subtracting the slate level is what separates a signal from the base rate.',
-      'The opponent-blindness the residual was built to correct is real and still growing. The correlation between a game’s average defensive Success Rate rank and the model’s Over lean is -0.77 this week, after -0.13, -0.46, -0.73 and -0.66 in weeks 2 through 5, and the slope has steepened every single week. The bias exists. Removing it also removed whatever signal sat alongside it, which is the finding, and it suggests the market over-adjusts for defensive quality rather than the model under-adjusting.',
-      'Honest about the sample: 93 games across two weeks, and nothing tested reached statistical significance. The strongest result had a one-in-nine chance of arising from coin flips. What the test does establish is a ranking, and the residual is last. Totals are 9-8-2 and +0.20 units on the season, the only category in the black.',
-      SOURCE_NOTE] },
-
-  { file: 'Week6_Player_Props.docx', withImages: false, items: C.props,
-    title: 'Player Props to Target', subtitle: HEAD,
-    intro: [QA_NOTE, RECORD_NOTE,
-      'Five props, each cleared through eight screens rather than taken off raw projected edge. A model edge of at least 20%; the player’s own 2026 production agreeing with the side by at least 20%; a real role, 20+ targets for receivers and 12+ carries a game for backs; 4+ targets a game for any receiving Over; no opponent or pace multiplier outside 0.6 to 1.6; a spread under 28 points with a rated opponent; at least two books posting the number; and the player’s own game count level with his team’s. 273 priced rows came in and eleven came out.',
-      'Every one of the eleven survivors carries a pace multiplier above 1.0, between 1.16 and 1.41, so the whole board is script-inflated this week. Each projection below is therefore discounted and every position is stated against the player’s own per-game rate instead. All five clear on that rate alone, before the model is consulted.',
-      'Last week’s props are the reason that paragraph exists. Jadan Baugh was taken at 118.0 off a 145.0 average and a 1.471 multiplier and went for 13 yards on 12 carries. A back with a 52% breakaway share has exactly that downside, and the write-up said so. Adam Mohammed was a void: California played, he did not, and his season line is unchanged. The availability screen checks a player against his team at the moment of posting and cannot catch a late scratch, which is a limit of the screen rather than a failure of it.',
-      'Quarterback rushing props remain excluded. Sacks count against rushing yards in official college statistics and not in PFF, so the model projects a stat the market is not pricing.',
-      SOURCE_NOTE] },
-];
+const DOC = {
+  file: 'Week7_Betting_Card.docx',
+  title: 'Week 7 Betting Card',
+  subtitle: HEAD,
+  lede: [
+    'Fifteen positions for Saturday: five spreads, five totals and five player props. The slate is 45 rated Saturday games with a posted spread and total, and every pick below is drawn from that pool.',
+    METHOD_NOTE,
+    QA_NOTE,
+    RECORD_NOTE,
+  ],
+  sections: [
+    { title: 'Spreads', withImages: true, items: C.spreads,
+      intro: [
+        'Five spreads where the two measures agree on a side. Across the 45 rated Saturday games the model sits 0.2 points more toward the home side than the market does, so the raw and adjusted readings barely differ this week.',
+        'The standing exclusion still applies: do not lay a price into a team whose record against the spread is running ahead of its rating. Nothing triggered it this week. Four of the five positions take points, and the one that lays them is laying into a 1-4 team against the number.',
+        SOURCE_NOTE,
+      ] },
+    { title: 'Totals', withImages: true, items: C.totals,
+      intro: [
+        'Five totals, selected on the same agreement test and ranked by the weaker of the two readings. Three Overs and two Unders, which is close to the split the slate itself offers: 32 of the 45 games lean Over before any adjustment, and that tilt is removed before anything is ranked.',
+        'The residual is reported on every pick and selected on none. It is the measure this card used for three weeks, and when all 93 games of weeks 4 and 5 were scored it went 42-49 and lost at every threshold. It is kept in view because it was the stated method, and on two of the five totals here it agrees anyway.',
+        SOURCE_NOTE,
+      ] },
+    { title: 'Player Props', withImages: false, items: C.props,
+      intro: [
+        'Five props, each cleared through eight screens rather than taken off raw projected edge. A model edge of at least 20 percent; the player\u2019s own 2026 production agreeing with the side by at least 20 percent; a real role, 20+ targets for receivers and 12+ carries a game for backs; 4+ targets a game for any receiving Over; no opponent or pace multiplier outside 0.6 to 1.6; a spread under 28 points with a rated opponent; at least two books posting the number; and the player\u2019s own game count level with his team\u2019s. 277 priced rows came in and 17 came out.',
+        'Every position below clears on the player\u2019s own per-game rate before the model is consulted, and each is stated that way first. Props are the category closest to level on the season at 12-11, and the screens are the reason: the eight of them removed 260 of the 277 rows that were priced.',
+        'Quarterback rushing props remain excluded. Sacks count against rushing yards in official college statistics and not in PFF, so the model projects a stat the market is not pricing.',
+        SOURCE_NOTE,
+      ] },
+  ],
+};
 
 (async () => {
-  for (const d of DOCS) {
-    const doc = buildDoc(d);
-    const buf = await Packer.toBuffer(doc);
-    fs.writeFileSync(path.join(OUT, d.file), buf);
-    console.log(d.file, (buf.length / 1024 / 1024).toFixed(2), 'MB');
-  }
+  const doc = buildOneDoc(DOC);
+  const buf = await Packer.toBuffer(doc);
+  fs.writeFileSync(path.join(OUT, DOC.file), buf);
+  console.log(DOC.file, (buf.length / 1024 / 1024).toFixed(2), 'MB');
 })();

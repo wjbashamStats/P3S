@@ -410,61 +410,12 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
-          "the only other game this week pairing two unbeaten sides":
-            lambda: sorted(f"{r['away']} @ {r['home']}" for r in self.calc.values()
-                     if all(self.grades[(self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pf"],
-                                         self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pa"],
-                                         self.board[(r["away_full"],r["home_full"])][s+"_grades"]["grade_over"])]
-                            ["record"].replace(" ","").split("-")[1]=="0" for s in ("away","home"))
-                    ) == ["Georgia @ Alabama", "Indiana @ Nebraska"],
-          "the 6th-fastest tempo in the country":
-            lambda: self.board[("Ole Miss Rebels","Vanderbilt Commodores")]["away_power"]["tempo_rank"]==6.0,
-          "the worst scoring offense on this card":
-            lambda: True,   # Northern Illinois 13.8/gm, lowest of the ten teams on the spread card
-          "one of two such pairs on the board":
-            lambda: sum(1 for r in self.calc.values()
-                        if all((self.grades[(self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pf"],
-                                             self.board[(r["away_full"],r["home_full"])][s+"_grades"]["pa"],
-                                             self.board[(r["away_full"],r["home_full"])][s+"_grades"]["grade_over"])]
-                                ["record"].replace(" ","").split("-")[1])=="0" for s in ("away","home"))) == 2,
-          "33.2 implied total, the highest on this card":
-            lambda: True,   # Utah 33.25, highest of the ten teams in the five prop games
-          "1st nationally in Finishing Drives":
-            lambda: self.board[("Georgia Bulldogs","Alabama Crimson Tide")]
-                        ["five_factors"]["away_off"]["finishing_drives"] == 1,
-          "the largest model gap on the board":
+          # The 9.4-point net gap on UMass is the widest on the slate. Computed,
+          # not recalled: week 5 shipped five false superlatives and this is the
+          # check that exists because of them.
+          "the widest on the board":
             lambda: max(abs(r["spread_gap"] - self.level) for r in self.calc.values())
-                    == abs((self.calc[("Air Force Falcons","Northern Illinois Huskies")]["spread_gap"])
-                           - self.level),
-          "the widest agreement on the totals board":
-            lambda: True,     # ranked first by the weaker of the two de-meaned measures; see recompute output
-          "the highest on this prop card":
-            lambda: True,     # Utah 33.2 implied, verified against the board before writing
-          "the highest of any team on this card":
-            lambda: True,
-          "the largest disagreement on the slate":
-            lambda: abs(self.calc[("Georgia Bulldogs","Alabama Crimson Tide")]["pts_check_total"])
-                    == max(abs(r["pts_check_total"]) for r in self.calc.values()),
-          "the worst of the three categories":
-            lambda: True,     # spreads -7.30u against totals +0.20u and props -1.59u in picks_log
-          "the only category in the black":
-            lambda: True,
-          "the best week so far":
-            lambda: True,
-          "the most Under-leaning record on this card":
-            lambda: True,
-          "the strongest Over record among these five games":
-            lambda: True,
-          "the best defensive unit in the game":
-            lambda: True,
-          "the second highest on this prop card":
-            lambda: True,
-          "the smallest on this card":
-            lambda: True,
-          "the highest on this prop card is Utah":
-            lambda: True,
-          "the largest on the board and the two reads":
-            lambda: True,
+                    == abs(self.calc[("UMass Minutemen", "Buffalo Bulls")]["spread_gap"] - self.level),
         }
         seen = set()
         for sec in ("spreads", "totals", "props"):
@@ -503,7 +454,7 @@ class QA:
             tally[r["result"].strip().upper()] = tally.get(r["result"].strip().upper(), 0) + 1
         kept = f"{tally['WIN']}-{tally['LOSS']}-{tally['PUSH']}"
         import html as _html, re as _re, zipfile as _zip
-        _z = _zip.ZipFile(os.path.join(ROOT, "articles", f"Week{self.week}_Totals.docx"))
+        _z = _zip.ZipFile(os.path.join(ROOT, "articles", f"Week{self.week}_Betting_Card.docx"))
         text = _html.unescape(_re.sub(r"<[^>]+>", " ",
                  _z.read("word/document.xml").decode("utf-8")))
         if "four totals were replaced" not in text:

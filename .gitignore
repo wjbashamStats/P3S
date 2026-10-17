@@ -33,3 +33,7 @@ ranked/
 
 # actionnet weekly export -- regenerate with actionnet/an_metrics.py
 AN_2026_*.csv
+
+# node deps for the docx builder (installed on demand, never committed)
+node_modules/
+package-lock.json
