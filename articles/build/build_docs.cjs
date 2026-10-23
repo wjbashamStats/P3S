@@ -119,43 +119,40 @@ function buildOneDoc({ title, subtitle, lede, sections }) {
   });
 }
 
-const HEAD = 'Week 7 \u00b7 Saturday October 17, 2026';
+const HEAD = 'Week 8 \u00b7 Saturday October 24, 2026';
 
-const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is five, six or seven this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. All fifteen kickoffs are verified Saturday in Eastern time.";
+const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is six, seven or eight this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. All nine kickoffs are verified Saturday in Eastern time, and every venue has been checked against the National Weather Service forecast at kickoff.";
 
-const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers five games for 47 teams, six for 87 and seven for 4.";
+const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers six games for 57 teams, seven for 78 and eight for 3. Futures prices are the week 8 pull except win totals, which are week 7.";
 
-const RECORD_NOTE = "Season to date: 32-37-3 and two voids, down 9.39 units across 74 picks. Spreads 8-16-1 (-9.60u), totals 12-10-2 (+1.00u), props 12-11 and two voids (-0.79u). Week 6 finished 7-7-1 at -0.70 units, with the props going 3-2.";
+const RECORD_NOTE = "Season to date: 38-46-3 and two voids, down 13.29 units across 89 picks. Spreads 11-18-1 (-8.80u), totals 12-15-2 (-4.50u), props 15-13 and two voids (+0.01u). Week 7 finished 6-9 at -3.90 units: spreads 3-2, props 3-2, totals 0-5.";
 
-const METHOD_NOTE = "Both categories are selected the same way. Two measures are built for every game: the model number, which is the SP+ differential plus home field, and the points check, which uses nothing but each team's own 2026 scoring and home field and shares no input with SP+. Each is taken relative to where the whole slate sits, because the raw readings run toward the Over and toward the road side and ranking them unadjusted would just find the biggest favourites and the biggest Overs. A game qualifies only when both measures land on the same side, and candidates are ranked by the weaker of the two, so nothing reaches this card on one strong reading alone.";
+const NO_TOTALS = "No totals this week. Week 7's five went 0-5, and the three Overs missed by 19, 25 and 20.5 points in games where both selection measures agreed. Agreement between two measures that share the same blind spot is not independent confirmation, and until that is tested properly across every game rather than the five that were bet, the category sits out.";
 
 const DOC = {
-  file: 'Week7_Betting_Card.docx',
-  title: 'Week 7 Betting Card',
+  file: 'Week8_Betting_Card.docx',
+  title: 'Week 8 Betting Card',
   subtitle: HEAD,
   lede: [
-    'Fifteen positions for Saturday: five spreads, five totals and five player props. The slate is 45 rated Saturday games with a posted spread and total, and every pick below is drawn from that pool.',
-    METHOD_NOTE,
+    'Nine positions for Saturday: five spreads and four player props. The slate is 40 rated Saturday games with a posted spread and total, and every pick below is drawn from that pool.',
+    NO_TOTALS,
+    "Spreads are selected on two measures built for every game: the model number, which is the SP+ differential plus home field, and the points check, which uses nothing but each team's own 2026 scoring and home field and shares no input with SP+. Each is taken relative to where the whole slate sits. A game qualifies only when both land on the same side, and candidates are ranked by the weaker of the two, so nothing reaches this card on one strong reading alone. Seventeen of the 40 games had the two agreeing this week.",
     QA_NOTE,
     RECORD_NOTE,
   ],
   sections: [
     { title: 'Spreads', withImages: true, items: C.spreads,
       intro: [
-        'Five spreads where the two measures agree on a side. Across the 45 rated Saturday games the model sits 0.2 points more toward the home side than the market does, so the raw and adjusted readings barely differ this week.',
-        'The standing exclusion still applies: do not lay a price into a team whose record against the spread is running ahead of its rating. Nothing triggered it this week. Four of the five positions take points, and the one that lays them is laying into a 1-4 team against the number.',
-        SOURCE_NOTE,
-      ] },
-    { title: 'Totals', withImages: true, items: C.totals,
-      intro: [
-        'Five totals, selected on the same agreement test and ranked by the weaker of the two readings. Three Overs and two Unders, which is close to the split the slate itself offers: 32 of the 45 games lean Over before any adjustment, and that tilt is removed before anything is ranked.',
-        'The residual is reported on every pick and selected on none. It is the measure this card used for three weeks, and when all 93 games of weeks 4 and 5 were scored it went 42-49 and lost at every threshold. It is kept in view because it was the stated method, and on two of the five totals here it agrees anyway.',
+        'Five spreads where the two measures agree on a side. Across the 40 rated Saturday games the model sits within a quarter-point of the market on average, the flattest reading of the season, so the raw and adjusted numbers are effectively the same this week.',
+        'The edges are smaller than they have been. Ranked by the weaker of the two measures, the strongest agreement on the board is 4.9 points against 9.4 last week, and the fifth pick here sits at 2.9. That is reported rather than dressed up: these are the five largest agreements available on a slate that offered few.',
+        'The standing exclusion still applies: do not lay a price into a team whose record against the spread is running ahead of its rating. Nothing triggered it. Three of the five take points; the two that lay them are laying into teams 3-4 and 2-4 against the number.',
         SOURCE_NOTE,
       ] },
     { title: 'Player Props', withImages: false, items: C.props,
       intro: [
-        'Five props, each cleared through eight screens rather than taken off raw projected edge. A model edge of at least 20 percent; the player\u2019s own 2026 production agreeing with the side by at least 20 percent; a real role, 20+ targets for receivers and 12+ carries a game for backs; 4+ targets a game for any receiving Over; no opponent or pace multiplier outside 0.6 to 1.6; a spread under 28 points with a rated opponent; at least two books posting the number; and the player\u2019s own game count level with his team\u2019s. 277 priced rows came in and 17 came out.',
-        'Every position below clears on the player\u2019s own per-game rate before the model is consulted, and each is stated that way first. Props are the category closest to level on the season at 12-11, and the screens are the reason: the eight of them removed 260 of the 277 rows that were priced.',
+        'Four props rather than five, and the reason is worth stating. 293 priced rows went through the eight screens \u2014 a model edge of at least 20 percent; the player\u2019s own 2026 production agreeing with the side by at least 20 percent; a real role, 20+ targets for receivers and 12+ carries a game for backs; 4+ targets a game for any receiving Over; no opponent or pace multiplier outside 0.6 to 1.6; a spread under 28 points with a rated opponent; at least two books posting the number; and the player\u2019s own game count level with his team\u2019s \u2014 and seven survived.',
+        'Those seven were then checked against this morning\u2019s depth charts, and three of them are not listed as starters: a tight end listed fourth at his position despite leading the board in targets, a back listed second behind the teammate who was named as his committee risk two weeks ago, and a slot receiver listed second. All three came off. The screens read production, which looks backwards; the depth chart reads role, which looks forwards, and on this slate they disagreed about nearly half the board.',
+        'The four below clear both. Each is stated first against the player\u2019s own per-game rate, before the model is consulted.',
         'Quarterback rushing props remain excluded. Sacks count against rushing yards in official college statistics and not in PFF, so the model projects a stat the market is not pricing.',
         SOURCE_NOTE,
       ] },

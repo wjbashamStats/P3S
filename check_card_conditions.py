@@ -44,21 +44,79 @@ ET = dt.timezone(dt.timedelta(hours=-4))
 
 # stadium -> (lat, lon). The city NWS returns is printed so a bad pair shows up.
 VENUES = {
+    # week 7
     "Buffalo": (43.0005, -78.7895), "BYU": (40.2577, -111.6546),
     "LSU": (30.4119, -91.1839), "Ole Miss": (34.3617, -89.5346),
     "Wyoming": (41.3114, -105.5690), "UCLA": (34.1613, -118.1676),
     "Oregon": (44.0582, -123.0681), "Houston": (29.7216, -95.3496),
     "Virginia Tech": (37.2199, -80.4184), "West Virginia": (39.6494, -79.9550),
     "Oregon State": (44.5593, -123.2820), "Michigan": (42.2658, -83.7487),
+    # week 8
+    "Clemson": (34.6788, -82.8432), "Mississippi State": (33.4560, -88.7940),
+    "South Carolina": (33.9731, -81.0193), "Toledo": (41.6586, -83.6079),
+    "Georgia Tech": (33.7725, -84.3928), "Auburn": (32.6025, -85.4892),
+    "Oklahoma State": (36.1269, -97.0655), "Kansas": (38.9631, -95.2459),
+    "Alabama": (33.2083, -87.5504),
 }
+
 # PFF team name -> ourlads slug, for the teams a prop can name
 SLUGS = {
     "W VIRGINIA": "west-virginia", "LSU": "lsu", "OREGON ST": "oregon-state",
     "PENN STATE": "penn-state", "OLE MISS": "ole-miss", "MISS STATE": "mississippi-state",
     "MICHIGAN": "michigan", "HOUSTON": "houston", "OKLA STATE": "oklahoma-state",
+    "GA TECH": "georgia-tech", "INDIANA": "indiana", "BAYLOR": "baylor",
+    "ALABAMA": "alabama", "KANSAS": "kansas", "COLORADO": "colorado",
+    "BOSTON COL": "boston-college", "AUBURN": "auburn",
 }
+
 WIND_WARN = 20          # mph: below this, passing and kicking are not meaningfully affected
 PRECIP_WARN = 50        # percent
+
+
+SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"}
+
+
+def surname(full):
+    """The last name, ignoring a generational suffix.
+
+    'Kevin Roche Jr.'.split()[-1] is 'Jr.', and matching that against a depth
+    chart hits every other Jr. on the roster. That bug reported a tight end
+    listed 4th as a 1st-string left guard, which is the opposite of what this
+    tool exists to do, so the suffix comes off before anything is compared.
+    """
+    parts = [w for w in full.replace(",", " ").split() if w.strip()]
+    while len(parts) > 1 and parts[-1].lower().strip(".") in {s.strip(".") for s in SUFFIXES}:
+        parts.pop()
+    return parts[-1] if parts else full
+
+
+def match_player(name, rows):
+    """Offensive depth-chart rows for this player, most specific match first.
+
+    An exact full-name match wins outright. Failing that, a surname match is
+    narrowed by first initial, because two players on one roster can share a
+    surname. Anything still ambiguous is returned in full so the caller can
+    report it rather than silently pick one.
+    """
+    off = [r for r in rows if r["side"] == "offense"]
+    exact = [r for r in off if r["name"].strip().lower() == name.strip().lower()]
+    if exact:
+        return exact
+    ln, fi = surname(name).lower(), name.strip()[:1].lower()
+    by_last = [r for r in off if surname(r["name"]).lower() == ln]
+    if len(by_last) > 1:
+        narrowed = [r for r in by_last if r["name"].strip()[:1].lower() == fi]
+        if narrowed:
+            return narrowed
+    return by_last
+
+
+def depth_above(rows, row):
+    """Who is listed ahead of this player at his position."""
+    same = [r for r in rows if r["position"] == row["position"] and r["side"] == row["side"]
+            and r["depth_rank"].isdigit() and int(r["depth_rank"]) < int(row["depth_rank"])]
+    same.sort(key=lambda r: int(r["depth_rank"]))
+    return ", ".join(r["name"] for r in same) or "nobody listed"
 
 
 def get(url):
@@ -92,26 +150,31 @@ def check_starters(content, scratch):
                             "--team", slug, "--out", out, "--delay", "1.0"],
                            check=True, capture_output=True)
         rows = list(csv.DictReader(open(out)))
-        last = name.split()[-1]
-        hits = [r for r in rows if last.lower() in r["name"].lower() and r["side"] == "offense"]
+        hits = match_player(name, rows)
         if not hits:
             print(f"  FAIL {name:22} NOT ON THE DEPTH CHART at {team}"); bad += 1; continue
-        starter = [r for r in hits if r["depth_rank"] == "1"]
-        row = (starter or hits)[0]
-        alias = "" if last.lower() in row["name"].lower() and name.split()[0].lower() in row["name"].lower() \
-                else f"  (listed as {row['name']})"
-        if starter:
+        if len(hits) > 1:
+            print(f"  WARN {name:22} matches {len(hits)} rows: "
+                  + "; ".join(f"{r['position']} {r['depth_rank']} {r['name']}" for r in hits))
+            bad += 1
+            continue
+        row = hits[0]
+        alias = "" if row["name"].lower() == name.lower() else f"  (listed as {row['name']})"
+        if row["depth_rank"] == "1":
             print(f"  ok   {name:22} {row['position']:8} 1st string, #{row['jersey']}{alias}")
         else:
-            print(f"  WARN {name:22} {row['position']:8} listed {row['depth_rank']} deep{alias}"); bad += 1
+            print(f"  WARN {name:22} {row['position']:8} listed {row['depth_rank']} deep"
+                  f", behind {depth_above(rows, row)}{alias}")
+            bad += 1
     return bad
 
 
 def check_weather(content, board):
     print("\n--- kickoff weather, from the National Weather Service ---")
     seen, bad = set(), 0
+    # a card may omit a whole category -- week 8 ran no totals
     for sec in ("spreads", "totals", "props"):
-        for it in content[sec]:
+        for it in content.get(sec, []):
             away, home = [s.strip() for s in it["game"].split(" @ ")]
             # longest key first: "Oregon State Beavers" must not match "Oregon"
             key = next((k for k in sorted(VENUES, key=len, reverse=True)

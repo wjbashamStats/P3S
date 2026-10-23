@@ -98,7 +98,7 @@ class QA:
             print(f"  note {f} is {age:.1f} h old"
                   + ("   <-- lines will have moved; check the number before betting" if age > 6 else ""))
         for sec in ("spreads", "totals", "props"):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 g = self.game_of(it)
                 if not g:
                     continue
@@ -121,7 +121,7 @@ class QA:
         print("\n--- ranks that are ties must be written 'tied Nth' ---")
         flagged = 0
         for sec in ("spreads", "totals", "props"):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 g = self.game_of(it)
                 if not g:
                     continue
@@ -151,7 +151,7 @@ class QA:
         print("\n--- grade values ---")
         bad = 0
         for sec in ("spreads", "totals", "props"):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 g = self.game_of(it)
                 if not g:
                     continue
@@ -201,7 +201,7 @@ class QA:
                     allok = False
             print(f"  {'ok  ' if allok else 'FAIL'} {it['pick']:<22}book {book:+6.1f} model {model:+6.1f} "
                   f"gap {r['spread_gap']:+5.1f} net {net:+5.1f} points {pts:+6.1f}")
-        for it in self.content["totals"]:
+        for it in self.content.get("totals", []):
             g = self.game_of(it)
             r = self.calc[(g["away_team"], g["home_team"])]
             want = [(fmt(abs(r["pred_total"])), "Model number"),
@@ -234,7 +234,7 @@ class QA:
         print("\n--- per-game scoring and records (rounding half up) ---")
         bad = 0
         for sec in ("spreads", "totals"):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 g = self.game_of(it)
                 t = self.text(it)
                 for side in ("home", "away"):
@@ -289,7 +289,7 @@ class QA:
                     name = nm
             if not self.ok(name is not None, "prop player not found in the PFF files", it["pick"]):
                 continue
-            kind = "rush" if "Rushing" in it["pick"] else "recv"
+            kind = "rush" if "rushing" in it["pick"].lower() else "recv"
             row = (self.rush if kind == "rush" else self.recv)[name]
             gp = int(row["player_game_count"])
             t = self.text(it)
@@ -341,7 +341,7 @@ class QA:
 
     def card_rows(self, sec):
         out = []
-        for it in self.content[sec]:
+        for it in self.content.get(sec, []):
             g = self.game_of(it)
             out.append((it, g, self.calc[(g["away_team"], g["home_team"])]))
         return out
@@ -373,7 +373,7 @@ class QA:
         for it in self.content["props"]:
             name = max((nm for nm in list(self.rush) + list(self.recv) if it["pick"].startswith(nm)),
                        key=len, default=None)
-            kind = "rush" if "Rushing" in it["pick"] else "recv"
+            kind = "rush" if "rushing" in it["pick"].lower() else "recv"
             out.append((it, name, kind, (self.rush if kind == "rush" else self.recv)[name]))
         return out
 
@@ -410,16 +410,17 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
-          # The 9.4-point net gap on UMass is the widest on the slate. Computed,
-          # not recalled: week 5 shipped five false superlatives and this is the
-          # check that exists because of them.
-          "the widest on the board":
-            lambda: max(abs(r["spread_gap"] - self.level) for r in self.calc.values())
-                    == abs(self.calc[("UMass Minutemen", "Buffalo Bulls")]["spread_gap"] - self.level),
+          # Colorado @ Oklahoma State is posted at 56.0, the highest of the nine
+          # games this card touches. The scope is the card, not the slate, and
+          # the predicate computes it over exactly the games the card names.
+          "the highest total of the nine games on this card":
+            lambda: max(self.calc[(self.game_of(it)["away_team"], self.game_of(it)["home_team"])]["book_total"]
+                        for sec in ("spreads", "props") for it in self.content.get(sec, []))
+                    == self.calc[("Colorado Buffaloes", "Oklahoma State Cowboys")]["book_total"],
         }
         seen = set()
         for sec in ("spreads", "totals", "props"):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 for src in [v for _, v in it["facts"]] + it["paras"]:
                     for sent in re.split(r'(?<=[.;:])\s+', src):
                         if not (re.search(self.SUP, sent, re.I) and re.search(self.SCOPE, sent, re.I)):
@@ -473,7 +474,7 @@ class QA:
         print("\n--- picks_log coverage ---")
         n = 0
         for sec, cat in (("spreads", "spread"), ("totals", "total"), ("props", "prop")):
-            for it in self.content[sec]:
+            for it in self.content.get(sec, []):
                 n += 1
                 m = re.search(r'([+-]?\d+(?:\.\d+)?)\s*$' if cat == "spread" else r'(\d+(?:\.\d+)?)',
                               it["pick"].split(" Rushing")[0].split(" Receiving")[0])

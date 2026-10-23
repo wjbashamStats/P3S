@@ -513,6 +513,35 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    honest move is to stop taking Overs in games between two top-30 defences
    regardless of what either measure says.
 
+28. **The depth chart disagrees with the production screens on about half the
+   board, and it is the better signal about next Saturday.** Week 8 put the
+   seven prop survivors through an ourlads depth chart pulled the same day and
+   three were not listed as starters: Kevin Roche Jr. listed 4th at tight end
+   for Georgia Tech while leading the whole board in targets (35 in 6 games),
+   Lee Beebe Jr. listed 2nd behind Turbo Richard -- the exact committee risk
+   the week 6 card named in print before he went for 31 yards -- and Miles
+   Coleman listed 2nd in the slot. All three came off, and the card shipped
+   four props instead of five.
+   The eight screens read PFF production, which is a record of what already
+   happened. A depth chart is a claim about what is about to happen. When they
+   disagree the depth chart wins, because the projection's whole premise is
+   that the player keeps his role.
+   Two bugs in check_card_conditions.py surfaced doing this and are fixed:
+   it took `name.split()[-1]` as the surname, so "Kevin Roche Jr." matched on
+   "Jr." and reported a 4th-string tight end as a 1st-string left guard; and
+   when a surname matched several rows it silently kept whichever was listed
+   first. It now matches the full name, falls back to surname-plus-initial,
+   and reports an ambiguous match as a failure rather than choosing. A checker
+   that quietly picks the wrong row is worse than no checker.
+
+29. **qa_card.py decided rushing from a capital R.** `"Rushing" in pick` was
+   how a prop was routed to the rushing or receiving PFF file, and week 8's
+   picks are written "Over 34.5 rushing yards". Dawson Pendergrass was checked
+   against his receiving line -- 30 yards, 8 targets -- instead of his 327
+   rushing yards, and every figure in the write-up was reported missing. Now
+   case-insensitive. Both qa_card.py and check_card_conditions.py also tolerate
+   a card that omits a whole category, which week 8 is the first to do.
+
 ---
 
 ## Running record (through week 7, 2026)
@@ -542,3 +571,18 @@ voids, and they are the one place the eight screens do real work. Totals have
 given back the +1.00u they held after week 6 and sit at -4.50u. Spreads remain
 the largest hole at -8.80u, but they have been the better half of the card for
 two straight weeks.
+
+## Week 8 card (built, ungraded)
+
+Nine picks: five spreads, four props, no totals. The owner called the totals
+off after week 7 went 0-5, and the category stays out until the agreement test
+is scored across every game of weeks 6 and 7 rather than the ten that were bet.
+
+The spreads are thin. The strongest agreement on the slate -- the weaker of
+the two measures, which is what selection ranks on -- is 4.9 points against 9.4
+last week, only 17 of 40 games had the two agreeing at all, and the fifth pick
+sits at 2.9. The widest raw net gap, 7.2, belongs to Tennessee, which is also
+on the card. That is in the card's own intro rather than hidden.
+
+Conditions were checked 21 hours before the first kickoff: all nine venues dry,
+nothing above 10 mph of wind, and all four prop players listed first string.
