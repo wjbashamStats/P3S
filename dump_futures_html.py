@@ -141,8 +141,13 @@ def main():
     keys = args.only.split(",") if args.only else list(PAGES)
 
     written, rejected, thin = [], [], []
+    # A Chromium already on the box can be used instead of a downloaded one by
+    # setting PLAYWRIGHT_CHROMIUM_PATH. Managed environments often ship a build
+    # that does not match the playwright package's expected revision, and the
+    # mismatch is an 'Executable doesn't exist' error rather than a fallback.
+    exe = os.environ.get("PLAYWRIGHT_CHROMIUM_PATH")
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(executable_path=exe) if exe else p.chromium.launch()
         page = browser.new_page()
         for key in keys:
             url = PAGES.get(key)

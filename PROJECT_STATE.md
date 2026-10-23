@@ -477,9 +477,45 @@ EDGE 250, DT 250 = 2,547 player-position rows.
    a 5-yard restatement on a line won by 7 would be the difference between a
    win and a loss.
 
+27. **Week 7 totals went 0-5 and the three Overs missed by 19, 25 and 20.5
+   points. The agreement test does not fix opponent-blindness.** Selection now
+   keeps only the games where the de-meaned model gap and the de-meaned points
+   check agree, ranked by the weaker of the two, and week 7 was the first full
+   card built that way. The totals went 0-5:
+
+       Over  43.0  Wisconsin @ UCLA         24 points   -19.0
+       Over  56.0  Miss State @ LSU         31 points   -25.0
+       Over  51.5  Nebraska @ Oregon        31 points   -20.5
+       Under 62.5  Okla State @ Houston     67 points    +4.5
+       Under 56.5  Georgia Tech @ Va Tech   58 points    +1.5
+
+   The two Unders lost by 4.5 and 1.5, which is noise. The three Overs are not
+   noise: 64.5 points of combined miss across three games whose model numbers
+   were 53.2, 63.6 and 59.6 against actual totals of 24, 31 and 31. Both
+   measures agreed on all three, which is the whole point of the test, and both
+   were wrong the same way.
+
+   The common thread is the one quirk 23 named. Wisconsin/UCLA carried an
+   average defensive Success Rate rank of 14.0, the strongest pair on the
+   slate, and the card argued the Over anyway because the points check -- which
+   pairs each offence against what the other side actually allows -- still read
+   52.7. It read 52.7 because neither defence had yet faced an offence like the
+   one across from it. Agreement between two measures that share the same blind
+   spot is not independent confirmation, and that is what this card has been
+   treating it as since week 6.
+
+   What this does NOT establish: n=5, and one card cannot condemn a method.
+   What it does establish is that the agreement test was sold as protection
+   against exactly this failure and did not provide it. Before week 8's totals
+   are selected, score the agreement test the way quirk 23 scored the residual
+   -- on every game of weeks 6 and 7, not the five that were bet -- and check
+   whether avg_def_success_rate_rank still predicts the miss. If it does, the
+   honest move is to stop taking Overs in games between two top-30 defences
+   regardless of what either measure says.
+
 ---
 
-## Running record (through week 6, 2026)
+## Running record (through week 7, 2026)
 
 ```
                  W- L- P   voids    units
@@ -488,17 +524,21 @@ week 3           7- 7- 1            -0.75
 week 4           5- 7- 1     1      -3.06
 week 5           7- 7- 0     1      -0.78
 week 6           7- 7- 1            -0.70
+week 7           6- 9- 0            -3.90
 ---------------------------------------------------
-spreads          8-16- 1            -9.60
-totals          12-10- 2            +1.00
-props           12-11- 0     2      -0.79
+spreads         11-18- 1            -8.80
+totals          12-15- 2            -4.50
+props           15-13- 0     2      +0.01
 ---------------------------------------------------
-season          32-37- 3     2      -9.39
+season          38-46-3      2     -13.29
 ```
 
-Spreads are where all of the money has gone: 8-16-1 is a 33% cover rate across
-five weeks, and at -9.60u they are more than the entire season's loss -- totals
-and props together are +0.21u. That is the same conclusion quirks 23 and 24
-reached from the 93-game test, now visible in the card results. Nothing in the
-spread model has shown an edge in five weeks of live picks or in the backtest,
-and the card should keep saying so.
+Week 7 moved every category. Spreads went 3-2 and gained 0.80u, their best week
+of the season, and props went 3-2 for the same. Totals went 0-5 and cost 5.50u,
+which is the whole of the week's loss and more.
+
+Props are now the only category at break-even, +0.01u across 28 picks and two
+voids, and they are the one place the eight screens do real work. Totals have
+given back the +1.00u they held after week 6 and sit at -4.50u. Spreads remain
+the largest hole at -8.80u, but they have been the better half of the card for
+two straight weeks.
