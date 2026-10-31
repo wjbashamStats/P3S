@@ -57,6 +57,12 @@ VENUES = {
     "Georgia Tech": (33.7725, -84.3928), "Auburn": (32.6025, -85.4892),
     "Oklahoma State": (36.1269, -97.0655), "Kansas": (38.9631, -95.2459),
     "Alabama": (33.2083, -87.5504),
+    # week 9
+    "Colorado": (40.0094, -105.2669), "Navy": (38.9851, -76.4875),
+    "Utah State": (41.7514, -111.8125), "Wake Forest": (36.1326, -80.2567),
+    "Fresno State": (36.8125, -119.7478), "Iowa State": (42.0140, -93.6358),
+    "Memphis": (35.1186, -89.9370), "Texas": (30.2837, -97.7324),
+    "Texas Tech": (33.5906, -101.8726),
 }
 
 # PFF team name -> ourlads slug, for the teams a prop can name
@@ -67,13 +73,31 @@ SLUGS = {
     "GA TECH": "georgia-tech", "INDIANA": "indiana", "BAYLOR": "baylor",
     "ALABAMA": "alabama", "KANSAS": "kansas", "COLORADO": "colorado",
     "BOSTON COL": "boston-college", "AUBURN": "auburn",
+    "MEMPHIS": "memphis", "TEXAS TECH": "texas-tech", "IOWA STATE": "iowa-state",
+    "TEXAS": "texas",
+    "TCU": "tcu", "NEBRASKA": "nebraska", "ARMY": "army",
 }
 
 WIND_WARN = 20          # mph: below this, passing and kicking are not meaningfully affected
 PRECIP_WARN = 50        # percent
 
 
-SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"}
+SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def normalize_name(full):
+    """A depth-chart or card name as 'First Last', however it was written.
+
+    ourlads served 'Kevin Roche Jr.' through week 8 and 'Roche Jr., Kevin' from
+    week 9, which silently turned every lookup into NOT ON THE CHART -- eight of
+    eight on the first week 9 run. The comma is the tell: everything before it is
+    the surname and any suffix, everything after is the given name.
+    """
+    full = " ".join(full.split())
+    if "," in full:
+        last, _, first = full.partition(",")
+        full = f"{first.strip()} {last.strip()}"
+    return " ".join(full.split())
 
 
 def surname(full):
@@ -84,8 +108,8 @@ def surname(full):
     listed 4th as a 1st-string left guard, which is the opposite of what this
     tool exists to do, so the suffix comes off before anything is compared.
     """
-    parts = [w for w in full.replace(",", " ").split() if w.strip()]
-    while len(parts) > 1 and parts[-1].lower().strip(".") in {s.strip(".") for s in SUFFIXES}:
+    parts = [w for w in normalize_name(full).split() if w.strip()]
+    while len(parts) > 1 and parts[-1].lower().strip(".") in SUFFIXES:
         parts.pop()
     return parts[-1] if parts else full
 
@@ -96,16 +120,18 @@ def match_player(name, rows):
     An exact full-name match wins outright. Failing that, a surname match is
     narrowed by first initial, because two players on one roster can share a
     surname. Anything still ambiguous is returned in full so the caller can
-    report it rather than silently pick one.
+    report it rather than silently pick one. Both sides are normalized first,
+    so the chart's name order does not matter.
     """
     off = [r for r in rows if r["side"] == "offense"]
-    exact = [r for r in off if r["name"].strip().lower() == name.strip().lower()]
+    want = normalize_name(name).lower()
+    exact = [r for r in off if normalize_name(r["name"]).lower() == want]
     if exact:
         return exact
-    ln, fi = surname(name).lower(), name.strip()[:1].lower()
+    ln, fi = surname(name).lower(), normalize_name(name)[:1].lower()
     by_last = [r for r in off if surname(r["name"]).lower() == ln]
     if len(by_last) > 1:
-        narrowed = [r for r in by_last if r["name"].strip()[:1].lower() == fi]
+        narrowed = [r for r in by_last if normalize_name(r["name"])[:1].lower() == fi]
         if narrowed:
             return narrowed
     return by_last
@@ -159,7 +185,8 @@ def check_starters(content, scratch):
             bad += 1
             continue
         row = hits[0]
-        alias = "" if row["name"].lower() == name.lower() else f"  (listed as {row['name']})"
+        alias = ("" if normalize_name(row["name"]).lower() == normalize_name(name).lower()
+                 else f"  (listed as {row['name']})")
         if row["depth_rank"] == "1":
             print(f"  ok   {name:22} {row['position']:8} 1st string, #{row['jersey']}{alias}")
         else:

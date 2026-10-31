@@ -675,3 +675,39 @@ Two of the losses are worth keeping.
    that screen 10 catches exactly one of the three, so nobody later reads it as
    having covered all of them. It found the double-reporting bug above on its
    first run.
+
+35. **The diversions page rounds a half-rank up for display and the card copied
+   it.** Four of the ten SP+ ranks quoted on the week 9 card were ties, and
+   three were written with the wrong number because the page shows 53.5 as
+   "#54": Notre Dame 3.5 written as 4th, Wake Forest 25.5 as 26th, Virginia
+   53.5 as 54th. The tie checker caught all three, and only because it compares
+   against the raw JSON rather than the rendered page. Read ranks from
+   diversions_2026wk<N>.json, not from the screenshot, and expect roughly one
+   SP+ rank in three to be a half.
+
+## Week 9 card (built, ungraded)
+
+Ten picks: five spreads, five props, no totals for the second week running.
+All 139 QA checks pass.
+
+The spreads are a better board than week 8. The strongest agreement is 10.2
+points against 4.9 last week, 20 of 45 games had the two measures agreeing, and
+all five positions take points rather than lay them, so the ATS exclusion could
+not trigger.
+
+Props came from 321 priced rows, 22 survivors, five picked. All five are Overs,
+which screens 9 and 10 now guarantee, and all five are listed first string.
+
+Conditions were checked 15 hours out. Nine venues are fine; Fresno State has
+light rain at 79 percent with almost no wind, which was folded into that pick's
+write-up as supporting rather than hidden -- rain costs the passing offence more
+than the defence, and Fresno is the side taking points and the side that
+defends.
+
+36. **ourlads changed its name format and the depth-chart check failed closed.**
+   From week 9 the chart serves "Hawkins, Caleb" where it served "Caleb Hawkins",
+   and every lookup returned NOT ON THE CHART -- eight of eight on the first run.
+   It failed safe, unlike the week 8 suffix bug, but it would have emptied the
+   prop card. normalize_name now handles both orders, and
+   test_depth_chart_names.py pins both formats plus the suffix cases so a third
+   change is caught by a test rather than on a Saturday morning.

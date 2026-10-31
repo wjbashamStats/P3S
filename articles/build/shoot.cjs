@@ -2,11 +2,11 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const path = require('path');
 const PAGE_PATH = path.join(__dirname, 'diversions_page.html');
 const GAMES = [
-  ['Virginia Tech Hokies',    'Virginia_Tech_at_Clemson'],
-  ['Bowling Green',           'Bowling_Green_at_Buffalo'],
-  ['Oklahoma Sooners',        'Oklahoma_at_Mississippi_State'],
-  ['Tennessee Volunteers',    'Tennessee_at_South_Carolina'],
-  ['Western Michigan',        'Western_Michigan_at_Toledo'],
+  ['Kansas State',       'Kansas_State_at_Colorado'],
+  ['Notre Dame',         'Notre_Dame_at_Navy'],
+  ['Colorado State',     'Colorado_State_at_Utah_State'],
+  ['Virginia Cavaliers', 'Virginia_at_Wake_Forest'],
+  ['Oregon State',       'Oregon_State_at_Fresno_State'],
 ];
 const SECTION_RANGES = [
   ['Five Factors', 'Power Ratings', 'context'],
