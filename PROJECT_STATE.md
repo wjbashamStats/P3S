@@ -575,15 +575,22 @@ Spreads went 3-2 for the third straight week at or above even, and are now
 Graded off ESPN final scores and box scores because the PFF drop had not landed.
 The week 9 team grades have since arrived and all nine games reconcile against
 the PFF points delta exactly, both directions, so the spread grades are
-confirmed. The four prop figures came from ESPN box scores and still want a
-look against the PFF player drop when it lands, though receiving and rushing
-yards for non-quarterbacks agree between the two sources and no pick here is a
-quarterback.
+confirmed. The four prop figures came from ESPN box scores and have since been checked
+against the week 9 PFF drop: all four match to the yard. Week 8 is fully
+confirmed from both sources.
 
-That cross-check is worth keeping as a method: ESPN finals are available the
-same night and reconcile with PFF to the point, so a card no longer has to wait
-a week to be graded. Grade from ESPN, confirm against the delta when the drop
-arrives.
+32. **ESPN is a usable grading source on the night, and in one way a better
+   one.** Week 8 was graded from ESPN finals and box scores before the PFF drop
+   landed, and when the drop arrived all nine games and all four prop figures
+   reconciled exactly. A card no longer has to wait a week: grade from ESPN,
+   confirm against the delta when the drop arrives.
+   ESPN is also the better source where a team plays twice between drops, which
+   quirk 25 flagged and which bit here. Baylor played twice, so Dawson
+   Pendergrass's PFF delta covers two games and cannot isolate the one that was
+   bet; ESPN gives the Kansas game directly. The delta of 4 yards happens to
+   equal the ESPN figure, meaning he gained nothing in the other game, but that
+   was luck rather than method. Per-game box scores do not have this problem at
+   all.
 
   spreads 3-2, +0.80u
     Virginia Tech +2.5    won 20-16 outright       WIN
