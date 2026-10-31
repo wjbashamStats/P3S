@@ -544,7 +544,7 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ---
 
-## Running record (through week 7, 2026)
+## Running record (through week 8, 2026)
 
 ```
                  W- L- P   voids    units
@@ -554,35 +554,63 @@ week 4           5- 7- 1     1      -3.06
 week 5           7- 7- 0     1      -0.78
 week 6           7- 7- 1            -0.70
 week 7           6- 9- 0            -3.90
+week 8           5- 4- 0            +0.60
 ---------------------------------------------------
-spreads         11-18- 1            -8.80
+spreads         14-20- 1            -8.00
 totals          12-15- 2            -4.50
-props           15-13- 0     2      +0.01
+props           17-15- 0     2      -0.19
 ---------------------------------------------------
-season          38-46-3      2     -13.29
+season          43-50-3      2     -12.69
 ```
 
-Week 7 moved every category. Spreads went 3-2 and gained 0.80u, their best week
-of the season, and props went 3-2 for the same. Totals went 0-5 and cost 5.50u,
-which is the whole of the week's loss and more.
+Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
+the first week with no totals on the card, which is worth stating plainly rather
+than claiming as proof of anything at n=1.
 
-Props are now the only category at break-even, +0.01u across 28 picks and two
-voids, and they are the one place the eight screens do real work. Totals have
-given back the +1.00u they held after week 6 and sit at -4.50u. Spreads remain
-the largest hole at -8.80u, but they have been the better half of the card for
-two straight weeks.
+Spreads went 3-2 for the third straight week at or above even, and are now
+14-20-1. Props went 2-2. Totals sat out and the category is unchanged at
+12-15-2.
+## Week 8 result (graded from ESPN, 2026-10-31)
 
-## Week 8 card (built, ungraded)
+Graded off ESPN final scores and box scores rather than the PFF delta, because
+the week 9 PFF drop has not landed and the games are a week old. Receiving and
+rushing yards for non-quarterbacks agree between the two sources, so these
+should stand, but they are worth re-checking against the drop when it arrives
+-- the one place the sources disagree is quarterback rushing, and no pick here
+is one.
 
-Nine picks: five spreads, four props, no totals. The owner called the totals
-off after week 7 went 0-5, and the category stays out until the agreement test
-is scored across every game of weeks 6 and 7 rather than the ten that were bet.
+  spreads 3-2, +0.80u
+    Virginia Tech +2.5    won 20-16 outright       WIN
+    Buffalo -3.0          won 31-24                WIN
+    Toledo -3.0           won 45-38                WIN
+    Mississippi State +3.0 lost 15-23              LOSS
+    Tennessee +2.5        lost 24-27               LOSS   (half a point short)
 
-The spreads are thin. The strongest agreement on the slate -- the weaker of
-the two measures, which is what selection ranks on -- is 4.9 points against 9.4
-last week, only 17 of 40 games had the two agreeing at all, and the fifth pick
-sits at 2.9. The widest raw net gap, 7.2, belongs to Tennessee, which is also
-on the card. That is in the card's own intro rather than hidden.
+  props 2-2, -0.20u
+    Eugene Wilson III Over 26.5    37 on 4 catches    WIN
+    Caleb Hawkins Over 23.5        72 on 5 catches    WIN
+    Rico Scott Under 55.5          156 on 6 catches   LOSS
+    Dawson Pendergrass Over 34.5   4 on 4 carries     LOSS
 
-Conditions were checked 21 hours before the first kickoff: all nine venues dry,
-nothing above 10 mph of wind, and all four prop players listed first string.
+Two of the losses are worth keeping.
+
+30. **A high average depth of target cuts both ways, and the Rico Scott write-up
+   argued only one of them.** The Under at 55.5 was taken on a 39.7 per-game
+   average and a season long of 32, and the card reasoned that a 13.6-yard
+   average depth of target meant he was being thrown at downfield without
+   converting. He caught 6 for 156 with a 48-yard long. The same deep usage that
+   produced a low per-game average is what produces a 156-yard game, and an
+   Under on a boom-bust deep receiver is selling exactly that tail. The screens
+   have no test for this: they check that production agrees with the side by
+   20%, which it did. A receiving Under on a player whose average depth of
+   target is above about 12 should be treated as a different animal from an
+   Under on a possession receiver, and the card should either screen for it or
+   say so.
+
+31. **The depth chart confirms a role, not a workload.** Dawson Pendergrass was
+   checked against the ourlads chart the morning of the game, came back RB1,
+   and carried it four times after averaging 15.0 a game. The check that saved
+   three picks this week (quirk 28) is a floor, not a guarantee: it catches a
+   player who has lost his job and cannot see a game plan, an early deficit or
+   a coach who simply used someone else. Volume props carry that risk whatever
+   the chart says.
