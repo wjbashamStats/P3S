@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the nine prop screens against a week's committed props file. From the repo root:
+"""Run the ten prop screens against a week's committed props file. From the repo root:
 
     python3 articles/build/screen_props.py --week 5
 
@@ -16,6 +16,9 @@ The screens, in the order they were added:
   7. at least two books posting the number
   8. availability: the player's game count is level with his own team's maximum
   9. the side is an Over, unless --allow-unders is passed
+ 10. a receiving Under needs an average depth of target below --max-under-adot
+     (default 12.0). This only bites when screen 9 is lifted, since otherwise
+     no Under gets this far.
 
 Screen 9 needs its reasoning on the record, because the obvious version of it is
 wrong. After Rico Scott went for 156 against a 55.5 Under in week 8, the proposal
@@ -44,6 +47,15 @@ The screens treated the two identically. This one does not.
 Pass --allow-unders to score them anyway; they are still listed under
 --show-near-misses as a one-screen failure either way.
 
+Screen 10 is the aDOT rule, kept at the owner's instruction after the evidence
+above was put to him. It is the narrower claim and it is the one the week 8 loss
+actually fits: Rico Scott's 13.8 would have been caught by it. On the season's
+record it removes one of the three losing receiving Unders and none of the
+winning Overs, so it costs nothing and catches something. With screen 9 on by
+default it is dormant; with --allow-unders it is the thing standing between the
+card and another Scott. Both are reported separately in the near-miss list so
+their effects can be told apart later.
+
 Quarterback rushing props are dropped before any of that. PFF excludes sack yardage
 from rushing and official college stats charge it to the quarterback, so the model is
 projecting a stat the book is not pricing (PROJECT_STATE, and confirmed every week:
@@ -65,6 +77,9 @@ def main():
     ap.add_argument("--json-out", default=None)
     ap.add_argument("--allow-unders", action="store_true",
                     help="keep yardage Unders, which screen 9 drops by default")
+    ap.add_argument("--max-under-adot", type=float, default=12.0,
+                    help="screen 10: the highest average depth of target a receiving "
+                         "Under may carry (default 12.0)")
     args = ap.parse_args()
 
     P = json.load(open(os.path.join(ROOT, f"props_{args.season}wk{args.week}.json")))["games"]
@@ -114,6 +129,12 @@ def main():
                     fails.append(f"avail {gp}<{team_games[src['team_name']]}")
                 if t.weekday() != 5: fails.append("not Saturday")
                 if e < 0 and not args.allow_unders: fails.append("under")
+                # screen 10 only when screen 9 is lifted, so a blocked row reports
+                # the one reason that is actually deciding it rather than both
+                if e < 0 and stat == "rec_yds" and args.allow_unders:
+                    a = src.get("avg_depth_of_target")
+                    if a not in (None, "") and float(a) >= args.max_under_adot:
+                        fails.append(f"under aDOT {float(a):.1f}>={args.max_under_adot:g}")
                 rows.append(dict(name=p["name"], pos=p["position"], team=src["team_name"], stat=stat,
                                  line=line, proj=m["projection"], edge=e, ypg=round(ypg, 1),
                                  prod_edge=round(prod_edge, 1), vol=vol, gp=gp,
@@ -123,9 +144,12 @@ def main():
 
     surv = [r for r in rows if not r["fails"]]
     n_under = sum(1 for r in rows if r["fails"] == ["under"])
-    print(f"{len(rows)} candidate rows (QB rushing already dropped) -> {len(surv)} survive all nine screens")
+    n_adot = sum(1 for r in rows if len(r["fails"]) == 1 and r["fails"][0].startswith("under aDOT"))
+    print(f"{len(rows)} candidate rows (QB rushing already dropped) -> {len(surv)} survive all ten screens")
     if n_under and not args.allow_unders:
         print(f"  (screen 9 dropped {n_under} row(s) that passed everything else and were Unders)")
+    if n_adot:
+        print(f"  (screen 10 dropped {n_adot} receiving Under(s) on average depth of target alone)")
     print()
     for r in sorted(surv, key=lambda r: -abs(r["edge"])):
         side = "Over" if r["edge"] > 0 else "Under"

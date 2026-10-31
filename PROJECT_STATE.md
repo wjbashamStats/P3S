@@ -658,3 +658,20 @@ Two of the losses are worth keeping.
    Had screen 9 been in place all season the props would read 15-10 and two
    voids at +3.46u instead of 17-15 at -0.19u, and the season would be -9.04u
    rather than -12.69u. That is a counterfactual on seven picks, not a result.
+
+34. **Screen 10, the aDOT rule, kept at the owner's instruction.** The evidence
+   in quirk 33 was put to him and he asked for it anyway, which is his call to
+   make: it is the narrower claim, it catches the one loss it was designed for
+   (Rico Scott at 13.8), and on the season's record it removes no winning Over,
+   so it costs nothing. A receiving Under now needs an average depth of target
+   below --max-under-adot, default 12.0.
+   It is scoped to fire only when --allow-unders lifts screen 9. Without that
+   it would double-report: a high-aDOT Under would fail both screens and show
+   up in the near-miss list as a two-screen failure, which hides which rule is
+   actually deciding it and breaks the per-screen counters.
+   test_prop_screens.py pins both screens, because neither could be seen
+   working on a live board -- no receiving Under reached them on the week 8
+   slate. The three Unders the card bet are the fixtures and the test asserts
+   that screen 10 catches exactly one of the three, so nobody later reads it as
+   having covered all of them. It found the double-reporting bug above on its
+   first run.
