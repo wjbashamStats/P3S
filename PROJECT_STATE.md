@@ -572,12 +572,18 @@ Spreads went 3-2 for the third straight week at or above even, and are now
 12-15-2.
 ## Week 8 result (graded from ESPN, 2026-10-31)
 
-Graded off ESPN final scores and box scores rather than the PFF delta, because
-the week 9 PFF drop has not landed and the games are a week old. Receiving and
-rushing yards for non-quarterbacks agree between the two sources, so these
-should stand, but they are worth re-checking against the drop when it arrives
--- the one place the sources disagree is quarterback rushing, and no pick here
-is one.
+Graded off ESPN final scores and box scores because the PFF drop had not landed.
+The week 9 team grades have since arrived and all nine games reconcile against
+the PFF points delta exactly, both directions, so the spread grades are
+confirmed. The four prop figures came from ESPN box scores and still want a
+look against the PFF player drop when it lands, though receiving and rushing
+yards for non-quarterbacks agree between the two sources and no pick here is a
+quarterback.
+
+That cross-check is worth keeping as a method: ESPN finals are available the
+same night and reconcile with PFF to the point, so a card no longer has to wait
+a week to be graded. Grade from ESPN, confirm against the delta when the drop
+arrives.
 
   spreads 3-2, +0.80u
     Virginia Tech +2.5    won 20-16 outright       WIN
