@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the eight prop screens against a week's committed props file. From the repo root:
+"""Run the nine prop screens against a week's committed props file. From the repo root:
 
     python3 articles/build/screen_props.py --week 5
 
@@ -15,6 +15,34 @@ The screens, in the order they were added:
   6. |spread| < 28 and both teams rated
   7. at least two books posting the number
   8. availability: the player's game count is level with his own team's maximum
+  9. the side is an Over, unless --allow-unders is passed
+
+Screen 9 needs its reasoning on the record, because the obvious version of it is
+wrong. After Rico Scott went for 156 against a 55.5 Under in week 8, the proposal
+was to exclude receiving Unders on players with a high average depth of target,
+the thought being that a deep threat carries the tail an Under is selling. The
+graded props say otherwise. The three receiving-yard Unders this season all lost
+and their average depths of target were 7.0, 5.9 and 13.8 -- two possession
+receivers and one deep threat -- while the Overs that won include 17.0, 15.5 and
+12.1. A high average depth of target goes with winning Overs, not losing Unders,
+and an aDOT rule would have caught one of the three losers and no others.
+
+What separates them is direction, not depth:
+
+    Overs     15-10 and two voids   +3.46u
+    Unders     2-5                  -3.65u
+
+Props as a whole are -0.19u, so the Overs have carried a category the Unders have
+sunk. n=7 is thin and this is reported as such, but the mechanism is not thin.
+Screen 2 asks that the player's own production agree with the side by 20%. On an
+Over that means he has been beating the number, which is a claim about him. On an
+Under it means he has been falling short of it, which is a claim the market can
+read just as easily -- and the two sides are not symmetric in payoff shape: an
+Over's downside stops at zero while an Under's downside is a 48-yard catch away.
+The screens treated the two identically. This one does not.
+
+Pass --allow-unders to score them anyway; they are still listed under
+--show-near-misses as a one-screen failure either way.
 
 Quarterback rushing props are dropped before any of that. PFF excludes sack yardage
 from rushing and official college stats charge it to the quarterback, so the model is
@@ -35,6 +63,8 @@ def main():
     ap.add_argument("--show-near-misses", action="store_true",
                     help="also list rows that fail exactly one screen")
     ap.add_argument("--json-out", default=None)
+    ap.add_argument("--allow-unders", action="store_true",
+                    help="keep yardage Unders, which screen 9 drops by default")
     args = ap.parse_args()
 
     P = json.load(open(os.path.join(ROOT, f"props_{args.season}wk{args.week}.json")))["games"]
@@ -83,13 +113,20 @@ def main():
                 if gp < team_games[src["team_name"]]:
                     fails.append(f"avail {gp}<{team_games[src['team_name']]}")
                 if t.weekday() != 5: fails.append("not Saturday")
+                if e < 0 and not args.allow_unders: fails.append("under")
                 rows.append(dict(name=p["name"], pos=p["position"], team=src["team_name"], stat=stat,
                                  line=line, proj=m["projection"], edge=e, ypg=round(ypg, 1),
                                  prod_edge=round(prod_edge, 1), vol=vol, gp=gp,
+                                 adot=(float(src["avg_depth_of_target"]) if stat == "rec_yds"
+                                       and src.get("avg_depth_of_target") else None),
                                  game=f"{g['away_team']} @ {g['home_team']}", fails=fails))
 
     surv = [r for r in rows if not r["fails"]]
-    print(f"{len(rows)} candidate rows (QB rushing already dropped) -> {len(surv)} survive all eight screens\n")
+    n_under = sum(1 for r in rows if r["fails"] == ["under"])
+    print(f"{len(rows)} candidate rows (QB rushing already dropped) -> {len(surv)} survive all nine screens")
+    if n_under and not args.allow_unders:
+        print(f"  (screen 9 dropped {n_under} row(s) that passed everything else and were Unders)")
+    print()
     for r in sorted(surv, key=lambda r: -abs(r["edge"])):
         side = "Over" if r["edge"] > 0 else "Under"
         print(f"{abs(r['edge']):5.1f}% {side:<5} {r['name']:<22}{r['pos']:>3} {r['stat']:<8} "

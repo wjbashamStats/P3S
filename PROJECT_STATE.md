@@ -627,3 +627,34 @@ Two of the losses are worth keeping.
    player who has lost his job and cannot see a game plan, an early deficit or
    a coach who simply used someone else. Volume props carry that risk whatever
    the chart says.
+
+33. **The aDOT screen was wrong and the Under screen is what replaced it.**
+   After Rico Scott went for 156 against a 55.5 Under (quirk 30), the proposed
+   fix was to exclude receiving Unders on players with a high average depth of
+   target, on the theory that a deep threat carries the tail an Under sells.
+   Checked against the graded props, it does not hold. The three receiving-yard
+   Unders this season all lost, and their average depths of target were 7.0,
+   5.9 and 13.8 -- two possession receivers and one deep threat -- while the
+   Overs that won include 17.0, 15.5 and 12.1. High aDOT goes with winning
+   Overs. The rule would have caught one of the three losers and nothing else.
+
+   What separates them is direction:
+
+       Overs     15-10 and two voids   +3.46u over 27 picks
+       Unders     2-5                  -3.65u over  7 picks
+
+   Props are -0.19u overall, so the Overs have carried a category the Unders
+   sank. Screen 9 now drops yardage Unders by default, with --allow-unders to
+   keep them.
+
+   n=7 is thin and the card should say so, but the mechanism is not. Screen 2
+   requires the player's own production to agree with the side by 20%. On an
+   Over that says he has been beating the number, a claim about the player. On
+   an Under it says he has been falling short of it, which the market reads as
+   easily as we do. The payoffs are not symmetric either: an Over's downside
+   stops at zero, an Under's is one long catch away from gone. The screens had
+   been treating the two sides identically.
+
+   Had screen 9 been in place all season the props would read 15-10 and two
+   voids at +3.46u instead of 17-15 at -0.19u, and the season would be -9.04u
+   rather than -12.69u. That is a counterfactual on seven picks, not a result.
