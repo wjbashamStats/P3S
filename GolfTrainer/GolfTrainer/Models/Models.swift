@@ -16,6 +16,9 @@ final class PracticeSession {
     @Relationship(deleteRule: .cascade, inverse: \DrillResult.session)
     var drills: [DrillResult] = []
 
+    @Relationship(deleteRule: .nullify, inverse: \SwingVideo.session)
+    var swings: [SwingVideo] = []
+
     init(date: Date = .now, category: PracticeCategory) {
         self.date = date
         self.categoryRaw = category.rawValue

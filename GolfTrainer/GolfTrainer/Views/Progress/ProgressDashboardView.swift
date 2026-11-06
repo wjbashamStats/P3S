@@ -28,6 +28,8 @@ struct ProgressDashboardView: View {
     @Query(sort: \PracticeSession.date) private var sessions: [PracticeSession]
     @Query(sort: \Round.date) private var rounds: [Round]
     @Query(sort: \HandicapEntry.date) private var handicaps: [HandicapEntry]
+    @Query private var swings: [SwingVideo]
+    @Query(sort: \Lesson.date) private var lessons: [Lesson]
     @State private var scope: ProgressScope = .overall
 
     var body: some View {
@@ -41,7 +43,8 @@ struct ProgressDashboardView: View {
 
                     switch scope {
                     case .overall:
-                        OverallProgressView(sessions: sessions, rounds: rounds, handicaps: handicaps)
+                        OverallProgressView(sessions: sessions, rounds: rounds, handicaps: handicaps,
+                                            swings: swings, lessons: lessons)
                     case .rounds:
                         RoundsProgressView(rounds: rounds, handicaps: handicaps)
                     case .range, .shortGame, .putting:
@@ -64,6 +67,8 @@ struct OverallProgressView: View {
     let sessions: [PracticeSession]
     let rounds: [Round]
     let handicaps: [HandicapEntry]
+    let swings: [SwingVideo]
+    let lessons: [Lesson]
 
     private var entries: [PracticeEntry] {
         sessions.map { PracticeEntry(date: $0.date, category: $0.category, minutes: $0.durationMinutes) }
@@ -86,6 +91,13 @@ struct OverallProgressView: View {
                          value: ProgressStats.average(Array(scores18.suffix(5)))
                             .map { $0.formatted(.number.precision(.fractionLength(1))) } ?? "—",
                          caption: "18-hole rounds", tint: .blue)
+                StatTile(title: "Swings (30 days)",
+                         value: "\(swings.filter { $0.date > .now.addingTimeInterval(-30 * 86_400) }.count)",
+                         caption: "\(swings.count) total", tint: .purple)
+                StatTile(title: "Lessons",
+                         value: "\(lessons.count)",
+                         caption: lessons.last.map { "Last: \($0.date.formatted(date: .abbreviated, time: .omitted))" },
+                         tint: .purple)
             }
 
             ChartCard(title: "Practice minutes per week") {

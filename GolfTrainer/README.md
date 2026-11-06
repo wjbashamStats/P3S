@@ -3,6 +3,7 @@
 A SwiftUI and SwiftData iPhone app for logging practice and tracking progress.
 
 - **Range, Short Game and Putting session loggers.** Each has a built-in drill library and supports custom drills. There are large Make / Miss / Undo buttons for logging on the range, a session timer, a rating and notes.
+- **Swing tracking and coach integration.** Record swings, or import them from Photos or Files. Coaching apps can share videos and links straight into the app. Review swings in slow motion (0.1×–1×) and frame by frame, draw lines with angle readouts, compare two swings side by side, and tag swings by club and camera angle. Log lessons (coach, feedback, assigned drills, next lesson) and attach swings to them. Send a swing to your coach through the share sheet.
 - **Rounds and TheGrint.** You can add rounds yourself or import them from a CSV export. Your handicap index is tracked over time.
 - **Progress tracking.** There is an Overall view (practice minutes per week, practice mix, streak, handicap, skill trends), one view per category (a chart for each drill against its goal, with a moving average) and a Rounds view (score, handicap, putts, GIR, fairways, up-and-down %).
 
@@ -17,7 +18,28 @@ xcodegen            # creates GolfTrainer.xcodeproj from project.yml
 open GolfTrainer.xcodeproj
 ```
 
-In Xcode, select the **GolfTrainer** target and go to *Signing & Capabilities*. Choose your Team, and change the bundle ID (`com.example.golftrainer.app`) to one of your own. Then pick your iPhone and press Run. Tests run with ⌘U.
+In Xcode, set your signing Team on **both** the GolfTrainer and GolfTrainerShare targets. Change the bundle IDs and the App Group to your own (see *Swing coach integration* below). Then pick your iPhone and press Run. Tests run with ⌘U.
+
+The extension's bundle ID must start with the app's bundle ID (for example `…app.share`).
+
+## Swing coach integration
+
+As far as I know, the popular coaching apps (V1 Golf, CoachNow, Skillest, Sportsbox AI, Hudl Technique and others) don't offer public APIs. So the integration goes through the iOS **share sheet**, which they all support:
+
+- **Coach app → Golf Trainer.** In your coaching app (or Photos or Files), tap **Share**, then **Golf Trainer**. Golf Trainer may be under *More* the first time. A small form asks for the club, camera angle, source app and a note.
+  - A shared **video** is saved with full slow-motion and drawing tools.
+  - A shared **link**, or text containing a link (e.g. a lesson or voice-over), is saved as a swing that opens back in the coach app.
+  - Items show up in the Swing tab under *New from share sheet* the next time you open Golf Trainer.
+- **Golf Trainer → coach.** In any swing, tap *Send to Coach / Share*. This sends the video to your coaching app (if it accepts videos), or to Messages, Mail or AirDrop.
+- **Lessons.** On Swing → Lessons, record the coach, format (in person, or the app), feedback, assigned drills (one per line), the lesson link, and the next lesson date. Attach the swings that go with each lesson.
+
+**App Group setup (required for the share extension):** the extension passes files to the app through a shared App Group container. Replace `group.com.example.golftrainer` with your own ID (for example `group.<your bundle id>`) in **both** places, then run `xcodegen` again:
+1. `project.yml` (both `entitlements` blocks)
+2. `GolfTrainer/Shared/SharedInbox.swift` (`appGroupID`)
+
+With automatic signing, Xcode registers the group for you. Without an App Group, everything else still works, but the share extension shows an error when you save.
+
+**Tip:** for the smoothest slow motion, record in **Slo-mo** (120/240 fps) with the iPhone Camera app and import the clip from Photos. The in-app recorder records at normal frame rate.
 
 ## TheGrint integration
 
@@ -38,19 +60,23 @@ If TheGrint's export uses different column names, add them to the `aliases` list
 ```
 GolfTrainer/
   App/            App entry point and tab bar
-  Models/         SwiftData models, enums, drill library
-  Services/       CSV importer, progress statistics (pure functions, unit tested)
+  Models/         SwiftData models (practice, rounds, swings, lessons), drill library
+  Shared/         Code shared with the share extension (inbox format, clubs, angles)
+  Services/       CSV importer, progress stats, swing video storage and thumbnails
   Views/
     Practice/     Session lists, live session logger, drill picker, drill library
     Rounds/       Round list and editor, handicap editor, TheGrint import
+    Swing/        Swing library, player, line drawing, compare, lessons, capture/import
     Progress/     Overall, category and rounds dashboards (Swift Charts)
     Components/   Shared UI bits
+GolfTrainerShare/ Share extension ("Save to Golf Trainer")
 GolfTrainerTests/ XCTest unit tests
 ```
 
 ## Ideas for next steps
 
 - Apple Watch companion for tapping Make / Miss without your phone
+- High-frame-rate in-app capture (AVCaptureSession at 240 fps) and on-device pose tracking (Vision) for automatic checkpoints
 - iCloud sync (SwiftData + CloudKit)
 - Practice plans: suggest drills from weak round stats (e.g. low up-and-down % → short game drills)
 - Shot-by-shot round entry for strokes-gained style stats

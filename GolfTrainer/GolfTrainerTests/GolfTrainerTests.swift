@@ -137,3 +137,65 @@ final class ProgressStatsTests: XCTestCase {
         XCTAssertEqual(d.successes, 0)
     }
 }
+
+final class SharedInboxTests: XCTestCase {
+    var dir: URL!
+
+    override func setUpWithError() throws {
+        dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+    }
+
+    override func tearDownWithError() throws {
+        try? FileManager.default.removeItem(at: dir)
+    }
+
+    func testRoundTripWithVideo() throws {
+        let inbox = SharedInbox(directory: dir)
+        let src = FileManager.default.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).MOV")
+        try Data("fake video".utf8).write(to: src)
+        defer { try? FileManager.default.removeItem(at: src) }
+
+        let saved = try inbox.add(SharedSwingItem(club: "7 Iron", angle: "faceOn", note: "Coach: shallow it", sourceApp: "V1 Golf"),
+                                  copyingVideoFrom: src)
+        XCTAssertEqual(saved.videoFileName, "\(saved.id.uuidString).mov")
+
+        let pending = inbox.pending()
+        XCTAssertEqual(pending.count, 1)
+        XCTAssertEqual(pending[0].club, "7 Iron")
+        XCTAssertEqual(pending[0].sourceApp, "V1 Golf")
+        let video = try XCTUnwrap(inbox.videoURL(for: pending[0]))
+        XCTAssertEqual(try Data(contentsOf: video), Data("fake video".utf8))
+
+        inbox.remove(pending[0])
+        XCTAssertTrue(inbox.pending().isEmpty)
+        XCTAssertFalse(FileManager.default.fileExists(atPath: video.path))
+    }
+
+    func testLinkOnlyAndOrdering() throws {
+        let inbox = SharedInbox(directory: dir)
+        try inbox.add(SharedSwingItem(date: Date(timeIntervalSince1970: 200), link: "https://example.com/b"), copyingVideoFrom: nil)
+        try inbox.add(SharedSwingItem(date: Date(timeIntervalSince1970: 100), link: "https://example.com/a"), copyingVideoFrom: nil)
+        XCTAssertEqual(inbox.pending().map(\.link), ["https://example.com/a", "https://example.com/b"])
+        XCTAssertNil(inbox.pending()[0].videoFileName)
+    }
+
+    func testEmptyWhenFolderMissing() {
+        XCTAssertTrue(SharedInbox(directory: dir).pending().isEmpty)
+    }
+}
+
+final class SwingLineTests: XCTestCase {
+    func testAngles() {
+        // Horizontal
+        XCTAssertEqual(SwingLine(start: CGPoint(x: 0.1, y: 0.5), end: CGPoint(x: 0.9, y: 0.5)).angleDegrees(aspectRatio: 1), 0, accuracy: 0.001)
+        // Vertical
+        XCTAssertEqual(SwingLine(start: CGPoint(x: 0.5, y: 0.9), end: CGPoint(x: 0.5, y: 0.1)).angleDegrees(aspectRatio: 1), 90, accuracy: 0.001)
+        // 45° up and to the right on a square frame
+        XCTAssertEqual(SwingLine(start: CGPoint(x: 0.2, y: 0.8), end: CGPoint(x: 0.8, y: 0.2)).angleDegrees(aspectRatio: 1), 45, accuracy: 0.001)
+        // The same normalised line on a portrait (9:16) video is steeper in real pixels.
+        XCTAssertEqual(SwingLine(start: CGPoint(x: 0.2, y: 0.8), end: CGPoint(x: 0.8, y: 0.2)).angleDegrees(aspectRatio: 9.0 / 16.0),
+                       atan2(0.6, 0.6 * 9.0 / 16.0) * 180 / .pi, accuracy: 0.001)
+        // The direction drawn doesn't matter.
+        XCTAssertEqual(SwingLine(start: CGPoint(x: 0.8, y: 0.2), end: CGPoint(x: 0.2, y: 0.8)).angleDegrees(aspectRatio: 1), 45, accuracy: 0.001)
+    }
+}

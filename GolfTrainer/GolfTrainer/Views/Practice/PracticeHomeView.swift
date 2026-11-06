@@ -171,6 +171,17 @@ struct SessionDetailView: View {
             if !session.notes.isEmpty {
                 Section("Notes") { Text(session.notes) }
             }
+            if !session.swings.isEmpty {
+                Section("Swings") {
+                    ForEach(session.swings.sorted { $0.date < $1.date }) { swing in
+                        NavigationLink {
+                            SwingDetailView(swing: swing)
+                        } label: {
+                            SwingRow(swing: swing)
+                        }
+                    }
+                }
+            }
             Section {
                 Button("Delete Session", role: .destructive) { confirmDelete = true }
             }
