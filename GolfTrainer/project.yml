@@ -1,0 +1,42 @@
+name: GolfTrainer
+options:
+  bundleIdPrefix: com.example.golftrainer
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  GolfTrainer:
+    type: application
+    platform: iOS
+    sources: [GolfTrainer]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.golftrainer.app
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Golf Trainer
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: YES
+  GolfTrainerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [GolfTrainerTests]
+    dependencies:
+      - target: GolfTrainer
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  GolfTrainer:
+    build:
+      targets:
+        GolfTrainer: all
+        GolfTrainerTests: [test]
+    test:
+      targets: [GolfTrainerTests]
