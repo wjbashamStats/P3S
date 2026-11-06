@@ -51,6 +51,12 @@ final class SwingVideo {
     /// Set for items that arrived through the share sheet and haven't been reviewed yet.
     var needsReview: Bool = false
     var linesData: Data?
+    /// Screenshots / stills in Documents/Swings/Images (e.g. from your swing analysis app).
+    var imageFileNames: [String] = []
+    /// Feedback pasted back from the swing analyzer chat (or a coach).
+    var analysis: String = ""
+    var analysisDate: Date?
+    var checkpointsData: Data?
 
     var lesson: Lesson?
     var session: PracticeSession?
@@ -77,7 +83,14 @@ final class SwingVideo {
         set { linesData = newValue.isEmpty ? nil : try? JSONEncoder().encode(newValue) }
     }
 
+    var checkpoints: [SwingCheckpoint] {
+        get { checkpointsData.flatMap { try? JSONDecoder().decode([SwingCheckpoint].self, from: $0) } ?? [] }
+        set { checkpointsData = newValue.isEmpty ? nil : try? JSONEncoder().encode(newValue.sorted { $0.time < $1.time }) }
+    }
+
     var videoURL: URL? { videoFileName.map(SwingStorage.videoURL(named:)) }
+    var imageURLs: [URL] { imageFileNames.map(SwingStorage.imageURL(named:)) }
+    var hasMedia: Bool { videoFileName != nil || !imageFileNames.isEmpty }
     var linkURL: URL? { externalLink.flatMap(URL.init(string:)) }
 
     var title: String {

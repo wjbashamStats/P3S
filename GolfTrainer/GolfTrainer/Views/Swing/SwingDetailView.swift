@@ -15,6 +15,7 @@ struct SwingDetailView: View {
     @State private var showingComparePicker = false
     @State private var compareWith: SwingVideo?
     @State private var confirmDelete = false
+    @State private var showingAnalysisExport = false
 
     var body: some View {
         List {
@@ -23,11 +24,36 @@ struct SwingDetailView: View {
                     player(model)
                         .listRowInsets(EdgeInsets())
                     PlayerControls(model: model)
+                    CheckpointBar(swing: swing, model: model)
                     drawingTools
                 }
             } else if swing.videoURL != nil {
                 Section { Text("Video file not found.").foregroundStyle(.secondary) }
             }
+
+            Section {
+                Button {
+                    model?.pause()
+                    showingAnalysisExport = true
+                } label: {
+                    Label("Share for Analysis…", systemImage: "sparkles.rectangle.stack")
+                }
+                .disabled(!swing.hasMedia)
+            } footer: {
+                Text("Send key-position frames, screenshots, the video and a context message to your swing-analyzer chat. Then paste its feedback below.")
+            }
+
+            Section {
+                ScreenshotGallery(swing: swing)
+            } header: {
+                Text("Screenshots")
+            } footer: {
+                if swing.imageFileNames.isEmpty {
+                    Text("Add stills from your analysis app, or share them to Golf Trainer from that app.")
+                }
+            }
+
+            AnalysisNotesSection(swing: swing)
 
             if let link = swing.linkURL {
                 Section {
@@ -96,6 +122,9 @@ struct SwingDetailView: View {
             if swing.needsReview { swing.needsReview = false }
         }
         .onChange(of: lines) { _, new in swing.lines = new }
+        .sheet(isPresented: $showingAnalysisExport) {
+            AnalysisExportView(swing: swing, currentTime: model?.currentTime, frameRate: model?.frameRate)
+        }
         .sheet(isPresented: $showingComparePicker) {
             SwingPickerView(excluding: swing) { picked in compareWith = picked }
         }

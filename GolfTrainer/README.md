@@ -3,6 +3,7 @@
 A SwiftUI and SwiftData iPhone app for logging practice and tracking progress.
 
 - **Range, Short Game and Putting session loggers.** Each has a built-in drill library and supports custom drills. There are large Make / Miss / Undo buttons for logging on the range, a session timer, a rating and notes.
+- **Swing analyzer chat workflow.** Bring in videos and screenshots from your video app, mark key positions, then send frames, a one-image key-positions sheet and a context message to your swing-analysis chat. Paste the reply back onto the swing.
 - **Swing tracking and coach integration.** Record swings, or import them from Photos or Files. Coaching apps can share videos and links straight into the app. Review swings in slow motion (0.1×–1×) and frame by frame, draw lines with angle readouts, compare two swings side by side, and tag swings by club and camera angle. Log lessons (coach, feedback, assigned drills, next lesson) and attach swings to them. Send a swing to your coach through the share sheet.
 - **Rounds and TheGrint.** You can add rounds yourself or import them from a CSV export. Your handicap index is tracked over time.
 - **Progress tracking.** There is an Overall view (practice minutes per week, practice mix, streak, handicap, skill trends), one view per category (a chart for each drill against its goal, with a moving average) and a Rounds view (score, handicap, putts, GIR, fairways, up-and-down %).
@@ -41,6 +42,20 @@ With automatic signing, Xcode registers the group for you. Without an App Group,
 
 **Tip:** for the smoothest slow motion, record in **Slo-mo** (120/240 fps) with the iPhone Camera app and import the clip from Photos. The in-app recorder records at normal frame rate.
 
+## Swing analyzer chat workflow
+
+If you make swing videos and screenshots in another app and send them to a swing-analysis chat, Golf Trainer sits between the two and keeps the history:
+
+1. **Bring it in.** In your video/analysis app, tap Share → **Golf Trainer**. You can share a video, up to 10 screenshots, or both at once; they're saved together as one swing. You can also use *Import Screenshots* or *Import from Photos* on the Swing tab, or add stills to any swing in its *Screenshots* section.
+2. **Mark key positions.** In the player, scrub to Address, Takeaway, Top, Transition, Impact and Finish, and tap **Mark** at each one.
+3. **Share for Analysis.** Golf Trainer builds:
+   - a **key positions sheet**: every marked frame on one labelled image, with your lines drawn on
+   - optional individual frames, the current frame, your screenshots and the video
+   - a **context message**: club, camera angle, handicap, video frame rate, lesson focus and your notes, plus a request for the biggest issues and drills
+
+   Pick your chat app in the share sheet. If it doesn't pick up the text, use *Copy Context* and paste it.
+4. **Save the answer.** Copy the chat's reply and tap **Paste Feedback** on the swing. The feedback stays with the swing, so you can compare it next time.
+
 ## TheGrint integration
 
 TheGrint does **not** publish a public API, so this app can't sync with it live. The integration works through files:
@@ -62,7 +77,7 @@ GolfTrainer/
   App/            App entry point and tab bar
   Models/         SwiftData models (practice, rounds, swings, lessons), drill library
   Shared/         Code shared with the share extension (inbox format, clubs, angles)
-  Services/       CSV importer, progress stats, swing video storage and thumbnails
+  Services/       CSV importer, progress stats, swing storage, frame and sheet export
   Views/
     Practice/     Session lists, live session logger, drill picker, drill library
     Rounds/       Round list and editor, handicap editor, TheGrint import

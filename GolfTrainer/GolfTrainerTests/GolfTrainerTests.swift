@@ -199,3 +199,52 @@ final class SwingLineTests: XCTestCase {
         XCTAssertEqual(SwingLine(start: CGPoint(x: 0.8, y: 0.2), end: CGPoint(x: 0.2, y: 0.8)).angleDegrees(aspectRatio: 1), 45, accuracy: 0.001)
     }
 }
+
+final class SwingAnalysisTests: XCTestCase {
+    func testFrameGrid() {
+        XCTAssertEqual(FrameGrid.layout(count: 0).columns, 0)
+        XCTAssertTrue(FrameGrid.layout(count: 1) == (1, 1))
+        XCTAssertTrue(FrameGrid.layout(count: 3) == (3, 1))
+        XCTAssertTrue(FrameGrid.layout(count: 4) == (2, 2))
+        XCTAssertTrue(FrameGrid.layout(count: 5) == (3, 2))
+        XCTAssertTrue(FrameGrid.layout(count: 6) == (3, 2))
+    }
+
+    func testContextText() {
+        let ctx = SwingContext(club: "7 Iron", angle: "Down the line",
+                               date: Date(timeIntervalSince1970: 1_780_000_000),
+                               handicapIndex: -1.2, notes: "  Working on shallowing  ",
+                               lessonFocus: "Transition", lessonFeedback: nil,
+                               checkpoints: [SwingCheckpoint(position: .impact, time: 1.2),
+                                             SwingCheckpoint(position: .address, time: 0.1),
+                                             SwingCheckpoint(position: .top, time: 0.8)],
+                               frameRate: 240, includesKeyPositionSheet: true)
+        let text = ctx.text()
+        XCTAssertTrue(text.contains("Club: 7 Iron · Camera: Down the line"))
+        XCTAssertTrue(text.contains("Handicap index: +1.2"))
+        XCTAssertTrue(text.contains("240 fps"))
+        XCTAssertTrue(text.contains("Address → Top → Impact"))
+        XCTAssertTrue(text.contains("Current lesson focus: Transition"))
+        XCTAssertTrue(text.contains("What I'm working on / notes: Working on shallowing\n"))
+        XCTAssertFalse(text.contains("Coach feedback"))
+    }
+
+    func testInboxWithScreenshots() throws {
+        let dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: dir) }
+        let inbox = SharedInbox(directory: dir)
+        let imgs = try (0..<2).map { i -> URL in
+            let u = FileManager.default.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).PNG")
+            try Data("img\(i)".utf8).write(to: u)
+            return u
+        }
+        let saved = try inbox.add(SharedSwingItem(note: "from analyzer"), copyingVideoFrom: nil, images: imgs)
+        XCTAssertEqual(saved.imageFileNames?.count, 2)
+        let pending = try XCTUnwrap(inbox.pending().first)
+        let urls = inbox.imageURLs(for: pending)
+        XCTAssertEqual(try Data(contentsOf: urls[1]), Data("img1".utf8))
+        XCTAssertTrue(urls[0].lastPathComponent.hasSuffix("-0.png"))
+        inbox.remove(pending)
+        XCTAssertFalse(FileManager.default.fileExists(atPath: urls[0].path))
+    }
+}

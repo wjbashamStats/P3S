@@ -35,6 +35,7 @@ final class ShareModel {
 
     var state: State = .loading
     var videoURL: URL?
+    var imageURLs: [URL] = []
     var link: URL?
     var club = ""
     var angle: CameraAngle = .downTheLine
@@ -64,6 +65,20 @@ final class ShareModel {
             }
         }
 
+        // Screenshots / stills (e.g. annotated frames from a swing analysis app).
+        let imageProviders = providers.filter {
+            $0.hasItemConformingToTypeIdentifier(UTType.image.identifier)
+                && !$0.hasItemConformingToTypeIdentifier(UTType.movie.identifier)
+        }
+        for provider in imageProviders.prefix(10) {
+            group.enter()
+            provider.loadItem(forTypeIdentifier: UTType.image.identifier) { item, _ in
+                defer { group.leave() }
+                guard let copy = Self.writeImage(item) else { return }
+                DispatchQueue.main.async { self.imageURLs.append(copy) }
+            }
+        }
+
         if let urlProvider = providers.first(where: { $0.hasItemConformingToTypeIdentifier(UTType.url.identifier) }) {
             group.enter()
             urlProvider.loadItem(forTypeIdentifier: UTType.url.identifier) { item, _ in
@@ -84,8 +99,30 @@ final class ShareModel {
         }
 
         group.notify(queue: .main) {
-            self.state = (self.videoURL == nil && self.link == nil) ? .nothingUsable : .ready
+            self.state = (self.videoURL == nil && self.imageURLs.isEmpty && self.link == nil) ? .nothingUsable : .ready
         }
+    }
+
+    /// Apps hand over images as a file URL, raw data or a UIImage. Each is saved to a temporary file.
+    static func writeImage(_ item: NSSecureCoding?) -> URL? {
+        let tmp = FileManager.default.temporaryDirectory
+        if let url = item as? URL, url.isFileURL {
+            let ext = url.pathExtension.isEmpty ? "jpg" : url.pathExtension
+            let copy = tmp.appendingPathComponent(UUID().uuidString).appendingPathExtension(ext)
+            return (try? FileManager.default.copyItem(at: url, to: copy)) != nil ? copy : nil
+        }
+        let data: Data?
+        if let d = item as? Data {
+            data = d
+        } else if let image = item as? UIImage {
+            data = image.pngData()
+        } else {
+            data = nil
+        }
+        guard let data, UIImage(data: data) != nil else { return nil }
+        let isPNG = data.starts(with: [0x89, 0x50, 0x4E, 0x47])
+        let copy = tmp.appendingPathComponent(UUID().uuidString).appendingPathExtension(isPNG ? "png" : "jpg")
+        return (try? data.write(to: copy)) != nil ? copy : nil
     }
 
     static func firstLink(in text: String) -> URL? {
@@ -106,10 +143,12 @@ final class ShareModel {
                                    note: note,
                                    sourceApp: sourceApp.isEmpty ? nil : sourceApp)
         let video = videoURL
+        let images = imageURLs
         DispatchQueue.global(qos: .userInitiated).async {
             do {
-                try inbox.add(item, copyingVideoFrom: video)
+                try inbox.add(item, copyingVideoFrom: video, images: images)
                 if let video { try? FileManager.default.removeItem(at: video) }
+                images.forEach { try? FileManager.default.removeItem(at: $0) }
                 DispatchQueue.main.async { self.onFinish() }
             } catch {
                 DispatchQueue.main.async {
@@ -137,6 +176,10 @@ struct ShareFormView: View {
                 case .ready:
                     Section {
                         if model.videoURL != nil { Label("Swing video", systemImage: "video.fill") }
+                        if !model.imageURLs.isEmpty {
+                            Label("\(model.imageURLs.count) screenshot\(model.imageURLs.count == 1 ? "" : "s")",
+                                  systemImage: "photo.stack")
+                        }
                         if let link = model.link {
                             Label(link.absoluteString, systemImage: "link").lineLimit(2)
                         }

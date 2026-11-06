@@ -6,6 +6,8 @@ struct SharedSwingItem: Codable, Equatable, Identifiable {
     var date: Date = Date()
     /// File name of the video inside the inbox folder, if a video was shared.
     var videoFileName: String?
+    /// Screenshots or stills shared together with (or instead of) a video.
+    var imageFileNames: [String]?
     /// A link, e.g. to a lesson in a coaching app.
     var link: String?
     var club: String?
@@ -37,11 +39,21 @@ struct SharedInbox {
         self.directory = directory
     }
 
-    /// Copies `videoURL` (if any) into the inbox, then writes the manifest.
+    /// Copies `videoURL` and `imageURLs` (if any) into the inbox, then writes the manifest.
     @discardableResult
-    func add(_ item: SharedSwingItem, copyingVideoFrom videoURL: URL?) throws -> SharedSwingItem {
+    func add(_ item: SharedSwingItem, copyingVideoFrom videoURL: URL?, images imageURLs: [URL] = []) throws -> SharedSwingItem {
         try fm.createDirectory(at: directory, withIntermediateDirectories: true)
         var item = item
+        var imageNames: [String] = []
+        for (i, url) in imageURLs.enumerated() {
+            let ext = url.pathExtension.isEmpty ? "jpg" : url.pathExtension.lowercased()
+            let name = "\(item.id.uuidString)-\(i).\(ext)"
+            let dest = directory.appendingPathComponent(name)
+            if fm.fileExists(atPath: dest.path) { try fm.removeItem(at: dest) }
+            try fm.copyItem(at: url, to: dest)
+            imageNames.append(name)
+        }
+        if !imageNames.isEmpty { item.imageFileNames = imageNames }
         if let videoURL {
             let ext = videoURL.pathExtension.isEmpty ? "mov" : videoURL.pathExtension
             let name = "\(item.id.uuidString).\(ext.lowercased())"
@@ -72,9 +84,14 @@ struct SharedInbox {
         item.videoFileName.map { directory.appendingPathComponent($0) }
     }
 
-    /// Removes the manifest and any video still in the inbox.
+    func imageURLs(for item: SharedSwingItem) -> [URL] {
+        (item.imageFileNames ?? []).map { directory.appendingPathComponent($0) }
+    }
+
+    /// Removes the manifest and any files still in the inbox.
     func remove(_ item: SharedSwingItem) {
         if let video = videoURL(for: item) { try? fm.removeItem(at: video) }
+        for image in imageURLs(for: item) { try? fm.removeItem(at: image) }
         try? fm.removeItem(at: manifestURL(for: item.id))
     }
 

@@ -41,6 +41,8 @@ struct SwingLibraryView: View {
     @State private var showingFiles = false
     @State private var showingLink = false
     @State private var photoItem: PhotosPickerItem?
+    @State private var showingScreenshots = false
+    @State private var screenshotItems: [PhotosPickerItem] = []
     @State private var openSwing: SwingVideo?
     @State private var isImporting = false
     @State private var errorMessage: String?
@@ -110,6 +112,7 @@ struct SwingLibraryView: View {
                         Button { showingCamera = true } label: { Label("Record Swing", systemImage: "video.fill") }
                     }
                     Button { showingPhotos = true } label: { Label("Import from Photos", systemImage: "photo.on.rectangle") }
+                    Button { showingScreenshots = true } label: { Label("Import Screenshots", systemImage: "photo.stack") }
                     Button { showingFiles = true } label: { Label("Import from Files", systemImage: "folder") }
                     Button { showingLink = true } label: { Label("Add Coach App Link", systemImage: "link") }
                 } label: {
@@ -137,6 +140,27 @@ struct SwingLibraryView: View {
                 } catch {
                     errorMessage = "Couldn't load that video: \(error.localizedDescription)"
                 }
+            }
+        }
+        .photosPicker(isPresented: $showingScreenshots, selection: $screenshotItems, maxSelectionCount: 10, matching: .images)
+        .onChange(of: screenshotItems) { _, items in
+            guard !items.isEmpty else { return }
+            isImporting = true
+            Task {
+                defer { isImporting = false; screenshotItems = [] }
+                var names: [String] = []
+                for item in items {
+                    if let data = try? await item.loadTransferable(type: Data.self),
+                       let name = try? SwingStorage.store(imageData: data) {
+                        names.append(name)
+                    }
+                }
+                guard !names.isEmpty else { errorMessage = "Couldn't load those screenshots."; return }
+                let swing = SwingVideo(source: .photos)
+                swing.imageFileNames = names
+                context.insert(swing)
+                try? context.save()
+                openSwing = swing
             }
         }
         .fileImporter(isPresented: $showingFiles, allowedContentTypes: [.movie]) { result in
@@ -188,6 +212,8 @@ struct SwingRow: View {
                     .font(.caption).foregroundStyle(.secondary)
                 HStack(spacing: 6) {
                     Text(swing.sourceApp ?? swing.source.title)
+                    if !swing.imageFileNames.isEmpty { Text("· \(swing.imageFileNames.count) still\(swing.imageFileNames.count == 1 ? "" : "s")") }
+                    if !swing.analysis.isEmpty { Text("· analysed") }
                     if let lesson = swing.lesson { Text("· \(lesson.title)") }
                 }
                 .font(.caption2)
@@ -208,12 +234,16 @@ struct SwingThumbnail: View {
             if let image {
                 Image(uiImage: image).resizable().scaledToFill()
             } else {
-                Image(systemName: swing.videoFileName == nil ? "link" : "video")
+                Image(systemName: swing.hasMedia ? "video" : "link")
                     .foregroundStyle(.secondary)
             }
         }
-        .task(id: swing.videoFileName) {
-            if let name = swing.videoFileName { image = await SwingStorage.thumbnail(for: name) }
+        .task(id: swing.videoFileName ?? swing.imageFileNames.first) {
+            if let name = swing.videoFileName {
+                image = await SwingStorage.thumbnail(for: name)
+            } else if let first = swing.imageFileNames.first {
+                image = await SwingStorage.imageThumbnail(named: first)
+            }
         }
     }
 }

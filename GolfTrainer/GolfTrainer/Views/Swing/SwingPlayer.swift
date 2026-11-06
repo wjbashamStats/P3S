@@ -11,6 +11,8 @@ final class SwingPlayerModel {
     private(set) var duration: Double = 0
     /// Video width / height, after rotation is applied.
     private(set) var aspectRatio: CGFloat = 9.0 / 16.0
+    /// Frames per second the clip was recorded at (e.g. 240 for Slo-mo).
+    private(set) var frameRate: Double?
     var rate: Float = 0.5
     var loops = true
 
@@ -56,6 +58,7 @@ final class SwingPlayerModel {
            let loaded = try? await track.load(.naturalSize, .preferredTransform) {
             let r = loaded.0.applying(loaded.1)
             if abs(r.height) > 0 { aspectRatio = abs(r.width) / abs(r.height) }
+            if let fps = try? await track.load(.nominalFrameRate), fps > 0 { frameRate = Double(fps) }
         }
     }
 

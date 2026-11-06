@@ -55,6 +55,7 @@ targets:
           NSExtensionAttributes:
             NSExtensionActivationRule:
               NSExtensionActivationSupportsMovieWithMaxCount: 1
+              NSExtensionActivationSupportsImageWithMaxCount: 10
               NSExtensionActivationSupportsWebURLWithMaxCount: 1
               NSExtensionActivationSupportsText: true
     settings:
