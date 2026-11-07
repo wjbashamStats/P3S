@@ -1,0 +1,651 @@
+game_id,week,home_team,away_team,commence_time,market,player,book_line,over_price,under_price,n_books
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_pass_yds,Kevin Jennings,277.5,-114,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_pass_yds,Ethan Grunkemeyer,243.5,-115,-115.0,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Jalen Hale,27.5,-114.5,-114,4
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Yannick Smith,58.5,-115,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Jeffrey Overton Jr.,19.5,-114.5,-115,4
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Randy Pittman Jr.,24.5,-115,-117.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Yamir Knight,56.5,-115,-115.0,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Que'Sean Brown,64.5,-115,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Jalen Cooper,35.5,-115,-115.0,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Ayden Greene,27.5,-115,-115.0,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Luke Reynolds,50.5,-115,-115.0,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Yamir Knight,4.5,-144.5,110.0,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Jeffrey Overton Jr.,2.5,116,-154,1
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Yannick Smith,3.5,-146.5,112.0,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Randy Pittman Jr.,3.0,-5.0,-38.0,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Jalen Cooper,2.5,-169.5,127.5,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Jalen Hale,2.5,150.0,-201.0,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Ayden Greene,2.5,166.5,-223.5,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Luke Reynolds,5.5,108.0,-141.5,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Que'Sean Brown,5.5,-103.5,-126.5,2
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_rush_yds,Kendrick Raphael,79.5,-114,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_rush_yds,Jeffrey Overton Jr.,68.5,-115,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_rush_yds,Kevin Jennings,14.5,-115,-114.5,5
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Theo Melin Ohrstrom,22.5,-115,-114.5,3
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_reception_yds,Kendrick Raphael,17.5,-114,-114,1
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_receptions,Kendrick Raphael,2.5,100,-130,1
+11da04c7d3fba48caf11a5d8b66b8ccd,10,SMU Mustangs,Virginia Tech Hokies,2026-11-07T00:00:00Z,player_rush_yds,Marcellous Hawkins,31.5,-103,-125,1
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_pass_yds,Mitch Griffis,164.5,-114.0,-114,4
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_reception_yds,Landon Sides,49.5,-116.5,-114,4
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_reception_yds,Bryson Rodgers,34.5,-114.5,-114,4
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_rush_yds,TJ Engleman Jr.,83.5,-114.5,-114,4
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_rush_yds,D.J. Crowther,65.5,-114.5,-114,4
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_receptions,Landon Sides,5.5,132.0,-174.5,2
+5172093e8533ea39f59c5d2c63c743b9,10,East Carolina Pirates,South Florida Bulls,2026-11-07T00:30:00Z,player_receptions,Bryson Rodgers,3.5,102,-136,1
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_pass_yds,Katin Houser,219.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_pass_yds,Anthony Colandrea,227.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Hudson Clement,51.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Collin Dixon,84.5,-115,-114.5,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Luke Lindenmeyer,29.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Jacory Barney Jr.,45.5,-115,-114.5,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Nyziah Hunter,28.5,-115,-114.5,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Kwazi Gilmer,56.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Hudson Clement,3.5,-168.0,127.0,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Jacory Barney Jr.,3.5,-150.5,114.0,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Collin Dixon,6.5,-106.5,-123.0,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Kwazi Gilmer,4.5,-133.0,1.5,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Luke Lindenmeyer,3.5,112.0,-147.0,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Nyziah Hunter,2.5,-156.0,118.0,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Aidan Laughery,57.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Anthony Colandrea,40.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Katin Houser,8.5,-114.5,-115,4
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Jamal Rule,57.5,-115,-115.0,5
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Brayden Trimble,15.5,-121.5,-114,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Jordan Anderson,27.5,-117.0,-111,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_rush_yds,Javari Barnett,18.5,-115.5,-118,2
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Christian Abney,5.5,-116,-111,1
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Kaden Feagin,9.5,-116,-111,1
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_reception_yds,Aidan Laughery,5.5,-116,-111,1
+59047d3be974c2ec05c7e6282752287b,10,Illinois Fighting Illini,Nebraska Cornhuskers,2026-11-07T01:00:00Z,player_receptions,Brayden Trimble,1.5,-161,124,1
+45fdbdbe6ed3d9922fa8b26b8a885f0e,10,Nevada Wolf Pack,New Mexico Lobos,2026-11-07T02:00:00Z,player_reception_yds,Gary Givens III,36.5,-112,-116,3
+45fdbdbe6ed3d9922fa8b26b8a885f0e,10,Nevada Wolf Pack,New Mexico Lobos,2026-11-07T02:00:00Z,player_rush_yds,Scottre Humphrey,71.5,-114,-115,3
+45fdbdbe6ed3d9922fa8b26b8a885f0e,10,Nevada Wolf Pack,New Mexico Lobos,2026-11-07T02:00:00Z,player_rush_yds,Herschel Turner,38.5,-112,-116,3
+45fdbdbe6ed3d9922fa8b26b8a885f0e,10,Nevada Wolf Pack,New Mexico Lobos,2026-11-07T02:00:00Z,player_rush_yds,Kiefer Sibley,70.5,-112,-116,3
+45fdbdbe6ed3d9922fa8b26b8a885f0e,10,Nevada Wolf Pack,New Mexico Lobos,2026-11-07T02:00:00Z,player_rush_yds,Dominic Kelley,51.5,-114,-114,3
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_pass_yds,Noah Fifita,274.5,-114.5,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_pass_yds,Jaden Craig,215.0,-114.5,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Brandon Phelps,30.5,-114.5,-114.0,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Jordan Dwyer,65.0,-114.5,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Isaiah Mizell,81.5,-115.0,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Ed Small,33.5,-114.5,-115.0,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Gio Richardson,49.5,-115.0,-113.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Chris Hunter,31.0,-115.0,-115.0,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_reception_yds,Kari Ashley,41.5,-114.5,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Jordan Dwyer,5.5,-1.0,-129.5,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Isaiah Mizell,6.0,-2.5,-127.5,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Ed Small,3.5,109.0,-143.0,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Gio Richardson,4.5,-139.0,106.5,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Chris Hunter,2.5,-126.5,-103.0,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Kari Ashley,3.5,-118.0,-110.0,2
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_rush_yds,Kedrick Reescano,36.5,-114.5,-114.5,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_rush_yds,Jaden Craig,17.5,-114,-114,3
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_rush_yds,Noah Fifita,12.5,-114,-114,3
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_rush_yds,Jeremy Payne,43.5,-114.5,-115.0,4
+722ed661705df150a38e7786949ce241,10,Arizona Wildcats,TCU Horned Frogs,2026-11-07T03:15:00Z,player_receptions,Brandon Phelps,3.5,128,-167,1
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_pass_yds,Bear Bachmeier,217.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_pass_yds,Devon Dampier,216.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Braden Pegan,56.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Ricky Johnson,22.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Walker Lyons,31.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Wayshawn Parker,20.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Noah Bennee,23.5,-114,-115,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Legend Glasker,61.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Kyler Kasper,54.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Jojo Phillips,16.5,-115,-115,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Creed Whittemore,38.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Jojo Phillips,1.5,-156.0,118.5,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Braden Pegan,4.5,0.5,-131.5,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Wayshawn Parker,2.5,-120.5,-108.5,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Ricky Johnson,1.5,-155.0,117.5,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Walker Lyons,3.5,117.0,-154.0,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Legend Glasker,3.5,-153.0,116.0,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Kyler Kasper,3.5,-130.0,-1.0,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Creed Whittemore,2.5,-117.0,-110.5,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_receptions,Noah Bennee,2.5,-119.0,-111.0,2
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_rush_yds,Devon Dampier,46.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_rush_yds,Bear Bachmeier,32.5,-114,-114,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_rush_yds,Wayshawn Parker,79.5,-114,-115,3
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_reception_yds,Roger Saleapaga II,9.5,-116,-111,1
+8db5a11826fc84a5a6506c9b85979e70,10,Utah Utes,BYU Cougars,2026-11-07T17:00:00Z,player_rush_yds,Daniel Bray,19.5,106,-137,1
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_pass_yds,DJ Lagway,266.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_pass_yds,Jaylen Raynor,181.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Ty Claiborne,21.5,-115,-114,3
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Louis Brown IV,35.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Gavin Freeman,86.5,-114.5,-115,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Jadon Porter,24.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Aiden Flora,10.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Jamal Polite Jr.,45.5,-114.5,-115,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Omari Hayes,2.5,103.0,-135.5,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Louis Brown IV,2.5,-118.0,-111.0,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Gavin Freeman,7.5,-126.5,-4.0,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Jamal Polite Jr.,2.5,-157.0,119.0,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Ty Claiborne,2.5,-128.5,-102.0,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_rush_yds,Michael Turner,36.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_rush_yds,Aiden Flora,89.5,-116.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_rush_yds,DJ Lagway,15.5,-114.5,-115,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_rush_yds,Jaylen Raynor,16.5,-114.5,-114,4
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Cody Jackson,19.5,-114.5,-114,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Omari Hayes,24.5,-116.0,-114,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_rush_yds,Caden Knighten,34.5,-119.0,-114,2
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Vince Benetti,12.5,-116,-111,1
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_reception_yds,Tony Livingston,22.5,-112,-115,1
+7233098d6f4e9fe94606ee2f3343de84,10,Baylor Bears,Iowa State Cyclones,2026-11-07T17:00:00Z,player_receptions,Cody Jackson,1.5,-143,110,1
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_pass_yds,Mason McKenzie,173.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_pass_yds,Ashton Daniels,227.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Desirrio Riles,14.5,-115,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Dawson Pough,22.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Javarius Green,30.5,-115,-115,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Jayvan Boggs,49.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Jasen Lopez,29.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Micahi Danzy,59.5,-112,-116,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_rush_yds,Ashton Daniels,52.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_rush_yds,Mason McKenzie,62.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_rush_yds,Bo MacCormack III,53.5,-114,-114,3
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_reception_yds,Johnathan Montague Jr.,22.5,-114,-114,1
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_receptions,Johnathan Montague Jr.,1.5,-116,-111,1
+3ae8e2db7acc8a4d581b1e6a3ecbbd24,10,Boston College Eagles,Florida State Seminoles,2026-11-07T17:00:00Z,player_receptions,Dawson Pough,2.5,146,-192,1
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_pass_yds,Tait Reynolds,200.5,-114.5,-114.5,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_pass_yds,Steve Angeli,218.5,-114.0,-114.0,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Bryant Wesco Jr.,54.5,-114,-114,3
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Daunte Bacheyie,27.5,-116.5,-112.0,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Calvin Russell III,51.5,-116.0,-113.0,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,T.J. Moore,40.5,-114,-118,3
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Umari Hatcher,77.5,-116.5,-111.5,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_rush_yds,Chris Johnson Jr.,27.5,-114,-114,3
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_rush_yds,Jarvis Green,49.5,-115,-114,3
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_rush_yds,Ahmad Miller,57.5,-114,-115,3
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_rush_yds,Tylik Hill,33.0,-112.0,-116.0,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_rush_yds,Tait Reynolds,39.5,-114.5,-114.5,2
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Tyler Brown,33.5,-114,-114,1
+c3e23ea05d6570fdb90c3ddb225fd3e4,10,Syracuse Orange,Clemson Tigers,2026-11-07T17:00:00Z,player_reception_yds,Olsen Patt-Henry,17.5,-114,-114,1
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_pass_yds,Ty Dieffenbach,170.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_pass_yds,Drake Lindsey,187.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Brian Rowe Jr.,30.5,-114,-115,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Semaj Morgan,43.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Jalen Smith,25.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Javon Tracy,48.5,-115,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Noah Jennings,42.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Darius Taylor,18.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Semaj Morgan,4.5,114.0,-149.5,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Brian Rowe Jr.,2.5,128.0,-169.5,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Jalen Smith,2.5,138.0,-183.0,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Noah Jennings,4.0,3.0,-140.5,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Darius Taylor,2.5,-146.5,111.5,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_receptions,Javon Tracy,5.5,-124.0,-106.0,2
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_rush_yds,Wayne Knight,71.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_rush_yds,Darius Taylor,36.5,-115,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_rush_yds,Anthony Woods,47.5,-114,-114,3
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Wayne Knight,11.5,-106,-122,1
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_reception_yds,Brayden Loftin,9.5,-110,-118,1
+5b05bf2ff27508703418dcf70079a22f,10,Minnesota Golden Gophers,UCLA Bruins,2026-11-07T17:00:00Z,player_rush_yds,Ty Dieffenbach,7.5,-112,-115,1
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_pass_yds,Arch Manning,209.0,-114.0,-114.5,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_pass_yds,Austin Simmons,202.5,-114.5,-114.5,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_reception_yds,Donovan Olugbode,55.5,-114.5,-114.5,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_reception_yds,Jamal Roberts,13.5,-114,-114,3
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_reception_yds,Cayden Lee,78.0,-114.5,-115.0,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_reception_yds,Raleek Brown,9.5,-112,-116,3
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_receptions,Jamal Roberts,2.5,111.0,-145.5,2
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_receptions,Donovan Olugbode,4.5,-112.0,-116.0,2
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_receptions,Raleek Brown,2.0,-27.5,-14.5,2
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_receptions,Cayden Lee,6.5,121.0,-160.0,2
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_rush_yds,Michael Terry III,26.5,-114,-114,3
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_rush_yds,Jamal Roberts,94.5,-114.5,-114.5,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_rush_yds,Arch Manning,16.5,-114.5,-114.0,4
+43a67a478177d0dc6ef141aacf2bfd2a,10,Missouri Tigers,Texas Longhorns,2026-11-07T17:00:00Z,player_rush_yds,Raleek Brown,60.0,-114.5,-115.0,4
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_pass_yds,Kalieb Osborne,213.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_pass_yds,Billy Edwards Jr.,252.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Shamar Porter,34.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Jelani Thurman,55.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Ryder Treadway,34.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Trech Kekahuna,25.5,-114,-115,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Jordan Shipp,71.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Benjamin Hall,28.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Kenji Christian,34.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Jaylen McGill,23.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Cyncir Bowers,46.5,-115,-115,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Demon June,49.5,-114,-114,3
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_reception_yds,Matt Ragan,22.5,-112,-115,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_receptions,Jordan Shipp,5.5,-112,-115,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_receptions,Trech Kekahuna,2.5,-109,-119,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_receptions,Jelani Thurman,4.5,-116,-111,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_receptions,Matt Ragan,2.5,128,-167,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_receptions,Shamar Porter,2.5,106,-137,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Kalieb Osborne,23.5,-110,-118,1
+3582b30b32fb23939161eb280cc5ca97,10,UConn Huskies,North Carolina Tar Heels,2026-11-07T17:00:00Z,player_rush_yds,Billy Edwards Jr.,8.5,-108,-120,1
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_pass_yds,Walker Eget,210.5,-114,-114,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_pass_yds,CJ Bailey,233.5,-114,-114,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_reception_yds,Keenan Jackson,53.5,-114,-114,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_reception_yds,Jeremiah Hasley,31.5,-114,-114,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_reception_yds,Nate Sheppard,30.5,-112,-116,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_receptions,Jeremiah Hasley,3.5,116.0,-152.5,2
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_receptions,Nate Sheppard,3.5,-108.0,-121.5,2
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_receptions,Keenan Jackson,4.5,133.0,-176.5,2
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_rush_yds,Nate Sheppard,111.5,-114,-114,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_rush_yds,CJ Bailey,16.5,-114,-115,3
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_reception_yds,Victor Snow,24.5,-110,-118,1
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_reception_yds,Preston Douglas,35.5,-110,-118,1
+59263b8c355e171b2bcd5c1827a36b7e,10,NC State Wolfpack,Duke Blue Devils,2026-11-07T17:30:00Z,player_receptions,Victor Snow,2.5,106,-137,1
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_pass_yds,Ryan Browne,246.5,-114,-114,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_pass_yds,Malik Washington,242.5,-114,-114,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,Fame Ijeboi,14.5,-115,-115,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,Xavier Townsend,39.5,-114,-115,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,Kaleb Webb,42.5,-114,-114,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,Chris Durr Jr.,79.5,-112,-115,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,Asaad Waseem,62.5,-114,-114,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,Asaad Waseem,4.5,-127.0,-3.0,2
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,Chris Durr Jr.,6.5,117.0,-154.0,2
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,Kaleb Webb,3.5,118.0,-155.0,2
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,Fame Ijeboi,2.5,104.0,-136.5,2
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,Xavier Townsend,3.5,-148.5,113.5,2
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_rush_yds,Fame Ijeboi,85.5,-114,-114,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_rush_yds,DeJuan Williams,59.5,-114,-115,3
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_reception_yds,George Burhenn,21.5,100,-130,1
+841d7821e82447f8a7d8592ec4584eec,10,Purdue Boilermakers,Maryland Terrapins,2026-11-07T17:30:00Z,player_receptions,George Burhenn,1.5,-167,128,1
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_pass_yds,KJ Jackson,218.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_pass_yds,Byrum Brown,229.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Keshaun Singleton,53.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Antonio Jordan,30.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Chris Marshall,69.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Chas Nimrod,51.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,CJ Brown,20.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_rush_yds,Byrum Brown,59.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_rush_yds,Omar Mabson II,37.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_rush_yds,KJ Jackson,17.5,-114.5,-115,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_rush_yds,Jeremiah Cobb,54.5,-114.5,-114,4
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Ty Lockwood,24.5,-10.5,-135,2
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_rush_yds,Cam Settles,37.5,-119.5,-114,2
+40065b11db334359a18c868e9af4d7cd,10,Auburn Tigers,Arkansas Razorbacks,2026-11-07T17:45:00Z,player_reception_yds,Jeremiah Cobb,6.5,-114,-114,1
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_pass_yds,Drew Mestemaker,284.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_pass_yds,Blake Barnett,213.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Wyatt Young,76.5,-112,-116,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Justin Bowick,73.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Miles Coleman,32.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Josh Manning,50.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Caleb Hawkins,39.5,-112,-116,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Jaron Tibbs,57.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Derrick Salley Jr.,40.5,-114,-115,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Justin Bowick,4.5,-121.0,-108.0,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Wyatt Young,4.5,-107.0,-122.0,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Derrick Salley Jr.,2.5,-128.5,-2.0,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Miles Coleman,2.5,-128.5,-102.0,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Caleb Hawkins,4.5,120,-160,1
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Jaron Tibbs,4.5,-147.5,112.5,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Josh Manning,3.5,-148.5,113.5,2
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_rush_yds,Joe Jackson,40.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_rush_yds,Rodney Fields Jr.,59.5,-114,-115,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_rush_yds,Caleb Hawkins,112.5,-114,-114,3
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_reception_yds,Garrett Oakley,29.5,-119,-109,1
+f3d964c6b45c36f9e6009c47e64f96db,10,Kansas State Wildcats,Oklahoma State Cowboys,2026-11-07T18:00:00Z,player_receptions,Garrett Oakley,2.5,-135,105,1
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_pass_yds,LaNorris Sellers,237.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_pass_yds,Marcel Reed,192.5,-114,-115,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,DJ Black,37.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,Nyck Harbor,40.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,Mazeo Bennett Jr.,49.5,-114,-115,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,Mario Craver,43.5,-114,-115,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,Isaiah Horton,36.5,-114,-115,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,Mario Craver,4.5,122.0,-161.0,2
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,Isaiah Horton,2.5,-144.5,110.0,2
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,Nyck Harbor,2.5,-141.5,108.0,2
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,Mazeo Bennett Jr.,4.5,-106.5,-122.5,2
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_rush_yds,Marcel Reed,22.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_rush_yds,LaNorris Sellers,50.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_rush_yds,Jabree Coleman,42.5,-114,-114,3
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_reception_yds,Brady Hunt,19.5,-111,-116,1
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,DJ Black,2.5,-114,-114,1
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_receptions,Brady Hunt,1.5,-167,128,1
+208e919ada4f5cf6d27af719879d1880,10,South Carolina Gamecocks,Texas A&M Aggies,2026-11-07T20:00:00Z,player_rush_yds,Rueben Owens II,20.5,-103,-125,1
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_pass_yds,Keelon Russell,237.5,-114,-115,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_pass_yds,Sam Leavitt,272.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Eugene Wilson III,30.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Lotzeir Brooks,44.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Kaleb Edwards,13.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Winston Watkins Jr.,42.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Trey'Dez Green,52.5,-114,-115,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Rico Scott,47.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Daniel Hill,7.5,-112,-116,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Jackson Harris,64.5,-114,-115,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Marshall Pritchett,19.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Dilin Jones,26.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Eugene Wilson III,2.5,-123.0,-106.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Winston Watkins Jr.,3.5,-123.0,-106.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Rico Scott,3.5,-127.0,-2.0,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Trey'Dez Green,4.5,121.0,-157.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Dilin Jones,3.5,-131.5,0.0,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Lotzeir Brooks,3.5,117.5,-154.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Jackson Harris,4.5,117.0,-154.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Marshall Pritchett,2.5,106.0,-139.5,2
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_rush_yds,Sam Leavitt,34.5,-115,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_rush_yds,Keelon Russell,19.5,-115,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_rush_yds,Daniel Hill,28.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_rush_yds,Dilin Jones,78.5,-114,-114,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_rush_yds,Trae'shawn Brown,24.5,-114,-115,3
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_reception_yds,Ryan Williams,49.5,-105,-123,1
+00f194290bfcdfebb1d8456057b20614,10,LSU Tigers,Alabama Crimson Tide,2026-11-07T20:30:00Z,player_receptions,Ryan Williams,3.5,-130,100,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_pass_yds,Conner Weigman,259.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_pass_yds,JC French IV,225.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Patrick Overmyer,51.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Amare Thomas,65.5,-114,-115,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_rush_yds,Makhi Hughes,74.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_rush_yds,JC French IV,23.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_rush_yds,Cole Tabb,60.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_rush_yds,Conner Weigman,31.5,-114,-114,3
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Koby Young,48.5,-114,-114,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Isaiah Johnson,37.5,-110,-118,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Malachi Henry,42.5,-110,-118,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Gavin Grover,14.5,-114,-114,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,Trent Walker,49.5,-108,-120,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_reception_yds,JV Gibson,55.5,-108,-120,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_receptions,Koby Young,2.5,-118,-110,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_receptions,Trent Walker,4.5,100,-130,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_receptions,Amare Thomas,5.5,100,-130,1
+18f974d07f56507b33b9e50119c88e28,10,Houston Cougars,Cincinnati Bearcats,2026-11-07T20:30:00Z,player_receptions,Patrick Overmyer,4.5,-154,118,1
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_pass_yds,Luke Fahey,218.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_pass_yds,Dylan Raiola,216.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Devin McCuin,33.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Evan Stewart,47.5,-114,-115,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Jamari Johnson,38.5,-115,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Bo Jackson,13.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Jeremiah Smith,95.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Dakorien Moore,58.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Nate Roberts,13.5,-114,-115,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Dierre Hill Jr.,12.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Dakorien Moore,4.5,-115.0,-114.0,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Evan Stewart,4.5,110.5,-144.5,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Jamari Johnson,3.5,-128.5,-102.0,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Dierre Hill Jr.,1.5,-158.5,120.0,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Bo Jackson,2.0,-22.5,-19.5,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Jeremiah Smith,7.5,2.0,-133.5,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Devin McCuin,2.5,109.5,-143.5,2
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_rush_yds,Isaiah West,37.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_rush_yds,Bo Jackson,85.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_rush_yds,Dierre Hill Jr.,48.5,-114,-114,3
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_reception_yds,Jeremiah McClellan,31.5,-112,-115,1
+c2784b24d84fa71e7368fd775914c37d,10,Ohio State Buckeyes,Oregon Ducks,2026-11-07T20:30:00Z,player_receptions,Jeremiah McClellan,2.5,-110,-118,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_pass_yds,Demond Williams Jr.,223.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_pass_yds,Rocco Becht,213.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_reception_yds,Chris Lawson,67.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_reception_yds,Rashid Williams,29.5,-114,-115,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_reception_yds,Dezmen Roebuck,50.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Jayden Limar,31.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Demond Williams Jr.,31.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Cam Wallace,40.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Rocco Becht,9.5,-114,-115,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Carson Hansen,35.5,-114,-114,3
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_reception_yds,Baron Naone,19.5,-114,-114,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_receptions,Baron Naone,2.5,128,-167,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_receptions,Rashid Williams,2.5,-111,-116,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_receptions,Chris Lawson,4.5,-149,115,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_receptions,Dezmen Roebuck,4.5,-143,110,1
+cd61922c472fea089e42662bc725f46b,10,Washington Huskies,Penn State Nittany Lions,2026-11-07T20:30:00Z,player_rush_yds,Brian Bonner Jr.,19.5,-114,-114,1
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_pass_yds,Isaiah Marshall,203.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_pass_yds,Alonza Barnett III,200.5,-114,-115,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Nahzae Cox,36.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Nik McMillan,45.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Cam Pickett,44.5,-115,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Josh Derry,54.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Dylan Edwards,17.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Waden Charles,27.5,-114,-115,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_rush_yds,Duke Watson,57.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_rush_yds,Dylan Edwards,78.5,-114,-114,3
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_reception_yds,Carson Bruhn,21.5,-114,-114,1
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_receptions,Dylan Edwards,2.5,100,-130,1
+c74c1b98aca90ebf335b4028d44c2095,10,Kansas Jayhawks,UCF Knights,2026-11-07T20:45:00Z,player_receptions,Josh Derry,4.5,120,-156,1
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_pass_yds,Jared Curtis,239.5,-114,-115,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_reception_yds,Junior Sherrill,89.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_reception_yds,Cole Spence,24.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_reception_yds,Fluff Bothwell,10.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_reception_yds,Anthony Evans III,59.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_reception_yds,Sedrick Alexander,16.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_receptions,Junior Sherrill,6.5,-6.0,-125.0,2
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_receptions,Sedrick Alexander,2.5,114.5,-150.0,2
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_receptions,Cole Spence,2.5,110.5,-144.5,2
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_rush_yds,Fluff Bothwell,89.5,-114,-115,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_rush_yds,Sedrick Alexander,34.5,-114,-114,3
+028ce5ee2c58281cf935f06edc90d671,10,Mississippi State Bulldogs,Vanderbilt Commodores,2026-11-07T21:15:00Z,player_rush_yds,Jared Curtis,19.5,-114,-115,3
+2a6e2d9ca0d2fc85a4164e9c0f25a05f,10,Wisconsin Badgers,Rutgers Scarlet Knights,2026-11-07T21:15:00Z,player_rush_yds,Antwan Raymond,70.5,-114,-114,1
+2a6e2d9ca0d2fc85a4164e9c0f25a05f,10,Wisconsin Badgers,Rutgers Scarlet Knights,2026-11-07T21:15:00Z,player_rush_yds,Abu Sama III,49.5,-114.5,-114.5,2
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_pass_yds,Hauss Hejny,248.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_pass_yds,Max Cutforth,225.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Terrence Smith Jr.,36.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Jackson Harper,37.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Dylan Riley,11.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Akeem Wright,30.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Matt Wagner,32.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,Rasean Jones,72.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,Terrence Smith Jr.,3.5,-104.5,-125.0,2
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,Matt Wagner,3.5,101.0,-132.0,2
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,Akeem Wright,2.5,-114.0,-114.0,2
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_rush_yds,Hauss Hejny,20.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_rush_yds,Dylan Riley,151.5,-114,-114,3
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_reception_yds,RJ Vick,61.5,-114,-114,1
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,Rasean Jones,5.5,-128,-104,1
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,Jackson Harper,3.5,124,-166,1
+bbb1d38a8f51b761a789459a08fa6ded,10,Colorado State Rams,Boise State Broncos,2026-11-07T23:00:00Z,player_receptions,RJ Vick,4.5,-138,104,1
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_pass_yds,George MacIntyre,196.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_pass_yds,Kenny Minchey,204.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,Willie Rodriguez,39.5,-112,-116,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,Kenny Darby,45.5,-115,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,Braylon Staley,38.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,DeSean Bishop,9.5,-114,-115,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,Mike Matthews,59.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,Dasaahn Brame,24.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,DJ Miller,35.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,Willie Rodriguez,4.5,-1.5,-129.5,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,Braylon Staley,4.5,-133.0,101.0,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,Kenny Darby,4.5,115.5,-152.0,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,DJ Miller,3.5,103.0,-135.0,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,Mike Matthews,4.5,-116.0,-112.0,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_receptions,Dasaahn Brame,2.5,-125.0,-5.0,2
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_rush_yds,CJ Baxter,52.5,-115,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_rush_yds,Kenny Minchey,5.5,-114,-114,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_rush_yds,DeSean Bishop,129.5,-114,-115,3
+72cab2217ae57cbb00928eab05eb244e,10,Tennessee Volunteers,Kentucky Wildcats,2026-11-07T23:15:00Z,player_reception_yds,CJ Baxter,5.5,-106,-122,1
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_pass_yds,Cale Hellums,72.5,-114,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Rocco Conti,32.5,-115,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Cale Hellums,99.5,-114,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Kemper Hodges,108.5,-114,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Owen Allen,62.5,-114,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Gage LaDue,44.5,-115,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Godspower Nwawuihe,64.5,-115,-114,3
+241c23f2724f5ca91727a47a91f2facf,10,Army Black Knights,Air Force Falcons,2026-11-08T00:30:00Z,player_rush_yds,Samari Howard,25.5,-114,-114,3
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_pass_yds,Jake Fette,206.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_pass_yds,Isaac Wilson,214.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_reception_yds,Joseph Williams,76.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_reception_yds,DeAndre Moore Jr.,49.5,-114.5,-115,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_reception_yds,Derek Eusebio,41.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_reception_yds,Reed Harris,78.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_reception_yds,Omarion Miller,39.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_receptions,Derek Eusebio,3.5,-125.0,-105.0,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_receptions,Joseph Williams,6.5,118.5,-156.0,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_receptions,DeAndre Moore Jr.,3.5,-121.0,-107.5,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_receptions,Omarion Miller,3.5,-147.5,112.5,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_receptions,Reed Harris,5.0,3.5,-135.5,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_rush_yds,Richard Young,48.5,-114.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_rush_yds,Cardae Mack,99.5,-116.5,-114,4
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_rush_yds,JaQuail Smith,29.5,-114.0,-118,2
+4f0efedf5f575715851efea9089f7ea6,10,Arizona State Sun Devils,Colorado Buffaloes,2026-11-08T00:30:00Z,player_rush_yds,Isaac Wilson,17.5,-114,-114,1
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_pass_yds,Gunner Stockton,216.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_pass_yds,Trinidad Chambliss,259.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Caleb Odom,34.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Caleb Cunningham,27.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Craig Dandridge,38.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Deuce Alexander,66.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Talyn Taylor,32.5,-114,-115,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Lawson Luckie,19.5,-115,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,Horatio Fields,39.5,-115,-115,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_reception_yds,London Humphreys,22.5,-114,-115,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_receptions,Horatio Fields,3.5,-107.0,-122.0,2
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_receptions,Caleb Odom,3.5,134,-180,1
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_receptions,Deuce Alexander,4.5,-172,128,1
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_receptions,Caleb Cunningham,2.5,-116.5,-112.0,2
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Dwight Phillips Jr.,43.5,-112,-116,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Nate Frazier,54.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Gunner Stockton,22.5,-114,-115,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Makhi Frazier,42.5,-114,-114,3
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Shekai Mills-Knight,29.5,-116.0,-113.0,2
+0842fcd69fdf5061f6751f876ead09f2,10,Ole Miss Rebels,Georgia Bulldogs,2026-11-08T00:30:00Z,player_rush_yds,Trinidad Chambliss,19.5,-112,-118,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_pass_yds,Lincoln Kienholz,234.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Jordan Allen,59.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Isaac Brown,17.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,TreyShun Hurry,50.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Kevin Roche Jr.,33.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Tre Richardson,77.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Jaleel Skinner,19.5,-114,-115,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_reception_yds,Dalen Penson,51.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,Kevin Roche Jr.,4.5,110,-146,1
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,Dalen Penson,3.5,-119.0,-110.0,2
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,TreyShun Hurry,4.0,-8.5,-29.0,2
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,Isaac Brown,2.5,120,-160,1
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,Jordan Allen,5.5,110,-146,1
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_receptions,Tre Richardson,5.5,122.5,-162.0,2
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_rush_yds,Lincoln Kienholz,35.5,-115,-115,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_rush_yds,Isaac Brown,76.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_rush_yds,Justice Haynes,56.5,-114,-115,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_rush_yds,Keyjuan Brown,56.5,-114,-114,3
+dea9a1987ddc6fe5c1fc0cf1a596851c,10,Georgia Tech Yellow Jackets,Louisville Cardinals,2026-11-08T00:30:00Z,player_rush_yds,Trelain Maddox,29.5,-114,-114,1
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_pass_yds,Hank Brown,190.5,-114.0,-114.0,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Reece Vander Zee,36.0,-113.0,-114.5,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Luke Dehnicke,36.5,-114,-114,3
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Tony Diaz,49.5,-113.0,-114.5,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,DJ Vonnahme,37.5,-114.0,-114.0,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Griffin Wilde,70.5,-114,-114,3
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Drew Wagner,24.5,-114,-115,3
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,Reece Vander Zee,2.5,-144.5,110.5,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,Griffin Wilde,4.5,-152.5,116.0,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,Drew Wagner,3.5,105.5,-137.5,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,DJ Vonnahme,4.5,133.0,-176.5,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,Luke Dehnicke,2.5,-149.5,113.0,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_receptions,Tony Diaz,4.0,-13.5,-22.0,2
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_rush_yds,Xavier Williams,64.5,-114,-115,3
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_rush_yds,Caleb Komolafe,65.5,-114,-114,3
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Caleb Komolafe,8.5,-110,-118,1
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Ricky Ahumaraeze,5.5,-114,-114,1
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Evan James,5.5,-114,-114,1
+61cf0b043d9d95f0a73d0838ff08a24b,10,Northwestern Wildcats,Iowa Hawkeyes,2026-11-08T00:30:00Z,player_reception_yds,Addison Ostrenga,11.5,-114,-114,1
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_pass_yds,Darian Mensah,223.5,-114,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_pass_yds,CJ Carr,245.5,-114,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Jack Larsen,13.5,-115,-112,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Micah Gilbert,31.5,-115,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Jordan Faison,69.5,-115,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Elija Lofton,34.5,-115,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Jaden Greathouse,41.5,-114,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Daylyn Upshaw,44.5,-114,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Cooper Barkate,55.5,-114,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Mark Fletcher Jr.,8.5,-115,-112,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_reception_yds,Nolan James Jr.,7.5,-114,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Micah Gilbert,3.0,-10.5,-24.0,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Daylyn Upshaw,3.5,-124.0,-7.0,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Jordan Faison,4.5,-156.5,118.5,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Jaden Greathouse,3.5,-115.0,-114.5,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Cooper Barkate,4.5,-121.0,-107.0,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_receptions,Elija Lofton,3.5,-126.0,-4.0,2
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_rush_yds,Nolan James Jr.,68.5,-114,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_rush_yds,Mark Fletcher Jr.,57.5,-115,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_rush_yds,Jonaz Walton,43.5,-114,-114,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_rush_yds,Javian Mallory,42.5,-114,-115,3
+4aac00e6cc06b8905659f911419540d2,10,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,player_rush_yds,CJ Carr,6.5,-116,-111,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_pass_yds,Tommy Carr,204.5,-114.5,-114,4
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,JJ Buchanan,64.5,-114.5,-115,4
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Chrishon McCray,34.5,-114,-114,3
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Fredrick Moore,20.5,-115,-114,3
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Andrew Marsh,45.5,-114.5,-114,4
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,JJ Buchanan,4.5,-6.0,-124.0,2
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Chrishon McCray,3.5,111.0,-145.5,2
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Fredrick Moore,2.5,117.5,-154.5,2
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Andrew Marsh,4.5,112.0,-146.5,2
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_rush_yds,Savion Hiter,61.5,-114.5,-114,4
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_rush_yds,Tommy Carr,26.5,-114.5,-114,4
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_rush_yds,Kenneth Williams,51.5,-114,-114,3
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Kenneth Williams,12.5,-114,-114,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Rodney Bullard Jr.,19.5,-112,-115,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Hogan Hansen,25.5,-112,-115,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_reception_yds,Jalen Hoffman,14.5,-114,-114,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Hogan Hansen,2.5,-108,-120,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Rodney Bullard Jr.,1.5,-175,135,1
+2c3f80e228a486e04f6f7a38e4f00fb4,10,Michigan Wolverines,Michigan State Spartans,2026-11-08T00:30:00Z,player_receptions,Jalen Hoffman,1.5,-154,118,1
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_pass_yds,John Mateer,194.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_pass_yds,Tramell Jones Jr.,202.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Rocky Beers,40.5,-115,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Eric Singleton Jr.,30.5,-114,-115,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Dallas Wilson,35.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Ivan Carreon,30.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Isaiah Sategna III,56.5,-115,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_receptions,Isaiah Sategna III,4.5,-137.5,105.0,2
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_receptions,Rocky Beers,3.5,-145.5,10.5,2
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_receptions,Eric Singleton Jr.,3.5,-138.5,105.5,2
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_receptions,Dallas Wilson,3.5,-108,-122,1
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_rush_yds,Lloyd Avant,27.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_rush_yds,Jadan Baugh,87.5,-114,-114,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_rush_yds,John Mateer,17.5,-114,-115,3
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Jadan Baugh,8.5,-116,-111,1
+1ef954bd3305a66136e52ea0786f1593,10,Florida Gators,Oklahoma Sooners,2026-11-08T00:45:00Z,player_reception_yds,Lloyd Avant,7.5,-103,-125,1
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_pass_yds,Micah Alejado,280.5,-114,-114,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_reception_yds,Audric Harris,38.5,-115,-112,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_reception_yds,Jaden Smith,35.0,-114.0,-114.0,2
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_reception_yds,Tama Uiliata,29.5,-114,-114,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_reception_yds,Kam Thomas,35.5,-114.0,-114.0,2
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_reception_yds,Kainoa Carvalho,35.5,-114,-114,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_receptions,Kainoa Carvalho,3.5,-1.0,-130.0,2
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_rush_yds,Cam Barfield,35.5,-114,-114,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_rush_yds,Tavorus Jones,31.5,-114.0,-114.0,2
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_rush_yds,DeVon Rice,37.5,-115,-112,3
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_receptions,Jaden Smith,3.5,-172,128,1
+eca05dc53fc3a8dd74622a4b7657bc3b,10,UTEP Miners,Hawaii Rainbow Warriors,2026-11-08T02:30:00Z,player_receptions,Tama Uiliata,3.5,120,-160,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_pass_yds,Michael Hawkins Jr.,183.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_pass_yds,Thomas Castellanos,216.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Cam Cook,11.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Prince Strachan,34.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Kenny Johnson,63.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,J'Koby Williams,13.5,-102,-127,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Terrance Carter Jr.,32.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,DJ Epps,42.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_rush_yds,Michael Hawkins Jr.,77.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_rush_yds,Cameron Dickey,52.5,-115,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_rush_yds,Thomas Castellanos,63.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_rush_yds,J'Koby Williams,95.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_rush_yds,Cam Cook,89.5,-114,-114,3
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Coy Eakin,26.5,-110,-118,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_reception_yds,Micah Hudson,33.5,-111,-116,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_receptions,Terrance Carter Jr.,3.5,112,-145,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_receptions,Micah Hudson,2.5,104,-135,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_receptions,J'Koby Williams,2.5,130,-169,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_receptions,DJ Epps,3.5,139,-182,1
+6bfae12b9d44d12ca7dde4f4f4aedc7d,10,Texas Tech Red Raiders,West Virginia Mountaineers,2026-11-08T02:30:00Z,player_receptions,Prince Strachan,1.5,-159,122,1
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_pass_yds,Brad Jackson,248.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_pass_yds,Braden Atkinson,355.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Aaron Butler,28.5,-114,-115,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Jesse Legree,120.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Zechariah Sample,24.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Chris Dawn Jr.,58.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,DeCorion Temple,28.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,AJ Newberry,24.5,-114,-115,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Beau Sparks,58.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Torrance Burgess Jr.,15.5,-110,-118,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_reception_yds,Eric Olsen,48.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Jesse Legree,6.5,-137.5,5.0,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Chris Dawn Jr.,5.5,-112.5,-116.0,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Torrance Burgess Jr.,2.5,-115.0,-112.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Eric Olsen,4.5,-113.0,-114.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,AJ Newberry,2.5,-152.5,116.0,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Beau Sparks,5.5,129.0,-170.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Aaron Butler,2.5,108.0,-141.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,Zechariah Sample,1.5,-150.0,114.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_receptions,DeCorion Temple,3.5,123.0,-161.5,2
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_rush_yds,Brad Jackson,50.5,-114,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_rush_yds,Cornell Hatcher Jr.,35.5,-114,-115,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_rush_yds,AJ Newberry,45.5,-115,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_rush_yds,Davian Jackson,31.5,-115,-114,3
+d4334cec8f2060f3b8491ca9c7325892,10,Oregon State Beavers,Texas State Bobcats,2026-11-08T03:30:00Z,player_rush_yds,Torrance Burgess Jr.,81.5,-115,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_pass_yds,Jackson Arnold,209.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_pass_yds,Tyler Hughes,145.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_reception_yds,Keyan Burnett,19.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_reception_yds,Taz Reddicks,27.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_reception_yds,Jake Wilson,27.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_reception_yds,Kayden McGee,39.5,-115,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_reception_yds,Taeshaun Lyons,20.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_rush_yds,Markell Holman,44.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_rush_yds,Jackson Arnold,59.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_rush_yds,Jai'Den Thomas,89.5,-110,-118,1
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_rush_yds,Samuel Harris,31.5,-114,-114,3
+6ce85b1067e9e85cd0d8b3242905ecd7,10,UNLV Rebels,Wyoming Cowboys,2026-11-08T03:30:00Z,player_rush_yds,Tyler Hughes,70.5,-114,-115,3
