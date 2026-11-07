@@ -555,13 +555,13 @@ week 5           7- 7- 0     1      -0.78
 week 6           7- 7- 1            -0.70
 week 7           6- 9- 0            -3.90
 week 8           5- 4- 0            +0.60
-week 9           6- 2- 1            +3.80
+week 9           6- 3- 1            +2.70
 ---------------------------------------------------
 spreads         16-22- 2            -8.20
 totals          12-15- 2            -4.50
-props           21-15- 0     2      +3.81
+props           21-16- 0     2      +2.71
 ---------------------------------------------------
-season          49-52-4      2      -8.89
+season          49-53-4      2      -9.99
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -628,6 +628,12 @@ Two of the losses are worth keeping.
    player who has lost his job and cannot see a game plan, an early deficit or
    a coach who simply used someone else. Volume props carry that risk whatever
    the chart says.
+   Second instance, week 9: Traylon Ray was first string at WR-SL that morning,
+   played the whole game and was targeted zero times after averaging 4.0 a game.
+   The write-up had already named his volume as the thinnest of the five picks.
+   Both failures of this kind have been low-volume receivers, which suggests the
+   4-targets-a-game floor in screen 4 is doing less work than it looks: a player
+   at 4.0 is one quiet game plan away from nothing at all.
 
 33. **The aDOT screen was wrong and the Under screen is what replaced it.**
    After Rico Scott went for 156 against a 55.5 Under (quirk 30), the proposed
@@ -686,7 +692,7 @@ Two of the losses are worth keeping.
    diversions_2026wk<N>.json, not from the screenshot, and expect roughly one
    SP+ rank in three to be a half.
 
-## Week 9 card (graded: 6-2-1, +3.80u)
+## Week 9 card (graded: 6-3-1, +2.70u)
 
 Ten picks: five spreads, five props, no totals for the second week running.
 All 139 QA checks pass.
@@ -715,7 +721,7 @@ defends.
 
 ## Week 9 result (graded from ESPN, 2026-11-07)
 
-6-2-1 and +3.80 units, the best week of the season and the second winning week
+6-3-1 and +2.70 units, the best week of the season and the second winning week
 in a row. Both were cards with no totals on them.
 
 All nine settled games were re-checked against the week 10 PFF delta and
@@ -729,18 +735,18 @@ delta spans two games; Texas Tech's side of that game confirms it.
     Colorado State +7.5   lost 14-31              LOSS
     Virginia +12.5        lost  7-51              LOSS
 
-  props 4-0, +4.00u
+  props 4-1, +2.90u
     Caleb Hawkins Over 22.5     81 rec yds   (plus 194 rushing)
     Hunter Tipton Over 34.5     86 rec yds
     Emmett Mosley V Over 34.5   98 rec yds
     J'Koby Williams Over 64.5  175 rush yds
 
-Traylon Ray Over 29.5 is still UNGRADED. He recorded no reception and ESPN's
-box score lists only players with stats, so it cannot distinguish "played and
-caught nothing", a loss, from "did not play", a void. The week 10 TEAM grades
-have landed and confirm Ole Miss played, but only the PLAYER drop settles his
-own game count. This is the one thing ESPN grading cannot do that the PFF delta
-can, and it is the mirror of quirk 32's finding about teams that play twice.
+Traylon Ray Over 29.5 was settled by the week 10 player drop: his game count
+went 7 to 8, so he PLAYED, and his season targets and yards did not move at
+all. Zero targets. Graded a LOSS. This is the one thing ESPN grading cannot do
+that the PFF delta can -- the box score lists only players with stats, so "no
+catch" and "no appearance" look identical there, and they are a loss and a void
+respectively. When a prop player is missing from a box score, wait for the drop.
 
 37. **Props have turned, and the screens are the reason.** They were -0.19u
    through week 8 and are +3.81u through week 9, 21-15 with two voids. Screens
