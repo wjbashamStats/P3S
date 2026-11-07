@@ -544,7 +544,7 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ---
 
-## Running record (through week 8, 2026)
+## Running record (through week 9, 2026)
 
 ```
                  W- L- P   voids    units
@@ -555,12 +555,13 @@ week 5           7- 7- 0     1      -0.78
 week 6           7- 7- 1            -0.70
 week 7           6- 9- 0            -3.90
 week 8           5- 4- 0            +0.60
+week 9           6- 2- 1            +3.80
 ---------------------------------------------------
-spreads         14-20- 1            -8.00
+spreads         16-22- 2            -8.20
 totals          12-15- 2            -4.50
-props           17-15- 0     2      -0.19
+props           21-15- 0     2      +3.81
 ---------------------------------------------------
-season          43-50-3      2     -12.69
+season          49-52-4      2      -8.89
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -685,7 +686,7 @@ Two of the losses are worth keeping.
    diversions_2026wk<N>.json, not from the screenshot, and expect roughly one
    SP+ rank in three to be a half.
 
-## Week 9 card (built, ungraded)
+## Week 9 card (graded: 6-2-1, +3.80u)
 
 Ten picks: five spreads, five props, no totals for the second week running.
 All 139 QA checks pass.
@@ -711,3 +712,35 @@ defends.
    prop card. normalize_name now handles both orders, and
    test_depth_chart_names.py pins both formats plus the suffix cases so a third
    change is caught by a test rather than on a Saturday morning.
+
+## Week 9 result (graded from ESPN, 2026-11-07)
+
+6-2-1 and +3.80 units, the best week of the season and the second winning week
+in a row. Both were cards with no totals on them.
+
+  spreads 2-2-1, -0.20u
+    Fresno State +6.0     won 38-22 outright      WIN
+    Navy +30.5            lost 13-35              WIN
+    Kansas State +3.0     lost 24-27              PUSH, on the number
+    Colorado State +7.5   lost 14-31              LOSS
+    Virginia +12.5        lost  7-51              LOSS
+
+  props 4-0, +4.00u
+    Caleb Hawkins Over 22.5     81 rec yds   (plus 194 rushing)
+    Hunter Tipton Over 34.5     86 rec yds
+    Emmett Mosley V Over 34.5   98 rec yds
+    J'Koby Williams Over 64.5  175 rush yds
+
+Traylon Ray Over 29.5 is UNGRADED. He recorded no reception and ESPN's box
+score lists only players with stats, so it cannot distinguish "played and
+caught nothing", which is a loss, from "did not play", which is a void. The
+week 10 PFF drop settles it: a game count that went up means he played. This is
+the one thing ESPN grading cannot do that the PFF delta can, and it is the
+mirror of quirk 32's finding about teams that play twice.
+
+37. **Props have turned, and the screens are the reason.** They were -0.19u
+   through week 8 and are +3.81u through week 9, 21-15 with two voids. Screens
+   9 and 10 went in before the week 9 card and that card's props went 4-0. One
+   week is not evidence, but the direction matches what quirk 33 predicted:
+   the category's losses were concentrated in Unders, and the Unders are gone.
+   Spreads remain the hole at -8.20u. Totals have not been bet for two weeks.
