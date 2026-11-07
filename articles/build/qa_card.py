@@ -212,9 +212,11 @@ class QA:
             model = r["pred_spread"] if home_side else -r["pred_spread"]
             pts = r["pts_margin"] if home_side else -r["pts_margin"]
             net = r["spread_gap"] - self.level
+            # the Gap row was dropped from the card -- it named a quantity the
+            # reader could not act on. The book line and the model number are
+            # both still in the table, and their difference is the gap.
             parts = [(f"{fmt(abs(book))}", "Book line"),
                      (f"{fmt(abs(model))}", "Model number"),
-                     (f"{fmt(abs(r['spread_gap']))} pts, {fmt(abs(net))}", "Gap"),
                      (f"{fmt(abs(pts))}", "Points check")]
             allok = True
             for want, label in parts:
