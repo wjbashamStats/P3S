@@ -133,25 +133,14 @@ const DOC = {
   file: 'Week10_Betting_Card.docx',
   title: 'Week 10 Betting Card',
   subtitle: HEAD,
-  lede: [
-    NO_TOTALS,
-    "Spreads are selected on two measures built for every game: the model number, which is the SP+ differential plus home field, and the points check, which uses nothing but each team's own 2026 scoring and home field and shares no input with SP+. Each is taken relative to where the whole slate sits. A game qualifies only when both land on the same side, and candidates are ranked by the weaker of the two. Thirty-one of the 48 games had the two agreeing this week, the most of any slate this season.",
-    QA_NOTE,
-    RECORD_NOTE,
-  ],
+  lede: [],
   sections: [
     { title: 'Spreads', withImages: true, items: C.spreads,
-      intro: [
-        'Across the 48 rated Saturday games the model sits 0.7 points more toward the home side than the market does, the widest that gap has been this season, so the adjusted readings here differ a little more from the raw ones than usual.',
-        SOURCE_NOTE,
-      ] },
+      intro: [],
+    },
     { title: 'Player Props', withImages: false, items: C.props,
-      intro: [
-        'The survivors were then checked against this morning\u2019s depth charts and two were not listed starters \u2014 one receiver second at his position, and another second behind a teammate who is himself on the survivor list. Both came off. Of the eight checked, six cleared.',
-        'One caution carried over from last week rather than buried. Traylon Ray was first string on the morning of week 9, played the whole game and was targeted zero times; the same thing happened in week 8. Both were receivers at four targets a game, which is the floor screen 4 allows. Two of the five below sit at 4.1, and that is the risk they carry: the depth chart confirms a role, not a workload.',
-        'Quarterback rushing props remain excluded. Sacks count against rushing yards in official college statistics and not in PFF, so the model projects a stat the market is not pricing.',
-        SOURCE_NOTE,
-      ] },
+      intro: [],
+    },
   ],
 };
 
