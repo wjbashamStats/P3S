@@ -718,6 +718,10 @@ defends.
 6-2-1 and +3.80 units, the best week of the season and the second winning week
 in a row. Both were cards with no totals on them.
 
+All nine settled games were re-checked against the week 10 PFF delta and
+reconcile exactly, except Arizona, which played twice in the window so its
+delta spans two games; Texas Tech's side of that game confirms it.
+
   spreads 2-2-1, -0.20u
     Fresno State +6.0     won 38-22 outright      WIN
     Navy +30.5            lost 13-35              WIN
@@ -731,12 +735,12 @@ in a row. Both were cards with no totals on them.
     Emmett Mosley V Over 34.5   98 rec yds
     J'Koby Williams Over 64.5  175 rush yds
 
-Traylon Ray Over 29.5 is UNGRADED. He recorded no reception and ESPN's box
-score lists only players with stats, so it cannot distinguish "played and
-caught nothing", which is a loss, from "did not play", which is a void. The
-week 10 PFF drop settles it: a game count that went up means he played. This is
-the one thing ESPN grading cannot do that the PFF delta can, and it is the
-mirror of quirk 32's finding about teams that play twice.
+Traylon Ray Over 29.5 is still UNGRADED. He recorded no reception and ESPN's
+box score lists only players with stats, so it cannot distinguish "played and
+caught nothing", a loss, from "did not play", a void. The week 10 TEAM grades
+have landed and confirm Ole Miss played, but only the PLAYER drop settles his
+own game count. This is the one thing ESPN grading cannot do that the PFF delta
+can, and it is the mirror of quirk 32's finding about teams that play twice.
 
 37. **Props have turned, and the screens are the reason.** They were -0.19u
    through week 8 and are +3.81u through week 9, 21-15 with two voids. Screens
