@@ -357,7 +357,8 @@ class QA:
     # Slate-wide ("on the board", all 49 games), within-game and national claims
     # are real and stay registered.
     SUP = (r'(largest|smallest|most|least|widest|biggest|highest|lowest|weakest|strongest|'
-           r'hardest|easiest|best|worst|fastest|slowest|tightest|thinnest|only|'
+           r'hardest|easiest|best|worst|fastest|slowest|tightest|thinnest|only|softest|'
+           r'top-ranked|top ranked|first in the country|deepest|thickest|'
            r'second-largest|third-slowest|dead last)')
     SCOPE = (r'(on this card|on the card|on this prop card|on the board|on the slate|'
              r'in this game|in this matchup|in the country|of any team|of any back|'

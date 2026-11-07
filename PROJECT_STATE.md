@@ -786,3 +786,35 @@ list.
    scripts run on python3.11, so `pip install requests` appears to work and
    changes nothing. Install it with `/usr/local/bin/python3 -m pip install
    requests`. This belongs in a setup script.
+
+40. **No em dashes, no self-referential prose. This is standing, not per-week.**
+   It was given as an instruction in week 6 and had to be given again in week
+   10, by which point the week 10 card carried eight em dashes and five
+   sentences in which the document talked about itself ("the card is not
+   claiming otherwise", "the card should say so", "the honest weakness").
+   Both drift back in because they are natural to draft in. Check before every
+   build, not after the owner asks:
+
+       python3 - <<'EOF'
+       import json, re
+       c = json.load(open('articles/build/content.json'))
+       blob = json.dumps(c, ensure_ascii=False)
+       for p in ('\u2014', '\u2013', '--', r'the card (is|should|does)',
+                 r'\bhonest\b', r'worth noting', r'\bI\b', r'\bwe\b'):
+           n = len(re.findall(p, blob, re.I))
+           print(f'{p!r:28} {n}')
+       EOF
+
+   An em dash is almost always a colon, a full stop or a "because" that was
+   not chosen. Self-referential prose is a tell that the sentence is about the
+   writing rather than the game: say the thing instead of announcing that the
+   card is saying it.
+
+41. **"top-ranked" was not in the superlative vocabulary.** Rewording Miami's
+   claim out of "weakest" and into "softest" silently took it out of the
+   registry's reach, and the run reported only that a registered claim no
+   longer appeared. A true claim that stops being checked is the quiet version
+   of the failure quirk 21 exists to prevent. SUP now also covers softest,
+   top-ranked, first in the country, deepest and thickest. Adding them
+   immediately caught "18.6, the deepest profile on this card", which was
+   unregistrable by design.
