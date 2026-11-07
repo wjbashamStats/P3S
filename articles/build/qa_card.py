@@ -117,6 +117,22 @@ class QA:
                       f"{e:%a %H:%M ET}  UTC {u:%a %H:%M}  in {ahead:5.1f}h{note}")
 
     # -------------------------------------------------------------------- ties
+    def grade_rank_lookup(self, g, side):
+        """Every PFF grade rank for one side of a game, as whole numbers."""
+        import csv as _csv, os as _os
+        if not hasattr(self, "_granks"):
+            path = _os.path.join(ROOT, "team_pff_grades_ranked_2026.csv")
+            self._granks = {}
+            if _os.path.exists(path):
+                for r in _csv.DictReader(open(path)):
+                    self._granks[r["team"]] = {int(v) for k, v in r.items()
+                                               if k.startswith("rank_") and str(v).isdigit()}
+        name = g.get(side + "_display") or g.get(side + "_team", "")
+        for key, ranks in self._granks.items():
+            if name.startswith(key) or key.startswith(name):
+                return ranks
+        return set()
+
     def check_ties(self):
         print("\n--- ranks that are ties must be written 'tied Nth' ---")
         flagged = 0
@@ -135,6 +151,12 @@ class QA:
                         v = g[side + "_power"][key]
                         (exact.add(int(v)) if v == int(v)
                          else halves.setdefault(int(v), []).append(f"{g[side+'_display']} {key}={v:g}"))
+                # PFF grade ranks are whole numbers and the card quotes them
+                # constantly. Without them a legitimate "112th" coverage rank is
+                # flagged because some five-factor figure in the same game is
+                # 112.5 -- which is how UCF's coverage rank failed in week 10.
+                for team in (self.grade_rank_lookup(g, "home"), self.grade_rank_lookup(g, "away")):
+                    exact.update(team)
                 for m in re.finditer(r'(?<!tied )\b(\d+)(st|nd|rd|th)\b', self.text(it)):
                     n = int(m.group(1))
                     if n in halves and n not in exact:
@@ -377,6 +399,14 @@ class QA:
             out.append((it, name, kind, (self.rush if kind == "rush" else self.recv)[name]))
         return out
 
+    def graded_teams(self):
+        """Rows of the ranked team grade file, for superlatives that span the country."""
+        import csv as _csv, os as _os
+        if not hasattr(self, "_gteams"):
+            self._gteams = list(_csv.DictReader(
+                open(_os.path.join(ROOT, "team_pff_grades_ranked_2026.csv"))))
+        return self._gteams
+
     def check_superlatives(self):
         print("\n--- scoped superlatives, each computed rather than recalled ---")
         cu = self.cushions()
@@ -410,13 +440,16 @@ class QA:
             covs.setdefault(it["pick"], None)
 
         REG = {
-          # Colorado @ Oklahoma State is posted at 56.0, the highest of the nine
-          # games this card touches. The scope is the card, not the slate, and
-          # the predicate computes it over exactly the games the card names.
-          "the highest total of the nine games on this card":
-            lambda: max(self.calc[(self.game_of(it)["away_team"], self.game_of(it)["home_team"])]["book_total"]
-                        for sec in ("spreads", "props") for it in self.content.get(sec, []))
-                    == self.calc[("Colorado Buffaloes", "Oklahoma State Cowboys")]["book_total"],
+          # Texas State @ Oregon State is posted at 71.0, the highest total of
+          # the 48 rated Saturday games -- the slate, not just this card.
+          "the highest total on the slate this week":
+            lambda: max(r["book_total"] for r in self.calc.values())
+                    == self.calc[("Texas State Bobcats", "Oregon State Beavers")]["book_total"],
+          # Miami's 94.2 offensive grade is 1st of 138 in the ranked team file.
+          "the top-ranked offence in the country by grade":
+            lambda: min(int(r["rank_grade_off"]) for r in self.graded_teams()) == 1
+                    and next(r["team"] for r in self.graded_teams()
+                             if int(r["rank_grade_off"]) == 1) == "Miami (FL)",
         }
         seen = set()
         for sec in ("spreads", "totals", "props"):

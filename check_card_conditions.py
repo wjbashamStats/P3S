@@ -63,6 +63,11 @@ VENUES = {
     "Fresno State": (36.8125, -119.7478), "Iowa State": (42.0140, -93.6358),
     "Memphis": (35.1186, -89.9370), "Texas": (30.2837, -97.7324),
     "Texas Tech": (33.5906, -101.8726),
+    # week 10
+    "UConn": (41.8065, -72.2487), "Wisconsin": (43.0700, -89.4126),
+    "Kansas State": (39.2020, -96.5947), "Arizona State": (33.4264, -111.9325),
+    "Purdue": (40.4348, -86.9184), "Colorado State": (40.5716, -105.0859),
+    "Oregon State": (44.5593, -123.2820), "Notre Dame": (41.6985, -86.2336),
 }
 
 # PFF team name -> ourlads slug, for the teams a prop can name
@@ -75,6 +80,8 @@ SLUGS = {
     "BOSTON COL": "boston-college", "AUBURN": "auburn",
     "MEMPHIS": "memphis", "TEXAS TECH": "texas-tech", "IOWA STATE": "iowa-state",
     "TEXAS": "texas",
+    "BOISE ST": "boise-state", "ARIZONA ST": "arizona-state", "OREGON ST": "oregon-state",
+    "NOTRE DAME": "notre-dame", "PURDUE": "purdue", "HAWAII": "hawaii",
     "TCU": "tcu", "NEBRASKA": "nebraska", "ARMY": "army",
 }
 

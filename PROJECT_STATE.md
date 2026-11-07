@@ -754,3 +754,35 @@ respectively. When a prop player is missing from a box score, wait for the drop.
    week is not evidence, but the direction matches what quirk 33 predicted:
    the category's losses were concentrated in Unders, and the Unders are gone.
    Spreads remain the hole at -8.20u. Totals have not been bet for two weeks.
+
+## Week 10 card (built, ungraded)
+
+Ten picks: five spreads, five props, no totals for the third week running. All
+141 QA checks pass.
+
+The spread board is the widest agreement of the season: 31 of 48 games had the
+two measures on the same side. Four picks take points and one lays them
+(Arizona State -3.5); the exclusion was checked and Colorado are 2-5-1 against
+the number, so it does not apply.
+
+Props: 350 priced rows, 19 survivors, eight depth-checked, six clean, five
+picked. Two came off on the chart -- one receiver listed second, and Asaad
+Waseem listed second behind Xavier Townsend, who is himself on the survivor
+list.
+
+38. **Two checker upgrades, both from false positives this week.** The tie
+   checker was flagging a legitimate whole-number rank whenever some other
+   figure in the same game ended in .5 -- UCF's coverage rank of 112 against
+   Kansas's defensive Field Position of 112.5. It only knew about five-factor
+   and SP+/tempo ranks, not the PFF grade ranks the card quotes constantly, so
+   those are now in its set of known-exact values. The superlative registry
+   gained two computed entries rather than the claims being watered down: the
+   highest total on the 48-game slate, and the top-ranked offence in the
+   country by grade. Both are checked against the data, not asserted.
+
+39. **requests is not installed in a fresh container.** pull_depth_charts.py
+   needs it and failed silently enough to look like eight depth-chart pulls
+   succeeding with zero rows. Worse, pip installs to python3.13 while the
+   scripts run on python3.11, so `pip install requests` appears to work and
+   changes nothing. Install it with `/usr/local/bin/python3 -m pip install
+   requests`. This belongs in a setup script.
