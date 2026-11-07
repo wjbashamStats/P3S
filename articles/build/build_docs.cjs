@@ -134,7 +134,6 @@ const DOC = {
   title: 'Week 10 Betting Card',
   subtitle: HEAD,
   lede: [
-    'Ten positions for Saturday: five spreads and five player props. The slate is 48 rated Saturday games with a posted spread and total, and every pick below is drawn from that pool.',
     NO_TOTALS,
     "Spreads are selected on two measures built for every game: the model number, which is the SP+ differential plus home field, and the points check, which uses nothing but each team's own 2026 scoring and home field and shares no input with SP+. Each is taken relative to where the whole slate sits. A game qualifies only when both land on the same side, and candidates are ranked by the weaker of the two. Thirty-one of the 48 games had the two agreeing this week, the most of any slate this season.",
     QA_NOTE,
@@ -143,13 +142,11 @@ const DOC = {
   sections: [
     { title: 'Spreads', withImages: true, items: C.spreads,
       intro: [
-        'Five spreads where the two measures agree on a side. Four take points and one lays them, and the standing exclusion was checked on that one: do not lay a price into a team whose record against the spread is running ahead of its rating. Colorado are 2-5-1 against the number, 127th, so it does not apply.',
         'Across the 48 rated Saturday games the model sits 0.7 points more toward the home side than the market does, the widest that gap has been this season, so the adjusted readings here differ a little more from the raw ones than usual.',
         SOURCE_NOTE,
       ] },
     { title: 'Player Props', withImages: false, items: C.props,
       intro: [
-        '350 priced rows went through the ten screens and 19 survived. The screens: a model edge of at least 20 percent; the player\u2019s own 2026 production agreeing with the side by at least 20 percent; a real role, 20+ targets for receivers and 12+ carries a game for backs; 4+ targets a game for any receiving Over; no opponent or pace multiplier outside 0.6 to 1.6; a spread under 28 points with a rated opponent; at least two books posting the number; the player\u2019s own game count level with his team\u2019s; no yardage Unders; and no receiving Under above a 12-yard average depth of target.',
         'The survivors were then checked against this morning\u2019s depth charts and two were not listed starters \u2014 one receiver second at his position, and another second behind a teammate who is himself on the survivor list. Both came off. Of the eight checked, six cleared.',
         'One caution carried over from last week rather than buried. Traylon Ray was first string on the morning of week 9, played the whole game and was targeted zero times; the same thing happened in week 8. Both were receivers at four targets a game, which is the floor screen 4 allows. Two of the five below sit at 4.1, and that is the risk they carry: the depth chart confirms a role, not a workload.',
         'Quarterback rushing props remain excluded. Sacks count against rushing yards in official college statistics and not in PFF, so the model projects a stat the market is not pricing.',
