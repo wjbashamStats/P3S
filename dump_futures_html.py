@@ -137,7 +137,10 @@ def main():
 
 
     out_dir = args.out_dir or os.path.join("futures_html", f"week{args.week}")
-    os.makedirs(out_dir, exist_ok=True)
+    # Not created until there is something to write: a --dry-run that made an
+    # empty futures_html/weekN would read later as a pull that produced nothing.
+    if not args.dry_run:
+        os.makedirs(out_dir, exist_ok=True)
     keys = args.only.split(",") if args.only else list(PAGES)
     if args.skip:
         drop = {k.strip() for k in args.skip.split(",") if k.strip()}
