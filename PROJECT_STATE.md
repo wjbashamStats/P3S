@@ -944,3 +944,58 @@ list.
    every collision on this slate. Six venues and six ourlads slugs were added
    at the same time.
 
+48. **Nothing in the pipeline knows whether a team's quarterback is playing,
+   and on week 11 that was worth two picks and nearly a third.** The user asked
+   whether Mississippi State's starter was hurt. He is: Kamario Taylor started
+   six games, threw for 1448 yards and 17 touchdowns at a 71.2 grade, has not
+   appeared since October 17, and is not on the ourlads chart at all. Every
+   number the card quoted for Mississippi State averaged his games with the
+   three since.
+
+   The check that finds this, and that should now run every week: for each team
+   on the card, take the quarterback with the most dropbacks and compare his
+   game count with his team's. Five of this week's ten teams had a gap of
+   three. Differencing the passing file across drops then separates the two
+   cases, and they are different:
+
+   | team | leader | missed | last three windows |
+   | --- | --- | --- | --- |
+   | Mississippi State | Kamario Taylor | 3 | out, out, out |
+   | Kansas State | Avery Johnson | 3 | out, out, out |
+   | Washington State | Caden Pinnick | 3 | out, out, out |
+   | Syracuse | Steve Angeli | 3 | played, played, played |
+   | Colorado State | Hauss Hejny | 3 | played, played, played |
+
+   Angeli and Hejny missed time earlier and are back. The ourlads chart does
+   not settle it on its own: it still lists Johnson and Pinnick first despite
+   three missed games each, which is quirk 28 again, a chart confirming a role
+   rather than availability. The snap counts are the harder evidence.
+
+   What it changed. Kansas State +13.5 came off: run on each side's last three
+   games the cover margin falls from +9.8 to +2.7, and the write-up's case was
+   "Kansas State score 31.3 a game", a rate Johnson produced, against 23.0
+   since. Mississippi State +2.5 stayed, and the arithmetic corrected the
+   instinct that it should not: their scoring fell from 39.0 to 13.7, but
+   Auburn have scored 19.3 and allowed 35.3 over the same three games, so the
+   points check on recent form is wider for Mississippi State (4.2) than the
+   season version (2.8). A quarterback being out is a reason to recheck a pick,
+   not a reason to drop it.
+
+   The same conditioning has to be applied to props, where it cuts both ways
+   and the season rate hides it completely:
+
+   - Umari Hatcher came off. His 107.1 a game is carried by 152, 126 and 224
+     in the three games Steve Angeli missed. With Angeli playing he has gone
+     58, 103, 65 and 12, which is 59.5 a game and one game in four over a 71.5
+     line.
+   - Jaron Tibbs stayed and the case got better. Without Avery Johnson he has
+     gone 57, 54 and 42, clearing 29.5 all three times; with Johnson he went
+     114, 6, 33 and 67. The replacement has not cost him anything.
+   - Ed Small was unaffected. Jaden Craig has played all nine.
+
+   This is the same failure mode as quirk 42 in a new place. A season average
+   is only a rate if the thing generating it stayed the same, and a
+   quarterback change is the largest way it does not. Screen every prop on who
+   was throwing before trusting the per-game number, and recheck every spread
+   whose team has a quarterback gap.
+
