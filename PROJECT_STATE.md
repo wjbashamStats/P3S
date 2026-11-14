@@ -860,3 +860,29 @@ list.
    source problem. If a future prop ever lands inside a yard of its line,
    grade it from the PFF delta and say which source was used.
 
+45. **Correction: win_totals was never "rendering without an odds table".** I
+   had been reporting that for three weeks. The week 7 pull parsed clean at
+   138 rows, and weeks 8, 9 and 10 have no `win_totals.html` in the folder at
+   all, so there was never a thin page to retry into. The page itself is still
+   live and still titled for the 2026 season. The dump step simply stopped
+   producing that one file, and the advice to "retry just that page" was
+   advice against a failure mode that was not happening.
+
+   Win totals are out of the weekly routine from week 11 on, which costs
+   nothing: `refresh_futures.py` merges only the pages it finds and warns on
+   the rest, `--validate` counts only the pages present and exits 0 at 10/10,
+   and nothing in the model computes with the `Win_<Book>_*` columns. The
+   model's own `Win Total` column is computed internally and the futures merge
+   never touches it; that is the one `build_team_preview_data.py` reads. The
+   card has never cited a win total.
+
+   `dump_futures_html.py` gained `--skip`, applied after `--only`, which
+   reports unknown keys and returns cleanly when the skip empties the list.
+   The playwright import guard moved below the key selection so `--dry-run`
+   can exercise that path on a box with no browser.
+
+   The part that is still a trap: those 20 `Win_*` columns hold week 7 prices
+   under names that carry no date, and nothing in the file says so. A stale
+   price that looks live is quirk 21's failure in a different costume. Stamp
+   or drop them before anything reads them as current.
+
