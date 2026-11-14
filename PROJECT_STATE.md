@@ -544,7 +544,7 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ---
 
-## Running record (through week 9, 2026)
+## Running record (through week 10, 2026)
 
 ```
                  W- L- P   voids    units
@@ -556,12 +556,13 @@ week 6           7- 7- 1            -0.70
 week 7           6- 9- 0            -3.90
 week 8           5- 4- 0            +0.60
 week 9           6- 3- 1            +2.70
+week 10          5- 5- 0            -0.50
 ---------------------------------------------------
-spreads         16-22- 2            -8.20
+spreads         18-25- 2            -9.50
 totals          12-15- 2            -4.50
-props           21-16- 0     2      +2.71
+props           24-18- 0     2      +3.51
 ---------------------------------------------------
-season          49-53-4      2      -9.99
+season          54-58-4      2     -10.49
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -818,3 +819,33 @@ list.
    top-ranked, first in the country, deepest and thickest. Adding them
    immediately caught "18.6, the deepest profile on this card", which was
    unregistrable by design.
+
+42. **Week 10 broke the two-week winning streak at 5-5 and -0.50 units, and
+   the split was the same one the season keeps showing.** Spreads went 2-3 and
+   are now 18-25-2 at -9.50, the category that has lost money in every month
+   of the season. Props went 3-2 and are now 24-18 at +3.51, which is the
+   third straight winning week for the category since the screens went in.
+   Totals sat out for the third straight week.
+
+   The two losing props are both instances of the pattern quirk 28 and 31
+   describe, not new failures. AJ Newberry was carried at 4.5 targets a game
+   and a 1.8 average depth of target, and he caught the one ball thrown to him
+   for 4 yards while taking 9 carries for 41. Nik McMillan caught 6 for 31 on
+   a 45.5 line. Both are low-volume receivers whose role was confirmed and
+   whose workload was not, which is now the fourth and fifth instance. The
+   three winners were all high-volume: Gilbert 9 for 98 and two scores,
+   Miller 5 for 64, Wright 2 for 39 at 19.5 a catch.
+
+   The 4-targets-a-game floor in screen 4 is the screen those two cleared and
+   should not have. Newberry at 4.5 and McMillan both sit a few tenths over a
+   line drawn at 4.0. Five instances is enough to say the floor is in the
+   wrong place, not enough to say where it belongs; the honest reading is that
+   a receiving Over wants volume well clear of the floor, not a hair past it.
+
+43. **All ten week 10 picks were graded from ESPN and all five spread games
+   then reconciled against the week 11 PFF points delta exactly, both
+   directions.** Kansas State allowing 66 looked like a restatement artifact
+   and was not: Oklahoma State really did score 66. This is the third week
+   running that ESPN on the night and the PFF delta a week later have agreed
+   to the point, which is what quirk 32 claimed and now has a third
+   confirmation.
