@@ -860,26 +860,42 @@ list.
    source problem. If a future prop ever lands inside a yard of its line,
    grade it from the PFF delta and say which source was used.
 
-45. **Correction: win_totals was never "rendering without an odds table".** I
-   had been reporting that for three weeks. The week 7 pull parsed clean at
-   138 rows, and weeks 8, 9 and 10 have no `win_totals.html` in the folder at
-   all, so there was never a thin page to retry into. The page itself is still
-   live and still titled for the 2026 season. The dump step simply stopped
-   producing that one file, and the advice to "retry just that page" was
-   advice against a failure mode that was not happening.
+45. **win_totals renders without an odds table, and the retry advice was
+   right the first time.** I wrote a "correction" to this saying the page had
+   simply stopped being produced and there was never a thin page to retry
+   into. That was wrong, and wrong in a way worth recording: I checked for
+   `win_totals.html` in each week folder, found none for weeks 8 to 10, and
+   stopped there. The files were sitting next to the ones I listed as
+   `win_totals.html.rejected`, which is the validator doing exactly its job.
 
-   Win totals are out of the weekly routine from week 11 on, which costs
-   nothing: `refresh_futures.py` merges only the pages it finds and warns on
-   the rest, `--validate` counts only the pages present and exits 0 at 10/10,
-   and nothing in the model computes with the `Win_<Book>_*` columns. The
-   model's own `Win Total` column is computed internally and the futures merge
-   never touches it; that is the one `build_team_preview_data.py` reads. The
-   card has never cited a win total.
+   The page is fetched every week and renders, but table-less. The size tell
+   is unambiguous once you look at it: weeks 1, 6 and 7 came down at 945, 880
+   and 862 KB and parsed to 138 rows each, and weeks 8 through 11 came down at
+   424, 409, 409 and 409 KB and parsed to 0. Vegas Insider stopped publishing
+   the market around week 8 and left the page up.
+
+   Two lessons, and the second is the one that cost something. A directory
+   listing filtered to the name you expect will confirm whatever you already
+   think; `ls win_totals*` would have shown the truth immediately. And a
+   "correction" issued on one glance at one glob is worse than the claim it
+   replaced, because it carries the authority of a second look without having
+   taken one.
+
+   The decision to drop win totals from the weekly pull stands and is better
+   supported than before: four consecutive table-less renders at a consistent
+   409 KB is a market that is gone, not a flaky fetch. Retrying it is futile,
+   which is what `--skip` is for. Dropping it costs nothing downstream:
+   `refresh_futures.py` merges only the pages it finds and warns on the rest,
+   `--validate` globs `*.html` so a `.rejected` file is correctly invisible to
+   it and it exits 0 at 10/10, and nothing in the model computes with the
+   `Win_<Book>_*` columns. The model's own `Win Total` column is computed
+   internally, the futures merge never touches it, and that is the one
+   `build_team_preview_data.py` reads. The card has never cited a win total.
 
    `dump_futures_html.py` gained `--skip`, applied after `--only`, which
-   reports unknown keys and returns cleanly when the skip empties the list.
-   The playwright import guard moved below the key selection so `--dry-run`
-   can exercise that path on a box with no browser.
+   reports unknown keys and returns cleanly when the skip empties the list. A
+   `--dry-run` also no longer creates the output folder, which was leaving an
+   empty `futures_html/weekN` that reads later as a pull producing nothing.
 
    The part that is still a trap: those 20 `Win_*` columns hold week 7 prices
    under names that carry no date, and nothing in the file says so. A stale
