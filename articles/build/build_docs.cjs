@@ -119,19 +119,19 @@ function buildOneDoc({ title, subtitle, lede, sections }) {
   });
 }
 
-const HEAD = 'Week 10 \u00b7 Saturday November 7, 2026';
+const HEAD = 'Week 11 \u00b7 Saturday November 14, 2026';
 
-const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is eight, nine or ten this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. All ten kickoffs are verified Saturday in Eastern time, every prop player was checked against this morning's depth chart, and every venue against the National Weather Service forecast at kickoff.";
+const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is nine, ten or eleven this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. All eight kickoffs are verified Saturday in Eastern time, every prop player was checked against this morning's depth chart, and every venue against the National Weather Service forecast at kickoff.";
 
-const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers eight games for 99 teams, nine for 36 and ten for 3. Futures prices are the week 10 pull except win totals, which are week 7.";
+const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers nine games for 112 teams, ten for 25 and eleven for 1. Futures prices are the week 11 pull except win totals, which are week 7 and are no longer published.";
 
-const RECORD_NOTE = "Season to date: 49-53-4 and two voids, down 9.99 units across 108 picks. Spreads 16-22-2 (-8.20u), totals 12-15-2 (-4.50u), props 21-16 and two voids (+2.71u). The last two weeks were the only winning weeks of the season, +0.60 and +2.70 units, and both were cards with no totals on them.";
+const RECORD_NOTE = "Season to date: 54-58-4 and two voids, down 10.49 units across 118 picks. Spreads 18-25-2 (-9.50u), totals 12-15-2 (-4.50u), props 24-18 and two voids (+3.51u). Week 10 went 5-5 and lost 0.50 units: spreads 2-3, props 3-2.";
 
-const NO_TOTALS = "No totals for the third week running. Week 7's five went 0-5 with the three Overs missing by 19, 25 and 20.5 points in games where both selection measures agreed, and the category stays out until that test has been scored across every game of weeks 6 through 9 rather than the fifteen that were bet.";
+const NO_TOTALS = "No totals for the fourth week running. Week 7's five went 0-5 with the three Overs missing by 19, 25 and 20.5 points in games where both selection measures agreed, and the category stays out until that test has been scored across every game of weeks 6 through 10 rather than the fifteen that were bet.";
 
 const DOC = {
-  file: 'Week10_Betting_Card.docx',
-  title: 'Week 10 Betting Card',
+  file: 'Week11_Betting_Card.docx',
+  title: 'Week 11 Betting Card',
   subtitle: HEAD,
   lede: [],
   sections: [

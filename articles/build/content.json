@@ -1,421 +1,355 @@
 {
-  "spreads": [
-    {
-      "pick": "UConn +8.0",
-      "game": "North Carolina Tar Heels @ UConn Huskies",
-      "img": "North_Carolina_at_UConn",
-      "facts": [
-        [
-          "Book line",
-          "North Carolina -8.0"
-        ],
-        [
-          "Model number",
-          "North Carolina -1.8"
-        ],
-        [
-          "Points check",
-          "UConn by 5.5"
-        ],
-        [
-          "SP+ (2026)",
-          "North Carolina +3.9 (53rd) vs UConn -0.2 (72nd), home edge +2.3"
-        ],
-        [
-          "UConn 2026",
-          "4-4, 5-2-1 ATS (17th), 34.4 points a game"
-        ],
-        [
-          "UConn offense",
-          "23rd by grade, 6th in Explosiveness, 45th in Success Rate"
-        ],
-        [
-          "North Carolina offense",
-          "25.8 points a game, 125th in Explosiveness"
-        ]
-      ],
-      "paras": [
-        "Book has North Carolina laying eight on the road. The rating has them winning by 1.8 and the points check, built only from each team's own 2026 scoring and home field, has UConn winning by 5.5. The two disagree about who wins and agree completely about the number.",
-        "UConn score more than the team laying eight points on them. They put up 34.4 a game against North Carolina's 25.8, their offence grades 82.3 and ranks 23rd nationally and 6th in Explosiveness, and they are 5-2-1 against the spread, 17th in the country. Both teams are 4-4.",
-        "North Carolina's case rests on defence: 87.1 coverage, 27th, and 5th in Explosiveness allowed. That is a real edge against a UConn passing game that lives on big plays. But their own offence ranks 125th in Explosiveness and scores under 26 a game. Eight points asks a team that struggles to pull away to pull away on the road."
-      ]
-    },
-    {
-      "pick": "Rutgers +18.5",
-      "game": "Rutgers Scarlet Knights @ Wisconsin Badgers",
-      "img": "Rutgers_at_Wisconsin",
-      "facts": [
-        [
-          "Book line",
-          "Wisconsin -18.5"
-        ],
-        [
-          "Model number",
-          "Wisconsin -15.0"
-        ],
-        [
-          "Points check",
-          "Wisconsin by 8.1"
-        ],
-        [
-          "SP+ (2026)",
-          "Wisconsin +6.0 (48th) vs Rutgers -6.6 (97th), home edge +2.4"
-        ],
-        [
-          "Rutgers 2026",
-          "2-6 but scoring 27.8 a game, 6-2 to the Over"
-        ],
-        [
-          "Rutgers offense",
-          "9th in Explosiveness, 54th by grade"
-        ],
-        [
-          "Wisconsin offense",
-          "23.6 points a game, 115th in Success Rate, 110th in Finishing Drives"
-        ]
-      ],
-      "paras": [
-        "Book has Wisconsin -18.5. The rating has it at 15.0 and the points check at 8.1, and both sit clear of the number on the same side. Eighteen and a half is a number for a team that scores, and Wisconsin do not.",
-        "Wisconsin average 23.6 points a game on an offence ranked 115th in Success Rate and 110th in Finishing Drives. Their defence is outstanding at 94.2, second in the country, second in run defence and first in Explosiveness allowed. But a defence cannot cover three touchdowns on its own, and covering 18.5 while scoring 23.6 means holding Rutgers to five.",
-        "Rutgers are 2-6 and the record is the reason the number is this big, but they score 27.8 a game and rank 9th nationally in offensive Explosiveness. They have gone over in six of eight. A team that reaches the high twenties with big plays available is not the profile that gets held to a field goal."
-      ]
-    },
-    {
-      "pick": "Kansas State +6.5",
-      "game": "Oklahoma State Cowboys @ Kansas State Wildcats",
-      "img": "Oklahoma_State_at_Kansas_State",
-      "facts": [
-        [
-          "Book line",
-          "Kansas State +6.5"
-        ],
-        [
-          "Model number",
-          "Oklahoma State -1.8"
-        ],
-        [
-          "Points check",
-          "Kansas State by 0.7"
-        ],
-        [
-          "SP+ (2026)",
-          "Oklahoma State +12.1 (27th) vs Kansas State +7.5 (45th), home edge +2.8"
-        ],
-        [
-          "Kansas State home field",
-          "2.8 points, the largest of the five"
-        ],
-        [
-          "Kansas State defense",
-          "20th in Success Rate, 17th in Havoc, 135th in Explosiveness allowed"
-        ],
-        [
-          "Oklahoma State offense",
-          "41.1 points a game, 6th in Success Rate, 100th in Explosiveness"
-        ]
-      ],
-      "paras": [
-        "Book has Kansas State +6.5 at home. The rating has Oklahoma State by 1.8 and the points check has Kansas State winning by 0.7. Both land inside the number, and the home field here is worth 2.8 points, the largest in this group.",
-        "Kansas State defend the thing Oklahoma State do. The Cowboys rank 6th in offensive Success Rate nationally and score 41.1 a game. They rank 100th in Explosiveness, so they move methodically. Kansas State rank 20th in defensive Success Rate and 17th in Havoc, which is the unit built to interrupt exactly that, and they allow 21.9 points a game against Oklahoma State's 27.1.",
-        "The market is pricing the records. Oklahoma State are 5-3 and 6-2 against the spread, 7th in the country; Kansas State are 4-4 and 3-4-1 against it. That is the shape of team the number follows rather than leads, and both measures say six and a half is at least four points too many."
-      ]
-    },
-    {
-      "pick": "Arizona State -3.5",
-      "game": "Colorado Buffaloes @ Arizona State Sun Devils",
-      "img": "Colorado_at_Arizona_State",
-      "facts": [
-        [
-          "Book line",
-          "Arizona State -3.5"
-        ],
-        [
-          "Model number",
-          "Arizona State -8.6"
-        ],
-        [
-          "Points check",
-          "Arizona State by 7.2"
-        ],
-        [
-          "SP+ (2026)",
-          "Arizona State +1.4 (64th) vs Colorado -4.2 (90th), home edge +3.0"
-        ],
-        [
-          "Arizona State home field",
-          "3.0 points"
-        ],
-        [
-          "Colorado offense",
-          "21.0 points a game, 108th in Success Rate, 132nd in Finishing Drives"
-        ],
-        [
-          "Colorado field position",
-          "134th on offense, tied 126th on defense"
-        ]
-      ],
-      "paras": [
-        "The one position here that lays a price. Book has Arizona State -3.5, the rating has it at 8.6 and the points check at 7.2, so both sit several points past the number on the same side.",
-        "Colorado cannot score. They put up 21.0 points a game on an offence ranked 108th in Success Rate and 132nd in Finishing Drives, and they rank 134th in offensive Field Position and tied 126th on defence, so they begin badly at both ends. Their 55.6 tackling grade ranks 123rd.",
-        "Arizona State are not a strong team at 4-4 and 29.5 points a game. What they are is better than this opponent in the places that decide a three-and-a-half-point game: 88.2 on defence against Colorado's 82.6, 79.3 tackling against 55.6, and three points of home field. The standing exclusion does not apply, because Colorado are 2-5-1 against the spread, 127th. This is not laying into a team the market has been underrating."
-      ]
-    },
-    {
-      "pick": "Maryland +5.5",
-      "game": "Maryland Terrapins @ Purdue Boilermakers",
-      "img": "Maryland_at_Purdue",
-      "facts": [
-        [
-          "Book line",
-          "Purdue -5.5"
-        ],
-        [
-          "Model number",
-          "Purdue -3.2"
-        ],
-        [
-          "Points check",
-          "Purdue by 2.9"
-        ],
-        [
-          "SP+ (2026)",
-          "Purdue -1.6 (79th) vs Maryland -3.0 (85th), home edge +1.8"
-        ],
-        [
-          "Purdue home field",
-          "1.8 points"
-        ],
-        [
-          "Maryland pass rush",
-          "83.1, 15th in the country"
-        ],
-        [
-          "Purdue coverage",
-          "46.3, 135th; the defense grades 68.9, 125th"
-        ]
-      ],
-      "paras": [
-        "SP+ separates these two by 1.4 points and the market asks for five and a half. Home field at Purdue is worth only 1.8, which leaves the rating at Purdue by 3.2 and the points check at 2.9. Both sit inside the number.",
-        "Purdue are the nominal favourite and the weaker team on the sheet. They grade 72.1 overall, 118th in the country, with a defence at 68.9 that ranks 125th and a coverage grade of 46.3 that ranks 135th. They are 3-5 and allow 32.1 points a game.",
-        "Maryland bring the one unit that exploits that. Their pass rush grades 83.1, 15th nationally, against a Purdue offence ranked 62nd in Success Rate, and their special teams grade 90.2, 4th in the country, which is where a one-score game between two 100th-ranked teams usually turns. Both sides are 3-5 against the spread, so neither is being carried by its record."
-      ]
-    }
-  ],
-  "props": [
-    {
-      "pick": "Akeem Wright Over 30.5 receiving yards",
-      "game": "Boise State Broncos @ Colorado State Rams",
-      "facts": [
-        [
-          "Book line",
-          "Over 30.5 receiving yards"
-        ],
-        [
-          "Model projection",
-          "49.7 yards"
-        ],
-        [
-          "2026 production",
-          "321 yards in 8 games, 40.1 a game"
-        ],
-        [
-          "Role",
-          "33 targets, 4.1 a game, 21 receptions over 172 routes"
-        ],
-        [
-          "Profile",
-          "11.6 average depth of target, 1.87 yards per route run, 69.3 route grade, long of 40"
-        ],
-        [
-          "Colorado State defense",
-          "50.5 overall, 138th of 138; coverage 36.4, also 138th"
-        ],
-        [
-          "Colorado State scoring allowed",
-          "42.4 points a game"
-        ],
-        [
-          "Game total",
-          "68.5"
-        ]
-      ],
-      "paras": [
-        "Wright averages 40.1 receiving yards a game and the line is 30.5. He clears it on his own rate before the model is consulted, and the projection lands at 49.7.",
-        "Thirty-three targets in eight games is 4.1 a game, the thinnest volume of the five here and the weakest part of this position. What offsets it is depth and efficiency: an 11.6-yard average depth of target, 1.87 yards per route run, a 69.3 route grade and a long of 40. Two catches at his average clear the number.",
-        "The matchup is as soft as this season offers. Colorado State's defence grades 50.5, last of all 138 teams, with a coverage grade of 36.4 that is also last, and they allow 42.4 points a game. The total is 68.5 and Boise State's offence ranks 13th by grade."
-      ]
-    },
-    {
-      "pick": "Omarion Miller Over 39.5 receiving yards",
-      "game": "Colorado Buffaloes @ Arizona State Sun Devils",
-      "facts": [
-        [
-          "Book line",
-          "Over 39.5 receiving yards"
-        ],
-        [
-          "Model projection",
-          "58.1 yards"
-        ],
-        [
-          "2026 production",
-          "422 yards in 8 games, 52.8 a game"
-        ],
-        [
-          "Role",
-          "68 targets, 8.5 a game, 41 receptions over 299 routes"
-        ],
-        [
-          "Profile",
-          "8.2 average depth of target, 1.41 yards per route run, 59.2 route grade, long of 49"
-        ],
-        [
-          "Target share",
-          "8.5 targets a game"
-        ],
-        [
-          "Colorado coverage",
-          "78.7, 65th, on a defense ranked 72nd"
-        ],
-        [
-          "Game total",
-          "48.5, Arizona State -3.5"
-        ]
-      ],
-      "paras": [
-        "Miller averages 52.8 receiving yards a game and the line is 39.5. Thirteen yards of margin on his own rate, and the projection puts him at 58.1.",
-        "This is a volume position and the volume is substantial: 68 targets in eight games, 8.5 a game, 41 receptions across 299 routes. His 1.41 yards per route run and 59.2 route grade are modest. He is not efficient; he is simply thrown at more than anyone else here. At 8.5 targets a game, five catches at his 10.3-yard average clears the number.",
-        "Arizona State are laying 3.5 in a game posted at 48.5, which is also backed on the spread here. A close game keeps the passing volume live, and Colorado's coverage grade of 78.7 ranks 65th on a defence that is 72nd overall, which is adequate rather than the sort that takes a primary receiver away."
-      ]
-    },
-    {
-      "pick": "AJ Newberry Over 24.5 receiving yards",
-      "game": "Texas State Bobcats @ Oregon State Beavers",
-      "facts": [
-        [
-          "Book line",
-          "Over 24.5 receiving yards"
-        ],
-        [
-          "Model projection",
-          "35.1 yards"
-        ],
-        [
-          "2026 production",
-          "312 receiving yards in 8 games, 39.0 a game"
-        ],
-        [
-          "Role",
-          "36 targets, 4.5 a game, 27 receptions over 170 routes"
-        ],
-        [
-          "Profile",
-          "1.8 average depth of target, 1.84 yards per route run, 64.9 route grade, long of 88"
-        ],
-        [
-          "Oregon State offense",
-          "17th by grade, 10th in Finishing Drives, 40.1 points a game"
-        ],
-        [
-          "Texas State defense",
-          "108th in Success Rate, 126th in Finishing Drives"
-        ],
-        [
-          "Game total",
-          "71.0"
-        ]
-      ],
-      "paras": [
-        "Newberry averages 39.0 receiving yards a game and the line is 24.5. Fourteen and a half yards of cushion on his own rate, and the projection lands at 35.1.",
-        "He is a back catching checkdowns rather than a receiver, which is what makes a low line reachable: 36 targets and 27 receptions over 170 routes at a 1.8-yard average depth of target with 1.84 yards per route run, a 64.9 route grade, a 75 percent catch rate and a long of 88 that shows what happens when one of them springs. Four catches at his average gets there.",
-        "The setting helps. This game is posted at 71.0, the highest total on the slate this week, with Oregon State scoring 40.1 on an offence ranked 17th by grade and 10th in Finishing Drives. Texas State rank 108th in defensive Success Rate and 126th in Finishing Drives, so the possessions and the red-zone trips should both be there."
-      ]
-    },
-    {
-      "pick": "Nik McMillan Over 45.5 receiving yards",
-      "game": "UCF Knights @ Kansas Jayhawks",
-      "facts": [
-        [
-          "Book line",
-          "Over 45.5 receiving yards"
-        ],
-        [
-          "Model projection",
-          "64.5 yards"
-        ],
-        [
-          "2026 production",
-          "466 yards in 8 games, 58.3 a game"
-        ],
-        [
-          "Role",
-          "45 targets, 5.6 a game, 25 receptions over 204 routes"
-        ],
-        [
-          "Profile",
-          "17.1 average depth of target, 2.28 yards per route run, 78.0 route grade, long of 46"
-        ],
-        [
-          "Yards per catch",
-          "18.6, on a 17.1-yard average depth of target"
-        ],
-        [
-          "UCF coverage",
-          "64.0, 112th, on a defense ranked 55th"
-        ],
-        [
-          "Game total",
-          "47.5, Kansas -3.0"
-        ]
-      ],
-      "paras": [
-        "McMillan averages 58.3 receiving yards a game and the line is 45.5. The projection puts him at 64.5 after the opponent and pace adjustments.",
-        "He is a deep threat: a 17.1-yard average depth of target, 18.6 yards a catch, 2.28 yards per route run and a 78.0 route grade on 5.6 targets a game. The 56 percent catch rate is the cost of that usage and the reason the variance here is real. At 18.6 a catch, three receptions clear the number outright.",
-        "UCF's coverage grade of 64.0 ranks 112th, and Kansas are laying three at home in a game posted at 47.5. A tight game between two teams around .500 keeps both offences throwing, and Kansas have no one else at his depth."
-      ]
-    },
-    {
-      "pick": "Micah Gilbert Over 31.5 receiving yards",
-      "game": "Miami Hurricanes @ Notre Dame Fighting Irish",
-      "facts": [
-        [
-          "Book line",
-          "Over 31.5 receiving yards"
-        ],
-        [
-          "Model projection",
-          "44.1 yards"
-        ],
-        [
-          "2026 production",
-          "430 yards in 8 games, 53.8 a game"
-        ],
-        [
-          "Role",
-          "33 targets, 4.1 a game, 24 receptions over 184 routes"
-        ],
-        [
-          "Profile",
-          "12.1 average depth of target, 2.34 yards per route run, 72.7 route grade, long of 61"
-        ],
-        [
-          "Yards per catch",
-          "17.9 on a 73 percent catch rate"
-        ],
-        [
-          "Miami coverage",
-          "62.5, 119th, on a defense ranked 71st"
-        ],
-        [
-          "Game total",
-          "54.5, Notre Dame -7.0"
-        ]
-      ],
-      "paras": [
-        "Gilbert averages 53.8 receiving yards a game against a 31.5 line, 22.3 yards of margin on his own rate. The projection discounts heavily for the opponent and still lands at 44.1.",
-        "Four targets a game is modest, but almost all of them count: 24 receptions on 33 targets is a 73 percent catch rate at a 12.1-yard average depth of target, producing 17.9 yards a catch with 2.34 yards per route run and a long of 61. Two catches clear the number.",
-        "Miami arrive 8-0 with the top-ranked offence in the country by grade, but their defence ranks 71st and their coverage grade of 62.5 ranks 119th, by some distance the softest part of an otherwise excellent team. Notre Dame are laying seven in a game posted at 54.5, and Miami are taken to cover that number elsewhere in this card; a close, high-scoring game is the script both positions want."
-      ]
-    }
-  ]
+ "spreads": [
+  {
+   "pick": "Mississippi State +2.5",
+   "game": "Auburn Tigers @ Mississippi State Bulldogs",
+   "img": "Auburn_at_Mississippi_State",
+   "facts": [
+    [
+     "Book line",
+     "Auburn -2.5"
+    ],
+    [
+     "Model number",
+     "Mississippi State by 3.5"
+    ],
+    [
+     "Points check",
+     "Mississippi State by 2.8"
+    ],
+    [
+     "SP+ (2026)",
+     "Mississippi State +3.8, Auburn +2.8, home edge +2.5"
+    ],
+    [
+     "Records",
+     "Auburn 5-4, Mississippi State 4-5"
+    ],
+    [
+     "Auburn coverage",
+     "60.2, 125th of 138"
+    ],
+    [
+     "Auburn against the spread",
+     "2-7, 131st"
+    ],
+    [
+     "Mississippi State coverage",
+     "82.2, 45th"
+    ]
+   ],
+   "paras": [
+    "Auburn lay 2.5 on the road. The rating has Mississippi State winning by 3.5 and the points check, built only from each team's own 2026 scoring and home field, has Mississippi State winning by 2.8. Both land on the home side of a line that does not.",
+    "Auburn's coverage grades 60.2, which is 125th of 138. Mississippi State's is 82.2, 45th. That gap is the clearest separation in the matchup, and it runs against the team giving the points. Auburn are 2-7 against the spread, 131st in the country, so the market has been asking them for more than they deliver all season.",
+    "The case against is scoring. Auburn average 24.3 a game, Mississippi State 26.2, and both defences sit in the bottom half by Success Rate allowed. A 2.5-point line between two teams this close is a coin flip the model thinks is mispriced by about six, not a mismatch."
+   ]
+  },
+  {
+   "pick": "Kansas State +13.5",
+   "game": "Kansas State Wildcats @ TCU Horned Frogs",
+   "img": "Kansas_State_at_TCU",
+   "facts": [
+    [
+     "Book line",
+     "TCU -13.5"
+    ],
+    [
+     "Model number",
+     "TCU by 5.4"
+    ],
+    [
+     "Points check",
+     "TCU by 3.7"
+    ],
+    [
+     "SP+ (2026)",
+     "TCU +7.9, Kansas State +4.5, home edge +2.0"
+    ],
+    [
+     "Records",
+     "both 4-5"
+    ],
+    [
+     "TCU scoring",
+     "23.8 points a game, offence 72.8, 80th"
+    ],
+    [
+     "TCU finishing drives",
+     "113th on offence"
+    ],
+    [
+     "Kansas State scoring",
+     "31.3 points a game"
+    ]
+   ],
+   "paras": [
+    "TCU lay 13.5 at home. The rating has them winning by 5.4 and the points check has them winning by 3.7. Both have the right favourite and neither has the number.",
+    "TCU score 23.8 a game. To win by 14 they need roughly 30, which is above anything their offence has sustained: it grades 72.8, 80th nationally, and ranks 113th in Finishing Drives. Kansas State score 31.3 a game, the higher figure of the two by seven and a half points.",
+    "TCU's defence is the reason the line is where it is, and it is genuinely good: 91.8 overall, 15th, 9th against the run, 7th in Success Rate allowed, and 15.8 points allowed a game. That is the strongest unit on this slate's picks and it can hold Kansas State under their rate. The bet is that holding them under their rate is not the same as a two-score win for a team scoring 23.8."
+   ]
+  },
+  {
+   "pick": "NC State +3.0",
+   "game": "Syracuse Orange @ NC State Wolfpack",
+   "img": "Syracuse_at_NC_State",
+   "facts": [
+    [
+     "Book line",
+     "Syracuse -3.0"
+    ],
+    [
+     "Model number",
+     "NC State by 2.7"
+    ],
+    [
+     "Points check",
+     "NC State by 1.0"
+    ],
+    [
+     "SP+ (2026)",
+     "NC State -2.3, Syracuse -2.7, home edge +2.3"
+    ],
+    [
+     "Records",
+     "both 4-5"
+    ],
+    [
+     "Syracuse passing",
+     "59.7, 114th of 138"
+    ],
+    [
+     "Syracuse offence",
+     "69.7, 101st"
+    ],
+    [
+     "NC State scoring",
+     "28.9 points a game"
+    ]
+   ],
+   "paras": [
+    "Syracuse lay three on the road. SP+ separates these teams by 0.4 of a point before home field, and once home field is applied the rating has NC State winning by 2.7. The points check agrees on the side at 1.0.",
+    "Syracuse's passing game grades 59.7, which is 114th of 138, and their offence overall is 101st. NC State score 28.9 a game to Syracuse's 29.3, so the scoring is level while the throwing is not. A road favourite whose passing ranks in the bottom twenty-five is being asked to win by more than a field goal.",
+    "NC State are 3-6 against the spread, 112th, and their defence ranks 107th in Finishing Drives, so Syracuse will move the ball. The number is the argument here rather than the matchup: three points between two 4-5 teams the ratings cannot separate, with the home side getting them."
+   ]
+  },
+  {
+   "pick": "Colorado State +9.5",
+   "game": "Colorado State Rams @ Washington State Cougars",
+   "img": "Colorado_State_at_Washington_State",
+   "facts": [
+    [
+     "Book line",
+     "Washington State -9.5"
+    ],
+    [
+     "Model number",
+     "Colorado State by 0.4"
+    ],
+    [
+     "Points check",
+     "Washington State by 3.4"
+    ],
+    [
+     "SP+ (2026)",
+     "Colorado State -11.0, Washington State -14.5, home edge +3.1"
+    ],
+    [
+     "Records",
+     "Colorado State 3-6, Washington State 1-8"
+    ],
+    [
+     "Washington State scoring",
+     "19.0 points a game, offence 60.9, 135th"
+    ],
+    [
+     "Washington State success rate",
+     "132nd on offence"
+    ],
+    [
+     "Colorado State scoring",
+     "35.8 points a game, 1st in Explosiveness"
+    ]
+   ],
+   "paras": [
+    "Washington State lay 9.5 at home. The rating has Colorado State winning outright by 0.4 and the points check has Washington State by 3.4. Neither is close to nine and a half.",
+    "Washington State are 1-8 and score 19.0 a game. Their offence grades 60.9, 135th of 138, ranks 132nd in Success Rate and 135th in Field Position. Colorado State score 35.8, rank 1st nationally in Explosiveness and 6th in Finishing Drives. The team laying nine and a half is the one that cannot score.",
+    "Colorado State's defence is why this line exists and it is as bad as a defence gets: 43.7 overall and 138th of 138, coverage 29.3 and also 138th, 44.8 points allowed a game. Washington State can reach the number if they score at a rate they have not reached all year. Colorado State are 8-1 to the Over, 1st in the country, which says these games get played at a pace that keeps a nine-and-a-half-point dog live."
+   ]
+  },
+  {
+   "pick": "Fresno State +9.5",
+   "game": "Fresno State Bulldogs @ Texas State Bobcats",
+   "img": "Fresno_State_at_Texas_State",
+   "facts": [
+    [
+     "Book line",
+     "Texas State -9.5"
+    ],
+    [
+     "Model number",
+     "Texas State by 3.0"
+    ],
+    [
+     "Points check",
+     "Texas State by 2.9"
+    ],
+    [
+     "SP+ (2026)",
+     "Texas State +5.8, Fresno State +4.9, home edge +2.1"
+    ],
+    [
+     "Records",
+     "both 5-4"
+    ],
+    [
+     "Fresno State against the spread",
+     "6-3, 14th"
+    ],
+    [
+     "Fresno State scoring allowed",
+     "20.6 points a game"
+    ],
+    [
+     "Texas State scoring",
+     "38.6 points a game"
+    ]
+   ],
+   "paras": [
+    "Texas State lay 9.5 at home. The rating has them winning by 3.0 and the points check by 2.9. The two measures land within a tenth of each other and both sit six and a half short of the line.",
+    "SP+ separates these teams by 0.9 of a point. Both are 5-4. Fresno State allow 20.6 a game and are 6-3 against the spread, 14th in the country. Texas State are the better team by every rating here, but by about a point rather than by nine and a half.",
+    "The risk is tempo and the run. Texas State score 38.6 a game, rank 9th in seconds per play and 11th in Success Rate, while Fresno State's run defence grades 66.2, 129th. A fast team that runs well against a side that does not stop the run is how a single-digit line becomes a blowout. Fresno State rank 6th in Explosiveness and 12th in Field Position, which is the counterweight."
+   ]
+  }
+ ],
+ "props": [
+  {
+   "pick": "Umari Hatcher Over 71.5 receiving yards",
+   "game": "Syracuse Orange @ NC State Wolfpack",
+   "facts": [
+    [
+     "Book line",
+     "Over 71.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "110.5 yards"
+    ],
+    [
+     "2026 production",
+     "964 yards in 9 games, 107.1 a game"
+    ],
+    [
+     "Single-game record",
+     "median 103 yards, over 71.5 in 4 of 7 games on record"
+    ],
+    [
+     "Role",
+     "93 targets, 10.3 a game, 62 receptions, 8 touchdowns"
+    ],
+    [
+     "Profile",
+     "14.2 average depth of target, 15.5 a catch, 334 routes, 2.89 yards per route run, 81.0 route grade, 297 yards after the catch, long of 76"
+    ],
+    [
+     "NC State defence",
+     "coverage 75.7, 70th; 107th in Finishing Drives; 27.6 points allowed a game"
+    ],
+    [
+     "Game total",
+     "53.5"
+    ]
+   ],
+   "paras": [
+    "Hatcher averages 107.1 receiving yards a game and the line is 71.5. He clears it on his own rate before the projection is consulted, and the projection lands at 110.5.",
+    "Ninety-three targets in nine games is 10.3 a game. His route grade is 81.0, he has dropped two balls all season, and he has 297 yards after the catch, so the production does not depend on one kind of throw. His median single game is 103 yards against a line of 71.5.",
+    "He has gone under 71.5 in three of the seven games on record, including a 12-yard game, so the floor is real. NC State's coverage grades 75.7, 70th, and they rank 107th in Finishing Drives, which points to a game where Syracuse move the ball without converting. That shape favours volume."
+   ]
+  },
+  {
+   "pick": "Jaron Tibbs Over 29.5 receiving yards",
+   "game": "Kansas State Wildcats @ TCU Horned Frogs",
+   "facts": [
+    [
+     "Book line",
+     "Over 29.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "37.4 yards"
+    ],
+    [
+     "2026 production",
+     "421 yards in 9 games, 46.8 a game"
+    ],
+    [
+     "Single-game record",
+     "median 54 yards, over 29.5 in 6 of 7 games on record"
+    ],
+    [
+     "Role",
+     "69 targets, 7.7 a game, 45 receptions, 4 touchdowns"
+    ],
+    [
+     "Profile",
+     "9.1 average depth of target, 9.4 a catch, 291 routes, 1.45 yards per route run, 69.2 route grade, 65.2 per cent caught, long of 33"
+    ],
+    [
+     "TCU defence",
+     "91.8 overall, 15th; coverage 80.8, 51st; 15.8 points allowed a game"
+    ],
+    [
+     "Game total",
+     "44.5"
+    ]
+   ],
+   "paras": [
+    "Tibbs averages 46.8 receiving yards a game against a line of 29.5. He has gone over that number in six of the seven games on record, and his median game is 54 yards.",
+    "The role is settled. Sixty-nine targets in nine games is 7.7 a game, and at a 9.1 average depth of target he is a volume receiver rather than a deep threat, which is the profile that holds up against a good defence. Short targets still get thrown when a team is behind.",
+    "TCU's defence is the problem: 91.8 overall and 15th nationally, with 15.8 points allowed a game. The game total is 44.5, the lowest on these picks. A 29.5 line survives a low-scoring game better than a high one does, because it needs three catches rather than a performance, but this is the pick most exposed to the opponent."
+   ]
+  },
+  {
+   "pick": "Ed Small Over 26.5 receiving yards",
+   "game": "Kansas State Wildcats @ TCU Horned Frogs",
+   "facts": [
+    [
+     "Book line",
+     "Over 26.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "52.3 yards"
+    ],
+    [
+     "2026 production",
+     "565 yards in 9 games, 62.8 a game"
+    ],
+    [
+     "Single-game record",
+     "median 38 yards, over 26.5 in 4 of 5 games on record"
+    ],
+    [
+     "Role",
+     "57 targets, 6.3 a game, 41 receptions, 71.9 per cent caught"
+    ],
+    [
+     "Profile",
+     "10.4 average depth of target, 13.8 a catch, 339 routes, 1.67 yards per route run, 60.6 route grade, 8 drops, long of 57"
+    ],
+    [
+     "Kansas State defence",
+     "78.3 overall, 92nd; coverage 73.3, 83rd; 26.8 points allowed a game"
+    ],
+    [
+     "Game total",
+     "44.5"
+    ]
+   ],
+   "paras": [
+    "Small averages 62.8 receiving yards a game against a line of 26.5, and the projection is 52.3. The average overstates him. One 164-yard game carries it, and his median single game is 38 yards. Thirty-eight is still comfortably over 26.5, which is the reason to take it.",
+    "Fifty-seven targets in nine games is 6.3 a game. He has gone over 26.5 in four of the five games on record, the exception being a 20-yard game. Kansas State's coverage grades 73.3, 83rd, and they allow 26.8 points a game, so the matchup is the softest of the three receiving picks here.",
+    "Eight drops in 41 receptions is the worst rate among these three, and his route grade of 60.6 is the lowest. The projection of 52.3 should not be read as the expectation. The line sitting eleven and a half yards below his median is the whole case."
+   ]
+  }
+ ]
 }

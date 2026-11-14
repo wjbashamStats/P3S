@@ -43,6 +43,31 @@ UA = {"User-Agent": "P3S-card-conditions"}
 ET = dt.timezone(dt.timedelta(hours=-4))
 
 # stadium -> (lat, lon). The city NWS returns is printed so a bad pair shows up.
+# A school name can continue past a shorter school name: "Texas" is a prefix of
+# "Texas State", "Washington" of "Washington State", "Miami" of "Miami (OH)". A
+# bare prefix match put a San Marcos kickoff in Austin and reported a forecast
+# for the wrong stadium, which is worse than reporting none. A prefix only counts
+# when what follows it is the mascot rather than more of the school's name.
+SCHOOL_CONTINUATIONS = {
+    "state", "tech", "a&m", "southern", "northern", "eastern", "western",
+    "atlantic", "international", "carolina", "dakota", "mexico", "island",
+    "texas", "michigan", "illinois", "kentucky", "virginia", "florida",
+    "christian", "methodist", "union", "central", "charlotte", "chattanooga",
+}
+
+
+def venue_key_matches(key, home):
+    if home == key:
+        return True
+    if not home.startswith(key):
+        return False
+    rest = home[len(key):]
+    if not rest.startswith(" "):
+        return False
+    nxt = rest.strip().split(" ")[0].lower().strip("().,")
+    return nxt not in SCHOOL_CONTINUATIONS
+
+
 VENUES = {
     # week 7
     "Buffalo": (43.0005, -78.7895), "BYU": (40.2577, -111.6546),
@@ -63,6 +88,10 @@ VENUES = {
     "Fresno State": (36.8125, -119.7478), "Iowa State": (42.0140, -93.6358),
     "Memphis": (35.1186, -89.9370), "Texas": (30.2837, -97.7324),
     "Texas Tech": (33.5906, -101.8726),
+    # week 11
+    "TCU": (32.7096, -97.3685), "NC State": (35.8003, -78.7197),
+    "Washington State": (46.7319, -117.1641), "Texas State": (29.8887, -97.9397),
+    "Syracuse": (43.0362, -76.1364), "Mississippi State": (33.4560, -88.7944),
     # week 10
     "UConn": (41.8065, -72.2487), "Wisconsin": (43.0700, -89.4126),
     "Kansas State": (39.2020, -96.5947), "Arizona State": (33.4264, -111.9325),
@@ -77,6 +106,8 @@ SLUGS = {
     "MICHIGAN": "michigan", "HOUSTON": "houston", "OKLA STATE": "oklahoma-state",
     "GA TECH": "georgia-tech", "INDIANA": "indiana", "BAYLOR": "baylor",
     "ALABAMA": "alabama", "KANSAS": "kansas", "COLORADO": "colorado",
+    "SYRACUSE": "syracuse", "KANSAS ST": "kansas-state", "NC STATE": "north-carolina-state",
+    "TCU": "tcu", "FRESNO ST": "fresno-state", "TEXAS STATE": "texas-state",
     "BOSTON COL": "boston-college", "AUBURN": "auburn",
     "MEMPHIS": "memphis", "TEXAS TECH": "texas-tech", "IOWA STATE": "iowa-state",
     "TEXAS": "texas",
@@ -212,7 +243,7 @@ def check_weather(content, board):
             away, home = [s.strip() for s in it["game"].split(" @ ")]
             # longest key first: "Oregon State Beavers" must not match "Oregon"
             key = next((k for k in sorted(VENUES, key=len, reverse=True)
-                        if home.startswith(k) or k in home), None)
+                        if venue_key_matches(k, home)), None)
             if key is None:
                 print(f"  --   {it['game'][:46]:46} no venue coordinates; add {home!r} to VENUES")
                 continue

@@ -902,3 +902,45 @@ list.
    price that looks live is quirk 21's failure in a different costume. Stamp
    or drop them before anything reads them as current.
 
+46. **The week 11 board was first built on the frozen preseason ratings, and
+   every spread pick was wrong because of it.** `build_diversions_page_data.py`
+   and `build_props_page_data.py` both hardcode
+   `--team-ratings default="team_ratings_2025.csv"`, and `--season 2026` does
+   not change it. Passing `--season` and assuming the ratings follow is the
+   trap. They do not.
+
+   Quirk 7 already says exactly this and ends with "pass it with
+   --team-ratings". I did not, so the first candidate list came off the frozen
+   preseason board that quirk 7 measures at -0.57 correlation with actual
+   margin. The two lists share almost nothing:
+
+   | frozen board | live ratings |
+   | --- | --- |
+   | Rutgers +15.0 | Mississippi State +2.5 |
+   | Kansas State +13.5 | Kansas State +13.5 |
+   | Maryland +8.5 | NC State +3.0 |
+   | Vanderbilt +14.0 | Colorado State +9.5 |
+   | Georgia Tech +15.5 | Fresno State +9.5 |
+
+   Four of five picks were artifacts. The tell was two teams carrying
+   identical SP+ and TAN with different ranks, which is a shape the live file
+   does not produce. Check two unrelated teams' ratings against
+   `team_ratings_2026.csv` before trusting a board, and pass `--team-ratings
+   team_ratings_2026.csv` to both builders every week.
+
+47. **The venue lookup matched on a bare prefix and reported the wrong
+   stadium's weather.** `check_card_conditions.py` picked its venue key with
+   `home.startswith(k) or k in home`, so "Texas" matched "Texas State
+   Bobcats" and the San Marcos kickoff was reported from Austin, 30 miles
+   away, with an "ok". A confident wrong forecast is worse than a missing one,
+   and it is the same class as quirk 9 and the name-suffix bug: a loose match
+   that returns an answer instead of nothing.
+
+   A school name can continue past a shorter school name (Texas / Texas State,
+   Washington / Washington State, Oregon / Oregon State, Miami / Miami (OH)).
+   `venue_key_matches` now accepts a prefix only when what follows is the
+   mascot rather than another school-name word, against a
+   `SCHOOL_CONTINUATIONS` set. `test_venue_match.py` pins 17 cases including
+   every collision on this slate. Six venues and six ourlads slugs were added
+   at the same time.
+
