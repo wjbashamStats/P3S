@@ -849,3 +849,14 @@ list.
    running that ESPN on the night and the PFF delta a week later have agreed
    to the point, which is what quirk 32 claimed and now has a third
    confirmation.
+
+44. **ESPN and PFF disagreed on a prop figure for the first time, by one
+   yard.** Micah Gilbert's week 10 receiving line reads 98 yards on ESPN and
+   97 in the week 11 PFF delta. The other four week 10 props match to the
+   yard, and so has every prop figure checked across weeks 8, 9 and 10 until
+   now. The pick was Over 31.5, so nothing about the grade turns on it, but
+   quirk 32's claim is now "agree to the yard except once in eighteen", not
+   "always agree". A one-yard gap is a lateral or a stat correction, not a
+   source problem. If a future prop ever lands inside a yard of its line,
+   grade it from the PFF delta and say which source was used.
+
