@@ -47,21 +47,28 @@ at that moment, and `qa_card.py` warns if the file is more than six hours old.
 ### 2. Futures
 
 ```bash
-python3 dump_futures_html.py --week N
-python3 dump_futures_html.py --validate futures_html/weekN    # want 11/11
+python3 dump_futures_html.py --week N --skip win_totals
+python3 dump_futures_html.py --validate futures_html/weekN    # want 10/10
 python3 refresh_futures.py --week N
 ```
 
-`win_totals` has failed four weeks running — it renders without an odds table,
-so `refresh_futures.py` finds no page and silently keeps the prices it had. If
-`--validate` says 10/11, retry just that page:
+**Win totals are out of the weekly routine from week 11 on.** The last good
+pull was week 7, at 138 rows. Weeks 8, 9 and 10 produced no `win_totals.html`
+at all, so there is nothing to retry into. The market is also the wrong shape
+to chase this late: a team nine games into a nine-game sample has either a
+closed win-total market or one that has moved so far that a mid-season price
+is not comparable to the week 1 number the column was built against.
 
-```bash
-python3 dump_futures_html.py --week N --only win_totals --wait 20
-```
+Dropping it costs nothing downstream. `refresh_futures.py` merges only the
+pages it finds and warns on the rest, `--validate` counts only the pages
+present and still exits clean, and nothing in the model computes with the
+`Win_<Book>_*` columns — they ride along in `futures_2026.csv` as market
+reference. The model's own `Win Total` column is computed internally and is
+never touched by the futures merge.
 
-If it fails again, push anyway and tell Claude; the Win_* columns stay stale and
-the card's source note says so.
+What it does cost: those 20 `Win_*` columns now hold week 7 prices under names
+that carry no date. Nothing in the file says so. If they are ever going to be
+read as live, stamp or drop them rather than leaving the trap in place.
 
 ### 3. The PFF drops
 

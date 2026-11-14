@@ -120,6 +120,10 @@ def main():
                     help="seconds to let each page's JS render before grabbing HTML")
     ap.add_argument("--only", default=None,
                     help="comma-separated subset of page keys, e.g. win_totals,national_futures")
+    ap.add_argument("--skip", default=None,
+                    help="comma-separated page keys to leave out, e.g. win_totals. Applied "
+                         "after --only. A market with no page here keeps the prices it "
+                         "already had, which refresh_futures.py reports as a warning")
     ap.add_argument("--retries", type=int, default=1,
                     help="re-render a page that parsed to zero rows, this many times")
     ap.add_argument("--dry-run", action="store_true",
@@ -131,14 +135,29 @@ def main():
     if args.week is None:
         ap.error("--week is required unless --validate DIR is given")
 
+
+    out_dir = args.out_dir or os.path.join("futures_html", f"week{args.week}")
+    # Not created until there is something to write: a --dry-run that made an
+    # empty futures_html/weekN would read later as a pull that produced nothing.
+    if not args.dry_run:
+        os.makedirs(out_dir, exist_ok=True)
+    keys = args.only.split(",") if args.only else list(PAGES)
+    if args.skip:
+        drop = {k.strip() for k in args.skip.split(",") if k.strip()}
+        unknown = sorted(drop - set(PAGES))
+        if unknown:
+            print(f"  [skip] unknown page key(s) in --skip: {', '.join(unknown)} "
+                  f"(valid: {sorted(PAGES)})")
+        keys = [k for k in keys if k not in drop]
+        print(f"  [skip] not pulling: {', '.join(sorted(drop & set(PAGES)))}")
+        if not keys:
+            print("  nothing left to pull")
+            return 0
+
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         sys.exit("playwright is not installed here:  pip install playwright && playwright install chromium")
-
-    out_dir = args.out_dir or os.path.join("futures_html", f"week{args.week}")
-    os.makedirs(out_dir, exist_ok=True)
-    keys = args.only.split(",") if args.only else list(PAGES)
 
     written, rejected, thin = [], [], []
     # A Chromium already on the box can be used instead of a downloaded one by
