@@ -10,6 +10,15 @@ A SwiftUI and SwiftData iPhone app for logging practice and tracking progress.
 
 All data stays on the device (SwiftData). Requires iOS 17 or later.
 
+## Web version (test in Claude)
+
+`Web/golf-trainer.html` is a single-page web version of the same app, published as a Claude artifact. It has the same features: practice loggers, swings (video player, slow motion, frame step, line drawing, key positions, compare), lessons, TheGrint CSV import, handicap and progress charts. When opened in Claude it also:
+
+- saves your data privately to your Claude account (outside Claude it falls back to the browser)
+- keeps uploaded videos and screenshots up to 20 MB each
+- adds **Analyze with Claude**, which sends your marked key-position frames and screenshots to Claude and saves the reply on the swing
+- can save the key-positions image as a file
+
 ## Build and run (on a Mac)
 
 ```bash

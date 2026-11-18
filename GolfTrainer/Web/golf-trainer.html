@@ -1,0 +1,1530 @@
+<title>Golf Trainer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: phone-first app shell (one column, max 760px), sticky header, fixed bottom tab bar; logging and detail open as sheets over the page. */
+:root {
+  --bg: #f2f5f0;
+  --surface: #ffffff;
+  --surface-2: #e7ece4;
+  --line: #d3dbcf;
+  --ink: #142019;
+  --ink-2: #485a4e;
+  --ink-3: #6f7f74;
+  --accent: #16704a;
+  --accent-ink: #ffffff;
+  --accent-soft: #d9eee1;
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --good: #0a7d0a;
+  --bad: #c43535;
+  --star: #c98500;
+  --chart-bg: #fcfcfb;
+  --shadow: 0 10px 30px rgba(20, 32, 25, 0.18);
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1310; --surface: #161f1a; --surface-2: #1e2a23; --line: #2b3a31;
+    --ink: #e7efe9; --ink-2: #b2c0b6; --ink-3: #85958b;
+    --accent: #45b980; --accent-ink: #04120a; --accent-soft: #1b3a2a;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --good: #3cbf3c; --bad: #e66767; --star: #e0a526;
+    --chart-bg: #1a1a19; --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1310; --surface: #161f1a; --surface-2: #1e2a23; --line: #2b3a31;
+  --ink: #e7efe9; --ink-2: #b2c0b6; --ink-3: #85958b;
+  --accent: #45b980; --accent-ink: #04120a; --accent-soft: #1b3a2a;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+  --good: #3cbf3c; --bad: #e66767; --star: #e0a526;
+  --chart-bg: #1a1a19; --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+
+.shell { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 104px; }
+header.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-block: 14px 10px;
+}
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px; }
+.brand svg { color: var(--accent); }
+.status { font-size: 12px; color: var(--ink-3); display: flex; align-items: center; gap: 6px; text-align: right; }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); flex: none; }
+.status.ok i { background: var(--good); }
+.status.warn i { background: var(--star); }
+
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0; text-wrap: balance; letter-spacing: 0.01em; }
+h3 { font-size: 13px; font-weight: 600; margin: 0; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
+.view { display: flex; flex-direction: column; gap: 22px; }
+.section { display: flex; flex-direction: column; gap: 10px; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.spread { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.muted { color: var(--ink-3); }
+.small { font-size: 13px; }
+.tiny { font-size: 12px; }
+p { margin: 0; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 8px 14px; font-weight: 500; cursor: pointer; min-height: 38px;
+}
+.btn:hover { border-color: var(--ink-3); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.danger { color: var(--bad); }
+.btn.ghost { background: transparent; border-color: transparent; }
+.btn:disabled { opacity: 0.45; cursor: default; }
+.btn.sm { min-height: 32px; padding: 5px 11px; font-size: 13px; }
+.btn.big { min-height: 52px; font-size: 16px; font-weight: 600; border-radius: 14px; flex: 1; }
+label.btn input[type=file] { display: none; }
+
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; color: var(--ink-2); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+
+.starts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.start {
+  text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: var(--r);
+  padding: 14px; cursor: pointer; display: flex; flex-direction: column; gap: 8px; min-width: 0;
+}
+.start:hover { border-color: var(--ink-3); }
+.start b { font-family: var(--font-display); font-size: 21px; font-weight: 700; letter-spacing: 0.01em; }
+.start .bar { height: 4px; border-radius: 2px; }
+@media (max-width: 520px) { .starts { grid-template-columns: 1fr; } .start { flex-direction: row; align-items: center; } .start .bar { width: 4px; height: 36px; } }
+
+.list { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-bottom: 0; text-align: left; width: 100%; color: inherit; }
+.item:first-child { border-top: 0; }
+.item:hover { background: var(--surface-2); }
+.item .grow { flex: 1; min-width: 0; }
+.item .title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item .sub { font-size: 13px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item .right { text-align: right; flex: none; }
+.thumb { width: 52px; height: 66px; border-radius: 8px; background: var(--surface-2); overflow: hidden; flex: none; display: grid; place-items: center; color: var(--ink-3); }
+.thumb img, .thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.score { font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 1; }
+.topar { font-size: 12px; font-weight: 600; padding: 2px 7px; border-radius: 6px; background: var(--surface-2); color: var(--ink-2); display: inline-block; margin-top: 4px; }
+.topar.under { background: var(--accent-soft); color: var(--accent); }
+.tag { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.tile .k { font-size: 12px; color: var(--ink-3); }
+.tile .v { font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .c { font-size: 12px; color: var(--ink-3); }
+
+.hcp { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--accent); color: var(--accent-ink); border-radius: var(--r); padding: 16px 18px; }
+.hcp .big { font-family: var(--font-display); font-weight: 700; font-size: 54px; line-height: 0.9; }
+.hcp .btn { background: transparent; border-color: currentColor; color: inherit; }
+
+.empty { border: 1px dashed var(--line); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.chart { width: 100%; }
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+details.table summary { font-size: 12px; color: var(--ink-3); cursor: pointer; }
+details.table .scroll { overflow-x: auto; margin-top: 6px; }
+table { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+th, td { padding: 4px 10px 4px 0; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+#tip { position: fixed; z-index: 60; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12px; padding: 6px 9px; border-radius: 8px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.trend { font-size: 13px; font-weight: 600; display: inline-flex; gap: 4px; align-items: center; }
+.trend.up { color: var(--good); }
+.trend.down { color: var(--bad); }
+.trend.flat, .trend.na { color: var(--ink-3); font-weight: 500; }
+
+nav.tabs {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  background: var(--surface); border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px));
+}
+nav.tabs .in { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+nav.tabs button { background: none; border: 0; padding: 9px 4px 8px; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; font-weight: 500; color: var(--ink-3); cursor: pointer; }
+nav.tabs button[aria-current="page"] { color: var(--accent); }
+
+/* Sheets */
+.scrim { position: fixed; inset: 0; z-index: 30; background: rgba(8, 14, 10, 0.45); display: flex; justify-content: center; align-items: flex-end; }
+.sheet {
+  background: var(--bg); width: 100%; max-width: 760px; max-height: 94%; height: 94%;
+  border-radius: 18px 18px 0 0; box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden;
+}
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.sheet-head h2 { font-size: 20px; text-align: center; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sheet-body { overflow-y: auto; padding: 16px max(16px, env(safe-area-inset-left, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 18px; }
+
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.form .full { grid-column: 1 / -1; }
+@media (max-width: 520px) { .form { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field > span { font-size: 12px; color: var(--ink-3); font-weight: 500; }
+.field input, .field select, .field textarea, .inp {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 11px; min-height: 40px; width: 100%; min-width: 0;
+}
+.field textarea { resize: vertical; min-height: 84px; }
+.check { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+
+.drill { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+.drill .meter { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.drill .meter i { display: block; height: 100%; background: var(--accent); }
+.mm { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; }
+.mm button { min-height: 52px; border-radius: 12px; border: 1px solid var(--line); font-weight: 700; font-size: 16px; cursor: pointer; background: var(--surface); }
+.mm .make { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.mm .miss { color: var(--bad); }
+.mm .undo { padding: 0 16px; color: var(--ink-2); }
+.stepper { display: flex; align-items: center; gap: 8px; }
+.stepper button { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-size: 18px; cursor: pointer; }
+.stepper input { width: 84px; text-align: center; }
+.stars { display: flex; gap: 4px; }
+.stars button { background: none; border: 0; font-size: 26px; color: var(--star); cursor: pointer; padding: 0 2px; line-height: 1; }
+.timer { font-family: var(--font-display); font-size: 28px; font-weight: 700; }
+.pick { display: flex; flex-direction: column; gap: 8px; }
+.pick button { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 12px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+.pick button:hover { border-color: var(--ink-3); }
+
+/* Swing player */
+.player-wrap { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.player { position: relative; background: #000; border-radius: 12px; overflow: hidden; width: min(100%, calc(62vh * 0.5625)); max-width: 100%; aspect-ratio: 9 / 16; margin-inline: auto; }
+.player video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.player canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+.player .hint { position: absolute; left: 10px; top: 10px; font-size: 12px; color: #fff; background: rgba(0,0,0,.55); padding: 4px 8px; border-radius: 6px; }
+.controls { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.controls input[type=range] { width: 100%; accent-color: var(--accent); }
+.swatch { width: 24px; height: 24px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0; }
+.swatch[aria-pressed="true"] { border-color: var(--ink); }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.shots .shot { position: relative; aspect-ratio: 3 / 4; border-radius: 8px; overflow: hidden; background: var(--surface-2); }
+.shots .shot img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: zoom-in; }
+.shots .shot button { position: absolute; right: 4px; top: 4px; background: rgba(0,0,0,.6); color: #fff; border: 0; border-radius: 6px; font-size: 12px; padding: 2px 6px; cursor: pointer; }
+.analysis-out { white-space: pre-wrap; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 14px; max-height: 420px; overflow-y: auto; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.compare .player { width: min(100%, calc(56vh * 0.5625)); }
+.notice { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; font-size: 13px; color: var(--ink-2); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(84px + env(safe-area-inset-bottom, 0px)); z-index: 70; background: var(--ink); color: var(--bg); padding: 9px 14px; border-radius: 10px; font-size: 13px; max-width: calc(100% - 32px); box-shadow: var(--shadow); }
+.viewer { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.92); display: grid; place-items: center; padding: 16px; cursor: zoom-out; }
+.viewer img { max-width: 100%; max-height: 100%; object-fit: contain; }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: up .22s ease-out; } @keyframes up { from { transform: translateY(24px); opacity: .6; } } }
+</style>
+
+<div class="shell">
+  <header class="top">
+    <div class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h2v20H6z"/><path fill="currentColor" d="M8 3l10 4-10 4z"/><ellipse cx="12" cy="21" rx="8" ry="1.6" fill="currentColor" opacity=".35"/></svg>
+      Golf Trainer
+    </div>
+    <div class="status" id="status"><i></i><span>Connecting…</span></div>
+  </header>
+  <main id="main" class="view"><p class="muted">Loading your practice log…</p></main>
+</div>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="in">
+    <button data-tab="practice" aria-current="page">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>Practice</button>
+    <button data-tab="swing">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 10l5-3v10l-5-3z" fill="currentColor"/></svg>Swing</button>
+    <button data-tab="rounds">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18M7 4l9 3.5L7 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2"/></svg>Rounds</button>
+    <button data-tab="progress">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18" stroke="currentColor" stroke-width="2"/><path d="M5 16l5-5 4 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>Progress</button>
+  </div>
+</nav>
+<div id="tip" hidden></div>
+
+<script>
+"use strict";
+// ---------------------------------------------------------------- helpers
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const newId = (kind) => kind + "-" + (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2));
+const DAY = 86400000;
+const fmtN = (v, d = 1) => (v == null || isNaN(v) ? "—" : Number(v).toLocaleString(undefined, { maximumFractionDigits: d }));
+const fmtDate = (d, opts = { month: "short", day: "numeric", year: "numeric" }) => new Date(d).toLocaleDateString(undefined, opts);
+const fmtDateTime = (d) => new Date(d).toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+const toLocalInput = (d) => { const x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0, 16); };
+const toDateInput = (d) => toLocalInput(d).slice(0, 10);
+const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+const fmtIndex = (i) => (i == null ? "—" : (i < 0 ? "+" + Math.abs(i).toFixed(1) : Number(i).toFixed(1)));
+function toast(msg, ms = 2600) {
+  const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; t.setAttribute("role", "status");
+  document.body.appendChild(t); setTimeout(() => t.remove(), ms);
+}
+
+// ---------------------------------------------------------------- reference data
+const CATS = {
+  range: { title: "Range", color: "var(--s1)" },
+  shortGame: { title: "Short Game", color: "var(--s2)" },
+  putting: { title: "Putting", color: "var(--s3)" },
+};
+const CAT_KEYS = ["range", "shortGame", "putting"];
+const METRICS = {
+  makes: { title: "Makes / attempts", short: "Make %", higher: true },
+  points: { title: "Points (higher is better)", short: "Points", higher: true },
+  strokes: { title: "Strokes (lower is better)", short: "Strokes", higher: false },
+  proximity: { title: "Avg. proximity in ft (lower is better)", short: "Avg ft", higher: false },
+};
+const DRILLS = [
+  ["Fairway Finder", "range", "makes", 14, 60, "Pick two flags about 30 yards apart as your fairway. Hit 14 drives with a full pre-shot routine. A make is a ball that finishes between them."],
+  ["Target Window", "range", "makes", 10, 50, "Choose a mid-iron target. A make is a ball that finishes within 10 yards of it. Change clubs every shot."],
+  ["Wedge Ladder", "range", "makes", 12, 60, "Hit wedges to 50, 60, 70, 80, 90 and 100 yards, then back down. A make is a carry within 5 yards of the number."],
+  ["9-Shot Shaping", "range", "makes", 9, 66, "Hit a draw, a straight ball and a fade, each one low, mid and high. A make is the shape you called."],
+  ["Play the Course", "range", "points", 18, 12, "Play a round you know on the range: driver, then the approach club for each hole. Score 1 point for each fairway or green you would have hit."],
+  ["Tempo / Contact", "range", "makes", 20, 75, "Hit half and three-quarter swings with a 7-iron. A make is centred contact, with ball first and then turf."],
+  ["Up & Down Challenge", "shortGame", "makes", 9, 50, "Drop 9 balls around the green with varied lies. A make is getting down in 2 (chip and putt)."],
+  ["Par 18", "shortGame", "strokes", 9, 18, "Play 9 'holes' from random spots around the green and hole out each one. Par is 2 per hole, so 18 total."],
+  ["Landing Spot", "shortGame", "makes", 10, 60, "Put a towel on the green as your landing spot. A make is a chip that lands on the towel."],
+  ["Proximity Chipping", "shortGame", "proximity", 10, 4, "Hit 10 chips from 10–20 yards and record the average distance from the hole in feet."],
+  ["Bunker Escapes", "shortGame", "makes", 10, 70, "A make is a ball that gets out and stays on the green."],
+  ["Pitch Distance Control", "shortGame", "makes", 12, 50, "Pitch to 20, 30 and 40 yards, rotating targets. A make is a ball that finishes within 10 ft."],
+  ["Circle Drill (3 ft)", "putting", "makes", 12, 95, "Put 12 balls in a circle 3 ft from the hole. Go around the circle; a make is a holed putt."],
+  ["Clock Drill (6 ft)", "putting", "makes", 12, 65, "Put 12 balls in a circle 6 ft from the hole, one at each clock position."],
+  ["Gate Drill", "putting", "makes", 20, 85, "Push two tees in just wider than the putter head. A make is a stroke through the gate with no tee touched."],
+  ["Lag Putting (30–50 ft)", "putting", "proximity", 10, 3, "Hit 10 long putts to different holes. Record the average leave in feet."],
+  ["Lag Zone (inside 3 ft)", "putting", "makes", 10, 70, "Hit putts from 30 ft or more. A make is a ball that finishes within 3 ft of the hole, or goes in."],
+  ["Putting Par 18", "putting", "strokes", 9, 18, "Play 9 holes on the practice green from 5 to 40 ft and hole out each one. Par is 18."],
+  ["Pressure Streak (3 ft)", "putting", "points", 1, 25, "Hole as many 3-footers in a row as you can. Your score is the longest streak."],
+].map(([name, cat, metric, reps, goal, how]) => ({ name, cat, metric, reps, goal, how }));
+const drillTemplate = (name) => DRILLS.find((d) => d.name === name);
+const CLUBS = ["Driver", "3 Wood", "5 Wood", "Hybrid", "3 Iron", "4 Iron", "5 Iron", "6 Iron", "7 Iron", "8 Iron", "9 Iron", "PW", "GW", "SW", "LW", "Putter"];
+const ANGLES = { downTheLine: "Down the line", faceOn: "Face on", other: "Other" };
+const POSITIONS = [["address", "Address"], ["takeaway", "Takeaway"], ["top", "Top"], ["transition", "Transition"], ["impact", "Impact"], ["finish", "Finish"]];
+const POS_TITLE = Object.fromEntries(POSITIONS);
+const COACH_APPS = ["V1 Golf", "CoachNow", "Skillest", "Sportsbox AI", "Hudl Technique", "Other"];
+const LINE_COLORS = ["#ffd400", "#ff4d4d", "#36d6ff", "#ffffff"];
+
+// ---------------------------------------------------------------- scoring & stats (mirrors the iOS app)
+function drillValue(d) {
+  if (d.metric === "makes") return d.attempts > 0 ? (d.successes / d.attempts) * 100 : null;
+  return Number(d.value) || 0;
+}
+function drillSummary(d) {
+  switch (d.metric) {
+    case "makes": return d.attempts ? `${d.successes}/${d.attempts} (${Math.round((d.successes / d.attempts) * 100)}%)` : "0/0";
+    case "points": return fmtN(d.value) + " pts";
+    case "strokes": return fmtN(d.value) + " strokes";
+    default: return fmtN(d.value) + " ft avg";
+  }
+}
+const weekStart = (d) => { const x = new Date(d); x.setHours(0, 0, 0, 0); x.setDate(x.getDate() - x.getDay()); return x; };
+function weeklyMinutes(sessions, weeks = 12, now = new Date()) {
+  const thisWeek = weekStart(now);
+  const rows = [];
+  for (let i = weeks - 1; i >= 0; i--) { const s = new Date(thisWeek); s.setDate(s.getDate() - 7 * i); rows.push({ start: s, range: 0, shortGame: 0, putting: 0 }); }
+  const byKey = new Map(rows.map((r) => [r.start.getTime(), r]));
+  for (const s of sessions) { const r = byKey.get(weekStart(s.date).getTime()); if (r && r[s.cat] != null) r[s.cat] += Number(s.durationMinutes) || 0; }
+  return rows;
+}
+function streakDays(dates, now = new Date()) {
+  const days = new Set(dates.map((d) => new Date(d).toDateString()));
+  const cur = new Date(now); cur.setHours(12, 0, 0, 0);
+  if (!days.has(cur.toDateString())) { cur.setDate(cur.getDate() - 1); if (!days.has(cur.toDateString())) return 0; }
+  let n = 0; while (days.has(cur.toDateString())) { n++; cur.setDate(cur.getDate() - 1); }
+  return n;
+}
+const average = (a) => (a.length ? a.reduce((x, y) => x + y, 0) / a.length : null);
+function trend(values, higher, window = 5, tol = 0.02) {
+  if (values.length < 2) return "na";
+  const w = Math.min(window, Math.floor(values.length / 2));
+  if (w < 1) return "na";
+  const recent = average(values.slice(-w)); const prev = average(values.slice(0, -w).slice(-w));
+  if (recent == null || prev == null) return "na";
+  const delta = (recent - prev) / Math.max(Math.abs(prev), 1);
+  if (Math.abs(delta) <= tol) return "flat";
+  return (delta > 0) === higher ? "up" : "down";
+}
+const TREND_TEXT = { up: ["up", "↗ Improving"], down: ["down", "↘ Slipping"], flat: ["flat", "→ Steady"], na: ["na", "Need more data"] };
+const trendHTML = (t) => `<span class="trend ${TREND_TEXT[t][0]}">${TREND_TEXT[t][1]}</span>`;
+function movingAverage(pts, w) {
+  if (w <= 1) return pts;
+  return pts.map((p, i) => { const sl = pts.slice(Math.max(0, i - w + 1), i + 1); return { t: p.t, v: average(sl.map((q) => q.v)) }; });
+}
+function lineAngle(l, aspect) {
+  const dx = (l.x2 - l.x1) * aspect, dy = l.y1 - l.y2;
+  let deg = (Math.atan2(dy, dx) * 180) / Math.PI; if (deg < 0) deg += 180;
+  return deg;
+}
+function gridLayout(n) { if (n <= 0) return [0, 0]; const c = n <= 3 ? n : n === 4 ? 2 : 3; return [c, Math.ceil(n / c)]; }
+
+// ---------------------------------------------------------------- CSV import (TheGrint export or any spreadsheet)
+const CSV_FIELDS = {
+  date: ["date", "date played", "played", "round date", "played on"],
+  course: ["course", "course name", "club", "golf course"],
+  holes: ["holes", "holes played", "# holes"],
+  par: ["par", "course par"],
+  score: ["score", "gross", "gross score", "total", "total score", "strokes"],
+  putts: ["putts", "total putts", "# putts"],
+  fairways: ["fairways", "fir", "fairways hit", "fairways in regulation", "fw hit"],
+  fairwaysPossible: ["fairways possible", "fairway attempts", "fir possible", "fw possible"],
+  gir: ["gir", "greens", "greens in regulation", "greens hit"],
+  ud: ["up and downs", "up & downs", "up&down", "scrambling", "up and down made"],
+  udAttempts: ["up and down attempts", "scrambling attempts", "up & down attempts"],
+  penalties: ["penalties", "penalty strokes", "penalty"],
+  handicap: ["handicap", "handicap index", "hcp", "hcp index", "index", "grint handicap"],
+};
+function parseCSVRows(text) {
+  text = text.replace(/\r\n?/g, "\n");
+  const first = text.split("\n", 1)[0];
+  const delim = (first.match(/;/g) || []).length > (first.match(/,/g) || []).length ? ";" : ",";
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === delim) { row.push(f); f = ""; }
+    else if (c === "\n") { row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c;
+  }
+  if (f !== "" || row.length) { row.push(f); rows.push(row); }
+  return rows.filter((r) => r.some((c) => c.trim() !== ""));
+}
+const normHeader = (h) => h.replace(/^﻿/, "").trim().toLowerCase().replace(/_/g, " ").replace(/\s+/g, " ");
+function parseDateLoose(s) {
+  let m = s.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
+  if (m) return new Date(+m[1], +m[2] - 1, +m[3], 12);
+  m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (m) { let y = +m[3]; if (y < 100) y += 2000; return new Date(y, +m[1] - 1, +m[2], 12); }
+  const t = Date.parse(s); if (!isNaN(t)) { const d = new Date(t); d.setHours(12, 0, 0, 0); return d; }
+  return null;
+}
+const parseIntLoose = (s) => { if (s == null || s === "") return null; const n = Number(s); return isNaN(n) ? null : Math.round(n); };
+const parseFrac = (s) => { const m = String(s || "").match(/^\s*(\d+)\s*\/\s*(\d+)\s*$/); return m ? [+m[1], +m[2]] : null; };
+const parseHcp = (s) => { if (!s) return null; s = s.trim(); if (s.startsWith("+")) { const v = Number(s.slice(1)); return isNaN(v) ? null : -v; } const v = Number(s); return isNaN(v) ? null : v; };
+function importKey(r) { return `grint|${toDateInput(r.date)}|${r.course.toLowerCase()}|${r.score}`; }
+function parseRoundsCSV(text) {
+  const rows = parseCSVRows(text);
+  if (!rows.length) throw new Error("The file is empty.");
+  const header = rows[0].map(normHeader);
+  const col = {};
+  for (const [k, aliases] of Object.entries(CSV_FIELDS)) { const i = header.findIndex((h) => aliases.includes(h)); if (i >= 0) col[k] = i; }
+  const missing = [["date", "Date"], ["score", "Score"]].filter(([k]) => col[k] == null).map(([, n]) => n);
+  if (missing.length) throw new Error(`Couldn't find the required column(s): ${missing.join(", ")}. Make sure the first row holds column headers.`);
+  const rounds = [], warnings = [];
+  rows.slice(1).forEach((row, i) => {
+    const n = i + 2;
+    const cell = (k) => { const j = col[k]; if (j == null || j >= row.length) return null; const v = row[j].trim(); return v === "" ? null : v; };
+    const date = cell("date") ? parseDateLoose(cell("date")) : null;
+    if (!date) { warnings.push(`Row ${n}: couldn't read the date, so the row was skipped.`); return; }
+    const score = parseIntLoose(cell("score"));
+    if (!score || score <= 0) { warnings.push(`Row ${n}: missing score, so the row was skipped.`); return; }
+    const holes = parseIntLoose(cell("holes")) ?? (score < 60 ? 9 : 18);
+    const par = parseIntLoose(cell("par")) ?? (holes === 9 ? 36 : 72);
+    let fw = parseIntLoose(cell("fairways")), fwp = parseIntLoose(cell("fairwaysPossible"));
+    const fwf = parseFrac(cell("fairways")); if (fwf) { fw = fwf[0]; fwp = fwp ?? fwf[1]; }
+    let ud = parseIntLoose(cell("ud")), uda = parseIntLoose(cell("udAttempts"));
+    const udf = parseFrac(cell("ud")); if (udf) { ud = udf[0]; uda = uda ?? udf[1]; }
+    let gir = parseIntLoose(cell("gir")); const gf = parseFrac(cell("gir")); if (gf) gir = gf[0];
+    const r = { date, course: cell("course") || "Unknown course", holes, par, score, putts: parseIntLoose(cell("putts")), fairwaysHit: fw, fairwaysPossible: fwp, gir, upDowns: ud, upDownAttempts: uda, penalties: parseIntLoose(cell("penalties")), handicap: parseHcp(cell("handicap")) };
+    r.importKey = importKey(r);
+    rounds.push(r);
+  });
+  rounds.sort((a, b) => b.date - a.date);
+  return { rounds, warnings };
+}
+const SAMPLE_CSV = `Date,Course,Holes,Par,Score,Putts,Fairways,GIR,Up and Downs,Penalties,Handicap Index
+2026-08-02,Riverside GC,18,72,91,35,6/14,4,2/9,2,15.8
+2026-08-16,Riverside GC,18,72,88,33,7/14,5,3/10,1,15.6
+2026-09-01,Oak Hills,18,71,87,32,8/14,6,3/9,1,15.1
+2026-09-20,Riverside GC,18,72,85,31,8/14,7,4/9,0,14.7
+2026-10-05,"Pine Valley Muni, East",9,36,42,15,4/7,4,2/4,0,14.5
+2026-10-18,Oak Hills,18,71,83,30,9/14,8,4/8,1,14.2`;
+
+// ---------------------------------------------------------------- context message for the swing-analyzer chat
+function swingContext(sw, opts = {}) {
+  const lesson = sw.lessonId ? byId("lesson", sw.lessonId) : null;
+  const hcp = latestHandicap();
+  const details = [];
+  if (sw.club) details.push(`Club: ${sw.club}`);
+  if (sw.angle && sw.angle !== "other") details.push(`Camera: ${ANGLES[sw.angle]}`);
+  details.push(`Recorded: ${fmtDate(sw.date)}`);
+  if (hcp) details.push(`Handicap index: ${fmtIndex(hcp.index)}`);
+  const lines = ["Golf swing for analysis.", details.join(" · ")];
+  const cps = (sw.checkpoints || []).slice().sort((a, b) => a.t - b.t);
+  if (opts.sheet && cps.length) lines.push(`The key positions image shows, left to right and top to bottom: ${cps.map((c) => POS_TITLE[c.pos]).join(" → ")}.`);
+  if (lesson?.focus) lines.push(`Current lesson focus: ${lesson.focus}`);
+  if (lesson?.feedback) lines.push(`Coach feedback so far: ${lesson.feedback}`);
+  if (sw.notes?.trim()) lines.push(`What I'm working on / notes: ${sw.notes.trim()}`);
+  lines.push("Please point out the one or two biggest issues, what's causing them, and a drill for each.");
+  return lines.join("\n");
+}
+
+// ---------------------------------------------------------------- data store: Claude account (db) or this browser
+const KINDS = ["session", "round", "handicap", "swing", "lesson"];
+const S = { session: [], round: [], handicap: [], swing: [], lesson: [] };
+const caps = { db: null, user: null, assets: null, sample: null, downloads: null, sampleImages: 0 };
+const store = { mode: "loading", col: null, local: [] };
+const LOCAL_KEY = "golf-trainer-v1";
+const LOCAL_MEDIA = {}; // localKey -> object URL (this visit only)
+const byId = (kind, id) => S[kind].find((r) => r.id === id);
+
+function ingest(records) {
+  for (const k of KINDS) S[k] = [];
+  for (const r of records) if (r && S[r.kind]) S[r.kind].push(r);
+  for (const k of KINDS) S[k].sort((a, b) => new Date(b.date) - new Date(a.date));
+  render();
+}
+function allRecords() { return KINDS.flatMap((k) => S[k]); }
+async function saveRec(rec) {
+  rec.updatedAt = new Date().toISOString();
+  const clean = JSON.parse(JSON.stringify(rec));
+  const list = S[rec.kind]; const i = list.findIndex((r) => r.id === rec.id);
+  if (i >= 0) list[i] = rec; else list.push(rec);
+  list.sort((a, b) => new Date(b.date) - new Date(a.date));
+  if (store.mode === "db") {
+    try { await store.col.doc(rec.id).set(clean); }
+    catch (e) { toast("Couldn't save to your account: " + (e?.message || e?.code || "unknown error")); }
+  } else persistLocal();
+}
+async function removeRec(rec) {
+  const list = S[rec.kind]; const i = list.findIndex((r) => r.id === rec.id); if (i >= 0) list.splice(i, 1);
+  if (store.mode === "db") { try { await store.col.doc(rec.id).delete(); } catch (e) { toast("Couldn't delete: " + (e?.message || "unknown error")); } }
+  else persistLocal();
+}
+function persistLocal() {
+  if (store.mode !== "local") return;
+  try { localStorage.setItem(LOCAL_KEY, JSON.stringify(allRecords())); } catch (e) { /* storage blocked: data stays for this visit */ }
+}
+function setStatus(kind, text) {
+  const el = $("#status"); el.className = "status " + kind; el.querySelector("span").textContent = text;
+}
+
+async function boot() {
+  render();
+  const use = (n) => (window.claude?.use ? window.claude.use(n).catch(() => null) : Promise.resolve(null));
+  const [db, user] = await Promise.all([use("db"), use("user")]);
+  let uid = null;
+  if (db && user) { try { uid = await user.id(); } catch (e) { uid = null; } }
+  if (db && uid) {
+    store.mode = "db";
+    store.col = db.collection("data/users/" + uid);
+    setStatus("ok", "Saved to your Claude account");
+    let first = true;
+    const timer = setTimeout(() => { if (first) { setStatus("warn", "Still connecting…"); } }, 10000);
+    store.col.onSnapshot((snap) => {
+      clearTimeout(timer);
+      if (first) { first = false; setStatus("ok", "Saved to your Claude account"); }
+      ingest(snap.docs.map((d) => d.data()));
+    }, (err) => { clearTimeout(timer); setStatus("warn", "Sync stopped: " + (err?.message || err?.code)); });
+  } else {
+    store.mode = "local";
+    let recs = [];
+    try { recs = JSON.parse(localStorage.getItem(LOCAL_KEY) || "[]"); } catch (e) { recs = []; }
+    setStatus("warn", "Saved in this browser only");
+    ingest(recs);
+  }
+  const [assets, sample, downloads] = await Promise.all([use("assets"), use("sample"), use("downloads")]);
+  caps.assets = assets; caps.sample = sample; caps.downloads = downloads;
+  if (sample) { try { const lim = await sample.limits(); caps.sampleImages = lim?.images?.maxCount || 0; } catch (e) { caps.sampleImages = 0; } }
+  render();
+}
+
+// ---------------------------------------------------------------- media (videos and screenshots)
+const MAX_UPLOAD = 20 * 1024 * 1024;
+function mediaURL(m) { if (!m) return null; if (m.assetId) return "/_blob/" + m.assetId; return (m.localKey && LOCAL_MEDIA[m.localKey]) || null; }
+async function storeMedia(file) {
+  if (caps.assets && file.size <= MAX_UPLOAD) {
+    try { const res = await caps.assets.upload(file); return { assetId: res.id, type: file.type, name: file.name }; }
+    catch (e) { toast("Upload failed, so this file stays for this visit only: " + (e?.message || e?.code || "")); }
+  } else if (caps.assets && file.size > MAX_UPLOAD) {
+    toast(`${file.name} is over 20 MB, so it stays for this visit only. Trim the clip to save it.`, 5000);
+  }
+  const key = newId("m"); LOCAL_MEDIA[key] = URL.createObjectURL(file);
+  return { localKey: key, type: file.type, name: file.name, temporary: true };
+}
+
+// ---------------------------------------------------------------- sample data (clearly marked)
+function sampleData() {
+  const now = new Date(); const recs = [];
+  const days = (n, h = 17) => { const d = new Date(now); d.setDate(d.getDate() - n); d.setHours(h, 0, 0, 0); return d.toISOString(); };
+  const plan = [
+    ["putting", ["Circle Drill (3 ft)", "Lag Putting (30–50 ft)"]],
+    ["range", ["Fairway Finder", "Wedge Ladder"]],
+    ["shortGame", ["Up & Down Challenge", "Par 18"]],
+  ];
+  for (let i = 0; i < 24; i++) {
+    const ago = 80 - i * 3 - (i % 2);
+    const [cat, names] = plan[i % 3];
+    const prog = i / 23;
+    const drills = names.map((name, k) => {
+      const t = drillTemplate(name); const reps = t.reps;
+      const base = { name, metric: t.metric, attempts: reps, successes: 0, value: 0, notes: "" };
+      if (t.metric === "makes") { const rate = Math.min(0.97, (t.goal / 100) * (0.62 + 0.38 * prog) + ((i * 7 + k * 3) % 5) * 0.02); base.successes = Math.round(reps * rate); }
+      if (t.metric === "proximity") base.value = Math.round((5.6 - 2.2 * prog + ((i + k) % 3) * 0.3) * 10) / 10;
+      if (t.metric === "strokes") base.value = Math.round(24 - 5 * prog + ((i + k) % 3));
+      return base;
+    });
+    recs.push({ id: newId("session"), kind: "session", sample: true, date: days(ago), cat, durationMinutes: 35 + (i % 4) * 10, ballsHit: cat === "range" ? 80 + (i % 3) * 20 : null, location: "Sample practice ground", rating: 2 + (i % 4 === 0 ? 2 : i % 3), notes: "", drills });
+  }
+  const { rounds } = parseRoundsCSV(SAMPLE_CSV);
+  for (const r of rounds) {
+    recs.push({ id: newId("round"), kind: "round", sample: true, source: "grint", date: r.date.toISOString(), course: r.course, holes: r.holes, par: r.par, score: r.score, putts: r.putts, fairwaysHit: r.fairwaysHit, fairwaysPossible: r.fairwaysPossible, gir: r.gir, upDowns: r.upDowns, upDownAttempts: r.upDownAttempts, penalties: r.penalties, importKey: r.importKey, notes: "" });
+    if (r.handicap != null) recs.push({ id: newId("handicap"), kind: "handicap", sample: true, date: r.date.toISOString(), index: r.handicap, source: "grint" });
+  }
+  const lessonId = newId("lesson");
+  recs.push({ id: lessonId, kind: "lesson", sample: true, date: days(12, 10), coach: "Sample Coach", format: "In person", focus: "Shallowing the club in transition", feedback: "Trail elbow gets behind you at the top. Feel the club fall behind your hands and keep pressure in the lead side.", drills: "Pump drill: 3 sets of 10\nSplit-hand swings with a 7-iron", link: "", nextDate: days(-9, 10) });
+  recs.push({ id: newId("swing"), kind: "swing", sample: true, date: days(11, 9), club: "7 Iron", angle: "downTheLine", sourceApp: "V1 Golf", link: "https://example.com/sample-lesson", notes: "Sample entry: a link saved from a coaching app. Add your own videos with Add video.", lessonId, images: [], lines: [], checkpoints: [], favorite: false, analysis: "" });
+  return recs;
+}
+async function loadSample() {
+  const recs = sampleData();
+  toast("Adding sample data…");
+  for (let i = 0; i < recs.length; i += 8) await Promise.all(recs.slice(i, i + 8).map(saveRec));
+  render(); toast("Sample data added. Clear it from the Progress tab any time.");
+}
+async function clearSample() {
+  const recs = allRecords().filter((r) => r.sample);
+  for (let i = 0; i < recs.length; i += 8) await Promise.all(recs.slice(i, i + 8).map(removeRec));
+  render(); toast("Sample data removed.");
+}
+
+// ---------------------------------------------------------------- rendering shell
+let tab = "practice";
+const ui = { practiceFilter: "all", swingMode: "swings", clubFilter: "", favOnly: false, scope: "overall", drillPick: {} };
+function render() {
+  $$("nav.tabs button").forEach((b) => b.setAttribute("aria-current", b.dataset.tab === tab ? "page" : "false"));
+  const main = $("#main");
+  if (store.mode === "loading") { main.innerHTML = `<p class="muted">Loading your practice log…</p>`; return; }
+  main.innerHTML = VIEWS[tab]();
+  bindCharts(main);
+}
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-tab]"); if (t) { tab = t.dataset.tab; render(); window.scrollTo(0, 0); return; }
+  const a = e.target.closest("[data-act]"); if (a && ACTIONS[a.dataset.act]) { e.preventDefault(); ACTIONS[a.dataset.act](a, e); }
+});
+document.addEventListener("change", (e) => {
+  const a = e.target.closest("[data-change]"); if (a && CHANGES[a.dataset.change]) CHANGES[a.dataset.change](a, e);
+});
+
+const emptySample = (what) => `
+  <div class="empty">
+    <p><b>${what}</b></p>
+    <p class="muted small">Want to look around first? Load sample data: practice sessions, TheGrint rounds and a lesson. Each sample item is marked, and you can remove them all from the Progress tab.</p>
+    <button class="btn" data-act="load-sample">Load sample data</button>
+  </div>`;
+
+// ---------------------------------------------------------------- PRACTICE
+function sessionSubtitle(s) {
+  const names = (s.drills || []).map((d) => d.name);
+  return names.length ? names.join(" · ") : s.notes || "No drills logged";
+}
+function sessionRow(s, showCat = true) {
+  return `<button class="item" data-act="open-session" data-id="${esc(s.id)}">
+    ${showCat ? `<span class="dot" style="background:${CATS[s.cat].color}"></span>` : ""}
+    <span class="grow"><span class="title">${esc(fmtDateTime(s.date))}${s.sample ? ` <span class="tag">Sample</span>` : ""}</span><span class="sub">${esc(CATS[s.cat].title)} · ${esc(sessionSubtitle(s))}</span></span>
+    <span class="right num muted">${s.durationMinutes || 0}m</span></button>`;
+}
+VIEWS_practice = function () {
+  const counts = Object.fromEntries(CAT_KEYS.map((c) => [c, S.session.filter((s) => s.cat === c)]));
+  const filtered = ui.practiceFilter === "all" ? S.session : counts[ui.practiceFilter];
+  return `
+  <section class="section">
+    <h2>Start a session</h2>
+    <div class="starts">${CAT_KEYS.map((c) => {
+      const last = counts[c][0];
+      return `<button class="start" data-act="new-session" data-cat="${c}">
+        <span class="bar" style="background:${CATS[c].color}"></span>
+        <span><b>${CATS[c].title}</b><br><span class="small muted">${counts[c].length} session${counts[c].length === 1 ? "" : "s"}${last ? " · last " + esc(fmtDate(last.date, { month: "short", day: "numeric" })) : ""}</span></span>
+      </button>`;
+    }).join("")}</div>
+  </section>
+  <section class="section">
+    <div class="spread"><h2>Session log</h2><button class="btn sm" data-act="drill-library">Drill library</button></div>
+    <div class="chips">${[["all", "All"], ...CAT_KEYS.map((c) => [c, CATS[c].title])].map(([k, t]) => `<button class="chip" data-act="practice-filter" data-k="${k}" aria-pressed="${ui.practiceFilter === k}">${t}</button>`).join("")}</div>
+    ${S.session.length === 0 ? emptySample("No practice sessions yet. Start one above.") :
+      filtered.length === 0 ? `<p class="muted">No ${CATS[ui.practiceFilter].title.toLowerCase()} sessions yet.</p>` :
+      `<div class="list">${filtered.slice(0, 40).map((s) => sessionRow(s, ui.practiceFilter === "all")).join("")}</div>`}
+  </section>`;
+};
+
+// session logger ---------------------------------------------------
+function openLogger(cat, existing) {
+  const draft = existing ? JSON.parse(JSON.stringify(existing)) : {
+    id: newId("session"), kind: "session", cat, date: new Date().toISOString(), durationMinutes: null, ballsHit: null,
+    location: (() => { try { return localStorage.getItem("golf-last-location") || ""; } catch (e) { return ""; } })(), rating: 3, notes: "", drills: [],
+  };
+  draft.drills.forEach((d) => { d.reps = drillTemplate(d.name)?.reps || d.attempts; d.hist = []; });
+  const openedAt = Date.now();
+  let picking = false;
+  openSheet((el) => {
+    el.innerHTML = sheetFrame(existing ? "Edit session" : `New ${CATS[draft.cat].title} session`, `<button class="btn primary sm" data-l="save">Save</button>`, `
+      <div class="form">
+        <label class="field"><span>Date</span><input type="datetime-local" id="lg-date" value="${toLocalInput(draft.date)}"></label>
+        <label class="field"><span>Location</span><input id="lg-loc" value="${esc(draft.location)}" placeholder="Optional"></label>
+        ${existing ? "" : `<div class="field"><span>Session timer</span><div class="timer num" id="lg-timer">0:00</div></div>`}
+        <label class="field"><span>Duration (minutes)</span><input type="number" min="0" inputmode="numeric" id="lg-dur" value="${draft.durationMinutes ?? ""}" placeholder="${existing ? "" : "Uses the timer"}"></label>
+        ${draft.cat === "range" ? `<label class="field"><span>Balls hit</span><input type="number" min="0" inputmode="numeric" id="lg-balls" value="${draft.ballsHit ?? ""}" placeholder="Optional"></label>` : ""}
+      </div>
+      <div class="section"><div class="spread"><h3>Drills</h3></div><div id="lg-drills" class="section"></div>
+        <div id="lg-picker"></div>
+      </div>
+      <div class="section"><h3>How did it go?</h3>
+        <div class="stars" id="lg-stars"></div>
+        <label class="field"><textarea id="lg-notes" placeholder="Swing thoughts, what worked, what to work on next">${esc(draft.notes)}</textarea></label>
+      </div>`);
+    const drawDrills = () => {
+      $("#lg-drills", el).innerHTML = draft.drills.length ? draft.drills.map((d, i) => drillCard(d, i)).join("") : `<p class="muted small">Add drills from the library, or make your own. Each one is charted on the Progress tab.</p>`;
+      $("#lg-picker", el).innerHTML = picking ? drillPicker(draft.cat) : `<button class="btn" data-l="pick">+ Add drill</button>`;
+    };
+    const drawStars = () => { $("#lg-stars", el).innerHTML = [1, 2, 3, 4, 5].map((i) => `<button data-l="star" data-i="${i}" aria-label="${i} star${i > 1 ? "s" : ""}">${i <= draft.rating ? "★" : "☆"}</button>`).join(""); };
+    drawDrills(); drawStars();
+    const tick = setInterval(() => { const t = $("#lg-timer", el); if (t) { const s = Math.floor((Date.now() - openedAt) / 1000); t.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; } }, 1000);
+    el.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-l]"); if (!b) return;
+      const i = +b.dataset.i; const d = draft.drills[i];
+      switch (b.dataset.l) {
+        case "make": d.attempts++; d.successes++; d.hist.push(1); break;
+        case "miss": d.attempts++; d.hist.push(0); break;
+        case "undo": { if (!d.attempts) break; const last = d.hist.length ? d.hist.pop() : (d.successes === d.attempts ? 1 : 0); d.attempts--; if (last) d.successes = Math.max(0, d.successes - 1); d.successes = Math.min(d.successes, d.attempts); break; }
+        case "inc": d.value = (Number(d.value) || 0) + 1; break;
+        case "dec": d.value = Math.max(0, (Number(d.value) || 0) - 1); break;
+        case "rm": draft.drills.splice(i, 1); break;
+        case "pick": picking = true; break;
+        case "pick-cancel": picking = false; break;
+        case "pick-one": { const t = DRILLS[+b.dataset.t]; draft.drills.push({ name: t.name, metric: t.metric, attempts: t.metric === "makes" ? 0 : t.reps, successes: 0, value: 0, notes: "", reps: t.reps, hist: [] }); picking = false; break; }
+        case "pick-custom": {
+          const name = $("#cu-name", el).value.trim(); if (!name) { toast("Give the drill a name first."); return; }
+          const metric = $("#cu-metric", el).value; const reps = Math.max(1, +$("#cu-reps", el).value || 10);
+          draft.drills.push({ name, metric, attempts: metric === "makes" ? 0 : reps, successes: 0, value: 0, notes: "", reps, hist: [] }); picking = false; break;
+        }
+        case "star": draft.rating = +b.dataset.i; drawStars(); return;
+        case "save": save(); return;
+        default: return;
+      }
+      drawDrills();
+    });
+    el.addEventListener("input", (e) => {
+      const f = e.target.dataset.f; if (!f) return;
+      const d = draft.drills[+e.target.dataset.i];
+      if (f === "value") d.value = Number(e.target.value) || 0;
+      if (f === "attempts") d.attempts = Math.max(0, parseInt(e.target.value) || 0);
+      if (f === "notes") d.notes = e.target.value;
+    });
+    async function save() {
+      draft.date = new Date($("#lg-date", el).value || Date.now()).toISOString();
+      draft.location = $("#lg-loc", el).value.trim();
+      const dur = $("#lg-dur", el).value;
+      draft.durationMinutes = dur !== "" ? Math.max(0, parseInt(dur) || 0) : Math.max(1, Math.round((Date.now() - openedAt) / 60000));
+      const balls = $("#lg-balls", el); draft.ballsHit = balls && balls.value !== "" ? parseInt(balls.value) : null;
+      draft.notes = $("#lg-notes", el).value.trim();
+      const rec = JSON.parse(JSON.stringify(draft));
+      rec.drills = rec.drills.map(({ hist, reps, ...d }) => ({ ...d, successes: Math.min(d.successes, d.attempts) }));
+      try { if (rec.location) localStorage.setItem("golf-last-location", rec.location); } catch (e) { /* ignore */ }
+      await saveRec(rec);
+      closeSheet(); render(); toast("Session saved.");
+    }
+    return () => clearInterval(tick);
+  });
+}
+function drillCard(d, i) {
+  let controls = "";
+  if (d.metric === "makes") {
+    const pct = d.reps ? Math.min(100, (d.attempts / d.reps) * 100) : 0;
+    controls = `<div class="meter" title="${d.attempts} of ${d.reps} reps"><i style="width:${pct}%"></i></div>
+      <div class="spread tiny muted"><span>${d.attempts} of ${d.reps} reps</span></div>
+      <div class="mm"><button class="miss" data-l="miss" data-i="${i}">✕ Miss</button><button class="make" data-l="make" data-i="${i}">✓ Make</button><button class="undo" data-l="undo" data-i="${i}" aria-label="Undo last" ${d.attempts ? "" : "disabled"}>↶</button></div>`;
+  } else if (d.metric === "proximity") {
+    controls = `<div class="form"><label class="field"><span>Average distance (ft)</span><input type="number" step="0.1" min="0" inputmode="decimal" data-f="value" data-i="${i}" value="${d.value || ""}"></label>
+      <label class="field"><span>Balls</span><input type="number" min="0" inputmode="numeric" data-f="attempts" data-i="${i}" value="${d.attempts}"></label></div>`;
+  } else {
+    controls = `<div class="stepper"><button data-l="dec" data-i="${i}" aria-label="Minus one">−</button><input class="inp num" type="number" min="0" data-f="value" data-i="${i}" value="${d.value || 0}"><button data-l="inc" data-i="${i}" aria-label="Plus one">+</button><span class="muted small">${d.metric === "points" ? "points" : "strokes"}</span></div>`;
+  }
+  return `<div class="drill"><div class="spread"><b>${esc(d.name)}</b><span class="num muted">${esc(drillSummary(d))}</span></div>${controls}
+    <div class="spread"><input class="inp small" data-f="notes" data-i="${i}" value="${esc(d.notes)}" placeholder="Drill note (optional)" style="flex:1;min-width:0"><button class="btn ghost sm danger" data-l="rm" data-i="${i}">Remove</button></div></div>`;
+}
+function drillPicker(cat) {
+  return `<div class="card"><div class="spread"><h3>${CATS[cat].title} drills</h3><button class="btn ghost sm" data-l="pick-cancel">Close</button></div>
+    <div class="pick">${DRILLS.map((t, k) => t.cat === cat ? `<button data-l="pick-one" data-t="${k}"><b>${esc(t.name)}</b><span class="small muted">${esc(t.how)}</span></button>` : "").join("")}</div>
+    <h3>Custom drill</h3>
+    <div class="form"><label class="field full"><span>Name</span><input id="cu-name" placeholder="e.g. Coach's pump drill"></label>
+      <label class="field"><span>Scoring</span><select id="cu-metric">${Object.entries(METRICS).map(([k, m]) => `<option value="${k}">${m.title}</option>`).join("")}</select></label>
+      <label class="field"><span>Reps</span><input id="cu-reps" type="number" min="1" value="10"></label></div>
+    <button class="btn" data-l="pick-custom">Add custom drill</button></div>`;
+}
+function openSession(id) {
+  openSheet((el) => {
+    const s = byId("session", id); if (!s) { closeSheet(); return; }
+    const swings = S.swing.filter((w) => w.sessionId === id);
+    el.innerHTML = sheetFrame(CATS[s.cat].title, `<button class="btn sm" data-l="edit">Edit</button>`, `
+      <div class="tiles">
+        <div class="tile"><span class="k">Date</span><span class="v" style="font-size:20px">${esc(fmtDateTime(s.date))}</span></div>
+        <div class="tile"><span class="k">Duration</span><span class="v num">${s.durationMinutes || 0}m</span></div>
+        ${s.ballsHit ? `<div class="tile"><span class="k">Balls hit</span><span class="v num">${s.ballsHit}</span></div>` : ""}
+        <div class="tile"><span class="k">Rating</span><span class="v" style="color:var(--star)">${"★".repeat(s.rating || 0)}${"☆".repeat(5 - (s.rating || 0))}</span></div>
+      </div>
+      ${s.location ? `<p class="muted small">${esc(s.location)}</p>` : ""}
+      <div class="section"><h3>Drills</h3>${(s.drills || []).length ? `<div class="list">${s.drills.map((d) => `<div class="item" style="cursor:default"><span class="grow"><span class="title">${esc(d.name)}</span>${d.notes ? `<span class="sub">${esc(d.notes)}</span>` : ""}</span><span class="right num">${esc(drillSummary(d))}</span></div>`).join("")}</div>` : `<p class="muted">No drills logged.</p>`}</div>
+      ${s.notes ? `<div class="section"><h3>Notes</h3><p>${esc(s.notes)}</p></div>` : ""}
+      ${swings.length ? `<div class="section"><h3>Swings</h3><div class="list">${swings.map(swingRow).join("")}</div></div>` : ""}
+      <div class="row"><button class="btn danger" data-l="del">Delete session</button></div>`);
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-l]"); if (!b) return;
+      if (b.dataset.l === "edit") { closeSheet(); openLogger(s.cat, s); }
+      if (b.dataset.l === "del") { if (b.dataset.armed) { await removeRec(s); closeSheet(); render(); toast("Session deleted."); } else { b.dataset.armed = "1"; b.textContent = "Tap again to delete"; setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; b.textContent = "Delete session"; } }, 3000); } }
+    });
+  });
+}
+function openLibrary() {
+  openSheet((el) => {
+    el.innerHTML = sheetFrame("Drill library", "", CAT_KEYS.map((c) => `<div class="section"><h3>${CATS[c].title}</h3><div class="list">${DRILLS.filter((d) => d.cat === c).map((d) => `
+      <details class="item" style="display:block;cursor:default"><summary style="cursor:pointer"><b>${esc(d.name)}</b></summary>
+        <p class="small" style="margin-top:6px">${esc(d.how)}</p>
+        <p class="small muted">${esc(METRICS[d.metric].title)} · ${d.reps} reps · Goal: ${goalText(d)}</p></details>`).join("")}</div></div>`).join(""));
+  });
+}
+const goalText = (d) => ({ makes: `${d.goal}%+`, points: `${d.goal}+ pts`, strokes: `${d.goal} or fewer`, proximity: `under ${d.goal} ft` }[d.metric]);
+
+// ---------------------------------------------------------------- SWING
+function swingTitle(w) { const p = [w.club, w.angle && w.angle !== "other" ? ANGLES[w.angle] : null].filter(Boolean); return p.length ? p.join(" · ") : "Swing"; }
+function swingRow(w) {
+  const v = mediaURL(w.video); const img = mediaURL((w.images || [])[0]);
+  const thumb = v ? `<video src="${esc(v)}#t=0.4" muted playsinline preload="metadata"></video>` : img ? `<img src="${esc(img)}" alt="">` : `<span class="tiny">${w.link ? "link" : "—"}</span>`;
+  const bits = [w.sourceApp || (w.video ? "Video" : w.link ? "Link" : "Stills")];
+  if ((w.images || []).length) bits.push(`${w.images.length} still${w.images.length === 1 ? "" : "s"}`);
+  if (w.analysis) bits.push("analysed");
+  const lesson = w.lessonId ? byId("lesson", w.lessonId) : null; if (lesson) bits.push(lessonTitle(lesson));
+  return `<button class="item" data-act="open-swing" data-id="${esc(w.id)}"><span class="thumb">${thumb}</span>
+    <span class="grow"><span class="title">${esc(swingTitle(w))} ${w.favorite ? `<span style="color:var(--star)">★</span>` : ""}${w.sample ? ` <span class="tag">Sample</span>` : ""}</span>
+    <span class="sub">${esc(fmtDateTime(w.date))}</span><span class="sub">${esc(bits.join(" · "))}</span></span></button>`;
+}
+const lessonTitle = (l) => l.focus || (l.coach ? `Lesson with ${l.coach}` : "Lesson");
+VIEWS_swing = function () {
+  const head = `<div class="chips">${[["swings", "Swings"], ["lessons", "Lessons"]].map(([k, t]) => `<button class="chip" data-act="swing-mode" data-k="${k}" aria-pressed="${ui.swingMode === k}">${t}</button>`).join("")}</div>`;
+  if (ui.swingMode === "lessons") return head + lessonsView();
+  const list = S.swing.filter((w) => (!ui.clubFilter || w.club === ui.clubFilter) && (!ui.favOnly || w.favorite));
+  return `${head}
+  <section class="section">
+    <div class="spread"><h2>Swings</h2></div>
+    <div class="row">
+      <label class="btn primary">Add video<input type="file" accept="video/*" data-change="add-video"></label>
+      <label class="btn">Add screenshots<input type="file" accept="image/*" multiple data-change="add-shots"></label>
+      <button class="btn" data-act="add-link">Add coach link</button>
+    </div>
+    <p class="muted small">Bring in the clips and stills you make in your video app. Mark key positions, then send them to Claude or your analyzer chat. Videos up to 20 MB are saved with your data.</p>
+    <div class="row">
+      <select class="inp" style="width:auto" data-change="club-filter" aria-label="Filter by club"><option value="">All clubs</option>${CLUBS.map((c) => `<option ${ui.clubFilter === c ? "selected" : ""}>${c}</option>`).join("")}</select>
+      <label class="check"><input type="checkbox" data-change="fav-only" ${ui.favOnly ? "checked" : ""}> Favorites only</label>
+    </div>
+    ${S.swing.length === 0 ? `<div class="empty"><p><b>No swings yet.</b></p><p class="muted small">Add a video or screenshots from your phone, or save a link from your coaching app.</p></div>` :
+      list.length ? `<div class="list">${list.map(swingRow).join("")}</div>` : `<p class="muted">No swings match the filter.</p>`}
+  </section>`;
+};
+async function addSwingFromFiles(files, kind) {
+  if (!files.length) return;
+  toast(caps.assets ? "Uploading…" : "Adding…");
+  const rec = { id: newId("swing"), kind: "swing", date: new Date().toISOString(), club: "", angle: "downTheLine", sourceApp: "", link: "", notes: "", images: [], lines: [], checkpoints: [], favorite: false, analysis: "" };
+  if (kind === "video") rec.video = await storeMedia(files[0]);
+  else for (const f of [...files].slice(0, 10)) rec.images.push(await storeMedia(f));
+  await saveRec(rec);
+  render(); openSwing(rec.id);
+}
+
+function openSwing(id) {
+  openSheet((el) => {
+    const w = byId("swing", id); if (!w) { closeSheet(); return; }
+    w.lines = w.lines || []; w.checkpoints = w.checkpoints || []; w.images = w.images || [];
+    const vsrc = mediaURL(w.video);
+    const saveLater = debounce(() => saveRec(w), 500);
+    const saveSoon = () => { const c = $("#sw-ctx", el); if (c) c.value = swingContext(w, { sheet: true }); saveLater(); };
+    const others = S.swing.filter((o) => o.id !== w.id && mediaURL(o.video));
+    el.innerHTML = sheetFrame(swingTitle(w), "", `
+      ${w.video && !vsrc ? `<p class="notice">This video was only kept for the visit when it was added, so it's no longer available. Add it again to keep it (20 MB or less).</p>` : ""}
+      ${w.video?.temporary && vsrc ? `<p class="notice">This video is kept for this visit only (it couldn't be uploaded). Frames and analysis still work now.</p>` : ""}
+      ${vsrc ? `<div class="player-wrap">
+        <div class="player" id="sw-player"><video id="sw-video" src="${esc(vsrc)}" playsinline muted loop preload="auto"></video><canvas id="sw-canvas"></canvas><span class="hint" id="sw-hint" hidden>Drag to draw a line</span></div>
+        <div class="controls">
+          <input type="range" id="sw-scrub" min="0" max="1" step="0.001" value="0" aria-label="Scrub">
+          <div class="spread">
+            <div class="row"><button class="btn sm" data-p="back" aria-label="Back one frame">◀︎ frame</button><button class="btn sm primary" data-p="play" id="sw-play">Play</button><button class="btn sm" data-p="fwd" aria-label="Forward one frame">frame ▶︎</button></div>
+            <div class="row small"><label>Speed <select class="inp" style="width:auto;min-height:32px;padding:4px 8px" id="sw-rate">${[0.1, 0.25, 0.5, 1].map((r) => `<option value="${r}" ${r === 0.5 ? "selected" : ""}>${r}×</option>`).join("")}</select></label>
+            <label>Clip fps <select class="inp" style="width:auto;min-height:32px;padding:4px 8px" id="sw-fps">${[30, 60, 120, 240].map((f) => `<option ${f === (w.fps || 30) ? "selected" : ""}>${f}</option>`).join("")}</select></label></div>
+          </div>
+          <div class="spread tiny muted num"><span id="sw-time">0.00s</span><span>Tap the video to play or pause</span></div>
+          <div class="row"><button class="btn sm" data-p="draw" id="sw-draw">Draw lines</button>
+            ${LINE_COLORS.map((c, i) => `<button class="swatch" data-p="color" data-i="${i}" style="background:${c}" aria-label="Line colour ${i + 1}" aria-pressed="${i === 0}"></button>`).join("")}
+            <button class="btn sm ghost" data-p="undo-line">Undo line</button><button class="btn sm ghost danger" data-p="clear-lines">Clear</button></div>
+          <div class="row"><select class="inp" style="width:auto" id="sw-mark" aria-label="Mark key position"><option value="">Mark position here…</option>${POSITIONS.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select><div class="chips" id="sw-cps"></div></div>
+        </div></div>` : ""}
+      ${w.link ? `<p><a href="${esc(w.link)}" target="_blank" rel="noopener">Open in ${esc(w.sourceApp || "browser")} ↗</a></p>` : ""}
+
+      <div class="section"><h3>Analysis</h3>
+        <div class="row">
+          ${caps.sample ? `<button class="btn primary" data-p="analyze" ${vsrc || w.images.length ? "" : "disabled"}>Analyze with Claude</button>` : ""}
+          <button class="btn" data-p="copy">Copy context for chat</button>
+          ${caps.downloads && vsrc ? `<button class="btn" data-p="save-sheet">Save key positions image</button>` : ""}
+        </div>
+        <p class="muted small" id="sw-anote">${vsrc && !w.checkpoints.length ? "Tip: mark Address, Top, Impact and Finish first. Claude reads a few sharp frames better than a whole video." : caps.sample ? "Sends your marked frames and screenshots to Claude with the context below. Or copy the context into your own analyzer chat and paste its reply into Feedback." : "Copy the context into your analyzer chat, then paste its reply into Feedback."}</p>
+        <details><summary class="small muted" style="cursor:pointer">Context that gets sent</summary><textarea class="inp small" id="sw-ctx" rows="7" readonly style="margin-top:6px">${esc(swingContext(w, { sheet: true }))}</textarea></details>
+        <div class="analysis-out" id="sw-stream" hidden></div>
+        <label class="field"><span>Feedback${w.analysisDate ? ` · updated ${esc(fmtDateTime(w.analysisDate))}` : ""}</span><textarea id="sw-analysis" rows="6" placeholder="Paste the analyzer chat's or coach's feedback here">${esc(w.analysis)}</textarea></label>
+      </div>
+
+      <div class="section"><div class="spread"><h3>Screenshots</h3><label class="btn sm">Add<input type="file" accept="image/*" multiple id="sw-addshots"></label></div>
+        ${w.images.length ? `<div class="shots">${w.images.map((m, i) => { const u = mediaURL(m); return `<div class="shot">${u ? `<img src="${esc(u)}" alt="Screenshot ${i + 1}" data-p="view" data-i="${i}">` : `<span class="tiny muted" style="padding:8px;display:block">Not available any more</span>`}<button data-p="rm-shot" data-i="${i}">Remove</button></div>`; }).join("")}</div>` : `<p class="muted small">Stills from your analysis app go here.</p>`}
+      </div>
+
+      <div class="section"><h3>Details</h3>
+        <div class="form">
+          <label class="field"><span>Club</span><select id="sw-club"><option value="">None</option>${CLUBS.map((c) => `<option ${w.club === c ? "selected" : ""}>${c}</option>`).join("")}</select></label>
+          <label class="field"><span>Camera angle</span><select id="sw-angle">${Object.entries(ANGLES).map(([k, t]) => `<option value="${k}" ${w.angle === k ? "selected" : ""}>${t}</option>`).join("")}</select></label>
+          <label class="field"><span>Date</span><input type="datetime-local" id="sw-date" value="${toLocalInput(w.date)}"></label>
+          <label class="field"><span>From</span><input id="sw-src" list="coach-apps" value="${esc(w.sourceApp)}" placeholder="e.g. your video app"></label>
+          <label class="field"><span>Lesson</span><select id="sw-lesson"><option value="">None</option>${S.lesson.map((l) => `<option value="${esc(l.id)}" ${w.lessonId === l.id ? "selected" : ""}>${esc(lessonTitle(l))} (${esc(fmtDate(l.date, { month: "short", day: "numeric" }))})</option>`).join("")}</select></label>
+          <label class="field"><span>Practice session</span><select id="sw-session"><option value="">None</option>${S.session.slice(0, 40).map((s) => `<option value="${esc(s.id)}" ${w.sessionId === s.id ? "selected" : ""}>${esc(CATS[s.cat].title)}, ${esc(fmtDate(s.date, { month: "short", day: "numeric" }))}</option>`).join("")}</select></label>
+          <label class="field full"><span>Link</span><input id="sw-link" value="${esc(w.link)}" placeholder="https://… (optional)"></label>
+          <label class="field full"><span>Notes</span><textarea id="sw-notes" placeholder="What you were working on">${esc(w.notes)}</textarea></label>
+          <label class="check"><input type="checkbox" id="sw-fav" ${w.favorite ? "checked" : ""}> Favorite</label>
+        </div>
+        <datalist id="coach-apps">${COACH_APPS.map((a) => `<option value="${a}">`).join("")}</datalist>
+      </div>
+      <div class="row">
+        ${vsrc && others.length ? `<select class="inp" style="width:auto" id="sw-compare"><option value="">Compare side by side with…</option>${others.map((o) => `<option value="${esc(o.id)}">${esc(swingTitle(o))}, ${esc(fmtDate(o.date, { month: "short", day: "numeric" }))}</option>`).join("")}</select>` : ""}
+        <button class="btn danger" data-p="del">Delete swing</button>
+      </div>`);
+
+    // details form
+    const bindField = (sel, key, map = (v) => v) => { const f = $(sel, el); if (!f) return; f.addEventListener(f.type === "checkbox" ? "change" : "input", () => { w[key] = map(f.type === "checkbox" ? f.checked : f.value); saveSoon(); }); };
+    bindField("#sw-club", "club"); bindField("#sw-angle", "angle"); bindField("#sw-src", "sourceApp"); bindField("#sw-link", "link");
+    bindField("#sw-notes", "notes"); bindField("#sw-fav", "favorite"); bindField("#sw-lesson", "lessonId"); bindField("#sw-session", "sessionId");
+    bindField("#sw-date", "date", (v) => new Date(v || Date.now()).toISOString());
+    $("#sw-analysis", el).addEventListener("input", (e) => { w.analysis = e.target.value; w.analysisDate = w.analysis ? new Date().toISOString() : null; saveSoon(); });
+    $("#sw-addshots", el).addEventListener("change", async (e) => { const files = [...e.target.files]; if (!files.length) return; toast("Adding screenshots…"); for (const f of files.slice(0, 10)) w.images.push(await storeMedia(f)); await saveRec(w); reopenSwing(); });
+    const cmp = $("#sw-compare", el); if (cmp) cmp.addEventListener("change", () => { if (cmp.value) openCompare(w.id, cmp.value); cmp.value = ""; });
+
+    // player
+    let player = null;
+    if (vsrc) player = setupPlayer(el, w, saveSoon);
+
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-p]"); if (!b) return;
+      const p = b.dataset.p;
+      if (player && player.handle(p, b)) return;
+      if (p === "view") { const u = mediaURL(w.images[+b.dataset.i]); if (u) showViewer(u); }
+      if (p === "rm-shot") { w.images.splice(+b.dataset.i, 1); await saveRec(w); reopenSwing(); }
+      if (p === "copy") copyText(swingContext(w, { sheet: true }), $("#sw-ctx", el));
+      if (p === "analyze") analyzeSwing(w, el, player);
+      if (p === "save-sheet") saveKeySheet(w, player);
+      if (p === "del") {
+        if (b.dataset.armed) { await removeRec(w); closeSheet(); render(); toast("Swing deleted."); }
+        else { b.dataset.armed = "1"; b.textContent = "Tap again to delete"; setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; b.textContent = "Delete swing"; } }, 3000); }
+      }
+    });
+    function reopenSwing() { closeSheet(); openSwing(w.id); render(); }
+    return () => { player?.destroy(); };
+  });
+}
+
+function setupPlayer(el, w, saveSoon) {
+  const v = $("#sw-video", el), cv = $("#sw-canvas", el), box = $("#sw-player", el), scrub = $("#sw-scrub", el);
+  const playBtn = $("#sw-play", el), timeEl = $("#sw-time", el), drawBtn = $("#sw-draw", el), hint = $("#sw-hint", el);
+  let drawing = false, color = 0, draft = null, raf = 0, aspect = 9 / 16;
+  v.playbackRate = 0.5;
+  const fps = () => +$("#sw-fps", el).value || 30;
+  v.addEventListener("loadedmetadata", () => {
+    if (v.videoWidth && v.videoHeight) { aspect = v.videoWidth / v.videoHeight; box.style.aspectRatio = `${v.videoWidth} / ${v.videoHeight}`; box.style.width = `min(100%, calc(62vh * ${aspect.toFixed(4)}))`; }
+    scrub.max = v.duration || 1; size();
+  });
+  v.addEventListener("play", () => { playBtn.textContent = "Pause"; v.playbackRate = +$("#sw-rate", el).value; });
+  v.addEventListener("pause", () => { playBtn.textContent = "Play"; });
+  $("#sw-rate", el).addEventListener("change", (e) => { v.playbackRate = +e.target.value; });
+  $("#sw-fps", el).addEventListener("change", (e) => { w.fps = +e.target.value; saveSoon(); });
+  scrub.addEventListener("input", () => { v.pause(); v.currentTime = +scrub.value; });
+  const loop = () => { if (!scrub.matches(":active")) scrub.value = v.currentTime; timeEl.textContent = v.currentTime.toFixed(2) + "s / " + (v.duration || 0).toFixed(2) + "s"; raf = requestAnimationFrame(loop); };
+  raf = requestAnimationFrame(loop);
+  const ro = new ResizeObserver(size); ro.observe(box);
+  function size() { const r = box.getBoundingClientRect(); const d = window.devicePixelRatio || 1; cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); draw(); }
+  function draw() {
+    const ctx = cv.getContext("2d"); const W = cv.width, H = cv.height; ctx.clearRect(0, 0, W, H);
+    drawLines(ctx, W, H, draft ? w.lines.concat([draft]) : w.lines, aspect, (window.devicePixelRatio || 1));
+  }
+  const norm = (e) => { const r = cv.getBoundingClientRect(); return { x: Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)), y: Math.min(1, Math.max(0, (e.clientY - r.top) / r.height)) }; };
+  cv.addEventListener("pointerdown", (e) => {
+    if (!drawing) { v.paused ? v.play() : v.pause(); return; }
+    cv.setPointerCapture(e.pointerId); const p = norm(e); draft = { x1: p.x, y1: p.y, x2: p.x, y2: p.y, c: color }; draw();
+  });
+  cv.addEventListener("pointermove", (e) => { if (!draft) return; const p = norm(e); draft.x2 = p.x; draft.y2 = p.y; draw(); });
+  const end = () => { if (!draft) return; if (Math.hypot(draft.x2 - draft.x1, draft.y2 - draft.y1) > 0.015) { w.lines.push(draft); saveSoon(); } draft = null; draw(); };
+  cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end);
+  const drawCps = () => {
+    $("#sw-cps", el).innerHTML = w.checkpoints.slice().sort((a, b) => a.t - b.t).map((c) => `<button class="chip num" data-p="seek" data-t="${c.t}" title="Jump to ${esc(POS_TITLE[c.pos])}">${esc(POS_TITLE[c.pos])} ${c.t.toFixed(2)}s</button><button class="chip" data-p="rm-cp" data-k="${c.pos}" aria-label="Remove ${esc(POS_TITLE[c.pos])}">×</button>`).join("");
+  };
+  drawCps();
+  $("#sw-mark", el).addEventListener("change", (e) => {
+    const pos = e.target.value; if (!pos) return;
+    w.checkpoints = w.checkpoints.filter((c) => c.pos !== pos).concat([{ pos, t: Math.round(v.currentTime * 1000) / 1000 }]);
+    e.target.value = ""; drawCps(); saveSoon(); const n = $("#sw-anote", el); if (n && w.checkpoints.length) n.textContent = "Marked positions go into the analysis as labelled frames.";
+  });
+  return {
+    video: v, aspect: () => aspect,
+    handle(p, b) {
+      switch (p) {
+        case "play": v.paused ? v.play() : v.pause(); return true;
+        case "back": v.pause(); v.currentTime = Math.max(0, v.currentTime - 1 / fps()); return true;
+        case "fwd": v.pause(); v.currentTime = Math.min(v.duration || 0, v.currentTime + 1 / fps()); return true;
+        case "draw": drawing = !drawing; if (drawing) { v.pause(); box.scrollIntoView({ block: "nearest" }); } drawBtn.textContent = drawing ? "Done drawing" : "Draw lines"; drawBtn.classList.toggle("primary", drawing); hint.hidden = !drawing; return true;
+        case "color": color = +b.dataset.i; $$("[data-p=color]", el).forEach((s) => s.setAttribute("aria-pressed", s === b)); return true;
+        case "undo-line": w.lines.pop(); draw(); saveSoon(); return true;
+        case "clear-lines": w.lines = []; draw(); saveSoon(); return true;
+        case "seek": v.pause(); v.currentTime = +b.dataset.t; return true;
+        case "rm-cp": w.checkpoints = w.checkpoints.filter((c) => c.pos !== b.dataset.k); drawCps(); saveSoon(); return true;
+      }
+      return false;
+    },
+    destroy() { cancelAnimationFrame(raf); ro.disconnect(); v.pause(); },
+  };
+}
+function drawLines(ctx, W, H, lines, aspect, scale = 1) {
+  const lw = Math.max(3 * scale, W / 180);
+  ctx.lineCap = "round";
+  for (const l of lines) {
+    const a = [l.x1 * W, l.y1 * H], b = [l.x2 * W, l.y2 * H]; const col = LINE_COLORS[l.c] || LINE_COLORS[0];
+    ctx.strokeStyle = "rgba(0,0,0,.55)"; ctx.lineWidth = lw + 2 * scale; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke();
+    ctx.strokeStyle = col; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke();
+    ctx.fillStyle = col; for (const p of [a, b]) { ctx.beginPath(); ctx.arc(p[0], p[1], lw * 1.3, 0, Math.PI * 2); ctx.fill(); }
+    const label = Math.round(lineAngle(l, aspect)) + "°";
+    ctx.font = `bold ${Math.round(lw * 4.5)}px system-ui, sans-serif`; ctx.lineWidth = lw; ctx.strokeStyle = "rgba(0,0,0,.7)";
+    const tx = (a[0] + b[0]) / 2 + lw * 3, ty = (a[1] + b[1]) / 2 - lw * 3;
+    ctx.strokeText(label, tx, ty); ctx.fillText(label, tx, ty);
+  }
+}
+
+// frames, sheets, analysis -------------------------------------------
+function seekTo(v, t) {
+  return new Promise((res) => { const done = () => { clearTimeout(to); res(); }; const to = setTimeout(done, 3000); v.addEventListener("seeked", done, { once: true }); v.currentTime = Math.min(Math.max(0, t), v.duration || t); });
+}
+function banner(ctx, text, width) {
+  const fs = Math.max(16, Math.round(width / 22)); ctx.fillStyle = "rgba(0,0,0,.6)"; ctx.fillRect(0, 0, width, fs * 1.8);
+  ctx.fillStyle = "#fff"; ctx.font = `bold ${fs}px system-ui, sans-serif`; ctx.fillText(text, fs * 0.6, fs * 1.25);
+}
+async function captureFrames(player, w, times, withLines = true) {
+  const v = player.video; const was = v.currentTime; v.pause();
+  const out = [];
+  for (const { t, label } of times) {
+    await seekTo(v, t);
+    const scale = Math.min(1, 1280 / Math.max(v.videoWidth, v.videoHeight)); const W = Math.round(v.videoWidth * scale), H = Math.round(v.videoHeight * scale);
+    const c = document.createElement("canvas"); c.width = W; c.height = H; const ctx = c.getContext("2d");
+    ctx.drawImage(v, 0, 0, W, H);
+    if (withLines && w.lines.length) drawLines(ctx, W, H, w.lines, W / H, W / 600);
+    out.push({ canvas: c, label });
+  }
+  await seekTo(v, was);
+  return out;
+}
+const canvasBlob = (c, q = 0.85) => new Promise((res) => c.toBlob(res, "image/jpeg", q));
+function keySheet(frames, title) {
+  const [cols, rows] = gridLayout(frames.length); if (!cols) return null;
+  const cw = 600, ch = Math.round(cw * frames[0].canvas.height / frames[0].canvas.width), gap = 8, head = title ? 56 : 0;
+  const c = document.createElement("canvas"); c.width = cols * cw + (cols + 1) * gap; c.height = head + rows * ch + (rows + 1) * gap;
+  const ctx = c.getContext("2d"); ctx.fillStyle = "#000"; ctx.fillRect(0, 0, c.width, c.height);
+  if (title) { ctx.fillStyle = "#fff"; ctx.font = "bold 30px system-ui, sans-serif"; ctx.fillText(title, gap * 2, 38); }
+  frames.forEach((f, i) => {
+    const x = gap + (i % cols) * (cw + gap), y = head + gap + Math.floor(i / cols) * (ch + gap);
+    ctx.drawImage(f.canvas, x, y, cw, ch); ctx.save(); ctx.translate(x, y); banner(ctx, `${i + 1}. ${f.label}`, cw); ctx.restore();
+  });
+  return c;
+}
+function cpTimes(w) { return (w.checkpoints || []).slice().sort((a, b) => a.t - b.t).map((c) => ({ t: c.t, label: POS_TITLE[c.pos] })); }
+async function saveKeySheet(w, player) {
+  if (!player) return;
+  if (!w.checkpoints.length) { toast("Mark at least one position first (Address, Top, Impact…)."); return; }
+  try {
+    const frames = await captureFrames(player, w, cpTimes(w));
+    const sheet = keySheet(frames, swingTitle(w)); const blob = await canvasBlob(sheet);
+    await caps.downloads.save({ filename: `${(w.club || "swing").replace(/\s+/g, "-")}-key-positions.jpg`, data: blob });
+  } catch (e) { if (e?.code !== "declined") toast("Couldn't save the image: " + (e?.message || e?.code || "")); }
+}
+async function analyzeSwing(w, el, player) {
+  const out = $("#sw-stream", el), btn = $("[data-p=analyze]", el);
+  if (!caps.sample) return;
+  if (!caps.sampleImages) { toast("Image analysis isn't available in this view. Use Copy context for chat instead.", 4000); return; }
+  btn.disabled = true; out.hidden = false; out.textContent = "Preparing frames…";
+  try {
+    const blobs = [], names = [];
+    if (player) {
+      const times = w.checkpoints.length ? cpTimes(w) : [{ t: player.video.currentTime, label: "Current frame" }];
+      const frames = await captureFrames(player, w, times);
+      if (frames.length > 1) { const sheet = keySheet(frames, swingTitle(w)); blobs.push(await canvasBlob(sheet)); names.push(`Key positions sheet (${frames.map((f) => f.label).join(" → ")})`); }
+      for (const f of frames) { const ctx = f.canvas.getContext("2d"); banner(ctx, f.label, f.canvas.width); blobs.push(await canvasBlob(f.canvas)); names.push(`${f.label} frame`); }
+    }
+    for (const m of w.images) { const u = mediaURL(m); if (!u) continue; try { blobs.push(await (await fetch(u)).blob()); names.push("Screenshot from the golfer's video app"); } catch (e) { /* skip unreadable */ } }
+    const n = Math.min(blobs.length, caps.sampleImages);
+    if (!n) { out.textContent = "Nothing to analyse yet: add a video or screenshots."; btn.disabled = false; return; }
+    const prompt = `You are an experienced PGA golf instructor reviewing a student's swing from still images.\n\n${swingContext(w, { sheet: true })}\n\nImages attached, in order:\n${names.slice(0, n).map((x, i) => `${i + 1}. ${x}`).join("\n")}\nColoured lines and degree labels, if present, were drawn by the golfer (for example shaft plane or spine angle).\n\nReply in plain text with these headings: "What I see", "Biggest issues" (one or two, each with its likely cause), "Drills" (one per issue, with reps), and "Feel to try". Be specific to what is visible, say when a frame doesn't show enough to judge, and keep it under 350 words.`;
+    out.textContent = "Thinking…";
+    const res = await caps.sample(prompt, { images: blobs.slice(0, n), onText: ({ text }) => { out.textContent = text; } });
+    const stamp = `Claude analysis, ${fmtDateTime(new Date())}`;
+    w.analysis = `${stamp}\n${res.text}${w.analysis ? "\n\n—\n" + w.analysis : ""}`; w.analysisDate = new Date().toISOString();
+    $("#sw-analysis", el).value = w.analysis; out.hidden = true;
+    await saveRec(w); toast("Analysis saved to this swing.");
+  } catch (e) {
+    out.textContent = e?.code === "not_granted" ? "Claude analysis wasn't allowed for this page. You can still copy the context into your chat." : e?.code === "rate_limited" ? "Too many requests right now. Try again in a minute." : "Analysis failed: " + (e?.message || e?.code || "unknown error");
+  } finally { btn.disabled = false; }
+}
+function copyText(text, fallbackEl) {
+  if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(() => toast("Copied. Paste it into your analyzer chat with the frames."), () => selectFallback());
+  else selectFallback();
+  function selectFallback() { if (fallbackEl) { fallbackEl.closest("details")?.setAttribute("open", ""); fallbackEl.focus(); fallbackEl.select(); toast("Press Copy (⌘C / Ctrl+C) to copy the selected text."); } }
+}
+function showViewer(src) { const d = document.createElement("div"); d.className = "viewer"; d.innerHTML = `<img src="${esc(src)}" alt="Screenshot">`; d.addEventListener("click", () => d.remove()); document.body.appendChild(d); }
+
+function openCompare(aId, bId) {
+  openSheet((el) => {
+    const a = byId("swing", aId), b = byId("swing", bId);
+    const pane = (w, k) => `<div class="section" style="gap:6px"><div class="small"><b>${esc(swingTitle(w))}</b><br><span class="muted">${esc(fmtDate(w.date))}</span></div>
+      <div class="player" id="cp-box-${k}"><video id="cp-${k}" src="${esc(mediaURL(w.video))}" playsinline muted loop preload="auto"></video><canvas id="cp-cv-${k}"></canvas></div>
+      <input type="range" id="cp-s-${k}" min="0" max="1" step="0.001" value="0" aria-label="Scrub ${k === "a" ? "left" : "right"} video"></div>`;
+    el.innerHTML = sheetFrame("Compare", "", `<p class="muted small">Line each one up with its own slider (for example at address), then play or step both together.</p>
+      <div class="compare">${pane(a, "a")}${pane(b, "b")}</div>
+      <div class="row"><button class="btn" data-c="back">◀︎ frame</button><button class="btn primary" data-c="play" id="cp-play">Play both</button><button class="btn" data-c="fwd">frame ▶︎</button>
+      <label class="small">Speed <select class="inp" style="width:auto" id="cp-rate">${[0.1, 0.25, 0.5, 1].map((r) => `<option value="${r}" ${r === 0.5 ? "selected" : ""}>${r}×</option>`).join("")}</select></label></div>`);
+    const vids = ["a", "b"].map((k, i) => {
+      const v = $("#cp-" + k, el), s = $("#cp-s-" + k, el), box = $("#cp-box-" + k, el), cv = $("#cp-cv-" + k, el), w = [a, b][i];
+      v.addEventListener("loadedmetadata", () => { s.max = v.duration || 1; if (v.videoWidth) { box.style.aspectRatio = `${v.videoWidth} / ${v.videoHeight}`; box.style.width = `min(100%, calc(56vh * ${(v.videoWidth / v.videoHeight).toFixed(4)}))`; } paint(); });
+      s.addEventListener("input", () => { v.pause(); v.currentTime = +s.value; });
+      function paint() { const r = box.getBoundingClientRect(), d = window.devicePixelRatio || 1; cv.width = r.width * d; cv.height = r.height * d; drawLines(cv.getContext("2d"), cv.width, cv.height, w.lines || [], (v.videoWidth / v.videoHeight) || 0.5625, d); }
+      new ResizeObserver(paint).observe(box);
+      return { v, s, fps: w.fps || 30 };
+    });
+    let raf = requestAnimationFrame(function tick() { vids.forEach(({ v, s }) => { if (!s.matches(":active")) s.value = v.currentTime; }); raf = requestAnimationFrame(tick); });
+    el.addEventListener("click", (e) => {
+      const c = e.target.closest("[data-c]"); if (!c) return;
+      const rate = +$("#cp-rate", el).value;
+      if (c.dataset.c === "play") { const playing = vids.some(({ v }) => !v.paused); vids.forEach(({ v }) => { if (playing) v.pause(); else { v.playbackRate = rate; v.play(); } }); $("#cp-play", el).textContent = playing ? "Play both" : "Pause"; }
+      if (c.dataset.c === "back" || c.dataset.c === "fwd") vids.forEach(({ v, fps }) => { v.pause(); v.currentTime += (c.dataset.c === "fwd" ? 1 : -1) / fps; });
+    });
+    return () => { cancelAnimationFrame(raf); vids.forEach(({ v }) => v.pause()); };
+  });
+}
+
+function openAddLink() {
+  openSheet((el) => {
+    el.innerHTML = sheetFrame("Add coach link", `<button class="btn primary sm" data-k="save">Save</button>`, `
+      <p class="muted small">Paste a share link to a swing, lesson or voice-over. If the app can save the video itself, add the video instead to get slow motion and drawing tools.</p>
+      <div class="form">
+        <label class="field full"><span>Link</span><input id="lk-url" placeholder="https://…" inputmode="url"></label>
+        <label class="field"><span>From</span><input id="lk-src" list="lk-apps" placeholder="e.g. V1 Golf"><datalist id="lk-apps">${COACH_APPS.map((a) => `<option value="${a}">`).join("")}</datalist></label>
+        <label class="field"><span>Club</span><select id="lk-club"><option value="">None</option>${CLUBS.map((c) => `<option>${c}</option>`).join("")}</select></label>
+        <label class="field full"><span>Notes</span><textarea id="lk-notes"></textarea></label>
+      </div>`);
+    el.addEventListener("click", async (e) => {
+      if (!e.target.closest("[data-k=save]")) return;
+      const url = $("#lk-url", el).value.trim();
+      if (!/^https?:\/\//i.test(url)) { toast("Enter a link that starts with https://"); return; }
+      const rec = { id: newId("swing"), kind: "swing", date: new Date().toISOString(), club: $("#lk-club", el).value, angle: "other", sourceApp: $("#lk-src", el).value.trim(), link: url, notes: $("#lk-notes", el).value.trim(), images: [], lines: [], checkpoints: [], favorite: false, analysis: "" };
+      await saveRec(rec); closeSheet(); render(); toast("Link saved.");
+    });
+  });
+}
+
+// lessons ------------------------------------------------------------
+function lessonsView() {
+  const upcoming = S.lesson.map((l) => l.nextDate).filter((d) => d && new Date(d) >= new Date(new Date().toDateString())).sort()[0];
+  return `<section class="section">
+    <div class="spread"><h2>Lessons</h2><button class="btn primary" data-act="new-lesson">New lesson</button></div>
+    ${upcoming ? `<p class="notice">Next lesson: <b>${esc(fmtDateTime(upcoming))}</b></p>` : ""}
+    ${S.lesson.length ? `<div class="list">${S.lesson.map((l) => {
+      const n = S.swing.filter((w) => w.lessonId === l.id).length;
+      return `<button class="item" data-act="open-lesson" data-id="${esc(l.id)}"><span class="grow"><span class="title">${esc(lessonTitle(l))}${l.sample ? ` <span class="tag">Sample</span>` : ""}</span><span class="sub">${esc([l.coach, l.format, fmtDate(l.date)].filter(Boolean).join(" · "))}</span></span><span class="right small muted">${n ? `${n} swing${n === 1 ? "" : "s"}` : ""}</span></button>`;
+    }).join("")}</div>` : `<div class="empty"><p><b>No lessons yet.</b></p><p class="muted small">Record what your coach saw, the drills they gave you, and the swings that go with them.</p></div>`}
+  </section>`;
+}
+function openLesson(id) {
+  const existing = id ? byId("lesson", id) : null;
+  const l = existing ? { ...existing } : { id: newId("lesson"), kind: "lesson", date: new Date().toISOString(), coach: (() => { try { return localStorage.getItem("golf-last-coach") || ""; } catch (e) { return ""; } })(), format: "In person", focus: "", feedback: "", drills: "", link: "", nextDate: null };
+  openSheet((el) => {
+    const swings = S.swing.filter((w) => w.lessonId === l.id);
+    el.innerHTML = sheetFrame(existing ? lessonTitle(l) : "New lesson", `<button class="btn primary sm" data-k="save">Save</button>`, `
+      <div class="form">
+        <label class="field"><span>Coach</span><input id="ls-coach" value="${esc(l.coach)}"></label>
+        <label class="field"><span>Format</span><input id="ls-format" list="ls-formats" value="${esc(l.format)}"><datalist id="ls-formats">${["In person", "Video call", ...COACH_APPS.filter((a) => a !== "Other")].map((a) => `<option value="${a}">`).join("")}</datalist></label>
+        <label class="field"><span>Date</span><input type="datetime-local" id="ls-date" value="${toLocalInput(l.date)}"></label>
+        <label class="field"><span>Next lesson</span><input type="datetime-local" id="ls-next" value="${l.nextDate ? toLocalInput(l.nextDate) : ""}"></label>
+        <label class="field full"><span>Focus</span><input id="ls-focus" value="${esc(l.focus)}" placeholder="e.g. takeaway, low point"></label>
+        <label class="field full"><span>Coach feedback</span><textarea id="ls-feedback" placeholder="Key points, swing thoughts, feels">${esc(l.feedback)}</textarea></label>
+        <label class="field full"><span>Assigned drills (one per line)</span><textarea id="ls-drills">${esc(l.drills)}</textarea></label>
+        <label class="field full"><span>Coach app link</span><input id="ls-link" value="${esc(l.link)}" placeholder="https://… (optional)"></label>
+      </div>
+      <p class="muted small">Tip: add assigned drills as custom drills in your practice sessions, so they show up on the Progress tab.</p>
+      ${existing ? `<div class="section"><h3>Swings</h3>${swings.length ? `<div class="list">${swings.map(swingRow).join("")}</div>` : `<p class="muted small">Attach swings from a swing's Details section (Lesson).</p>`}</div>
+        <div class="row"><button class="btn danger" data-k="del">Delete lesson</button></div>` : ""}`);
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-k]"); if (!b) return;
+      if (b.dataset.k === "save") {
+        l.coach = $("#ls-coach", el).value.trim(); l.format = $("#ls-format", el).value.trim() || "In person";
+        l.date = new Date($("#ls-date", el).value || Date.now()).toISOString();
+        const nx = $("#ls-next", el).value; l.nextDate = nx ? new Date(nx).toISOString() : null;
+        l.focus = $("#ls-focus", el).value.trim(); l.feedback = $("#ls-feedback", el).value.trim(); l.drills = $("#ls-drills", el).value.trim(); l.link = $("#ls-link", el).value.trim();
+        try { if (l.coach) localStorage.setItem("golf-last-coach", l.coach); } catch (err) { /* ignore */ }
+        await saveRec(l); closeSheet(); render(); toast("Lesson saved.");
+      }
+      if (b.dataset.k === "del") {
+        if (b.dataset.armed) { for (const w of S.swing.filter((x) => x.lessonId === l.id)) { w.lessonId = ""; await saveRec(w); } await removeRec(l); closeSheet(); render(); toast("Lesson deleted."); }
+        else { b.dataset.armed = "1"; b.textContent = "Tap again to delete"; }
+      }
+    });
+  });
+}
+
+// ---------------------------------------------------------------- ROUNDS
+const latestHandicap = () => S.handicap[0] || null;
+VIEWS_rounds = function () {
+  const h = latestHandicap();
+  return `
+  <div class="hcp"><div><div class="small" style="opacity:.85">Handicap index</div><div class="big num">${fmtIndex(h?.index)}</div>
+    <div class="tiny" style="opacity:.85">${h ? `Updated ${esc(fmtDate(h.date))}${h.source === "grint" ? " · from TheGrint" : ""}` : "Copy your index from TheGrint when it changes"}</div></div>
+    <button class="btn sm" data-act="edit-hcp">Update</button></div>
+  <section class="section">
+    <div class="spread"><h2>Rounds</h2><div class="row"><button class="btn" data-act="import-csv">Import from TheGrint</button><button class="btn primary" data-act="new-round">Add round</button></div></div>
+    ${S.round.length ? `<div class="list">${S.round.map((r) => {
+      const tp = r.score - r.par; const parts = [fmtDate(r.date)]; if (r.holes !== 18) parts.push(`${r.holes} holes`); if (r.putts != null) parts.push(`${r.putts} putts`); if (r.gir != null) parts.push(`${r.gir} GIR`);
+      return `<button class="item" data-act="open-round" data-id="${esc(r.id)}"><span class="grow"><span class="title">${esc(r.course || "Round")} ${r.source === "grint" ? `<span class="tag">Grint</span>` : ""}${r.sample ? ` <span class="tag">Sample</span>` : ""}</span><span class="sub">${esc(parts.join(" · "))}</span></span>
+        <span class="right"><span class="score num">${r.score}</span><br><span class="topar ${tp <= 0 ? "under" : ""}">${tp === 0 ? "E" : tp > 0 ? "+" + tp : tp}</span></span></button>`;
+    }).join("")}</div>` : emptySample("No rounds yet. Add one, or import your TheGrint history from a CSV file.")}
+  </section>`;
+};
+function openRound(id) {
+  const ex = id ? byId("round", id) : null;
+  const r = ex ? { ...ex } : { id: newId("round"), kind: "round", date: new Date().toISOString(), course: "", holes: 18, par: 72, score: 85, putts: null, fairwaysHit: null, fairwaysPossible: 14, gir: null, upDowns: null, upDownAttempts: null, penalties: null, notes: "", source: "manual" };
+  const optNum = (k, label) => `<label class="field"><span>${label}</span><input type="number" min="0" inputmode="numeric" id="rd-${k}" value="${r[k] ?? ""}" placeholder="—"></label>`;
+  openSheet((el) => {
+    el.innerHTML = sheetFrame(ex ? (r.course || "Round") : "New round", `<button class="btn primary sm" data-k="save">Save</button>`, `
+      <div class="form">
+        <label class="field full"><span>Course</span><input id="rd-course" value="${esc(r.course)}"></label>
+        <label class="field"><span>Date</span><input type="date" id="rd-date" value="${toDateInput(r.date)}"></label>
+        <label class="field"><span>Holes</span><select id="rd-holes"><option ${r.holes === 18 ? "selected" : ""}>18</option><option ${r.holes === 9 ? "selected" : ""}>9</option></select></label>
+        <label class="field"><span>Par</span><input type="number" id="rd-par" value="${r.par}"></label>
+        <label class="field"><span>Score</span><input type="number" id="rd-score" value="${r.score}"></label>
+      </div>
+      <h3>Stats (optional)</h3>
+      <div class="form">${optNum("putts", "Putts")}${optNum("fairwaysHit", "Fairways hit")}${optNum("fairwaysPossible", "Fairways possible")}${optNum("gir", "Greens in regulation")}${optNum("upDowns", "Up & downs made")}${optNum("upDownAttempts", "Up & down chances")}${optNum("penalties", "Penalty strokes")}</div>
+      <label class="field"><span>Notes</span><textarea id="rd-notes">${esc(r.notes)}</textarea></label>
+      ${ex ? `<div class="row"><button class="btn danger" data-k="del">Delete round</button></div>` : ""}`);
+    $("#rd-holes", el).addEventListener("change", (e) => { if (!ex) { $("#rd-par", el).value = e.target.value === "9" ? 36 : 72; $("#rd-fairwaysPossible", el).value = e.target.value === "9" ? 7 : 14; } });
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-k]"); if (!b) return;
+      if (b.dataset.k === "save") {
+        r.course = $("#rd-course", el).value.trim(); const d = $("#rd-date", el).value; r.date = (d ? new Date(d + "T12:00") : new Date()).toISOString();
+        r.holes = +$("#rd-holes", el).value; r.par = parseInt($("#rd-par", el).value) || (r.holes === 9 ? 36 : 72); r.score = parseInt($("#rd-score", el).value) || 0;
+        for (const k of ["putts", "fairwaysHit", "fairwaysPossible", "gir", "upDowns", "upDownAttempts", "penalties"]) { const v = $("#rd-" + k, el).value; r[k] = v === "" ? null : parseInt(v); }
+        r.notes = $("#rd-notes", el).value.trim();
+        if (!r.score) { toast("Enter a score."); return; }
+        await saveRec(r); closeSheet(); render(); toast("Round saved.");
+      }
+      if (b.dataset.k === "del") { if (b.dataset.armed) { await removeRec(ex); closeSheet(); render(); toast("Round deleted."); } else { b.dataset.armed = "1"; b.textContent = "Tap again to delete"; } }
+    });
+  });
+}
+function openHandicap() {
+  openSheet((el) => {
+    const h = latestHandicap();
+    el.innerHTML = sheetFrame("Handicap index", `<button class="btn primary sm" data-k="save">Save</button>`, `
+      <div class="form"><label class="field"><span>Index</span><input type="number" step="0.1" inputmode="decimal" id="hc-v" value="${h ? Math.abs(h.index).toFixed(1) : ""}"></label>
+      <label class="field"><span>As of</span><input type="date" id="hc-d" value="${toDateInput(new Date())}"></label>
+      <label class="check"><input type="checkbox" id="hc-plus" ${h && h.index < 0 ? "checked" : ""}> Plus handicap</label></div>
+      <p class="muted small">Copy your current index from TheGrint each time it changes, so Progress can chart it.</p>
+      ${S.handicap.length ? `<div class="section"><h3>History</h3><div class="list">${S.handicap.map((x) => `<div class="item" style="cursor:default"><span class="grow">${esc(fmtDate(x.date))}${x.source === "grint" ? ` <span class="tag">Grint</span>` : ""}</span><span class="right num"><b>${fmtIndex(x.index)}</b> <button class="btn ghost sm danger" data-k="rm" data-id="${esc(x.id)}">Remove</button></span></div>`).join("")}</div></div>` : ""}`);
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-k]"); if (!b) return;
+      if (b.dataset.k === "save") {
+        const v = parseFloat($("#hc-v", el).value); if (isNaN(v)) { toast("Enter your index, e.g. 14.2"); return; }
+        const d = $("#hc-d", el).value;
+        await saveRec({ id: newId("handicap"), kind: "handicap", date: (d ? new Date(d + "T12:00") : new Date()).toISOString(), index: $("#hc-plus", el).checked ? -Math.abs(v) : Math.abs(v), source: "manual" });
+        closeSheet(); render(); toast("Handicap updated.");
+      }
+      if (b.dataset.k === "rm") { const x = byId("handicap", b.dataset.id); if (x) { await removeRec(x); closeSheet(); openHandicap(); render(); } }
+    });
+  });
+}
+function openImport() {
+  let parsed = null;
+  openSheet((el) => {
+    el.innerHTML = sheetFrame("Import from TheGrint", "", `
+      <p class="small">TheGrint has no public API, so rounds come in from a CSV file: an export of your scores from TheGrint, or a spreadsheet you keep yourself.</p>
+      <p class="small muted">Required columns: <b>Date</b> and <b>Score</b>. Optional: Course, Holes, Par, Putts, Fairways (8 or 8/14), Fairways Possible, GIR, Up and Downs (3 or 3/9), Penalties, Handicap Index (+1.2 for plus handicaps). Rounds already imported are skipped.</p>
+      <div class="row"><label class="btn primary">Choose CSV file<input type="file" accept=".csv,text/csv,text/plain" id="im-file"></label><button class="btn" data-k="sample">Try the sample file</button></div>
+      <div id="im-out"></div>`);
+    const show = (text) => {
+      const box = $("#im-out", el);
+      try { parsed = parseRoundsCSV(text); }
+      catch (err) { parsed = null; box.innerHTML = `<p class="notice" style="color:var(--bad)">${esc(err.message)}</p>`; return; }
+      const keys = new Set(S.round.map((r) => r.importKey).filter(Boolean));
+      parsed.fresh = parsed.rounds.filter((r) => !keys.has(r.importKey));
+      box.innerHTML = `<div class="tiles"><div class="tile"><span class="k">In file</span><span class="v num">${parsed.rounds.length}</span></div><div class="tile"><span class="k">New</span><span class="v num">${parsed.fresh.length}</span></div><div class="tile"><span class="k">Already imported</span><span class="v num">${parsed.rounds.length - parsed.fresh.length}</span></div></div>
+        ${parsed.fresh.length ? `<div class="list">${parsed.fresh.slice(0, 25).map((r) => `<div class="item" style="cursor:default"><span class="grow"><span class="title">${esc(r.course)}</span><span class="sub">${esc(fmtDate(r.date))}</span></span><span class="right score num" style="font-size:22px">${r.score}</span></div>`).join("")}</div>
+          <button class="btn primary" data-k="go">Import ${parsed.fresh.length} round${parsed.fresh.length === 1 ? "" : "s"}</button>` : `<p class="muted">Nothing new to import.</p>`}
+        ${parsed.warnings.length ? `<div class="section"><h3>Skipped rows</h3>${parsed.warnings.map((w) => `<p class="small muted">${esc(w)}</p>`).join("")}</div>` : ""}`;
+    };
+    $("#im-file", el).addEventListener("change", (e) => { const f = e.target.files[0]; if (!f) return; const rd = new FileReader(); rd.onload = () => show(String(rd.result)); rd.readAsText(f); });
+    el.addEventListener("click", async (e) => {
+      const b = e.target.closest("[data-k]"); if (!b) return;
+      if (b.dataset.k === "sample") show(SAMPLE_CSV);
+      if (b.dataset.k === "go" && parsed) {
+        b.disabled = true;
+        const hDays = new Set(S.handicap.map((h) => new Date(h.date).toDateString()));
+        const recs = [];
+        for (const r of parsed.fresh) {
+          recs.push({ id: newId("round"), kind: "round", source: "grint", date: r.date.toISOString(), course: r.course, holes: r.holes, par: r.par, score: r.score, putts: r.putts, fairwaysHit: r.fairwaysHit, fairwaysPossible: r.fairwaysPossible, gir: r.gir, upDowns: r.upDowns, upDownAttempts: r.upDownAttempts, penalties: r.penalties, importKey: r.importKey, notes: "" });
+          if (r.handicap != null && !hDays.has(r.date.toDateString())) { hDays.add(r.date.toDateString()); recs.push({ id: newId("handicap"), kind: "handicap", date: r.date.toISOString(), index: r.handicap, source: "grint" }); }
+        }
+        for (let i = 0; i < recs.length; i += 8) await Promise.all(recs.slice(i, i + 8).map(saveRec));
+        closeSheet(); render(); toast(`Imported ${parsed.fresh.length} round${parsed.fresh.length === 1 ? "" : "s"}.`);
+      }
+    });
+  });
+}
+
+// ---------------------------------------------------------------- PROGRESS
+VIEWS_progress = function () {
+  const scopes = [["overall", "Overall"], ["range", "Range"], ["shortGame", "Short Game"], ["putting", "Putting"], ["rounds", "Rounds"]];
+  const head = `<div class="chips">${scopes.map(([k, t]) => `<button class="chip" data-act="scope" data-k="${k}" aria-pressed="${ui.scope === k}">${t}</button>`).join("")}</div>`;
+  let body = "";
+  if (ui.scope === "overall") body = overallView();
+  else if (ui.scope === "rounds") body = roundsProgress();
+  else body = categoryProgress(ui.scope);
+  const hasSample = allRecords().some((r) => r.sample);
+  return head + body + (hasSample ? `<div class="notice spread"><span>Sample data is showing alongside your own.</span><button class="btn sm" data-act="clear-sample">Remove sample data</button></div>` : "");
+};
+const tile = (k, v, c = "", color = "") => `<div class="tile"><span class="k">${k}</span><span class="v num" ${color ? `style="color:${color}"` : ""}>${v}</span>${c ? `<span class="c">${c}</span>` : ""}</div>`;
+function overallView() {
+  const cutoff = Date.now() - 30 * DAY;
+  const recent = S.session.filter((s) => new Date(s.date) >= cutoff);
+  const mins = Object.fromEntries(CAT_KEYS.map((c) => [c, recent.filter((s) => s.cat === c).reduce((a, s) => a + (+s.durationMinutes || 0), 0)]));
+  const total = Object.values(mins).reduce((a, b) => a + b, 0);
+  const rounds18 = S.round.filter((r) => r.holes === 18).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  const scores = rounds18.map((r) => r.score);
+  const h = S.handicap.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  const hc = h.length >= 2 ? `${h[h.length - 1].index - h[0].index > 0 ? "+" : ""}${(h[h.length - 1].index - h[0].index).toFixed(1)} since ${fmtDate(h[0].date, { month: "short", year: "numeric" })}` : "";
+  const streak = streakDays(S.session.map((s) => s.date));
+  const hrs = (m) => (m < 60 ? `${m}m` : `${Math.floor(m / 60)}h ${m % 60}m`);
+  const makeTrend = (cat) => trend(S.session.filter((s) => s.cat === cat).slice().reverse().map((s) => {
+    const mk = (s.drills || []).filter((d) => d.metric === "makes"); const att = mk.reduce((a, d) => a + d.attempts, 0);
+    return att ? mk.reduce((a, d) => a + d.successes, 0) / att : null;
+  }).filter((v) => v != null), true);
+  if (!S.session.length && !S.round.length) return emptySample("Nothing to chart yet. Log a session or a round and your progress shows up here.");
+  return `
+  <div class="tiles">
+    ${tile("Handicap", fmtIndex(latestHandicap()?.index), hc)}
+    ${tile("Practice, last 30 days", hrs(total), `${recent.length} session${recent.length === 1 ? "" : "s"}`)}
+    ${tile("Streak", `${streak} day${streak === 1 ? "" : "s"}`)}
+    ${tile("Scoring avg (last 5)", scores.length ? fmtN(average(scores.slice(-5))) : "—", "18-hole rounds")}
+    ${tile("Swings, last 30 days", S.swing.filter((w) => new Date(w.date) >= cutoff).length, `${S.swing.length} total`)}
+    ${tile("Lessons", S.lesson.length, S.lesson[0] ? "Last: " + fmtDate(S.lesson[0].date, { month: "short", day: "numeric" }) : "")}
+  </div>
+  <div class="card"><div class="spread"><h3>Practice minutes per week</h3><div class="legend">${CAT_KEYS.map((c) => `<span><i class="dot" style="background:${CATS[c].color}"></i>${CATS[c].title}</span>`).join("")}</div></div>
+    ${barChart(weeklyMinutes(S.session).map((w) => ({ t: w.start, label: "Week of " + fmtDate(w.start, { month: "short", day: "numeric" }), parts: CAT_KEYS.map((c) => ({ name: CATS[c].title, v: w[c], color: CATS[c].color })) })), { fmt: (v) => `${v} min` })}
+  </div>
+  <div class="card"><h3>Practice mix, last 30 days</h3>
+    ${total ? `<div style="display:flex;height:14px;border-radius:7px;overflow:hidden;gap:2px;background:var(--surface)">${CAT_KEYS.filter((c) => mins[c]).map((c) => `<span style="flex:${mins[c]};background:${CATS[c].color}" title="${CATS[c].title}: ${mins[c]} min"></span>`).join("")}</div>
+      <div class="legend">${CAT_KEYS.map((c) => `<span><i class="dot" style="background:${CATS[c].color}"></i>${CATS[c].title} <b class="num">${Math.round((mins[c] / total) * 100)}%</b> <span class="muted num">${mins[c]}m</span></span>`).join("")}</div>` : `<p class="muted small">No practice in the last 30 days.</p>`}
+  </div>
+  <div class="card"><h3>Skill trends</h3>
+    ${CAT_KEYS.map((c) => `<div class="spread"><span class="row"><i class="dot" style="background:${CATS[c].color}"></i>${CATS[c].title}</span>${trendHTML(makeTrend(c))}</div>`).join("")}
+    <div class="spread"><span>Scoring</span>${trendHTML(trend(scores, false))}</div>
+    <p class="tiny muted">Practice trends compare make % on make/miss drills over your last 5 sessions with the 5 before.</p>
+  </div>`;
+}
+function categoryProgress(cat) {
+  const sessions = S.session.filter((s) => s.cat === cat);
+  if (!sessions.length) return `<div class="empty"><p><b>No ${CATS[cat].title.toLowerCase()} sessions yet.</b></p><p class="muted small">Log one from the Practice tab to chart it here.</p></div>`;
+  const used = new Set(sessions.flatMap((s) => (s.drills || []).map((d) => d.name)));
+  const names = DRILLS.filter((d) => d.cat === cat && used.has(d.name)).map((d) => d.name).concat([...used].filter((n) => !DRILLS.some((d) => d.name === n && d.cat === cat)).sort());
+  const pick = names.includes(ui.drillPick[cat]) ? ui.drillPick[cat] : names[0];
+  const totalMin = sessions.reduce((a, s) => a + (+s.durationMinutes || 0), 0);
+  let chart = `<p class="muted small">No drills logged in these sessions yet.</p>`;
+  if (pick) {
+    const results = sessions.flatMap((s) => (s.drills || []).filter((d) => d.name === pick).map((d) => ({ t: new Date(s.date), d }))).sort((a, b) => a.t - b.t);
+    const metric = results.length ? results[results.length - 1].d.metric : "makes";
+    const pts = results.map(({ t, d }) => ({ t, v: drillValue(d) })).filter((p) => p.v != null);
+    const fmt = (v) => metric === "makes" ? `${Math.round(v)}%` : metric === "proximity" ? `${fmtN(v)} ft` : fmtN(v);
+    const tmpl = drillTemplate(pick);
+    const best = pts.length ? (METRICS[metric].higher ? Math.max(...pts.map((p) => p.v)) : Math.min(...pts.map((p) => p.v))) : null;
+    chart = pts.length ? `${lineChart({ points: pts, smooth: movingAverage(pts, 3), goal: tmpl?.goal, color: CATS[cat].color, fmt, zero: metric === "makes", name: METRICS[metric].short })}
+      <div class="spread small"><span>Best: <b class="num">${fmt(best)}</b>${tmpl ? ` · Goal: ${goalText(tmpl)}` : ""}</span>${trendHTML(trend(pts.map((p) => p.v), METRICS[metric].higher))}</div>
+      <p class="tiny muted">Dots are single sessions; the line is a 3-session average.</p>` : `<p class="muted small">No scored results yet.</p>`;
+  }
+  return `<div class="tiles">
+    ${tile("Sessions", sessions.length)}${tile("Total time", `${Math.floor(totalMin / 60)}h ${totalMin % 60}m`)}
+    ${cat === "range" ? tile("Balls hit", sessions.reduce((a, s) => a + (+s.ballsHit || 0), 0).toLocaleString()) : ""}
+    ${tile("Avg. rating", fmtN(average(sessions.map((s) => s.rating || 0))) + "★", "", "var(--star)")}
+  </div>
+  <div class="card"><div class="spread"><h3>${pick ? esc(pick) : "Drills"}</h3>
+    ${names.length > 1 ? `<select class="inp" style="width:auto" data-change="drill-pick" data-cat="${cat}" aria-label="Choose drill">${names.map((n) => `<option ${n === pick ? "selected" : ""}>${esc(n)}</option>`).join("")}</select>` : ""}</div>
+    ${chart}</div>`;
+}
+function roundsProgress() {
+  if (!S.round.length) return emptySample("No rounds yet. Add or import rounds to see your scoring trends.");
+  const asc = S.round.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  const r18 = asc.filter((r) => r.holes === 18);
+  const pct = (vals) => (vals.length ? Math.round(average(vals) * 100) + "%" : "—");
+  const gir = r18.filter((r) => r.gir != null).map((r) => r.gir / r.holes);
+  const fw = asc.filter((r) => r.fairwaysHit != null && r.fairwaysPossible).map((r) => r.fairwaysHit / r.fairwaysPossible);
+  const ud = asc.filter((r) => r.upDowns != null && r.upDownAttempts).map((r) => r.upDowns / r.upDownAttempts);
+  const putts = r18.filter((r) => r.putts != null);
+  const scorePts = r18.map((r) => ({ t: new Date(r.date), v: r.score, label: r.course }));
+  const hc = S.handicap.slice().sort((a, b) => new Date(a.date) - new Date(b.date)).map((h) => ({ t: new Date(h.date), v: h.index }));
+  return `<div class="tiles">
+    ${tile("Best 18", r18.length ? Math.min(...r18.map((r) => r.score)) : "—")}
+    ${tile("Putts per round", putts.length ? fmtN(average(putts.map((r) => r.putts))) : "—")}
+    ${tile("Greens in reg.", pct(gir))}${tile("Fairways", pct(fw))}${tile("Up & down", pct(ud))}${tile("Rounds", S.round.length)}
+  </div>
+  <div class="card"><h3>Score, 18 holes</h3>${scorePts.length ? lineChart({ points: scorePts, smooth: movingAverage(scorePts, 5), color: "var(--s1)", fmt: (v) => fmtN(v, 1), name: "Score" }) + `<p class="tiny muted">The line is a 5-round average.</p>` : `<p class="muted small">No 18-hole rounds yet.</p>`}</div>
+  <div class="card"><h3>Handicap index</h3>${hc.length >= 2 ? lineChart({ points: hc, color: "var(--s1)", fmt: fmtIndex, name: "Index" }) : `<p class="muted small">Update your index on the Rounds tab, or import it from TheGrint, to chart it.</p>`}</div>
+  <div class="card"><h3>Putts per round</h3>${putts.length ? barChart(putts.map((r) => ({ t: new Date(r.date), label: `${fmtDate(r.date, { month: "short", day: "numeric" })} · ${r.course}`, parts: [{ name: "Putts", v: r.putts, color: "var(--s1)" }] })), { fmt: (v) => `${v} putts` }) : `<p class="muted small">Track putts on your rounds to see this.</p>`}</div>`;
+}
+
+// ---------------------------------------------------------------- charts (inline SVG + hover tooltips)
+const CHARTS = {}; let chartSeq = 0;
+function niceTicks(a, b, n = 4) {
+  if (a === b) { a -= 1; b += 1; }
+  const raw = (b - a) / n, mag = 10 ** Math.floor(Math.log10(raw)), e = raw / mag;
+  const step = (e >= 7.5 ? 10 : e >= 3.5 ? 5 : e >= 1.5 ? 2 : 1) * mag;
+  const out = []; for (let v = Math.floor(a / step) * step; v <= Math.ceil(b / step) * step + step / 2; v += step) out.push(+v.toFixed(10));
+  return out;
+}
+function dataTable(head, rows) {
+  return `<details class="table"><summary>Show data table</summary><div class="scroll"><table><thead><tr>${head.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></details>`;
+}
+function lineChart(o) {
+  const id = "c" + ++chartSeq, W = 640, H = 220, m = { l: 44, r: 16, t: 14, b: 26 };
+  const pts = o.points; const ts = pts.map((p) => +p.t);
+  let x0 = Math.min(...ts), x1 = Math.max(...ts); if (x0 === x1) { x0 -= 3 * DAY; x1 += 3 * DAY; }
+  const vals = pts.map((p) => p.v).concat(o.goal != null ? [o.goal] : []);
+  let y0 = Math.min(...vals), y1 = Math.max(...vals); if (o.zero) y0 = Math.min(0, y0);
+  const ticks = niceTicks(y0, y1, 4); y0 = ticks[0]; y1 = ticks[ticks.length - 1];
+  const X = (t) => m.l + ((t - x0) / (x1 - x0)) * (W - m.l - m.r), Y = (v) => H - m.b - ((v - y0) / (y1 - y0 || 1)) * (H - m.t - m.b);
+  const line = (o.smooth || pts).map((p, i) => `${i ? "L" : "M"}${X(+p.t).toFixed(1)},${Y(p.v).toFixed(1)}`).join("");
+  const xl = [pts[0], pts[Math.floor(pts.length / 2)], pts[pts.length - 1]].filter((p, i, a) => a.indexOf(p) === i);
+  CHARTS[id] = { kind: "line", pts: pts.map((p) => ({ x: X(+p.t), y: Y(p.v), text: `${fmtDate(p.t, { month: "short", day: "numeric" })}${p.label ? " · " + p.label : ""} · ${o.fmt(p.v)}` })), W, H, color: o.color };
+  return `<div class="chart" data-chart="${id}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.name)} over time">
+    ${ticks.map((t) => `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--line)" stroke-width="1"/><text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end" font-size="11" fill="var(--ink-3)">${esc(o.fmt(t))}</text>`).join("")}
+    ${xl.map((p, i) => `<text x="${X(+p.t)}" y="${H - 6}" text-anchor="${i === 0 ? "start" : i === xl.length - 1 ? "end" : "middle"}" font-size="11" fill="var(--ink-3)">${esc(fmtDate(p.t, { month: "short", day: "numeric" }))}</text>`).join("")}
+    ${o.goal != null ? `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(o.goal)}" y2="${Y(o.goal)}" stroke="var(--ink-3)" stroke-dasharray="5 5" stroke-width="1.5"/><text x="${W - m.r}" y="${Y(o.goal) - 6}" text-anchor="end" font-size="11" fill="var(--ink-2)">Goal ${esc(o.fmt(o.goal))}</text>` : ""}
+    <path d="${line}" fill="none" stroke="${o.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pts.map((p) => `<circle cx="${X(+p.t)}" cy="${Y(p.v)}" r="4" fill="${o.color}" stroke="var(--chart-bg)" stroke-width="2" opacity="${o.smooth ? 0.55 : 1}"/>`).join("")}
+    <circle class="hl" r="6" fill="${o.color}" stroke="var(--chart-bg)" stroke-width="2" visibility="hidden"/>
+    <rect class="hit" x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/>
+  </svg></div>${dataTable(["Date", o.name], pts.map((p) => [fmtDate(p.t), o.fmt(p.v)]))}`;
+}
+function barChart(rows, o) {
+  const id = "c" + ++chartSeq, W = 640, H = 200, m = { l: 40, r: 8, t: 10, b: 26 };
+  const totals = rows.map((r) => r.parts.reduce((a, p) => a + p.v, 0));
+  const ticks = niceTicks(0, Math.max(10, ...totals), 4); const y1 = ticks[ticks.length - 1];
+  const Y = (v) => H - m.b - (v / y1) * (H - m.t - m.b);
+  const band = (W - m.l - m.r) / rows.length, bw = Math.max(4, Math.min(28, band * 0.6));
+  let marks = "";
+  rows.forEach((r, i) => {
+    const cx = m.l + band * (i + 0.5); let acc = 0; const segs = r.parts.filter((p) => p.v > 0);
+    segs.forEach((p, k) => {
+      const yTop = Y(acc + p.v), yBot = Y(acc); const gap = k > 0 ? 2 : 0; const h = Math.max(0, yBot - yTop - gap);
+      const top = k === segs.length - 1; const x = cx - bw / 2, rr = Math.min(4, h);
+      marks += top ? `<path d="M${x},${yTop + h} V${yTop + rr} Q${x},${yTop} ${x + rr},${yTop} H${x + bw - rr} Q${x + bw},${yTop} ${x + bw},${yTop + rr} V${yTop + h} Z" fill="${p.color}"/>` : `<rect x="${x}" y="${yTop}" width="${bw}" height="${h}" fill="${p.color}"/>`;
+      acc += p.v;
+    });
+  });
+  const lab = [0, Math.floor(rows.length / 2), rows.length - 1].filter((v, i, a) => a.indexOf(v) === i);
+  CHARTS[id] = { kind: "bar", cols: rows.map((r, i) => ({ x: m.l + band * (i + 0.5), text: `${r.label}: ${r.parts.length > 1 ? r.parts.map((p) => `${p.name} ${p.v}`).join(", ") + ` (total ${o.fmt(totals[i])})` : o.fmt(totals[i])}` })), W, H, band };
+  return `<div class="chart" data-chart="${id}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Bar chart">
+    ${ticks.map((t) => `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--line)"/><text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end" font-size="11" fill="var(--ink-3)">${t}</text>`).join("")}
+    ${lab.map((i, k) => `<text x="${m.l + band * (i + 0.5)}" y="${H - 6}" text-anchor="${k === 0 ? "start" : k === lab.length - 1 ? "end" : "middle"}" font-size="11" fill="var(--ink-3)">${esc(fmtDate(rows[i].t, { month: "short", day: "numeric" }))}</text>`).join("")}
+    ${marks}
+    <rect class="col" x="0" y="${m.t}" width="${bw + 8}" height="${H - m.t - m.b}" fill="var(--ink)" opacity="0.06" visibility="hidden"/>
+    <rect class="hit" x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/>
+  </svg></div>${dataTable(["Date", ...rows[0].parts.map((p) => p.name)], rows.map((r) => [fmtDate(r.t), ...r.parts.map((p) => p.v)]))}`;
+}
+function bindCharts(root) {
+  const tip = $("#tip");
+  $$("[data-chart]", root).forEach((box) => {
+    const c = CHARTS[box.dataset.chart]; const svg = $("svg", box); if (!c || !svg) return;
+    const move = (e) => {
+      const r = svg.getBoundingClientRect(); const x = ((e.clientX - r.left) / r.width) * c.W;
+      if (c.kind === "line") {
+        let best = c.pts[0]; for (const p of c.pts) if (Math.abs(p.x - x) < Math.abs(best.x - x)) best = p;
+        const hl = $(".hl", svg); hl.setAttribute("cx", best.x); hl.setAttribute("cy", best.y); hl.setAttribute("visibility", "visible");
+        tip.textContent = best.text;
+      } else {
+        let best = c.cols[0]; for (const p of c.cols) if (Math.abs(p.x - x) < Math.abs(best.x - x)) best = p;
+        const col = $(".col", svg); col.setAttribute("x", best.x - (+col.getAttribute("width")) / 2); col.setAttribute("visibility", "visible");
+        tip.textContent = best.text;
+      }
+      tip.hidden = false;
+      const tw = tip.offsetWidth; tip.style.left = Math.min(window.innerWidth - tw - 8, Math.max(8, e.clientX - tw / 2)) + "px"; tip.style.top = Math.max(8, e.clientY - 44) + "px";
+    };
+    const leave = () => { tip.hidden = true; $$(".hl,.col", svg).forEach((n) => n.setAttribute("visibility", "hidden")); };
+    svg.addEventListener("pointermove", move); svg.addEventListener("pointerdown", move); svg.addEventListener("pointerleave", leave);
+  });
+}
+
+// ---------------------------------------------------------------- sheets
+const sheets = [];
+function sheetFrame(title, action, body) {
+  return `<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="sheet-head"><button class="btn ghost sm" data-sheet-close>Close</button><h2>${esc(title)}</h2><span style="min-width:64px;display:flex;justify-content:flex-end">${action}</span></div><div class="sheet-body">${body}</div></div>`;
+}
+function openSheet(build) {
+  if (sheets.length) { const top = sheets[sheets.length - 1]; top.cleanup?.(); top.el.remove(); }
+  const el = document.createElement("div"); el.className = "scrim";
+  document.body.appendChild(el); document.body.style.overflow = "hidden";
+  const entry = { build, el, cleanup: null }; sheets.push(entry);
+  entry.cleanup = build(el) || null;
+  el.addEventListener("click", (e) => { if (e.target === el || e.target.closest("[data-sheet-close]")) closeSheet(); });
+}
+function closeSheet() {
+  const top = sheets.pop(); if (!top) return;
+  top.cleanup?.(); top.el.remove();
+  if (sheets.length) { const prev = sheets.pop(); openSheet(prev.build); }
+  else document.body.style.overflow = "";
+}
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && sheets.length && !document.querySelector(".viewer")) closeSheet(); if (e.key === "Escape") document.querySelector(".viewer")?.remove(); });
+
+// ---------------------------------------------------------------- actions
+const ACTIONS = {
+  "load-sample": loadSample,
+  "clear-sample": clearSample,
+  "new-session": (a) => openLogger(a.dataset.cat),
+  "open-session": (a) => openSession(a.dataset.id),
+  "practice-filter": (a) => { ui.practiceFilter = a.dataset.k; render(); },
+  "drill-library": openLibrary,
+  "swing-mode": (a) => { ui.swingMode = a.dataset.k; render(); },
+  "open-swing": (a) => openSwing(a.dataset.id),
+  "add-link": openAddLink,
+  "new-lesson": () => openLesson(null),
+  "open-lesson": (a) => openLesson(a.dataset.id),
+  "edit-hcp": openHandicap,
+  "new-round": () => openRound(null),
+  "open-round": (a) => openRound(a.dataset.id),
+  "import-csv": openImport,
+  "scope": (a) => { ui.scope = a.dataset.k; render(); },
+};
+const CHANGES = {
+  "add-video": (el) => { addSwingFromFiles(el.files, "video"); el.value = ""; },
+  "add-shots": (el) => { addSwingFromFiles(el.files, "shots"); el.value = ""; },
+  "club-filter": (el) => { ui.clubFilter = el.value; render(); },
+  "fav-only": (el) => { ui.favOnly = el.checked; render(); },
+  "drill-pick": (el) => { ui.drillPick[el.dataset.cat] = el.value; render(); },
+};
+const VIEWS = { practice: () => VIEWS_practice(), swing: () => VIEWS_swing(), rounds: () => VIEWS_rounds(), progress: () => VIEWS_progress() };
+var VIEWS_practice, VIEWS_swing, VIEWS_rounds, VIEWS_progress;
+boot();
+</script>
