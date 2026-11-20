@@ -544,7 +544,7 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ---
 
-## Running record (through week 10, 2026)
+## Running record (through week 11, 2026)
 
 ```
                  W- L- P   voids    units
@@ -557,12 +557,13 @@ week 7           6- 9- 0            -3.90
 week 8           5- 4- 0            +0.60
 week 9           6- 3- 1            +2.70
 week 10          5- 5- 0            -0.50
+week 11          3- 2- 1            +0.80
 ---------------------------------------------------
-spreads         18-25- 2            -9.50
+spreads         19-27- 3           -10.70
 totals          12-15- 2            -4.50
-props           24-18- 0     2      +3.51
+props           26-18- 0     2      +5.51
 ---------------------------------------------------
-season          54-58-4      2     -10.49
+season          57-60-5      2      -9.69
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -998,4 +999,50 @@ list.
    quarterback change is the largest way it does not. Screen every prop on who
    was throwing before trusting the per-game number, and recheck every spread
    whose team has a quarterback gap.
+
+49. **The quarterback screen got every premise right and three of four calls
+   wrong.** Week 11's results are the first test of quirk 48 and they do not
+   support the inference drawn from it. The availability findings were all
+   correct: Kamario Taylor did not play, Avery Johnson did not play, Caden
+   Pinnick did not play. What followed from them did not hold.
+
+   | pick | screen said | result |
+   | --- | --- | --- |
+   | Kansas State +13.5 | dropped, QB out | lost by 10, would have covered +13.5 |
+   | Umari Hatcher Over 71.5 | dropped, big games came with the backup | 81 yards, would have won |
+   | Mississippi State +2.5 | flagged, kept on recent-form arithmetic | lost 9-41 |
+   | Colorado State +9.5 | opponent's QB out, read as helping | lost 7-73 |
+
+   The one the screen got right was Mississippi State, and that is the one I
+   overrode. Taylor was out, they scored 9, and the "Auburn have fallen
+   further" reasoning that kept the pick was wrong by 32 points. Auburn scored
+   41.
+
+   Colorado State is the clearest refutation. Washington State were without
+   Caden Pinnick, which the write-up treated as a point in Colorado State's
+   favour. Owen Eshelman went 13 of 14 and Washington State scored 73, the
+   highest total any team has put up against a card pick this season.
+
+   Kansas State exposes an inconsistency in my own reasoning rather than a bad
+   premise. I kept Jaron Tibbs on the grounds that the quarterback change had
+   not hurt him, and dropped the Kansas State spread on the grounds that the
+   same change had hurt the team. Both claims were about one team and one
+   change. Tibbs went for 115 yards from Dillon Duff, a fourth-string name who
+   was not on the ourlads chart at all, and Kansas State covered. The receiver
+   case was right and the team case was a different conclusion from the same
+   fact, taken without evidence.
+
+   What to keep and what to drop. Keep the availability check: knowing who is
+   actually playing is real information and the snap-count method found it
+   correctly three times out of three where the depth chart did not. Drop the
+   inference that a team without its starter scores at its backup's rate, and
+   drop the symmetric one that an opponent without its starter is easier. Four
+   instances is thin, but all four ran against it, and three of them were
+   large. Until there is a scored sample, a quarterback gap is a reason to
+   read a pick's numbers more carefully, not a reason to move the pick.
+
+   Week 11 finished 3-2-1 and +0.80 units, the third winning week of the
+   season, and it would have been 5-2-1 had neither removal been made. Props
+   are now 26-18 at +5.51 and have won five weeks running. Spreads fell to
+   19-27-3 at -10.70.
 

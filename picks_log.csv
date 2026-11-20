@@ -117,9 +117,9 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,10,2026-11-07,prop,AJ Newberry Over rec yds,24.5,Texas State @ Oregon State,1.10,-110,35.1,LOSS,4 receiving yards (1 rec of 1 target),-1.10,"312 rec yds in 8g (39.0/gm); 4.5 tgt/gm at a 1.8 aDOT, 75% catch rate, long of 88. Game total 71.0, highest on the slate"
 2026,10,2026-11-07,prop,Nik McMillan Over rec yds,45.5,UCF @ Kansas,1.10,-110,64.5,LOSS,31 receiving yards (6 rec),-1.10,"466 yds in 8g (58.2/gm); 17.1 aDOT, 18.6 a catch, deepest profile on the card. 56% catch rate is the variance. UCF coverage 112th"
 2026,10,2026-11-07,prop,Micah Gilbert Over rec yds,31.5,Miami @ Notre Dame,1.10,-110,44.1,WIN,"98 receiving yards (9 rec, 2 TD)",1.00,"430 yds in 8g (53.8/gm) against a 31.5 line; 73% catch rate, 17.9 a catch. Miami coverage 119th. 4.1 tgt/gm is the risk"
-2026,11,2026-11-14,spread,Mississippi State,+2.5,Auburn @ Mississippi State,1.10,-110,3.5,,,,
-2026,11,2026-11-14,spread,NC State,+3.0,Syracuse @ NC State,1.10,-110,2.7,,,,
-2026,11,2026-11-14,spread,Colorado State,+9.5,Colorado State @ Washington State,1.10,-110,0.4,,,,
-2026,11,2026-11-14,spread,Fresno State,+9.5,Fresno State @ Texas State,1.10,-110,-3.0,,,,
-2026,11,2026-11-14,prop,Jaron Tibbs Over rec yds,29.5,Kansas State @ TCU,1.10,-114,37.4,,,,
-2026,11,2026-11-14,prop,Ed Small Over rec yds,26.5,Kansas State @ TCU,1.10,-114,52.3,,,,
+2026,11,2026-11-14,spread,Mississippi State,+2.5,Auburn @ Mississippi State,1.10,-110,3.5,LOSS,"Auburn 41 - Mississippi State 9, MSU -32",-1.10,
+2026,11,2026-11-14,spread,NC State,+3.0,Syracuse @ NC State,1.10,-110,2.7,PUSH,"Syracuse 34 - NC State 31, NC State -3 exactly",0.00,
+2026,11,2026-11-14,spread,Colorado State,+9.5,Colorado State @ Washington State,1.10,-110,0.4,LOSS,"Washington State 73 - Colorado State 7, CSU -66",-1.10,
+2026,11,2026-11-14,spread,Fresno State,+9.5,Fresno State @ Texas State,1.10,-110,-3.0,WIN,"Texas State 37 - Fresno State 35, Fresno -2",1.00,
+2026,11,2026-11-14,prop,Jaron Tibbs Over rec yds,29.5,Kansas State @ TCU,1.14,-114,37.4,WIN,"115 receiving yards (8 rec, 1 TD)",1.00,
+2026,11,2026-11-14,prop,Ed Small Over rec yds,26.5,Kansas State @ TCU,1.14,-114,52.3,WIN,65 receiving yards (4 rec),1.00,
