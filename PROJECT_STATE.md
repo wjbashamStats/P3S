@@ -544,10 +544,11 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ---
 
-## Running record (through week 11, 2026)
+## Running record (through week 11, 2026, week 1 added late)
 
 ```
                  W- L- P   voids    units
+week 1           1- 2- 0            -1.20
 week 2           6- 9- 0            -4.10
 week 3           7- 7- 1            -0.75
 week 4           5- 7- 1     1      -3.06
@@ -559,11 +560,12 @@ week 9           6- 3- 1            +2.70
 week 10          5- 5- 0            -0.50
 week 11          3- 2- 1            +0.80
 ---------------------------------------------------
-spreads         19-27- 3           -10.70
-totals          12-15- 2            -4.50
+1H spreads       1- 0- 0            +1.00
+spreads         19-28- 3           -11.80
+totals          12-16- 2            -5.60
 props           26-18- 0     2      +5.51
 ---------------------------------------------------
-season          57-60-5      2      -9.69
+season          58-62-5      2     -10.89
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -1085,4 +1087,28 @@ list.
    to 337 and five touchdowns to two. This is the inverse of quirk 28: there
    the chart confirmed a role the workload did not support, here the chart
    understates a workload the season file documents.
+
+52. **Week 1's three picks were written before the log existed and were added
+   in week 12.** They were never entered at the time, which is why the record
+   began at week 2 and the by-week spreadsheet opened there. They are now in,
+   and the season reads 58-62-5 with two voids at -10.89 rather than 57-60-5
+   at -9.69.
+
+   The grading: Alabama -16.5 in the first half against East Carolina won, the
+   Tide leading 38-7 at the break. Clemson +10.5 at LSU lost by 41. North
+   Texas at Indiana Under 57.5 lost, the game going 68.
+
+   Two things about them are worth keeping rather than just the result. The
+   first-half spread is a market nothing in this project prices, so it carries
+   its own `1h_spread` category and an empty model_number rather than being
+   filed under `spread` with a number that does not describe it.
+
+   The second is the more useful one. The week 1 board had all three games and
+   had no edge on any of them, and on the one where it had a loud opinion it
+   was on the other side. It projected North Texas at Indiana at 69.1 against
+   a book total of 55.5, which is the Over by 13.6, and the game went 68. On
+   Clemson at LSU it matched the book exactly at 10.0. On East Carolina at
+   Alabama it had the Tide by 23.5 against a book line of 28, so it was on
+   East Carolina's side of the full game. Three narrative picks, one of them
+   taken directly against a model call that proved right.
 
