@@ -1,138 +1,144 @@
 season,week,slate_date,category,pick,line,game,units_risked,book_price,model_number,result,actual,units_pl,note
 2026,1,2026-09-05,1h_spread,Alabama 1H,-16.5,East Carolina @ Alabama,1.10,-110,,WIN,"Alabama 38 - East Carolina 7 at half, Alabama by 31",1.00,first halves are not priced by the model; its full-game number was Alabama by 23.5 against a book line of 28
+2026,1,2026-09-03,spread,Arkansas-Pine Bluff,+54.5,Arkansas-Pine Bluff @ Missouri,1.10,-110,,WIN,"Missouri 54 - Arkansas-Pine Bluff 14, by 40",1.00,"FCS opponent, unrated by the model, so no model number"
 2026,1,2026-09-06,spread,Clemson,+10.5,Clemson @ LSU,1.10,-110,-10.0,LOSS,"LSU 51 - Clemson 10, Clemson by -41",-1.10,"model matched the book exactly at LSU by 10.0, so there was no edge either way"
+2026,1,2026-09-05,spread,Kent State,+35.5,Kent State @ South Carolina,1.10,-110,-35.0,LOSS,"South Carolina 57 - Kent State 0, by 57",-1.10,"model had South Carolina by 35.0 against a line of 35.5, an edge of half a point"
+2026,1,2026-09-05,total,Under,54.0,Kent State @ South Carolina,1.10,-110,39.2,LOSS,57 (South Carolina 57-0),-1.10,"the model's largest total edge of the week at 14.8 under the book number, and it lost"
 2026,1,2026-09-05,total,Under,57.5,North Texas @ Indiana,1.10,-110,69.1,LOSS,68 (Indiana 52-16),-1.10,"taken against the model, which projected 69.1 against a book total of 55.5 and was on the Over by 13.6"
+2026,1,2026-09-03,total,Under,54.5,UAB @ Illinois,1.10,-110,48.5,LOSS,65 (Illinois 42-23),-1.10,"with the model, which had 48.5 against a book total of 54.5, an Under edge of 6.0"
+2026,1,2026-09-05,total,Under,56.5,UNLV @ Hawaii,1.10,-110,56.1,WIN,27 (UNLV 21-6),1.00,weather play; the model had no edge here at 56.1 against a book total of 56.5
+2026,1,2026-09-03,prop,Alberto Mendoza Over pass yds,204.5,Colorado @ Georgia Tech,1.10,-110,,WIN,237 passing yards (17/23),1.00,article heading said 204.5 and the body said 205; 237 clears both. Model does not price this market
 2026,2,2026-09-12,spread,Buffalo,+10.0,Buffalo @ Florida International,1.10,-110,+0.6,LOSS,Florida International 33-20,-1.10,lost by 13
 2026,2,2026-09-12,spread,Kennesaw State,-8.5,Georgia State @ Kennesaw State,1.10,-110,-20.5,LOSS,Georgia State 31-17,-1.10,lost outright as a 8.5-pt favorite
 2026,2,2026-09-12,spread,Marshall,-13.5,Middle Tennessee @ Marshall,1.10,-110,-24.0,LOSS,Marshall 28-26,-1.10,won by 2
-2026,2,2026-09-12,spread,Michigan,+5.0,Oklahoma @ Michigan,1.10,-110,-1.4,WIN,Michigan 17-10,1.00,won outright
 2026,2,2026-09-12,spread,Ohio State,+1.5,Ohio State @ Texas,1.10,-110,+4.7,WIN,Texas 24-23,1.00,lost by 1 on a late TD
-2026,2,2026-09-12,total,Over,46.0,South Florida @ Army,1.10,-110,48.9,WIN,52 (USF 28-24),1.00,
+2026,2,2026-09-12,spread,Michigan,+5.0,Oklahoma @ Michigan,1.10,-110,-1.4,WIN,Michigan 17-10,1.00,won outright
+2026,2,2026-09-12,total,Under,50.5,Bowling Green @ Nebraska,1.10,-110,42.0,LOSS,63 (Nebraska 56-7),-1.10,30.5-pt favorite blowout
 2026,2,2026-09-12,total,Under,56.5,California @ Syracuse,1.10,-110,44.7,WIN,39 (Cal 21-18),1.00,
 2026,2,2026-09-12,total,Under,55.5,Louisiana Tech @ LSU,1.10,-110,49.6,LOSS,59 (LSU 45-14),-1.10,35-pt favorite blowout
 2026,2,2026-09-12,total,Under,55.0,San Diego State @ UCLA,1.10,-110,41.4,WIN,38 (UCLA 28-10),1.00,
-2026,2,2026-09-12,total,Under,50.5,Bowling Green @ Nebraska,1.10,-110,42.0,LOSS,63 (Nebraska 56-7),-1.10,30.5-pt favorite blowout
-2026,2,2026-09-12,prop,Jayden Denegal Over pass yds,146.5,San Diego State @ UCLA,1.15,-115,202.3,LOSS,45 (17 att 2.65 ypa),-1.15,low volume and 2.65 ypa
-2026,2,2026-09-12,prop,John Mateer Over pass yds,229.5,Oklahoma @ Michigan,1.15,-115,306.9,LOSS,189 (33 att 5.73 ypa),-1.15,volume fine efficiency missed
-2026,2,2026-09-12,prop,Malik Washington Over pass yds,239.5,Maryland @ UConn,1.15,-115,352.3,WIN,347 (41 att 8.46 ypa),1.00,
+2026,2,2026-09-12,total,Over,46.0,South Florida @ Army,1.10,-110,48.9,WIN,52 (USF 28-24),1.00,
 2026,2,2026-09-12,prop,Nick Minicucci Over pass yds,219.5,Delaware @ Vanderbilt,1.15,-115,290.4,LOSS,182 (27 att 6.74 ypa),-1.15,volume fine efficiency missed
+2026,2,2026-09-12,prop,Malik Washington Over pass yds,239.5,Maryland @ UConn,1.15,-115,352.3,WIN,347 (41 att 8.46 ypa),1.00,
+2026,2,2026-09-12,prop,John Mateer Over pass yds,229.5,Oklahoma @ Michigan,1.15,-115,306.9,LOSS,189 (33 att 5.73 ypa),-1.15,volume fine efficiency missed
+2026,2,2026-09-12,prop,Jayden Denegal Over pass yds,146.5,San Diego State @ UCLA,1.15,-115,202.3,LOSS,45 (17 att 2.65 ypa),-1.15,low volume and 2.65 ypa
 2026,2,2026-09-12,prop,Ryan Browne Under pass yds,234.5,Wake Forest @ Purdue,1.15,-115,141.7,LOSS,329 (43 att 7.65 ypa),-1.15,his wk1 317-yd game contradicted the Under and was ignored
-2026,3,2026-09-19,spread,Louisiana,-7.5,UAB @ Louisiana,1.10,-110,-13.3,LOSS,14-21,-1.10,UAB OL 7.5% pressure rate (4th worst FBS); def 131st SR
-2026,3,2026-09-19,spread,Louisiana Tech,+20.0,Louisiana Tech @ Baylor,1.10,-110,-14.9,WIN,19-36,1.00,LT 2nd in explosiveness + 6th havoc; Baylor slowest tempo
-2026,3,2026-09-19,spread,Nevada,-3.5,Nevada @ Middle Tennessee,1.10,-110,+11.7,LOSS,20-27,-1.10,MTSU 0 sacks / 15 pressures in 2 gm; Kelley 8.4 ypc
-2026,3,2026-09-19,spread,South Carolina,-3.5,Mississippi State @ South Carolina,1.10,-110,-9.7,LOSS,41-34,-1.10,SC def 10th SR vs MSU 38th; both 2-0
 2026,3,2026-09-19,spread,UCF,-17.5,Georgia State @ UCF,1.10,-110,-29.3,LOSS,30-44,-1.10,2026 SP+ 5.6 (53rd) vs -21.6 (134th); GSU 2-0 vs weak slate
+2026,3,2026-09-19,spread,Louisiana Tech,+20.0,Louisiana Tech @ Baylor,1.10,-110,-14.9,WIN,19-36,1.00,LT 2nd in explosiveness + 6th havoc; Baylor slowest tempo
+2026,3,2026-09-19,spread,South Carolina,-3.5,Mississippi State @ South Carolina,1.10,-110,-9.7,LOSS,41-34,-1.10,SC def 10th SR vs MSU 38th; both 2-0
+2026,3,2026-09-19,spread,Nevada,-3.5,Nevada @ Middle Tennessee,1.10,-110,+11.7,LOSS,20-27,-1.10,MTSU 0 sacks / 15 pressures in 2 gm; Kelley 8.4 ypc
+2026,3,2026-09-19,spread,Louisiana,-7.5,UAB @ Louisiana,1.10,-110,-13.3,LOSS,14-21,-1.10,UAB OL 7.5% pressure rate (4th worst FBS); def 131st SR
 2026,3,2026-09-19,total,Over,48.0,Colorado @ Northwestern,1.10,-110,57.1,PUSH,48,0.00,NW 100th SR allowed + 16 pressures; Lewis 9.8 ypa
-2026,3,2026-09-19,total,Over,53.5,Virginia Tech @ Maryland,1.10,-110,62.1,WIN,61,1.00,MD 8th SR but 125th finishing drives allowed; 0 INTs both QBs
-2026,3,2026-09-19,total,Over,45.5,New Mexico @ Oklahoma,1.10,-110,53.8,LOSS,20,-1.10,both offenses converting opportunities; two slow strong defenses is the risk
 2026,3,2026-09-19,total,Over,53.5,Florida @ Auburn,1.10,-110,61.8,WIN,83,1.00,FLA 1st in pts per opportunity; AUB 3rd fastest tempo
+2026,3,2026-09-19,total,Over,45.5,New Mexico @ Oklahoma,1.10,-110,53.8,LOSS,20,-1.10,both offenses converting opportunities; two slow strong defenses is the risk
 2026,3,2026-09-19,total,Under,62.5,North Texas @ Texas State,1.10,-110,53.4,LOSS,84,-1.10,TSU 120th finishing drives; both offenses bottom-third
-2026,3,2026-09-19,prop,George Pettaway Under rush yds,70.5,James Madison @ San Diego State,1.15,-115,34.6,LOSS,85,-1.15,43.5 yds/gm at 3.6 ypc; Herman 12.4 ypc taking work
-2026,3,2026-09-19,prop,Kenny Johnson Over receptions,3.5,Houston @ Texas Tech,1.15,-115,5.3,WIN,4,1.00,4.5 rec/gm on 6.0 tgt/gm at 75% catch rate
-2026,3,2026-09-19,prop,Keshaun Singleton Over rec yds,44.5,Florida @ Auburn,1.15,-115,67.8,WIN,99,1.00,65.5 yds/gm on 8.0 tgt/gm; team-leading 23.5% share; 5 books
-2026,3,2026-09-19,prop,Micah Hudson Under receptions,2.5,Houston @ Texas Tech,1.15,-115,1.1,WIN,0,1.00,26 rts/gm but 3.0 tgt/gm; 4th on team at 10.2% share
+2026,3,2026-09-19,total,Over,53.5,Virginia Tech @ Maryland,1.10,-110,62.1,WIN,61,1.00,MD 8th SR but 125th finishing drives allowed; 0 INTs both QBs
 2026,3,2026-09-19,prop,Noah Kim Over pass yds,130.5,Eastern Michigan @ Wisconsin,1.15,-115,227.5,WIN,140,1.00,192.0 yds/gm on 36 att/gm; 5.3 ypa but volume clears it
+2026,3,2026-09-19,prop,Keshaun Singleton Over rec yds,44.5,Florida @ Auburn,1.15,-115,67.8,WIN,99,1.00,65.5 yds/gm on 8.0 tgt/gm; team-leading 23.5% share; 5 books
+2026,3,2026-09-19,prop,Kenny Johnson Over receptions,3.5,Houston @ Texas Tech,1.15,-115,5.3,WIN,4,1.00,4.5 rec/gm on 6.0 tgt/gm at 75% catch rate
+2026,3,2026-09-19,prop,Micah Hudson Under receptions,2.5,Houston @ Texas Tech,1.15,-115,1.1,WIN,0,1.00,26 rts/gm but 3.0 tgt/gm; 4th on team at 10.2% share
+2026,3,2026-09-19,prop,George Pettaway Under rush yds,70.5,James Madison @ San Diego State,1.15,-115,34.6,LOSS,85,-1.15,43.5 yds/gm at 3.6 ypc; Herman 12.4 ypc taking work
 2026,4,2026-09-26,spread,Georgia Tech,+3.5,Georgia Tech @ Stanford,1.10,-110,-10.2,LOSS,Georgia Tech 27-34 Stanford,-1.10,covered by -3.5
 2026,4,2026-09-26,spread,Iowa,+5.5,Iowa @ Michigan,1.10,-110,+0.3,WIN,Iowa 20-19 Michigan,1.00,covered by +6.5
 2026,4,2026-09-26,spread,Nebraska,-5.5,Nebraska @ Michigan State,1.10,-110,-10.3,WIN,Nebraska 31-13 Michigan State,1.00,covered by +12.5
-2026,4,2026-09-26,spread,Penn State,-10.0,Wisconsin @ Penn State,1.10,-110,-17.2,LOSS,Wisconsin 24-20 Penn State,-1.10,covered by -14.0
 2026,4,2026-09-26,spread,Troy,+3.0,Troy @ Utah State,1.10,-110,-7.7,LOSS,Troy 10-21 Utah State,-1.10,covered by -8.0
-2026,4,2026-09-26,total,Over,57.0,Wake Forest @ Louisville,1.10,-110,58.5,PUSH,57 (30-27),0.00,landed +0.0 vs the number
-2026,4,2026-09-26,total,Over,47.0,Virginia Tech @ Boston College,1.10,-110,56.4,LOSS,35 (21-14),-1.10,landed -12.0 vs the number
+2026,4,2026-09-26,spread,Penn State,-10.0,Wisconsin @ Penn State,1.10,-110,-17.2,LOSS,Wisconsin 24-20 Penn State,-1.10,covered by -14.0
 2026,4,2026-09-26,total,Under,56.5,Houston @ Georgia Southern,1.10,-110,56.8,LOSS,70 (42-28),-1.10,landed +13.5 vs the number
 2026,4,2026-09-26,total,Under,52.5,UNLV @ Akron,1.10,-110,51.2,WIN,48 (38-10),1.00,landed -4.5 vs the number
+2026,4,2026-09-26,total,Over,47.0,Virginia Tech @ Boston College,1.10,-110,56.4,LOSS,35 (21-14),-1.10,landed -12.0 vs the number
+2026,4,2026-09-26,total,Over,57.0,Wake Forest @ Louisville,1.10,-110,58.5,PUSH,57 (30-27),0.00,landed +0.0 vs the number
+2026,4,2026-09-26,prop,Jaron Tibbs Over receptions,3.5,Kansas State @ Cincinnati,1.42,-141.5,5.1,LOSS,1 reception,-1.42,15 in 3g -> 16 in 4g
+2026,4,2026-09-26,prop,Jamal Rule Over rush yds,66.5,Nebraska @ Michigan State,1.14,-114.0,106.9,LOSS,4 rush yds,-1.14,329 in 3g -> 333 in 4g; the 55.9% breakaway share flagged as the risk is what failed
+2026,4,2026-09-26,prop,Jadan Baugh Over rush yds,119.0,Ole Miss @ Florida,1.14,-114.0,149.8,WIN,142 rush yds,1.00,week 4 delta from the PFF drop: 438 in 3g -> 580 in 4g
 2026,4,2026-09-26,prop,Hollywood Smothers Over rush yds,52.0,Texas @ Tennessee,1.13,-113.0,101.8,VOID,DNP,0.00,"did not play: Texas played a 4th game, Smothers stayed at 3 with identical attempts and yards. Availability was not checked before posting"
 2026,4,2026-09-26,prop,Iverson Howard Under rush yds,59.5,UCLA @ Maryland,1.14,-114.0,30.9,WIN,34 rush yds,1.00,138 in 3g -> 172 in 4g
-2026,4,2026-09-26,prop,Jadan Baugh Over rush yds,119.0,Ole Miss @ Florida,1.14,-114.0,149.8,WIN,142 rush yds,1.00,week 4 delta from the PFF drop: 438 in 3g -> 580 in 4g
-2026,4,2026-09-26,prop,Jamal Rule Over rush yds,66.5,Nebraska @ Michigan State,1.14,-114.0,106.9,LOSS,4 rush yds,-1.14,329 in 3g -> 333 in 4g; the 55.9% breakaway share flagged as the risk is what failed
-2026,4,2026-09-26,prop,Jaron Tibbs Over receptions,3.5,Kansas State @ Cincinnati,1.42,-141.5,5.1,LOSS,1 reception,-1.42,15 in 3g -> 16 in 4g
+2026,5,2026-10-03,spread,UMass,-6.0,Eastern Michigan @ UMass,1.10,-110,-13.3,LOSS,Eastern Michigan 38-14 UMass,-1.10,lost by 24 as a 6-point home favourite; the 11.4-point points-check cushion was the largest on the card and meant nothing
 2026,5,2026-10-03,spread,James Madison,-19.0,Marshall @ James Madison,1.10,-110,-26.0,WIN,Marshall 17-45 James Madison,1.00,"won by 28, covered -19 comfortably"
 2026,5,2026-10-03,spread,Ohio,-3.5,Ohio @ Kent State,1.10,-110,-10.1,LOSS,Ohio 13-10 Kent State,-1.10,won by exactly 3 against -3.5. The write-up named this as the likeliest way it fails
 2026,5,2026-10-03,spread,UConn,+7.0,Syracuse @ UConn,1.10,-110,+0.2,WIN,Syracuse 42-41 UConn,1.00,"lost by 1, covered +7. Both reads called it a pick'em and the game was one"
-2026,5,2026-10-03,spread,UMass,-6.0,Eastern Michigan @ UMass,1.10,-110,-13.3,LOSS,Eastern Michigan 38-14 UMass,-1.10,lost by 24 as a 6-point home favourite; the 11.4-point points-check cushion was the largest on the card and meant nothing
 2026,5,2026-10-03,spread,Virginia,-2.5,Virginia @ Florida State,1.10,-110,-6.8,LOSS,Virginia 7-38 Florida State,-1.10,"lost by 31; SP+ 21st vs 53rd and both reads 6-8 past the market, all wrong"
-2026,5,2026-10-03,total,Over,53.5,Stanford @ Wake Forest,1.10,-110,53.0,WIN,"60 (Stanford 3, Wake Forest 57)",1.00,Wake Forest alone cleared the number
-2026,5,2026-10-03,total,Over,47.5,Miami @ Clemson,1.10,-110,57.5,WIN,"54 (Miami 41, Clemson 13)",1.00,"Miami's 41 did it, as the write-up said it would have to"
-2026,5,2026-10-03,total,Under,48.5,Eastern Michigan @ UMass,1.10,-110,46.4,LOSS,"52 (Eastern Michigan 38, UMass 14)",-1.10,"EMU scored 38 against a defence ranked 1st in Finishing Drives allowed. Residual, points check, O/U records and tempo all agreed, and all were wrong"
 2026,5,2026-10-03,total,Under,53.5,California @ UNLV,1.10,-110,52.5,LOSS,"70 (California 31, UNLV 39)",-1.10,O/U records were 1-7 and the points check said 46.4; landed 70
+2026,5,2026-10-03,total,Under,48.5,Eastern Michigan @ UMass,1.10,-110,46.4,LOSS,"52 (Eastern Michigan 38, UMass 14)",-1.10,"EMU scored 38 against a defence ranked 1st in Finishing Drives allowed. Residual, points check, O/U records and tempo all agreed, and all were wrong"
+2026,5,2026-10-03,total,Over,47.5,Miami @ Clemson,1.10,-110,57.5,WIN,"54 (Miami 41, Clemson 13)",1.00,"Miami's 41 did it, as the write-up said it would have to"
+2026,5,2026-10-03,total,Over,53.5,Stanford @ Wake Forest,1.10,-110,53.0,WIN,"60 (Stanford 3, Wake Forest 57)",1.00,Wake Forest alone cleared the number
 2026,5,2026-10-03,total,Under,58.5,Washington @ USC,1.10,-110,56.2,WIN,"46 (Washington 21, USC 25)",1.00,both reads agreed and both were right
-2026,5,2026-10-03,prop,Adam Mohammed Over rush yds,64.5,California @ UNLV,1.15,-114.5,80.8,VOID,DNP,0.00,"did not play. Cal played the game; his season line is unchanged at 336 on 73 carries. Posted-time availability was clean, so the screen could not have caught this"
-2026,5,2026-10-03,prop,Asaad Waseem Over rec yds,61.5,Purdue @ Illinois,1.10,-109.5,82.7,WIN,98 rec yds,1.00,"cleared 61.5 by 36. 3.86 yprr and a 1.038 pace multiplier, the cleanest profile on the card"
-2026,5,2026-10-03,prop,Jadan Baugh Over rush yds,118.0,Florida @ Missouri,1.13,-112.5,155.6,LOSS,13 rush yds,-1.13,"13 rush yds on 12 carries, 1.1 a carry. He got the volume and nothing else; the 52.4% breakaway profile is exactly this distribution's downside"
 2026,5,2026-10-03,prop,Kari Ashley Over rec yds,32.5,BYU @ TCU,1.15,-114.5,44.9,WIN,108 rec yds,1.00,cleared 32.5 by 75 despite BYU's 89.6 coverage and a 0.813 pace haircut
+2026,5,2026-10-03,prop,Adam Mohammed Over rush yds,64.5,California @ UNLV,1.15,-114.5,80.8,VOID,DNP,0.00,"did not play. Cal played the game; his season line is unchanged at 336 on 73 carries. Posted-time availability was clean, so the screen could not have caught this"
+2026,5,2026-10-03,prop,Jadan Baugh Over rush yds,118.0,Florida @ Missouri,1.13,-112.5,155.6,LOSS,13 rush yds,-1.13,"13 rush yds on 12 carries, 1.1 a carry. He got the volume and nothing else; the 52.4% breakaway profile is exactly this distribution's downside"
 2026,5,2026-10-03,prop,Mazeo Bennett Jr. Under rec yds,37.5,Kentucky @ South Carolina,1.15,-114.5,21.7,LOSS,92 rec yds,-1.15,92 yards against a 37.5 line and a 27.3 season average. One 40-yard play was named as the whole risk
+2026,5,2026-10-03,prop,Asaad Waseem Over rec yds,61.5,Purdue @ Illinois,1.10,-109.5,82.7,WIN,98 rec yds,1.00,"cleared 61.5 by 36. 3.86 yprr and a 1.038 pace multiplier, the cleanest profile on the card"
 2026,6,2026-10-10,spread,Air Force,-7.5,Air Force @ Northern Illinois,1.10,-110,-21.3,WIN,won 28-7,1.00,covered 7.5 by 13.5. The largest net gap on the board produced the cleanest cover
-2026,6,2026-10-10,spread,Army,-3.0,Tulane @ Army,1.10,-110,-8.4,PUSH,won 20-17,0.00,won by exactly 3 on a 3.0 line. Both signals had Army 6-12 better; the margin landed on the number
 2026,6,2026-10-10,spread,Pittsburgh,-3.5,North Carolina @ Pittsburgh,1.10,-110,-15.5,LOSS,lost 17-21,-1.10,lost outright as a 3.5-point home favorite. 17 points from an offense averaging 38.4; the QB who had been out was named as the risk before kickoff
-2026,6,2026-10-10,spread,UCF,+10.5,UCF @ Oklahoma State,1.10,-110,+4.8,LOSS,lost 28-42,-1.10,lost by 14 as a 10.5-point underdog
 2026,6,2026-10-10,spread,Vanderbilt,+9.5,Ole Miss @ Vanderbilt,1.10,-110,+3.5,LOSS,lost 17-52,-1.10,buried by 35. The model had Ole Miss 6.8 better and the line 9.5; the game was never inside the number
-2026,6,2026-10-10,total,Over,51.5,LSU @ Kentucky,1.10,-110,60.0,WIN,69 points,1.00,"17.5 over. Kentucky 35, LSU 34 — the points check had 60.1 and the model 60.0"
-2026,6,2026-10-10,total,Over,48.0,Indiana @ Nebraska,1.10,-110,60.0,LOSS,37 points,-1.10,"11 short. Two 5-0 offenses averaging 44.2 and 43.6 combined for 37; Indiana 20, Nebraska 17"
-2026,6,2026-10-10,total,Over,51.5,Georgia @ Alabama,1.10,-110,58.1,LOSS,37 points,-1.10,"14.5 short. Georgia 20, Alabama 17 — the points check asked for 67.6 and the game delivered 37"
+2026,6,2026-10-10,spread,Army,-3.0,Tulane @ Army,1.10,-110,-8.4,PUSH,won 20-17,0.00,won by exactly 3 on a 3.0 line. Both signals had Army 6-12 better; the margin landed on the number
+2026,6,2026-10-10,spread,UCF,+10.5,UCF @ Oklahoma State,1.10,-110,+4.8,LOSS,lost 28-42,-1.10,lost by 14 as a 10.5-point underdog
 2026,6,2026-10-10,total,Under,59.0,Coastal Carolina @ Marshall,1.10,-110,50.9,WIN,48 points,1.00,"11 under the number. Coastal Carolina 27, Marshall 21"
 2026,6,2026-10-10,total,Under,52.0,Eastern Michigan @ Akron,1.10,-110,46.1,WIN,48 points,1.00,"4 under the number. Eastern Michigan 25, Akron 23"
-2026,6,2026-10-10,prop,Braden Pegan Over rec yds,49.5,Kansas @ Utah,1.10,-110,72.0,WIN,72 rec yds,1.00,"72 on 11 targets, 22.5 over. The blowout script arrived (Utah 41-24) and the targets came anyway"
+2026,6,2026-10-10,total,Over,51.5,Georgia @ Alabama,1.10,-110,58.1,LOSS,37 points,-1.10,"14.5 short. Georgia 20, Alabama 17 — the points check asked for 67.6 and the game delivered 37"
+2026,6,2026-10-10,total,Over,48.0,Indiana @ Nebraska,1.10,-110,60.0,LOSS,37 points,-1.10,"11 short. Two 5-0 offenses averaging 44.2 and 43.6 combined for 37; Indiana 20, Nebraska 17"
+2026,6,2026-10-10,total,Over,51.5,LSU @ Kentucky,1.10,-110,60.0,WIN,69 points,1.00,"17.5 over. Kentucky 35, LSU 34 — the points check had 60.1 and the model 60.0"
 2026,6,2026-10-10,prop,Dylan Riley Over rush yds,82.5,Boise State @ Fresno State,1.10,-110,145.9,WIN,150 rush yds,1.00,"150 on 19 carries, cleared 82.5 by 67.5. The 1.354 pace multiplier the projection discounted for showed up anyway"
-2026,6,2026-10-10,prop,Jackson Harris Over rec yds,46.5,LSU @ Kentucky,1.10,-110,81.3,WIN,54 rec yds,1.00,"54 on 7 targets, 7.5 over. Kentucky’s 104th-ranked defense held but the target volume carried it"
-2026,6,2026-10-10,prop,Lee Beebe Jr. Over rush yds,71.5,Indiana @ Nebraska,1.10,-110,108.4,LOSS,31 rush yds,-1.10,31 on 9 carries. The committee risk named with Turbo Richard is exactly what happened -- 9 carries against a 21-a-game pace in a 20-17 game
 2026,6,2026-10-10,prop,Rodney Fields Jr. Over rush yds,53.5,Houston @ Kansas State,1.10,-110,76.2,LOSS,46 rush yds,-1.10,"46 on 14 carries, 7.5 short. Disclosed as the weakest of the five on a 32.5% carry share; Kansas State lost 16-35 and the run game never led"
-2026,7,2026-10-17,spread,BYU,+10.5,Notre Dame @ BYU,1.10,-110,+3.5,WIN,won 28-24,1.00,"won outright as a 10.5-point home underdog. Both measures had this as a one-score game and it was one, the other way"
+2026,6,2026-10-10,prop,Lee Beebe Jr. Over rush yds,71.5,Indiana @ Nebraska,1.10,-110,108.4,LOSS,31 rush yds,-1.10,31 on 9 carries. The committee risk named with Turbo Richard is exactly what happened -- 9 carries against a 21-a-game pace in a 20-17 game
+2026,6,2026-10-10,prop,Braden Pegan Over rec yds,49.5,Kansas @ Utah,1.10,-110,72.0,WIN,72 rec yds,1.00,"72 on 11 targets, 22.5 over. The blowout script arrived (Utah 41-24) and the targets came anyway"
+2026,6,2026-10-10,prop,Jackson Harris Over rec yds,46.5,LSU @ Kentucky,1.10,-110,81.3,WIN,54 rec yds,1.00,"54 on 7 targets, 7.5 over. Kentucky’s 104th-ranked defense held but the target volume carried it"
 2026,7,2026-10-17,spread,Mississippi State,+17.5,Mississippi State @ LSU,1.10,-110,+11.7,LOSS,lost 0-31,-1.10,"shut out. The offense that ranked 29th in Success Rate and scored 39.0 a game managed nothing against LSU, and the 17.5 was never in play"
 2026,7,2026-10-17,spread,Missouri,+5.0,Missouri @ Ole Miss,1.10,-110,+0.5,LOSS,lost 3-31,-1.10,lost by 28 taking 5. Missouri scored 3 points; the pass rush and Havoc edge the pick was built on never mattered because the offense did not function
-2026,7,2026-10-17,spread,UMass,+7.5,UMass @ Buffalo,1.10,-110,-1.7,WIN,lost 18-25,1.00,"lost by 7 as a 7.5-point underdog, covering by half a point. The model had UMass winning outright; the market was closer to right about the game and the number still held"
 2026,7,2026-10-17,spread,Wyoming,-7.5,Northern Illinois @ Wyoming,1.10,-110,-12.4,WIN,won 41-23,1.00,"won by 18 laying 7.5, and scored 41 after averaging 14.5. The one spread where the model wanted more than the market and got it"
-2026,7,2026-10-17,total,Over,43.0,Wisconsin @ UCLA,1.10,-110,53.2,LOSS,24 points,-1.10,19 under the 43. Two offences averaging 31.6 and 39.2 combined for 24 against the strongest pair of defences on the slate by Success Rate rank
+2026,7,2026-10-17,spread,BYU,+10.5,Notre Dame @ BYU,1.10,-110,+3.5,WIN,won 28-24,1.00,"won outright as a 10.5-point home underdog. Both measures had this as a one-score game and it was one, the other way"
+2026,7,2026-10-17,spread,UMass,+7.5,UMass @ Buffalo,1.10,-110,-1.7,WIN,lost 18-25,1.00,"lost by 7 as a 7.5-point underdog, covering by half a point. The model had UMass winning outright; the market was closer to right about the game and the number still held"
+2026,7,2026-10-17,total,Under,56.5,Georgia Tech @ Virginia Tech,1.10,-110,54.7,LOSS,58 points,-1.10,"1.5 over, the closest of the five. Georgia Tech scored 24 against the 27.2 the write-up leaned on; Virginia Tech went for 34"
 2026,7,2026-10-17,total,Over,56.0,Mississippi State @ LSU,1.10,-110,63.6,LOSS,31 points,-1.10,25 under the 56. Mississippi State were shut out; the points check had the game at 63.8
 2026,7,2026-10-17,total,Over,51.5,Nebraska @ Oregon,1.10,-110,59.6,LOSS,31 points,-1.10,20.5 under. Nebraska and Oregon average 39.2 and 41.0 and scored 14 and 17
 2026,7,2026-10-17,total,Under,62.5,Oklahoma State @ Houston,1.10,-110,60.6,LOSS,67 points,-1.10,"4.5 over. The only total of the five that went the other way, and the only one the model had below the market"
-2026,7,2026-10-17,total,Under,56.5,Georgia Tech @ Virginia Tech,1.10,-110,54.7,LOSS,58 points,-1.10,"1.5 over, the closest of the five. Georgia Tech scored 24 against the 27.2 the write-up leaned on; Virginia Tech went for 34"
-2026,7,2026-10-17,prop,Aeryn Hampton Over rec yds,30.5,Washington State @ Oregon State,1.10,-110,46.9,LOSS,0 rec yds,-1.10,one reception for 0 yards on 3 targets. Oregon State won the game but the slot volume never came; the 4.8 targets a game the screen required did not appear
-2026,7,2026-10-17,prop,Andrew Rappleyea Under rec yds,30.5,Penn State @ Michigan,1.10,-110,15.7,LOSS,34 rec yds,-1.10,"34 yards on 7 catches, 3.5 past the number. The target share went up rather than down against Michigan — 9 targets, his highest of the season"
+2026,7,2026-10-17,total,Over,43.0,Wisconsin @ UCLA,1.10,-110,53.2,LOSS,24 points,-1.10,19 under the 43. Two offences averaging 31.6 and 39.2 combined for 24 against the strongest pair of defences on the slate by Success Rate rank
 2026,7,2026-10-17,prop,DJ Epps Over rec yds,35.5,Cincinnati @ West Virginia,1.10,-110,65.0,WIN,163 rec yds,1.00,"163 on 8 catches from 8 targets, cleared 35.5 by 127.5. Every target caught; the deep profile delivered the way the write-up argued it would"
-2026,7,2026-10-17,prop,Horatio Fields Over rec yds,26.5,Missouri @ Ole Miss,1.10,-110,37.4,WIN,44 rec yds,1.00,"44 on 2 catches, 17.5 over. Two receptions were enough; Missouri’s coverage was the soft unit the write-up pointed at"
 2026,7,2026-10-17,prop,Jackson Harris Over rec yds,49.5,Mississippi State @ LSU,1.10,-110,82.3,WIN,85 rec yds,1.00,"85 on 6 catches from 6 targets, 35.5 over. Second straight week clearing the number; Mississippi State’s 135th-ranked pass rush gave LSU the time"
+2026,7,2026-10-17,prop,Horatio Fields Over rec yds,26.5,Missouri @ Ole Miss,1.10,-110,37.4,WIN,44 rec yds,1.00,"44 on 2 catches, 17.5 over. Two receptions were enough; Missouri’s coverage was the soft unit the write-up pointed at"
+2026,7,2026-10-17,prop,Andrew Rappleyea Under rec yds,30.5,Penn State @ Michigan,1.10,-110,15.7,LOSS,34 rec yds,-1.10,"34 yards on 7 catches, 3.5 past the number. The target share went up rather than down against Michigan — 9 targets, his highest of the season"
+2026,7,2026-10-17,prop,Aeryn Hampton Over rec yds,30.5,Washington State @ Oregon State,1.10,-110,46.9,LOSS,0 rec yds,-1.10,one reception for 0 yards on 3 targets. Oregon State won the game but the slot volume never came; the 4.8 targets a game the screen required did not appear
 2026,8,2026-10-24,spread,Buffalo,-3.0,Bowling Green @ Buffalo,1.10,-110,-8.4,WIN,won 31-24,1.00,won by 7 laying 3. Buffalo scored 31 after averaging 21.4
 2026,8,2026-10-24,spread,Mississippi State,+3.0,Oklahoma @ Mississippi State,1.10,-110,0.0,LOSS,lost 15-23,-1.10,lost by 8 taking 3 at home. The offence that averaged 32.5 managed 15 against the Oklahoma defence the write-up called genuinely good
 2026,8,2026-10-24,spread,Tennessee,+2.5,Tennessee @ South Carolina,1.10,-110,-4.7,LOSS,lost 24-27,-1.10,"lost by 3 taking 2.5, half a point short. Both measures had Tennessee winning; the game landed one point the wrong side of the number"
-2026,8,2026-10-24,spread,Toledo,-3.0,Western Michigan @ Toledo,1.10,-110,-5.9,WIN,won 45-38,1.00,"won by 7 laying 3 in an 83-point game. Toledo scored 45, nine more than their 36.3 average"
 2026,8,2026-10-24,spread,Virginia Tech,+2.5,Virginia Tech @ Clemson,1.10,-110,-2.4,WIN,won 20-16,1.00,"won outright as a 2.5-point road underdog. Clemson scored 16 from an offence ranked 126th in Success Rate, which is what the pick was built on"
-2026,8,2026-10-24,prop,Caleb Hawkins Over rec yds,23.5,Colorado @ Oklahoma State,1.10,-110,35.3,WIN,72 rec yds,1.00,"72 on 5 catches, 48.5 over, plus 120 rushing. The highest-total game on the card delivered the volume"
+2026,8,2026-10-24,spread,Toledo,-3.0,Western Michigan @ Toledo,1.10,-110,-5.9,WIN,won 45-38,1.00,"won by 7 laying 3 in an 83-point game. Toledo scored 45, nine more than their 36.3 average"
 2026,8,2026-10-24,prop,Dawson Pendergrass Over rush yds,34.5,Baylor @ Kansas,1.10,-110,48.9,LOSS,4 rush yds,-1.10,4 yards on 4 carries after averaging 15.0 a game. He was the listed starter that morning and the usage still collapsed; a volume position needs the volume
+2026,8,2026-10-24,prop,Caleb Hawkins Over rec yds,23.5,Colorado @ Oklahoma State,1.10,-110,35.3,WIN,72 rec yds,1.00,"72 on 5 catches, 48.5 over, plus 120 rushing. The highest-total game on the card delivered the volume"
 2026,8,2026-10-24,prop,Eugene Wilson III Over rec yds,26.5,LSU @ Auburn,1.10,-110,40.3,WIN,37 rec yds,1.00,"37 on 4 catches, 10.5 over. Volume carried it exactly as the write-up argued, against Auburn coverage ranked 120th"
 2026,8,2026-10-24,prop,Rico Scott Under rec yds,55.5,Texas A&M @ Alabama,1.10,-110,32.7,LOSS,156 rec yds,-1.10,"156 on 6 catches with a 48-yard long, against a 55.5 line and a 39.7 season average. His previous season long was 32; the 13.6 average depth of target the write-up named as the reason he could not reach 55.5 is the same thing that produced 156"
 2026,9,2026-10-31,spread,Colorado State,+7.5,Colorado State @ Utah State,1.10,-110,-1.8,LOSS,lost 14-31,-1.10,lost by 17 taking 7.5. The offence averaging 38.6 managed 14 against a Utah State side averaging 14.9
-2026,9,2026-10-31,spread,Fresno State,+6.0,Oregon State @ Fresno State,1.10,-110,-1.0,WIN,won 38-22,1.00,"won outright as a 6-point home underdog in the rain, which the write-up named as helping the side that defends"
 2026,9,2026-10-31,spread,Kansas State,+3.0,Kansas State @ Colorado,1.10,-110,-10.5,PUSH,lost 24-27,0.00,lost by exactly 3 taking 3. The widest model disagreement of the season landed on the number
 2026,9,2026-10-31,spread,Navy,+30.5,Notre Dame @ Navy,1.10,-110,-24.1,WIN,lost 13-35,1.00,"lost by 22 taking 30.5, covering by 8.5. Navy scored 13 against the country’s 4th-rated team and the number was never threatened"
+2026,9,2026-10-31,spread,Fresno State,+6.0,Oregon State @ Fresno State,1.10,-110,-1.0,WIN,won 38-22,1.00,"won outright as a 6-point home underdog in the rain, which the write-up named as helping the side that defends"
 2026,9,2026-10-31,spread,Virginia,+12.5,Virginia @ Wake Forest,1.10,-110,-9.0,LOSS,lost 7-51,-1.10,lost by 44 taking 12.5. The pick was built on Virginia not getting blown out and they were blown out
-2026,9,2026-10-31,prop,Caleb Hawkins Over rec yds,22.5,Oklahoma State @ Iowa State,1.10,-110,45.5,WIN,81 rec yds,1.00,"81 on 6 catches, 58.5 over, plus 194 rushing and 3 touchdowns in a 100-point game"
-2026,9,2026-10-31,prop,Emmett Mosley V Over rec yds,34.5,Mississippi State @ Texas,1.10,-110,58.1,WIN,98 rec yds,1.00,"98 on 4 catches with a 42-yard long, 63.5 over. The 64% catch rate named as the soft spot did not matter"
-2026,9,2026-10-31,prop,Hunter Tipton Over rec yds,34.5,Army @ Memphis,1.10,-110,58.8,WIN,86 rec yds,1.00,"86 on 5 catches, 51.5 over, against the Army defence the write-up pointed at"
 2026,9,2026-10-31,prop,J'Koby Williams Over rush yds,64.5,Arizona @ Texas Tech,1.10,-110,96.5,WIN,175 rush yds,1.00,"175 on 14 carries with a 64-yard long, 110.5 over. The 54.3% breakaway profile did exactly what the write-up said it would"
+2026,9,2026-10-31,prop,Hunter Tipton Over rec yds,34.5,Army @ Memphis,1.10,-110,58.8,WIN,86 rec yds,1.00,"86 on 5 catches, 51.5 over, against the Army defence the write-up pointed at"
 2026,9,2026-10-31,prop,Traylon Ray Over rec yds,29.5,Auburn @ Ole Miss,1.10,-110,48.7,LOSS,0 rec yds,-1.10,"played the full game and was not targeted once, after averaging 4.0 a game. The write-up named his volume as the thinnest of the five and the depth chart had him first string that morning; neither can see a game plan"
+2026,9,2026-10-31,prop,Emmett Mosley V Over rec yds,34.5,Mississippi State @ Texas,1.10,-110,58.1,WIN,98 rec yds,1.00,"98 on 4 catches with a 42-yard long, 63.5 over. The 64% catch rate named as the soft spot did not matter"
+2026,9,2026-10-31,prop,Caleb Hawkins Over rec yds,22.5,Oklahoma State @ Iowa State,1.10,-110,45.5,WIN,81 rec yds,1.00,"81 on 6 catches, 58.5 over, plus 194 rushing and 3 touchdowns in a 100-point game"
 2026,10,2026-11-07,spread,Arizona State,-3.5,Colorado @ Arizona State,1.10,-110,-8.6,WIN,"Arizona State 20 - Colorado 10, ASU +10",1.00,"net gap 4.4; points check ASU by 7.2, 3.7 past. Colorado 21.0 ppg, 132nd Finishing Drives, field position 134th/126th. Home field 3.0"
-2026,10,2026-11-07,spread,Kansas State,+6.5,Oklahoma State @ Kansas State,1.10,-110,-1.8,LOSS,"Oklahoma State 66 - Kansas State 28, KSU -38",-1.10,"net gap 4.0; points check KSU by 0.7, 7.2 past. KSU def 20th SR, 17th Havoc; OkSt off 100th Explosiveness. Home field 2.8"
 2026,10,2026-11-07,spread,Maryland,+5.5,Maryland @ Purdue,1.10,-110,-3.2,WIN,"Maryland 34 - Purdue 29, Maryland +5",1.00,"net gap 3.0; points check Purdue by 2.9, 2.6 past. Purdue def 125th, coverage 135th; Maryland prsh 15th, spec 4th. Home field 1.8, smallest"
-2026,10,2026-11-07,spread,Rutgers,+18.5,Rutgers @ Wisconsin,1.10,-110,-15.0,LOSS,"Wisconsin 31 - Rutgers 10, Rutgers -21",-1.10,"net gap 4.2; points check Wisconsin by 8.1, 10.4 past. Wisconsin 23.6 ppg, off 115th SR; Rutgers 9th Explosiveness, 6-2 Over"
 2026,10,2026-11-07,spread,UConn,+8.0,North Carolina @ UConn,1.10,-110,-1.8,LOSS,"UNC 38 - UConn 21, UConn -17",-1.10,"net gap 5.5; points check UConn by 5.5, 13.5 past. UConn 34.4 ppg, off 23rd, 5-2-1 ATS; UNC 125th Explosiveness"
-2026,10,2026-11-07,prop,AJ Newberry Over rec yds,24.5,Texas State @ Oregon State,1.10,-110,35.1,LOSS,4 receiving yards (1 rec of 1 target),-1.10,"312 rec yds in 8g (39.0/gm); 4.5 tgt/gm at a 1.8 aDOT, 75% catch rate, long of 88. Game total 71.0, highest on the slate"
+2026,10,2026-11-07,spread,Kansas State,+6.5,Oklahoma State @ Kansas State,1.10,-110,-1.8,LOSS,"Oklahoma State 66 - Kansas State 28, KSU -38",-1.10,"net gap 4.0; points check KSU by 0.7, 7.2 past. KSU def 20th SR, 17th Havoc; OkSt off 100th Explosiveness. Home field 2.8"
+2026,10,2026-11-07,spread,Rutgers,+18.5,Rutgers @ Wisconsin,1.10,-110,-15.0,LOSS,"Wisconsin 31 - Rutgers 10, Rutgers -21",-1.10,"net gap 4.2; points check Wisconsin by 8.1, 10.4 past. Wisconsin 23.6 ppg, off 115th SR; Rutgers 9th Explosiveness, 6-2 Over"
 2026,10,2026-11-07,prop,Akeem Wright Over rec yds,30.5,Boise State @ Colorado State,1.10,-110,49.7,WIN,39 receiving yards (2 rec),1.00,"321 yds in 8g (40.1/gm); 11.6 aDOT, 1.87 yprr. Colorado State def 138th of 138, coverage also 138th, 42.4 papg. Total 68.5. 4.1 tgt/gm is the risk"
-2026,10,2026-11-07,prop,Micah Gilbert Over rec yds,31.5,Miami @ Notre Dame,1.10,-110,44.1,WIN,"98 receiving yards (9 rec, 2 TD)",1.00,"430 yds in 8g (53.8/gm) against a 31.5 line; 73% catch rate, 17.9 a catch. Miami coverage 119th. 4.1 tgt/gm is the risk"
-2026,10,2026-11-07,prop,Nik McMillan Over rec yds,45.5,UCF @ Kansas,1.10,-110,64.5,LOSS,31 receiving yards (6 rec),-1.10,"466 yds in 8g (58.2/gm); 17.1 aDOT, 18.6 a catch, deepest profile on the card. 56% catch rate is the variance. UCF coverage 112th"
 2026,10,2026-11-07,prop,Omarion Miller Over rec yds,39.5,Colorado @ Arizona State,1.10,-110,58.1,WIN,64 receiving yards (5 rec),1.00,"422 yds in 8g (52.8/gm); 8.5 tgt/gm, highest volume on the card. 1.41 yprr is modest. Colorado coverage 65th"
+2026,10,2026-11-07,prop,Micah Gilbert Over rec yds,31.5,Miami @ Notre Dame,1.10,-110,44.1,WIN,"98 receiving yards (9 rec, 2 TD)",1.00,"430 yds in 8g (53.8/gm) against a 31.5 line; 73% catch rate, 17.9 a catch. Miami coverage 119th. 4.1 tgt/gm is the risk"
+2026,10,2026-11-07,prop,AJ Newberry Over rec yds,24.5,Texas State @ Oregon State,1.10,-110,35.1,LOSS,4 receiving yards (1 rec of 1 target),-1.10,"312 rec yds in 8g (39.0/gm); 4.5 tgt/gm at a 1.8 aDOT, 75% catch rate, long of 88. Game total 71.0, highest on the slate"
+2026,10,2026-11-07,prop,Nik McMillan Over rec yds,45.5,UCF @ Kansas,1.10,-110,64.5,LOSS,31 receiving yards (6 rec),-1.10,"466 yds in 8g (58.2/gm); 17.1 aDOT, 18.6 a catch, deepest profile on the card. 56% catch rate is the variance. UCF coverage 112th"
+2026,11,2026-11-14,spread,Mississippi State,+2.5,Auburn @ Mississippi State,1.10,-110,3.5,LOSS,"Auburn 41 - Mississippi State 9, MSU -32",-1.10,
 2026,11,2026-11-14,spread,Colorado State,+9.5,Colorado State @ Washington State,1.10,-110,0.4,LOSS,"Washington State 73 - Colorado State 7, CSU -66",-1.10,
 2026,11,2026-11-14,spread,Fresno State,+9.5,Fresno State @ Texas State,1.10,-110,-3.0,WIN,"Texas State 37 - Fresno State 35, Fresno -2",1.00,
-2026,11,2026-11-14,spread,Mississippi State,+2.5,Auburn @ Mississippi State,1.10,-110,3.5,LOSS,"Auburn 41 - Mississippi State 9, MSU -32",-1.10,
 2026,11,2026-11-14,spread,NC State,+3.0,Syracuse @ NC State,1.10,-110,2.7,PUSH,"Syracuse 34 - NC State 31, NC State -3 exactly",0.00,
 2026,11,2026-11-14,prop,Ed Small Over rec yds,26.5,Kansas State @ TCU,1.14,-114,52.3,WIN,65 receiving yards (4 rec),1.00,
 2026,11,2026-11-14,prop,Jaron Tibbs Over rec yds,29.5,Kansas State @ TCU,1.14,-114,37.4,WIN,"115 receiving yards (8 rec, 1 TD)",1.00,
 2026,12,2026-11-21,spread,Cincinnati,-3.0,Colorado @ Cincinnati,1.10,-110,6.2,,,,
+2026,12,2026-11-21,spread,Troy,+9.5,Georgia Southern @ Troy,1.10,-110,0.8,,,,
 2026,12,2026-11-21,spread,Georgia State,+2.75,Georgia State @ Marshall,1.10,-110,0.9,,,,
 2026,12,2026-11-21,spread,Pittsburgh,+13.5,Pittsburgh @ Louisville,1.10,-110,-10.2,,,,
 2026,12,2026-11-21,spread,Texas A&M,+7.0,Texas A&M @ Oklahoma,1.10,-110,-3.2,,,,
-2026,12,2026-11-21,spread,Troy,+9.5,Georgia Southern @ Troy,1.10,-110,0.8,,,,
 2026,12,2026-11-21,prop,Dominic Kelley Over rush yds,44.5,Hawaii @ Nevada,1.10,-110,62.9,,,,
-2026,12,2026-11-21,prop,Eric Olsen Over rec yds,39.5,Utah State @ Oregon State,1.10,-110,50.4,,,,
-2026,12,2026-11-21,prop,Louis Brown IV Over rec yds,21.5,Texas Tech @ Baylor,1.10,-110,34.6,,,,
 2026,12,2026-11-21,prop,Umari Hatcher Over rec yds,64.5,Syracuse @ Boston College,1.10,-110,108.6,,,,
+2026,12,2026-11-21,prop,Louis Brown IV Over rec yds,21.5,Texas Tech @ Baylor,1.10,-110,34.6,,,,
 2026,12,2026-11-21,prop,Wayshawn Parker Over rush yds,41.5,Utah @ TCU,1.10,-110,54.9,,,,
+2026,12,2026-11-21,prop,Eric Olsen Over rec yds,39.5,Utah State @ Oregon State,1.10,-110,50.4,,,,

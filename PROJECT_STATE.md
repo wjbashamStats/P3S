@@ -548,7 +548,7 @@ EDGE 250, DT 250 = 2,547 player-position rows.
 
 ```
                  W- L- P   voids    units
-week 1           1- 2- 0            -1.20
+week 1           4- 5- 0            -1.50
 week 2           6- 9- 0            -4.10
 week 3           7- 7- 1            -0.75
 week 4           5- 7- 1     1      -3.06
@@ -561,11 +561,11 @@ week 10          5- 5- 0            -0.50
 week 11          3- 2- 1            +0.80
 ---------------------------------------------------
 1H spreads       1- 0- 0            +1.00
-spreads         19-28- 3           -11.80
-totals          12-16- 2            -5.60
-props           26-18- 0     2      +5.51
+spreads         20-29- 3           -11.90
+totals          13-18- 2            -6.80
+props           27-18- 0     2      +6.51
 ---------------------------------------------------
-season          58-62-5      2     -10.89
+season          61-65-5      2     -11.19
 ```
 
 Week 8 is the first winning week of the season: 5-4 and +0.60 units. It is also
@@ -1111,4 +1111,40 @@ list.
    Alabama it had the Tide by 23.5 against a book line of 28, so it was on
    East Carolina's side of the full game. Three narrative picks, one of them
    taken directly against a model call that proved right.
+
+53. **The rest of week 1 landed, and the model's two best total calls of the
+   week both lost.** Six more picks were added, taking week 1 to nine and 4-5
+   at -1.50. Mendoza over 204.5 passing yards won at 237, Arkansas-Pine Bluff
+   +54.5 won with Missouri winning by 40, and the Hawaii/UNLV Under 56.5 won
+   at 27. Illinois/UAB Under 54.5 lost at 65, Kent State +35.5 lost by 57, and
+   the Kent State/South Carolina Under 54 lost at 57.
+
+   The totals pattern is the thing to keep, because it is quirk 23 showing up
+   on the very first weekend and nobody reading it at the time:
+
+   | game | book | model | edge | result |
+   | --- | --- | --- | --- | --- |
+   | Kent State at South Carolina | 54.0 | 39.2 | Under by 14.8 | lost, 57 |
+   | North Texas at Indiana | 55.5 | 69.1 | Over by 13.6 | Under taken against it, lost |
+   | UAB at Illinois | 54.5 | 48.5 | Under by 6.0 | lost, 65 |
+   | UNLV at Hawaii | 56.5 | 56.1 | none, 0.4 | won, 27 |
+
+   The three games where the model had a double-digit or mid-single-digit
+   opinion all went against the bet, including the one where the bet agreed
+   with it by 14.8 points. The only winner was the game where the model had
+   nothing to say and the case was weather. Week 1 is n=4 and proves nothing on
+   its own, but totals finished the season 13-18-2 at -6.80 and were retired
+   after week 7, so the first weekend was already showing the shape.
+
+   Three picks carry no model number and the reasons differ: the Alabama first
+   half because the market is not priced, the Mendoza passing prop for the same
+   reason, and Arkansas-Pine Bluff because the opponent is FCS and unrated.
+
+54. **The article series tracks its own record and it is not this log.** The
+   week 1 piece opens with "Current Record from Article Picks: 6-8, -2.1
+   Units" before any week 1 pick is made, and refers to a Stanford scoop and
+   score as the week's crusher. That is a week 0 slate of fourteen picks that
+   has never been entered here. Until those are added, or the two streams are
+   explicitly separated, the article's running record and `picks_log.csv` will
+   disagree by that amount and neither is wrong.
 
