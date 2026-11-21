@@ -444,49 +444,6 @@
  ],
  "totals": [
   {
-   "pick": "Houston / West Virginia Under 71.25",
-   "game": "Houston Cougars @ West Virginia Mountaineers",
-   "facts": [
-    [
-     "Book total",
-     "71.25"
-    ],
-    [
-     "Model number",
-     "60.3"
-    ],
-    [
-     "Points check",
-     "64.1"
-    ],
-    [
-     "Same check on each side's last four games",
-     "64.1"
-    ],
-    [
-     "Houston, last four",
-     "27.8 points scored, 29.8 allowed"
-    ],
-    [
-     "West Virginia, last four",
-     "32.8 points scored, 38.0 allowed"
-    ],
-    [
-     "West Virginia over/under record",
-     "8-2, ranked 3rd"
-    ],
-    [
-     "Tempo",
-     "West Virginia ranked 2nd, Houston 56th"
-    ]
-   ],
-   "paras": [
-    "The book has 71.25. The model has 60.3 and the points check has 64.1. Running the same points check on each side's last four games gives 64.1 again, so the season number and the recent number agree.",
-    "Seventy-one asks both teams to reach the middle thirties. Over their last four Houston have scored 27.8 and allowed 29.8, West Virginia 32.8 and 38.0. That combination projects to a little over 64, seven short of the line.",
-    "The case against is in the table and it is substantial. West Virginia are 8-2 to the Over, ranked 3rd, and rank 2nd in seconds per play. Their last four games have produced 87, 44, 101 and 51 points. Neither defence is good: Houston rank 108th in Success Rate allowed and 134th in Finishing Drives allowed, West Virginia 125th and 99th. A fast team that cannot stop anyone is how a number this high gets set, and how it gets cleared."
-   ]
-  },
-  {
    "pick": "North Carolina / Virginia Over 42.25",
    "game": "North Carolina Tar Heels @ Virginia Cavaliers",
    "facts": [
@@ -507,26 +464,26 @@
      "49.4"
     ],
     [
-     "North Carolina, last four",
-     "29.2 points scored, 26.5 allowed"
+     "Adjusted for opponent quality",
+     "61.0"
     ],
     [
-     "Virginia, last four",
-     "18.0 points scored, 25.0 allowed"
+     "North Carolina against defences ranked 57th or worse",
+     "30, 35 and 38 points, 34.3 a game"
+    ],
+    [
+     "Virginia defence",
+     "77th of 138"
     ],
     [
      "Tempo",
      "North Carolina 87th, Virginia 90th"
-    ],
-    [
-     "Over/under records",
-     "North Carolina 5-5, Virginia 4-6"
     ]
    ],
    "paras": [
-    "The book has 42.25. The model has 47.4, the points check 48.2, and the same check on each side's last four games 49.4. All three sit above the line and the recent number is the highest of them.",
-    "North Carolina have scored 29.2 a game over their last four while allowing 26.5. Against a Virginia side allowing 25.0, that alone covers most of the number. Forty-two asks for two touchdowns and two field goals between them.",
-    "Virginia are the risk. They have scored 18.0 a game across the same four and both teams are slow, ranking 87th and 90th in seconds per play, so there will be fewer possessions than a 42-point line usually implies. Neither offence is explosive: North Carolina rank 122nd and Virginia 113th. This is a bet on North Carolina's scoring rate holding rather than on a shootout."
+    "The book has 42.25. The model has 47.4, the points check 48.2, and the same check run on each side's last four games 49.4. All three sit above the line.",
+    "The fourth number is the one that matters. Virginia's defence ranks 77th of 138, and in the three games North Carolina have played against defences ranked 57th or worse they scored 30, 35 and 38, which is 34.3 a game against a season figure of 24.8. Virginia have averaged 26.7 against the quality of defence North Carolina bring. Those two together project 61.0.",
+    "Both teams are slow, ranking 87th and 90th in seconds per play, so there will be fewer possessions than a 42-point line usually implies, and neither offence is explosive: North Carolina rank 122nd and Virginia 113th. Virginia have also been held to 7, 13 and 16 points three times this season, all against top-30 defences. North Carolina are not one."
    ]
   }
  ]

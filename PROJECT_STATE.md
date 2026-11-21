@@ -1193,3 +1193,38 @@ list.
    Gap row went: quirk 23 retired it as a selection signal and it names a
    quantity the reader cannot act on.
 
+56. **The recent-form screen is biased by opponent quality, and catching it
+   cost the week's best-looking Under.** Quirk 55 added a third test for
+   totals: the points check run on each side's last four games. Asking "any
+   Unders?" exposed the flaw in it.
+
+   Maryland at USC Under 57.0 showed the largest recent margin of any Under on
+   the board, projecting 48.1 against a line of 57.0. USC have scored 20.2 a
+   game over their last four against a season figure of 30.5, and their
+   quarterback has played all ten games, so it was not a personnel change.
+   It was the schedule. Those four opponents rank 25th, 3rd, 15th and 10th in
+   defensive grade and allow 18.8, 17.1, 18.4 and 12.5 points a game. Maryland
+   rank 83rd and allow 30.3. The 20.2 says nothing about Saturday.
+
+   The same check then disqualified the pick the card was already carrying.
+   Houston at West Virginia Under 71.25 had the strongest agreement number on
+   the board at 8.83 and a recent projection of 64.1, seven under the line.
+   But Houston produced 27.8 a game against defences averaging rank 81 and
+   West Virginia 32.8 against rank 45, and on Saturday they face defences
+   ranked 137th and 110th. Scored against comparable opposition the projection
+   is 71.0 against a line of 71.25, which is a coin flip with vig. It came off.
+
+   Run the other way the same adjustment strengthened the one pick that
+   survived. North Carolina have scored 30, 35 and 38 in the three games
+   against defences ranked 57th or worse, which is 34.3 a game against a
+   season figure of 24.8, and Virginia's defence ranks 77th. Adjusted, North
+   Carolina at Virginia projects 61.0 against a line of 42.25, well above the
+   unadjusted 49.4.
+
+   So the week 12 card carries one total, not two. The rule to keep: a
+   last-four points average is only usable once the defences behind it are
+   compared with the defence the team is about to face. This is the second
+   version of this screen to fail on opponent effects, after the combined
+   game totals in quirk 55, and the same question should be put to the prop
+   screens, where median single-game production is open to it too.
+
