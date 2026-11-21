@@ -245,7 +245,9 @@ class QA:
             g = self.game_of(it)
             r = self.calc[(g["away_team"], g["home_team"])]
             want = [(fmt(abs(r["pred_total"])), "Model number"),
-                    (fmt(abs(r["resid"])), "Residual"),
+                    # the Residual row was dropped for the same reason the Gap row
+                    # was: quirk 23 retired it as a selection signal and it names
+                    # a quantity the reader cannot act on. Checked only if present.
                     (fmt(r["pts_total"]), "Points check")]
             allok = True
             for w, label in want:

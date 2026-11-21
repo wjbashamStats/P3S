@@ -1148,3 +1148,48 @@ list.
    explicitly separated, the article's running record and `picks_log.csv` will
    disagree by that amount and neither is wrong.
 
+55. **Totals return in week 12 after five weeks out, with a third test the
+   earlier ones never had to pass.** The category is 13-18-2 and down 6.80,
+   was retired after week 7 went 0-5, and quirk 27 records why: the two
+   selection measures share a blind spot, so their agreement is not
+   independent confirmation. The third measure added here is the one that has
+   been working on props, the same points check run on each side's last four
+   games rather than the season.
+
+   It is a real filter rather than a formality. Twelve candidates cleared the
+   de-meaned agreement rule and five of the top six were contradicted by
+   recent scoring:
+
+   | candidate | model | last-4 points | verdict |
+   | --- | --- | --- | --- |
+   | Houston at West Virginia Under 71.25 | 60.3 | 64.1 | holds |
+   | Memphis at Navy Under 67.50 | 59.0 | 71.5 | flipped |
+   | Ohio State at Nebraska Over 41.50 | 57.2 | 40.5 | flipped |
+   | South Florida at Florida Atlantic Under 64.00 | 53.9 | 67.2 | flipped |
+   | Washington State at Texas State Under 62.50 | 55.7 | 63.5 | flipped |
+   | North Carolina at Virginia Over 42.25 | 47.4 | 49.4 | holds |
+
+   Ohio State at Nebraska is the one to watch. The model had it 15.7 points
+   over the book, the largest total gap on the board, and Nebraska have scored
+   31, 27, 37 and 31 in their last four. That is the exact shape of the week 7
+   Overs that missed by 19, 25 and 20.5.
+
+   Two more were dropped for reasons the filter alone would not catch.
+   Pittsburgh at Louisville Over 50.5 cleared all three but by only 2.1 on the
+   recent number, with Pittsburgh's starting quarterback out three games, and
+   it would have put a second pick on a game the card already has a spread on.
+   Northwestern at Minnesota Over 41.5 cleared on season numbers at 46.1, but
+   Aidan Chiles has not played in two games and Northwestern scored 10 and 19
+   in them; conditioned on that the game projects to 41.25 against a 41.5
+   line, which is a coin flip with vig rather than a pick.
+
+   A first mistake worth recording: the first version of this screen compared
+   each team's recent **combined game totals**, which is contaminated by
+   opponent scoring. It passed Northwestern at Minnesota at 46.1 because
+   Ohio State and Iowa hung points on them. Measuring each side's own points
+   for and against is the correct form and is what the card uses.
+
+   The checker's Residual row requirement was dropped, for the same reason the
+   Gap row went: quirk 23 retired it as a selection signal and it names a
+   quantity the reader cannot act on.
+

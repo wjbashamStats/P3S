@@ -5,14 +5,38 @@
    "game": "Georgia Southern Eagles @ Troy Trojans",
    "img": "Georgia_Southern_at_Troy",
    "facts": [
-    ["Book line", "Georgia Southern -9.5"],
-    ["Model number", "Troy by 0.8"],
-    ["Points check", "Georgia Southern by 3.4"],
-    ["SP+ (2026)", "Georgia Southern +3.1, Troy +1.0, home edge +2.9"],
-    ["Records", "Georgia Southern 6-4, Troy 4-6"],
-    ["Troy defence", "87.8 overall, 44th; coverage 86.9, 30th; 26.3 points allowed a game"],
-    ["Georgia Southern against the spread", "9-1, 1st in the country"],
-    ["Troy offence", "64.5, 126th; 126th in Success Rate, tied 133rd in Field Position"]
+    [
+     "Book line",
+     "Georgia Southern -9.5"
+    ],
+    [
+     "Model number",
+     "Troy by 0.8"
+    ],
+    [
+     "Points check",
+     "Georgia Southern by 3.4"
+    ],
+    [
+     "SP+ (2026)",
+     "Georgia Southern +3.1, Troy +1.0, home edge +2.9"
+    ],
+    [
+     "Records",
+     "Georgia Southern 6-4, Troy 4-6"
+    ],
+    [
+     "Troy defence",
+     "87.8 overall, 44th; coverage 86.9, 30th; 26.3 points allowed a game"
+    ],
+    [
+     "Georgia Southern against the spread",
+     "9-1, 1st in the country"
+    ],
+    [
+     "Troy offence",
+     "64.5, 126th; 126th in Success Rate, tied 133rd in Field Position"
+    ]
    ],
    "paras": [
     "Georgia Southern lay 9.5 on the road. The rating has Troy winning by 0.8 and the points check, built only from each team's own 2026 scoring and home field, has Georgia Southern winning by 3.4. Both sit well inside the number.",
@@ -25,14 +49,38 @@
    "game": "Texas A&M Aggies @ Oklahoma Sooners",
    "img": "Texas_AM_at_Oklahoma",
    "facts": [
-    ["Book line", "Oklahoma -7.0"],
-    ["Model number", "Oklahoma by 3.2"],
-    ["Points check", "Texas A&M by 1.7"],
-    ["SP+ (2026)", "Oklahoma +7.5, Texas A&M +6.9, home edge +2.6"],
-    ["Records", "Texas A&M 4-6, Oklahoma 6-4"],
-    ["Game total", "38.0"],
-    ["Oklahoma offence", "67.1, 112th; 115th in Success Rate, 132nd in Explosiveness, 22.3 points a game"],
-    ["Texas A&M defence", "26th in Success Rate allowed, 19.0 points allowed a game"]
+    [
+     "Book line",
+     "Oklahoma -7.0"
+    ],
+    [
+     "Model number",
+     "Oklahoma by 3.2"
+    ],
+    [
+     "Points check",
+     "Texas A&M by 1.7"
+    ],
+    [
+     "SP+ (2026)",
+     "Oklahoma +7.5, Texas A&M +6.9, home edge +2.6"
+    ],
+    [
+     "Records",
+     "Texas A&M 4-6, Oklahoma 6-4"
+    ],
+    [
+     "Game total",
+     "38.0"
+    ],
+    [
+     "Oklahoma offence",
+     "67.1, 112th; 115th in Success Rate, 132nd in Explosiveness, 22.3 points a game"
+    ],
+    [
+     "Texas A&M defence",
+     "26th in Success Rate allowed, 19.0 points allowed a game"
+    ]
    ],
    "paras": [
     "Oklahoma lay seven at home. SP+ separates these teams by 0.6 of a point before home field. The rating has Oklahoma by 3.2 and the points check has Texas A&M by 1.7.",
@@ -45,14 +93,38 @@
    "game": "Georgia State Panthers @ Marshall Thundering Herd",
    "img": "Georgia_State_at_Marshall",
    "facts": [
-    ["Book line", "Marshall -2.75"],
-    ["Model number", "Georgia State by 0.9"],
-    ["Points check", "Georgia State by 4.7"],
-    ["SP+ (2026)", "Georgia State -8.3, Marshall -11.9, home edge +2.7"],
-    ["Records", "both 5-5"],
-    ["Scoring", "Georgia State 32.7 a game, Marshall 21.7"],
-    ["Marshall defence", "78.5, 95th; run defence 71.5, 115th; 30.7 points allowed a game"],
-    ["Georgia State quarterback", "Cameran Brown has not played in three games"]
+    [
+     "Book line",
+     "Marshall -2.75"
+    ],
+    [
+     "Model number",
+     "Georgia State by 0.9"
+    ],
+    [
+     "Points check",
+     "Georgia State by 4.7"
+    ],
+    [
+     "SP+ (2026)",
+     "Georgia State -8.3, Marshall -11.9, home edge +2.7"
+    ],
+    [
+     "Records",
+     "both 5-5"
+    ],
+    [
+     "Scoring",
+     "Georgia State 32.7 a game, Marshall 21.7"
+    ],
+    [
+     "Marshall defence",
+     "78.5, 95th; run defence 71.5, 115th; 30.7 points allowed a game"
+    ],
+    [
+     "Georgia State quarterback",
+     "Cameran Brown has not played in three games"
+    ]
    ],
    "paras": [
     "Marshall lay 2.75 at home. Both measures have Georgia State winning, by 0.9 on the rating and by 4.7 on the points check.",
@@ -65,14 +137,38 @@
    "game": "Pittsburgh Panthers @ Louisville Cardinals",
    "img": "Pittsburgh_at_Louisville",
    "facts": [
-    ["Book line", "Louisville -13.5"],
-    ["Model number", "Louisville by 10.2"],
-    ["Points check", "Louisville by 3.5"],
-    ["SP+ (2026)", "Louisville +17.1, Pittsburgh +8.8, home edge +1.9"],
-    ["Records", "Louisville 7-3, Pittsburgh 6-4"],
-    ["Pittsburgh defence", "90.7, 23rd; run defence 92.7, 8th; 5th in Success Rate allowed; 19.4 points allowed a game"],
-    ["Louisville offence", "83.0, 24th; run game 91.2, 7th; 38.3 points a game"],
-    ["Pittsburgh quarterback", "Mason Heintschel has not played in three games"]
+    [
+     "Book line",
+     "Louisville -13.5"
+    ],
+    [
+     "Model number",
+     "Louisville by 10.2"
+    ],
+    [
+     "Points check",
+     "Louisville by 3.5"
+    ],
+    [
+     "SP+ (2026)",
+     "Louisville +17.1, Pittsburgh +8.8, home edge +1.9"
+    ],
+    [
+     "Records",
+     "Louisville 7-3, Pittsburgh 6-4"
+    ],
+    [
+     "Pittsburgh defence",
+     "90.7, 23rd; run defence 92.7, 8th; 5th in Success Rate allowed; 19.4 points allowed a game"
+    ],
+    [
+     "Louisville offence",
+     "83.0, 24th; run game 91.2, 7th; 38.3 points a game"
+    ],
+    [
+     "Pittsburgh quarterback",
+     "Mason Heintschel has not played in three games"
+    ]
    ],
    "paras": [
     "Louisville lay 13.5 at home. The rating has them by 10.2 and the points check has them by 3.5. Both agree Louisville win and neither reaches two scores.",
@@ -85,14 +181,38 @@
    "game": "Colorado Buffaloes @ Cincinnati Bearcats",
    "img": "Colorado_at_Cincinnati",
    "facts": [
-    ["Book line", "Cincinnati -3.0"],
-    ["Model number", "Cincinnati by 6.2"],
-    ["Points check", "Cincinnati by 5.3"],
-    ["SP+ (2026)", "Cincinnati +0.5, Colorado -3.9, home edge +1.8"],
-    ["Records", "Cincinnati 5-5, Colorado 4-6"],
-    ["Scoring", "Cincinnati 31.0 a game, Colorado 22.0"],
-    ["Colorado offence", "129th in Finishing Drives, 137th in Field Position, 3-6-1 against the spread"],
-    ["Cincinnati defence", "76.3, 104th; 124th in Success Rate allowed; 30.6 points allowed a game"]
+    [
+     "Book line",
+     "Cincinnati -3.0"
+    ],
+    [
+     "Model number",
+     "Cincinnati by 6.2"
+    ],
+    [
+     "Points check",
+     "Cincinnati by 5.3"
+    ],
+    [
+     "SP+ (2026)",
+     "Cincinnati +0.5, Colorado -3.9, home edge +1.8"
+    ],
+    [
+     "Records",
+     "Cincinnati 5-5, Colorado 4-6"
+    ],
+    [
+     "Scoring",
+     "Cincinnati 31.0 a game, Colorado 22.0"
+    ],
+    [
+     "Colorado offence",
+     "129th in Finishing Drives, 137th in Field Position, 3-6-1 against the spread"
+    ],
+    [
+     "Cincinnati defence",
+     "76.3, 104th; 124th in Success Rate allowed; 30.6 points allowed a game"
+    ]
    ],
    "paras": [
     "Cincinnati lay three at home and this is the only one of the five laying points. The rating has them by 6.2 and the points check by 5.3, the closest agreement of the five.",
@@ -106,14 +226,38 @@
    "pick": "Umari Hatcher Over 64.5 receiving yards",
    "game": "Syracuse Orange @ Boston College Eagles",
    "facts": [
-    ["Book line", "Over 64.5 receiving yards"],
-    ["Model projection", "108.6 yards"],
-    ["2026 production", "1045 yards in 10 games, 104.5 a game"],
-    ["Single-game record", "median 92 yards, over 64.5 in 6 of 8 games on record"],
-    ["Role", "100 targets, 10.0 a game, 66 receptions, 8 touchdowns"],
-    ["Profile", "14.3 average depth of target, 15.8 a catch, 379 routes, 2.76 yards per route run, 79.8 route grade, 349 yards after the catch, 2 drops, long of 76"],
-    ["Boston College defence", "71.6 overall, 122nd of 138; 28.4 points allowed a game"],
-    ["Quarterback", "Steve Angeli has started the last four"]
+    [
+     "Book line",
+     "Over 64.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "108.6 yards"
+    ],
+    [
+     "2026 production",
+     "1045 yards in 10 games, 104.5 a game"
+    ],
+    [
+     "Single-game record",
+     "median 92 yards, over 64.5 in 6 of 8 games on record"
+    ],
+    [
+     "Role",
+     "100 targets, 10.0 a game, 66 receptions, 8 touchdowns"
+    ],
+    [
+     "Profile",
+     "14.3 average depth of target, 15.8 a catch, 379 routes, 2.76 yards per route run, 79.8 route grade, 349 yards after the catch, 2 drops, long of 76"
+    ],
+    [
+     "Boston College defence",
+     "71.6 overall, 122nd of 138; 28.4 points allowed a game"
+    ],
+    [
+     "Quarterback",
+     "Steve Angeli has started the last four"
+    ]
    ],
    "paras": [
     "Hatcher averages 104.5 receiving yards a game and the line is 64.5, seven yards lower than the number he beat last week with 81. His median single game is 92 and he has cleared 64.5 in six of the eight games on record.",
@@ -125,14 +269,38 @@
    "pick": "Wayshawn Parker Over 41.5 rushing yards",
    "game": "Utah Utes @ TCU Horned Frogs",
    "facts": [
-    ["Book line", "Over 41.5 rushing yards"],
-    ["Model projection", "54.9 yards"],
-    ["2026 production", "764 yards in 10 games, 76.4 a game"],
-    ["Single-game record", "median 64.5 yards, over 41.5 in 5 of 8 games on record"],
-    ["Role", "124 carries, 12.4 a game, 9 touchdowns, 40 first downs"],
-    ["Profile", "6.2 yards a carry, 546 yards after contact, 169.8 elusive rating, 49.7 per cent breakaway, 90.5 offence grade, 91.1 run grade, long of 90"],
-    ["Utah", "10-0, 37.9 points a game, run game 92.2, 4th in the country"],
-    ["TCU run defence", "92.8, 6th; 15.2 points allowed a game"]
+    [
+     "Book line",
+     "Over 41.5 rushing yards"
+    ],
+    [
+     "Model projection",
+     "54.9 yards"
+    ],
+    [
+     "2026 production",
+     "764 yards in 10 games, 76.4 a game"
+    ],
+    [
+     "Single-game record",
+     "median 64.5 yards, over 41.5 in 5 of 8 games on record"
+    ],
+    [
+     "Role",
+     "124 carries, 12.4 a game, 9 touchdowns, 40 first downs"
+    ],
+    [
+     "Profile",
+     "6.2 yards a carry, 546 yards after contact, 169.8 elusive rating, 49.7 per cent breakaway, 90.5 offence grade, 91.1 run grade, long of 90"
+    ],
+    [
+     "Utah",
+     "10-0, 37.9 points a game, run game 92.2, 4th in the country"
+    ],
+    [
+     "TCU run defence",
+     "92.8, 6th; 15.2 points allowed a game"
+    ]
    ],
    "paras": [
     "Parker averages 76.4 rushing yards a game against a line of 41.5, at 6.2 a carry with a 90.5 offence grade. His median game is 64.5 and he has cleared the line in five of eight.",
@@ -144,14 +312,38 @@
    "pick": "Dominic Kelley Over 44.5 rushing yards",
    "game": "Hawaii Rainbow Warriors @ Nevada Wolf Pack",
    "facts": [
-    ["Book line", "Over 44.5 rushing yards"],
-    ["Model projection", "62.9 yards"],
-    ["2026 production", "614 yards in 10 games, 61.4 a game"],
-    ["Single-game record", "median 60 yards, over 44.5 in 5 of 6 games on record"],
-    ["Role", "133 carries, 13.3 a game, 5 touchdowns, 37 first downs"],
-    ["Profile", "4.6 yards a carry, 421 yards after contact, 77.0 elusive rating, 21.0 per cent breakaway, 78.3 run grade, long of 72"],
-    ["Hawaii run defence", "70.4, 118th of 138; defence overall 74.3, 112th"],
-    ["Hawaii scoring", "19.6 points a game, offence 63.4, 129th"]
+    [
+     "Book line",
+     "Over 44.5 rushing yards"
+    ],
+    [
+     "Model projection",
+     "62.9 yards"
+    ],
+    [
+     "2026 production",
+     "614 yards in 10 games, 61.4 a game"
+    ],
+    [
+     "Single-game record",
+     "median 60 yards, over 44.5 in 5 of 6 games on record"
+    ],
+    [
+     "Role",
+     "133 carries, 13.3 a game, 5 touchdowns, 37 first downs"
+    ],
+    [
+     "Profile",
+     "4.6 yards a carry, 421 yards after contact, 77.0 elusive rating, 21.0 per cent breakaway, 78.3 run grade, long of 72"
+    ],
+    [
+     "Hawaii run defence",
+     "70.4, 118th of 138; defence overall 74.3, 112th"
+    ],
+    [
+     "Hawaii scoring",
+     "19.6 points a game, offence 63.4, 129th"
+    ]
    ],
    "paras": [
     "Kelley averages 61.4 rushing yards a game and the line is 44.5. He has cleared it in five of the six games on record and his median is 60.",
@@ -163,15 +355,42 @@
    "pick": "Eric Olsen Over 39.5 receiving yards",
    "game": "Utah State Aggies @ Oregon State Beavers",
    "facts": [
-    ["Book line", "Over 39.5 receiving yards"],
-    ["Model projection", "50.4 yards"],
-    ["2026 production", "497 yards in 10 games, 49.7 a game"],
-    ["Single-game record", "median 65.5 yards, over 39.5 in 6 of 8 games on record"],
-    ["Role", "54 targets, 5.4 a game, 44 receptions, 5 touchdowns, 81.5 per cent caught"],
-    ["Profile", "7.1 average depth of target, 11.3 a catch, 257 routes, 1.93 yards per route run, 82.3 route grade, 264 yards after the catch, 1 drop, long of 40"],
-    ["Oregon State offence", "85.7, 15th; 38.3 points a game"],
-    ["Depth chart", "listed second at tight end behind DeCorion Temple, whom he leads 54 targets to 42 and 497 yards to 337"],
-    ["Oregon State quarterback", "Braden Atkinson did not play last week"]
+    [
+     "Book line",
+     "Over 39.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "50.4 yards"
+    ],
+    [
+     "2026 production",
+     "497 yards in 10 games, 49.7 a game"
+    ],
+    [
+     "Single-game record",
+     "median 65.5 yards, over 39.5 in 6 of 8 games on record"
+    ],
+    [
+     "Role",
+     "54 targets, 5.4 a game, 44 receptions, 5 touchdowns, 81.5 per cent caught"
+    ],
+    [
+     "Profile",
+     "7.1 average depth of target, 11.3 a catch, 257 routes, 1.93 yards per route run, 82.3 route grade, 264 yards after the catch, 1 drop, long of 40"
+    ],
+    [
+     "Oregon State offence",
+     "85.7, 15th; 38.3 points a game"
+    ],
+    [
+     "Depth chart",
+     "listed second at tight end behind DeCorion Temple, whom he leads 54 targets to 42 and 497 yards to 337"
+    ],
+    [
+     "Oregon State quarterback",
+     "Braden Atkinson did not play last week"
+    ]
    ],
    "paras": [
     "Olsen averages 49.7 receiving yards a game against a line of 39.5, and his median game is 65.5, twenty-six yards clear of the number. He has gone over in six of eight.",
@@ -183,19 +402,131 @@
    "pick": "Louis Brown IV Over 21.5 receiving yards",
    "game": "Texas Tech Red Raiders @ Baylor Bears",
    "facts": [
-    ["Book line", "Over 21.5 receiving yards"],
-    ["Model projection", "34.6 yards"],
-    ["2026 production", "362 yards in 10 games, 36.2 a game"],
-    ["Single-game record", "median 45.5 yards, over 21.5 in 4 of 6 games on record"],
-    ["Role", "53 targets, 5.3 a game, 24 receptions, 3 touchdowns"],
-    ["Profile", "16.4 average depth of target, 15.1 a catch, 291 routes, 1.24 yards per route run, 62.4 route grade, 45.3 per cent caught, no drops, long of 51"],
-    ["Texas Tech defence", "91.4, 18th; coverage 88.3, 23rd"],
-    ["Baylor", "6-4, 29.4 points a game, DJ Lagway has started the last two"]
+    [
+     "Book line",
+     "Over 21.5 receiving yards"
+    ],
+    [
+     "Model projection",
+     "34.6 yards"
+    ],
+    [
+     "2026 production",
+     "362 yards in 10 games, 36.2 a game"
+    ],
+    [
+     "Single-game record",
+     "median 45.5 yards, over 21.5 in 4 of 6 games on record"
+    ],
+    [
+     "Role",
+     "53 targets, 5.3 a game, 24 receptions, 3 touchdowns"
+    ],
+    [
+     "Profile",
+     "16.4 average depth of target, 15.1 a catch, 291 routes, 1.24 yards per route run, 62.4 route grade, 45.3 per cent caught, no drops, long of 51"
+    ],
+    [
+     "Texas Tech defence",
+     "91.4, 18th; coverage 88.3, 23rd"
+    ],
+    [
+     "Baylor",
+     "6-4, 29.4 points a game, DJ Lagway has started the last two"
+    ]
    ],
    "paras": [
     "Brown averages 36.2 receiving yards a game against a line of 21.5, and his median game is 45.5. He has cleared the number in four of the six games on record.",
     "The profile is the risk and the reason at once. At a 16.4 average depth of target he catches 45.3 per cent of what is thrown to him, which is low, but at 15.1 yards a catch two receptions clear the line. He has not dropped a pass all season. A line of 21.5 asks for less than two catches from a receiver getting 5.3 targets a game.",
     "Texas Tech grade 91.4 on defence, 18th, with coverage at 88.3, 23rd. His two misses were 17 and 0 yards, and the zero is what a low catch rate looks like on a bad day. This is the smallest line of the five and carries the widest range of outcomes."
+   ]
+  }
+ ],
+ "totals": [
+  {
+   "pick": "Houston / West Virginia Under 71.25",
+   "game": "Houston Cougars @ West Virginia Mountaineers",
+   "facts": [
+    [
+     "Book total",
+     "71.25"
+    ],
+    [
+     "Model number",
+     "60.3"
+    ],
+    [
+     "Points check",
+     "64.1"
+    ],
+    [
+     "Same check on each side's last four games",
+     "64.1"
+    ],
+    [
+     "Houston, last four",
+     "27.8 points scored, 29.8 allowed"
+    ],
+    [
+     "West Virginia, last four",
+     "32.8 points scored, 38.0 allowed"
+    ],
+    [
+     "West Virginia over/under record",
+     "8-2, ranked 3rd"
+    ],
+    [
+     "Tempo",
+     "West Virginia ranked 2nd, Houston 56th"
+    ]
+   ],
+   "paras": [
+    "The book has 71.25. The model has 60.3 and the points check has 64.1. Running the same points check on each side's last four games gives 64.1 again, so the season number and the recent number agree.",
+    "Seventy-one asks both teams to reach the middle thirties. Over their last four Houston have scored 27.8 and allowed 29.8, West Virginia 32.8 and 38.0. That combination projects to a little over 64, seven short of the line.",
+    "The case against is in the table and it is substantial. West Virginia are 8-2 to the Over, ranked 3rd, and rank 2nd in seconds per play. Their last four games have produced 87, 44, 101 and 51 points. Neither defence is good: Houston rank 108th in Success Rate allowed and 134th in Finishing Drives allowed, West Virginia 125th and 99th. A fast team that cannot stop anyone is how a number this high gets set, and how it gets cleared."
+   ]
+  },
+  {
+   "pick": "North Carolina / Virginia Over 42.25",
+   "game": "North Carolina Tar Heels @ Virginia Cavaliers",
+   "facts": [
+    [
+     "Book total",
+     "42.25"
+    ],
+    [
+     "Model number",
+     "47.4"
+    ],
+    [
+     "Points check",
+     "48.2"
+    ],
+    [
+     "Same check on each side's last four games",
+     "49.4"
+    ],
+    [
+     "North Carolina, last four",
+     "29.2 points scored, 26.5 allowed"
+    ],
+    [
+     "Virginia, last four",
+     "18.0 points scored, 25.0 allowed"
+    ],
+    [
+     "Tempo",
+     "North Carolina 87th, Virginia 90th"
+    ],
+    [
+     "Over/under records",
+     "North Carolina 5-5, Virginia 4-6"
+    ]
+   ],
+   "paras": [
+    "The book has 42.25. The model has 47.4, the points check 48.2, and the same check on each side's last four games 49.4. All three sit above the line and the recent number is the highest of them.",
+    "North Carolina have scored 29.2 a game over their last four while allowing 26.5. Against a Virginia side allowing 25.0, that alone covers most of the number. Forty-two asks for two touchdowns and two field goals between them.",
+    "Virginia are the risk. They have scored 18.0 a game across the same four and both teams are slow, ranking 87th and 90th in seconds per play, so there will be fewer possessions than a 42-point line usually implies. Neither offence is explosive: North Carolina rank 122nd and Virginia 113th. This is a bet on North Carolina's scoring rate holding rather than on a shootout."
    ]
   }
  ]

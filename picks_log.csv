@@ -137,6 +137,8 @@ season,week,slate_date,category,pick,line,game,units_risked,book_price,model_num
 2026,12,2026-11-21,spread,Georgia State,+2.75,Georgia State @ Marshall,1.10,-110,0.9,,,,
 2026,12,2026-11-21,spread,Pittsburgh,+13.5,Pittsburgh @ Louisville,1.10,-110,-10.2,,,,
 2026,12,2026-11-21,spread,Texas A&M,+7.0,Texas A&M @ Oklahoma,1.10,-110,-3.2,,,,
+2026,12,2026-11-21,total,Under,71.25,Houston @ West Virginia,1.10,-110,60.3,,,,"totals return after five weeks out; added only where the model, the points check and the same check on each side's last four games all agree"
+2026,12,2026-11-21,total,Over,42.25,North Carolina @ Virginia,1.10,-110,47.4,,,,"totals return after five weeks out; added only where the model, the points check and the same check on each side's last four games all agree"
 2026,12,2026-11-21,prop,Dominic Kelley Over rush yds,44.5,Hawaii @ Nevada,1.10,-110,62.9,,,,
 2026,12,2026-11-21,prop,Umari Hatcher Over rec yds,64.5,Syracuse @ Boston College,1.10,-110,108.6,,,,
 2026,12,2026-11-21,prop,Louis Brown IV Over rec yds,21.5,Texas Tech @ Baylor,1.10,-110,34.6,,,,

@@ -125,9 +125,9 @@ const QA_NOTE = "Every figure in this card is checked against the source data be
 
 const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers ten games for 121 teams, eleven for 15 and nine for 2. Futures prices are the week 12 pull except win totals, which are week 7 and are no longer published.";
 
-const RECORD_NOTE = "Season to date: 57-60-5 and two voids, down 9.69 units across 124 picks. Spreads 19-27-3 (-10.70u), totals 12-15-2 (-4.50u), props 26-18 and two voids (+5.51u). Props have won five weeks running. Week 11 went 3-2-1 and gained 0.80 units.";
+const RECORD_NOTE = "Season to date: 61-65-5 and two voids, down 11.19 units across 133 graded picks. Spreads 20-29-3 (-11.90u), totals 13-18-2 (-6.80u), props 27-18 and two voids (+6.51u), first-half spreads 1-0 (+1.00u). Props have won five weeks running. Week 11 went 3-2-1 and gained 0.80 units.";
 
-const NO_TOTALS = "No totals for the fifth week running. Week 7's five went 0-5 with the three Overs missing by 19, 25 and 20.5 points in games where both selection measures agreed, and the category stays out until that test has been scored across every game of weeks 6 through 11 rather than the fifteen that were bet. Quarterback availability is reported in each pick's table where a starter has missed time, and is not used to remove picks: doing that in week 11 removed two winners.";
+const NO_TOTALS = "Totals return for the first time since week 7, which went 0-5. The category is 13-18-2 and down 6.80 units for the season and was retired for cause, so these two were put through a filter the earlier ones were not: both the model and the points check must agree, and the same points check run on each side's last four games must agree as well. Three candidates that cleared the first two tests were dropped because recent scoring contradicted them. Quarterback availability is reported in each pick's table where a starter has missed time, and is not used to remove picks: doing that in week 11 removed two winners.";
 
 const DOC = {
   file: 'Week12_Betting_Card.docx',
@@ -136,6 +136,9 @@ const DOC = {
   lede: [],
   sections: [
     { title: 'Spreads', withImages: true, items: C.spreads,
+      intro: [],
+    },
+    { title: 'Totals', withImages: false, items: C.totals || [],
       intro: [],
     },
     { title: 'Player Props', withImages: false, items: C.props,
