@@ -1046,3 +1046,43 @@ list.
    are now 26-18 at +5.51 and have won five weeks running. Spreads fell to
    19-27-3 at -10.70.
 
+50. **An apostrophe in a team name silently blinded the tie checker.**
+   `grade_rank_lookup` matched the board's team name against the grade file
+   with `name.startswith(key) or key.startswith(name)` on the raw strings. The
+   board calls Hawaii "Hawai'i" and the grade file calls it "Hawaii", so no
+   key matched, the function returned an empty set, and that team's PFF grade
+   ranks were absent from the tie checker's `exact` set. The visible symptom
+   was a false positive: Hawaii's run-defence rank of 118, a whole number, was
+   reported as a tie because Nevada's Field Position in the same game is
+   118.5. The invisible symptom is the one that matters, since a missing
+   `exact` set also lets a real tie through unflagged. Both sides are now
+   normalized to lowercase alphanumerics before comparing. This is the fourth
+   instance of the same shape after quirks 9, 36 and 47: a loose name match
+   that returns a confident wrong answer rather than nothing.
+
+   `qa_card.py` also rounded the book line to one decimal before comparing,
+   so a genuine quarter-point line could never match. Georgia State at
+   Marshall is -2.75 and the checker demanded "2.8", which would have meant
+   misstating the book to satisfy the check. It now accepts the exact value or
+   the rounded one.
+
+51. **Week 12 card: five spreads, five props, and the quarterback finding is
+   reported rather than acted on.** Four picks carry a starter who has missed
+   time: Georgia State's Cameran Brown and Pittsburgh's Mason Heintschel have
+   each sat three games, Colorado's Isaac Wilson and Oregon State's Braden
+   Atkinson missed last week. Per quirk 49 each is stated in the pick's own
+   table and none was removed, because removing on that basis in week 11 took
+   out two winners.
+
+   The distribution screen from week 11 ran again and removed two of the seven
+   survivors: Jayvan Boggs at 4.2 targets a game and DJ Epps at 4.5 with a
+   median below his line. Umari Hatcher is back at a line of 64.5, seven lower
+   than the 71.5 he was wrongly dropped from last week and then beat.
+
+   One depth-chart warning stands and is disclosed rather than cleared. Eric
+   Olsen is listed second at tight end behind DeCorion Temple, but Oregon
+   State play two tight ends and Olsen leads him 54 targets to 42, 497 yards
+   to 337 and five touchdowns to two. This is the inverse of quirk 28: there
+   the chart confirmed a role the workload did not support, here the chart
+   understates a workload the season file documents.
+

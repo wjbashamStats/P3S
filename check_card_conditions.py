@@ -92,6 +92,11 @@ VENUES = {
     "TCU": (32.7096, -97.3685), "NC State": (35.8003, -78.7197),
     "Washington State": (46.7319, -117.1641), "Texas State": (29.8887, -97.9397),
     "Syracuse": (43.0362, -76.1364), "Mississippi State": (33.4560, -88.7944),
+    # week 12
+    "Troy": (31.7995, -85.9540), "Oklahoma": (35.2058, -97.4422),
+    "Marshall": (38.4215, -82.4265), "Louisville": (38.2064, -85.7585),
+    "Cincinnati": (39.1310, -84.5165), "Boston College": (42.3350, -71.1664),
+    "Nevada": (39.5456, -119.8165), "Baylor": (31.5590, -97.1150),
     # week 10
     "UConn": (41.8065, -72.2487), "Wisconsin": (43.0700, -89.4126),
     "Kansas State": (39.2020, -96.5947), "Arizona State": (33.4264, -111.9325),
@@ -107,6 +112,8 @@ SLUGS = {
     "GA TECH": "georgia-tech", "INDIANA": "indiana", "BAYLOR": "baylor",
     "ALABAMA": "alabama", "KANSAS": "kansas", "COLORADO": "colorado",
     "SYRACUSE": "syracuse", "KANSAS ST": "kansas-state", "NC STATE": "north-carolina-state",
+    "NEVADA": "nevada", "OREGON ST": "oregon-state", "TEXAS TECH": "texas-tech",
+    "UTAH": "utah", "BAYLOR": "baylor", "TROY": "troy",
     "TCU": "tcu", "FRESNO ST": "fresno-state", "TEXAS STATE": "texas-state",
     "BOSTON COL": "boston-college", "AUBURN": "auburn",
     "MEMPHIS": "memphis", "TEXAS TECH": "texas-tech", "IOWA STATE": "iowa-state",

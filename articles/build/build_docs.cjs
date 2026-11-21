@@ -119,19 +119,19 @@ function buildOneDoc({ title, subtitle, lede, sections }) {
   });
 }
 
-const HEAD = 'Week 11 \u00b7 Saturday November 14, 2026';
+const HEAD = 'Week 12 \u00b7 Saturday November 21, 2026';
 
 const QA_NOTE = "Every figure in this card is checked against the source data before it is written. Team grades, five-factor ranks and per-game scoring come from the 2026 PFF team grades and the season-to-date CFBData ranks; each player's role, share and production come from the 2026 PFF season files. Per-game scoring uses each team's own game count, which is nine, ten or eleven this week. Where a rank ends in .5 the teams are tied and it is written as \u201ctied Nth\u201d. Every kickoff on this card is verified Saturday in Eastern time, every prop player was checked against this morning's depth chart, and every venue against the National Weather Service forecast at kickoff.";
 
-const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers nine games for 112 teams, ten for 25 and eleven for 1. Futures prices are the week 11 pull except win totals, which are week 7 and are no longer published.";
+const SOURCE_NOTE = "Ratings and the Five Factors come from the 2026 workbook: SP+, TAN, implied team totals and the season-to-date CFBData ranks, out of 138 teams. Player lines are 2026 PFF season to date. Records, ATS and over/under records are TeamRankings, 2026 to date. The PFF team grade file covers ten games for 121 teams, eleven for 15 and nine for 2. Futures prices are the week 12 pull except win totals, which are week 7 and are no longer published.";
 
-const RECORD_NOTE = "Season to date: 54-58-4 and two voids, down 10.49 units across 118 picks. Spreads 18-25-2 (-9.50u), totals 12-15-2 (-4.50u), props 24-18 and two voids (+3.51u). Week 10 went 5-5 and lost 0.50 units: spreads 2-3, props 3-2.";
+const RECORD_NOTE = "Season to date: 57-60-5 and two voids, down 9.69 units across 124 picks. Spreads 19-27-3 (-10.70u), totals 12-15-2 (-4.50u), props 26-18 and two voids (+5.51u). Props have won five weeks running. Week 11 went 3-2-1 and gained 0.80 units.";
 
-const NO_TOTALS = "No totals for the fourth week running. Week 7's five went 0-5 with the three Overs missing by 19, 25 and 20.5 points in games where both selection measures agreed, and the category stays out until that test has been scored across every game of weeks 6 through 10 rather than the fifteen that were bet. Four spreads and two props rather than five and five: two picks were removed after a check on whether each team's primary quarterback has played the last three games, which the ratings and the season scoring rates cannot see.";
+const NO_TOTALS = "No totals for the fifth week running. Week 7's five went 0-5 with the three Overs missing by 19, 25 and 20.5 points in games where both selection measures agreed, and the category stays out until that test has been scored across every game of weeks 6 through 11 rather than the fifteen that were bet. Quarterback availability is reported in each pick's table where a starter has missed time, and is not used to remove picks: doing that in week 11 removed two winners.";
 
 const DOC = {
-  file: 'Week11_Betting_Card.docx',
-  title: 'Week 11 Betting Card',
+  file: 'Week12_Betting_Card.docx',
+  title: 'Week 12 Betting Card',
   subtitle: HEAD,
   lede: [],
   sections: [

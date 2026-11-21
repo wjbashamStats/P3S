@@ -128,8 +128,16 @@ class QA:
                     self._granks[r["team"]] = {int(v) for k, v in r.items()
                                                if k.startswith("rank_") and str(v).isdigit()}
         name = g.get(side + "_display") or g.get(side + "_team", "")
+        # Book and ESPN spellings carry punctuation the grade file does not
+        # ("Hawai'i" against "Hawaii", "Texas A&M" against "Texas A&M"). A
+        # startswith on the raw strings silently returned no ranks for that
+        # team, which reads as a clean run while the tie check is blind.
+        def _norm(x):
+            return "".join(c for c in x.lower() if c.isalnum())
+        n = _norm(name)
         for key, ranks in self._granks.items():
-            if name.startswith(key) or key.startswith(name):
+            k = _norm(key)
+            if n and k and (n.startswith(k) or k.startswith(n)):
                 return ranks
         return set()
 
@@ -215,13 +223,21 @@ class QA:
             # the Gap row was dropped from the card -- it named a quantity the
             # reader could not act on. The book line and the model number are
             # both still in the table, and their difference is the gap.
-            parts = [(f"{fmt(abs(book))}", "Book line"),
-                     (f"{fmt(abs(model))}", "Model number"),
-                     (f"{fmt(abs(pts))}", "Points check")]
+            def forms(x):
+                # quarter-point lines are real; accept the exact value as well
+                # as the rounded one rather than make the card round the book.
+                out = {fmt(abs(x))}
+                ex = f"{abs(x):g}"
+                out.add(ex)
+                return out
+            parts = [(forms(book), "Book line"),
+                     (forms(model), "Model number"),
+                     (forms(pts), "Points check")]
             allok = True
             for want, label in parts:
                 got = self.fact(it, label) or ""
-                if not self.ok(want in got, f"{label} mismatch", f"{it['pick']}: want {want} in {got!r}"):
+                if not self.ok(any(w in got for w in want), f"{label} mismatch",
+                               f"{it['pick']}: want one of {sorted(want)} in {got!r}"):
                     allok = False
             print(f"  {'ok  ' if allok else 'FAIL'} {it['pick']:<22}book {book:+6.1f} model {model:+6.1f} "
                   f"gap {r['spread_gap']:+5.1f} net {net:+5.1f} points {pts:+6.1f}")
